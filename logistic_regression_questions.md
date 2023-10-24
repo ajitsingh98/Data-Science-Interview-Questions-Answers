@@ -19,6 +19,14 @@ Contents
 ### General Concepts
 
 1. **True or False**: For a fixed number of observations in a data set, introducing more variables normally generates a model that has a better fit to the data. What may be the drawback of such a model fitting strategy?
+
+<details style='color: red;'>
+    <summary><b>Answer</b></summary>
+    <p style='color: red'>
+    <b>True</b> But if the inducted features do not provide enough information and act like redundant predictors, then it does not make sense to add those predictors to the model. It unnecessarily increases the complexity of the model and may cause overfitting issues.
+    </p>
+</details>
+
 ---
 2. Define the term **“odds of success”** both qualitatively and formally. Give a numerical example that stresses the relation between probability and odds of an event occurring.
 ---
