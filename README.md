@@ -11,20 +11,24 @@ Contents
 
 - Basics of Computer Science
 - Coding Questions (In Python)
+- Vector and Matrices
 - Calculus and Algorithmic Differentiation
 - Basics of Information Theory
 - Descriptive Statistics
 - Probability Basics and Probability Distributions
 - Inferential Statistics
 - Bayesian Probability
+- Linear Regression
 - Logistic Regression
+- Support Vector Machine
 - Ensemble Techniques
 - Tree-Based Algorithms
 - General Concepts in Neural Networks
 - Convolutional Neural Networks
 - Recurrent Neural Networks
-- Transformers
+- Transformers and Advanced Topics
 - Computer Vision Topics
 - Natural Language Processing Questions
+- Unsupervised Learning
 
 ---
