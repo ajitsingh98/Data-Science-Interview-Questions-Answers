@@ -1,3 +1,5 @@
+# Data Science Interview Questions and Answers
+
 Greetings :wave:
 
 This repository serves as an invaluable resource for your data science interviews, catering to individuals ranging from beginners to seasoned professionals. I have meticulously compiled a comprehensive collection of topics commonly encountered in typical data science interviews. To enhance accessibility and comprehension, I've organized the entire syllabus into distinct categories.
