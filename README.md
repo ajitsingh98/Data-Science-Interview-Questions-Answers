@@ -9,22 +9,22 @@ I wholeheartedly welcome contributions from anyone interested in enriching this 
 Contents
 ---
 
-- Basics of Computer Science
+- [Basics of Computer Science](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/computer_science_questions.md)
 - Coding Questions (In Python)
-- Vector and Matrices
-- Calculus and Algorithmic Differentiation
-- Basics of Information Theory
+- [Vector and Matrices](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/vectors_and_matrices.md)
+- [Calculus and Algorithmic Differentiation](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/calculus_and_algorithmic_differentiation.md)
+- [Basics of Information Theory](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/information_theory.md)
 - Descriptive Statistics
 - Probability Basics and Probability Distributions
 - Inferential Statistics
-- Bayesian Probability
-- Linear Regression
-- Logistic Regression
+- [Bayesian Probability](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/bayesian_probability.md)
+- [Linear Regression]()
+- [Logistic Regression](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/logistic_regression_questions.md)
 - Support Vector Machine
-- Ensemble Techniques
+- [Ensemble Techniques](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/ensemble_techniques.md)
 - Tree-Based Algorithms
-- General Concepts in Neural Networks
-- Convolutional Neural Networks
+- [General Concepts in Neural Networks](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/general_concepts_in_neural_networks.md)
+- [Convolutional Neural Networks](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/convolution_neural_networks_questions.md)
 - Recurrent Neural Networks
 - Transformers and Advanced Topics
 - Computer Vision Topics
