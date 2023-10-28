@@ -20,8 +20,7 @@ Contents
 
 1. **True or False**: For a fixed number of observations in a data set, introducing more variables normally generates a model that has a better fit to the data. What may be the drawback of such a model-fitting strategy?
 
-<details style='color: red;'>
-    <summary><b>Answer</b></summary>
+<details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
     <b>True</b> But if the inducted features do not provide enough information and act like redundant predictors, then it does not make sense to add those predictors to the model. It unnecessarily increases the complexity of the model and may cause overfitting issues.
     </p>
@@ -30,8 +29,7 @@ Contents
 ---
 2. Define the term **“odds of success”** both qualitatively and formally. Give a numerical example that stresses the relation between probability and odds of an event occurring.
 
-<details>
-    <summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
     <p>  The term "odds of success" refers to the likelihood or probability of a favorable outcome or event occurring in a given situation or experiment. The odds of success express the relative chances of a positive outcome compared to a negative outcome. It tells you how much more likely success is compared to failure.</p>
     <p>Odds of Success = $\frac{q}{p}$</p>
     <p>Let's consider a simple numerical example to illustrate the relationship between probability and the odds of an event occurring:</p>
@@ -46,8 +44,7 @@ Contents
     1. What is the simplest form of an interaction? Write its formulae.
     1. What statistical tests can be used to attest to the significance of an interaction term?
 
-<details>
-    <summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
     <p> 1. An interaction is the product of two single predictor variables implying a non-additive effect.
  </p>
     <p>2. Suppose in your model you have two predictors $X$ and $Y$, a model having interaction term can be expressed as :
@@ -61,22 +58,23 @@ Contents
 ---
 4. **True or False**: In machine learning terminology, unsupervised learning refers to the mapping of input covariates to a target response variable that is attempted to be predicted when the labels are known.
 
-<details>
-    <summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
     <p> <b>False</b>, In unsupervised learning we don't have anything like targets/labels to guide the model's predictions. We mostly use unsupervised learning to gain insights from the data. Note that the above definition describes another paradigm of machine learning i.e. supervised learning. </p>
 </details>
 
 ---
 5. **Complete the following sentence**: In the case of logistic regression, the response variable is the log of the odds of being classified in `[...]`.
-<details>
-    <summary><b>Answer</b></summary>
+
+<details><summary><b>Answer</b></summary>
+
     <p> In the case of logistic regression, the response variable is the log of the odds of being classified in a group of binary or multi-class responses. This definition essentially demonstrates that odds can take the form of a vector, allowing for a linear relationship </p>
 </details>
 
 ---
 6. Describe how in a logistic regression model, a transformation to the response variable is applied to yield a probability distribution. Why is it considered a more informative representation of the response?
-<details>
-    <summary><b>Answer</b></summary>
+
+<details><summary><b>Answer</b></summary>
+
     <p> There are different techniques that are widely used to model probability distribution over output classes, which is bounded between 0 and 1. 
     We can use the following functions to achieve that:
     <p> sigmoid(x) = $\frac{1}{1+\exp^{-x}}$</p>
@@ -90,9 +88,7 @@ Contents
 7. Complete the following sentence: Minimizing the negative log-likelihood also means
 maximizing the `[...]` of selecting the `[...]` class.
 
-<details>
-
-    <summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
     <p>
     Minimizing the negative log-likelihood also means
 maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> class
@@ -108,7 +104,6 @@ maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> cl
     3. Construct the `probability` of the event as a ratio that equals 0.1
 
 <details>
-
     <summary><b>Answer</b></summary>
 
    <p>1. odds of an event with probability <i>p</i> = $\frac{p}{1-p}$ </p>
@@ -127,9 +122,8 @@ maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> cl
 
 9. **True or False**: If the odds of success in a binary response is $4$, the corresponding probability of success is $0.8$.
 
-<details>
+<details><summary><b>Answer</b></summary>
 
-  <summary><b>Answer</b></summary>
   <p><b>True</b><p>
   Let's calculate the probability of the succeess(p). We can define the probability(p) in terms of odds of the success as follows:
   <p>
@@ -147,8 +141,7 @@ maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> cl
 10. Draw a graph of odds to probabilities, mapping the entire range of probabilities to
 their respective odds.
 
-<details>
-<summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
 
   <p> $odds(p) = \frac{p}{1-p}$</p>
 <table align='center'>
@@ -169,9 +162,7 @@ their respective odds.
 11. The logistic regression model is a subset of a broader range of machine learning models known as generalized linear models (GLMs), which also include analysis of variance (ANOVA), vanilla linear regression, etc. There are three components to a GLM; identify these three components for binary logistic regression.
 
 
-<details>
-
-<summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
 
 <p>
 
@@ -195,9 +186,7 @@ $$
 \log{\frac{Pr(Y = 1 | X)}{Pr(Y = 0|X)}} = \theta_0 + \theta^TX
 $$
 
-<details>
-
-<summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
 
 At the decision boundary we will have $Pr(Y = 1 | X) = 0.5$
 
@@ -215,10 +204,9 @@ So, $\theta_0 + \theta^TX = 0$ governs the decision boundary hyperplane.
 13. **True or False**: The logit function and the natural logistic (sigmoid) function are inverses
 of each other.
 
-<details>
+<details><summary><b>Answer</b></summary>
 
-<summary><b>Answer</b></summary>
-<b>True<b>
+<b>True</b>
 
 Logit expression :  $z(p) = \log\frac{p}{1-p}$ for any $p ∈ [0, 1]$. 
 
@@ -239,22 +227,102 @@ $$
 \sigma(x) = \frac{1}{1+e^{-x}} \epsilon (0, 1)
 $$
 
+<details><summary><b>Answer</b></summary>
+
+Direct deravative:
+We have,
+
+$$\sigma(x) = \frac{1}{1+e^{-x}}$$
+
+We can apply formula for $\frac{d}{dx}\frac{1}{x}$ here as well.
+
+$$\frac{d}{dx}\sigma(x) = \frac{d}{dx}((1+e^{-x})^{-1})$$
+$$\frac{d}{dx}\sigma(x) = -((1+e^{-x})^{-2})\frac{d}{dx}(1+e^{-x})$$
+$$\frac{d}{dx}\sigma(x) = \frac{e^{-x}}{(1+e^{x})^2}$$
+
+</details>
+
+---
+
+15. Characterize the sigmoid function when its argument approaches $0$, $\inf$ and $-\inf$.
+
+<details><summary><b>Answer</b></summary>
+
+We have:
+
+$$\sigma(x) = \frac{1}{1+e^{-x}}$$
+
+For x = 0:
+
+$$\sigma(0) = \frac{1}{1+e^{0}}$$
+$$\sigma(0) = \frac{1}{2}$$
+
+For x -> -∞:
+
+$$\sigma(x -> -\inf) = \frac{1}{1+e^{\inf}} = 0$$
+
+For x -> ∞:
+
+$$\sigma(x -> \inf) = \frac{1}{1+e^{-\inf}} = 1$$
+
+
+</details>
+
 
 
 ---
 
-15. Remember that in logistic regression, the hypothesis function for some parameter vector
-β and measurement vector x is defined as:
+15. Remember that in logistic regression, the hypothesis function for some parameter vector $β$ and measurement vector $x$ is defined as:
 
 $$
 h_\beta(x) = g(\beta^Tx) =  \frac{1}{1+e^{-\beta^Tx}}\\
 = P(y = 1|x;\beta)
 $$
 
-where y holds the hypothesis value. Suppose the coefficients of a logistic regression model with independent variables are as follows: $\beta_0 = -1.5, \beta_1 = 3, \beta_2 = -0.5$. Assume additionally, that we have an observation with the following values for the independent variables: $x_1 = 1, x_2 = 5$. As a result, the logit equation becomes: $logit = \beta_0 + \beta_1x_1 + \beta_2x_2$.
+where y holds the hypothesis value. Suppose the coefficients of a logistic regression model with independent variables are as follows: $\beta_0 = -1.5$, $\beta_1 = 3$, $\beta_2 = -0.5$. Assume additionally, that we have an observation with the following values for the independent variables: $x_1 = 1$, $x_2 = 5$. As a result, the logit equation becomes: $$logit = \beta_0 + \beta_1x_1 + \beta_2x_2$$.
 1. What is the value of the logit for this observation?
 2. What is the value of the odds for this observation?
 3. What is the value of $P(y = 1)$ for this observation?
+
+<details>
+<summary><b>Answer</b></summary>
+
+1. Logit value can be obtained by substituting independent variables and model's coefficients as followes:
+
+$$logit = \beta_0 + \beta_1x_1 + \beta_2x_2$$
+
+Substitute the given values:
+
+$$logit =  -1.5 + 3*1 + -0.5*5$$
+$$logit =  -1.5 + 3 - 2.5 = -1$$
+
+2. We know the log-odds can be written in terms of logit as follows:
+
+$$logit =  \log\frac{p}{1-p}$$
+
+We know the logit value for given parameters and observations.
+
+$$\log\frac{p}{1-p} = -1$$
+
+On taking $\exp$ on both sides:
+
+$$frac{p}{1-p} = e^{-1}$$
+
+$$frac{p}{1-p} = 0.3678$$
+
+3. We can write odds of getting $y=1$ in terms of $P(y = 1)$ as follows:
+
+$$odds = frac{P(y = 1)}{1-P(y = 1)}$$
+
+We know the odds i.e $e^{-1}$, so
+
+$$P(y = 1) = \frac{e^{-1}}{1+e^{-1}}$$
+
+On simplifying the above expression, we get
+
+$$P(y = 1) = 0.2689$$
+
+</details>
    
 ---
 ### Truly Understanding Logistic Regression
@@ -288,6 +356,13 @@ Referring to Table 2.1: Answer the following questions
 3. Are the two variables positively or negatively associated? Find the direction and strength of the association using both relative risk and odds ratio.
 4. Compute a 95% confidence interval (CI) for the measure of association.
 5. Interpret the results and explain their significance.
+
+
+<details>
+<summary><b>Answer</b></summary>
+
+</details>
+
    
 ---
    
@@ -431,11 +506,43 @@ For the true odds ratio:
 
 ### The Logit Function and Entropy
 
-21. The entropy of a single binary outcome with probability p to receive 1 is defined as:
+21. The entropy of a single binary outcome with probability $p$ to receive 1 is defined as:
     $$H(p) ≡ −p\log{p}−(1−p)\log(1−p)$$
-    1. At what p does H(p) attain its maximum value?
-    2. What is the relationship between the entropy H(p) and the logit function, given p?
+    1. At what $p$ does $H(p)$ attain its maximum value?
+    2. What is the relationship between the entropy $H(p)$ and the logit function, given $p$?
+
 <details><summary><b>Answer</b></summary>
-    
----
+
+1. To get the $argmax(H(p))$, we can differentiate the function wrt to $p$ and equate it to $0$.
+
+Using derivative rule for logs and products:
+
+$$\frac{d}{dx}H(p) = -\log(p) -1 - \frac{(1-p)}{1-p}*-1 -\log(1-p)*-1 = 0$$
+
+$$\frac{d}{dx}H(p) = -\log(p) -1 + 1 + \log(1-p) = 0$$
+
+$$\frac{d}{dx}H(p) = -\log(p) + \log(1-p) = 0$$
+
+$$\log(p)  = \log(1-p)$$
+
+On simplifying the above expression:
+
+$$ p = 0.5$$
+
+So, $H(p)$ is maximum at $p = 0.5$
+
 </details>
+
+2. If we look at derivative of entropy $H(p)$ wrt $p$, we have 
+
+$$\frac{d}{dx}H(p) = -\log(p) + \log(1-p)$$
+
+$$\frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)$$
+
+---
+
+
+
+
+
+
