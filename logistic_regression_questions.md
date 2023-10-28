@@ -65,6 +65,7 @@ Contents
     <summary><b>Answer</b></summary>
     <p> <b>False</b>, In unsupervised learning we don't have anything like targets/labels to guide the model's predictions. We mostly use unsupervised learning to gain insights from the data. Note that the above definition describes another paradigm of machine learning i.e. supervised learning. </p>
 </details>
+
 ---
 5. **Complete the following sentence**: In the case of logistic regression, the response variable is the log of the odds of being classified in `[...]`.
 <details>
@@ -88,24 +89,102 @@ Contents
 ---
 7. Complete the following sentence: Minimizing the negative log-likelihood also means
 maximizing the `[...]` of selecting the `[...]` class.
+
+<details>
+
+    <summary><b>Answer</b></summary>
+    <p>
+    Minimizing the negative log-likelihood also means
+maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> class
+    </p>
+    
+</details>
+
+
 ---
 8. Assume the probability of an event occurring is `p = 0.1`.
     1. What are the `odds` of the event occurring?
     2. What are the `log odds` of the event occurring?
     3. Construct the `probability` of the event as a ratio that equals 0.1
+
+<details>
+
+    <summary><b>Answer</b></summary>
+
+   <p>1. odds of an event with probability <i>p</i> = $\frac{p}{1-p}$ </p>
+   <p>For given $p=0.1$ : odds of the event = $\frac{0.1}{1-0.1} = \frac{1}{9} = 0.11$</p>
+   <p>2. log odds of the event = $\log(odds of the event) = \log_e\frac{1}{9} = -2.20$</p>
+   <p>3. probability of the event in terms of the odds can be written as follows:</p>
+   $$probability = \frac{odds}{1+odds}$$
+   $$probability = \frac{0.11}{1.11} = 0.1$$
+    
+</details>
+
+
 ---
 
 ### Odds and Log-odds
 
 9. **True or False**: If the odds of success in a binary response is $4$, the corresponding probability of success is $0.8$.
+
+<details>
+
+  <summary><b>Answer</b></summary>
+  <p><b>True</b><p>
+  Let's calculate the probability of the succeess(p). We can define the probability(p) in terms of odds of the success as follows:
+  <p>
+  $$p = \frac{odds}{1+odds}$$
+  </p>
+  <p>Since odds of the success = 4.</p>
+  <p>
+    $$p = \frac{4}{1+4} = 0.8$$
+  </p> 
+</details>
+
+
 ---
 
 10. Draw a graph of odds to probabilities, mapping the entire range of probabilities to
 their respective odds.
 
+<details>
+<summary><b>Answer</b></summary>
+
+  <p> $odds(p) = \frac{p}{1-p}$</p>
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/odds_vs_prob.png" alt= "Odds vs Probability" style="max-width:70%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">  Probability vs Odds </td>
+  </tr>
+</table>
+
+</details>
+
 ---
 
 11. The logistic regression model is a subset of a broader range of machine learning models known as generalized linear models (GLMs), which also include analysis of variance (ANOVA), vanilla linear regression, etc. There are three components to a GLM; identify these three components for binary logistic regression.
+
+
+<details>
+
+<summary><b>Answer</b></summary>
+
+<p>
+
+A binary logistic regression GLM consists of there components:
+1. <b>Random component:</b> refers to the probability distribution of the response variable (Y ), e.g., binomial distribution for Y in the binary logistic regression, which takes on the valuesY =0 or Y =1.
+2. <b>Systematic component:</b> describes the explanatory variables:
+$(X1, X2, ...)$ as a combination of linear predictors. The binary case does not constrain these variables to any degree.
+3. <b>Link function:</b> specifies the link between random and systematic components. It says how the expected value of the response relates to the linear predictor of explanatory variables.
+Note: Assume that Y denotes whether a human voice activity was detected $(Y = 1)$ or not $(Y = 0)$ in a give time frame. Propose two systematic components and a link function adjusted for this task.
+
+</p>
+</details>
+
 
 ---
 
@@ -116,10 +195,39 @@ $$
 \log{\frac{Pr(Y = 1 | X)}{Pr(Y = 0|X)}} = \theta_0 + \theta^TX
 $$
 
+<details>
+
+<summary><b>Answer</b></summary>
+
+At the decision boundary we will have $Pr(Y = 1 | X) = 0.5$
+
+If we put the 0.5 in log-odds expression we get,
+
+$$\theta_0 + \theta^TX = \log{\frac{0.5}{1 - 0.5}} = \log{1} = 0$$
+
+So, $\theta_0 + \theta^TX = 0$ governs the decision boundary hyperplane.
+
+</details>
+
+
 ---
 
 13. **True or False**: The logit function and the natural logistic (sigmoid) function are inverses
 of each other.
+
+<details>
+
+<summary><b>Answer</b></summary>
+<b>True<b>
+
+Logit expression :  $z(p) = \log\frac{p}{1-p}$ for any $p ∈ [0, 1]$. 
+
+A simple set of algebraic equations yields the inverse relation:
+
+Sigmoid expression : $p(z) = \frac{exp{z}}{1+exp{z}}$
+
+
+</details>
 
 ---
 
@@ -130,6 +238,8 @@ of each other.
 $$
 \sigma(x) = \frac{1}{1+e^{-x}} \epsilon (0, 1)
 $$
+
+
 
 ---
 
