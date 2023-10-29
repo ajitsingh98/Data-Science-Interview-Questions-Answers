@@ -67,7 +67,8 @@ Contents
 
 <details><summary><b>Answer</b></summary>
 
-    <p> In the case of logistic regression, the response variable is the log of the odds of being classified in a group of binary or multi-class responses. This definition essentially demonstrates that odds can take the form of a vector, allowing for a linear relationship </p>
+   In the case of logistic regression, the response variable is the log of the odds of being classified in a group of binary or multi-class responses. This definition essentially demonstrates that odds can take the form of a vector, allowing for a linear relationship.
+
 </details>
 
 ---
@@ -75,11 +76,14 @@ Contents
 
 <details><summary><b>Answer</b></summary>
 
-    <p> There are different techniques that are widely used to model probability distribution over output classes, which is bounded between 0 and 1. 
-    We can use the following functions to achieve that:
-    <p> sigmoid(x) = $\frac{1}{1+\exp^{-x}}$</p>
-    <p></p>
-    </p>
+There are different techniques that are widely used to model probability distribution over output classes, which is bounded between 0 and 1. 
+
+We can use the following functions to achieve that:
+
+$$sigmoid(x) = \frac{1}{1+\exp^{-x}}$$
+
+It will map $y \quad \epsilon [0, 1]$.
+  
     
 </details>
 
@@ -106,10 +110,14 @@ maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> cl
 <details>
     <summary><b>Answer</b></summary>
 
-   <p>1. odds of an event with probability <i>p</i> = $\frac{p}{1-p}$ </p>
-   <p>For given $p=0.1$ : odds of the event = $\frac{0.1}{1-0.1} = \frac{1}{9} = 0.11$</p>
-   <p>2. log odds of the event = $\log(odds of the event) = \log_e\frac{1}{9} = -2.20$</p>
-   <p>3. probability of the event in terms of the odds can be written as follows:</p>
+  1. odds of an event with probability <i>p</i> = $\frac{p}{1-p}$
+  For given $p=0.1$ 
+  
+  odds of the event = $\frac{0.1}{1-0.1} = \frac{1}{9} = 0.11$
+
+  2. log odds of the event = $\log(odds \quad of \quad the \quad event) = \log_e\frac{1}{9} = -2.20$
+  3. probability of the event in terms of the odds can be written as follows:
+
    $$probability = \frac{odds}{1+odds}$$
    $$probability = \frac{0.11}{1.11} = 0.1$$
     
@@ -143,10 +151,13 @@ their respective odds.
 
 <details><summary><b>Answer</b></summary>
 
-  <p> $odds(p) = \frac{p}{1-p}$</p>
+  Governing expression:
+
+  $$odds(p) = \frac{p}{1-p}$$
+
 <table align='center'>
   <tr>
-    <td align="center">
+    <td>
       <img src="img/odds_vs_prob.png" alt= "Odds vs Probability" style="max-width:70%;" />
     </td>
   </tr>
@@ -164,16 +175,13 @@ their respective odds.
 
 <details><summary><b>Answer</b></summary>
 
-<p>
-
 A binary logistic regression GLM consists of there components:
-1. <b>Random component:</b> refers to the probability distribution of the response variable (Y ), e.g., binomial distribution for Y in the binary logistic regression, which takes on the valuesY =0 or Y =1.
+1. <b>Random component:</b> refers to the probability distribution of the response variable (Y ), e.g., binomial distribution for Y in the binary logistic regression, which takes on the values $Y = 0 or Y =1$.
 2. <b>Systematic component:</b> describes the explanatory variables:
 $(X1, X2, ...)$ as a combination of linear predictors. The binary case does not constrain these variables to any degree.
 3. <b>Link function:</b> specifies the link between random and systematic components. It says how the expected value of the response relates to the linear predictor of explanatory variables.
-Note: Assume that Y denotes whether a human voice activity was detected $(Y = 1)$ or not $(Y = 0)$ in a give time frame. Propose two systematic components and a link function adjusted for this task.
+Note: Assume that Y denotes whether a human voice activity was detected $(Y = 1)$ or not $(Y = 0)$ in a give time frame.
 
-</p>
 </details>
 
 
@@ -212,7 +220,9 @@ Logit expression :  $z(p) = \log\frac{p}{1-p}$ for any $p ∈ [0, 1]$.
 
 A simple set of algebraic equations yields the inverse relation:
 
-Sigmoid expression : $p(z) = \frac{exp{z}}{1+exp{z}}$
+$$p(z) = \frac{exp{z}}{1+exp{z}}$$
+
+The above equation represents sigmoid function.
 
 
 </details>
@@ -224,12 +234,13 @@ Sigmoid expression : $p(z) = \frac{exp{z}}{1+exp{z}}$
 14. Compute the derivative of the natural sigmoid function:
 
 $$
-\sigma(x) = \frac{1}{1+e^{-x}} \epsilon (0, 1)
+\sigma(x) = \frac{1}{1+e^{-x}}; \quad \epsilon (0, 1)
 $$
 
 <details><summary><b>Answer</b></summary>
 
-Direct deravative:
+<b>Direct deravative:</b>
+
 We have,
 
 $$\sigma(x) = \frac{1}{1+e^{-x}}$$
@@ -254,17 +265,15 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$
 
 For x = 0:
 
-$$\sigma(0) = \frac{1}{1+e^{0}}$$
-$$\sigma(0) = \frac{1}{2}$$
+$$\sigma(0) = \frac{1}{1+e^{0}} = \frac{1}{2}$$
 
 For x -> -∞:
 
-$$\sigma(x \-\> -\inf) = \frac{1}{1+e^{\inf}} = 0$$
+$$\lim_{{x \to -\infty}} \sigma = \frac{1}{1+e^{\inf}} = 0$$
 
 For x -> ∞:
 
-$$\sigma(x \-\> \inf) = \frac{1}{1+e^{-\inf}} = 1$$
-
+$$\lim_{{x \to -\infty}} \sigma = \frac{1}{1+e^{-\inf}} = 1$$
 
 </details>
 
@@ -272,7 +281,7 @@ $$\sigma(x \-\> \inf) = \frac{1}{1+e^{-\inf}} = 1$$
 
 ---
 
-15. Remember that in logistic regression, the hypothesis function for some parameter vector $β$ and measurement vector $x$ is defined as:
+16. Remember that in logistic regression, the hypothesis function for some parameter vector $β$ and measurement vector $x$ is defined as:
 
 $$
 h_\beta(x) = g(\beta^Tx) =  \frac{1}{1+e^{-\beta^Tx}}\\
@@ -327,7 +336,7 @@ $$P(y = 1) = 0.2689$$
 ---
 ### Truly Understanding Logistic Regression
 
-16. Proton therapy (PT) is a widely adopted form of treatment for many types of cancer including breast and lung cancer (Fig. 2.2).
+17. Proton therapy (PT) is a widely adopted form of treatment for many types of cancer including breast and lung cancer (Fig. 2.2).
 <table align='center'>
   <tr>
     <td align="center">
@@ -361,6 +370,7 @@ Referring to Table 2.1: Answer the following questions
 <details><summary><b>Answer</b></summary>
 
 1. Explanatory variable : Cancer Type(Breast/Lung)
+
    Response variable : Tumor eradication(Yes/No)
 
 2. Relative risk (RR) is the ratio of risk of an event in one group (e.g., exposed group) versus the risk of the event in the other group (e.g., non-exposed group). The odds ratio (OR) is the ratio of odds of an event in one group versus the odds of the event in the other group.
@@ -371,16 +381,17 @@ Referring to Table 2.1: Answer the following questions
 
     <b>Odds Ratio Calculations</b>
 
-      $$odds(cancer type = lungs) = \frac{number of yes}{number of no}$$
-      $$odds(cancer type = lungs) = \frac{69}{36} = 1.91$$
+    $$odds(cancer \quad type = lungs) = \frac{number \quad of \quad yes}{number \quad of \quad no}$$
+    $$odds(cancer \quad type = lungs) = \frac{69}{36} = 1.91$$
 
-  For Cancer Type = Breast:
+For Cancer Type = Breast:
 
-       $$odds(cancer type = breast) = \frac{560}{260} = 2.15$$
+$$odds(cancer \quad type = breast) = \frac{560}{260} = 2.15$$
   
-  odds ratio $\theta_{cap}$ as measure of association
-       $$\theta_{cap} = \frac{odds \ of \ breast cancer}{odds \ of \ lung cancer} = 2.15/1.91 = 1.23$$ 
-  
+odds ratio $\hat\theta$ as measure of association
+
+$$\hat\theta = \frac{odds \quad of \quad breast cancer}{odds \quad of \quad lung cancer} = 2.15/1.91 = 1.23$$ 
+
   since, odds ratio is greater than $1$, so the odds of the breast cancer is more than that of the lung cancer.
 
   <b>Relative risk calculations</b>
@@ -390,30 +401,31 @@ Referring to Table 2.1: Answer the following questions
   $$RR = \frac{Pr(Y=True| X = Breast)}{Pr(Y=True| X = Lung)}$$
   $$RR = \frac{\frac{560}{560+260}}{\frac{69}{69+36}}$$
 
-4. The 95% confidence interval for the odds-ratio, θ is computed from the sample confidence interval for log odds ratio:
-  $$\sigma_{hat} = \sqrt{\frac{1}{560}+\frac{1}{260}+\frac{1}{69}+\frac{1}{36}}$$
+4. The $95\\%$ confidence interval for the odds-ratio, θ is computed from the sample confidence interval for log odds ratio:
+
+  $$\hat\sigma = \sqrt{\frac{1}{560}+\frac{1}{260}+\frac{1}{69}+\frac{1}{36}}$$
 
   Also from above calculations:
 
-  $$\theta_{hat} = 1.23$$
-  $$\log{\theta_{hat}} = \log{1.23} = 0.21$$
+  $$\hat\theta = 1.23$$
+  $$\log{\hat\theta} = \log{1.23} = 0.21$$
 
-  Therefore, the $95%$ confidence interval for $\log{\theta}$ is:
+  Therefore, the $95\\%$ confidence interval for $\log{\theta}$ is:
 
   $$0.21 +- 1.95 \* 0.21 = (0.63, -0.21)$$
   
-  Using the above logits, $95%$ CI for $\theta$ is :
+  Using the above logits, $95\\%$ CI for $\theta$ is :
 
   $$(e^{-0.21}, e^{0.647}) = (0.81, 1.90)$$
 
-5. Since we have $(0.81, 1.9)$ defines the measure of association with $95%$ confidence and it also contains $1$. $1$ depicts there no relationship between tumor eradication vs cancer type.
+5. Since we have $(0.81, 1.9)$ defines the measure of association with $95\\%$ confidence and it also contains $1$. $1$ depicts there no relationship between tumor eradication vs cancer type.
 
 </details>
 
    
 ---
    
-17. Consider a system for radiation therapy planning (Fig. 2.3). Given a patient with a malignant tumour, the problem is to select the optimal radiation exposure time for that patient. A key element in this problem is estimating the probability that a given tumour will be erad- icated given certain covariates. A data scientist collects information relating to this radiation therapy system.
+18. Consider a system for radiation therapy planning (Fig. 2.3). Given a patient with a malignant tumour, the problem is to select the optimal radiation exposure time for that patient. A key element in this problem is estimating the probability that a given tumour will be erad- icated given certain covariates. A data scientist collects information relating to this radiation therapy system.
 <table align='center'>
   <tr>
     <td align="center">
@@ -440,13 +452,13 @@ $$
 $$
 
 1. Estimate the probability that, given a patient who undergoes the treatment for $40 \ milliseconds$ and who is presented with a tumour sized $3.5\ cm$, the system eradicates the tumour.
-2. How many milliseconds the patient in part (a) would need to be radiated with to have exactly a $50%$ chance of eradicating the tumour?
+2. How many milliseconds the patient in part (a) would need to be radiated with to have exactly a $50\\%$ chance of eradicating the tumour?
 
 <details><summary><b>Answer</b></summary>
 
 1. Given:
 
-  $$X_1 = 40mm and X_2 = 3.5cm$$
+  $$X_1 = 40mm \quad and \quad X_2 = 3.5cm$$
 
   $$\hat{\beta_{0}} = -6 \\ \hat{\beta_{1}}= 0.05 \\ \hat{\beta_{2}} = 1$$  
   
@@ -459,7 +471,7 @@ $$
   $$p_i = \frac{e^{-6+0.05\*40+1\*3.5}}{1+e^{-6+0.05\*40+1\*3.5}}$$
   $$p_i = \frac{e^{-0.5}}{1+e^{-0.5}} = 0.377$$
 
-2. For  $50%$ chance of eradicating the tumor.
+2. For  $50\\%$ chance of eradicating the tumor.
 
   $$p_i = 0.5$$
   From 1st part, we have expression of $p_i$ as follows:
@@ -468,18 +480,18 @@ $$
 
   We need to find $x_1$ assuming $x_2$ same as 1st part.
 
-    $$0.5 =  \frac{e^{-6+0.05\*x_1+1\*3.5}}{1+e^{-6+0.05\*x_1+1\*3.5}}$$
-    $$e^{-6+0.05x_1+3.5} = 1$$
+$$0.5 =  \frac{e^{-6+0.05\*x_1+1\*3.5}}{1+e^{-6+0.05\*x_1+1\*3.5}}$$
+$$e^{-6+0.05x_1+3.5} = 1$$
 
   By taking logarithm of both side, we can solve of $x_1$:
 
-    $$x_1 = \frac{2.5}{0.05} = 50$$
+$$x_1 = \frac{2.5}{0.05} = 50$$
 
 </details>
    
 ---
 
-18. Recent research suggests that heating mercury containing dental amalgams may cause the release of toxic mercury fumes into the human airways. It is also presumed that drinking hot coffee, stimulates the release of mercury vapour from amalgam fillings (Fig. 2.4).
+19. Recent research suggests that heating mercury containing dental amalgams may cause the release of toxic mercury fumes into the human airways. It is also presumed that drinking hot coffee, stimulates the release of mercury vapour from amalgam fillings (Fig. 2.4).
 <table align='center'>
   <tr>
     <td align="center">
@@ -492,8 +504,9 @@ $$
 </table>
 To study factors that affect migraines, and in particular, patients who have at least four dental amalgams in their mouth, a data scientist collects data from $200K$ users with and without dental amalgams. The data scientist then fits a logistic regression model with an indicator of a second migraine within a time frame of one hour after the onset of the first migraine, as the binary response variable (e.g., migraine=1, no migraine=0). The data scientist believes that the frequency of migraines may be related to the release of toxic mercury fumes.
 There are two independent variables:
-    1. $X_1 = 1$ if the patient has at least four amalgams; $0$ otherwise.
-    2. $X_2$ = coffee consumption (0 to 100 hot cups per month).
+
+  1. $X_1 = 1$ if the patient has at least four amalgams; $0$ otherwise.
+  2. $X_2$ = coffee consumption (0 to 100 hot cups per month).
 The output from training a logistic regression classifier is as follows:
 <table align='center'>
   <tr>
@@ -505,18 +518,19 @@ The output from training a logistic regression classifier is as follows:
     <td align="center"> A dental amalgam </td>
   </tr>
 </table>
-    1. Using $X_1$ and $X_2$, express the odds of a patient having a migraine for a second time. 
-    2. Calculate the probability of a second migraine for a patient that has at least four amalgams and drank 100 cups per month?
-    3. For users that have at least four amalgams, is high coffee intake associated with an increased probability of a second migraine?
-    4. Is there statistical evidence that having more than four amalgams is directly associated with a reduction in the probability of a second migraine?
+
+  1. Using $X_1$ and $X_2$, express the odds of a patient having a migraine for a second time. 
+  2. Calculate the probability of a second migraine for a patient that has at least four amalgams and drank 100 cups per month?
+  3. For users that have at least four amalgams, is high coffee intake associated with an increased probability of a second migraine?
+  4. Is there statistical evidence that having more than four amalgams is directly associated with a reduction in the probability of a second migraine?
 
 <details><summary><b>Answer</b></summary>
 
 1. odds of migrane $Pr(migrane = 1)$ can be given by:
 
-  $$\frac{Pr(migrane = 1 | X1, X2)}{1 - Pr(migrane = 1 | X1, X2)} = e^{\beta_0 + \beta_1X_1 + \beta_2X_2}$$
+  $$\frac{Pr(migrane = 1 | X_1, X_2)}{1 - Pr(migrane = 1 | X_1, X_2)} = e^{\beta_0 + \beta_1X_1 + \beta_2X_2}$$
 
-  $$\frac{Pr(migrane = 1 | X1, X2)}{1 - Pr(migrane = 1 | X1, X2)} =  e^{(-6.36347 - 1.02411X_1 + 0.11904X_2)}$$
+  $$\frac{Pr(migrane = 1 | X_1, X_2)}{1 - Pr(migrane = 1 | X_1, X_2)} =  e^{(-6.36347 - 1.02411X_1 + 0.11904X_2)}$$
 
 2. Given observation has following values
   - drank 100 cups per month i.e $X_2 = 100$
@@ -524,23 +538,23 @@ The output from training a logistic regression classifier is as follows:
 
   Using above values, Expression for $Pr(migrane=1 | X_1, X_2)$ can be given by:
 
-  $$Pr(migrane=1 | X1, X2) = \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
+  $$Pr(migrane=1 | X_1, X_2) = \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
 
   On putting $X_1 = 1$ and $X_2 = 100$, we get
 
-  $$Pr(migrane=1 | X1, X2) = \frac{1}{1+e^{-(-6.36374 - 1.02411 + 11.904)}}$$
+  $$Pr(migrane=1 | X_1, X_2) = \frac{1}{1+e^{-(-6.36374 - 1.02411 + 11.904)}}$$
 
-  $$Pr(migrane=1 | X1, X2) = \frac{1}{1+e^{-(4.516)}} = 0.989$$
+  $$Pr(migrane=1 | X_1, X_2) = \frac{1}{1+e^{-(4.516)}} = 0.989$$
 
 3. For user that have atleast 4 amalgams (X1 = 1),
 
-  $$$Pr(migrane=1 | X1, X2) =  \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
+  $$Pr(migrane=1 | X_1, X_2) =  \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
 
-  $$$Pr(migrane=1 | 1, X2) =  \frac{1}{1+e^{-(-6.36347 - 1.02411 + 0.11904X_2)}}$$
+  $$Pr(migrane=1 | 1, X_2) =  \frac{1}{1+e^{-(-6.36347 - 1.02411 + 0.11904X_2)}}$$
 
-  $$$Pr(migrane=1 | 1, X2) =  \frac{1}{1+e^{7.38758 - 0.11904X_2}}$$
+  $$Pr(migrane=1 | 1, X_2) =  \frac{1}{1+e^{7.38758 - 0.11904X_2}}$$
 
-  If we increase $X_2$, denominator in above expression wil decrease and hence probability will increase.
+  If we increase $X_2$, denominator in above expression will decrease and hence probability will increase.
 
   So, high coffee intake associated with an increased probability of a second migraine.
 
@@ -550,8 +564,8 @@ The output from training a logistic regression classifier is as follows:
 
 We can do hypothesis testing to access the statistical significance. Lets define the alternate and null hypothesis for this case.
 
-- $$H_0$$ -  having more than four amalgams is not directly associated with a reduction in the probability of a second migraine
-- $$H_1$$ -  having more than four amalgams is directly associated with a reduction in the probability of a second migraine
+- $H_0$ -  having more than four amalgams is not directly associated with a reduction in the probability of a second migraine
+- $H_1$ -  having more than four amalgams is directly associated with a reduction in the probability of a second migraine
 
 From the model we have p-value as $0.3818$. In order to accept alternate hypothesis we need to have p-value < $0.05$. Since this is not the case we can't reject the null hypothesis with the given evidence.
 
@@ -560,7 +574,7 @@ From the model we have p-value as $0.3818$. In order to accept alternate hypothe
     
 ---
 
-19. To study factors that affect Alzheimer’s disease using logistic regression, a researcher
+20. To study factors that affect Alzheimer’s disease using logistic regression, a researcher
 considers the link between gum (periodontal) disease and Alzheimer as a plausible risk factor. The predictor variable is a count of gum bacteria (Fig. 2.5) in the mouth.
 <table align='center'>
   <tr>
@@ -620,7 +634,7 @@ $$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + e^{-(\beta_0 + \beta_1X_1)}}$$
 $$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + e^{-(-4.8792 + 0.0258 \* 33)}}$$
 $$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + 56.137} = 0.01750$$
 
-2. Let $x$ be the count of the gum bacteria for which probability of the improvement is $0.5$.
+2. Let $X$ be the count of the gum bacteria for which probability of the improvement is $0.5$.
 
 $$Pr(gum bacteria) = \frac{e^{\theta_0 + \theta_1X}}{1 + e^{\theta_0 + \theta_1X}} = \frac{1}{2}$$
 
@@ -628,7 +642,7 @@ taking logs on both side and solving for $X$
 
 $$X = - \frac{\theta_0}{\theta_1} = \frac{4.8792}{0.0258}$$
 
-$$X = = 189.116$$
+$$X = 189.116$$
 
 So for $189$ gum bacterias we will have estimated probability of improvement is $0.5$.
 
@@ -637,13 +651,13 @@ So for $189$ gum bacterias we will have estimated probability of improvement is 
   $$\exp{\beta_1} = \exp{0.0258}$$
   $$\exp{\beta_1} = 189.116$$
 
-4. A $99%$ confidence interval for $β$ is calculated as follows:
+4. A $99\\%$ confidence interval for $β$ is calculated as follows:
 
-$$\beta_{hat} ± z_{0.005} × ASE(\beta_{cap}) = 0.0258 ± 2.576 × 0.0194$$
+$$\hat\beta ± z_{0.005} × ASE(\hat\beta) = 0.0258 ± 2.576 × 0.0194$$
 
-$$\beta_{hat} ± z_{0.005} × ASE(\beta_{cap}) = (−0.00077, 0.9917)$$
+$$\hat\beta ± z_{0.005} × ASE(\hat\beta) = (−0.00077, 0.9917)$$
 
-Therefore, a $99%$ confidence interval for the true odds ratio $exp(β)$ is given by:
+Therefore, a $99\\%$ confidence interval for the true odds ratio $exp(β)$ is given by:
 
 $$(exp(−0.00077), exp(0.9917)) = (0.99923, 2.6958).$$
 
@@ -652,7 +666,7 @@ $$(exp(−0.00077), exp(0.9917)) = (0.99923, 2.6958).$$
 
 ---
 
-20.  Recent research suggests that cannabis (Fig. 2.6) and cannabinoids administration in particular, may reduce the size of malignant tumours in rats.
+21.  Recent research suggests that cannabis (Fig. 2.6) and cannabinoids administration in particular, may reduce the size of malignant tumours in rats.
 <table align='center'>
   <tr>
     <td align="center">
@@ -683,26 +697,27 @@ For the true odds ratio:
 <details><summary><b>Answer</b></summary>
 
 1. sample odds ratio: 
-$$ ratio \ odds = sample \ odds \ ratio = \frac{odds \ of \ succeess \ for \ Placebo}{odds \ of \ succeess \ for \ Cannabinoids}$$
 
-$$ratio \ odds =  \frac{130\*6833}{60\*6778}$$
-$$ratio \ odds =  2.1842$$
+$$ratio \quad odds = sample \quad odds \quad ratio = \frac{odds \quad of \quad succeess \quad for \quad Placebo}{odds \quad of \quad succeess \quad for \quad Cannabinoids}$$
+
+$$ratio \quad odds =  \frac{130\*6833}{60\*6778}$$
+$$ratio \quad odds =  2.1842$$
 
 2. sample log-odd:
 
 $$log(odds) = \log{2.1842} = 0.7812$$
 
-The estimated standard error for $\log(\theta_{hat})$ is:
+The estimated standard error for $\log(\hat\theta)$ is:
 
-$$\sigma_{hat}(\log\theta_{cap}) = \sqrt{\frac{1}{60}+\frac{1}{6833}+\frac{1}{130}+\frac{1}{6778}}$$
+$$\hat\sigma(\log\theta_{cap}) = \sqrt{\frac{1}{60}+\frac{1}{6833}+\frac{1}{130}+\frac{1}{6778}}$$
 
-3. The $95%$ CI for the true log odds ratio is:
+3. The $95\\%$ CI for the true log odds ratio is:
 
-$$log-odd ± Z_{0.95} \* sd_{error}$$
+$$(log-odds) ± Z_{0.95} \* sd_{error}$$
 
 $$0.7812 ± 1.96 × 0.1570 = (0.4734, 1.0889)$$
 
-Correspondingly, the $95%$ CI for the true odds ratio is:
+Correspondingly, the $95\\%$ CI for the true odds ratio is:
 
 $$(e^{0.4734}, e^{1.0889}) = (1.6060, 2.9710)$$
 
@@ -713,7 +728,7 @@ $$(e^{0.4734}, e^{1.0889}) = (1.6060, 2.9710)$$
 
 ### The Logit Function and Entropy
 
-21. The entropy of a single binary outcome with probability $p$ to receive 1 is defined as:
+22. The entropy of a single binary outcome with probability $p$ to receive 1 is defined as:
     $$H(p) ≡ −p\log{p}−(1−p)\log(1−p)$$
     1. At what $p$ does $H(p)$ attain its maximum value?
     2. What is the relationship between the entropy $H(p)$ and the logit function, given $p$?
@@ -738,13 +753,13 @@ $$p = 0.5$$
 
 So, $H(p)$ is maximum at $p = 0.5$
 
-</details>
-
 2. If we look at derivative of entropy $H(p)$ wrt $p$, we have 
 
 $$\frac{d}{dx}H(p) = -\log(p) + \log(1-p)$$
 
 $$\frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)$$
+
+</details>
 
 ---
 
