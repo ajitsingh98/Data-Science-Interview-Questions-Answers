@@ -244,7 +244,7 @@ $$\frac{d}{dx}\sigma(x) = \frac{e^{-x}}{(1+e^{x})^2}$$
 
 ---
 
-15. Characterize the sigmoid function when its argument approaches $0$, $\inf$ and $-\inf$.
+15. Characterize the sigmoid function when its argument approaches $0$, $∞$ and $-∞$.
 
 <details><summary><b>Answer</b></summary>
 
@@ -259,11 +259,11 @@ $$\sigma(0) = \frac{1}{2}$$
 
 For x -> -∞:
 
-$$\sigma(x -> -\inf) = \frac{1}{1+e^{\inf}} = 0$$
+$$\sigma(x \-\> -\inf) = \frac{1}{1+e^{\inf}} = 0$$
 
 For x -> ∞:
 
-$$\sigma(x -> \inf) = \frac{1}{1+e^{-\inf}} = 1$$
+$$\sigma(x \-\> \inf) = \frac{1}{1+e^{-\inf}} = 1$$
 
 
 </details>
@@ -293,7 +293,7 @@ $$logit = \beta_0 + \beta_1x_1 + \beta_2x_2$$
 
 Substitute the given values:
 
-$$logit =  -1.5 + 3*1 + -0.5*5$$
+$$logit =  -1.5 + 3\*1 + -0.5\*5$$
 $$logit =  -1.5 + 3 - 2.5 = -1$$
 
 2. We know the log-odds can be written in terms of logit as follows:
@@ -306,13 +306,13 @@ $$\log\frac{p}{1-p} = -1$$
 
 On taking $\exp$ on both sides:
 
-$$frac{p}{1-p} = e^{-1}$$
+$$\frac{p}{1-p} = e^{-1}$$
 
-$$frac{p}{1-p} = 0.3678$$
+$$\frac{p}{1-p} = 0.3678$$
 
 3. We can write odds of getting $y=1$ in terms of $P(y = 1)$ as follows:
 
-$$odds = frac{P(y = 1)}{1-P(y = 1)}$$
+$$odds = \frac{P(y = 1)}{1-P(y = 1)}$$
 
 We know the odds i.e $e^{-1}$, so
 
@@ -358,8 +358,55 @@ Referring to Table 2.1: Answer the following questions
 5. Interpret the results and explain their significance.
 
 
-<details>
-<summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
+
+1. Explanatory variable : Cancer Type(Breast/Lung)
+   Response variable : Tumor eradication(Yes/No)
+
+2. Relative risk (RR) is the ratio of risk of an event in one group (e.g., exposed group) versus the risk of the event in the other group (e.g., non-exposed group). The odds ratio (OR) is the ratio of odds of an event in one group versus the odds of the event in the other group.
+
+3. Lets calculate relative rist and odds ratio:
+
+   For Cancer Type = Lungs:
+
+    <b>Odds Ratio Calculations</b>
+
+      $$odds(cancer type = lungs) = \frac{number of yes}{number of no}$$
+      $$odds(cancer type = lungs) = \frac{69}{36} = 1.91$$
+
+  For Cancer Type = Breast:
+
+       $$odds(cancer type = breast) = \frac{560}{260} = 2.15$$
+  
+  odds ratio $\theta_{cap}$ as measure of association
+       $$\theta_{cap} = \frac{odds \ of \ breast cancer}{odds \ of \ lung cancer} = 2.15/1.91 = 1.23$$ 
+  
+  since, odds ratio is greater than $1$, so the odds of the breast cancer is more than that of the lung cancer.
+
+  <b>Relative risk calculations</b>
+
+  Relative risk(RR) as a measure of association:
+
+  $$RR = \frac{Pr(Y=True| X = Breast)}{Pr(Y=True| X = Lung)}$$
+  $$RR = \frac{\frac{560}{560+260}}{\frac{69}{69+36}}$$
+
+4. The 95% confidence interval for the odds-ratio, θ is computed from the sample confidence interval for log odds ratio:
+  $$\sigma_{hat} = \sqrt{\frac{1}{560}+\frac{1}{260}+\frac{1}{69}+\frac{1}{36}}$$
+
+  Also from above calculations:
+
+  $$\theta_{hat} = 1.23$$
+  $$\log{\theta_{hat}} = \log{1.23} = 0.21$$
+
+  Therefore, the $95%$ confidence interval for $\log{\theta}$ is:
+
+  $$0.21 +- 1.95 \* 0.21 = (0.63, -0.21)$$
+  
+  Using the above logits, $95%$ CI for $\theta$ is :
+
+  $$(e^{-0.21}, e^{0.647}) = (0.81, 1.90)$$
+
+5. Since we have $(0.81, 1.9)$ defines the measure of association with $95%$ confidence and it also contains $1$. $1$ depicts there no relationship between tumor eradication vs cancer type.
 
 </details>
 
@@ -394,6 +441,41 @@ $$
 
 1. Estimate the probability that, given a patient who undergoes the treatment for $40 \ milliseconds$ and who is presented with a tumour sized $3.5\ cm$, the system eradicates the tumour.
 2. How many milliseconds the patient in part (a) would need to be radiated with to have exactly a $50%$ chance of eradicating the tumour?
+
+<details><summary><b>Answer</b></summary>
+
+1. Given:
+
+  $$X_1 = 40mm and X_2 = 3.5cm$$
+
+  $$\hat{\beta_{0}} = -6 \\ \hat{\beta_{1}}= 0.05 \\ \hat{\beta_{2}} = 1$$  
+  
+  Also, 
+
+  $$p_i = \frac{e^{\beta_0+\beta_1x_1+\beta_2x_2}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2}}$$
+
+  On imputing model's parameters and observations values:
+
+  $$p_i = \frac{e^{-6+0.05\*40+1\*3.5}}{1+e^{-6+0.05\*40+1\*3.5}}$$
+  $$p_i = \frac{e^{-0.5}}{1+e^{-0.5}} = 0.377$$
+
+2. For  $50%$ chance of eradicating the tumor.
+
+  $$p_i = 0.5$$
+  From 1st part, we have expression of $p_i$ as follows:
+
+  $$p_i = \frac{e^{\beta_0+\beta_1x_1+\beta_2x_2}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2}}$$
+
+  We need to find $x_1$ assuming $x_2$ same as 1st part.
+
+    $$0.5 =  \frac{e^{-6+0.05\*x_1+1\*3.5}}{1+e^{-6+0.05\*x_1+1\*3.5}}$$
+    $$e^{-6+0.05x_1+3.5} = 1$$
+
+  By taking logarithm of both side, we can solve of $x_1$:
+
+    $$x_1 = \frac{2.5}{0.05} = 50$$
+
+</details>
    
 ---
 
@@ -427,6 +509,54 @@ The output from training a logistic regression classifier is as follows:
     2. Calculate the probability of a second migraine for a patient that has at least four amalgams and drank 100 cups per month?
     3. For users that have at least four amalgams, is high coffee intake associated with an increased probability of a second migraine?
     4. Is there statistical evidence that having more than four amalgams is directly associated with a reduction in the probability of a second migraine?
+
+<details><summary><b>Answer</b></summary>
+
+1. odds of migrane $Pr(migrane = 1)$ can be given by:
+
+  $$\frac{Pr(migrane = 1 | X1, X2)}{1 - Pr(migrane = 1 | X1, X2)} = e^{\beta_0 + \beta_1X_1 + \beta_2X_2}$$
+
+  $$\frac{Pr(migrane = 1 | X1, X2)}{1 - Pr(migrane = 1 | X1, X2)} =  e^{(-6.36347 - 1.02411X_1 + 0.11904X_2)}$$
+
+2. Given observation has following values
+  - drank 100 cups per month i.e $X_2 = 100$
+  - patient that has at least four amalgams i.e $X_1 = 1$
+
+  Using above values, Expression for $Pr(migrane=1 | X_1, X_2)$ can be given by:
+
+  $$Pr(migrane=1 | X1, X2) = \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
+
+  On putting $X_1 = 1$ and $X_2 = 100$, we get
+
+  $$Pr(migrane=1 | X1, X2) = \frac{1}{1+e^{-(-6.36374 - 1.02411 + 11.904)}}$$
+
+  $$Pr(migrane=1 | X1, X2) = \frac{1}{1+e^{-(4.516)}} = 0.989$$
+
+3. For user that have atleast 4 amalgams (X1 = 1),
+
+  $$$Pr(migrane=1 | X1, X2) =  \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
+
+  $$$Pr(migrane=1 | 1, X2) =  \frac{1}{1+e^{-(-6.36347 - 1.02411 + 0.11904X_2)}}$$
+
+  $$$Pr(migrane=1 | 1, X2) =  \frac{1}{1+e^{7.38758 - 0.11904X_2}}$$
+
+  If we increase $X_2$, denominator in above expression wil decrease and hence probability will increase.
+
+  So, high coffee intake associated with an increased probability of a second migraine.
+
+  Note that we can also deduce same conclusion on looking at coefficient and p-value of hot-coffee.
+
+4. <b>No</b> 
+
+We can do hypothesis testing to access the statistical significance. Lets define the alternate and null hypothesis for this case.
+
+- $$H_0$$ -  having more than four amalgams is not directly associated with a reduction in the probability of a second migraine
+- $$H_1$$ -  having more than four amalgams is directly associated with a reduction in the probability of a second migraine
+
+From the model we have p-value as $0.3818$. In order to accept alternate hypothesis we need to have p-value < $0.05$. Since this is not the case we can't reject the null hypothesis with the given evidence.
+
+</details>
+
     
 ---
 
@@ -472,6 +602,54 @@ The output from training a logistic regression classifier is as follows:
   </tr>
 </table>
 
+<details><summary><b>Answer</b></summary>
+
+From the given data, we have:
+
+Response variable : Y(remission = 1 or 0)
+
+Independent variable : X(count of gum bacteria)
+
+Model's parameters:
+
+$\beta_0 = -4.8792$, $\beta_1 = 0.0258$
+
+1. Given $X_1 = 33$, with models parametrs we can estimate the probability:
+
+$$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + e^{-(\beta_0 + \beta_1X_1)}}$$
+$$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + e^{-(-4.8792 + 0.0258 \* 33)}}$$
+$$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + 56.137} = 0.01750$$
+
+2. Let $x$ be the count of the gum bacteria for which probability of the improvement is $0.5$.
+
+$$Pr(gum bacteria) = \frac{e^{\theta_0 + \theta_1X}}{1 + e^{\theta_0 + \theta_1X}} = \frac{1}{2}$$
+
+taking logs on both side and solving for $X$
+
+$$X = - \frac{\theta_0}{\theta_1} = \frac{4.8792}{0.0258}$$
+
+$$X = = 189.116$$
+
+So for $189$ gum bacterias we will have estimated probability of improvement is $0.5$.
+
+3. Unit increase in bacteria count will affect the odd ratio by 
+
+  $$\exp{\beta_1} = \exp{0.0258}$$
+  $$\exp{\beta_1} = 189.116$$
+
+4. A $99%$ confidence interval for $β$ is calculated as follows:
+
+$$\beta_{hat} ± z_{0.005} × ASE(\beta_{cap}) = 0.0258 ± 2.576 × 0.0194$$
+
+$$\beta_{hat} ± z_{0.005} × ASE(\beta_{cap}) = (−0.00077, 0.9917)$$
+
+Therefore, a $99%$ confidence interval for the true odds ratio $exp(β)$ is given by:
+
+$$(exp(−0.00077), exp(0.9917)) = (0.99923, 2.6958).$$
+
+</details>
+
+
 ---
 
 20.  Recent research suggests that cannabis (Fig. 2.6) and cannabinoids administration in particular, may reduce the size of malignant tumours in rats.
@@ -502,6 +680,35 @@ For the true odds ratio:
 2. Find the sample log-odds ratio.
 3. Compute a 95% confidence interval $(z_{0.95} = 1.645; z_{0.975} = 1.96)$ for the true log odds ratio and true odds ratio.
 
+<details><summary><b>Answer</b></summary>
+
+1. sample odds ratio: 
+$$ ratio \ odds = sample \ odds \ ratio = \frac{odds \ of \ succeess \ for \ Placebo}{odds \ of \ succeess \ for \ Cannabinoids}$$
+
+$$ratio \ odds =  \frac{130\*6833}{60\*6778}$$
+$$ratio \ odds =  2.1842$$
+
+2. sample log-odd:
+
+$$log(odds) = \log{2.1842} = 0.7812$$
+
+The estimated standard error for $\log(\theta_{hat})$ is:
+
+$$\sigma_{hat}(\log\theta_{cap}) = \sqrt{\frac{1}{60}+\frac{1}{6833}+\frac{1}{130}+\frac{1}{6778}}$$
+
+3. The $95%$ CI for the true log odds ratio is:
+
+$$log-odd ± Z_{0.95} \* sd_{error}$$
+
+$$0.7812 ± 1.96 × 0.1570 = (0.4734, 1.0889)$$
+
+Correspondingly, the $95%$ CI for the true odds ratio is:
+
+$$(e^{0.4734}, e^{1.0889}) = (1.6060, 2.9710)$$
+
+</details>
+
+
 ---
 
 ### The Logit Function and Entropy
@@ -517,7 +724,7 @@ For the true odds ratio:
 
 Using derivative rule for logs and products:
 
-$$\frac{d}{dx}H(p) = -\log(p) -1 - \frac{(1-p)}{1-p}*-1 -\log(1-p)*-1 = 0$$
+$$\frac{d}{dx}H(p) = -\log(p) -1 - \frac{(1-p)}{1-p}\*-1 -\log(1-p)\*-1 = 0$$
 
 $$\frac{d}{dx}H(p) = -\log(p) -1 + 1 + \log(1-p) = 0$$
 
@@ -527,7 +734,7 @@ $$\log(p)  = \log(1-p)$$
 
 On simplifying the above expression:
 
-$$ p = 0.5$$
+$$p = 0.5$$
 
 So, $H(p)$ is maximum at $p = 0.5$
 
