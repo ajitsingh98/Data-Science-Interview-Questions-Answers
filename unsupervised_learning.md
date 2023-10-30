@@ -1,4 +1,4 @@
-# Deep Learning Interview Questions
+# Data Science Interview Questions And Answers
 
 Topics
 ---
@@ -27,6 +27,19 @@ Contents
 
 ## Cluserting
 
+5. k-means clustering.
+    1. How would you choose the value of k?
+    1. If the labels are known, how would you evaluate the performance of your k-means clustering algorithm?
+    1. How would you do it if the labels aren’t known?
+    1. Given the following dataset, can you predict how K-means clustering works on it? Explain.
+    ![image](img/k_means.png)
+
+7. k-means and GMM are both powerful clustering algorithms.
+    1. Compare the two.
+    1. When would you choose one over another?
+
+
+
 
 ## Dimensionality Reduction
 
@@ -44,4 +57,13 @@ Contents
 
 
 ## Recommendation Engines
+
+9. Given this directed graph.
+    ![image](assets/dag.png)
+    1. Construct its adjacency matrix.
+    1. How would this matrix change if the graph is now undirected?
+    1. What can you say about the adjacency matrices of two isomorphic graphs?
+10. Imagine we build a user-item collaborative filtering system to recommend to each user items similar to the items they’ve bought before.
+    1. You can build either a user-item matrix or an item-item matrix. What are the pros and cons of each approach?
+    1. How would you handle a new user who hasn’t made any purchases in the past?
 

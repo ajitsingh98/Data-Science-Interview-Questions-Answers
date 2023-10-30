@@ -1,4 +1,4 @@
-# Deep Learning Interview Questions
+# Data Science Interview Questions And Answers
 
 
 Topics
@@ -434,4 +434,20 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 </tr>
 </table>
 
+---
+
+12. Naive Bayes classifier.
+    1. How is Naive Bayes classifier naive?
+    1. Let’s try to construct a Naive Bayes classifier to classify whether a tweet has a positive or negative sentiment. We have four training samples:
+    ```math
+    \begin{bmatrix} 
+        Tweet & Label \\
+        This makes me so upset & Negative\\
+        This puppy makes me happy & Positive \\
+        Look at this happy hamster & Positive \\
+        No hamsters allowed in my house	 & Negative
+        \end{bmatrix}
+    ```
+    According to your classifier, what's sentiment of the sentence The hamster is upset with the puppy?
+    
 ---

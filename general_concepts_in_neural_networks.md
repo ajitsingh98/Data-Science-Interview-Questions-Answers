@@ -1,4 +1,4 @@
-# Deep Learning Interview Questions
+# Data Science Interview Questions And Answers
 
 
 Topics
@@ -12,450 +12,13 @@ Topics
 Contents
 ----
 
-- [Cross Validation](#Cross-Validation)
-- [Convolution and Correlation](#Convolution-and-Correlation)
-- [Similarity Measures](#Similarity-Measures)
 - [Perceptrons](#Perceptrons)
 - [Activation Functions(rectification)](#Activation-Functions)
-- [Performance Mertics](#Performance-Mertics)
+- [Performance Mertics](#Performance-Mertics) 
 - [Training Hyperparameters](#Training-Hyperparameters)
 - [Optimization and Loss](#Optimization-and-Loss)
 - [NNLayers, Topologists and Blocks](#NNLayers,-Topologists-and-Blocks)
 
-### Cross Validation
-
-#### Contents
-- [CV approaches](#cv-approaches)
-- K-Fold CV
-- Stratification
-- LOOCV
-
----
-
-1.  Fig (8.1) depicts two different cross-validation approaches. Name them.
-
-<table align='center'>
-  <tr>
-    <td align="center">
-      <img src="img/cross-validation-1.png" alt= "Figure 8.1: Two CV approaches" style="max-width:70%;" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center"> Figure 8.1: Two CV approaches </td>
-  </tr>
-</table>
-
----
-
-2.  1. What is the purpose of following Python code snippet?
-    ```python
-    skf = StratifiedKFold(y, n_folds=5, random_state=989, shuffle=True)
-    ```
-    2. Explain the benefits of using the K-fold cross validation approach.
-    3. Explain the benefits of using the Stratified K-fold cross validation approach.
-    4. State the difference between K-fold cross validation and stratified cross validation.
-    5. Explain in your own words what is meant by “We adopted a 5-fold cross-validation approach to estimate the testing error of the model”.
-
----
-
-3. **True or False:** In a K-fold CV approach, the testing set is completely excluded from the process and only the training and validation sets are involved in this approach.
-
----
-
-4.  **True or False:** In a K-fold CV approach, the final test error is:
-
-$$
-CV_k = 1/k\sum_{i=1}^{k}MSE
-$$
-
----
-
-5. Mark all the correct choices regarding a cross-validation approach:
-    1. A 5-fold cross-validation approach results in 5-different model instances being fitted.
-    1.  A 5-fold cross-validation approach results in 1 model instance being fitted over and over again 5 times.
-    1. A 5-fold cross-validation approach results in 5-different model instances being fitted over and over again 5 times.
-    1. Uses K-different data-folds.
-
----
-
-6. Mark all the correct choices regarding the approach that should be taken to compute the performance of K-fold cross-validation:
-    1. We compute the cross-validation performance as the arithmetic mean over the K per- formance estimates from the validation sets.
-    1. We compute the cross-validation performance as the best one over the K performance estimates from the validation sets.
-
----
-
-7. A data-scientist who is interested in classifying cross sections of histopathology image slices (8.2) decides to adopt a cross-validation approach he once read about in a book.
-
-<table align='center'>
-  <tr>
-    <td align="center">
-      <img src="img/stratification-1.png" alt= "Figure 8.2: A specific CV approach" style="max-width:70%;" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center"> Figure 8.2: A specific CV approach </td>
-  </tr>
-</table>
-
-Name the approach from the following options:
-
-1. 3-fold CV
-2. 3-fold CV with stratification
-3. A (repeated) 3-fold CV
-
----
-
-8. 1. **True or false**: The leave-one-out cross-validation (LOOCV) approach is a sub-case of k-fold cross-validation wherein K equals N , the sample size.
-    1. **True or false**: It is always possible to find an optimal value n, K = n in K-fold cross-validation.
-
----
-
-### Convolution and Correlation
-
-#### Contents
-
-
-* The convolution operator
-* The correlation operator
-* Padding and stride
-* Kernels and filters
-* Convolution and correlation in python
-* Separable convolutions
-
----
-
-9. This Equation is commonly used in image processing:
-
-$$
-(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau 
-$$
-
-1. What does the above equation represent?
-2. What does $g(t)$ represent?
-
----
-
-10. A data-scientis assumes that:
-    1. A convolution operation is both linear and shift invariant.
-    1. A convolution operation is just like correlation, except that we flip over the filter before applying the correlation operator.
-    1. The convolution operation reaches a maximum, only in cases where the filter is mostly similar to a specific section of the input signal.
-
-Is he right in assuming so? Explain in detail the meaning of these statements.
-
----
-
-11. Mark the correct choice(s):
-    1. The cross-correlation operator is used to find the location where two different signals are most similar.
-    2. The autocorrelation operator is used to find when a signal is similar to a delayed version of itself.
-
----
-
-12. A data-scientist provides you with a formulae for a discrete 2D convolution operation
-
-$$
-f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
-$$
-
-Using above, write the equivalent 2D correlation operation.
-
----
-
-13.  When designing a convolutional neural network layer, one must also define how the filter or kernel slides through the input signal. This is controlled by what is known as the stride and padding parameters or modes. The two most commonly used padding approached in convolutions are the VALID and the SAME modes. Given an input stride of 1:
-    1. Define SAME
-    2. Define VALID
-
----
-
-14. **True or False:** A valid convolution is a type of convolution operation that does not use any padding on the input.
-
----
-
-15. You are provided with a $K × K$ input signal and a $θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?
-
-$$
-\begin{equation}
-A =
-\begin{bmatrix}
-  0 & 0 & \ldots & 0 \\
-  \vdots & \vdots & \ddots & \vdots \\
-  0 & 0 & \ldots & 0 \\
-\end{bmatrix}
-\tag{8.4}
-\end{equation}
-$$
-
----
-
-16. As depicted in below figure, a filter is applied to a ×3 input signal. Identify the correct choice given a stride of 1 and Same padding mode.
-
-<table align='center'>
-  <tr>
-    <td align="center">
-      <img src="img/padding-1.png" alt= "Figure 8.3: A padding approach" style="max-width:70%;" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center"> Figure 8.3: A padding approach </td>
-  </tr>
-</table>
-
----
-
-17. As depicted in in (8.5), a filter is applied to a 3 × 3 input signal, mark the correct choices given a stride of 1.
-    1. A represents a VALID convolution and B represents a SAME convolution 
-    2. A represents a SAME convolution and B represents a VALID convolution
-    3. Both A and B represent a VALID convolution 
-    4. Both A and B represent a SAME convolution
-
-<table align='center'>
-  <tr>
-    <td align="center">
-      <img src="img/padding-1.png" alt= "Figure 8.4: A padding approach" style="max-width:70%;" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center"> Figure 8.4: A padding approach </td>
-  </tr>
-</table>
-
----
-
-18. In this question we discuss the two most commonly used padding approaches in convolutions; `VALID` and `SAME` . Below python code for generating an input signal arr001 and a convolution kernel filter001.
-
-```python
-
-import numpy
-import scipy.signal
-arr01 = numpy.zeros((6, 6),dtype=float)
-print (arr01)
-arr01[:,:3] = 3.0
-arr01[:,3:] = 1.0
-filter001 = numpy.zeros((3, 3), dtype=float)
-filter001[:,0] = 2.0
-filter001[:,2] = -2.0
-output = scipy.signal.convolve2d(arr01, filter, mode='valid')
-
-```
-The input signal, arr001 is first initialized to all zeros as follows:
-
-$$ arr001 = 
-\begin{bmatrix}
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-\end{bmatrix}
-$$
-
-1. Without actually executing the code, determine what would be the resulting shape of the convolve2d() operation.
-2. Manually compute the result of convolving the input signal with the provided filter.
-3. Elaborate why the size of the resulting convolutions is smaller than the size of the input signal.
-
----
-
-19.  Equation 8.6 is the discrete equivalent of equation 8.2 which is frequently used in image processing:
-
-$$
-\begin{equation}
-f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
-\tag{8.6}
-\end{equation}
-$$
-
-1. Given the following discrete kernel in the X direction, what would be the equivalent Y direction?
-
-$$
-K = \frac{1}{2} \begin{bmatrix}
--1 & 1 \\
--1 & 1
-\end{bmatrix}
-$$
-
-2. Identify the discrete convolution kernel presented in (8.6).*Kernels and Filters
-
-<table align='center'>
-  <tr>
-    <td align="center">
-      <img src="img/conv-1.png" alt= "Figure 8.6: A 3 by 3 convolution kernel" style="max-width:70%;" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center"> Figure 8.6: A 3 by 3 convolution kernel</td>
-  </tr>
-</table>
-
----
-
-20. Given an image of size $w × h$, and a kernel with width $K$ , how many multiplications and additions are required to convolve the image?
-
----
-
-21. Presents two built-in Python functions for the convolution and correlation operators.
-
-```python
-import nympy as np
-np.convolve(A,B,"full") # for convolution
-np.correlate(A,B,"full") # for cross correlation
-```
-1. Implement the convolution operation from scratch in Python. Compare it with the built-in numpy equivalent.
-2. Implement the correlation operation using the implementation of the convolution op- eration. Compare it with the built-in numpy equivalent.
-
----
-
-22. The Gaussian distribution in the 1D and 2D is shown in Equations 8.8 and 8.9.
-
-$$
-\begin{equation}
-G(x) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2}{2\sigma^2}}
-\tag{8.8}
-\end{equation}
-$$
-
-$$
-\begin{equation}
-G(x, y) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}}
-\tag{8.9}
-\end{equation}
-$$
-
-The Gaussian filter, is an operator that is used to blur images and remove detail and noise while acting like a low-pass filter. This is similar to the way a mean filter works, but the Gaussian filter uses a different kernel. This kernel is represented with a Gaussian bell shaped bump.
-
-Answer the following questions:
-1. Can 8.8 be used directly on a 2D image?
-2. Can 8.9 be used directly on a 2D image?
-3. Is the Gaussian filter separable? if so, what are the advantages of separable filters.
-
----
-
-### Similarity Measures
-
-- Image, text similarity
-- Jcard similarity
-- The Kullback-Leibler Distance
-- Min Hash
----
-
-23. A data scientist extracts a feature vector from an image using a pre-trained ResNet34 CNN as follows
-
-```python
-import torchvision.models as models
-...
-res_model = models.resnet34(pretrained=True)
-```
-He then applies the following algorithm, entitled xxx on the image (9.2).
-
-```python
-import math
-
-def xxx(arr):
-    mod = 0.0
-    
-    for i in arr:
-        mod += i * i
-    
-    mag = math.sqrt(mod)
-    
-    for i in range(len(arr)):
-        arr[i] /= mag
-
-# Example usage:
-arr = [1.0, 2.0, 3.0]
-xxx(arr)
-print(arr)
-```
-Which results in this list:
-
-<table align='center'>
-  <tr>
-    <td align="center">
-      <img src="img/similarity-1.png" style="max-width:70%;" />
-    </td>
-  </tr>
-</table>
-
-Name the algorithm that he used and explain in detail why he used it.
-
----
-
-24. Further to the above, the scientist then applies the following algorithm:
-
-**Algo 1**
-
-Data: Two vectors v1 and v2 are provided Apply algorithm xxx on the two vectors Run algorithm 2
-
-**Algo 2**
-
-```python
-def algo2(v1, v2):
-    mul = 0.0
-
-    for i in range(len(v1)):
-        mul += v1[i] * v2[i]
-    if mul < 0:
-        return 0
-    
-    return mul
-```
-1. Name the algorithm algo2 that he used and explain in detail what he used it for.
-2. Write the mathematical formulae behind it.
-3. What are the minimum and maximum values it can return?
-4. An alternative similarity measures between two vectors is: $\text{simeuc}(v1, v2) = -\|v1 - v2\|$.
-Name the measure.
-
----
-
-25. 1. What is the formulae for the Jaccard similarity of two sets?
-    2. Explain the formulae in plain words.
-    3. Find the Jacard similarity given the sets depicted in (8.13)
-
-<table align='center'>
-<tr>
-  <td align="center">
-    <img src="img/similarity-2.png" alt= "FIGURE 8.13: Jaccard similarity." style="max-width:70%;" />
-  </td>
-</tr>
-<tr>
-  <td align="center"> FIGURE 8.13: Jaccard similarity.</td>
-</tr>
-</table>
-
-4. Compute the Jaccard similarity of each pair of the following sets:
-    1. 12, 14, 16, 18
-    2. 11, 12, 13, 14, 15
-    3. 11, 16, 17
-
----
-
-26. In this problem, you have to actually read 4 different papers, so you will probably not
-encounter such a question during an interview, however reading academic papers is an ex- cellent skill to master for becoming a DL researcher.
-The Kullback-Leibler divergence is a meas- ure of how different two probability distribution are. As noted, the KL divergence of the probability distributions P, Q on a set X is defined as shown in Equation 8.11.
-
-$$
-D_{KL}(P \| Q) = \sum_{x \in X} P(x) \log\left(\frac{P(x)}{Q(x)}\right)
-$$
-
-Note however that since KL divergence is a non-symmetric information theoretical meas- ure of distance of P from Q, then it is not strictly a distance metric. During the past years, various KL based distance measures (rather than divergence based) have been introduced in the literature generalizing this measure.
-Name each of the following KL based distances:
-
-$$
-D_{KLD1}(P \| Q) = D_{KL}(P \| Q) + D_{KL}(Q \| P)
-$$
-
-$$
-D_{KLD2}(P \| Q) = \sum_{x \in X} (P(x) - Q(x)) \log(P(x))
-$$
-
-$$
-D_{KLD3}(P \| Q) = \frac{1}{2} [D_{KL}\left(Q\|\right(\frac{P+Q}{2})) +  D_{KL}\left(P\|\right(\frac{P+Q}{2})) ]
-$$
-
-$$
-D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
-$$
-
----
 
 ### Perceptron
 
@@ -465,6 +28,13 @@ $$
 - Backpropagation in perceptrons
 - The theory of perceptrons
 - Learning logical gates
+
+
+3. Neural network in simple Numpy.
+    1. Write in plain NumPy the forward and backward pass for a two-layer feed-forward neural network with a ReLU layer in between.
+    1. Implement vanilla dropout for the forward and backward pass in NumPy.
+
+---
 
 27. In a single-layer feed-forward NN, there are [...] input(s) and [...]. output layer(s) and no [...] connections at all.
 
@@ -561,6 +131,21 @@ $$
 </table>
 
 2. Confirm your manual calculation using PyTorch tensors.
+
+---
+4. Activation functions.
+    1. Draw the graphs for sigmoid, tanh, ReLU, and leaky ReLU.
+    1. Pros and cons of each activation function.
+    1. Is ReLU differentiable? What to do when it’s not differentiable?
+    1. Derive derivatives for sigmoid function when is a vector.
+
+---
+
+22. Why shouldn’t we have two consecutive linear layers in a neural network?
+
+---
+
+23. Can a neural network with only RELU (non-linearity) act as a linear classifier?
 
 ---
 
@@ -671,6 +256,10 @@ What is the value resulting from the application the sum operator?
 
 ---
 
+1. When building a neural network, should you overfit or underfit it first?
+
+---
+
 45. What was the most crucial difference between Rosenblatt’s original algorithm and Hinton’s fundamental papers of 1986: <a href="">Learning representations by back-propagating errors</a> and 2012:
 <a href="">ImageNet Classification with Deep Convolutional Neural Networks” </a>
 
@@ -690,6 +279,10 @@ What is the value resulting from the application the sum operator?
 </table>
 
 Can a perceptron with only two inputs and a single output function as an AND logic gate? If so, find the weights and the threshold and demonstrate the correctness of your answer using a truth table.
+
+---
+
+24. Design the smallest neural network that can function as an XOR gate.
 
 ---
 
@@ -1025,6 +618,9 @@ During the training of a neural network, the Dropout layer randomly drops out ou
 
 ---
 
+
+---
+
 65. A co-worker claims he discovered an equivalence theorem where, two consecutive Dropout layers [26] can be replaced and represented by a single Dropout layer 8.34.
 <table align='center'>
   <tr>
@@ -1162,6 +758,14 @@ Please run the code and answer the following questions:
     Generally i.i.d. $X ∼ N (μ, σ2)$ however BN uses the standard normal distribution. What mean and variance does the standard normal distribution have?
     3. What is the mathematical process of normalization?
     4. Describe, how normalization works in BN.
+
+---
+
+14. Compare batch norm and layer norm.
+
+---
+
+7. Weight normalization separates a weight vector’s norm from its gradient. How would it help with training?
 
 ---
 
@@ -1430,6 +1034,20 @@ In the majority of cases, the training data is manually labelled by radiologists
 
 ---
 
+13. Learning rate.
+    1. Draw a graph number of training epochs vs training error for when the learning rate is:
+        1. too high
+        1. too low
+        1. acceptable.
+    1. What’s learning rate warmup? Why do we need it?
+
+---
+
+17. It’s a common practice for the learning rate to be reduced throughout the training.
+    1. What’s the motivation?
+    1. What might be the exceptions?
+---
+
 87. Refer to the validation log-loss curve visualized in (8.49) and answer the following questions:
 
 <table align='center'>
@@ -1462,6 +1080,10 @@ What do you think about his idea?
 
 ---
 
+25. Why don’t we just initialize all weights in a neural network to zero?
+
+---
+
 88. You finished training a face recognition algorithm, which uses a feature vector of 128
 elements. During inference, you notice that the performance is not that good. A friend tells you that in computer vision faces are gathered in various poses and perspectives. He there- fore suggests that during inference you would augment the incoming face five times, run inference on each augmented image and then fuse the output probability distributions by averaging.
     1. Name the method he is suggesting.
@@ -1486,14 +1108,55 @@ antly higher, the network has almost certainly learned features which are not pr
 
 ---
 
+26. Stochasticity.
+    1. What are some sources of randomness in a neural network?
+    1. Sometimes stochasticity is desirable when training neural networks. Why is that?
+
+---
+
+10. Gradient descent vs SGD vs mini-batch SGD.
+
+---
+
+2. Write the vanilla gradient update.
+
+---
+
 91. Explain why in SGD, the number of epochs required to surpass a certain loss threshold increases as the batch size decreases?
+
+---
+
+11. It’s a common practice to train deep learning models using epochs: we sample batches from data without replacement. Why would we use epochs instead of just sampling data with replacement?
+
+---
+
+18. Batch size.
+    1. What happens to your model training when you decrease the batch size to 1?
+    1. What happens when you use the entire training data in a batch?
+    1. How should we adjust the learning rate as we increase or decrease the batch size?
+
+---
+
+6. Vanishing and exploding gradients.
+    1. How do we know that gradients are exploding? How do we prevent it?
+    1. Why are RNNs especially susceptible to vanishing and exploding gradients?
 
 ---
 
 92. How does momentum work? Explain the role of exponential decay in the gradient descent update rule?
 
 ---
+19. Why is Adagrad sometimes favored in problems with sparse gradients?
 
+---
+20. Adam vs. SGD.
+    1. What can you say about the ability to converge and generalize of Adam vs. SGD?
+    2. What else can you say about the difference between these two optimizers?
+--
+
+21. With model parallelism, you might update your model weights using the gradients from each machine asynchronously or synchronously. What are the pros and cons of asynchronous SGD vs. synchronous SGD?
+
+---
 93. In your training loop, you are using SGD and a logistic activation function which is
 known to suffer from the phenomenon of saturated units.
     1. Explain the phenomenon.
@@ -1526,6 +1189,10 @@ known to suffer from the phenomenon of saturated units.
 
 ---
 
+ 15. Why is squared L2 norm sometimes preferred to L2 norm for regularizing neural networks?
+
+---
+
 96. You are provided with a pure Python code implementation of the Manhattan distance
 function (8.51):
 
@@ -1544,6 +1211,25 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 97. Your friend is training a logistic regression model for a binary classification problem using the L2 loss for optimization. Explain to him why this is a bad choice and which loss he should be using instead.
 
 ---
+
+5. What’s the motivation for skip connection in neural works?
+8. When training a large neural network, say a language model with a billion parameters, you evaluate your model on a validation set at the end of every epoch. You realize that your validation loss is often lower than your train loss. What might be happening?
+9. What criteria would you use for early stopping?
+
+12. Your model’ weights fluctuate a lot during training. How does that affect your model’s performance? What to do about it?
+
+16. Some models use weight decay: after each gradient update, the weights are multiplied by a factor slightly less than 1. What is this useful for?
+
+27. Dead neuron.
+    1. What’s a dead neuron?
+    1. How do we detect them in our neural network?
+    1. How to prevent them?
+28. Pruning.
+    1. Pruning is a popular technique where certain weights of a neural network are set to 0. Why is it desirable?
+    2. How do you choose what to prune from a neural network?
+29. Under what conditions would it be possible to recover training data from the weight checkpoints?
+30. Why do we try to reduce the size of a big trained model through techniques such as knowledge distillation instead of just training a small model from the beginning?
+
 
 
 

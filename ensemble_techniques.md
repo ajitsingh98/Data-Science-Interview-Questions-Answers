@@ -1,4 +1,4 @@
-# Deep Learning Interview Questions
+# Data Science Interview Questions And Answers
 
 
 Topics
@@ -19,6 +19,8 @@ Contents
 - Snapshot Ensembling 
 - Multi-model Ensembling
 - Learning-rate Schedules in Ensembling
+- Random Forest
+- Boosting based Algorithms
 
 ---
 
@@ -168,6 +170,12 @@ much as possible.
 
 10. **True or false**: In bagging, we re-sample the training corpus with replacement and there-
 fore this may lead to some instances being represented numerous times while other instances not to be represented at all.
+
+---
+
+8. Bagging and boosting are two popular ensembling methods. Random forest is a bagging example while XGBoost is a boosting example.
+    1. What are some of the fundamental differences between bagging and boosting algorithms?
+    1. How are they used in deep learning?
 
 ---
 
@@ -325,3 +333,8 @@ What type of ensembling is being utilized in this approach? Explain in detail.
     3. Explain how a cyclic cosine annealing schedule as proposed by Loshchilov [10] and [13] is used to converge to multiple local minima.
 
 ---
+
+13. Two popular algorithms for winning Kaggle solutions are Light GBM and XGBoost. They are both gradient boosting algorithms.
+    1. What is gradient boosting?
+    1. What problems is gradient boosting good for?
+

@@ -1,4 +1,4 @@
-# Deep Learning Interview Questions
+# Data Science Interview Questions And Answers
 
 Topics
 ---

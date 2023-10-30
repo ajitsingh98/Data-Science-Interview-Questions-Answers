@@ -1,4 +1,4 @@
-# Deep Learning Interview Questions
+# Data Science Interview Questions And Answers
 
 
 Topics
@@ -387,3 +387,7 @@ where H is the Shannon entropy, and $H (X | Z )$ is the conditional entropy of $
 
 32. **True or False**: Using Jensen's inequality, it is possible to show that the KL divergence
 is always greater or equal to zero.
+
+---
+
+6. Jensen’s inequality forms the basis for many algorithms for probabilistic inference, including expectation maximization and variational inference. Explain what Jensen’s inequality is.

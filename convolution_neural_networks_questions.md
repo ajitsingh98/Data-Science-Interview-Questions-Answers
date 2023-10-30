@@ -1,4 +1,4 @@
-# Deep Learning Interview Questions
+# Data Science Interview Questions And Answers
 
 
 Topics
@@ -11,10 +11,229 @@ Topics
 
 Contents
 ----
+1. [Convolution and Correlation](#convolution-and-correlation)
+2. [CNN as Fixed Feature Extractor](#CNN-as-Fixed-Feature-Extractor)
+3. [Fine-tuning CNNs](#Fine-Tuning-CNNs)
+4. [Neural Style Transfer](#Neural-Style-Transfer)
 
-1. [CNN as Fixed Feature Extractor](#CNN-as-Fixed-Feature-Extractor)
-2. [Fine-tuning CNNs](#Fine-Tuning-CNNs)
-3. [Neural Style Transfer](#Neural-Style-Transfer)
+### Convolution and Correlation
+
+#### Contents
+
+
+* The convolution operator
+* The correlation operator
+* Padding and stride
+* Kernels and filters
+* Convolution and correlation in python
+* Separable convolutions
+
+---
+
+9. This Equation is commonly used in image processing:
+
+$$
+(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau 
+$$
+
+1. What does the above equation represent?
+2. What does $g(t)$ represent?
+
+---
+
+10. A data-scientis assumes that:
+    1. A convolution operation is both linear and shift invariant.
+    1. A convolution operation is just like correlation, except that we flip over the filter before applying the correlation operator.
+    1. The convolution operation reaches a maximum, only in cases where the filter is mostly similar to a specific section of the input signal.
+
+Is he right in assuming so? Explain in detail the meaning of these statements.
+
+---
+
+11. Mark the correct choice(s):
+    1. The cross-correlation operator is used to find the location where two different signals are most similar.
+    2. The autocorrelation operator is used to find when a signal is similar to a delayed version of itself.
+
+---
+
+12. A data-scientist provides you with a formulae for a discrete 2D convolution operation
+
+$$
+f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
+$$
+
+Using above, write the equivalent 2D correlation operation.
+
+---
+
+13.  When designing a convolutional neural network layer, one must also define how the filter or kernel slides through the input signal. This is controlled by what is known as the stride and padding parameters or modes. The two most commonly used padding approached in convolutions are the VALID and the SAME modes. Given an input stride of 1:
+    1. Define SAME
+    2. Define VALID
+
+---
+
+14. **True or False:** A valid convolution is a type of convolution operation that does not use any padding on the input.
+
+---
+
+15. You are provided with a $K × K$ input signal and a $θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?
+
+$$
+\begin{equation}
+A =
+\begin{bmatrix}
+  0 & 0 & \ldots & 0 \\
+  \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & \ldots & 0 \\
+\end{bmatrix}
+\tag{8.4}
+\end{equation}
+$$
+
+---
+
+16. As depicted in below figure, a filter is applied to a ×3 input signal. Identify the correct choice given a stride of 1 and Same padding mode.
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/padding-1.png" alt= "Figure 8.3: A padding approach" style="max-width:70%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> Figure 8.3: A padding approach </td>
+  </tr>
+</table>
+
+---
+
+17. As depicted in in (8.5), a filter is applied to a 3 × 3 input signal, mark the correct choices given a stride of 1.
+    1. A represents a VALID convolution and B represents a SAME convolution 
+    2. A represents a SAME convolution and B represents a VALID convolution
+    3. Both A and B represent a VALID convolution 
+    4. Both A and B represent a SAME convolution
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/padding-1.png" alt= "Figure 8.4: A padding approach" style="max-width:70%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> Figure 8.4: A padding approach </td>
+  </tr>
+</table>
+
+---
+
+18. In this question we discuss the two most commonly used padding approaches in convolutions; `VALID` and `SAME` . Below python code for generating an input signal arr001 and a convolution kernel filter001.
+
+```python
+
+import numpy
+import scipy.signal
+arr01 = numpy.zeros((6, 6),dtype=float)
+print (arr01)
+arr01[:,:3] = 3.0
+arr01[:,3:] = 1.0
+filter001 = numpy.zeros((3, 3), dtype=float)
+filter001[:,0] = 2.0
+filter001[:,2] = -2.0
+output = scipy.signal.convolve2d(arr01, filter, mode='valid')
+
+```
+The input signal, arr001 is first initialized to all zeros as follows:
+
+$$ arr001 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}
+$$
+
+1. Without actually executing the code, determine what would be the resulting shape of the convolve2d() operation.
+2. Manually compute the result of convolving the input signal with the provided filter.
+3. Elaborate why the size of the resulting convolutions is smaller than the size of the input signal.
+
+---
+
+19.  Equation 8.6 is the discrete equivalent of equation 8.2 which is frequently used in image processing:
+
+$$
+\begin{equation}
+f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
+\tag{8.6}
+\end{equation}
+$$
+
+1. Given the following discrete kernel in the X direction, what would be the equivalent Y direction?
+
+$$
+K = \frac{1}{2} \begin{bmatrix}
+-1 & 1 \\
+-1 & 1
+\end{bmatrix}
+$$
+
+2. Identify the discrete convolution kernel presented in (8.6).*Kernels and Filters
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/conv-1.png" alt= "Figure 8.6: A 3 by 3 convolution kernel" style="max-width:70%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> Figure 8.6: A 3 by 3 convolution kernel</td>
+  </tr>
+</table>
+
+---
+
+20. Given an image of size $w × h$, and a kernel with width $K$ , how many multiplications and additions are required to convolve the image?
+
+---
+
+21. Presents two built-in Python functions for the convolution and correlation operators.
+
+```python
+import nympy as np
+np.convolve(A,B,"full") # for convolution
+np.correlate(A,B,"full") # for cross correlation
+```
+1. Implement the convolution operation from scratch in Python. Compare it with the built-in numpy equivalent.
+2. Implement the correlation operation using the implementation of the convolution op- eration. Compare it with the built-in numpy equivalent.
+
+---
+
+22. The Gaussian distribution in the 1D and 2D is shown in Equations 8.8 and 8.9.
+
+$$
+\begin{equation}
+G(x) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2}{2\sigma^2}}
+\tag{8.8}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+G(x, y) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}}
+\tag{8.9}
+\end{equation}
+$$
+
+The Gaussian filter, is an operator that is used to blur images and remove detail and noise while acting like a low-pass filter. This is similar to the way a mean filter works, but the Gaussian filter uses a different kernel. This kernel is represented with a Gaussian bell shaped bump.
+
+Answer the following questions:
+1. Can 8.8 be used directly on a 2D image?
+2. Can 8.9 be used directly on a 2D image?
+3. Is the Gaussian filter separable? if so, what are the advantages of separable filters.
+
+---
 
 ### CNN as Fixed Feature Extractor
 
@@ -222,6 +441,28 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 2. Suggest several data augmentation techniques to augment the data.
 3. Write a code snippet in PyTorch to adapt the CNN so that it can predict 7 classes instead of the original source size of 1000.
 4. In order to fine tune our CNN, the (original) output layer with $1000$ classes was removed and the CNN was adjusted so that the (new) classification layer comprised seven softmax neurons emitting posterior probabilities of class membership for each lesion type.
+
+---
+
+1. For neural networks that work with images like VGG-19, InceptionNet, you often see a visualization of what type of features each filter captures. How are these visualizations created?
+2. Filter size.
+    1. How are your model’s accuracy and computational efficiency affected when you decrease or increase its filter size?
+    1. How do you choose the ideal filter size?
+3. Convolutional layers are also known as “locally connected.” Explain what it means.
+4. When we use CNNs for text data, what would the number of channels be for the first conv layer?
+5. What is the role of zero padding?
+6. Why do we need upsampling? How to do it?
+7. What does a 1x1 convolutional layer do?
+8. Pooling.
+    1. What happens when you use max-pooling instead of average pooling?
+    1. When should we use one instead of the other?
+    1. What happens when pooling is removed completely?
+    1. What happens if we replace a 2 x 2 max pool layer with a conv layer of stride 2?
+9. When we replace a normal convolutional layer with a depthwise separable convolutional layer, the number of parameters can go down. How does this happen? Give an example to illustrate this.
+10. Can you use a base model trained on ImageNet (image size 256 x 256) for an object classification task on images of size 320 x 360? How?
+11. How can a fully-connected layer be converted to a convolutional layer?
+12. Pros and cons of FFT-based convolution and Winograd-based convolution.
+
 
 ---
 

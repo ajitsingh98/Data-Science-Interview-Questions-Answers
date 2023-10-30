@@ -1,4 +1,4 @@
-## Descriptive Statistics
+# Data Science Interview Questions And Answers
 
 1. Explain frequentist vs. Bayesian statistics.
 

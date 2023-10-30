@@ -1,4 +1,4 @@
-# Deep Learning Interview Questions
+# Data Science Interview Questions And Answers
 
 Topics
 ---
@@ -763,6 +763,13 @@ $$\frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)$$
 
 ---
 
+1. What are the basic assumptions to be made for linear regression?
+
+---
+
+2. What happens if we don’t apply feature scaling to logistic regression?
+
+---
 
 
 
