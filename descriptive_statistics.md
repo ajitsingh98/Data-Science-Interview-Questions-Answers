@@ -112,86 +112,6 @@ Distribution type:
 
 ---
 
-4. What is a moment of function? Explain the meanings of the zeroth to fourth moments.
-
-
-<details><summary><b>Answer</b></summary>
-
-Statistical moments are additional descriptors of a curve/distribution. Moments quantify three parameters of distributions: location, shape, and scale. 
-
-- `location` -  A distribution’s location refers to where its center of mass is along the x-axis. 
-- `Scale` -  The scale refers to how spread out a distribution is. Scale stretches or compresses a distribution along the x-axis.
-- `Shape` - The shape of a distribution refers to its overall geometry: is the distribution bimodal, asymmetric, heavy-tailed?
-
-The $k$th moment of a function $f(x)$ about a non-random value $c$ is:
-
-$$E[(X - c)^k] = \int_{-\infty}^{\infty} (x - c)^k f(x) dx$$
-
-This generalization allows us to make an important distinction: 
-- a raw moment is a moment about the origin $(c=0)$
-- a central moment is a moment about the distribution’s mean $(c=E[X])$
-
-First five moments in order from $0$th to $4$th moments: `total mass`, `mean`, `variance`, `skewness`, and `kurtosis`. 
-
-- <b>Zeroth Moment(total mass)</b>: The zeroth moment is simply the constant value of 1. It doesn't provide much information about the distribution itself but is often used in mathematical contexts.
-
-- <b>1st Moment(mean)</b> - The first moment is also known as the mean or expected value. It represents the center of the distribution and is a measure of the average or central location of the data points. 
-
-$$\(\mu = \frac{1}{n} \sum_{i=1}^{n} x_i\)$$
-
-Where:
-- $\(\mu\)$ (mu) is the mean.
-- $\(n\)$ is the number of data points.
-- $\(x_i\)$ represents individual data points.
-
-- <b>2nd Moment(Variance)</b> - The second moment is the variance. It measures the spread or dispersion of the data points around the mean. It is calculated as the average of the squared differences between each data point and the mean. 
-
-$$\(\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2\)$$
-
-Where:
-  - \(\sigma^2\) (sigma squared) is the variance.
-
-- <b>3rd Moment(Skewness)</b> - The third moment is a measure of the skewness of the distribution. It indicates whether the distribution is skewed to the left (negatively skewed) or to the right (positively skewed). 
-
-$$\[Skewness = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^3\]$$
-
-- <b>4th Moment(Kurtosis)</b> - The fourth moment measures the kurtosis of the distribution. Kurtosis indicates whether the distribution is more or less peaked (leptokurtic or platykurtic) compared to a normal distribution. 
-
-$$\[Kurtosis = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^4\]$$
-
-</details>
-
----
-
-5. Are independence and zero covariance the same? Give a counterexample if not.
-
-<details><summary><b>Answer</b></summary>
-
-<b>No</b> 
-
-Independence and zero covariance are related but not the same. Independence implies zero covariance, but the reverse is not necessarily true. Zero covariance indicates that there is no linear relationship between the variables. However, it does not necessarily mean that the variables are independent. Non-linear relationships can still exist between variables even if their covariance is zero.
-
-Lets explain this with an example:
-
-Consider two random variables $X$ and $Y$ defined as follows:
-
-- A random variable $𝑋$ with $𝐸[𝑋]=0$ and $𝐸[𝑋^3]=0$, e.g. normal random variable with zero mean. 
-- Take $𝑌=𝑋^2$.
-
-Now it is clear the $X$ and $Y$ are dependent, now lets look the covariance of both
-
-$$𝐶𝑜𝑣(𝑋,𝑌) = 𝐸[𝑋𝑌]−𝐸[𝑋]⋅𝐸[𝑌]$$
-
-$$𝐶𝑜𝑣(𝑋,𝑌) = 𝐸[𝑋.X^2]−𝐸[𝑋]⋅𝐸[X^2]$$
-
-$$𝐶𝑜𝑣(𝑋,𝑌) = 0$$
-
-Now $Cov(X, Y)$ coming as zero and hence depicting the $X$ and $Y$ are independent which is not the case.
-
-</details>
-
----
-
 6. Suppose that you take $100$ random newborn puppies and determine that the average weight is $1$ pound with the population standard deviation of $0.12$ pounds. Assuming the weight of newborn puppies follows a normal distribution, calculate the $95\\%$ confidence interval for the average weight of all newborn puppies.
 
 <details><summary><b>Answer</b></summary>
@@ -222,7 +142,6 @@ So, the $95\%$ interval is $(0.9768,1.0232)$.
     1. We're $95\\%$ confident that this interval captured the true mean weight.
 
 
-
 <details><summary><b>Answer</b></summary>
 
 $3rd$ statement seems correct interpretation of CI. $95\\%$ CI represents if we draw multiple samples and caluclate the sample statistics and confidence intervals(CI) then $95\\%$ of those intervals will contains population mean($\mu$).
@@ -238,56 +157,6 @@ $2^{nd}$ statment is talking about sample statistics but CI is mainly used to es
 ---
 
 8. Suppose we have a random variable X supported on $[0,1]$  from which we can draw samples. How can we come up with an unbiased estimate of the median of X?
-
-
-
----
-
-9. Can the correlation be greater than 1? Why or why not? How to interpret a correlation value of 0.3?
-
-<details><summary><b>Answer</b></summary>
-
-<b>No</b> correlation(r) can not be greater than 1 and range of r is $[-1, 1]$. 
-
-Lets look at the expression of correlation(r) to establish the above statement.
-
-Suppose we have two variables X and Y and we want to investigate the relationship between them.
-
-$$correlation(r_{XY}) = \frac{covariance(X, Y)}{{\sigma_X}{\sigma_Y}}$$
-
-Now let's define two vectors $\arrow{u}$ and $\arrow{v}$ where $\arrow{u} = [u_1, u_2, ..., u_n]$ and $\arrow{v} = [v_1, v_2, ..., v_n]$ where elements are the deviation from the mean.
-
-$$\u_i = x_i - \hat{x} \quad \v_i = y_i - \hat{y}$$
-
-We can now write the sample covariance and the sample variances in vector notation as:
-
-$$Covariance(u, v) = \frac{1}{n-1}\sum_{i=1}^n u_i v_i = \frac{1}{n-1}u \cdot v$$
-
-similary variance in X and Y can be expressed in vectorized form:
-
-$$Var(X) = \frac{1}{n-1}\sum_{i=1}^n {u_i}^{2} = \frac{1}{n-1} \| \mathbf{u} \|^2$$
-$$Var(Y) = \frac{1}{n-1}\sum_{i=1}^n {v_i}^{2} = \frac{1}{n-1} \| \mathbf{v} \|^2$$
-
-Now we can write correlation expresion using vectors $u$ and $v$,
-
-$$r_{XY} = \frac{Covariance(u, v)}{\sqrt{Var(X)}{Var(Y)}}$$
-
-$$r_{XY} = \frac{\mathbf{u} \cdot \mathbf{v}}{\| \mathbf{u} \| \| \mathbf{v} \|}$$
-
-From cosine rule, we get
-
-$$r_{XY} = \cos\theta$$
-
-Since $-1 <= \cos\theta <= 1$, $r_{XY} is always between -1 and 1$ 
-
-For give $r = 0.3$, we can deduce following conclusions:
-
-- Relationship is positive but week.
-- Increasing one variable is resulting in increase in another variable too.
-
-Note that the above conlusions are based on assumption that both variable are linearly dependent.
-
-</details>
 
 ---
 

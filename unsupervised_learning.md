@@ -18,8 +18,6 @@ Contents
 
 1. What is unsupervised learning?
 2. Name some scenarios where we can use unsupervised learning algorithms?
- 
-
 
 
 

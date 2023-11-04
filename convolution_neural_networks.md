@@ -11,6 +11,7 @@ Topics
 
 Contents
 ----
+
 1. [Convolution and Correlation](#convolution-and-correlation)
 2. [CNN as Fixed Feature Extractor](#CNN-as-Fixed-Feature-Extractor)
 3. [Fine-tuning CNNs](#Fine-Tuning-CNNs)
