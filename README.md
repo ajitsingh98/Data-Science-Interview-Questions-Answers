@@ -32,5 +32,6 @@ Contents
 - [Computer Vision Topics](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/computer_vision_topics.md)
 - [Natural Language Processing Questions](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/natural_language_processing_questions.md)
 - [Unsupervised Learning](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/unsupervised_learning.md)
+- [SQL Questions](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/sql.md)
 
 ---
