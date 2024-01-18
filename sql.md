@@ -5,6 +5,19 @@ Topics
 
 - [SQL Questions](#sql-questions)
 
+Consider you have a `worker` table with following fields:
+- fisrt_name
+- last_name
+- salary
+- worler_id(Primary Key)
+- department
+- department_name
+
+Along with you have some meta data tables like `title` and `bonus` which contains following fields:
+
+`title`
+- 
+
 
 ## SQL Questions
 
@@ -157,7 +170,7 @@ length.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-    SELECT <b> * </b> FROM <b>Worker</b> where department_name not in ('Manish', 'Arhan');
+    SELECT <b> * </b> FROM <b>Worker</b> where department_name not in ('Admin');
     </p>
 </details>
 
@@ -305,21 +318,21 @@ alphabets.
 
 ---
 
-29. Write an SQL query to fetch intersecting records of two tables.
+29. Write an SQL query to fetch intersecting records of two tables(`worker` and `worker_clone`).
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT worker.* FROM <b>worker</b> inner join <b>worker_clone</b> USING(worker_id);
     </p>
 </details>
 
 ---
 
-30. Write an SQL query to show records from one table that another table does not have.
+30. Write an SQL query to show records from one table(`worker`) that another table(`worker_clone`) does not have.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT worker.* FROM <b>worker</b> LEFT JOIN <b>worker_clone</b> USING(worker_id) WHERE worker_clone.worker_id IS NULL;
     </p>
 </details>
 
@@ -329,7 +342,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT curdate(); OR SELECT now();
     </p>
 </details>
 
@@ -339,7 +352,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT * FROM <b>Worker</b> ORDER BY salary DESC LIMIT 5;
     </p>
 </details>
 
@@ -349,7 +362,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT * FROM <b>Worker</b> ORDER BY salary DESC LIMIT 4, 1;
     </p>
 </details>
 
@@ -359,7 +372,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT salary FROM <b>Worker w1</b> WHERE 5 = (SELECT COUNT(DISTINCT salary) FROM Worker w2 WHERE w2.salary >= w1.salary);
     </p>
 </details>
 
@@ -369,7 +382,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT w1.* FROM <b>Worker w1, Worker w2</b> WHERE w1.salary = w2.salary AND w1.worker_id != w2.worker_id;
     </p>
 </details>
 
@@ -379,7 +392,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT MAX(salary) FROM <b>Worker</b> WHERE salary not in (SELECT MAX(salary) FROM  Worker);
     </p>
 </details>
 
@@ -389,17 +402,17 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT * FROM <b>Worker</b> UNION ALL SELECT * FROM <b>Worker</b> ORDER BY worker_id;
     </p>
 </details>
 
 ---
 
-38. Write an SQL query to list worker id who does not get bonus. 
+38. Write an SQL query to list worker id who does not get bonus(`bonus`). 
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT worker_id FROM <b>Worker</b> WHERE worker_id NOT IN (SELECT worker_ref_id FROM bonus);
     </p>
 </details>
 
@@ -409,7 +422,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT * FROM <b>Worker</b> worker_id <= (SELECT COUNT(worker_id)/2 FROM Worker);
     </p>
 </details>
 
@@ -419,7 +432,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT department, count(department) as dept_count FROM <b>Worker</b> GROUP BY department HAVING dept_count < 4;
     </p>
 </details>
 
@@ -429,7 +442,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+    SELECT department, count(department) as dept_count FROM <b>Worker</b> GROUP BY department;
     </p>
 </details>
 
@@ -439,7 +452,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT * FROM <b>Worker</b>  ORDER BY worker_id DESC LIMIT 1;
     </p>
 </details>
 
@@ -449,7 +462,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT * FROM <b>Worker</b>  ORDER BY worker_id ASC LIMIT 1;
     </p>
 </details>
 
@@ -459,7 +472,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+    SELECT * FROM <b>Worker</b>  ORDER BY worker_id DESC LIMIT 5;
     </p>
 </details>
 
@@ -469,7 +482,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT w.department, w.salary, w.first_name FROM (SELECT MAX(salary) as max_salary, department FROM Worker GROUP BY department) temp INNER JOIN Worker w on temp.department = w.department AND temp.max_salary = w.salary;
     </p>
 </details>
 
@@ -479,7 +492,7 @@ alphabets.
 
 <details style='color: red;'><summary><b>Answer</b></summary>
     <p style='color: red'>
-   SELECT * FROM <b>Worker</b> WHERE MOD(ID, 2) = 0;
+   SELECT w1.salary FROM <b>Worker w1</b> WHERE 3 >= (SELECT COUNT(DISTINCT salary) FROM Worker w2 WHERE w1.salary <= w2.salary)
     </p>
 </details>
 
