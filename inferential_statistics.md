@@ -874,9 +874,6 @@ since p-value > $0.05$, We can not reject null hypothesis and we will reject the
 
 
 </details>
----
-
-
 
 ### Inference for Relationship
 
@@ -973,12 +970,11 @@ $$\[r = \frac{\sum((X - \bar{X})(Y - \bar{Y}))}{\sqrt{\sum(X - \bar{X})^2 \sum(Y
 A/B testing is a powerful technique used in a variety of fields including web design, marketing, product development, and more, to make data-driven decisions. 
 
 <p>
-<b>Pros:<b>
+<b>Pros:</b>
 
 1. Empirical Evidence - A/B testing provides concrete, quantitative data on how to versions of a solutions perform against each other. It mitigate the error of naive assumptions or gut feelings.
 2. Risk Mitigation - It allows to test changes on small portion of users before rolling out to everyone, reducing the risk of implementing a change that could negatively affect the user experience.
 3. Data driven decision making
-
 </p>
 
 <p>
