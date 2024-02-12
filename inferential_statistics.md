@@ -968,7 +968,29 @@ $$\[r = \frac{\sum((X - \bar{X})(Y - \bar{Y}))}{\sqrt{\sum(X - \bar{X})^2 \sum(Y
 
 14. A/B testing is a method of comparing two versions of a solution against each other to determine which one performs better. What are some of the pros and cons of A/B testing?
 
+<details><summary><b>Answer</b></summary>
 
+A/B testing is a powerful technique used in a variety of fields including web design, marketing, product development, and more, to make data-driven decisions. 
+
+<p>
+<b>Pros:<b>
+
+1. Empirical Evidence - A/B testing provides concrete, quantitative data on how to versions of a solutions perform against each other. It mitigate the error of naive assumptions or gut feelings.
+2. Risk Mitigation - It allows to test changes on small portion of users before rolling out to everyone, reducing the risk of implementing a change that could negatively affect the user experience.
+3. Data driven decision making
+
+</p>
+
+<p>
+<b>Cons</b>
+
+1. Time consuming setup - Setting up A?B tests can be time consuming, especially if you're testing minor changes.
+2. Limited by sample size - To get statistically significant results a large sample size is needed.
+3. Can Be Misleading: If not properly designed (e.g., not randomizing the sample properly), tests can produce misleading results. Misinterpretation of results can lead to incorrect conclusions.
+
+</p>
+
+</details>
 
 ---
 
@@ -987,5 +1009,35 @@ $$\[r = \frac{\sum((X - \bar{X})(Y - \bar{Y}))}{\sqrt{\sum(X - \bar{X})^2 \sum(Y
 ---
 
 18. How are sufficient statistics and the Information Bottleneck Principle used in machine learning?
+
+<details><summary><b>Answer</b></summary>
+
+<p>
+Sufficient statistics and the Information Bottleneck (IB) Principle are fundamental concepts in statistics and information theory that have found important applications in machine learning. 
+</p>
+
+<b>Sufficient Statistics</b>
+
+It is a statistic that captures all the information about a parameter of interest in a dataset, without needing to access the entire dataset again.
+
+**Use in Machine Learning:**
+
+- **Parameter Estimation:** Sufficient statistics are used in parameter estimation for probabilistic models. For example, in estimating the parameters of a Gaussian distribution, the sample mean and sample variance are sufficient statistics for the distribution's mean and variance, respectively. This efficiency reduces computational complexity and storage requirements.
+- **Model Simplification:** By identifying sufficient statistics, machine learning practitioners can simplify models and reduce the dimensionality of data, focusing only on the parts of the data that are informative for the task at hand.
+
+<b>Information Bottleneck Principle</b>
+
+<p>
+The Information Bottleneck (IB) Principle is a method for finding the relevant information in a random variable \(X\) about another variable \(Y\). It seeks to compress \(X\) into a compact representation \(T\) that preserves as much information about \(Y\) as possible. The principle balances the trade-off between compression (minimizing the mutual information \(I(T;X)\)) and prediction accuracy (maximizing the mutual information \(I(T;Y)\)).
+</p>
+
+**Use in Machine Learning:**
+
+- **Feature Selection and Dimensionality Reduction**: The IB principle can guide the selection of features that are most informative of the target variable, effectively reducing the dimensionality of the input data while retaining its predictive power.
+- **Deep Learning Architectures**: In deep neural networks, the layers can be viewed as performing successive information bottleneck operations, progressively compressing the input data into representations that are increasingly informative about the output. This perspective helps in understanding and designing neural network architectures.
+- **Clustering and Data Compression**: The IB principle is used in clustering and data compression algorithms to find compact representations of the data that preserve relevant information for specific tasks.
+- **Regularization and Generalization**: By focusing on the information that is relevant for predicting the target variable, the IB principle can help in designing regularization techniques that improve the generalization of machine learning models.
+
+</details>
 
 
