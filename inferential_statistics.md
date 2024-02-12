@@ -1024,7 +1024,7 @@ It is a statistic that captures all the information about a parameter of interes
 <b>Information Bottleneck Principle</b>
 
 <p>
-The Information Bottleneck (IB) Principle is a method for finding the relevant information in a random variable \(X\) about another variable \(Y\). It seeks to compress \(X\) into a compact representation \(T\) that preserves as much information about \(Y\) as possible. The principle balances the trade-off between compression (minimizing the mutual information \(I(T;X)\)) and prediction accuracy (maximizing the mutual information \(I(T;Y)\)).
+The Information Bottleneck (IB) Principle is a method for finding the relevant information in a random variable (X) about another variable (Y). It seeks to compress (X) into a compact representation (T) that preserves as much information about (Y) as possible. The principle balances the trade-off between compression (minimizing the mutual information (I(T;X))) and prediction accuracy (maximizing the mutual information (I(T;Y))).
 </p>
 
 **Use in Machine Learning:**
