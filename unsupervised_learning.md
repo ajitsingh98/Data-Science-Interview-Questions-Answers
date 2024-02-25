@@ -25,6 +25,9 @@ Contents
 
 ## Cluserting
 
+1. What is the role of the "K" in K-means?
+2. What are the advantages of K-means clustering?
+
 5. k-means clustering.
     1. How would you choose the value of k?
     1. If the labels are known, how would you evaluate the performance of your k-means clustering algorithm?
@@ -32,6 +35,12 @@ Contents
     1. Given the following dataset, can you predict how K-means clustering works on it? Explain.
     ![image](img/k_means.png)
 
+3. What are the limitations of K-means clustering?
+4. How do you initialize the centroids in K-means?
+5. What is the convergence criteria in K-means?
+6. What are some applications of K-means clustering?
+8. Can K-means handle categorical data?
+10. How do you evaluate the quality of K-means clusters?
 7. k-means and GMM are both powerful clustering algorithms.
     1. Compare the two.
     1. When would you choose one over another?
@@ -51,8 +60,12 @@ Contents
 6. How does $t-SNE$ (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?
 7. Is it good to use PCA as a feature selection method?
 8. Is PCA a linear model or non-linear model?
-
-
+9. What is the importance of eigenvalues and eigenvectors in PCA?
+10. How do you decide the number of principal components to retain in PCA?
+11. What is the difference between PCA and Linear Discriminant Analysis (LDA)?
+12. What are the limitations of PCA?
+13. Can PCA be used for feature selection?
+14. Explain the concept of whitening in PCA.
 
 ## Recommendation Engines
 
@@ -65,3 +78,7 @@ Contents
     1. You can build either a user-item matrix or an item-item matrix. What are the pros and cons of each approach?
     1. How would you handle a new user who hasn’t made any purchases in the past?
 
+11. What are the key parameters in DBSCAN, and what do they represent?
+12. What is the difference between core points, border points, and noise points in DBSCAN?
+13. How does DBSCAN handle clusters of different shapes?
+14. What are the advantages of using DBSCAN over other clustering algorithms, such as K-means?

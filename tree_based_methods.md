@@ -12,7 +12,8 @@ Topics
 Contents
 ----
 
-- Bagging, Boosting and Stacking 
+- Decison Trees
+- Bagging, Boosting, Stacking and Blending
 - Approaches for Combining Predictors
 - Monolithic and Heterogeneous Ensembling
 - Ensemble Learning
@@ -24,6 +25,28 @@ Contents
 
 ---
 
+1. What is a decision tree?
+2. What is the purpose of decision trees in machine learning?
+3. How is a decision tree built?
+4. What is overfitting in decision trees, and how can it be prevented?
+5. What are some common impurity measures used in decision tree algorithms?
+6. What is pruning in decision trees?
+7. Can decision trees handle categorical data, and how is it done?
+8. What are some advantages of decision trees in machine learning?
+9. What are some limitations of decision trees?
+11. What is ID3, and how does it work?
+12. What is information gain in ID3?
+13. What are the limitations of ID3?
+14. What is the main advantage of using decision trees in general?
+15. How does ID3 handle overfitting?
+16. What is the difference between ID3 and C4.5?
+17. Can you explain how the concept of entropy is used in ID3?
+18. What are the steps involved in building a decision tree with ID3?
+19. What is the difference between CART and ID3/C4.5?
+20. How does CART handle overfitting?
+
+21. What are ensemble methods, and why are they used in machine learning?
+22. Explain the difference between bagging and boosting.
 1. Mark all the approaches which can be utilized to boost a single model performance:
     1. Majority Voting
     2. Using K-identical base-learning algorithms
@@ -33,7 +56,73 @@ Contents
     6. A combination of all the above approaches
 
 ---
+1. How does stacking differ from other ensemble methods like bagging and boosting?
 
+---
+
+2. What are the key components of a stacking ensemble?
+
+---
+
+3. How do you prevent overfitting in a stacked ensemble?
+
+---
+
+4. Can you explain the process of creating a stacking ensemble?
+
+---
+
+5. What is the advantage of stacking over using a single powerful model?
+
+---
+
+6. What are some popular algorithms used as base models in stacking ensembles?
+
+---
+
+7. Are there any limitations or challenges associated with stacking ensembles?
+
+---
+
+8. Can you explain the difference between stacking and blending?
+
+---
+
+9. When should you consider using stacking in a machine learning project?
+
+---
+
+10. How does blending work?
+
+---
+
+11. What is the purpose of a meta-model in blending?
+
+---
+
+12. What are the advantages of blending?
+
+---
+
+13. What are the common algorithms used for blending?
+
+---
+
+14.  What precautions should you take when implementing blending?
+
+---
+
+15. Can you explain the difference between bagging, boosting, and blending?
+
+---
+
+16.  When should you consider using blending in a machine learning project?
+
+---
+
+17. What challenges can arise when implementing blending in practice?
+
+---
 2. An argument erupts between two senior data-scientists regarding the choice of an approach for training of a very small medical corpus. One suggest that bagging is superior while the other suggests stacking. Which technique, bagging or stacking, in your opinion is superior? Explain in detail.
     1. Stacking since each classier is trained on all of the available data.
     2. Bagging since we can combine as many classifiers as we want by training each on a different sub-set of the training corpus.
@@ -69,6 +158,17 @@ while K times do
         Pick a training set and train with $h_m$;
     
 ---
+11. What is a Random Forest, and how does it work?
+10. How do you choose between different types of decision tree algorithms (e.g., CART, ID3, C4.5, Random Forest)?
+12. What is the difference between a decision tree and a Random Forest?
+13. Why is it called a "Random" Forest?
+14. What is the purpose of feature bagging in a Random Forest?
+15. How does a Random Forest handle missing data?
+16. What are the advantages of using Random Forests?
+17. What is out-of-bag error, and how is it used in Random Forests?
+18. Can you explain the concept of feature importance in a Random Forest?
+19. What are some potential drawbacks of using Random Forests?
+20. When would you choose a Random Forest over other machine learning algorithms?
 
 5. Fig. 6.2 depicts a part of a specific ensembling approach applied to the models $x1, x2...xk$.
 
@@ -163,11 +263,25 @@ avg_results.columns = l[0].columns
 
 ---
 
-9. **True or False**: A perfect ensemble comprises of highly correct classifiers that differ as
-much as possible.
+9. **True or False**: A perfect ensemble comprises of highly correct classifiers that differ as much as possible.
 
 ---
-
+9. How does bagging work?
+---
+10. What are the advantages of bagging over decision trees?
+---
+11. What are some popular algorithms that use bagging?
+---
+12. What's the difference between bagging and boosting?
+---
+13. How does bagging handle imbalanced datasets?
+---
+14. Can bagging be used with any base model?
+---
+15. What are some potential drawbacks of bagging?
+---
+16. What is the trade-off between bagging and variance?
+---
 10. **True or false**: In bagging, we re-sample the training corpus with replacement and there-
 fore this may lead to some instances being represented numerous times while other instances not to be represented at all.
 
@@ -178,7 +292,30 @@ fore this may lead to some instances being represented numerous times while othe
     1. How are they used in deep learning?
 
 ---
-
+8. How does boosting work?
+---
+9. What are some popular boosting algorithms?
+---
+10. What is the key idea behind AdaBoost?
+---
+11. What is overfitting, and how does boosting address it?
+---
+12. Can boosting models handle noisy data?
+---
+13. What are the hyperparameters in boosting algorithms?
+---
+14. What is the key idea behind XGBoost?
+---
+15. What are some advantages of using XGBoost?
+---
+16. How does LightGBM differ from traditional gradient boosting algorithms?
+---
+17. What is the trade-off between LightGBM's speed and memory consumption?
+---
+18. How does CatBoost handle categorical features?
+---
+19. What are some benefits of using CatBoost for gradient boosting?
+---
 11. 1. **True or false**: Training an ensemble of a single monolithic architecture results in lower model diversity and possibly decreased model prediction accuracy.
     2. **True or false**: The generalization accuracy of an ensemble increases with the number of well-trained models it consists of.
     3. **True or false**: Bootstrap aggregation (or bagging), refers to a process wherein a CNN ensemble is being trained using a random subset of the training corpus.

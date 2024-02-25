@@ -763,13 +763,29 @@ $$\frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)$$
 
 ---
 
-1. What are the basic assumptions to be made for linear regression?
+1. What is the difference between linear regression and logistic regression?
 
 ---
 
-2. What happens if we don’t apply feature scaling to logistic regression?
+2. What is the logistic function (sigmoid function), and how is it used in logistic regression?
+
+3. What is the purpose of the odds ratio in logistic regression?
+
+4. What is the cost function in logistic regression, and why is it used?
+
+5. What are the assumptions of logistic regression?
+
+6. How do you deal with multicollinearity in logistic regression?
+
+7. What is the purpose of regularization in logistic regression, and how does it work?
+
+8. What is the ROC curve in the context of logistic regression?
+
+9. How do you evaluate the performance of a logistic regression model?
+
 
 ---
+
 
 
 

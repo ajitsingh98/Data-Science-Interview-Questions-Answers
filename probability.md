@@ -270,6 +270,15 @@ In one incident, the German military sent encoded messages while the British arm
         \end{bmatrix}
     ```
     According to your classifier, what's sentiment of the sentence The hamster is upset with the puppy?
+
+1. How does the Naive Bayes algorithm work?
+2. What is Laplace smoothing (additive smoothing) in Naive Bayes?
+3. Can Naive Bayes handle continuous and categorical features?
+4. What are the advantages of using Naive Bayes?
+5. What are the advantages of using Naive Bayes?
+6. Can Naive Bayes handle missing data?
+7. How do you evaluate the performance of a Naive Bayes classifier?
+8. What is the difference between Naive Bayes and other classification algorithms like Logistic Regression or Decision Trees?
     
 ---
 
@@ -830,3 +839,14 @@ Note that the above conlusions are based on assumption that both variable are li
 </details>
 
 ---
+
+11. What is the Pearson correlation coefficient, and how is it calculated?
+
+12. What is the significance of a correlation coefficient value of 0?
+
+13. What is the difference between positive and negative correlation?
+
+14. What are some limitations of the Pearson correlation coefficient?
+
+15. Can you have a high correlation without causation?
+

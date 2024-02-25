@@ -24,7 +24,7 @@ Contents 📖
 - 📈 [Linear Regression](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/linear_regression.md)
 - 📉 [Logistic Regression](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/logistic_regression.md)
 - 🕸️ [Support Vector Machine](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/support_vector_machines.md)
-- 🌟 [Ensemble Techniques](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/ensemble_techniques.md)
+- 🌟 [Ensemble Techniques](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/tree_based_methods.md)
 - 🧠 [General Concepts in Neural Networks](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/general_concepts_in_neural_networks.md)
 - 🖼️ [Convolutional Neural Networks](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/convolution_neural_networks_questions.md)
 - 🔄 [Recurrent Neural Networks](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/recurrent_neural_networks.md)

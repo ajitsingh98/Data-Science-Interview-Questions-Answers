@@ -16,7 +16,7 @@ Contents
 - [Sampling Techniques and Creating Training Data](#sampling-techniques-and-creating-training-data)
 - [Objective Functions and Performance Metrices](#objective-functions-and-performance-metrices)
 - [Faeture Engineering](#feature-engineering)
-
+- [Bias and Variance](#bias-and-variance)
 
 ### Basics
 
@@ -48,6 +48,7 @@ Contents
     1. What are your hypotheses about the causes?
     1. How do you validate whether your hypotheses are correct?
     1. Imagine your hypotheses about the causes are correct. What would you do to address them?
+16. What are some common encoding techniques in machine learning?
 
 ### Cross Validation
 
@@ -137,8 +138,12 @@ Name the approach from the following options:
 
 ---
 
-### 
-
+9. What is the main difference between RandomizedSearchCV and GridSearchCV?
+10. When would you prefer to use RandomizedSearchCV over GridSearchCV, and vice versa?
+11. What are the advantages of RandomizedSearchCV?
+12. What are the advantages of GridSearchCV?
+13. What is cross-validation in the context of hyperparameter tuning?
+14. Can you combine RandomizedSearchCV and GridSearchCV techniques for hyperparameter tuning?
 
 ### Similarity Measures
 
@@ -358,10 +363,22 @@ $$
 17. Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?
 
 
-### Feature Engineering
+### Faeture Engineering
 
 4. Feature selection.
     1. Why do we use feature selection?
     1. What are some of the algorithms for feature selection? Pros and cons of each.
 
 11. Is feature scaling necessary for kernel methods?
+
+12. What are the different types of feature selection techniques?
+
+
+### Bias and Variance
+1. Explain Bias and Variance?
+1. Why is the bias-variance tradeoff important in machine learning?
+2. How can you tell if your model has a high bias or high variance problem?
+3. What are some techniques to reduce bias in a model?
+4. What are some techniques to reduce variance in a model?
+5. Can you explain cross-validation's role in addressing the bias-variance tradeoff?
+6. Is it always better to reduce bias and variance simultaneously?

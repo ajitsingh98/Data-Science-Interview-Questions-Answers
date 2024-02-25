@@ -569,6 +569,9 @@ So, puppy weight should be atleast $1.197$ in order to be in top $10\\%$ of the 
 
 ---
 
+11. When should you use a Z-Test instead of a T-Test?
+---
+
 ### Hypothesis Testing
 
 1. Define statistical hypothesis testing. Explain in detail how does it work?
@@ -961,6 +964,8 @@ $$\[r = \frac{\sum((X - \bar{X})(Y - \bar{Y}))}{\sqrt{\sum(X - \bar{X})^2 \sum(Y
 
 </details>
 
+---
+13. What is the difference between parametric and non-parametric tests in machine learning?
 ---
 
 14. A/B testing is a method of comparing two versions of a solution against each other to determine which one performs better. What are some of the pros and cons of A/B testing?

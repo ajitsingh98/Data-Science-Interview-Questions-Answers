@@ -4,8 +4,23 @@
     1. What’s the motivation for RNN?
     1. What’s the motivation for LSTM?
     1. How would you do dropouts in an RNN?
+
+<details><summary><b>Answer</b></summary>
+
+1. 
+
+
+
+</details>
+
 ---
 2. What’s density estimation? Why do we say a language model is a density estimator?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
