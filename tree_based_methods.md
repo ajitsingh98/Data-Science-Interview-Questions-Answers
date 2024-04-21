@@ -9,7 +9,7 @@ Topics
 Contents
 ----
 
-- Decison Trees
+- Decision Trees
 - Bagging, Boosting, Stacking and Blending
 - Approaches for Combining Predictors
 - Monolithic and Heterogeneous Ensembling
@@ -43,30 +43,162 @@ The main purpose of DTs in machine learning is to model data by learning simple 
 </details>
 
 ---
+
 4. What is over-fitting in decision trees, and how can it be prevented?
+
+<details><summary><b>Answer</b></summary>
+
+Over-fitting in decision trees occurs when a model is too complex, capturing noise in the data rather than representing the underlying relationship. 
+
+Different ways of preventing over-fitting:
+
+1. **Tree Pruning**: Reduce the size of the tree after it has been created by removing sections that provide little power in predicting the target variable.
+
+2. **Setting Maximum Depth**: Limit the maximum depth of the tree during the model building phase to prevent the tree from becoming excessively deep and overfitting.
+
+3. **Minimum Samples Split**: Specify the minimum number of samples required to split a node, ensuring that splits that occur do not respond to noise/variance in the data alone.
+
+4. **Minimum Samples Leaf**: Define the minimum number of samples a leaf node must have. This prevents the model from creating leaves that represent outliers or anomalies in the dataset.
+
+5. **Feature Selection**: Limit the number of features used for making decisions. Use those that are most predictive to avoid noise and complexity in the model.
+
+6. **Using Ensemble Methods**: Implement techniques like bagging (Bootstrap Aggregating) and boosting to construct multiple models and average their predictions to improve performance and reduce overfitting.
+
+7. **Cross-Validation**: Use cross-validation techniques to check the effectiveness of the model on unseen data, ensuring it generalizes well beyond the training dataset.
+
+</details>
+
+---
+
 5. What are some common impurity measures used in decision tree algorithms?
+
+<details><summary><b>Answer</b></summary>
+
+Impurity measures are used in decision tree algorithms to decide how a node should be split. 
+
+Here are the most common ones:
+
+1. **Gini Impurity**: Used primarily in classification problems to quantify how often a randomly chosen element would be incorrectly identified. It measures the frequency at which any element of the dataset will be mislabeled when it is randomly labeled according to the distribution of labels in the dataset.
+
+2. **Entropy**: Another measure for classification that quantifies the amount of uncertainty or randomness in the data. It's used to calculate the information gain, representing the effectiveness of a feature in classifying the training data.
+
+3. **Classification Error**: A simpler and less sensitive measure compared to Gini impurity and entropy. It is the proportion of the training instances of the most common class in the node.
+
+4. **Mean Squared Error (MSE)**: Used in regression problems. It measures the average of the squares of the errors—that is, the average squared difference between the observed actual outcomes and the outcomes predicted by the model.
+
+5. **Mean Absolute Error (MAE)**: Another criterion for regression that measures the average magnitude of the errors in a set of predictions, without considering their direction (i.e., it takes the average over the absolute values of the errors).
+
+</details>
+
+---
+
+6. List down pros and cons of different splitting criteria?
+
+<details><summary><b>Answer</b></summary>
+
+1. Gini Impurity
+- **Pros**:
+  - Fast to compute as it doesn't involve logarithmic calculations, making it computationally efficient.
+  - Tends to isolate the most frequent class by itself in one of the groups after the split, which can be advantageous for imbalanced datasets.
+  - Performs well in practice for binary and multi-class classification problems.
+- **Cons**:
+  - Can be biased towards multi-class splits; hence it may not always produce balanced binary splits.
+  - Less sensitive to changes in class probabilities compared to Entropy, which can be a drawback when dealing with more nuanced class distributions.
+
+2. Entropy (Information Gain)
+- **Pros**:
+  - Provides a very clear measure of the effectiveness of an attribute in classifying the training data, as it directly measures the purity of the class distribution.
+  - Sensitive to changes in the probability distribution of the classes, making it effective for datasets with multiple classes.
+- **Cons**:
+  - More computationally intensive due to the logarithmic calculations, which can be a factor in very large datasets.
+  - Like Gini, can be biased towards splits that result in a larger number of distinct outcomes (multi-class splits).
+
+3. Classification Error
+- **Pros**:
+  - Very simple and quick to calculate, requiring minimal computational resources.
+  - Useful for giving a rough estimate of impurity, and sometimes used in educational contexts to explain the concept of impurity.
+- **Cons**:
+  - Least sensitive among the impurity measures, making it inappropriate for datasets where nuanced changes in class distributions are critical.
+  - Often leads to poorer decision boundaries, as it doesn’t consider the distribution of classes beyond the most frequent one.
+
+4. Mean Squared Error (MSE) – for Regression
+- **Pros**:
+  - Directly related to the criterion used for measuring model performance (MSE), which makes it a natural choice for regression tasks.
+  - Punishes larger errors more than smaller ones, which can help in focusing the model on larger deviations.
+- **Cons**:
+  - Can be overly sensitive to outliers, as squaring the errors amplifies the effect of large residuals.
+  - Not suitable for classification tasks.
+
+5. Mean Absolute Error (MAE) – for Regression
+- **Pros**:
+  - Less sensitive to outliers compared to MSE, providing a more robust criterion in the presence of anomalous data.
+  - Directly interpretable as the average error magnitude.
+- **Cons**:
+  - Like MSE, it’s not applicable to classification tasks.
+  - Often more challenging to optimize because it involves absolute values, which can complicate the gradient computations in some algorithms.
+
+</details>
+
+
+---
+
 6. What is pruning in decision trees?
+
+<details><summary><b>Answer</b></summary>
+
+Pruning in decision trees is a technique used to reduce the size of a decision tree after it has been built. This process helps in combating overfitting, which occurs when a model is too complex and captures noise in the data rather than the underlying pattern. 
+
+There are two main types of pruning:
+
+- **Pre-Pruning (Early Stopping)**: Stop the tree from growing when the information gain becomes minimal or when reaching a predefined depth or minimum node size.
+- **Post-Pruning**: After fully growing the tree, systematically remove nodes from the tree. This is done by replacing a node or a subtree with a leaf node, and assigning it the most common class among its samples or by averaging/regressing outcomes.
+
+</details>
+---
+
 7. Can decision trees handle categorical data, and how is it done?
+
+<details><summary><b>Answer</b></summary>
+
+Yes, decision trees can handle categorical data effectively. Here's how it is done:
+
+1. **Binary Splitting**: For binary categorical variables, the tree directly splits data into two groups based on the presence or absence of a feature.
+
+2. **Multi-way Splitting**: For multi-category variables, decision trees can perform multi-way splits, dividing the data into as many branches as there are categories. This approach is particularly common in algorithms like C4.5 and CART, though CART typically uses binary splits by dividing categories into two super-groups.
+
+3. **Label Encoding**: Categorical variables can be transformed into numerical labels. This approach is simpler but can impose an ordinal relationship that doesn't exist, influencing the model inaccurately.
+
+4. **One-Hot Encoding**: This involves creating a new binary variable for each category in the original variable. Each observation is encoded with 0s and 1s, indicating the absence or presence of a feature. This method is effective as it avoids arbitrary numerical relationships but increases the dimensionality of the data.
+
+5. **Handling within Node Impurity Calculation**: When categorical data is used, impurity measures like Gini impurity or entropy calculate splits based on the distribution of the target variable across the categories.
+
+</details>
 
 ---
 
 8. What are some advantages of decision trees in machine learning?
 
 <details><summary><b>Answer</b></summary>
+
 1. Simple to understand, interpret and visualize.
 2. Requires little data preparations like normalization. Some tree based methods even provide support missing values.
 3. The cost of predictions is logarithmic in the number of data points used in training the model.
 4. Able to handle multi-output problems.
+5. Can convert to rules and can handles noisy data
 </details>
 ---
 
 9. What are some limitations of decision trees?
 
 <details><summary><b>Answer</b></summary>
+
 1. More prone to overfitting the underlying pattern if they grow in uncontrollable manner.
 2. DTs can be unstable sometimes like small deviation in data might result in completely different tree all together.
 3. Not good at extrapolation since the decision boundaries are piecewise constant approximation.
 4. Does not perform well incase of data imbalance scenarios.
+5. Non-incremental (i.e., batch method)
+6. Requires fixed-length feature vectors
+
 </details>
 
 ---
@@ -131,6 +263,17 @@ Limitations of ID3:
 ---
 
 15. How does ID3 handle over-fitting?
+
+<details><summary><b>Answer</b></summary>
+
+It handles overfitting cases using following methods:
+
+1. Stopping Criteria: The algorithm stops growing the tree when all instances in a node belong to the same class or when all the attributes have been used. This can prevent the tree from becoming excessively deep and complex when there are no clear distinctions left to make among the instances.
+
+</details>
+
+
+---
 16. What is the difference between ID3 and C4.5?
 
 <details><summary><b>Answer</b></summary>
@@ -173,7 +316,7 @@ Here's how entropy is used in the ID3 algorithm:
 
 </details>
 
-19. What are different criteria along which the implementation of DTs varies ?
+19. What are different criteria along which the implementation of DTs varies?
 
 <details><summary><b>Answer</b></summary>
 
@@ -217,6 +360,7 @@ CART (Classification and Regression Trees) handles overfitting primarily through
    - **Maximum leaf nodes:** Setting a maximum number of leaf nodes helps in controlling the size of the tree.
 
 </details>
+
 ---
 
 1. Mark all the approaches which can be utilized to boost a single model performance:
@@ -230,32 +374,135 @@ CART (Classification and Regression Trees) handles overfitting primarily through
 <details><summary><b>Answer</b></summary>
 All options are correct.
 </details>
+
 ---
+
 1. How does stacking differ from other ensemble methods like bagging and boosting?
+
+<details><summary><b>Answer</b></summary>
+
+Stacking mainly differ from bagging and boosting on two points:
+
+1. **Heterogeneous weak learners**: Stacking often combine considers heterogenous week learners(different learning algorithms are combined) whereas bagging and boosting consider mainly homogenous weak learners.
+2. **Meta model** - Stacking learn to combine the base model using a meta model where as bagging or boosting combine weak learners following deterministic algorithms. 
+
+</details>
 
 ---
 
 2. What are the key components of a stacking ensemble?
 
+<details><summary><b>Answer</b></summary>
+
+The main components involved in stacking are as follows:
+
+1. **Base Learners (Level-0 Models)**:
+   - These are diverse machine learning models that are trained independently on the same dataset.
+   - The variety in these models can include different algorithms (e.g., decision trees, neural networks, SVMs) or variations of the same algorithm with different parameter settings.
+
+2. **Meta Learner (Level-1 Model)**:
+   - After the base models are trained, the meta-model is trained on the outputs of the base learners.
+   - Its role is to learn how best to combine the predictions of the base models to make a final prediction.
+   - The inputs to the meta-model are typically the predictions of the base models, and the output is the final prediction.
+
 ---
 
 3. How do you prevent over-fitting in a stacked ensemble?
+
+<details><summary><b>Answer</b></summary>
+
+Techniques to reduce overfitting in a stacked ensemble:
+
+1. **Use Diverse Base Learners**: Incorporate a variety of models with different underlying algorithms to ensure diversity in the predictions, reducing the risk of all models overfitting in the same way.
+
+2. **Cross-Validation**: Employ robust cross-validation techniques like k-fold cross-validation for both base learners and the meta-learner to validate model performance effectively and minimize data leakage.
+
+3. **Simple Meta-Learner**: Opt for a simpler model as the meta-learner to avoid learning noise and complex patterns that do not generalize well to unseen data.
+
+4. **Regularization Techniques**: Apply regularization methods to the training of the meta-learner and, if applicable, to base learners to penalize model complexity and discourage overfitting.
+
+</details>
 
 ---
 
 4. Can you explain the process of creating a stacking ensemble?
 
+<details><summary><b>Answer</b></summary>
+
+In order to build the stacking ensemble we need to define two things:
+
+- the L learners we want to fit and,
+- the meta-model that combines them.
+
+So, assume that we want to fit a stacking ensemble composed of L weak learners. Then we have to follow the steps thereafter:
+
+- split the training data in two folds
+- choose L weak learners and fit them to data of the first fold
+- for each of the L weak learners, make predictions for observations in the second fold
+- fit the meta-model on the second fold, using predictions made by the weak learners as inputs and output as the target values.
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/stacking_elements.webp" alt= "Stacking" style="max-width:70%;" />
+    </td>
+  </tr>
+</table>
+
+</details>
+
+
 ---
 
 5. What is the advantage of stacking over using a single powerful model?
+
+<details><summary><b>Answer</b></summary>
+
+The advantage of using a stacking ensemble over a single powerful model primarily revolves around improved model accuracy and robustness. 
+
+Here are the key benefits:
+
+1. **Increased Model Accuracy**: Stacking combines multiple models, which can lead to better predictive performance than any individual model.
+
+2. **Reduction of Model Variance**: Each model in the ensemble may have different variances based on their underlying algorithms. Stacking can reduce the overall variance without increasing bias significantly, leading to a more stable model on unseen data.
+
+3. **Handling of Different Types of Data**: Different models have different strengths depending on the nature of the data. For instance, linear models might perform well on linearly separable data, while tree-based models might excel with hierarchical or non-linear decision boundaries. Stacking allows the ensemble to handle a broader range of data characteristics effectively.
+
+4. **Mitigation of Overfitting**: While any powerful model can potentially overfit, stacking uses a meta-learner to effectively combine the predictions of the base learners. This setup can mitigate overfitting as the meta-learner learns to optimize the blend of base model outputs, focusing on generalization rather than fitting to noise.
+
+</details>
 
 ---
 
 6. What are some popular algorithms used as base models in stacking ensembles?
 
+<details><summary><b>Answer</b></summary>
+
+In stacking ensembles, a variety of algorithms can be used as base models to ensure diversity and robustness.
+
+- Decision Trees
+- Neural Networks
+- Support Vector Machines (SVM)
+- Random Forests etc.
+
+</details>
+
 ---
 
 7. Are there any limitations or challenges associated with stacking ensembles?
+
+<details><summary><b>Answer</b></summary>
+
+Yes, stacking ensembles come with several limitations and challenges that can affect their practical application and performance.
+
+1. **Increased Complexity**: Stacking involves multiple layers of models, which can significantly increase the complexity of the overall modeling process.
+2. **Computational Cost**: Training multiple base models and a meta-learner requires more computational resources and time.
+3. **Risk of Overfitting**: While stacking is designed to reduce overfitting by blending predictions, the meta-learner itself can overfit the predictions of the base models, especially if the base models are highly correlated or if the meta-learner is too complex.
+4. **Data Requirements**: Stacking often requires a substantial amount of data to effectively train both the base models and the meta-learner.
+5. **Difficulty in Tuning**: The process of selecting the right combination of base models and tuning their hyperparameters, along with those of the meta-learner, can be intricate and time-consuming.
+6. **Interpretability Issues**: With multiple layers of predictions being combined, it can be challenging to understand how decisions are being made within the ensemble, which reduces the model's transparency.
+
+</details>
 
 ---
 
@@ -298,13 +545,27 @@ All options are correct.
 17. What challenges can arise when implementing blending in practice?
 
 ---
+
 2. An argument erupts between two senior data-scientists regarding the choice of an approach for training of a very small medical corpus. One suggest that bagging is superior while the other suggests stacking. Which technique, bagging or stacking, in your opinion is superior? Explain in detail.
     1. Stacking since each classier is trained on all of the available data.
     2. Bagging since we can combine as many classifiers as we want by training each on a different sub-set of the training corpus.
 
+<details><summary><b>Answer</b></summary>
+
+The correct choice would be stacking. Since data size is small, we would most likely prefer training our models over full dataset.
+
+</details>
+
 ---
 
 3.  Complete the sentence: A random forest is a type of a decision tree which utilizes `[bagging/boosting]`
+
+<details><summary><b>Answer</b></summary>
+
+A random forest is a type of a decision tree which utilizes **bagging**
+
+</details>
+
 
 ---
 
@@ -331,7 +592,13 @@ Choose a learner $h_m$;
 while K times do
 
         Pick a training set and train with $h_m$;
-    
+
+<details><summary><b>Answer</b></summary>
+
+The given algorithm is a typical bagging method.
+
+</details>
+
 ---
 11. What is a Random Forest, and how does it work?
 10. How do you choose between different types of decision tree algorithms (e.g., CART, ID3, C4.5, Random Forest)?
@@ -365,6 +632,13 @@ In your opinion, which approach is being utilized?
 (iii) Stacking
 
 (iv) Classical committee machines
+
+<details><summary><b>Answer</b></summary>
+
+The approach which is depicted is the first phase of stacking. In stacking, we first (phase
+0) predict using several base learners and then use a generalizer (phase 1) that learns on top of the base learners predictions.
+
+</details>
 
 ---
 
@@ -410,6 +684,14 @@ If 10 balls glued together is a sample event that we know is hard to correctly c
 
 (ii) Boosting
 
+<details><summary><b>Answer</b></summary>
+
+1. Sampling with replacement
+2. Sampling without replacement
+3. This may be mostly a result of bagging, since in boosting we would have expected miss-correctly classified observations to repeatedly appear in subsequent samples.
+
+</details>
+
 ---
 
 7. There are several methods by which the outputs of base classifiers can be combined to yield a single prediction. Fig. 6.5 depicts part of a specific ensembling approach applied to several CNN model predictions for a labelled data-set. Which approach is being utilized?
@@ -430,15 +712,32 @@ avg_results = pd.DataFrame(arr[:,:-1,:].mean(axis=2))
 avg_results['image'] = l[0]['image']
 avg_results.columns = l[0].columns
 
+FIGURE 6.5: PyTorch code snippet for an ensemble
+
 ```
+<details><summary><b>Answer</b></summary>
+An Algebraic weighted average for class probabilities.
+</details>
 
 ---
 
-8. Read the paper **Neural Network Ensembles** and then **complete the sentenc**e: If the average error rate for a specific instance in the corpus is less than [...]% and the respective classifiers in the ensemble produce independent [...], then when the number of classifiers combined approaches infinity, the expected error can be diminished to zero.
+8. Read the paper **Neural Network Ensembles** and then **complete the sentence**: If the average error rate for a specific instance in the corpus is less than [...]% and the respective classifiers in the ensemble produce independent [...], then when the number of classifiers combined approaches infinity, the expected error can be diminished to zero.
+
+<details><summary><b>Answer</b></summary>
+
+If the average error rate for a specific instance in the corpus is less than `[...]`% and the respective classifiers in the ensemble produce independent `[...]`, then when the number of classifiers combined approaches infinity, the expected error can be diminished to zero.
+
+</details>
 
 ---
 
 9. **True or False**: A perfect ensemble comprises of highly correct classifiers that differ as much as possible.
+
+<details><summary><b>Answer</b></summary>
+
+**True**, A perfect ensemble model consists of classifiers that achieve high accuracy and exhibit significant diversity. High accuracy ensures each classifier is competent on its own, while diversity between the classifiers means they make different types of errors, allowing the ensemble to benefit from error reduction when aggregating their prediction.
+
+</details>
 
 ---
 9. How does bagging work?
@@ -460,6 +759,11 @@ avg_results.columns = l[0].columns
 10. **True or false**: In bagging, we re-sample the training corpus with replacement and there-
 fore this may lead to some instances being represented numerous times while other instances not to be represented at all.
 
+<details><summary><b>Answer</b></summary>
+
+**True**, In a bagging approach, we first randomly draw (with replacement), K examples where K is the size of the original training corpus therefore leading to an imbalanced representation of the instances.
+
+</details>
 ---
 
 8. Bagging and boosting are two popular ensembling methods. Random forest is a bagging example while XGBoost is a boosting example.
@@ -491,15 +795,30 @@ fore this may lead to some instances being represented numerous times while othe
 ---
 19. What are some benefits of using CatBoost for gradient boosting?
 ---
+
 11. 1. **True or false**: Training an ensemble of a single monolithic architecture results in lower model diversity and possibly decreased model prediction accuracy.
     2. **True or false**: The generalization accuracy of an ensemble increases with the number of well-trained models it consists of.
     3. **True or false**: Bootstrap aggregation (or bagging), refers to a process wherein a CNN ensemble is being trained using a random subset of the training corpus.
     4. **True or false**: Bagging assumes that if the single predictor shave independent errors, then a majority vote of their outputs should be better than the individual predictions.
 
+<details><summary><b>Answer</b></summary>
+
+1. **True** Due to their lack of diversity, an ensemble of monolithic architectures tends to
+perform worse than an heterogeneous ensemble.
+2. **True**, The generalization accuracy of an ensemble typically increases as the number of well-trained models it includes grows, provided that these models are sufficiently diverse.
+3. **True**
+4. **True**, The total error decreases with the addition of predictors to the ensemble.
+
+</details>
+
 ---
 
 12. Refer to the papers: <a href='https://arxiv.org/pdf/1506.02142.pdf'>Dropout as a Bayesian Approximation</a> and <a href='https://arxiv.org/pdf/1906.02530.pdf'>Can You TrustYour Model’s Uncertainty?</a> and answer the following question: 
     1. Do deep ensembles achieve a better performance on out-of-distribution uncertainty benchmarks compared with Monte-Carlo (MC)-dropout?
+
+<details><summary><b>Answer</b></summary>
+Yes, they do
+</details>
 
 ---
 
@@ -519,6 +838,14 @@ fore this may lead to some instances being represented numerous times while othe
 
     3. **True or False**: In an ensemble, we want differently trained models converge to different local minima.
 
+<details><summary><b>Answer</b></summary>
+
+1. Yes, it is very likely, especially if their errors are independent.
+2. True It may be proven that ensembles of models perform at least as good as each of the ensemble members it consists of.
+3. True Different local minima add to the diversification of the models.
+
+</details>
+
 ---
 
 14. In committee machines, mark all the combiners that do not make direct use of the input:
@@ -526,6 +853,12 @@ fore this may lead to some instances being represented numerous times while othe
     2. Bagging
     3. Ensemble averaging 
     4. Boosting
+
+<details><summary><b>Answer</b></summary>
+
+Boosting is the only one that does not.
+
+</details>
 
 ---
 
@@ -542,22 +875,48 @@ averaging, wherein the outputs of individual models are linearly combined to pro
 </tr>
 </table>
 
+<details><summary><b>Answer</b></summary>
+
+**False** By definition, static committee machines use only the output of the single predict-
+ors.
+
+</details>
+
 ---
 
 16. **True or false**: When using a single model, the risk of overfitting the data increases when
 the number of adjustable parameters is large compared to cardinality (i.e., size of the set) of the training corpus.
 
+<details><summary><b>Answer</b></summary>
+
+**True** 
+
+</details>
 ---
 
-17.  **True or false**: If we have a committee of $K$ trained models and the errors are uncorrelated,
-then by averaging them the average error of a model is reduced by a factor of $K$.
+17.  **True or false**: If we have a committee of $K$ trained models and the errors are uncorrelated, then by averaging them the average error of a model is reduced by a factor of $K$.
 
+<details><summary><b>Answer</b></summary>
+
+**False** Though this may be theoretically true, in practice the errors are rarely uncorrelated
+and therefore the actual error can not be reduced by a factor of K.
+
+</details>
 ---
 
 18. 1. Define ensemble learning in the context of machine learning.
     2. Provide examples of ensemble methods in classical machine-learning.
     3. **True or false**: Ensemble methods usually have stronger generalization ability.
     4. Complete the sentence: Bagging is `variance/bias` reduction scheme while boosting reduced `variance/bias`.
+
+<details><summary><b>Answer</b></summary>
+
+1. Ensemble learning is an excellent machine learning idea which displays noticeable benefits in many applications, one such notable example is the widespread use of ensembles in Kaggle competitions. In an ensemble several individual models (for instance Res- Net18 and VGG16) which were trained on the same corpus, work in tandem and during inference, their predictions are fused by a pre-defined strategy to yield a single prediction.
+2. In classical machine learning Ensemble methods usually refer to bagging, boosting and the linear combination of regression or classification models.
+3. True The stronger generalization ability stems from the voting power of diverse models which are joined together.
+4. Bagging is variance reduction scheme while boosting reduced bias.
+
+</details>
 
 ---
 
@@ -578,6 +937,13 @@ for m in models:
 ```
 1. What type of ensembling can be used with this approach? Explain in detail.
 2. What is the main advantage of snapshot ensembling? What are the disadvantages, if any?
+
+<details><summary><b>Answer</b></summary>
+
+1. Since only a single model ie being utilized, this type of ensembling is known as snap- shot ensembling. Using this approach, during the training of a neural network and in each epoch, a snapshot, e.g. the weights of a trained instance of a model (a PTH file in PyTorch nomenclature) are persisted into permanent storage whenever a certain performance metrics, such as accuracy or loss is being surpassed. Therefore the name “snapshot”; weights of the neural network are being snapshot at specific instances in time. After several such epochs the top-5 performing Snapshots which converged to local minima are combined as part of an ensemble to yield a single prediction.
+2. Advantages: during a single training cycle, many model instances may be collected. Disadvantages: inherent lack of diversity by virtue of the fact that the same models is being repeatedly used.
+
+</details>
 
 ---
 
@@ -604,6 +970,11 @@ for m in models:
 ```
 Explain in detail what would be the possible effects of adding `lines 10-13`.
 
+<details><summary><b>Answer</b></summary>
+Changing the random seed at each iteration/epoch, helps in introducing variation which
+may contribute to diversifying the trained neural network models.
+</details>
+
 ---
 
 21. 1. Assume your colleague, a veteran in DL and an expert in ensembling methods writes the following Pseudo code shown in Fig. 6.9 for the training of several neural networks. This code snippet is executed inside a standard loop in each and every training/validation epoch.
@@ -625,6 +996,13 @@ What type of ensembling is being utilized in this approach? Explain in detail.
 
     2. Name one method by which NN models may be combined to yield a single prediction.
 
+<details><summary><b>Answer</b></summary>
+
+1. Multi-model ensembling.
+2. Both averaging and majority voting.
+
+</details>
+
 ---
 
 22. 1. Referring to Fig. (6.10) which depicts a specific learning rate schedule, describe the basic notion behind its mechanism.
@@ -643,6 +1021,15 @@ What type of ensembling is being utilized in this approach? Explain in detail.
     2. Explain how cyclic learning rates can be effective for the training of convolutional neural networks such as the ones in the code snippet of Fig. 6.10.
 
     3. Explain how a cyclic cosine annealing schedule as proposed by Loshchilov [10] and [13] is used to converge to multiple local minima.
+
+
+<details><summary><b>Answer</b></summary>
+
+1. Capturing the best model of each training cycle allows to obtain multiple models settled on various local optima from cycle to cycle at the cost of training a single mode
+2. The approach is based on the non-convex nature of neural networks and the ability to converge and escape from local minima using a specific schedule to adjust the learning rate during training.
+3. Instead of monotonically decreasing the learning rate,this method lets the learning rate cyclically vary between reasonable boundary values.
+
+</details>
 
 ---
 
