@@ -4,10 +4,7 @@
 Topics
 ---
 
-- [Ensemble Techniques]()
-
-
-## Ensemble Techniques
+## Tree Based Methods in Machine Learning
 
 Contents
 ----
@@ -26,27 +23,202 @@ Contents
 ---
 
 1. What is a decision tree?
+
+<details><summary><b>Answer</b></summary>
+Decision Trees(DTs) are non-parametric supervised learning method which can be employed for Classification and Regressions tasks.
+</details>
+
+---
 2. What is the purpose of decision trees in machine learning?
+
+<details><summary><b>Answer</b></summary>
+The main purpose of DTs in machine learning is to model data by learning simple decision rules inferred from the attributes of the datasets. A decision tree can be seen as piecewise constant approximation.
+</details>
+
+---
 3. How is a decision tree built?
-4. What is overfitting in decision trees, and how can it be prevented?
+
+<details><summary><b>Answer</b></summary>
+The main purpose of DTs in machine learning is to model data by learning simple decision rules inferred from the attributes of the datasets. A decision tree can be seen as piecewise constant approximation.
+</details>
+
+---
+4. What is over-fitting in decision trees, and how can it be prevented?
 5. What are some common impurity measures used in decision tree algorithms?
 6. What is pruning in decision trees?
 7. Can decision trees handle categorical data, and how is it done?
-8. What are some advantages of decision trees in machine learning?
-9. What are some limitations of decision trees?
-11. What is ID3, and how does it work?
-12. What is information gain in ID3?
-13. What are the limitations of ID3?
-14. What is the main advantage of using decision trees in general?
-15. How does ID3 handle overfitting?
-16. What is the difference between ID3 and C4.5?
-17. Can you explain how the concept of entropy is used in ID3?
-18. What are the steps involved in building a decision tree with ID3?
-19. What is the difference between CART and ID3/C4.5?
-20. How does CART handle overfitting?
 
-21. What are ensemble methods, and why are they used in machine learning?
-22. Explain the difference between bagging and boosting.
+---
+
+8. What are some advantages of decision trees in machine learning?
+
+<details><summary><b>Answer</b></summary>
+1. Simple to understand, interpret and visualize.
+2. Requires little data preparations like normalization. Some tree based methods even provide support missing values.
+3. The cost of predictions is logarithmic in the number of data points used in training the model.
+4. Able to handle multi-output problems.
+</details>
+---
+
+9. What are some limitations of decision trees?
+
+<details><summary><b>Answer</b></summary>
+1. More prone to overfitting the underlying pattern if they grow in uncontrollable manner.
+2. DTs can be unstable sometimes like small deviation in data might result in completely different tree all together.
+3. Not good at extrapolation since the decision boundaries are piecewise constant approximation.
+4. Does not perform well incase of data imbalance scenarios.
+</details>
+
+---
+
+11. What is ID3, and how does it work?
+
+<details><summary><b>Answer</b></summary>
+ID3 stands for Iterative Dichotomiser 3 and It means the model iteratively(repeatedly) dichotomizes(divides) features into two or more groups at each step.
+
+It uses top down greedy approach ti build a decision tree and was invented by Ross Quinlan. Top-down means we start building the tree from the top and greedy approach means that at each iteration we select the best feature at the preset moment to create a node.
+
+</details>
+
+---
+
+
+12. What is information gain in ID3?
+
+<details><summary><b>Answer</b></summary>
+
+Information Gain calculates the reduction in the entropy and measures how good a given attribute split the target classes. The feature with highest information gain is the best one.
+
+Information Gain for a feature column A is calculated as:
+
+$$
+IG(S, A) = Entropy(S) - \sum{((|S_v|/|S|)*Entropy(S_v))}
+$$
+
+where $S_v$ is the set of rows in $S$ for which the feature column $A$ has value $v$, $|Sᵥ|$ is the number of rows in $S_v$ and likewise $|S|$ is the number of rows in $S$.
+
+</details>
+
+---
+
+18. What are the steps involved in building a decision tree with ID3?
+
+<details><summary><b>Answer</b></summary>
+
+The following steps involve in building a ID3 trees:
+1. Calculate the Information Gain for each attribute.
+2. Split the dataset $S$ into subsets with the attribute having highest IG.
+3. Make a decision tree node using the feature with maximum Information Gain.
+4. If all the rows belong to same class, make the current node as leaf node with the class as it label.
+5. Repeat for the remaining feature until we run out of all features or the decision tree has all leaf nodes.
+
+</details>
+
+---
+
+13. What are the limitations of ID3?
+
+<details><summary><b>Answer</b></summary>
+
+Limitations of ID3:
+
+- ID3 follows greedy algorithm while building the decision trees and hence can provide suboptimal solutions sometimes.
+- It can overfit the train data. Smaller decision trees should be preferred over larger decision trees.
+- ID3 is mainly good with nominal features so continuous features can be only used after converting them to nominal bins.
+
+</details>
+
+---
+
+15. How does ID3 handle over-fitting?
+16. What is the difference between ID3 and C4.5?
+
+<details><summary><b>Answer</b></summary>
+
+| Feature                         | ID3                                                        | C4.5                                                         |
+|---------------------------------|------------------------------------------------------------|--------------------------------------------------------------|
+| **Splitting Criteria**          | Uses information gain                                      | Uses gain ratio as splitting criteria                        |
+| **Handling of Numeric Attributes** | Cannot handle numeric attributes directly                | Can handle numeric attributes                                |
+| **Pruning Method**              | Generally does not use pruning                             | Uses error-based pruning after the growing phase             |
+| **Handling of Missing Values**  | Typically does not handle missing values                   | Allows attribute values to be missing (marked as ?)          |
+| **Handling of Continuous Attributes** | Does not handle continuous attributes                | Handles continuous attributes by binary splitting. Searches for the best threshold that maximizes the gain ratio. |
+| **Branching and Pruning**       | Simple growth with no specific branching procedure         | Implements a pruning procedure to remove branches that do not contribute to accuracy, replacing them with leaf nodes |
+| **Performance on Small Datasets** | Not specifically mentioned                               | Performs better than J48 and C5.0 on small datasets according to comparative studies |
+
+
+</details>
+
+---
+
+17. Can you explain how the concept of entropy is used in ID3?
+
+<details><summary><b>Answer</b></summary>
+
+Here's how entropy is used in the ID3 algorithm:
+
+- **Dataset Splitting**: ID3 uses entropy to decide which attribute to split the data on at each step in the tree. The goal is to find the attribute that results in the highest gain in information or the largest decrease in entropy. This is done by calculating the entropy before and after the dataset is split on each attribute.
+
+- **Information Gain**: The information gain for an attribute is calculated as the difference between the entropy of the parent dataset and the weighted sum of the entropies of the subsets that result from splitting the dataset on the attribute. The formula for information gain $\( IG \)$ is:
+  $$
+  \[
+  IG(S, A) = H(S) - \sum_{v \in Values(A)} \frac{|S_v|}{|S|} H(S_v)
+  \]
+  $$
+  Here, \( A \) is the attribute being considered for splitting, \( Values(A) \) are the different values that \( A \) can take, \( S_v \) is the subset of \( S \) for which \( A \) has value \( v \), and \( |S_v|/|S| \) is the proportion of the number of elements in \( S_v \) to the number of elements in \( S \).
+
+- **Selecting the Best Attribute**: The attribute with the highest information gain is chosen for the split because it provides the most significant reduction in entropy, indicating a more definitive classification rule at that node of the tree.
+
+- **Recursive Splitting**: This process is repeated recursively for each new subset, choosing the attribute that yields the highest information gain at each stage until a stopping criterion is met (like when no more significant information gain is possible or the subset at a node all belongs to the same class).
+
+
+</details>
+
+19. What are different criteria along which the implementation of DTs varies ?
+
+<details><summary><b>Answer</b></summary>
+
+- Criteria for node splitting (e.g., methods for calculating "variance")
+- Capability to develop both regression models (for continuous variables like scores) and classification models (for discrete variables like class labels)
+- Strategies to prevent or minimize overfitting
+- Ability to process datasets with missing values
+
+</details>
+
+19. What is the difference between CART and ID3/C4.5?
+
+<details><summary><b>Answer</b></summary>
+
+| **Aspect**           | **CART (Classification and Regression Trees)**                        | **ID3 (Iterative Dichotomiser 3)**                                  | **C4.5**                                       |
+|----------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|------------------------------------------------|
+| **Type of Trees**    | Can create both classification and regression trees.                | Primarily used for creating classification trees.                  | Used for creating classification trees.         |
+| **Splitting Criteria**| Uses Gini impurity or entropy for classification; variance reduction for regression.| Uses information gain (based on entropy).                          | Uses gain ratio (a normalization of information gain). |
+| **Handling Continuous and Categorical Data** | Handles both continuous and categorical variables directly.        | Primarily handles categorical variables; continuous data must be discretized prior to building the tree.| Handles both but often requires discretization of continuous variables. |
+| **Pruning**          | Uses cost-complexity pruning to avoid overfitting, which is a post-pruning technique. | Does not include a pruning step, leading to potentially overfitted trees. | Uses post-pruning methods to simplify the tree after it is fully grown. |
+| **Handling Missing Values** | Has mechanisms to handle missing values directly during tree construction. | Does not handle missing values inherently; preprocessing is required. | Has improved strategies to deal with missing values compared to ID3. |
+
+</details>
+
+20. How does CART handle over-fitting?
+
+<details><summary><b>Answer</b></summary>
+
+CART (Classification and Regression Trees) handles overfitting primarily through two techniques: **pruning** and **setting constraints during the tree building process**.
+
+1. **Pruning:**
+   Pruning reduces the size of a decision tree by removing parts of the tree that provide little power in classifying instances. This process helps in reducing the complexity of the final model, thereby minimizing overfitting. There are two types of pruning:
+   - **Pre-pruning (early stopping rule):** This method stops the tree from growing when further splitting is statistically unlikely to add value. This could be determined by setting a minimum number on the gain of a node’s split, or restricting the depth of the tree.
+   - **Post-pruning:** This involves building the tree first and then removing non-significant branches. A common approach is to use cost-complexity pruning where a penalty is applied for the number of parameters (or the depth) of the tree, aiming to find a good trade-off between the tree’s complexity and its accuracy on the training set.
+
+2. **Setting Constraints:**
+   By setting constraints during the building of the tree, you can also control overfitting:
+   - **Maximum depth of the tree:** Limiting the depth prevents the model from creating highly complex trees that fit all the details and noise in the training data.
+   - **Minimum samples split:** This constraint specifies the minimum number of samples a node must have before it can be split. Higher values prevent the model from learning overly fine distinctions.
+   - **Minimum samples leaf:** This parameter ensures that each leaf node has a minimum number of samples. This helps in creating more generalized regions in the leaf nodes rather than very specific rules that might apply only to the training data.
+   - **Maximum leaf nodes:** Setting a maximum number of leaf nodes helps in controlling the size of the tree.
+
+</details>
+---
+
 1. Mark all the approaches which can be utilized to boost a single model performance:
     1. Majority Voting
     2. Using K-identical base-learning algorithms
@@ -55,6 +227,9 @@ Contents
     5. Using K-different random number seeds 
     6. A combination of all the above approaches
 
+<details><summary><b>Answer</b></summary>
+All options are correct.
+</details>
 ---
 1. How does stacking differ from other ensemble methods like bagging and boosting?
 
@@ -64,7 +239,7 @@ Contents
 
 ---
 
-3. How do you prevent overfitting in a stacked ensemble?
+3. How do you prevent over-fitting in a stacked ensemble?
 
 ---
 

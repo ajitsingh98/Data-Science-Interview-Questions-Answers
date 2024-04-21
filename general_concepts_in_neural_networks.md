@@ -1229,16 +1229,3 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
     2. How do you choose what to prune from a neural network?
 29. Under what conditions would it be possible to recover training data from the weight checkpoints?
 30. Why do we try to reduce the size of a big trained model through techniques such as knowledge distillation instead of just training a small model from the beginning?
-
-
-
-
-
-
-
-
-
-
-
-
-
