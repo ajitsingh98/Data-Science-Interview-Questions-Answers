@@ -404,6 +404,7 @@ The main components involved in stacking are as follows:
    - After the base models are trained, the meta-model is trained on the outputs of the base learners.
    - Its role is to learn how best to combine the predictions of the base models to make a final prediction.
    - The inputs to the meta-model are typically the predictions of the base models, and the output is the final prediction.
+</details>
 
 ---
 
