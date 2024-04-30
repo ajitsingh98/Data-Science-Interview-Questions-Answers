@@ -12,10 +12,10 @@ Topics
 Contents
 ----
 
-- [Perceptrons](#Perceptrons)
+- [Perceptron](#Perceptrons)
 - [Activation Functions(rectification)](#Activation-Functions)
-- [Performance Mertics](#Performance-Mertics) 
-- [Training Hyperparameters](#Training-Hyperparameters)
+- [Performance Metrics](#Performance-Mertics) 
+- [Training Hyperparameter](#Training-Hyperparameters)
 - [Optimization and Loss](#Optimization-and-Loss)
 - [NNLayers, Topologists and Blocks](#NNLayers,-Topologists-and-Blocks)
 
@@ -24,9 +24,9 @@ Contents
 
 - The single layer perceptron
 - The Multi Layer Perceptron
-- Activation functions in perceptrons
-- Backpropagation in perceptrons
-- The theory of perceptrons
+- Activation functions in perceptron
+- Backpropagation in perceptron
+- The theory of perceptron
 - Learning logical gates
 
 

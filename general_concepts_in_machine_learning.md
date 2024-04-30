@@ -363,7 +363,7 @@ $$
 17. Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?
 
 
-### Faeture Engineering
+### Feature Engineering
 
 4. Feature selection.
     1. Why do we use feature selection?

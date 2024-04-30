@@ -11,7 +11,7 @@ Topics
 
 - [Basic Probability](#basic-probability)
 - [Conditional Probability](#conditional-probability)
-- [Bayes Theorm](#bayes-theorem)
+- [Bayes Theorem](#bayes-theorem)
 - [Random Variables](#random-variables)
 - [Discrete Random Variables](#discrete-random-variables)
 - [Continuous Random Variables](#continuous-random-variables)
@@ -689,7 +689,7 @@ The sign of co-variance decides how two random variables vary togeter
 
 ---
 
-5. Suppose you are conducting an experiment for studying behaviour of two random variables $X$ and $Y$ and you found out $Cov(X, Y) = 100$. Does it mean they are strongly correlated?
+5. Suppose you are conducting an experiment for studying behavior of two random variables $X$ and $Y$ and you found out $Cov(X, Y) = 100$. Does it mean they are strongly correlated?
 
 <details><summary><b>Answer</b></summary>
 

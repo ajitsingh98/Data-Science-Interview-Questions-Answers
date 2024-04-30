@@ -505,9 +505,7 @@ Yes, stacking ensembles come with several limitations and challenges that can af
 
 </details>
 
----
 
-8. Can you explain the difference between stacking and blending?
 
 ---
 
@@ -516,6 +514,27 @@ Yes, stacking ensembles come with several limitations and challenges that can af
 ---
 
 10. How does blending work?
+
+<details><summary><b>Answer</b></summary>
+
+You can think of blending as a type of stacking, where the meta-model is trained on predictions made by the base model on the hold-out validation set.
+
+You can consider the blending process to be:
+
+- Split the data into a test and validation set
+- Model(s) are fit on the training set
+- Make predictions on the validation and test set
+- Use the validation set and its predictions to build a final model
+- Make final predictions using this model.
+
+</details>
+---
+
+8. Can you explain the difference between stacking and blending?
+
+<details><summary><b>Answer</b></summary>
+The difference between stacking and blending is that Stacking uses out-of-fold predictions for the train set of the next layer (i.e meta-model), and Blending uses a validation set (let’s say, 10-15% of the training set) to train the next layer. Blending is simpler than stacking and prevents leakage of information in the model.
+</details>
 
 ---
 
@@ -742,8 +761,22 @@ If the average error rate for a specific instance in the corpus is less than `[.
 
 ---
 9. How does bagging work?
+
+<details><summary><b>Answer</b></summary>
+
+</details>
+
 ---
 10. What are the advantages of bagging over decision trees?
+
+---
+
+11. How does bagging reduces variance in decision trees?
+
+<details><summary><b>Answer</b></summary>
+
+</details>
+
 ---
 11. What are some popular algorithms that use bagging?
 ---
@@ -912,7 +945,7 @@ and therefore the actual error can not be reduced by a factor of K.
 
 <details><summary><b>Answer</b></summary>
 
-1. Ensemble learning is an excellent machine learning idea which displays noticeable benefits in many applications, one such notable example is the widespread use of ensembles in Kaggle competitions. In an ensemble several individual models (for instance Res- Net18 and VGG16) which were trained on the same corpus, work in tandem and during inference, their predictions are fused by a pre-defined strategy to yield a single prediction.
+1. An ensemble method is an approach that combines many simple building blocks models in order to obtain a single and potentially very powerful model. These simple building block models are known as weak learners, since they may lead to mediocre predictions on their own.
 2. In classical machine learning Ensemble methods usually refer to bagging, boosting and the linear combination of regression or classification models.
 3. True The stronger generalization ability stems from the voting power of diverse models which are joined together.
 4. Bagging is variance reduction scheme while boosting reduced bias.
@@ -1038,3 +1071,19 @@ What type of ensembling is being utilized in this approach? Explain in detail.
     1. What is gradient boosting?
     1. What problems is gradient boosting good for?
 
+
+<details><summary><b>Answer</b></summary>
+In gradient boosting, the ensemble model we try to build is also a weighted sum of weak learners.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/gbd_equation.webp" alt= "GB Equation" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> GB governing equation </td>
+</tr>
+</table>
+
+</details>
