@@ -239,7 +239,7 @@ $$
 
 <details><summary><b>Answer</b></summary>
 
-<b>Direct deravative:</b>
+<b>Direct derivative:</b>
 
 We have,
 

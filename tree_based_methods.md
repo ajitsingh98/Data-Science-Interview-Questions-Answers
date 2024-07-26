@@ -771,7 +771,7 @@ If the average error rate for a specific instance in the corpus is less than `[.
 
 ---
 
-11. How does bagging reduces variance in decision trees?
+11. How does bagging reduces the variance in decision trees?
 
 <details><summary><b>Answer</b></summary>
 
