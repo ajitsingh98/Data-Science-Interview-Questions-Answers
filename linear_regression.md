@@ -167,7 +167,7 @@ Statistically, it measures the proportion of variability in $Y$ that can be expl
 ---
 
 4. How to interpret the values of $R^2$ statistic?
-
+   
 <details><summary><b>Answer</b></summary>
 
 A number near 0 indicates the regression does not explain the variability in the response, whereas 1 indicates a large proportion of the variability in the response is explained by the regression.
@@ -222,6 +222,7 @@ There are several methods to measure goodness of fit with some pros and cons:
 - Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC)
 
 We can use combinations of above statistic to evaluate the model performance.
+
 </details>
 
 ---
@@ -272,7 +273,6 @@ Linear regression model may suffer from following issues mainly:
 
 10. What are some regularization techniques used in linear regression, and when are they applicable?
 
-
 <details><summary><b>Answer</b></summary>
     
 </details>
@@ -280,7 +280,6 @@ Linear regression model may suffer from following issues mainly:
 ---
 
 11. Can you explain the concept of bias-variance trade-off in the context of linear regression?
-
 
 <details><summary><b>Answer</b></summary>
     
@@ -325,7 +324,6 @@ No, Ridge or Lasso regression addresses the variance issue in ols technique, her
 
 L1 or L2 regularization are shrinkage methods which helps in reducing the coefficient of the estimate to zero or nearly zero. 
 
-
 </details>
 
 ---
@@ -338,6 +336,7 @@ $\alpha$, It controls the relative impact of Residual Square Sum and Shrinkage p
 
 </details>
 
+---
 
 15. When would you choose L1 regularization over L2, and vice versa?
 
@@ -354,7 +353,6 @@ L2 regularization is effective when the response is a function of many predictor
 
 16. What is Elastic Net regularization, and how does it relate to L1 and L2 regularization?
 
-
 <details><summary><b>Answer</b></summary>
     
 </details>
@@ -369,6 +367,7 @@ Cross validation can be used to tune the *alpha*.
 - Choose a grid of $\alpha$ values and compute cross validation error for each value of $\alpha$
 - Select the $\alpha$ which is yielding smallest cross validation error
 - Refit the model with all the available variables and the selected $\alpha$ value.
+  
 </details>
 
 ---
