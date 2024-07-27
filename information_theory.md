@@ -39,6 +39,11 @@ print (numpy.log2(1.0/0.02)) # Binary log (base 2)
 
 ```
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 2. The three basic laws of logarithms:
@@ -72,9 +77,19 @@ print (numpy.log2(1.0/0.02)) # Binary log (base 2)
     \log_e15 - \log_e3
     $$
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 3.  Write Shannon's famous general formulae for uncertainty.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -107,10 +122,20 @@ print (numpy.log2(1.0/0.02)) # Binary log (base 2)
 
         (f) $log_2(N)$
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 5. Shannon found that entropy was the only function satisfying three natural properties.
 Enumerate these properties.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -118,9 +143,19 @@ Enumerate these properties.
 
 Mark the correct answer: Information is a/an `[decrease/increase]` in uncertainty.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 7. Claud Shannon's paper “A mathematical theory of communication”, marked the birth of information theory. Published in 1948, it has become since the Magna Carta of the information age. Describe in your own words what is meant by the term Shannon bit.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -129,15 +164,30 @@ Mark the correct answer: Information is a/an `[decrease/increase]` in uncertaint
     2. Describe how it is related to the likelihood of an event happening.
     3. True or False: The less likely the occurrence of an event, the smaller information it conveys.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 9. Assume a source of signals that transmits a given message a with probability $P_a$. Assume further that the message is encoded into an ordered series of ones and zeros (a bit string) and that a receiver has a decoder that converts the bit string back into its respective message. Shannon devised a formulae that describes the size that the mean length of the bit string can be compressed to. Write the formulae.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 10. Answer the following questions:
     1. Assume a source that provides a constant stream of N equally likely symbols ${x1, x2, . . . , xN }$. What does Shannon's formulae reduce to in this particular case?
     2. Assume that each equiprobable pixel in a monochrome image that is fed to a DL classification pipeline, can have values ranging from 0 to 255. Find the entropy in bits.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -151,6 +201,11 @@ $$
     2. Complete the sentence: The curve is [symmetrical/asymmetrical].
 
     3. Complete the sentence: The curve rises to a [minimum/maximum] when the two symbols are equally likely ($P_a = 0.5$).
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -166,6 +221,11 @@ Therefore, $H ≥ 0$ and the maximum possible uncertainty is attained when $p = 
 
 Given the above formulation, describe a helpful property of the entropy that follows from the concavity of the logarithmic function.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 13. **True or False** : Given random variables X, Y and Z where $Y = X + Z$ then:
@@ -173,6 +233,11 @@ Given the above formulation, describe a helpful property of the entropy that fol
 $$
 H(X, Y ) = H(X, Z)
 $$
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -184,14 +249,29 @@ $$
     5. Provided that the ratio of tosses resulting in ‘heads’ is $p(x_h)$, and the ratio of tosses resulting in ‘tails’ is $p(x_t)$, and also provided that $p(x_h)+p(x_t) = 1$, what is formulae for the average surprise?
     6. What is the value of the average surprise in bits?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 15. Write the formulae for the Kullback-Leibler divergence between two discrete probability
 density functions P and Q.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 16. Describe one intuitive interpretation of the KL-divergence with respect to bits.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -209,17 +289,37 @@ density functions P and Q.
     $$
     7. **True or False:** In a decision tree, high information gain indicates that adding a split to the decision tree results in a less accurate model.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 18. Given two distributions $f1$ and $f2$ and their respective joint distribution $f$, write the formulae for the mutual information of $f1$ and $f2$.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 19. There are several measures by which one can determine how to optimally split attributes in a decision tree. List the three most commonly used measures and write their formulae.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 20. Complete the sentence: In a decision tree, the attribute by which we choose to split is the one with `[minimum/maximum]` information gain.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -249,6 +349,11 @@ The binary response variable Jump indicates whether a jump was observed. Referri
 </table>
 
 Without explicitly determining the information gain values for each of the three attributes, which attribute should be chosen as the attribute by which the decision tree should be first partitioned? e.g which attribute has the highest predictive power regarding the decision of the frog (Fig. 4.4) to jump.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -281,6 +386,11 @@ To study factors affecting tumour shrinkage, the deep learning researcher collec
 3. Using $\log_2$, and the provided dataset, calculate the sample entropy $H(γ)$.
 4. What is the information gain $IG(X_1) ≡ H(γ) − H(|θ_1)$ for the provided training corpus?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 23. To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$ indicating whether a star is dense, and $θ2 (T/F)$ indicating whether a star is adjacent to a black-hole. He is told that the binary response variable, $γ$, indicates whether expansion was observed.
@@ -300,6 +410,11 @@ $expansion=+$, no expansion=-$. Referring to table (4.3), each row indicates the
 1. Using $\log_2$ and the provided dataset, calculate the sample entropy $H(γ)$ (expansion) before splitting.
 2. Using $\log_2$ and the provided dataset, calculate the information gain of $H(γ|θ1)$.
 3. Using $log_2$ and the provided dataset, calculate the information gain of $H(γ|θ2)$.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -322,6 +437,11 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 3. Using $\log_2$ and the provided dataset, calculate the entropy of $H(γ|θ2)$.
 4. **True or false**: We should split on a specific variable that minimizes the information gain, therefore we should split on $θ_2$ (radiation therapy).
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 25. Shannon described a communications system consisting five elements (4.6), two of which are the source S and the destination D.
@@ -342,9 +462,19 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 4. Annotate the part termed mutual information.
 5. Write the formulae for mutual information.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 26. Complete the sentence: The relative entropy $D(p||q)$ is the measure of (a)[...] between two distributions. It can also be expressed as a measure of the (b)[...] of assuming that the distribution is q when the (c)[...] distribution is p.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -354,13 +484,28 @@ I(X; Z) := H(X) − H(X | Z)
 $$
 where H is the Shannon entropy, and $H (X | Z )$ is the conditional entropy of $Z$ given $X$.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 28. What is the expression for the Boltzmann probability distribution?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 29. Information theory, quantum physics and thermodynamics are closely interconnected. There are several equivalent formulations for the second law of thermodynamics. One approach to describing uncertainty stems from Boltzmanns fundamental work on entropy in statistical mechanics. Describe what is meant by Boltzmanns entropy.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -377,17 +522,38 @@ where H is the Shannon entropy, and $H (X | Z )$ is the conditional entropy of $
 </tr>
 </table>
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 31. 1. Define the term concave function.
     2. Define the term convex function.
     3. State Jensen's inequality and its implications.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 32. **True or False**: Using Jensen's inequality, it is possible to show that the KL divergence
 is always greater or equal to zero.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 6. Jensen’s inequality forms the basis for many algorithms for probabilistic inference, including expectation maximization and variational inference. Explain what Jensen’s inequality is.
+
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+

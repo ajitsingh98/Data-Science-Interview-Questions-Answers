@@ -34,9 +34,19 @@ Contents
     1. Write in plain NumPy the forward and backward pass for a two-layer feed-forward neural network with a ReLU layer in between.
     1. Implement vanilla dropout for the forward and backward pass in NumPy.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 27. In a single-layer feed-forward NN, there are [...] input(s) and [...]. output layer(s) and no [...] connections at all.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -65,17 +75,37 @@ $$
 
 Then the new perceptron can process inputs ranging between 0 and 1 and emit output ranging between 0 and 1.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 29.  Write the cost function associated with the sigmoidial neuron.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 30. If we want to train the perceptron in order to obtain the best possible weights and biases, which mathematical equation do we have to solve?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 31. Complete the sentence: To solve this mathematical equation, we have to apply $[...]$?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -90,9 +120,19 @@ $$
 C_x = \frac{1}{2}\|y(x) - a(x,w,b)\|^2
 $$
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 33. Complete the sentence: Due to the time-consuming nature of computing gradients for each entry in the training corpus, modern DL libraries utilize a technique that gauges the gradient by first randomly sampling a subset from the training corpus, and then averaging only this subset in every epoch. This approach is known as $[...]$. The actual number of randomly chosen samples in each epoch is termed $[...]$. The gradient itself is obtained by an algorithm known as $[...]$.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -113,6 +153,11 @@ $$
 2. What is the value resulting from the application the sum operator?
 3. Verify the correctness of your results using PyTorch.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 35. The following questions refer to the MLP depicted in (8.15).
@@ -132,6 +177,11 @@ $$
 
 2. Confirm your manual calculation using PyTorch tensors.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 4. Activation functions.
     1. Draw the graphs for sigmoid, tanh, ReLU, and leaky ReLU.
@@ -139,13 +189,28 @@ $$
     1. Is ReLU differentiable? What to do when it’s not differentiable?
     1. Derive derivatives for sigmoid function when is a vector.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 22. Why shouldn’t we have two consecutive linear layers in a neural network?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 23. Can a neural network with only RELU (non-linearity) act as a linear classifier?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -163,6 +228,11 @@ tion functions in a MLP. Which ones can never be back-propagated and why?
            -x & \text{if } x < 0 \\
            x^2 & \text{if } x > 0
        \end{cases}$
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -205,23 +275,47 @@ L = -\sum_i{y_i\log(y_i)}
 $$
 What are the resulting values?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 38. If someone is quoted saying: MLP networks are universal function approximators. What does he mean?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 39. **True or False**: the output of a perceptron is 0 or 1.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
-40. **True or False:** A multi-layer perceptron falls under the category of supervised machine
-learning.
+40. **True or False:** A multi-layer perceptron falls under the category of supervised machine learning.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 41. **True or False:** The accuracy of a perceptron is calculated as the number of correctly
 classified samples divided by the total number of incorrectly classified samples.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -246,22 +340,47 @@ classified samples divided by the total number of incorrectly classified samples
 
 What is the value resulting from the application the sum operator?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 43. Repeat the above assuming now that the bias term B1 was amended and equals −0.25.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 44. Define what is the perceptron learning rule.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 1. When building a neural network, should you overfit or underfit it first?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 45. What was the most crucial difference between Rosenblatt’s original algorithm and Hinton’s fundamental papers of 1986: <a href="">Learning representations by back-propagating errors</a> and 2012:
 <a href="">ImageNet Classification with Deep Convolutional Neural Networks” </a>
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -280,9 +399,19 @@ What is the value resulting from the application the sum operator?
 
 Can a perceptron with only two inputs and a single output function as an AND logic gate? If so, find the weights and the threshold and demonstrate the correctness of your answer using a truth table.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 24. Design the smallest neural network that can function as an XOR gate.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -299,7 +428,7 @@ Can a perceptron with only two inputs and a single output function as an AND log
   </tr>
 </table>
 
-Digital hardware implementations of the sigmoid function do exist but they are expens- ive to compute and therefore several approximation methods were introduced by the research community. The method by [10] uses the following formulas to approximate the exponential function:
+Digital hardware implementations of the sigmoid function do exist but they are expensive to compute and therefore several approximation methods were introduced by the research community. The method by [10] uses the following formulas to approximate the exponential function:
 
 $\exp{x} = Ex(x) = 2^{1.44x}$
 
@@ -340,6 +469,11 @@ $Sigmoid(x) = \frac{1}{1+2^{-1.44x}} = \frac{1}{1+2^{-1.5}}$
 5. Print the values of the Sigmoid function and the Sigmoid function approximation eq. 8.27 for the following vector:
 v = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.99]
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 48. The Hyperbolic tangent nonlinearity, or the tanh function (Fig. 8.23), is a widely used neuron activation function in artificial neural networks:
@@ -364,6 +498,11 @@ $$
 3. Use the PyTorch based torch.autograd.Function class to write a custom Function that implements the forward and backward passes for the tanh function in Python.
 4. Name the class TanhFunction, and using the gradcheck method from torch.autograd, verify that your numerical values equate the analytical values calculated by gradcheck. Remember you must implement a method entitled `.apply(x)` so that the function can be invoked by Autograd.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 49. The code snippet in 8.24 makes use of the tanh function.
@@ -381,9 +520,19 @@ $$
 1. What type of a neural network does nn001 in 8.24 represent?
 2. How many hidden layers does the layer entitles nn001 have?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 50.  Your friend, a veteran of the DL community claims that MLPs based on tanh activation function, have a symmetry around 0 and consequently cannot be saturated. Saturation, so he claims is a phenomenon typical of the top hidden layers in sigmoid based MLPs. Is he right or wrong?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -393,6 +542,11 @@ $$
     1. Using the uniform distribution, with parameter initialization method as suggested by
     Xavier Glorot [9].
     1. Initialize all parameters to a constant zero value.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -411,6 +565,11 @@ $$
 
 He initialized all the weights and biases (biases not shown for brevity) to zero. What is the most significant design flaw in his architecture?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 53. The rectified linear unit, or ReLU $g(z) = max{0, z}$ is the default for many CNN architectures. It is defined by the following function:
@@ -418,6 +577,11 @@ He initialized all the weights and biases (biases not shown for brevity) to zero
 $$f_{ReLU} = max(0, x)$$
 
 1. In what sense is the ReLU better than traditional sigmoidal activation functions?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -434,6 +598,11 @@ $$f_{ReLU} = max(0, x)$$
 </table>
 What is the shape of the resulting tensor W?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 55.  Name the following activation function where $a ∈ (0, 1)$:
@@ -443,6 +612,11 @@ $$f(x) = \begin{cases}
     ax & \text{otherwise}
 \end{cases}$$
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 56. In many interviews, you will be given a paper that you have never encountered before, and be required to read and subsequently discuss it. Please read <a href="https://arxiv.org/pdf/1710.05941.pdf">Searching for Activation Functions</a> before attempting the questions in this question.
@@ -450,6 +624,11 @@ $$f(x) = \begin{cases}
     2. What types of functions did the researchers include in their search space?
     3. What were the main findings of their research and why were the results surprising? 4. Write the formulae for the Swish activation function.
     5. Plot the Swish activation function.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -475,6 +654,11 @@ $$f(x) = \begin{cases}
     3. What is the precision of the model?
     4. What is the recall of the model?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 58. Complete the following sentences:
@@ -483,6 +667,11 @@ $$f(x) = \begin{cases}
 2. It is a plot of `[...]` vs. the `[...]`. In place of `[...]`, one could also use `[...]` which are essen- tially {1 - ‘true negatives’}.
 3. A typical ROC curve has a concave shape with `[...]` as the beginning and `[...]` as the end point
 4. The ROC curve of a ‘random guess classifier’, when the classifier is completely con- fused and cannot at all distinguish between the two classes, has an AUC of `[...]` which is the `[...]` line in an ROC curve plot.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -507,6 +696,11 @@ XGBClassifier(base_score=0.5, colsample_bylevel=1,colsample_bytree=0.5, gamma=0.
 ```
 How would you describe the results of the classification?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 ### NNLayers, Topologists and Blocks
@@ -523,6 +717,11 @@ How would you describe the results of the classification?
 * CNN residual blocks
 
 60. Given an input of size of $n×n$, filters of size $f×f$ and a stride of $s$ with padding of $p$, what is the output dimension?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -553,11 +752,21 @@ How would you describe the results of the classification?
     2.  MaxPool2d
     3. ReLU
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 62. Still referring the code snippet in Fig. (8.31), and specifically to line 7, the code is amended so that the line is replaced by the line: `vgg_layers=vgg11.features[:3]`.
     1. What type of block is now represented by the new line? Print it using PyTorch.
     2. In each case for the input variable example , determine the dimensions of the tensor which is the output of applying the block: `vgg_layers=vgg11.features[:3]` to the respective input.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -578,6 +787,11 @@ Complete the missing parts regarding the dimensions and arithmetics of the VGG11
 3. All convolutional layers have a `[...]` kernel.
 4. The first convolutional layer produces `[...]` channels.
 5. Subsequently as the network deepens, the number of channels `[...]` after each `[...]` oper- ation until it reaches `[...]`.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -616,10 +830,13 @@ During the training of a neural network, the Dropout layer randomly drops out ou
     1. You are interested in the proportion θ of droppedout neurons.Assume that the chance of drop-out, θ, is the same for each neuron (e.g. a uniform prior for θ). Compute the posterior of θ.
     2. Describe the similarities of dropout to bagging.
 
----
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 
 ---
+
 
 65. A co-worker claims he discovered an equivalence theorem where, two consecutive Dropout layers [26] can be replaced and represented by a single Dropout layer 8.34.
 <table align='center'>
@@ -649,6 +866,11 @@ Where nn.Dropout(0.1) (Line #6 in 8.3) indicates that the probability of zeroing
 1. What do you think about his idea, is he right or wrong?
 2. Either prove that he is right or provide a single example that refutes his theorem.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 66. If he uses the following filter for the convolutional operation, what would be the resulting
@@ -664,6 +886,11 @@ tensor after the application of the convolutional layer?
   </tr>
 </table>
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 67. What would be the resulting tensor after the application of the ReLU layer (8.37)?
@@ -678,9 +905,19 @@ tensor after the application of the convolutional layer?
   </tr>
 </table>
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 68. What would be the resulting tensor after the application of the MaxPool layer (8.78)?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -699,6 +936,11 @@ tensor after the application of the convolutional layer?
 Answer the following questions:
     1. What is the most common use of max-pooling layers?
     2. What is the result of applying the MaxPool2d operation on the input?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -746,6 +988,11 @@ Please run the code and answer the following questions:
     4. Inline9,thereisaMaxPool2D(2,2)operation,followedbyyetasecondMaxPool2D(2,2). What is the resulting tensor shape after running line 9? and line 10?
     5. A friend who saw the PyTorch implementation, suggests that lines 9 and 10 may be replaced by a single MaxPool2D(4,4,) operation while producing the exact same results. Do you agree with him? Amend the code and test your assertion.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 71. 1. What is batch normalization?
@@ -759,9 +1006,19 @@ Please run the code and answer the following questions:
     3. What is the mathematical process of normalization?
     4. Describe, how normalization works in BN.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 14. Compare batch norm and layer norm.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -777,6 +1034,11 @@ scipy.stats.norm.pdf(x, mu, sigma)
 ```
     1. Without using Scipy, implement the normal distribution from scratch in Python.
     2. Assume, you want to back propagate on the normal distribution, and therefore you need the derivative. Using Scipy write a function for the derivative.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -813,9 +1075,19 @@ class BNl001(nn.Module):
     ...
 ```
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 74. **True or false**: An activation function applied after a Dropout, is equivalent to an activation function applied before a dropout.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -826,6 +1098,11 @@ class BNl001(nn.Module):
     4.  Non-linear activation function
     5. Linear activation function
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 76. You are designing a CNN which has a single BN layer. Which of the following core CNN designs are valid? Choose all the options that apply: 
@@ -835,6 +1112,11 @@ class BNl001(nn.Module):
     4. BN→CONV→act→Dropout→... 
     5. CONV→Dropout→BN→act→...
     6.  Dropout→CONV→BN→act→...
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -871,6 +1153,11 @@ $$
 
 Explain what is the purpose of multiplying by the term $\frac{1}{1-p}$
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 79. Visualized in (8.43) from a high-level view, is an MLP which implements a well-known idiom in DL.
@@ -903,6 +1190,11 @@ Name one disadvantage of this new architecture.
 
 4. Name one CNN architecture where the input equals the output.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 80. Answer the following questions regarding residual networks.
@@ -910,6 +1202,11 @@ Name one disadvantage of this new architecture.
     $$y = x + F(x)$$ 
     What is the function F?
     2. In one sentence, what was the main idea behind deep residual networks (ResNets) as introduced in the original paper?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -928,6 +1225,11 @@ Name one disadvantage of this new architecture.
 1. Assuming a residual of the form $y = x + F(x)$, complete the missing parts in Fig. (8.45).
 2. What does the symbol $⊕$ denotes?
 3. A fellow data scientist,who had coffee with you said that residual blocks may compute the identity function. Explain what he meant by that.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -963,6 +1265,11 @@ batch_size=1024, shuffle=True)
 
 In your opinion, what could possibly go wrong with this training pipeline?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 83. A junior data scientist in your team who is interested in Hyperparameter tuning, wrote the following code (8.5) for spiting his corpus into two distinct sets and fitting an LR model:
@@ -989,9 +1296,19 @@ clf = GridSearchCV(method, params, scoring='roc_auc', cv=5) clf.fit(train_X, tra
 ```
 Explain why his new approach may work better?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 84. In the context of Hyperparameter optimization, explain the difference between grid search and random search.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1011,6 +1328,11 @@ In the majority of cases, the training data is manually labelled by radiologists
 1. Do you think there is a design flow in the curation of the data sets?
 2. A friend suggests that all the re radiologists read all the scans and label them independently thus creating a majority vote. What do you think about this idea?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 86. Answer the following questions regarding the validation curve visualized in (8.48):
@@ -1027,10 +1349,15 @@ In the majority of cases, the training data is manually labelled by radiologists
 
     1. Describe in one sentence, what is a validation curve.
     2. Which hyperparameter is being used in the curve?
-    3. Whichwell-knownmetricisbeingusedinthecurve?Whichothermetriciscommonly used?
+    3. Which well-known metrics being used in the curve? Whichothermetricis commonly used?
     4. Which positive phenomena happens when we train a NN longer?
     5. Which negative phenomena happens when we train a NN longer than we should?
     6. How this negative phenomena is reflected in 8.48?
+ 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1041,11 +1368,22 @@ In the majority of cases, the training data is manually labelled by radiologists
         1. acceptable.
     1. What’s learning rate warmup? Why do we need it?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 17. It’s a common practice for the learning rate to be reduced throughout the training.
     1. What’s the motivation?
     1. What might be the exceptions?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 87. Refer to the validation log-loss curve visualized in (8.49) and answer the following questions:
@@ -1078,9 +1416,19 @@ What do you think about his idea?
 
 6. Provide one reason against the use of the log-loss curve.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 25. Why don’t we just initialize all weights in a neural network to zero?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1089,22 +1437,37 @@ elements. During inference, you notice that the performance is not that good. A 
     1. Name the method he is suggesting.
     2. Provide several examples of augmentation that you might use during inference.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 89. Complete the sentence: If the training loss is insignificant while the test loss is signific-
 antly higher, the network has almost certainly learned features which are not present in an `[...]` set. This phenomena is referred to as `[...]`
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 ### Optimization and Loss
 
 * Stochastic gradient descent, SGD
-* Momentus
+* Momentum
 * Norms, L1, L2
 
 ---
 
 90. What does the term stochastic in SGD actually mean? Does it use any random number generator?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1112,21 +1475,46 @@ antly higher, the network has almost certainly learned features which are not pr
     1. What are some sources of randomness in a neural network?
     1. Sometimes stochasticity is desirable when training neural networks. Why is that?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 10. Gradient descent vs SGD vs mini-batch SGD.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
 2. Write the vanilla gradient update.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 91. Explain why in SGD, the number of epochs required to surpass a certain loss threshold increases as the batch size decreases?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 11. It’s a common practice to train deep learning models using epochs: we sample batches from data without replacement. Why would we use epochs instead of just sampling data with replacement?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1135,33 +1523,69 @@ antly higher, the network has almost certainly learned features which are not pr
     1. What happens when you use the entire training data in a batch?
     1. How should we adjust the learning rate as we increase or decrease the batch size?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 6. Vanishing and exploding gradients.
     1. How do we know that gradients are exploding? How do we prevent it?
     1. Why are RNNs especially susceptible to vanishing and exploding gradients?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 92. How does momentum work? Explain the role of exponential decay in the gradient descent update rule?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 19. Why is Adagrad sometimes favored in problems with sparse gradients?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 20. Adam vs. SGD.
     1. What can you say about the ability to converge and generalize of Adam vs. SGD?
     2. What else can you say about the difference between these two optimizers?
---
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
 
 21. With model parallelism, you might update your model weights using the gradients from each machine asynchronously or synchronously. What are the pros and cons of asynchronous SGD vs. synchronous SGD?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
+
 93. In your training loop, you are using SGD and a logistic activation function which is
 known to suffer from the phenomenon of saturated units.
     1. Explain the phenomenon.
     2. You switch to using the tanh activation instead of the logistic activation, in your opinion does the phenomenon still exists?
     3. In your opinion, is using the tanh function makes the SGD operation to converge better?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1170,6 +1594,11 @@ known to suffer from the phenomenon of saturated units.
     2. In stochastic gradient descent, the gradient for a single sample is not so different from the actual gradient, so this gives a more stable value, and converges faster.
     3.  SGD usually avoids the trap of poor local minima.
     4. SGD usually requires more memory.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1187,9 +1616,19 @@ known to suffer from the phenomenon of saturated units.
     
     4. Compute both the Euclidean and Manhattan distance of the vectors: $x1$ = [6,1,4,5] and $x2$ = [2,8,3,−1].
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
  15. Why is squared L2 norm sometimes preferred to L2 norm for regularizing neural networks?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1206,26 +1645,106 @@ cityblock = spatial.distance.cityblock(x1, x2) 5 print("Manhattan:", cityblock)
 ```
 In many cases, and for large vectors in particular, it is better to use a GPU for imple- menting numerical computations. PyTorch has full support for GPU’s (and its my favourite DL library ... ), use it to implement the Manhattan distance function on a GPU.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 97. Your friend is training a logistic regression model for a binary classification problem using the L2 loss for optimization. Explain to him why this is a bad choice and which loss he should be using instead.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
 ---
 
 5. What’s the motivation for skip connection in neural works?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
 8. When training a large neural network, say a language model with a billion parameters, you evaluate your model on a validation set at the end of every epoch. You realize that your validation loss is often lower than your train loss. What might be happening?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
 9. What criteria would you use for early stopping?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
 
 12. Your model’ weights fluctuate a lot during training. How does that affect your model’s performance? What to do about it?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
+
 16. Some models use weight decay: after each gradient update, the weights are multiplied by a factor slightly less than 1. What is this useful for?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
 
 27. Dead neuron.
     1. What’s a dead neuron?
     1. How do we detect them in our neural network?
     1. How to prevent them?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
 28. Pruning.
     1. Pruning is a popular technique where certain weights of a neural network are set to 0. Why is it desirable?
     2. How do you choose what to prune from a neural network?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
 29. Under what conditions would it be possible to recover training data from the weight checkpoints?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
 30. Why do we try to reduce the size of a big trained model through techniques such as knowledge distillation instead of just training a small model from the beginning?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---

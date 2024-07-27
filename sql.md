@@ -425,6 +425,7 @@ Manish" and "Arhan" from the Worker table.
 ---
 
 45. Write a query to print the names of employees having the highest salary in each department.
+
 <details ><summary><b>Answer</b></summary>
     <p>
     SELECT w.department, w.first_name, w.salary FROM <b>Worker w</b> INNER JOIN (SELECT department, MAX(salary) AS max_salary FROM Worker GROUpBY department) AS dept_max ON w.department = dept_max.department AND w.salary = dept_max.max_salary;
@@ -434,6 +435,7 @@ Manish" and "Arhan" from the Worker table.
 ---
 
 46. Write a query to fetch three max salaries from a table using a co-related subquery.
+
 <details ><summary><b>Answer</b></summary>
     <p>
     SELECT DISTINCT salary FROM <b>Worker w1</b> WHERE 3 >= (SELECT COUNT(DISTINCT w2.salary) FROM <b>Worker w2</b> WHERE w2.salary >= w1.salary) ORDER BY salary DESC;

@@ -40,6 +40,10 @@ $$
 1. What does the above equation represent?
 2. What does $g(t)$ represent?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 10. A data-scientis assumes that:
@@ -49,11 +53,18 @@ $$
 
 Is he right in assuming so? Explain in detail the meaning of these statements.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
 ---
 
 11. Mark the correct choice(s):
     1. The cross-correlation operator is used to find the location where two different signals are most similar.
     2. The autocorrelation operator is used to find when a signal is similar to a delayed version of itself.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -65,15 +76,27 @@ $$
 
 Using above, write the equivalent 2D correlation operation.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 13.  When designing a convolutional neural network layer, one must also define how the filter or kernel slides through the input signal. This is controlled by what is known as the stride and padding parameters or modes. The two most commonly used padding approached in convolutions are the VALID and the SAME modes. Given an input stride of 1:
     1. Define SAME
     2. Define VALID
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 14. **True or False:** A valid convolution is a type of convolution operation that does not use any padding on the input.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -91,6 +114,10 @@ A =
 \end{equation}
 $$
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 16. As depicted in below figure, a filter is applied to a ×3 input signal. Identify the correct choice given a stride of 1 and Same padding mode.
@@ -105,6 +132,10 @@ $$
     <td align="center"> Figure 8.3: A padding approach </td>
   </tr>
 </table>
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -124,6 +155,10 @@ $$
     <td align="center"> Figure 8.4: A padding approach </td>
   </tr>
 </table>
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -160,6 +195,10 @@ $$
 2. Manually compute the result of convolving the input signal with the provided filter.
 3. Elaborate why the size of the resulting convolutions is smaller than the size of the input signal.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 19.  Equation 8.6 is the discrete equivalent of equation 8.2 which is frequently used in image processing:
@@ -193,9 +232,17 @@ $$
   </tr>
 </table>
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 20. Given an image of size $w × h$, and a kernel with width $K$ , how many multiplications and additions are required to convolve the image?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -207,7 +254,11 @@ np.convolve(A,B,"full") # for convolution
 np.correlate(A,B,"full") # for cross correlation
 ```
 1. Implement the convolution operation from scratch in Python. Compare it with the built-in numpy equivalent.
-2. Implement the correlation operation using the implementation of the convolution op- eration. Compare it with the built-in numpy equivalent.
+2. Implement the correlation operation using the implementation of the convolution operation. Compare it with the built-in numpy equivalent.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -234,34 +285,62 @@ Answer the following questions:
 2. Can 8.9 be used directly on a 2D image?
 3. Is the Gaussian filter separable? if so, what are the advantages of separable filters.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 ### CNN as Fixed Feature Extractor
 
 1.  **True or False**: While AlexNet used 11 × 11 sized filters, the main novelty presented in the VGG architecture was utilizing filters with much smaller spatial extent, sized $3 × 3$.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 2. **True or False**: Unlike CNN architectures such as AlexNet or VGG, ResNet does not
 have any hidden FC layers?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 3. Assuming the VGG-Net has 138, 357, 544 floating point parameters, what is the physical size in Mega-Bytes (MB) required for persisting a trained instance of VGG-Net on permanent storage?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
 4. **True or False**: Most attempts at researching image representation using FE, focused
 solely on reusing the activations obtained from layers close to the output of the CNN, and more specifically the fully-connected layers.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 5.  **True or False**: FE in the context of deep learning is particularly useful when the target
 problem does not include enough labeled data to successfully train CNN that generalizes well.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 6.  Why is a CNN trained on the ImageNet dataset a good candidate for a source problem?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -280,6 +359,10 @@ problem does not include enough labeled data to successfully train CNN that gene
         12. The last FC layer has only [...] features.
         13. The last FC layer is terminated by a [...] activation layer. 
         14. Dropout [is / is not] being used between the FC layers.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -313,10 +396,18 @@ Table (9.3) presents an incomplete listing of the of the VGG19 architecture. As 
 
 3. After successfully extracting the features for the 4K images from the dataset, how can you now classify the images into their respective categories?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 9. Still referring to Table (9.3), a data scientist suggests using the output layer of the
 VGG19 CNN as a fixed FE. What is the main advantage of using this layer over using for instance, the fc7 layer? (Hint: think about an ensemble of feature extractors)
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -347,6 +438,10 @@ new CNN derived from the VGG19 CNN:
 3. Complete line 12; what should be the value of `self.num_feats` ? 
 4. Complete line 17; what should be the value of `f` ?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 11. We are still referring to Table (9.3) and using the skeleton code provided in Fig. (7.5)
@@ -370,6 +465,10 @@ class ResNetBottom(torch.nn.Module):
 
 1. The value of self.features in line 7. 
 2. The forward method in line 11.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -412,13 +511,25 @@ Answer the following questions regarding the code in Fig. (7.6):
 4. What is the purpose of `detach()` in line 23?
 5. What is the purpose of `numpy()[0]` in line 23?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 13. Define the term fine-tuning (FT) of an ImageNet pre-trained CNN.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 14. Describe three different methods by which one can fine-tune an ImageNet pre-trained CNN.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -443,27 +554,111 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 3. Write a code snippet in PyTorch to adapt the CNN so that it can predict 7 classes instead of the original source size of 1000.
 4. In order to fine tune our CNN, the (original) output layer with $1000$ classes was removed and the CNN was adjusted so that the (new) classification layer comprised seven softmax neurons emitting posterior probabilities of class membership for each lesion type.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 1. For neural networks that work with images like VGG-19, InceptionNet, you often see a visualization of what type of features each filter captures. How are these visualizations created?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 2. Filter size.
     1. How are your model’s accuracy and computational efficiency affected when you decrease or increase its filter size?
     1. How do you choose the ideal filter size?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 3. Convolutional layers are also known as “locally connected.” Explain what it means.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 4. When we use CNNs for text data, what would the number of channels be for the first conv layer?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 5. What is the role of zero padding?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 6. Why do we need upsampling? How to do it?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 7. What does a 1x1 convolutional layer do?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 8. Pooling.
     1. What happens when you use max-pooling instead of average pooling?
     1. When should we use one instead of the other?
     1. What happens when pooling is removed completely?
     1. What happens if we replace a 2 x 2 max pool layer with a conv layer of stride 2?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 9. When we replace a normal convolutional layer with a depthwise separable convolutional layer, the number of parameters can go down. How does this happen? Give an example to illustrate this.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 10. Can you use a base model trained on ImageNet (image size 256 x 256) for an object classification task on images of size 320 x 360? How?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 11. How can a fully-connected layer be converted to a convolutional layer?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 12. Pros and cons of FFT-based convolution and Winograd-based convolution.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -471,9 +666,17 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 16. Briefly describe how neural style transfer (NST) works?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 17.  Complete the sentence: When using the VGG-19 CNN for neural-style transfer, there different images are involved. Namely they are: `[...]`, `[...]` and `[...]`
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -493,11 +696,18 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 1. Which loss is being utilized during the training process?
 2. Briefly describe the use of activations in the training process.
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
 ---
 
 19. Still referring to above image:
     1. How are the activations utilized in comparing the content of the content image to the content of the combined image?
     2. How are the activations utilized in comparing the style of the content image to the style of the combined image?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -528,5 +738,9 @@ Thus, the cosine similarity between two vectors measures the cosine of the angle
 Answer the following questions:
 1. Define the term *Gram matrix*.
 2. Explain in detail how vector similarity is utilised in the calculation of the Gram matrix during the training of *NST*.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---

@@ -7,9 +7,6 @@
 
 <details><summary><b>Answer</b></summary>
 
-1. 
-
-
 
 </details>
 
@@ -26,12 +23,24 @@
 
 3. Language models are often referred to as unsupervised learning, but some say its mechanism isn’t that different from supervised learning. What are your thoughts?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 
 4. Word embeddings.
     1. Why do we need word embeddings?
     1. What’s the difference between count-based and prediction-based word embeddings?
     1. Most word embedding algorithms are based on the assumption that words that appear in similar contexts have similar meanings. What are some of the problems with context-based word embeddings?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
@@ -47,42 +56,108 @@
       1. Given a query Q: “The early bird gets the worm”, find the two top-ranked documents according to the TF/IDF rank using the cosine similarity measure and the term set {bird, duck, worm, early, get, love}. Are the top-ranked documents relevant to the query?
       2. Assume that document D5 goes on to tell more about the duck and the bird and mentions “bird” three times, instead of just once. What happens to the rank of D5? Is this change in the ranking of D5 a desirable property of TF/IDF? Why?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 
 6. Your client wants you to train a language model on their dataset but their dataset is very small with only about 10,000 tokens. Would you use an n-gram or a neural language model?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
 7. For n-gram language models, does increasing the context length (n) improve the model’s performance? Why or why not?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 
 8. What problems might we encounter when using softmax as the last layer for word-level language models? How do we fix it?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 9. What's the Levenshtein distance of the two words “doctor” and “bottle”?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
 10. BLEU is a popular metric for machine translation. What are the pros and cons of BLEU?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 
 11. On the same test set, LM model A has a character-level entropy of 2 while LM model A has a word-level entropy of 6. Which model would you choose to deploy?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 12. Imagine you have to train a NER model on the text corpus A. Would you make A case-sensitive or case-insensitive?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
 13. Why does removing stop words sometimes hurt a sentiment analysis model?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 
 14. Many models use relative position embedding instead of absolute position embedding. Why is that?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 
 15. Some NLP models use the same weights for both the embedding layer and the layer just before softmax. What’s the purpose of this?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---

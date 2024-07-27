@@ -80,6 +80,7 @@ $$f(X) = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2}....$$
 Where $X_{2} = X_{1}^{2}$
 
 No matter the source of the $X$, the model is linear in its parameter.
+
 </details>
 
 ---
@@ -98,6 +99,7 @@ The main assumptions of linear models are following:
     - If residuals are correlated then we may have pseudo confidence in our model
 - Data should not have outliers
     - Can messed up the predictions if we have heavy outliers
+
 </details>
 
 ---
@@ -127,6 +129,7 @@ The key difference between simple linear regression and multiple linear regressi
 ---
 
 4. What is Residual Standard Error(RSE) and how to interpret it?
+
 <details><summary><b>Answer</b></summary>
 
 The RSE is an estimate of the standard deviation of residuals($\epsilon$). It is the average amount by which the response will deviate from the true regression line.
@@ -142,6 +145,7 @@ It is considered as the lack of the fit of the data. Lower values indicates mode
 
 
 4. What is the purpose of the coefficient of determination (R-squared) in linear regression?
+
 <details><summary><b>Answer</b></summary>
 
 $R^2$ statistic provides goodness of fit and it is a unit less quantity so its better than the residual standard error.
@@ -157,11 +161,13 @@ And,
 $$RSS(Residual Sum of Squares) = \sum{(y_i - \cap{y})^2}$$
 
 Statistically, it measures the proportion of variability in $Y$ that can be explained using $X$. 
+
 </details>
 
 ---
 
 4. How to interpret the values of $R^2$ statistic?
+
 <details><summary><b>Answer</b></summary>
 
 A number near 0 indicates the regression does not explain the variability in the response, whereas 1 indicates a large proportion of the variability in the response is explained by the regression.
@@ -189,6 +195,7 @@ Here's how to interpret them:
     - The magnitude of the coefficient shows the strength of the relationship between the independent and dependent variables.
 
 </details>
+
 ---
 
 6. What is the difference between correlation and regression?
@@ -199,11 +206,13 @@ Here's how to interpret them:
 - Regression models the dependence of a variable on one or more other variables, providing a predictive equation and allowing for an analysis of the effect of each predictor.
 
 </details>
+
 ---
 
 7. What are the methods to assess the goodness of fit of a linear regression model?
 
 <details><summary><b>Answer</b></summary>
+
 There are several methods to measure goodness of fit with some pros and cons:
 
 - R-squared ($R^2$)
@@ -214,6 +223,7 @@ There are several methods to measure goodness of fit with some pros and cons:
 
 We can use combinations of above statistic to evaluate the model performance.
 </details>
+
 ---
 
 8. What is the purpose of the F-statistic in linear regression?
@@ -223,7 +233,9 @@ We can use combinations of above statistic to evaluate the model performance.
 F-statistic is mainly used for hypothesis testing where we want to assess whether at least one of the predictors $X_1, X_2, ..., X_p$ is useful in predicting the response.
 
 For example null hypothesis:
+
 $$H_0 = \beta_1 = \beta_2 = ... = \beta_p = 0$$
+
 alternate hypothesis:
 $$H_a = at least one \beta_j is non-zero$$
 
@@ -238,6 +250,7 @@ $$E{(TSS-RSS)/p} = \sigma^2$$
 So, when there is no relationship between predictors and the response then F-statistic is near to 1 and if $H_a$ is true the  F-statistic will be greater than 1.
 
 </details>
+
 ---
 
 9. What are the potential problems in linear regression analysis, and how can you address them?
@@ -254,13 +267,24 @@ Linear regression model may suffer from following issues mainly:
 6. **Non-normality of Residuals**: Transform variables or use non-parametric methods.
 
 </details>
+
 ---
 
 10. What are some regularization techniques used in linear regression, and when are they applicable?
 
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 11. Can you explain the concept of bias-variance trade-off in the context of linear regression?
+
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
@@ -284,7 +308,8 @@ L1(Lasso) and L2(Ridge) regularization techniques help in addressing the above s
 </details>
 
 ---
-12. Suppose you fit a ordinary linear regression model over your data and you find it is underfitting. Is it good idea to use Ridge ot Lasso regression here?
+
+12. Suppose you fit a ordinary linear regression model over your data and you find it is under-fitting. Is it good idea to use Ridge ot Lasso regression here?
 
 <details><summary><b>Answer</b></summary>
 
@@ -297,6 +322,7 @@ No, Ridge or Lasso regression addresses the variance issue in ols technique, her
 13. How do L1 and L2 regularization affect the model's coefficients?
 
 <details><summary><b>Answer</b></summary>
+
 L1 or L2 regularization are shrinkage methods which helps in reducing the coefficient of the estimate to zero or nearly zero. 
 
 
@@ -323,9 +349,17 @@ L2 regularization is effective when the response is a function of many predictor
 
 
 </details>
+
 ---
 
 16. What is Elastic Net regularization, and how does it relate to L1 and L2 regularization?
+
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
 
 17. How do you choose the optimal regularization strength (alpha) for L1 and L2 regularization?
 
@@ -366,16 +400,18 @@ A simple way to detect collinearity is to look at the correlation matrix of the 
 
 <details><summary><b>Answer</b></summary>
 
-We can detect multicollinearity using *variance inflation factor(VIF)*. VIF measures how much the variance of a regression coefficient is inflated due to multicollinearity.
+We can detect multi-collinearity using *variance inflation factor(VIF)*. VIF measures how much the variance of a regression coefficient is inflated due to multi-collinearity.
 
 The VIF is the ratio of the variance of $\beta_j$ when fitting the full model divided by the variance of $\beta_j$ if fit on its own. 
-$$ VIF(\beta_j) = \frac{1}{1-R^{2}_{X_{j}|X_{-j}}}$$
+
+$$VIF(\beta_j) = \frac{1}{1-R^{2}_{X_{j}|X_{-j}}}$$
 
 where $R^{2}_{X_{j}|X_{-j}}$ is the $R^2$ from a regression of $X_j$ onto all the other predictors.
 
 The smallest possible value of VIF is 1, which indicates complete absence of collinearity. In practice we have small collinearity among the predictors so VIF greater tha 5 or 10 depicts problematic amount of collinearity.
 
 </details>
+
 ---
 
 
@@ -383,19 +419,22 @@ The smallest possible value of VIF is 1, which indicates complete absence of col
 
 <details><summary><b>Answer</b></summary>
 
-There are several methods to address multicollinearity:
+There are several methods to address multi-collinearity:
 - Remove Highly Correlated Predictors
 - Combine Correlated Predictors
 - Principal Component Analysis (PCA)
 - Use ridge or lasso regression or combination of both(elastic net regression) for modeling
 
 </details>
+
 ---
 
-21. Can you have perfect multicollinearity?
+21. Can you have perfect multi-collinearity?
 
 <details><summary><b>Answer</b></summary>
 
 Yeah, It may occur when one predictor variable in a regression model is an exact linear combination of one or more other predictor variables. In other words, the correlation between the variables is exactly 1 (or -1).
 
 </details>
+
+--

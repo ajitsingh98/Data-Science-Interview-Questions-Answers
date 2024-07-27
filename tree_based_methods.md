@@ -511,6 +511,12 @@ Yes, stacking ensembles come with several limitations and challenges that can af
 
 9. When should you consider using stacking in a machine learning project?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 
 10. How does blending work?
@@ -621,16 +627,115 @@ The given algorithm is a typical bagging method.
 
 ---
 11. What is a Random Forest, and how does it work?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 10. How do you choose between different types of decision tree algorithms (e.g., CART, ID3, C4.5, Random Forest)?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 12. What is the difference between a decision tree and a Random Forest?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 13. Why is it called a "Random" Forest?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 14. What is the purpose of feature bagging in a Random Forest?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 15. How does a Random Forest handle missing data?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 16. What are the advantages of using Random Forests?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 17. What is out-of-bag error, and how is it used in Random Forests?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 18. Can you explain the concept of feature importance in a Random Forest?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 19. What are some potential drawbacks of using Random Forests?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 20. When would you choose a Random Forest over other machine learning algorithms?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
 
 5. Fig. 6.2 depicts a part of a specific ensembling approach applied to the models $x1, x2...xk$.
 
@@ -769,6 +874,12 @@ If the average error rate for a specific instance in the corpus is less than `[.
 ---
 10. What are the advantages of bagging over decision trees?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
 
 11. How does bagging reduces the variance in decision trees?
@@ -779,17 +890,69 @@ If the average error rate for a specific instance in the corpus is less than `[.
 
 ---
 11. What are some popular algorithms that use bagging?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
+
 12. What's the difference between bagging and boosting?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
 ---
+
 13. How does bagging handle imbalanced datasets?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 14. Can bagging be used with any base model?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 15. What are some potential drawbacks of bagging?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 16. What is the trade-off between bagging and variance?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 10. **True or false**: In bagging, we re-sample the training corpus with replacement and there-
 fore this may lead to some instances being represented numerous times while other instances not to be represented at all.
 
@@ -804,30 +967,145 @@ fore this may lead to some instances being represented numerous times while othe
     1. What are some of the fundamental differences between bagging and boosting algorithms?
     1. How are they used in deep learning?
 
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 8. How does boosting work?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 9. What are some popular boosting algorithms?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 10. What is the key idea behind AdaBoost?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 11. What is overfitting, and how does boosting address it?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 12. Can boosting models handle noisy data?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 13. What are the hyperparameters in boosting algorithms?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 14. What is the key idea behind XGBoost?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 15. What are some advantages of using XGBoost?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 16. How does LightGBM differ from traditional gradient boosting algorithms?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 17. What is the trade-off between LightGBM's speed and memory consumption?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 18. How does CatBoost handle categorical features?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
+
 19. What are some benefits of using CatBoost for gradient boosting?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
 ---
 
 11. 1. **True or false**: Training an ensemble of a single monolithic architecture results in lower model diversity and possibly decreased model prediction accuracy.

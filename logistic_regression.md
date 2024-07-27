@@ -21,21 +21,25 @@ Contents
 1. **True or False**: For a fixed number of observations in a data set, introducing more variables normally generates a model that has a better fit to the data. What may be the drawback of such a model-fitting strategy?
 
 <details style='color: red;'><summary><b>Answer</b></summary>
+
     <p style='color: red'>
     <b>True</b> But if the inducted features do not provide enough information and act like redundant predictors, then it does not make sense to add those predictors to the model. It unnecessarily increases the complexity of the model and may cause overfitting issues.
     </p>
+
 </details>
 
 ---
 2. Define the term **“odds of success”** both qualitatively and formally. Give a numerical example that stresses the relation between probability and odds of an event occurring.
 
 <details><summary><b>Answer</b></summary>
+
     <p>  The term "odds of success" refers to the likelihood or probability of a favorable outcome or event occurring in a given situation or experiment. The odds of success express the relative chances of a positive outcome compared to a negative outcome. It tells you how much more likely success is compared to failure.</p>
     <p>Odds of Success = $\frac{q}{p}$</p>
     <p>Let's consider a simple numerical example to illustrate the relationship between probability and the odds of an event occurring:</p>
      <p>  Suppose you are flipping a fair coin. The probability of getting heads ($p$) is $0.5$, and the probability of getting tails ($q$) is also $0.5$. To calculate the odds of success (getting heads):</p>
      <p>Odds of Success = $\frac{q}{p}$ = $\frac{0.5}{0.5} = 1$</p>
 <p>In this case, the odds of success are 1. This means that the chances of getting heads and the chances of getting tails are equal. </p>
+
 </details>
 
 ---
