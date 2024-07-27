@@ -29,6 +29,8 @@ It uses **least squares** as a estimation method to calculate the values of coef
 
 </details>
 
+---
+
 3. How to determine the coefficients of a simple linear regression model?
 
 <details><summary><b>Answer</b></summary>
@@ -51,6 +53,7 @@ $$\beta_{cap} = (X^{T}X)^{-1}X^{T}y$$
 
 </details>
 
+---
 
 2. In which scenarios linear model can outperforms fancier non linear models?
 
@@ -63,6 +66,8 @@ In following cases in may happen:
 - Small number of training instances
 
 </details>
+
+---
 
 3. Suppose a model takes form of $f(X) = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{1}^{2}....$, Is it a linear model?
 
@@ -77,6 +82,7 @@ Where $X_{2} = X_{1}^{2}$
 No matter the source of the $X$, the model is linear in its parameter.
 </details>
 
+---
 
 2. What are the assumptions of linear regression?
 
@@ -93,6 +99,8 @@ The main assumptions of linear models are following:
 - Data should not have outliers
     - Can messed up the predictions if we have heavy outliers
 </details>
+
+---
 
 3. Explain the difference between simple linear regression and multiple linear regression.
 
@@ -116,6 +124,8 @@ The key difference between simple linear regression and multiple linear regressi
 
 </details>
 
+---
+
 4. What is Residual Standard Error(RSE) and how to interpret it?
 <details><summary><b>Answer</b></summary>
 
@@ -127,6 +137,8 @@ $$RSE = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}{y_i - \hat{y}_i}}$$
 It is considered as the lack of the fit of the data. Lower values indicates model fits the data very well.
 
 </details>
+
+---
 
 
 4. What is the purpose of the coefficient of determination (R-squared) in linear regression?
@@ -147,12 +159,16 @@ $$RSS(Residual Sum of Squares) = \sum{(y_i - \cap{y})^2}$$
 Statistically, it measures the proportion of variability in $Y$ that can be explained using $X$. 
 </details>
 
+---
+
 4. How to interpret the values of $R^2$ statistic?
 <details><summary><b>Answer</b></summary>
 
 A number near 0 indicates the regression does not explain the variability in the response, whereas 1 indicates a large proportion of the variability in the response is explained by the regression.
 
 </details>
+
+---
 
 5. How do you interpret the coefficients in a linear regression model?
 
@@ -173,7 +189,7 @@ Here's how to interpret them:
     - The magnitude of the coefficient shows the strength of the relationship between the independent and dependent variables.
 
 </details>
-
+---
 
 6. What is the difference between correlation and regression?
 
@@ -183,6 +199,7 @@ Here's how to interpret them:
 - Regression models the dependence of a variable on one or more other variables, providing a predictive equation and allowing for an analysis of the effect of each predictor.
 
 </details>
+---
 
 7. What are the methods to assess the goodness of fit of a linear regression model?
 
@@ -197,8 +214,7 @@ There are several methods to measure goodness of fit with some pros and cons:
 
 We can use combinations of above statistic to evaluate the model performance.
 </details>
-
-
+---
 
 8. What is the purpose of the F-statistic in linear regression?
 
@@ -222,7 +238,7 @@ $$E{(TSS-RSS)/p} = \sigma^2$$
 So, when there is no relationship between predictors and the response then F-statistic is near to 1 and if $H_a$ is true the  F-statistic will be greater than 1.
 
 </details>
-
+---
 
 9. What are the potential problems in linear regression analysis, and how can you address them?
 
@@ -238,24 +254,90 @@ Linear regression model may suffer from following issues mainly:
 6. **Non-normality of Residuals**: Transform variables or use non-parametric methods.
 
 </details>
+---
 
 10. What are some regularization techniques used in linear regression, and when are they applicable?
 
+---
+
 11. Can you explain the concept of bias-variance trade-off in the context of linear regression?
+
+---
 
 ## Ridge and Lasso Regularization
 
 12. What's the main purpose of L1 and L2 regularization in linear regression?
 
+<details><summary><b>Answer</b></summary>
+
+Ordinary least square method suffers from the following issues:
+- Poor prediction accuracy(Overfitting)
+    - If $n ~ p$ i.e number of observations($n$) is not much larger than the number of predictors ($p$) then  there can be a lot of variability in the least square fit, resulting in overfitting and consequently poor prediction on test set.
+    - If $p > n$, then there is no longer a unique least square coefficient estimation and variance is infinite so method an not be used at all
+- Lack of model interpretability
+    - It is often the case that some of many of the variables used in ols might not be associated with the response. They unnecessary complicate the model and makes hard to interpret the model output.
+
+L1(Lasso) and L2(Ridge) regularization techniques help in addressing the above shortcomings of ols method. They can shrink the regression coefficient to zero or nearly zero and hence can help feature selection. Effectively they addresses the overfitting issue in ols by reducing the variance of the model.
+
+---
+
+</details>
+
+---
+12. Suppose you fit a ordinary linear regression model over your data and you find it is underfitting. Is it good idea to use Ridge ot Lasso regression here?
+
+<details><summary><b>Answer</b></summary>
+
+No, Ridge or Lasso regression addresses the variance issue in ols technique, here the model is suffering from the biasness and hence they can provide any help here. We can use polynomial regression or some other more complex model.
+
+</details>
+
+---
+
 13. How do L1 and L2 regularization affect the model's coefficients?
+
+<details><summary><b>Answer</b></summary>
+L1 or L2 regularization are shrinkage methods which helps in reducing the coefficient of the estimate to zero or nearly zero. 
+
+
+</details>
+
+---
 
 14. What are the hyperparameters associated with L1 and L2 regularization?
 
+<details><summary><b>Answer</b></summary>
+
+$\alpha$, It controls the relative impact of Residual Square Sum and Shrinkage penalty $\sum_{j}{\beta_{j}^{2}} on regression coefficients estimates.
+
+</details>
+
+
 15. When would you choose L1 regularization over L2, and vice versa?
+
+<details><summary><b>Answer</b></summary>
+ 
+L1 regularization performs better in a setting where a relatively small number of predictors have substantial coefficients and remaining predictors have coefficients that are very small or near to zero. Also L1 performs variable selection be forcing some coefficients of the estimates to zero and hence easier to interpret.
+
+L2 regularization is effective when the response is a function of many predictors, all with the coefficients roughly equal in size. Also L1 technique may lead to sparse model.
+
+
+</details>
+---
 
 16. What is Elastic Net regularization, and how does it relate to L1 and L2 regularization?
 
 17. How do you choose the optimal regularization strength (alpha) for L1 and L2 regularization?
+
+<details><summary><b>Answer</b></summary>
+
+Cross validation can be used to tune the *alpha*. 
+- Choose a grid of $\alpha$ values and compute cross validation error for each value of $\alpha$
+- Select the $\alpha$ which is yielding smallest cross validation error
+- Refit the model with all the available variables and the selected $\alpha$ value.
+</details>
+
+---
 
 18. What are the consequences of multicollinearity?
 
@@ -268,6 +350,8 @@ Multi collinearity can pose problems in regression context:
 
 </details>
 
+---
+
 19. How can you detect collinearity in a regression model?
 
 <details><summary><b>Answer</b></summary>
@@ -275,6 +359,8 @@ Multi collinearity can pose problems in regression context:
 A simple way to detect collinearity is to look at the correlation matrix of the predictors. A large absolute value in that matrix indicates a pair of highly correlated variables.
 
 </details>
+
+---
 
 19. How can you detect multicollinearity in a regression model?
 
@@ -290,6 +376,7 @@ where $R^{2}_{X_{j}|X_{-j}}$ is the $R^2$ from a regression of $X_j$ onto all th
 The smallest possible value of VIF is 1, which indicates complete absence of collinearity. In practice we have small collinearity among the predictors so VIF greater tha 5 or 10 depicts problematic amount of collinearity.
 
 </details>
+---
 
 
 20. How can you address multicollinearity?
@@ -303,6 +390,7 @@ There are several methods to address multicollinearity:
 - Use ridge or lasso regression or combination of both(elastic net regression) for modeling
 
 </details>
+---
 
 21. Can you have perfect multicollinearity?
 
