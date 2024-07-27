@@ -997,15 +997,27 @@ A/B testing is a powerful technique used in a variety of fields including web de
 
 15. You want to test which of the two ad placements on your website is better. How many visitors and/or how many times each ad is clicked do we need so that we can be $95%$ sure that one placement is better?
 
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 ---
 
 16. Your company runs a social network whose revenue comes from showing ads in newsfeeds. To double revenue, your coworker suggests that you should just double the number of ads shown. Is that a good idea? How do you find out?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
 17. Imagine that you have the prices of $ 10,000 stocks over the last 24-month period and you only have the price at the end of each month, which means you have 24 price points for each stock. After calculating the correlations of $10,000 * 9,9992$ pairs of stock, you found a pair that has a correlation to be above 0.8.
     1. What’s the probability that this happens by chance?
     1. How to avoid this kind of accidental pattern?
+    
+<details><summary><b>Answer</b></summary>
+    
+</details>
 
 ---
 
