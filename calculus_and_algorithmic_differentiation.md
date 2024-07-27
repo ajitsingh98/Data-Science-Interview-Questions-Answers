@@ -78,10 +78,10 @@ $f(x)$ at $a$.
 
 ---
 
-3.  1. State the definition of the derivative $f(c)$ of a function $f(x)$ at $x = c$. 
-
-    2. With respect to the DAG depicted in 5.3:
-    <table align='center'>
+3. 1. State the definition of the derivative $f(c)$ of a function $f(x)$ at $x = c$.
+   2.  With respect to the DAG depicted in 5.3:
+   
+<table align='center'>
   <tr>
     <td align="center">
       <img src="img/dag-1.png" alt= "An expression graph for g(x). Constants are shown in gray, crossed-out since derivatives should not be propagated to constant operands" style="max-width:70%;" />
@@ -90,10 +90,11 @@ $f(x)$ at $a$.
   <tr>
     <td align="center"> An expression graph for g(x). Constants are shown in gray, crossed-out since derivatives should not be propagated to constant operands </td>
   </tr>
-    </table>
-    (a) Traverse the graph 5.3 and find the function g(x) it represents. 
+</table>
+    
+(a) Traverse the graph 5.3 and find the function g(x) it represents. 
 
-    (b) Using the definition of the derivative, find g′(9).
+(b) Using the definition of the derivative, find g′(9).
 
 <details><summary><b>Answer</b></summary>
     
