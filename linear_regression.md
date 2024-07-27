@@ -17,7 +17,7 @@ Linear regression is a statistical model that assumes the regression function $E
 
 It takes the following form:
 
-$$f(X) = \beta_{0} + \sum^{p}_{j=1}X_{j}\beta_{j}$$
+$$f(X) = \beta_{0} + \sum_{j=1}^{p}X_{j}\beta_{j}$$
 
 Note that here $\beta_{j}$'s are unknown parameter or coefficients and the variables $X_{j}$ can come from different sources like
 - Quantitative inputs or its transformations
@@ -39,17 +39,22 @@ Suppose we have a set of training data $(x_1, y_1),...,(x_n, y_n)$ from which we
 $$RSS(\beta) = \sum_{i=1}^{N}(y_{i} - f(x_{i}))^2 = \sum_{i=1}^{N}(y_{i} - \beta_{0} - \sum_{j=1}^{p}x_{ij}\beta_{j})^2$$
 
 Alternatively we can rewrite the above equations as:
+
 $$RSS(\beta) = (y - X\beta)^{T}(y - X\beta)$$
 
 In order to minimize the above expression, differentiating with respect to $\beta$ we get,
-$$\frac{\del{RSS}}{\del{\beta}} = -2X^{T}(y - X\beta)$$
-$$\frac{\del^{2}{RSS}}{\del{\beta}\del{\beta^{T}}} = 2X^{T}X$$
+
+$$\frac{\partial{RSS}}{\partial{\beta}} = -2X^{T}(y - X\beta)$$
+
+$$\frac{\partial^{2}{RSS}}{\partial{\beta}\partial{\beta^{T}}} = 2X^{T}X$$
 
 Assuming that $X$ has full column rank, hence $X^{T}X$ is positive definite so minima exists, we set first derivative to zero
+
 $$X^{T}(y - X\beta) = 0$$
 
 To obtain the unique solution
-$$\beta_{cap} = (X^{T}X)^{-1}X^{T}y$$
+
+$$\hat{\beta} = (X^{T}X)^{-1}X^{T}y$$
 
 </details>
 
