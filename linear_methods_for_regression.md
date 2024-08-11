@@ -3,8 +3,9 @@
 Topics
 ---
 
-- [Linear Regression](#linear-regression)
-- [Ridge and Lasso Regularization](#ridge-and-lasso-regularization)
+- [Linear Regression and Least Squares](#linear-regression)
+- [Subset Selection](#subset-selection)
+- [Shrinkage Methods](#shrinkage-methods)
 
 
 ## Linear Regression
@@ -292,7 +293,264 @@ Linear regression model may suffer from following issues mainly:
 
 ---
 
-## Ridge and Lasso Regularization
+## Subset Selection
+
+
+1. What do you mean by subset selection and how it is useful in linear regression models?
+
+<details>
+  <summary><b>Answer</b></summary>
+
+  <p>This approach involves identifying a subset of the <code>p</code> predictors that we believe to be related to the response. We then fit a model on the reduced set of variables or predictors.</p>
+
+  <p>This is useful because it:</p>
+
+  <ol>
+    <li><b>Improves model interpretability</b>: Reduces complexity by using fewer predictors.</li>
+    <li><b>Enhances prediction accuracy</b>: Removes irrelevant or redundant predictors that may add noise.</li>
+    <li><b>Prevents overfitting</b>: Reduces the risk of the model fitting to the noise in the training data, leading to better generalization to new data.</li>
+  </ol>
+
+</details>
+
+
+---
+
+2. What are some methods for selecting a subset of predictors?
+
+<details><summary><b>Answer</b></summary>
+
+There are mainly two methods for subset selection:
+
+1. Best Subset Selection
+2. Stepwise Selection
+    - Forward Stepwise Selection
+    - Backward Stepwise Selection
+
+</details>
+
+---
+
+2. Explain Best Subset Selection method?
+
+<details><summary><b>Answer</b></summary>
+
+Suppose we have $p$ predictors, we then fit a separate model to each possible combinations of $p$ predictors. That is we fit all the $p$ models that contains exactly one predictor, all $\binom{p}{2}
+ = p(p-1)/2$ models that contains exactly two predictors and so on. We then look at the resulting models to identify the best one on the basis of objective metrics.
+
+Here is the stepwise algorithm:
+1. Let $M_0$ denote the null model, which contains no predictors. This model simply predicts the sample mean of each observations
+2. For $k = 1, 2,...,p$:
+    1. Fit all $\binom{p}{k}$ models that contains exactly $k$ predictors.
+    2. Pick the best among these $\binom{p}{k}$ models and call it $M_k$, on the basis of RSS or $R^2$ score.
+3. Select a single best model from among $M_0,....,M_p$ using cross validation prediction error like adjusted $R^2$ or $BIC$ etc.
+
+</details>
+
+---
+
+3. What is the drawback of selecting the best subset of features on the basis of Residual Square Error(RSS) or $R^2$ score in the above method?
+
+<details><summary><b>Answer</b></summary>
+
+As we induct more features in the model RSS monotonically decreases and $R^2$ increases monotonically. Therefore, if we use these statistics to select the best model, then we will always end up with the model involving all of the variables. The problem is that a low RSS or a high $R^2$ indicates low training error, whereas we want to have low test error.
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/RSS_R2_curve.png" alt="RSS and R2 vs Predictors"style="max-width:70%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Number of Predictors vs R2 and RSS</td>
+  </tr>
+</table>
+
+</details>
+
+---
+
+3. What are the limitations of Best Subset Selection method?
+
+
+<details><summary><b>Answer</b></summary>
+
+This method is simple and easy to understand but it suffers from the computational limitations. As we increase the number of predictors $p$, the number of possible models that we must consider increases exponentially. 
+
+In general, there are $2^p$ models that involve subsets of $p$ predictors. So if $p=10$ then there will be $2^10$ possible models and if $p=20$ then here will be over one million possibilities.
+
+</details>
+
+---
+3. Given a use case that necessitates building a predictive model with a large number of features/predictors, which feature selection method would be most appropriate?
+
+
+<details><summary><b>Answer</b></summary>
+
+Stepwise Selection
+
+</details>
+
+---
+
+3. Why Forward Stepwise Selection method is better than the Best Subset Selection?
+
+<details><summary><b>Answer</b></summary>
+
+Forward stepwise selection is a computationally efficient alternative to the best subset selection. While the best subset selection procedure considers all $2^p$ possible models containing subsets of $p$ predictors, forward stepwise consider a much smaller set of $1 + p(p+1)/2$ models 
+
+</details>
+
+---
+
+3. How does the forward stepwise selection method works?
+
+<details><summary><b>Answer</b></summary>
+
+Forward stepwise selection steps:
+
+1. Let $M_0$ denote the null model, which contains no predictors.
+2. For $k=0,...,p-1$
+    1. Consider all $p-k$ models that augment the predictors in $M_k$ with one additional predictor.
+    2. Choose the best among these $p-k$ models and call it $M_{k+1}$ on the basis $R^2$ or $RSS$ basis.
+3. Select a single best model from among $M_0,...,M_p$ using cross validate prediction error, $C_p$, $BIC$ and adjusted $R^2$.
+
+**Example:**
+
+Suppose you have a dataset with five predictors: $X_1, X_2, X_3, X_4$ and $X_5$, and a response variable $Y$. You want to build a linear regression model to predict $Y$.
+
+Steps:
+
+1. **Initialization**:
+   - Start with an empty model (no predictors).
+
+2. **Iteration**:
+
+   **Iteration 1**:
+   - Fit five simple linear regression models, each with one predictor:
+     - Model 1: $Y \sim X_1$
+     - Model 2: $Y \sim X_2$
+     - Model 3: $Y \sim X_3$
+     - Model 4: $Y \sim X_4$
+     - Model 5: $Y \sim X_5$
+   - Choose the model that has the best performance according to a criterion (e.g., lowest AIC). Suppose $X_3$ provides the best improvement.
+   - Add $X_3$ to the model.
+
+   **Iteration 2**:
+   - Fit four models, each adding one more predictor to the model with $X_3$:
+     - Model 1: $Y \sim X_3 + X_1$
+     - Model 2: $Y \sim X_3 + X_2$
+     - Model 3: $Y \sim X_3 + X_4$
+     - Model 4: $Y \sim X_3 + X_5$
+   - Choose the model that has the best performance. Suppose $X_2$ provides the best improvement.
+   - Add $X_2$ to the model.
+
+   **Iteration 3**:
+   - Fit three models, each adding one more predictor to the model with $X_3$ and $X_2$
+     - Model 1: $Y \sim X_3 + X_2 + X_1$
+     - Model 2: $Y \sim X_3 + X_2 + X_4$
+     - Model 3: $Y \sim X_3 + X_2 + X_5$
+   - Choose the model that has the best performance. Suppose $X_1$ provides the best improvement.
+   - Add $X_1$ to the model.
+
+3. **Stopping Criterion**:
+   - Stop adding predictors when the model improvement is no longer significant according to the chosen criterion.
+
+</details>
+
+3. What is the major issue with stepwise selection?
+
+<details><summary><b>Answer</b></summary>
+
+stepwise selection  methods like forward/backward stepwise methods are basically a greedy algorithm and hence can produce sub-optimal subset of features as the best combinations. It is not guaranteed to yield the best model containing a subset of the $p$ predictions.
+
+</details>
+
+---
+
+4. Imagine you have a dataset with $100$ observations $(n=100)$ and $1000$ predictors $(p=1000)$. Which feature selection method you can use?
+
+<details><summary><b>Answer</b></summary>
+
+For cases $p >> n$, Forward-stepwise subset selection method is only feasible and appropriate solution for feature selection.
+
+</details>
+
+---
+
+5. Explain Backward stepwise selection method?
+
+<details><summary><b>Answer</b></summary>
+
+Backward stepwise selection steps:
+
+1. Let $M_p$ denote the full model, which contains all the predictors.
+2. For $k=p,...,0$
+    1. Consider all $k$ models contain all but one of the predictors in $M_k$, for total of $k-1$ predictors.
+    2. Choose the best among these $k$ models and call it $M_{k-1}$ on the basis $R^2$ or $RSS$ basis.
+3. Select a single best model from among $M_0,...,M_p$ using cross validate prediction error, $C_p$, $BIC$ and adjusted $R^2$.
+
+</details>
+
+---
+5. One issue with Backward stepwise selection method?
+
+<details><summary><b>Answer</b></summary>
+
+It is not suitable for the cases having $p >> n$.
+
+</details>
+
+---
+5. Is it good idea to combine forward and backward stepwise subset selection technique as a single method?
+
+<details><summary><b>Answer</b></summary>
+
+Yeah we can adopt a hybrid approach where we can add predictors sequentially as like we do in forward selection. However after adding any predictors we can also remove any predictor which is not adding any improvement in the model fit. It mimics the best subset selection while retaining the computational advantages of forward and backward stepwise selection.
+
+</details>
+
+
+
+
+---
+
+## Shrinkage Methods
+
+5. What is shrinkage methods?
+
+<details><summary><b>Answer</b></summary>
+
+
+Shrinkage methods are statistical techniques used to improve the accuracy and interpretability of regression models, especially when dealing with high-dimensional data. These methods work by introducing a penalty on the size of the regression coefficients, effectively *shrinking* them towards zero. This can help to reduce overfitting and improve the generalizability of the model.
+
+</details>
+
+---
+
+5. What are the benefits of using shrinkage methods over subset selection methods?
+
+<details><summary><b>Answer</b></summary>
+
+Subset selection method produces a model that is interpretable and has possibly less prediction error than the full model. However because it is a discrete process variables are either retained or discarded so it does not reduce the prediction error of the full model. Shrinkage methods are more continuous and don't suffer much from high variability. Also in shrinkage method we can fit model with all $p$ predictors.
+
+</details>
+
+---
+
+
+
+5. Name some shrinkage methods?
+
+<details><summary><b>Answer</b></summary>
+
+- Ridge Regression(L2 Regularization)
+- Lasso Regression(L1 Regularization)
+- Elastic Net 
+
+</details>
+
+---
 
 12. What's the main purpose of L1 and L2 regularization in linear regression?
 
@@ -307,13 +565,40 @@ Ordinary least square method suffers from the following issues:
 
 L1(Lasso) and L2(Ridge) regularization techniques help in addressing the above shortcomings of ols method. They can shrink the regression coefficient to zero or nearly zero and hence can help feature selection. Effectively they addresses the overfitting issue in ols by reducing the variance of the model.
 
+</details>
+
 ---
+
+12. How do we estimate coefficients in Ridge regression?
+
+<details><summary><b>Answer</b></summary>
+
+The ridge regression coefficients estimates $\hat{\beta}^{R}$ are values that minimizes:
+
+$$\sum_{i=1}^n(y_i - \beta_0 - \sum_{j=1}^p\beta_jx_{ij})^2 + \lambda\sum_{j=1}^p\beta_{j}^2$$
+
+$$ = RSS + \lambda\sum_{j=1}^p\beta_{j}^2$$
+
+where $\lambda >= 0$ is a tuning parameter, to be determined separately. The above equation tradeoff two criteria. As with least square error(RSS), ridge regression seeks coefficients estimates that fit the data well, by making the RSS smaller. The second term $\lambda\sum_{j=1}^p\beta_{j}^2$ , called a shrinkage penalty is small when $\beta_1,...,\beta_p$ are close to zero, so it has the effect of shrinking the estimates of $\beta_j$ towards zero.
 
 </details>
 
 ---
 
-12. Suppose you fit a ordinary linear regression model over your data and you find it is under-fitting. Is it good idea to use Ridge ot Lasso regression here?
+12. Explain the effect of tuning parameter $\lambda$ in ridge regression cost function?
+
+<details><summary><b>Answer</b></summary>
+
+It essentially balances the trade-off between fitting the data well (minimizing RSS) and keeping the model coefficients small (minimizing the penalty term). 
+
+When $\lambda = 0$, the penalty term has no effect, and ridge regression will produce the least squares estimates. However, as $\lambda -> \inf$, the impact of shrinkage penalty grows, and the ridge regression coefficient estimates will approach zero.
+
+
+</details>
+
+---
+
+12. Suppose you fit a ordinary linear regression model over your data and you find it is under-fitting. Is it good idea to use Ridge or Lasso regression here?
 
 <details><summary><b>Answer</b></summary>
 
@@ -377,7 +662,7 @@ Cross validation can be used to tune the *alpha*.
 
 ---
 
-18. What are the consequences of multicollinearity?
+18. What are the consequences of multi-collinearity?
 
 <details><summary><b>Answer</b></summary>
 
@@ -400,7 +685,7 @@ A simple way to detect collinearity is to look at the correlation matrix of the 
 
 ---
 
-19. How can you detect multicollinearity in a regression model?
+19. How can you detect multi-collinearity in a regression model?
 
 <details><summary><b>Answer</b></summary>
 
@@ -419,7 +704,7 @@ The smallest possible value of VIF is 1, which indicates complete absence of col
 ---
 
 
-20. How can you address multicollinearity?
+20. How can you address multi-collinearity?
 
 <details><summary><b>Answer</b></summary>
 

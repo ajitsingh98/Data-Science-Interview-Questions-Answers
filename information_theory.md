@@ -547,7 +547,6 @@ is always greater or equal to zero.
     
 </details>
 
-
 ---
 
 6. Jensen’s inequality forms the basis for many algorithms for probabilistic inference, including expectation maximization and variational inference. Explain what Jensen’s inequality is.
