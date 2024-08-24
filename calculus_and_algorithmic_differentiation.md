@@ -29,7 +29,7 @@ Contents
 - Forward mode AD table construction
 - Symbolic differentiation
 - Simple differentiation 
-- TheBeta-Binomial model
+- The Beta-Binomial model
 
 
 ### AD, Gradient descent and Backpropagation

@@ -598,6 +598,16 @@ When $\lambda = 0$, the penalty term has no effect, and ridge regression will pr
 
 ---
 
+12. How can we determine optimal value of $\lambda$ ?
+
+<details><summary><b>Answer</b></summary>
+
+Using cross validation technique
+
+</details>
+
+---
+
 12. Suppose you fit a ordinary linear regression model over your data and you find it is under-fitting. Is it good idea to use Ridge or Lasso regression here?
 
 <details><summary><b>Answer</b></summary>
@@ -618,7 +628,91 @@ L1 or L2 regularization are shrinkage methods which helps in reducing the coeffi
 
 ---
 
-14. What are the hyperparameters associated with L1 and L2 regularization?
+13. Can we use ridge regression for variable selection purpose?
+
+<details><summary><b>Answer</b></summary>
+
+No we can't use it as feature selection technique. The penalty term $\lambda \sum\beta_j^{2}$ in ridge regression will shrink all the coefficients towards zero, but will not set any of them exactly zero (unless $\lambda = \infin$).
+
+</details>
+
+---
+
+13. Write the loss function involve in lasso regression?
+
+<details><summary><b>Answer</b></summary>
+
+The loss function expression in lasso regression:
+
+$$\sum_{i=1}^n(y_i - \beta_0 - \sum_{j=1}^p\beta_jx_{ij})^2 + \lambda\sum_{j=1}^p|{\beta_{j}}|$$
+
+$$ = RSS + \lambda\sum_{j=1}^p|\beta_{j}|$$
+
+</details>
+
+---
+
+13. Which regression technique leads to sparse models? Lasso or ridge regression?
+
+<details><summary><b>Answer</b></summary>
+
+Lasso regression method
+
+</details>
+
+---
+
+13. Why is it that the lasso, unlike ridge regression, results in coefficient estimates that are exactly equal to zero?
+
+<details><summary><b>Answer</b></summary>
+
+The loss function involve in lasso and ridge regression can be re-written as follows:
+
+**Lasso loss function:**
+
+$$minimize_\beta\{{\sum_{i=1}^{n}(y_i - \beta_0 - \sum_{j=1}^{p}\beta_{j}x_{ij})^2}\}$$
+subjected to $$\sum_{j=1}^{p}|\beta_{j}| \leq s$$
+
+**Ridge loss function:**
+
+$$minimize_\beta\{{\sum_{i=1}^{n}(y_i - \beta_0 - \sum_{j=1}^{p}\beta_{j}x_{ij})^2}\}$$
+subjected to $$\sum_{j=1}^{p}\beta_{j}^2 \leq s$$
+
+For $p=2$, we can plot the error and constraints functions for the lasso and ridge regression as follows:
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/lasso_ridge_loss_plot.png" alt="Ridge and Lasso regression loss function"style="max-width:70%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Contours of the error and constraint functions for the lasso(left) and ridge regression(right). The solid blue areas are the constraint regions, $|β1| + |β2| ≤ s and β1 + β2 ≤ s, while the red ellipses are the contours of the RSS</td>
+  </tr>
+</table>
+
+The ellipse that are centered around $\hat{\beta}$ represent regions of constant RSS. In other words, all of the points on a given ellipse share a common value of RSS. As the ellipse expand away from least squares coefficient estimates, the RSS increases. The above equations indicate that the lasso and ridge regression coefficients estimates are given by the first point at which an ellipse contacts the constraint region. 
+
+Since ridge regression has a circular constraint with no sharp points, this intersection will not generally occur on an axis, and so the ridge regression coefficient estimate will be exclusively non-zero. However, the lasso constraint has corners at each of the axes, and so the ellipse will often intersect the constraint region at an axis. When this occurs, one of the coefficients will equal to zero.
+
+</details>
+
+---
+
+14. List some advantages of using lasso regression over ridge regression?
+
+<details><summary><b>Answer</b></summary>
+
+- It produces simpler and more interpretable model
+- Can perform feature selection 
+
+
+</details>
+
+---
+
+
+14. What are the hyper-parameters associated with L1 and L2 regularization?
 
 <details><summary><b>Answer</b></summary>
 
@@ -726,4 +820,4 @@ Yeah, It may occur when one predictor variable in a regression model is an exact
 
 </details>
 
---
+---

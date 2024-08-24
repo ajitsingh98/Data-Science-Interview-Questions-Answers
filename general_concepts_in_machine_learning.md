@@ -14,8 +14,8 @@ Contents
 - [Cross Validation](#cross-validation)
 - [Similarity Measures](#Similarity-Measures)
 - [Sampling Techniques and Creating Training Data](#sampling-techniques-and-creating-training-data)
-- [Objective Functions and Performance Metrices](#objective-functions-and-performance-metrices)
-- [Faeture Engineering](#feature-engineering)
+- [Objective Functions and Performance Matrices](#objective-functions-and-performance-matrices)
+- [Feature Engineering](#feature-engineering)
 - [Bias and Variance](#bias-and-variance)
 
 ### Basics
@@ -24,6 +24,28 @@ Contents
 
 <details><summary><b>Answer</b></summary>
     
+
+*Supervised Learning*
+
+It uses labeled data to train a model. The model learns to predict outputs from inputs based on examples with known outcomes. Common tasks include classification and regression.
+
+*Unsupervised Learning*
+
+It works with unlabeled data to find hidden patterns or structures. It identifies clusters or relationships within the data without predefined labels. Examples include clustering and dimensionality reduction.
+
+*Weakly Supervised Learning*
+
+It uses data with noisy, incomplete, or inaccurate labels. The model is trained on this imperfect data to make predictions, often incorporating techniques to handle label uncertainty.
+
+*Semi-Supervised Learning*
+
+It combines a small amount of labeled data with a large amount of unlabeled data. The model leverages the labeled examples to better understand the structure of the unlabeled data and improve learning performance.
+
+*Active Learning*
+
+It involves an iterative process where the model actively selects the most informative examples to be labeled by an oracle (e.g., a human expert). This helps improve model performance efficiently by focusing on challenging or uncertain examples.
+
+
 </details>
 
 ---
@@ -42,14 +64,6 @@ Contents
 ---
 
 3. Occam's razor states that when the simple explanation and complex explanation both work equally well, the simple explanation is usually correct. How do we apply this principle in ML?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-4. What are the conditions that allowed deep learning to gain popularity in the last decade?
 
 <details><summary><b>Answer</b></summary>
     
@@ -81,10 +95,10 @@ Contents
 
 ---
 
-8. Hyperparameters.
-    1. What are the differences between parameters and hyperparameters?
+8. Hyper-parameters.
+    1. What are the differences between parameters and hyper-parameters?
     1. Why is hyperparameter tuning important?
-    1. Explain algorithm for tuning hyperparameters.
+    1. Explain algorithm for tuning hyper-parameters.
 
 
 <details><summary><b>Answer</b></summary>
