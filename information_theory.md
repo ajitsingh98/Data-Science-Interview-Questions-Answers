@@ -48,9 +48,11 @@ print (numpy.log2(1.0/0.02)) # Binary log (base 2)
 
 2. The three basic laws of logarithms:
     1. First law
+
     $$ \log A + \log B = \log AB $$
 
     Compute the following expression:
+
     $$
     \log_{10}3 + \log_{10}4
     $$
@@ -60,19 +62,24 @@ print (numpy.log2(1.0/0.02)) # Binary log (base 2)
     $$
     \log A^n = n\log A
     $$
+
     Compute the following expression:
+
     $$
     \log_24^6
     $$
 
 
     3. Third law
+
     $$
     \log A − \log B = \log \frac{A}{B} . 
     $$
+
     Therefore, subtracting $\log B$ from  in $\log A$ in $\log \frac{A}{B}$ .
 
     Compute the following expression:
+
     $$
     \log_e15 - \log_e3
     $$
@@ -193,9 +200,10 @@ Mark the correct answer: Information is a/an `[decrease/increase]` in uncertaint
 
 11. Given Shannon's famous general formulae for uncertainty:
 
-$$
-H = -\sum_{a=1}^NP_a\log_2P_a \\(bits per symbol)
-$$
+    $$
+    H = -\sum_{a=1}^NP_a\log_2P_a \\(bits per symbol)
+    $$
+
     1. Plot a graph of the curve of probability vs. uncertainty.
   
     2. Complete the sentence: The curve is [symmetrical/asymmetrical].
@@ -211,15 +219,15 @@ $$
 
 12. Assume we are provided with biased coin for which the event ‘heads’ is assigned probability $p$, and ‘tails’ - a probability of $1 − p$. 
 
-the respective entropy is:
+    the respective entropy is:
 
-$$
-H(p) = −p\log p − (1 − p)\log (1 − p)
-$$
+    $$
+    H(p) = −p\log p − (1 − p)\log (1 − p)
+    $$
 
-Therefore, $H ≥ 0$ and the maximum possible uncertainty is attained when $p = 1/2$, is $H_max = \log_22$.
+    Therefore, $H ≥ 0$ and the maximum possible uncertainty is attained when $p = 1/2$, is $H_max = \log_22$.
 
-Given the above formulation, describe a helpful property of the entropy that follows from the concavity of the logarithmic function.
+    Given the above formulation, describe a helpful property of the entropy that follows from the concavity of the logarithmic function.
 
 <details><summary><b>Answer</b></summary>
     
@@ -337,6 +345,7 @@ density functions P and Q.
 </table>
 
 The binary response variable Jump indicates whether a jump was observed. Referring to Table (4.1), each row indicates the observed values, columns denote features and rows denote labelled instances while class label (Jump) denotes whether the frog had jumped.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -358,33 +367,34 @@ Without explicitly determining the information gain values for each of the three
 ---
 
 22. This question discusses the link between binary classification, information gain and decision trees. Recent research suggests that Cannabis (Fig. 4.5), and Cannabinoids administration in particular may reduce the size of malignant tumours in rodents. The data (Table 9.2) comprises a training set of feature vectors with corresponding class labels which a researcher intents classifying using a decision tree.
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/it-3.png" alt= "Cannabis" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center">Cannabis </td>
-</tr>
-</table>
+    <table align='center'>
+    <tr>
+    <td align="center">
+        <img src="img/it-3.png" alt= "Cannabis" style="max-width:70%;" />
+    </td>
+    </tr>
+    <tr>
+    <td align="center">Cannabis </td>
+    </tr>
+    </table>
 
-To study factors affecting tumour shrinkage, the deep learning researcher collects data regrading two independent binary variables; $θ1(T/F)$ indicating whether the rodent is a female, and $θ2(T/F)$ indicating whether the rodent was administrated with Cannabinoids. The binary response variable, $γ$, indicates whether tumour shrinkage was observed (e.g. shrinkage=+, no shrinkage=-). Referring to Table (9.2), each row indicates the observed values, columns $(θi)$ denote features and class label $(γ)$ denotes whether shrinkage was observed.
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/it-4.png" alt= "Decision trees and Cannabinoids administration" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center">Decision trees and Cannabinoids administration </td>
-</tr>
-</table>
+    To study factors affecting tumour shrinkage, the deep learning researcher collects data regrading two independent binary variables; $θ1(T/F)$ indicating whether the rodent is a female, and $θ2(T/F)$ indicating whether the rodent was administrated with Cannabinoids. The binary response variable, $γ$, indicates whether tumour shrinkage was observed (e.g. shrinkage=+, no shrinkage=-). Referring to Table (9.2), each row indicates the observed values, columns $(θi)$ denote features and class label $(γ)$ denotes whether shrinkage was observed.
 
-1. Describe what is meant by information gain.
-2. Describe in your own words how does a decision tree work.
-3. Using $\log_2$, and the provided dataset, calculate the sample entropy $H(γ)$.
-4. What is the information gain $IG(X_1) ≡ H(γ) − H(|θ_1)$ for the provided training corpus?
+    <table align='center'>
+    <tr>
+    <td align="center">
+        <img src="img/it-4.png" alt= "Decision trees and Cannabinoids administration" style="max-width:70%;" />
+    </td>
+    </tr>
+    <tr>
+    <td align="center">Decision trees and Cannabinoids administration </td>
+    </tr>
+    </table>
+
+    1. Describe what is meant by information gain.
+    2. Describe in your own words how does a decision tree work.
+    3. Using $\log_2$, and the provided dataset, calculate the sample entropy $H(γ)$.
+    4. What is the information gain $IG(X_1) ≡ H(γ) − H(|θ_1)$ for the provided training corpus?
 
 <details><summary><b>Answer</b></summary>
     
@@ -395,21 +405,23 @@ To study factors affecting tumour shrinkage, the deep learning researcher collec
 
 23. To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$ indicating whether a star is dense, and $θ2 (T/F)$ indicating whether a star is adjacent to a black-hole. He is told that the binary response variable, $γ$, indicates whether expansion was observed.
 e.g.:
-$expansion=+$, no expansion=-$. Referring to table (4.3), each row indicates the observed values, columns $(θi)$ denote features and class label $(γ)$ denotes whether expansion was observed.
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/it-5.png" alt= "Decision trees and star expansion" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center">Decision trees and star expansion</td>
-</tr>
-</table>
+$\text{expansion}=+, \text{no expansion}=-$
 
-1. Using $\log_2$ and the provided dataset, calculate the sample entropy $H(γ)$ (expansion) before splitting.
-2. Using $\log_2$ and the provided dataset, calculate the information gain of $H(γ|θ1)$.
-3. Using $log_2$ and the provided dataset, calculate the information gain of $H(γ|θ2)$.
+     Referring to table (4.3), each row indicates the observed values, columns $(θi)$ denote features and class label $(γ)$ denotes whether expansion was observed.
+    <table align='center'>
+    <tr>
+    <td align="center">
+        <img src="img/it-5.png" alt= "Decision trees and star expansion" style="max-width:70%;" />
+    </td>
+    </tr>
+    <tr>
+    <td align="center">Decision trees and star expansion</td>
+    </tr>
+    </table>
+
+    1. Using $\log_2$ and the provided dataset, calculate the sample entropy $H(γ)$ (expansion) before splitting.
+    2. Using $\log_2$ and the provided dataset, calculate the information gain of $H(γ|θ1)$.
+    3. Using $log_2$ and the provided dataset, calculate the information gain of $H(γ|θ2)$.
 
 <details><summary><b>Answer</b></summary>
     
@@ -420,22 +432,22 @@ $expansion=+$, no expansion=-$. Referring to table (4.3), each row indicates the
 
 24.  To study factors affecting tumour shrinkage in humans, a deep learning researcher is provided with data regrading two independent variables; $θ1(S/M/L)$ indicating whether the tumour is small(S), medium(M) or large(L), and $θ2(T/F)$ indicating whether the tumour has undergone radiation therapy. He is told that the binary response variable, $γ$, indicates whether tumour shrinkage was observed $(e.g. shrinkage=+, no shrinkage=-)$.
 
-Referring to table (4.4), each row indicates the observed values, columns $(θ_i)$ denote features and class label $(γ)$ denotes whether shrinkage was observed.
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/it-6.png" alt= "Decision trees and radiation therapy" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center">Decision trees and radiation therapy</td>
-</tr>
-</table>
+    Referring to table (4.4), each row indicates the observed values, columns $(θ_i)$ denote features and class label $(γ)$ denotes whether shrinkage was observed.
+    <table align='center'>
+    <tr>
+    <td align="center">
+        <img src="img/it-6.png" alt= "Decision trees and radiation therapy" style="max-width:70%;" />
+    </td>
+    </tr>
+    <tr>
+    <td align="center">Decision trees and radiation therapy</td>
+    </tr>
+    </table>
 
-1. Using $\log_2$ and the provided dataset, calculate the sample entropy $H(γ)$ (shrinkage). 
-2. Using $\log_2$ and the provided dataset, calculate the entropy of $H(γ|θ1)$.
-3. Using $\log_2$ and the provided dataset, calculate the entropy of $H(γ|θ2)$.
-4. **True or false**: We should split on a specific variable that minimizes the information gain, therefore we should split on $θ_2$ (radiation therapy).
+    1. Using $\log_2$ and the provided dataset, calculate the sample entropy $H(γ)$ (shrinkage). 
+    2. Using $\log_2$ and the provided dataset, calculate the entropy of $H(γ|θ1)$.
+    3. Using $\log_2$ and the provided dataset, calculate the entropy of $H(γ|θ2)$.
+    4. **True or false**: We should split on a specific variable that minimizes the information gain, therefore we should split on $θ_2$ (radiation therapy).
 
 <details><summary><b>Answer</b></summary>
     
@@ -445,22 +457,22 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 ---
 
 25. Shannon described a communications system consisting five elements (4.6), two of which are the source S and the destination D.
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/it-7.png" alt= "Shannon's five element communications system" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center">Shannon's five element communications system</td>
-</tr>
-</table>
+    <table align='center'>
+    <tr>
+    <td align="center">
+        <img src="img/it-7.png" alt= "Shannon's five element communications system" style="max-width:70%;" />
+    </td>
+    </tr>
+    <tr>
+    <td align="center">Shannon's five element communications system</td>
+    </tr>
+    </table>
 
-1. Draw a Venn diagram depicting the relationship between the entropies of the source H(S) and of the destination H(D).
-2. Annotate the part termed equivocation.
-3. Annotate the part termed noise.
-4. Annotate the part termed mutual information.
-5. Write the formulae for mutual information.
+    1. Draw a Venn diagram depicting the relationship between the entropies of the source H(S) and of the destination H(D).
+    2. Annotate the part termed equivocation.
+    3. Annotate the part termed noise.
+    4. Annotate the part termed mutual information.
+    5. Write the formulae for mutual information.
 
 <details><summary><b>Answer</b></summary>
     
@@ -479,9 +491,11 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 ---
 
 27. Complete the sentence: Mutual information is a Shannon entropy-based measure of dependence between random variables. The mutual information between X and Z can be understood as the (a) [...] of the (b) [...] in X given Z:
+
 $$
 I(X; Z) := H(X) − H(X | Z)
 $$
+
 where H is the Shannon entropy, and $H (X | Z )$ is the conditional entropy of $Z$ given $X$.
 
 <details><summary><b>Answer</b></summary>

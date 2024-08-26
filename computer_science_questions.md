@@ -228,20 +228,21 @@
 
 
 12. Given the following code snippet. What might be a problem with it? How would you improve it?
-```
-def within_radius(a, b, radius):
-    if np.linalg.norm(a - b) < radius:
-        return 1
-    return 0
 
-def make_mask(volume, roi, radius):
-    mask = np.zeros(volume.shape)
-    for x in range(volume.shape[0]):
-        for y in range(volume.shape[1]):
-            for z in range(volume.shape[2]):
-                mask[x, y, z] = within_radius((x, y, z), roi, radius)
-    return mask
-```
+    ```
+    def within_radius(a, b, radius):
+        if np.linalg.norm(a - b) < radius:
+            return 1
+        return 0
+
+    def make_mask(volume, roi, radius):
+        mask = np.zeros(volume.shape)
+        for x in range(volume.shape[0]):
+            for y in range(volume.shape[1]):
+                for z in range(volume.shape[2]):
+                    mask[x, y, z] = within_radius((x, y, z), roi, radius)
+        return mask
+    ```
 
 <details><summary><b>Answer</b></summary>
     

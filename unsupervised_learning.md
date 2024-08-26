@@ -238,7 +238,9 @@ We can calculate it using following expressions:
 1. Find average inter-cluster distance:
 
     - For a given data point $i$, compute the average distance of all other points within the same cluster.
+
     $$a(i) = \frac{1}{|C_i| - 1}\sum_{j\epsilon C,j!=i}d(i, j)$$
+
     where, $C_i$ is the cluster to which point $i$ belongs, and $d(i, j)$ is the distance between $i$ and $j$.
 
 2. Find average nearest cluster distance 
@@ -251,7 +253,9 @@ We can calculate it using following expressions:
 3. Compute Silhouette score for each data point
 
     - Calculate the Silhouette score for each data point $i$ using values of $a(i)$ and $b(i)$
+
     $$s(i) = \frac{b(i) - a(i)}{max(a(i),b(i))}$$
+
     - Note the score ranges from -1 to 1
         
         - $-1$ means data point is misclassified 
@@ -260,8 +264,10 @@ We can calculate it using following expressions:
 
 4. Calculate average Silhouette score
 
-    - Calculate average silhouette score across all data points to get measure of overall cluster quality 
+    - Calculate average silhouette score across all data points to get measure of overall cluster quality
+
     $$ \text{Average Silhouette Score} = \frac{1}{n} \sum_{i=1}^{n}s(i)$$
+    
     where $n$ is the number of data points.
 
 

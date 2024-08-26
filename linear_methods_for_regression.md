@@ -37,6 +37,7 @@ It uses **least squares** as a estimation method to calculate the values of coef
 <details><summary><b>Answer</b></summary>
 
 Suppose we have a set of training data $(x_1, y_1),...,(x_n, y_n)$ from which we need to estimate the parameters $\beta$. Linear regression uses least squares estimation method to get values of the parameters. We pick the coefficients $\beta = (\beta_{0}, \beta_{1},....,\beta_{p}^{T})$ to minimize the residual sum of squares(RSS):
+
 $$RSS(\beta) = \sum_{i=1}^{N}(y_{i} - f(x_{i}))^2 = \sum_{i=1}^{N}(y_{i} - \beta_{0} - \sum_{j=1}^{p}x_{ij}\beta_{j})^2$$
 
 Alternatively we can rewrite the above equations as:
@@ -82,7 +83,9 @@ In following cases in may happen:
 Yes model is still linear in nature. This is polynomial representation of a linear model.
 
 We can write the given form in its linear mode:
+
 $$f(X) = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2}....$$
+
 Where $X_{2} = X_{1}^{2}$
 
 No matter the source of the $X$, the model is linear in its parameter.
@@ -141,6 +144,7 @@ The key difference between simple linear regression and multiple linear regressi
 The RSE is an estimate of the standard deviation of residuals($\epsilon$). It is the average amount by which the response will deviate from the true regression line.
 
 It is computed using the formula:
+
 $$RSE = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}{y_i - \hat{y}_i}}$$
 
 It is considered as the lack of the fit of the data. Lower values indicates model fits the data very well.
@@ -159,11 +163,15 @@ $R^2$ statistic provides goodness of fit and it is a unit less quantity so its b
 It takes the form of a proportion *proportion of the variance explained* it always takes values between 0 and 1 and it is not dependent on the scale of $Y$. 
 
 To calculate the $R^2$, we have following expressions:
+
 $$R^2 = \frac{TSS - RSS}{TSS} = 1 - frac{RSS}{TSS}$$
 
 Here, 
+
 $$TSS(Total Sum of Squares) = \sum{(y_i - \hat{y})^2}$$
+
 And,
+
 $$RSS(Residual Sum of Squares) = \sum{(y_i - \cap{y})^2}$$
 
 Statistically, it measures the proportion of variability in $Y$ that can be explained using $X$. 
@@ -187,6 +195,7 @@ A number near 0 indicates the regression does not explain the variability in the
 <details><summary><b>Answer</b></summary>
 
 Suppose we have a model of form:
+
 $$Y = \beta_0 + \beta_{1}X_1 + \beta_{2}X_2 + \epsilon$$
 
 Here's how to interpret them:
@@ -244,14 +253,19 @@ For example null hypothesis:
 $$H_0 = \beta_1 = \beta_2 = ... = \beta_p = 0$$
 
 alternate hypothesis:
+
 $$H_a = at least one \beta_j is non-zero$$
 
 here hypothesis test is performed by computing the F-statistic, 
+
 $$F = \frac{(TSS - RSS)/p}{(RSS/(n-p-1))}$$
 
 If the linear model assumptions are true:
+
 $$E{(TSS-RSS)/p} = \sigma^2$$
+
 and provided $H_0$ is true,
+
 $$E{(TSS-RSS)/p} = \sigma^2$$
 
 So, when there is no relationship between predictors and the response then F-statistic is near to 1 and if $H_a$ is true the  F-statistic will be greater than 1.

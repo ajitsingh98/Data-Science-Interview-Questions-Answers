@@ -93,9 +93,9 @@ $f(x)$ at $a$.
   </tr>
 </table>
     
-(a) Traverse the graph 5.3 and find the function g(x) it represents. 
+ - (a) Traverse the graph 5.3 and find the function g(x) it represents. 
 
-(b) Using the definition of the derivative, find g′(9).
+- (b) Using the definition of the derivative, find g′(9).
 
 <details><summary><b>Answer</b></summary>
     
@@ -104,6 +104,7 @@ $f(x)$ at $a$.
 ---
 
 4. 1. With respect to the expression graph depicted in 5.4, traverse the graph and find the function g(x) it represents.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -240,7 +241,7 @@ $$
 g(x, y) = xy^2 − y − 1
 $$
 
-evaluate it at (−1, 0), directed at (1, 1).
+evaluate it at $(−1, 0)$, directed at $(1, 1)$.
 
 <details><summary><b>Answer</b></summary>
     
@@ -309,22 +310,22 @@ and find maximum, minimum, and saddle points.
 
 19. The gradient descent algorithm can be utilized for the minimization of convex functions.
 Stationary points are required in order to minimize a convex function. A very simple approach for finding stationary points is to start at an arbitrary point, and move along the gradient at that point towards the next point, and repeat until converging to a stationary point.
-1. What is the term used to describe the vector of all partial derivatives for a function $f(x)$?
-2. Complete the sentence: when searching for a minima, if the derivative is positive, the function is **increasing/decreasing.**
-3. The function $x^2$ as depicted in 5.5, has a derivative of $f′(x) = 2x$. Evaluated at $x = −1$, the derivative equals $f′(x = −1) = −2$. $At x = −1$, the function is decreasing as $x$ gets larger. We will happen if we wish to find a minima using gradient descent, and increase (decrease) $x$ by the size of the gradient, and then again repeatedly keep jumping?
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/gradient-1.png" alt= "x-squared Function" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> x-squared Function </td>
-</tr>
-</table>
+    1. What is the term used to describe the vector of all partial derivatives for a function $f(x)$?
+    2. Complete the sentence: when searching for a minima, if the derivative is positive, the function is **increasing/decreasing.**
+    3. The function $x^2$ as depicted in 5.5, has a derivative of $f′(x) = 2x$. Evaluated at $x = −1$, the derivative equals $f′(x = −1) = −2$. $At x = −1$, the function is decreasing as $x$ gets larger. We will happen if we wish to find a minima using gradient descent, and increase (decrease) $x$ by the size of the gradient, and then again repeatedly keep jumping?
+    <table align='center'>
+    <tr>
+    <td align="center">
+        <img src="img/gradient-1.png" alt= "x-squared Function" style="max-width:70%;" />
+    </td>
+    </tr>
+    <tr>
+    <td align="center"> x-squared Function </td>
+    </tr>
+    </table>
 
-4. How this phenomena can be alleviated?
-5. **True or False**: The gradient descent algorithm is guaranteed to find a local minimum if the learning rate is correctly decreased and a finite local minimum exists.
+    4. How this phenomena can be alleviated?
+    5. **True or False**: The gradient descent algorithm is guaranteed to find a local minimum if the learning rate is correctly decreased and a finite local minimum exists.
 
 <details><summary><b>Answer</b></summary>
     
@@ -363,7 +364,7 @@ Stationary points are required in order to minimize a convex function. A very si
   </table>
 
 2. What is loss function for linear regression?
-3. What is the gradient descent algorithm to minimize a function $f (x)$?
+3. What is the gradient descent algorithm to minimize a function $f(x)$?
 
 <details><summary><b>Answer</b></summary>
     
@@ -388,14 +389,19 @@ Stationary points are required in order to minimize a convex function. A very si
 ---
 
 3. Given a logistic discriminant classifier:
-$
-p(y=1|x)=σ(w^Tx)
-$
-where the sigmoid function is given by:
-$
-σ(z)=(1+exp(−z))^{−1}
-$
-The logistic loss for a training sample $x_i$  with class label $y_i$  is given by $L(yi,xi;w)=−logp(y_i|x_i)$
+
+    $$
+    p(y=1|x)=σ(w^Tx)
+    $$
+
+    where the sigmoid function is given by:
+
+    $$
+    σ(z)=(1+exp(−z))^{−1}
+    $$
+
+    The logistic loss for a training sample $x_i$  with class label $y_i$  is given by $L(yi,xi;w)=−logp(y_i|x_i)$
+
     1. Show that  $p(y=−1|x)=σ(−w^Tx)$.
     1. Show that  $Δ_wL(y_i,x_i;w)=−y_i(1−p(y_i|x_i))x_i$.
     1. Show that  $Δ_wL(y_i,x_i;w)$  is convex.
@@ -419,23 +425,24 @@ The logistic loss for a training sample $x_i$  with class label $y_i$  is given 
 
 21. 1. During the training of an ANN, a sigmoid layer applies the sigmoid function to every element in the forward pass, while in the backward pass the chain rule is being utilized as part of the backpropagation algorithm. With respect to the backpropagation algorithm, given a sigmoid $σ(x) = \frac{e^x}{1+e^x}$ activation function, and a J as the cost function, annotate each part of equation (5.21):
 
-$$
-dZ = \frac{dJ}{dσ(x)}\frac{dσ(x)}{dx} = dA·σ(x).(1−σ(x))
-$$
+    $$
+    dZ = \frac{dJ}{dσ(x)}\frac{dσ(x)}{dx} = dA·σ(x).(1−σ(x))
+    $$
+
     2. Code snippet 5.6 provides a pure Python-based (e.g. not using Autograd) implementation of the forward pass for the sigmoid function. Complete the backward pass that directly computes the analytical gradients.
 
 
-    ```python
-    class Sigmoid:
-    def forward(self,x):
-        self.x = x
-        return 1/(1+np.exp(-x)) 
+        ```python
+        class Sigmoid:
+            def forward(self,x):
+                self.x = x
+                return 1/(1+np.exp(-x)) 
 
-    def backward(self, grad):
-        grad_input = [???] 
-        return grad_input
+            def backward(self, grad):
+                grad_input = [???] 
+                return grad_input
 
-    ```
+        ```
 
 <details><summary><b>Answer</b></summary>
     
@@ -461,22 +468,22 @@ $$
 ---
 
 24. Your friend, a veteran of the DL community wants to use logistic regression and implement custom activation functions using Autograd. Logistic regression is used when the variable y that we want to predict can only take on discrete values (i.e. classification). Cossidering a binary classification problem (y = 0 or y = 1), the hypothesis function could be defined so that it is bounded between [0, 1] in which we use some form of logistic function, such as the sigmoid function. Other, more efficient functions exist such as the ReLU (Rectified Linear Unit) which we discussed later. Note: The weights in (5.8) are only meant for illustration purposes and are not part of the solution.
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/gradient-2.png" alt= "A typical binary classification problem" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> A typical binary classification problem </td>
-</tr>
-</table>
+    <table align='center'>
+    <tr>
+    <td align="center">
+        <img src="img/gradient-2.png" alt= "A typical binary classification problem" style="max-width:70%;" />
+    </td>
+    </tr>
+    <tr>
+    <td align="center"> A typical binary classification problem </td>
+    </tr>
+    </table>
 
-1. Given the sigmoid function : $g(x)= \frac{1}{1 + e^{-z}} $ what is the expression for the corresponding hypothesis in logistic regression?
-2. What is the decision boundary?
-3. What does $h_Θ(x) = 0.8$ mean?
-4. Using an Auto grad based Python program,implement both the forward and backward pass for the sigmoid activation function and evaluate it’s derivative at x = 1.
-5. Using an Autograd based Python program,implement both the forward and backward pass for the ReLU activation function and evaluate it’s derivative at x = 1
+    1. Given the sigmoid function : $g(x)= \frac{1}{1 + e^{-z}} $ what is the expression for the corresponding hypothesis in logistic regression?
+    2. What is the decision boundary?
+    3. What does $h_Θ(x) = 0.8$ mean?
+    4. Using an Auto grad based Python program,implement both the forward and backward pass for the sigmoid activation function and evaluate it’s derivative at x = 1.
+    5. Using an Autograd based Python program,implement both the forward and backward pass for the ReLU activation function and evaluate it’s derivative at x = 1
 
 <details><summary><b>Answer</b></summary>
     
@@ -485,20 +492,24 @@ $$
 ---
 
 25. For real values, $−1 < x < 1$ the hyperbolic tangent function is defined as:
-$$
-\tanh^{-1}(x) = \frac{1}{2}[\ln(1+x) - ln(1-x)]
 
-$$
-On the other hand, the $artanh$ function, which returns the inverse hyperbolic tangent of its argument x, is implemented in numpy as $arctanh()$.
-Its derivative is given by:
-$$
-(arctanh(x))′ =  \frac{1}{1 − x^2}
-$$
-Your friend, a veteran of the DL community wants to implement a custom activation function for the $arctanh$ function using Autograd. Help him in realize the method.
-1. Use this numpy array as an input $[[0.37, 0.192, 0.571]]$ and evaluate the result using pure Python.
-2. Use the PyTorch based $torch.autograd.Function$ class to implement a custom Function that implements the forward pass for the arctanh function in Python.
-3. Use the PyTorch based $torch.autograd.Function$ class to implement a custom Function that implements the backward pass for the arctanh function in Python.
-4. Name the class ArtanhFunction,and using the grad check method from $torch.autograd$, verify that your numerical values equate the analytical values calculated by gradcheck. Remember you must implement a method entitled $.apply(x)$ so that the function can be invoked by Autograd.
+    $$
+    \tanh^{-1}(x) = \frac{1}{2}[\ln(1+x) - ln(1-x)]
+    $$
+
+    On the other hand, the $artanh$ function, which returns the inverse hyperbolic tangent of its argument x, is implemented in numpy as $arctanh()$.
+    Its derivative is given by:
+
+    $$
+    (arctanh(x))′ =  \frac{1}{1 − x^2}
+    $$
+
+    Your friend, a veteran of the DL community wants to implement a custom activation function for the $arctanh$ function using Autograd. Help him in realize the method.
+
+    1. Use this numpy array as an input $[[0.37, 0.192, 0.571]]$ and evaluate the result using pure Python.
+    2. Use the PyTorch based $torch.autograd.Function$ class to implement a custom Function that implements the forward pass for the arctanh function in Python.
+    3. Use the PyTorch based $torch.autograd.Function$ class to implement a custom Function that implements the backward pass for the arctanh function in Python.
+    4. Name the class ArtanhFunction,and using the grad check method from $torch.autograd$, verify that your numerical values equate the analytical values calculated by gradcheck. Remember you must implement a method entitled $.apply(x)$ so that the function can be invoked by Autograd.
 
 <details><summary><b>Answer</b></summary>
     
@@ -518,9 +529,11 @@ Your friend, a veteran of the DL community wants to implement a custom activatio
 ---
 
 27. 1. Expand the following function using DN:
+
 $$
 \sin(x + \dot{x}d)
 $$
+
 2. With respect to the expression graph depicted in 5.9:
 <table align='center'>
 <tr>
@@ -532,15 +545,18 @@ $$
 <td align="center"> An expression graph for g(x). Constants are shown in gray, crossed-out since derivatives should not be propagated to constant operands </td>
 </tr>
 </table>
-(a) Traverse the graph 5.9 and find the function $g(x)$ it represents. 
 
-(b) Expand the function $g(x)$ using DN.
+- (a) Traverse the graph 5.9 and find the function $g(x)$ it represents. 
+
+- (b) Expand the function $g(x)$ using DN.
 
 3. Show that the general identity :
 
-$$
-g(x + \dot{x }d) = g(x) + g′(x)\dot{x}d
-$$ holds in this particular case too.
+    $$
+    g(x + \dot{x }d) = g(x) + g′(x)\dot{x}d
+    $$ 
+
+    holds in this particular case too.
 
 4. Using the derived DN, evaluate the function $g(x)$ at $x = 2$.
 5. Using an Autograd based Python program implement the function and evaluate it’s derivative at $x = 2$.
@@ -601,7 +617,7 @@ M outputs.
 
     (a) Forward and reverse mode AD always yield the same result.
 
-    (b) In reverse mode AD there are fewer operations (time) and less space for interme- diates (memory).
+    (b) In reverse mode AD there are fewer operations (time) and less space for intermediates (memory).
 
     (c) The cost for forward mode grows with N.
 
@@ -670,17 +686,17 @@ Recall that for the Beta-Binomial distribution the following relationships exist
 </tr>
 </table>
 
-1. Likelihood: The starting point for our inference problem is the Likelihood, the prob- ability of the observed data. Find the Likelihood function symbolically using sympy. Convert the SymPy representation to a purely Numpy based callable function with a Lambda expression. Evaluate the Likelihood function at θ = 0.5 with 50 successful trials out of 100.
+1. Likelihood: The starting point for our inference problem is the Likelihood, the probability of the observed data. Find the Likelihood function symbolically using sympy. Convert the SymPy representation to a purely Numpy based callable function with a Lambda expression. Evaluate the Likelihood function at $θ = 0.5$ with 50 successful trials out of 100.
 
-2. Prior: The Beta Distribution. Define the Beta distribution which will act as our prior distribution symbolically using sympy. Convert the SymPy representation to a purely Numpy based callable function. Evaluate the Beta Distribution at θ : 0.5, a : 2, b : 7
+2. Prior: The Beta Distribution. Define the Beta distribution which will act as our prior distribution symbolically using sympy. Convert the SymPy representation to a purely Numpy based callable function. Evaluate the Beta Distribution at $θ : 0.5, a : 2, b : 7$
 
 3. Plot the Beta distribution, using the Numpy based function.
 
-4. Posterior: Find the posterior distribution by multiplying our Beta prior by the Bi- nomial Likelihood symbolically using sympy. Convert the SymPy representation to Prior of θ Likelihood Posterior of θ Posterior Mean (a+x)/(a+b+n−x)
+4. Posterior: Find the posterior distribution by multiplying our Beta prior by the Binomial Likelihood symbolically using sympy. Convert the SymPy representation to Prior of θ Likelihood Posterior of θ Posterior Mean $(a+x)/(a+b+n−x)$
 Beta(a,b)
 binomial (n, θ)
 Beta (a + x, b + n − x)
-a purely Numpy based callable function. Evaluate the Posterior Distribution at θ : 0.5, a : 2, b : 7
+a purely Numpy based callable function. Evaluate the Posterior Distribution at $θ : 0.5, a : 2, b : 7$
 5. Plot the posterior distribution, using the Numpy based function.
 
 6. Show that the posterior distribution has the same functional dependence on θ as the prior, and it is just another Beta distribution.

@@ -19,6 +19,7 @@
 $$\vec{A} \cdot \vec{B} = a_1b_1+a_2b_2+....+a_kb_k$$
 
 The dot product has the following geometric interpretation: Let $\alpha$ be the angle between $\vec{A}$ and $\vec{B}$. Then 
+
 $$\vec{A} \cdot \vec{B} = |\vec{A}| \cdot |\vec{B}| \cdot \cos(\alpha)$$
 
 2. To find a vector \( v \) of unit length such that the dot product of \( u \) and \( v \) is maximum, we want to maximize the expression for the dot product $\( u \cdot v \)$.
@@ -54,13 +55,13 @@ This vector \( v \) will have a unit length and the dot product \( u \cdot v \) 
 
 1. resultant product will be a $3X3$ matrix, which can be given as follows:
 
-```math
+$$
 \begin{bmatrix}
--3 & 0 & 3\\
--2 & 0 & 2 \\
--1 & 0 & 1
+    -3 & 0 & 3\\
+    -2 & 0 & 2 \\
+    -1 & 0 & 1
 \end{bmatrix}
-```
+$$
 
 2. One useful application of the outer product in machine learning is in the computation of covariance matrices, where the outer product is used to calculate the covariance of different feature vectors. For instance, the covariance matrix can be estimated as the average outer product of the centered data vectors (i.e., data vectors from which the mean has been subtracted). This is crucial for algorithms that rely on data distribution, such as Principal Component Analysis (PCA) and many types of clustering algorithms.
 
@@ -91,11 +92,8 @@ is $c_1 = 0$ and $c_2 = 0$, where $c_1$ and $c_2$ are scalars and $\vec{0}$ is t
     1. What's the norm? What is  $L_0,L_1,L_2,L_{norm}$?
     1. How do norms and metrics differ? Given a norm, make a metric. Given a metric, can we make a norm?
 <details><summary><b>Answer</b></summary>
-### 1. Norms and Metrics
 
-#### What is a norm?
-
-A **norm** on a vector space is a function that assigns a non-negative length or size to vectors, except for the zero vector, which is assigned a length of zero. Norms are denoted by \(\|\cdot\|\) and must satisfy the following properties for any vectors \(x, y\) and any scalar \(a\):
+1. A **norm** on a vector space is a function that assigns a non-negative length or size to vectors, except for the zero vector, which is assigned a length of zero. Norms are denoted by \(\|\cdot\|\) and must satisfy the following properties for any vectors \(x, y\) and any scalar \(a\):
 
 1. **Non-negativity**: \(\|x\| \geq 0\) and \(\|x\| = 0\) if and only if \(x = 0\).
 2. **Scalar multiplication**: \(\|a \cdot x\| = |a| \cdot \|x\|\).
@@ -108,19 +106,18 @@ Different types of norms can be defined on vector spaces:
 - **\(L_2\) norm** (Euclidean norm): It is defined as \(\|x\|_2 = \sqrt{\sum x_i^2}\), which corresponds to the usual geometric length of a vector.
 - **\(L_p\) norm**: It generalizes the \(L_1\) and \(L_2\) norms and is defined as \(\|x\|_p = (\sum |x_i|^p)^{1/p}\) for \(1 \leq p < \infty\).
 
-#### How do norms and metrics differ?
-
+2.
 - A **norm** provides a way to measure the length of vectors in vector spaces.
 - A **metric** is a more general function that defines a distance between any two elements in a set, satisfying:
   1. **Non-negativity**: \(d(x, y) \geq 0\) and \(d(x, y) = 0\) if and only if \(x = y\).
   2. **Symmetry**: \(d(x, y) = d(y, x)\).
   3. **Triangle inequality**: \(d(x, z) \leq d(x, y) + d(y, z)\).
 
-#### Given a norm, make a metric.
+**Given a norm, make a metric.**
 
 If you have a norm \(\|\cdot\|\) on a vector space, you can define a metric \(d\) by \(d(x, y) = \|x - y\|\). This metric satisfies all the metric properties, derived from the properties of the norm.
 
-#### Given a metric, can we make a norm?
+**Given a metric, can we make a norm?**
 
 Not all metrics come from norms. To derive a norm from a metric \(d\), the metric must satisfy additional properties:
 1. **Translation invariance**: \(d(x+z, y+z) = d(x, y)\) for all \(x, y, z\).
@@ -187,17 +184,18 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 
 
 6. Given the following matrix:
-```math
-\begin{bmatrix}
-1 & 4 & -2\\
--1 & 3 & 2 \\
-3 & 5 & -6
-\end{bmatrix}
-```
-Without explicitly using the equation for calculating determinants, what can we say about this matrix’s determinant?
+
+    $$
+    \begin{bmatrix}
+    1 & 4 & -2\\
+    -1 & 3 & 2 \\
+    3 & 5 & -6
+    \end{bmatrix}
+    $$
+
+    Without explicitly using the equation for calculating determinants, what can we say about this matrix’s determinant?
 
 <details><summary><b>Answer</b></summary>
-
 
 
 </details>
@@ -220,7 +218,7 @@ Without explicitly using the equation for calculating determinants, what can we 
     1. Find $x$ such that: $Ax=b$.
     1. When does this have a unique solution?
     1. Why is it when $A$ has more columns than rows, $Ax=b$ has multiple solutions?
-    1. Given a matrix $A$ with no inverse. How would you solve the equation  $Ax=b$? What is the pseudoinverse and how to calculate it?
+    1. Given a matrix $A$ with no inverse. How would you solve the equation  $Ax=b$? What is the pseudo inverse and how to calculate it?
 
 <details><summary><b>Answer</b></summary>
 

@@ -123,8 +123,9 @@ maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> cl
   2. log odds of the event = $\log(odds \quad of \quad the \quad event) = \log_e\frac{1}{9} = -2.20$
   3. probability of the event in terms of the odds can be written as follows:
 
-   $$probability = \frac{odds}{1+odds}$$
-   $$probability = \frac{0.11}{1.11} = 0.1$$
+   $$\text{probability} = \frac{odds}{1+odds}$$
+
+   $$\text{probability} = \frac{0.11}{1.11} = 0.1$$
     
 </details>
 
@@ -140,11 +141,15 @@ maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> cl
   <p><b>True</b><p>
   Let's calculate the probability of the succeess(p). We can define the probability(p) in terms of odds of the success as follows:
   <p>
+
   $$p = \frac{odds}{1+odds}$$
+
   </p>
   <p>Since odds of the success = 4.</p>
   <p>
+
     $$p = \frac{4}{1+4} = 0.8$$
+
   </p> 
 </details>
 
@@ -167,7 +172,7 @@ their respective odds.
     </td>
   </tr>
   <tr>
-    <td align="center">  Probability vs Odds </td>
+    <td align="center"> Probability vs Odds </td>
   </tr>
 </table>
 
@@ -253,7 +258,9 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$
 We can apply formula for $\frac{d}{dx}\frac{1}{x}$ here as well.
 
 $$\frac{d}{dx}\sigma(x) = \frac{d}{dx}((1+e^{-x})^{-1})$$
+
 $$\frac{d}{dx}\sigma(x) = -((1+e^{-x})^{-2})\frac{d}{dx}(1+e^{-x})$$
+
 $$\frac{d}{dx}\sigma(x) = \frac{e^{-x}}{(1+e^{x})^2}$$
 
 </details>
@@ -268,15 +275,15 @@ We have:
 
 $$\sigma(x) = \frac{1}{1+e^{-x}}$$
 
-For x = 0:
+For $x = 0$:
 
 $$\sigma(0) = \frac{1}{1+e^{0}} = \frac{1}{2}$$
 
-For x -> -∞:
+For $x -> -∞$:
 
 $$\lim_{{x \to -\infty}} \sigma = \frac{1}{1+e^{\inf}} = 0$$
 
-For x -> ∞:
+For $x -> ∞$:
 
 $$\lim_{{x \to -\infty}} \sigma = \frac{1}{1+e^{-\inf}} = 1$$
 
@@ -288,26 +295,27 @@ $$\lim_{{x \to -\infty}} \sigma = \frac{1}{1+e^{-\inf}} = 1$$
 
 16. Remember that in logistic regression, the hypothesis function for some parameter vector $β$ and measurement vector $x$ is defined as:
 
-$$
-h_\beta(x) = g(\beta^Tx) =  \frac{1}{1+e^{-\beta^Tx}}\\
-= P(y = 1|x;\beta)
-$$
+    $$
+    h_\beta(x) = g(\beta^Tx) =  \frac{1}{1+e^{-\beta^Tx}}\\
+    = P(y = 1|x;\beta)
+    $$
 
-where y holds the hypothesis value. Suppose the coefficients of a logistic regression model with independent variables are as follows: $\beta_0 = -1.5$, $\beta_1 = 3$, $\beta_2 = -0.5$. Assume additionally, that we have an observation with the following values for the independent variables: $x_1 = 1$, $x_2 = 5$. As a result, the logit equation becomes: $$logit = \beta_0 + \beta_1x_1 + \beta_2x_2$$.
-1. What is the value of the logit for this observation?
-2. What is the value of the odds for this observation?
-3. What is the value of $P(y = 1)$ for this observation?
+    where y holds the hypothesis value. Suppose the coefficients of a logistic regression model with independent variables are as follows: $\beta_0 = -1.5$, $\beta_1 = 3$, $\beta_2 = -0.5$. Assume additionally, that we have an observation with the following values for the independent variables: $x_1 = 1$, $x_2 = 5$. As a result, the logit equation becomes: $$logit = \beta_0 + \beta_1x_1 + \beta_2x_2$$.
+    1. What is the value of the logit for this observation?
+    2. What is the value of the odds for this observation?
+    3. What is the value of $P(y = 1)$ for this observation?
 
 <details>
 <summary><b>Answer</b></summary>
 
-1. Logit value can be obtained by substituting independent variables and model's coefficients as followes:
+1. Logit value can be obtained by substituting independent variables and model's coefficients as follows:
 
 $$logit = \beta_0 + \beta_1x_1 + \beta_2x_2$$
 
 Substitute the given values:
 
 $$logit =  -1.5 + 3\*1 + -0.5\*5$$
+
 $$logit =  -1.5 + 3 - 2.5 = -1$$
 
 2. We know the log-odds can be written in terms of logit as follows:
@@ -387,6 +395,7 @@ Referring to Table 2.1: Answer the following questions
     <b>Odds Ratio Calculations</b>
 
     $$odds(cancer \quad type = lungs) = \frac{number \quad of \quad yes}{number \quad of \quad no}$$
+
     $$odds(cancer \quad type = lungs) = \frac{69}{36} = 1.91$$
 
 For Cancer Type = Breast:
@@ -404,6 +413,7 @@ $$\hat\theta = \frac{odds \quad of \quad breast cancer}{odds \quad of \quad lung
   Relative risk(RR) as a measure of association:
 
   $$RR = \frac{Pr(Y=True| X = Breast)}{Pr(Y=True| X = Lung)}$$
+
   $$RR = \frac{\frac{560}{560+260}}{\frac{69}{69+36}}$$
 
 4. The $95\\%$ confidence interval for the odds-ratio, θ is computed from the sample confidence interval for log odds ratio:
@@ -474,6 +484,7 @@ $$
   On imputing model's parameters and observations values:
 
   $$p_i = \frac{e^{-6+0.05\*40+1\*3.5}}{1+e^{-6+0.05\*40+1\*3.5}}$$
+
   $$p_i = \frac{e^{-0.5}}{1+e^{-0.5}} = 0.377$$
 
 2. For  $50\\%$ chance of eradicating the tumor.
@@ -486,6 +497,7 @@ $$
   We need to find $x_1$ assuming $x_2$ same as 1st part.
 
 $$0.5 =  \frac{e^{-6+0.05\*x_1+1\*3.5}}{1+e^{-6+0.05\*x_1+1\*3.5}}$$
+
 $$e^{-6+0.05x_1+3.5} = 1$$
 
   By taking logarithm of both side, we can solve of $x_1$:
@@ -636,7 +648,9 @@ $\beta_0 = -4.8792$, $\beta_1 = 0.0258$
 1. Given $X_1 = 33$, with models parametrs we can estimate the probability:
 
 $$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + e^{-(\beta_0 + \beta_1X_1)}}$$
+
 $$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + e^{-(-4.8792 + 0.0258 \* 33)}}$$
+
 $$Pr(remission =1 | X_1 = 33) = \frac{1}{1 + 56.137} = 0.01750$$
 
 2. Let $X$ be the count of the gum bacteria for which probability of the improvement is $0.5$.
@@ -649,11 +663,12 @@ $$X = - \frac{\theta_0}{\theta_1} = \frac{4.8792}{0.0258}$$
 
 $$X = 189.116$$
 
-So for $189$ gum bacterias we will have estimated probability of improvement is $0.5$.
+So for $189$ gum bacteria we will have estimated probability of improvement is $0.5$.
 
 3. Unit increase in bacteria count will affect the odd ratio by 
 
   $$\exp{\beta_1} = \exp{0.0258}$$
+
   $$\exp{\beta_1} = 189.116$$
 
 4. A $99\\%$ confidence interval for $β$ is calculated as follows:
@@ -706,6 +721,7 @@ For the true odds ratio:
 $$ratio \quad odds = sample \quad odds \quad ratio = \frac{odds \quad of \quad succeess \quad for \quad Placebo}{odds \quad of \quad succeess \quad for \quad Cannabinoids}$$
 
 $$ratio \quad odds =  \frac{130\*6833}{60\*6778}$$
+
 $$ratio \quad odds =  2.1842$$
 
 2. sample log-odd:
@@ -788,10 +804,7 @@ $$\frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)$$
 
 9. How do you evaluate the performance of a logistic regression model?
 
-
 ---
-
-
 
 10. For logistic regression, why is log loss recommended over MSE (mean squared error)?
 

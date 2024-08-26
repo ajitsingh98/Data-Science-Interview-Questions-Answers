@@ -33,12 +33,12 @@ Contents
 
 9. This Equation is commonly used in image processing:
 
-$$
-(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau 
-$$
+    $$
+    (f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau 
+    $$
 
-1. What does the above equation represent?
-2. What does $g(t)$ represent?
+    1. What does the above equation represent?
+    2. What does $g(t)$ represent?
 
 <details><summary><b>Answer</b></summary>
     
@@ -51,7 +51,7 @@ $$
     1. A convolution operation is just like correlation, except that we flip over the filter before applying the correlation operator.
     1. The convolution operation reaches a maximum, only in cases where the filter is mostly similar to a specific section of the input signal.
 
-Is he right in assuming so? Explain in detail the meaning of these statements.
+    Is he right in assuming so? Explain in detail the meaning of these statements.
 
 <details><summary><b>Answer</b></summary>
     
@@ -121,7 +121,7 @@ $$
 
 ---
 
-16. As depicted in below figure, a filter is applied to a ×3 input signal. Identify the correct choice given a stride of 1 and Same padding mode.
+16. As depicted in below figure, a filter is applied to $a × 3$ input signal. Identify the correct choice given a stride of 1 and Same padding mode.
 
 <table align='center'>
   <tr>
@@ -165,20 +165,20 @@ $$
 
 18. In this question we discuss the two most commonly used padding approaches in convolutions; `VALID` and `SAME` . Below python code for generating an input signal arr001 and a convolution kernel filter001.
 
-```python
+  ```python
 
-import numpy
-import scipy.signal
-arr01 = numpy.zeros((6, 6),dtype=float)
-print (arr01)
-arr01[:,:3] = 3.0
-arr01[:,3:] = 1.0
-filter001 = numpy.zeros((3, 3), dtype=float)
-filter001[:,0] = 2.0
-filter001[:,2] = -2.0
-output = scipy.signal.convolve2d(arr01, filter, mode='valid')
+  import numpy
+  import scipy.signal
+  arr01 = numpy.zeros((6, 6),dtype=float)
+  print (arr01)
+  arr01[:,:3] = 3.0
+  arr01[:,3:] = 1.0
+  filter001 = numpy.zeros((3, 3), dtype=float)
+  filter001[:,0] = 2.0
+  filter001[:,2] = -2.0
+  output = scipy.signal.convolve2d(arr01, filter, mode='valid')
 
-```
+  ```
 The input signal, arr001 is first initialized to all zeros as follows:
 
 $$ arr001 = 

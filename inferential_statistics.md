@@ -555,6 +555,7 @@ Using lookup table we get $z_score >= 1.645$
 We can write expression for z-score:
 
 $$z-score = \frac{x - \mu}{\sigma}$$
+
 $$\frac{x - 1}{0.12} >= 1.645$$
 
 On solving for $x$,
@@ -683,11 +684,15 @@ It depends on $p-value$ and $\alpha$:
 <details><summary><b>Answer</b></summary>
 
 1. State the hypothesis:
+
 $$H_0: p = 0.157$$
+
 $$H_0: p > 0.157$$
 
 2. Calculate test-statistic $z$:
+
 $$\hat{p} = \frac{76}{400} = 0.19$$
+
 $$z = \frac{0.19 - 0.157}{\sqrt{\frac{0.157(1 - 0.157)}{400}}} = 1.81$$
 
 3. Calculate p-value using software we can get:
@@ -780,7 +785,9 @@ Test statistic captures the essence of the test. Larger the test statistic, the 
 Given:
 
 $$n = 15$$
+
 $$p(head) = 10/15$$
+
 $$p(tail) = 5/15$$
 
 Lets state the hypothesis and then based on the evidence we have from the observations we can access them using some statistic.
@@ -806,9 +813,11 @@ In this case we have $np = 7.5$ if $H_0$ is true so we can use normal distributi
 test statistics under $H_0$:
 
 - Mean($\mu$)
+
 $$\mu = E(x) = np = \frac{15}{2} = 7.5$$
 
 - Standard deviation($\sigma$)
+
 $$\sigma = \sqrt{np(1-p)} = \sqrt{3.75} = 1.936$$
 
 - $Z_score = \frac{x - \mu}{\sigma}$
@@ -865,7 +874,7 @@ since p-value > $0.05$, We can not reject null hypothesis and we will reject the
     - Otherwise, you fail to reject the null hypothesis, suggesting the pattern may be due to chance.
 
 2. Distribution of p-value depends on under which hypothesis we are observing.
-    - Under null hypothesis($H_0$) p-value distribution will be uniformaly distributed.
+    - Under null hypothesis($H_0$) p-value distribution will be uniformly distributed.
     - Under alternate hypothesis($H_a$) p-value distribution will be rightly skewed.
 
 3. There are some limitations of p-value and statistical significance and should be used with some cautions:
@@ -890,7 +899,7 @@ since p-value > $0.05$, We can not reject null hypothesis and we will reject the
 <details><summary><b>Answer</b></summary>
 
 1. If predictors of a regression model are highly correlated, we might have following issues:
-    - It will make interpretibility harder, it will be harder to get individual feature impact on final outcome.
+    - It will make interpretability harder, it will be harder to get individual feature impact on final outcome.
     - If two variables are highly correlated then it makes sense to drop either of them because too many predictors may increase model's complexity and hence may cause overfitting issue. 
 
 2. We can use Chi-Squared test of independence to assess the relationship between two categorical variables.

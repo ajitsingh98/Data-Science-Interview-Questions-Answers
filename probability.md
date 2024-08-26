@@ -127,7 +127,7 @@ Topics
 
 ---
 
-6. Suppose there are three closed doors and a car has been placed behind one of the door at random. There are two goats behind the other two doors. Now you pick a door 1 but the admin knows where the car is and open the door 2 to reveal a goat(admin will always open the door with a goat). Now he offers you to stay at the same choosen door or switch between closed doors i.e door 1 and door 2. Should you switch the door to maximize chances of getting car?
+6. Suppose there are three closed doors and a car has been placed behind one of the door at random. There are two goats behind the other two doors. Now you pick a door 1 but the admin knows where the car is and open the door 2 to reveal a goat(admin will always open the door with a goat). Now he offers you to stay at the same chosen door or switch between closed doors i.e door 1 and door 2. Should you switch the door to maximize chances of getting car?
 
 <details><summary><b>Answer</b></summary>
 
@@ -274,6 +274,7 @@ A physicist is observing two such particles, while at least one of which is in a
 ---
 
 18. During pregnancy, the Placenta Chorion Test is commonly used for the diagnosis of hereditary diseases (Fig. 3.3). The test has a probability of $0.95$ of being correct whether or not a hereditary disease is present.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -284,6 +285,7 @@ A physicist is observing two such particles, while at least one of which is in a
 <td align="center">Foetal surface of the placenta</td>
 </tr>
 </table>
+
 It is known that $1\%$ of pregnancies result in hereditary diseases. Calculate the probability of a test indicating that a hereditary disease is present.
 
 <details><summary><b>Answer</b></summary>
@@ -296,6 +298,7 @@ It is known that $1\%$ of pregnancies result in hereditary diseases. Calculate t
 ---
 19. The Dercum disease is an extremely rare disorder of multiple painful tissue growths.
 In a population in which the ratio of females to males is equal, 5% of females and 0.25% of males have the Dercum disease (Fig. 3.4).
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -318,6 +321,7 @@ A person is chosen at random and that person has the Dercum disease. Calculate t
 ---
 
 20. There are numerous fraudulent binary options websites scattered around the Internet, and for every site that shuts down, new ones are sprouted like mushrooms. A fraudulent AI based stock-market prediction algorithm utilized at the New York Stock Exchange, (Fig. 3.6) can correctly predict if a certain binary option shifts states from 0 to 1 or the other way around, with $85\%$ certainty.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -328,6 +332,7 @@ A person is chosen at random and that person has the Dercum disease. Calculate t
 <td align="center">The New York Stock Exchange</td>
 </tr>
 </table>
+
 A financial engineer has created a portfolio consisting twice as many $state-1$ options then $state-0$ options. A stock option is selected at random and is determined by said algorithm to be in the state of $1$. What is the probability that the prediction made by the AI is correct?
 
 <details><summary><b>Answer</b></summary>
@@ -341,6 +346,7 @@ A financial engineer has created a portfolio consisting twice as many $state-1$ 
 
 21. In an experiment conducted by a hedge fund to determine if monkeys (Fig. 3.6) can
 outperform humans in selecting better stock market portfolios, 0.05 of humans and 1 out of 15 monkeys could correctly predict stock market trends correctly.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -364,6 +370,7 @@ From an equally probable pool of humans and monkeys an “expert” is chosen at
 ---
 
 22. During the cold war, the U.S.A developed a speech to text (STT) algorithm that could theoretically detect the hidden dialects of Russian sleeper agents. These agents (Fig. 3.7), were trained to speak English in Russia and subsequently sent to the US to gather intelligence. The FBI was able to apprehend ten such hidden Russian spies and accused them of being "sleeper" agents.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -389,12 +396,11 @@ The Algorithm relied on the acoustic properties of Russian pronunciation of the 
 23. During World War II, forces on both sides of the war relied on encrypted communications. The main encryption scheme used by the German military was an Enigma machine, which was employed extensively by Nazi Germany. Statistically, the Enigma machine sent the symbols X and Z Fig. (3.8) according to the following probabilities:
 
 $$
-
 P(X) = \frac{2}{9} \\ 
 \\ 
 P(Z) = \frac{7}{9}
-
 $$
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -863,9 +869,11 @@ L(\gamma | y) = (n, y)\gamma^y(1-\gamma)^{n-y}, \ \gamma \epsilon [0, 1], \  y =
 $$
 
 As the senior researcher in the team, you guide him that his parameter of interest is $γ$, the proportion of infected humans in the entire population. The expectation and variance of the binomial distribution are:
+
 $$
 E(y|γ, n) = nγ, V (y|γ, n) = nγ(1 − γ) 
 $$
+
 Answer the following; for the likelihood function of the form $L_x(γ)$:
 1. Find the log-likelihood function $l_x(γ) = ln L_x(γ)$.
 2. Find the gradient of $l_x(γ)$.
@@ -1163,6 +1171,7 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 $$
 I(γ) = −Eγ[Φ′(X|γ)]
 $$
+
 Find the Fisher Information $I(γ)$ for the following distributions:
     1. The Bernoulli Distribution $X ∼ B(1, γ)$.
     2. The Poisson Distribution $X ∼ Poiss(θ)$.
@@ -1236,22 +1245,22 @@ Now $Cov(X, Y)$ coming as zero and hence depicting the $X$ and $Y$ are independe
 
 <details><summary><b>Answer</b></summary>
 
-Variance measures the spread of a random variable while co-varaince measures how two random variables vary together.
+Variance measures the spread of a random variable while co-variance measures how two random variables vary together.
 
-Variance can be only non-negative while co-varaince can be positive, negative or zero.
+Variance can be only non-negative while co-variance can be positive, negative or zero.
 
 </details>
 
 ---
 
 
-4. How does sign of covaraince decides the direction of relationship between two random variables?
+4. How does sign of covariance decides the direction of relationship between two random variables?
 
 <details><summary><b>Answer</b></summary>
 
-The sign of co-variance decides how two random variables vary togeter
+The sign of co-variance decides how two random variables vary together
 
-- Postive covariance - Both variables vary in the same direction
+- Positive covariance - Both variables vary in the same direction
 - Negative covariance - Both variables vary in opposite direction
 - Zero covariance - There are linearly independent  
 
@@ -1386,9 +1395,10 @@ $$Covariance(u, v) = \frac{1}{n-1}\sum_{i=1}^n u_i v_i = \frac{1}{n-1}u \cdot v$
 similary variance in X and Y can be expressed in vectorized form:
 
 $$Var(X) = \frac{1}{n-1}\sum_{i=1}^n {u_i}^{2} = \frac{1}{n-1} \| \mathbf{u} \|^2$$
+
 $$Var(Y) = \frac{1}{n-1}\sum_{i=1}^n {v_i}^{2} = \frac{1}{n-1} \| \mathbf{v} \|^2$$
 
-Now we can write correlation expresion using vectors $u$ and $v$,
+Now we can write correlation expression using vectors $u$ and $v$,
 
 $$r_{XY} = \frac{Covariance(u, v)}{\sqrt{Var(X)}{Var(Y)}}$$
 

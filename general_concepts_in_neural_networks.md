@@ -430,7 +430,7 @@ Can a perceptron with only two inputs and a single output function as an AND log
 
 Digital hardware implementations of the sigmoid function do exist but they are expensive to compute and therefore several approximation methods were introduced by the research community. The method by [10] uses the following formulas to approximate the exponential function:
 
-$\exp{x} = Ex(x) = 2^{1.44x}$
+$$\exp{x} = Ex(x) = 2^{1.44x}$$
 
 Based on this formulation, one can calculate the sigmoid function as:
 
@@ -677,24 +677,24 @@ $$f(x) = \begin{cases}
 
 59. The code 8.30 and Figure 8.29 are the output from running XGBOOST for a binary
 classification task.
-<table align='center'>
-  <tr>
-    <td align="center">
-      <img src="img/metrics-2.png" alt= "RUC AUC" style="max-width:70%;" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center"> RUC AUC </td>
-  </tr>
-</table>
+    <table align='center'>
+      <tr>
+        <td align="center">
+          <img src="img/metrics-2.png" alt= "RUC AUC" style="max-width:70%;" />
+        </td>
+      </tr>
+      <tr>
+        <td align="center"> RUC AUC </td>
+      </tr>
+    </table>
 
-```python
-XGBClassifier(base_score=0.5, colsample_bylevel=1,colsample_bytree=0.5, gamma=0.017, learning_rate=0.15, max_delta_step=0, max_depth=9, min_child_weight=3, missing=None, n_estimators=1000, nthread=-1, objective='binary:logistic', reg_alpha=0, reg_lambda=1, scale_pos_weight=1, seed=0, silent=1, subsample=0.9)shape:(316200, 6)
+      ```python
+      XGBClassifier(base_score=0.5, colsample_bylevel=1,colsample_bytree=0.5, gamma=0.017, learning_rate=0.15, max_delta_step=0, max_depth=9, min_child_weight=3, missing=None, n_estimators=1000, nthread=-1, objective='binary:logistic', reg_alpha=0, reg_lambda=1, scale_pos_weight=1, seed=0, silent=1, subsample=0.9)shape:(316200, 6)
 
->ROC AUC:0.984439608912
->LOG LOSS:0.0421598347226
-```
-How would you describe the results of the classification?
+      >ROC AUC:0.984439608912
+      >LOG LOSS:0.0421598347226
+      ```
+    How would you describe the results of the classification?
 
 <details><summary><b>Answer</b></summary>
     
@@ -749,7 +749,7 @@ How would you describe the results of the classification?
 1. In each case for the input variable example , determine the dimensions of the tensor which is the output of applying the VGG11 CNN to the respective input.
 2. Choose the correct option. The last layer of the VGG11 architecture is:
     1. Conv2d
-    2.  MaxPool2d
+    2. MaxPool2d
     3. ReLU
 
 <details><summary><b>Answer</b></summary>

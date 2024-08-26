@@ -784,13 +784,13 @@ In your opinion, which approach is being utilized?
   </tr>
   </table>
 
-(i) Bootstrap aggregation 
+- (i) Bootstrap aggregation 
 
-(ii) Snapshot ensembling
+- (ii) Snapshot ensembling
 
-(iii) Stacking
+- (iii) Stacking
 
-(iv) Classical committee machines
+- (iv) Classical committee machines
 
 <details><summary><b>Answer</b></summary>
 
@@ -803,6 +803,7 @@ The approach which is depicted is the first phase of stacking. In stacking, we f
 
 6. Consider training corpus consisting of balls which are glued together as triangles, each
 of which has either $1, 3, 6, 10, 15, 21, 28, 36, \hspace{0.1em}\text{or} \hspace{0.1em} 45 \hspace{0.5em} \text{balls}$.
+
     1. We draw several samples from this corpus as presented in Fig.6.3 where in each sample is equiprobable. What type of sampling approach is being utilized here?
  
     <table align='center'>
@@ -1171,6 +1172,7 @@ Yes, they do
 ---
 
 13. 1. In a transfer-learning experiment conducted by a researcher, a number of ImageNet-pretrained CNN classifiers, selected from Table 6.1 are trained on five different folds drawn from the same corpus. Their outputs are fused together producing a composite machine. Ensembles of these convolutional neural networks architectures have been extensively studies an evaluated in various ensembling approaches. Is it likely that the composite machine will produce a prediction with higher accuracy than that of any individual classifier? Explain why.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -1273,20 +1275,20 @@ and therefore the actual error can not be reduced by a factor of K.
 19. Your colleague, a well-known expert in ensembling methods, writes the following pseudo
 code in Python shown in Fig. 6.7 for the training of a neural network. This runs inside a standard loop in each training and validation step.
 
-```python
+  ```python
 
-import torchvision.models as models ...
-models = ['resnext']
-for m in models: 
-    train ...
-    compute VAL loss ... 
-    amend LR ...
-    if (val_acc > 90.0):
-        saveModel()
+  import torchvision.models as models ...
+  models = ['resnext']
+  for m in models: 
+      train ...
+      compute VAL loss ... 
+      amend LR ...
+      if (val_acc > 90.0):
+          saveModel()
 
-```
-1. What type of ensembling can be used with this approach? Explain in detail.
-2. What is the main advantage of snapshot ensembling? What are the disadvantages, if any?
+  ```
+  1. What type of ensembling can be used with this approach? Explain in detail.
+  2. What is the main advantage of snapshot ensembling? What are the disadvantages, if any?
 
 <details><summary><b>Answer</b></summary>
 

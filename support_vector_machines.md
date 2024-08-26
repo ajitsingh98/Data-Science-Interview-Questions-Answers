@@ -62,17 +62,23 @@ Maximal margin classifier is a linear classifier that attempts to separate two c
 It works as follows:
 
 Suppose we are working on a binary classification problem with $n$ training examples $\{(x_i, y_i)\}^n_{i=1}$ where
+
 - $x_i \in \mathbb{R}^n$ is a $p$-dimensional feature vector
 - $y_i \in \{-1, +1\}$ 
 
 With the above setup, maximal margin classifier tries to find a hyperplane which can be represented as:
+
 $$f(x) = w^Tx + b$$
+
 where:
+
 - $w \in \mathbb{R}^p$ is the weight vector (normal to the hyperplane)
 - $b \in \mathbb{R}$ is the offset of the hyperplane from the origin
 
 Decision boundary can be defined by:
+
 $$f(x) = 0$$
+
 $$ w^Tx + b  = 0$$
 
 Now, we want to maximize the margin which is basically the distance between the decision boundary(hyperplane) and the closest points in the dataset(support vectors).  
@@ -87,13 +93,16 @@ $$y_i(w^Tx_i + b) \ge 1$$
 
 Using above two equations, margin can be derived as 
 
-$$Margin = \frac{2}{||w||}$$
+$$\text{Margin} = \frac{2}{||w||}$$
 
 Note that here $2$ comes from the distance between the two support vectors(one from each class), each being at the distance of $\frac{1}{||w||}$ from the hyperplane.
 
 So, maximal margin classifier tends to optimize the margin subject to the constraints that all points are classified correctly:
+
 $$\min_{\mathbf{w}, b}\frac{1}{2}||w||^2$$
+
 subject to:
+
 $$y_i(w^Tx_i + b) \ge 1 \forall i$$
 
 - Here we have used $||w||^2$ instead of $||w||$ to make the objective function convex and differential
@@ -159,15 +168,21 @@ The support vector classifier classifies a test observations depending on which 
 It is the solution to the optimization problem:
 
 $$\max_{\mathbf{\beta_0,..,\beta_p}, \epsilon_1,..,\epsilon_n, M} M$$
+
 subjected to
+
 $$\sum_{j=1}^p\beta_j^2 = 1$$
+
 $$y_i(\beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + ... + \beta_px_{ip}) \ge M(1-\epsilon_i)$$
+
 $$\epsilon_i \ge 0, \sum_{i=1}^{n}\epsilon_i \le C$$
 
 Where $C$ is a nonnegative tuning parameter. $M$ is the width of the margin and $\epsilon_1,....\epsilon_n$ are slack variables that allows individual observations on the wrong side of the margin or the hyperplane.
 
 Once we have hyperplane after solving above set of equations, we classify a test observations $x^*$, by simply determining on which side of hyperplane it lies.
-$$Sign(f(x^*) = \beta_0 + \beta_1x_1^{*}+...+\beta_Px_p^*)$$
+
+$$
+Sign(f(x^*) = \beta_0 + \beta_1x_1^{*}+...+\beta_Px_p^*)$$
 
 </details>
 
@@ -253,16 +268,6 @@ It struggles with the cases having non-linear decision boundary.
 
 ---
 
-1. What is the main limitation of SVC?
-
-<details><summary><b>Answer</b></summary>
-
-It struggles with the cases having non-linear decision boundary.
-
-</details>
-
----
-
 1. Can we use feature space enlarging technique to solve non linear decision boundary problem with SVC?
 
 <details><summary><b>Answer</b></summary>
@@ -289,13 +294,18 @@ The support vector machine(SVM) is an extension of the support vector classifier
 Kernel function quantifies the similarity of two observations.
 
 - Linear kernel
-$$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$
+
+    $$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$
+
 - Polynomial kernel
-$$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$
-where, $d > 1$
+
+    $$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$
+    
+    where, $d > 1$
 
 - Radial kernel
-$$K(x_i,x_{i'}) = exp(-\gamma\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2)$$
+
+    $$K(x_i,x_{i'}) = exp(-\gamma\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2)$$
 
 where, $\gamma$ is positive constant.
 
