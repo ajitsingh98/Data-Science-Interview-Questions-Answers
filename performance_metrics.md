@@ -264,3 +264,90 @@ Topics
 
 ---
 
+7. F1 score.
+    1. What’s the benefit of F1 over the accuracy?
+    1. Can we still use F1 for a problem with more than two classes. How?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+6. Your team is building a system to aid doctors in predicting whether a patient has cancer or not from their X-ray scan. Your colleague announces that the problem is solved now that they’ve built a system that can predict with 99.99% accuracy. How would you respond to that claim?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+8. Given a binary classifier that outputs the following confusion matrix.
+
+    $$
+    \begin{bmatrix} 
+        "" & \textbf{Predicted True} & \textbf{Predicted False} \\
+        \textbf{Actual True} & 30 & 20\\
+        \textbf{Actual False} & 5 & 40 \\
+        \end{bmatrix}
+    $$
+
+    1. Calculate the model’s precision, recall, and F1.
+    1. What can we do to improve the model’s performance?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+9. Consider a classification where $99%$ of data belongs to class A and $1%$ of data belongs to class B.
+    1. If your model predicts A 100% of the time, what would the F1 score be? Hint: The F1 score when A is mapped to 0 and B to 1 is different from the F1 score when A is mapped to 1 and B to 0.
+    1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$ be?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+11. When should we use RMSE (Root Mean Squared Error) over MAE (Mean Absolute Error) and vice versa?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+12. Show that the negative log-likelihood and cross-entropy are the same for binary classification tasks.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+13. For classification tasks with more than two labels (e.g. MNIST with $10$ labels), why is cross-entropy a better loss function than MSE?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+
+14. Consider a language with an alphabet of $27$ characters. What would be the maximal entropy of this language?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+17. Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---

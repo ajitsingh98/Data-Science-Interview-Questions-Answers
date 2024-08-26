@@ -792,6 +792,13 @@ $$\frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)$$
 
 
 
+10. For logistic regression, why is log loss recommended over MSE (mean squared error)?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
 
 
 

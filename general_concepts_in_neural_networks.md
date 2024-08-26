@@ -1748,3 +1748,11 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 
 ---
+
+19. You’re building a neural network and you want to use both numerical and textual features. How would you process those different features?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---

@@ -46,7 +46,7 @@ $$
 
 ---
 
-10. A data-scientis assumes that:
+10. A data-scientist assumes that:
     1. A convolution operation is both linear and shift invariant.
     1. A convolution operation is just like correlation, except that we flip over the filter before applying the correlation operator.
     1. The convolution operation reaches a maximum, only in cases where the filter is mostly similar to a specific section of the input signal.
@@ -56,6 +56,7 @@ Is he right in assuming so? Explain in detail the meaning of these statements.
 <details><summary><b>Answer</b></summary>
     
 </details>
+
 ---
 
 11. Mark the correct choice(s):
@@ -699,6 +700,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 <details><summary><b>Answer</b></summary>
     
 </details>
+
 ---
 
 19. Still referring to above image:

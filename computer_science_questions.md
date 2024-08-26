@@ -128,7 +128,7 @@
 
 1. Matrix multiplication
     1. You have three matrices: $A∈R^{100×5},B∈R^{5×200},C∈R^{200×20}$  and you need to calculate the product ABC . In what order would you perform your multiplication and why?
-    1. Now you need to calculate the product of N  matrices $A_1A_2...A_n$. How would you determine the order in which to perform the multiplication?
+    1. Now you need to calculate the product of $N$  matrices $A_1A_2...A_n$. How would you determine the order in which to perform the multiplication?
 
 <details><summary><b>Answer</b></summary>
     

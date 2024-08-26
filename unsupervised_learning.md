@@ -116,7 +116,7 @@ K-means clustering offers several key advantages:
     - **Silhouette Score**:
         - Calculate the silhouette score for different values of $K$. The silhouette score measures how similar a data point is to its own cluster compared to other clusters.
         - The value of $K$ that maximizes the average silhouette score across all data points is typically considered optimal.
-        
+
     - **Cross-Validation**:
         - Split the data into training and validation sets, perform K-means clustering on the training set for different values of $K$, and evaluate the clustering performance on the validation set.
         - Choose the $K$ that gives the best performance on the validation set.
@@ -169,6 +169,41 @@ Initializing centroid plays crucial role in model's performance and can impact q
     - This is improvement over random initialization, here we select first centroid randomly and then chooses subsequent centroids probabilistically based on their distance from the nearest existing centroid. 
     - Points further away from existing centroids are more likely to be selected.
     - Computationally expensive  
+
+</details>
+
+---
+
+4. Why is it important to run the K-means algorithm multiple times with different initial cluster assignments, and how is the best solution selected?
+
+<details><summary><b>Answer</b></summary>
+
+K-means clustering is sensitive to the initial random assignment of cluster centroids, which means it can converge to different local optima rather than the global optimum. To address this issue and improve the reliability of the results, it is crucial to run the algorithm multiple times with different random initializations. By doing so, you obtain several different clustering solutions.
+
+To select the best solution, compare the objective values (within-cluster sum of squares) for each run. The best clustering result is the one with the smallest objective value, indicating that the clusters are more compact and have lower within-cluster variance. 
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/random_init_kmeans.png" alt= "impact of random initialization of centroid in k-means" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> K-means clustering was executed six times with K = 3, each with a different initial random centroid assignment. The plots show three distinct local optima; one had the lowest objective value, indicating the best cluster separation. The red-labeled results all reached the same optimal solution with an objective value of 235.8.</td>
+</tr>
+</table>
+
+
+</details>
+
+---
+
+4. What does within-cluster variation depicts? 
+<details><summary><b>Answer</b></summary>
+
+The *within-cluster variation* for cluster $C_k$ is a measure $W(C_k)$ of the amount by which the observations within a cluster differ from each other.
+
+$$W(C_k) = \frac{1}{|C_k|}\sum_{i, i'\epsilon C_k}\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2$$
 
 </details>
 

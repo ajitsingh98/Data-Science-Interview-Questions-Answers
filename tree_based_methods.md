@@ -25,14 +25,18 @@ Contents
 1. What is a decision tree?
 
 <details><summary><b>Answer</b></summary>
+
 Decision Trees(DTs) are non-parametric supervised learning method which can be employed for Classification and Regressions tasks.
+
 </details>
 
 ---
 2. What is the purpose of decision trees in machine learning?
 
 <details><summary><b>Answer</b></summary>
+
 The main purpose of DTs in machine learning is to model data by learning simple decision rules inferred from the attributes of the datasets. A decision tree can be seen as piecewise constant approximation.
+
 </details>
 
 ---
@@ -139,7 +143,6 @@ Here are the most common ones:
 
 </details>
 
-
 ---
 
 6. What is pruning in decision trees?
@@ -154,6 +157,7 @@ There are two main types of pruning:
 - **Post-Pruning**: After fully growing the tree, systematically remove nodes from the tree. This is done by replacing a node or a subtree with a leaf node, and assigning it the most common class among its samples or by averaging/regressing outcomes.
 
 </details>
+
 ---
 
 7. Can decision trees handle categorical data, and how is it done?
@@ -186,6 +190,7 @@ Yes, decision trees can handle categorical data effectively. Here's how it is do
 4. Able to handle multi-output problems.
 5. Can convert to rules and can handles noisy data
 </details>
+
 ---
 
 9. What are some limitations of decision trees?
@@ -336,10 +341,12 @@ Here's how entropy is used in the ID3 algorithm:
 | **Type of Trees**    | Can create both classification and regression trees.                | Primarily used for creating classification trees.                  | Used for creating classification trees.         |
 | **Splitting Criteria**| Uses Gini impurity or entropy for classification; variance reduction for regression.| Uses information gain (based on entropy).                          | Uses gain ratio (a normalization of information gain). |
 | **Handling Continuous and Categorical Data** | Handles both continuous and categorical variables directly.        | Primarily handles categorical variables; continuous data must be discretized prior to building the tree.| Handles both but often requires discretization of continuous variables. |
-| **Pruning**          | Uses cost-complexity pruning to avoid overfitting, which is a post-pruning technique. | Does not include a pruning step, leading to potentially overfitted trees. | Uses post-pruning methods to simplify the tree after it is fully grown. |
+| **Pruning**          | Uses cost-complexity pruning to avoid overfitting, which is a post-pruning technique. | Does not include a pruning step, leading to potentially over-fitted trees. | Uses post-pruning methods to simplify the tree after it is fully grown. |
 | **Handling Missing Values** | Has mechanisms to handle missing values directly during tree construction. | Does not handle missing values inherently; preprocessing is required. | Has improved strategies to deal with missing values compared to ID3. |
 
 </details>
+
+---
 
 20. How does CART handle over-fitting?
 
@@ -505,8 +512,6 @@ Yes, stacking ensembles come with several limitations and challenges that can af
 
 </details>
 
-
-
 ---
 
 9. When should you consider using stacking in a machine learning project?
@@ -534,6 +539,7 @@ You can consider the blending process to be:
 - Make final predictions using this model.
 
 </details>
+
 ---
 
 8. Can you explain the difference between stacking and blending?
@@ -546,29 +552,57 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 
 11. What is the purpose of a meta-model in blending?
 
+<details><summary><b>Answer</b></summary>
+
+</details>
+
 ---
 
 12. What are the advantages of blending?
+
+<details><summary><b>Answer</b></summary>
+
+</details>
 
 ---
 
 13. What are the common algorithms used for blending?
 
+<details><summary><b>Answer</b></summary>
+
+</details>
+
 ---
 
 14.  What precautions should you take when implementing blending?
+
+<details><summary><b>Answer</b></summary>
+
+</details>
 
 ---
 
 15. Can you explain the difference between bagging, boosting, and blending?
 
+<details><summary><b>Answer</b></summary>
+
+</details>
+
 ---
 
 16.  When should you consider using blending in a machine learning project?
 
+<details><summary><b>Answer</b></summary>
+
+</details>
+
 ---
 
 17. What challenges can arise when implementing blending in practice?
+
+<details><summary><b>Answer</b></summary>
+
+</details>
 
 ---
 
@@ -737,19 +771,19 @@ The given algorithm is a typical bagging method.
 ---
 
 
-5. Fig. 6.2 depicts a part of a specific ensembling approach applied to the models $x1, x2...xk$.
-
+5. Below Fig depicts a part of a specific ensembling approach applied to the models $x1, x2...xk$.
 In your opinion, which approach is being utilized?
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/nn_ensemble-1.png" alt= "A specific ensembling approach" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> A specific ensembling approach </td>
-</tr>
-</table>
+  <table align='center'>
+  <tr>
+  <td align="center">
+      <img src="img/nn_ensemble-1.png" alt= "A specific ensembling approach" style="max-width:70%;" />
+  </td>
+  </tr>
+  <tr>
+  <td align="center"> A specific ensembling approach </td>
+  </tr>
+  </table>
+
 (i) Bootstrap aggregation 
 
 (ii) Snapshot ensembling
@@ -768,78 +802,79 @@ The approach which is depicted is the first phase of stacking. In stacking, we f
 ---
 
 6. Consider training corpus consisting of balls which are glued together as triangles, each
-of which has either $1, 3, 6, 10, 15, 21, 28, 36, or 45 balls$.
+of which has either $1, 3, 6, 10, 15, 21, 28, 36, \hspace{0.1em}\text{or} \hspace{0.1em} 45 \hspace{0.5em} \text{balls}$.
+    1. We draw several samples from this corpus as presented in Fig.6.3 where in each sample is equiprobable. What type of sampling approach is being utilized here?
+ 
+    <table align='center'>
+    <tr>
+    <td align="center">
+        <img src="img/nn_ensemble-2.png" alt= "Sampling approaches" style="max-width:70%;" />
+    </td>
+    </tr>
+    <tr>
+    <td align="center"> Sampling approaches</td>
+    </tr>
+    </table>
 
-1. We draw several samples from this corpus as presented in Fig.6.3 where in each sample is equiprobable. What type of sampling approach is being utilized here?
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/nn_ensemble-2.png" alt= "Sampling approaches" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> Sampling approaches</td>
-</tr>
-</table>
+      - (i) Sampling without replacement 
 
-(i) Sampling without replacement 
+      - (ii) Sampling with replacement
 
-(ii) Sampling with replacement
+    2. Two samples are drawn one after the other. In which of the following cases is the covariance between the two samples equals zero?
 
-2. Two samples are drawn one after the other. In which of the following cases is the covariance between the two samples equals zero?
+        - (i) Sampling without replacement 
 
-(i) Sampling without replacement 
+        - (ii) Sampling with replacement
 
-(ii) Sampling with replacement
+      3. During training, the corpus sampled with replacement and is divided into several folds as presented in Fig. 6.4.
+      <table align='center'>
+      <tr>
+      <td align="center">
+          <img src="img/nn_ensemble-3.png" alt= "Sampling approaches" style="max-width:70%;" />
+      </td>
+      </tr>
+      <tr>
+      <td align="center"> Sampling approaches</td>
+      </tr>
+      </table>
+      If 10 balls glued together is a sample event that we know is hard to correctly classify, then it is impossible that we are using:
 
-3. During training, the corpus sampled with replacement and is divided into several folds as presented in Fig. 6.4.
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/nn_ensemble-3.png" alt= "Sampling approaches" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> Sampling approaches</td>
-</tr>
-</table>
-If 10 balls glued together is a sample event that we know is hard to correctly classify, then it is impossible that we are using:
+      - (i) Bagging 
 
-(i) Bagging 
-
-(ii) Boosting
+      - (ii) Boosting
 
 <details><summary><b>Answer</b></summary>
 
 1. Sampling with replacement
+
 2. Sampling without replacement
+
 3. This may be mostly a result of bagging, since in boosting we would have expected miss-correctly classified observations to repeatedly appear in subsequent samples.
 
 </details>
 
 ---
 
-7. There are several methods by which the outputs of base classifiers can be combined to yield a single prediction. Fig. 6.5 depicts part of a specific ensembling approach applied to several CNN model predictions for a labelled data-set. Which approach is being utilized?
+7. There are several methods by which the outputs of base classifiers can be combined to yield a single prediction. Below code snippet depicts part of a specific ensembling approach applied to several CNN model predictions for a labelled data-set. Which approach is being utilized?
     1. Majority voting for binary classification
     2. Weighted majority voting for binary classification
     3. Majority voting for class probabilities (iv) Weighted majority class probabilities
     4. An algebraic weighted average for class probabilities
     5. An adaptive weighted majority voting for combining multiple classifiers
 
-```python
+    ```python
 
-l=[]
-for i,f in enumerate(filelist):
-    temp = pd.read_csv(f)
-    l.append(temp)
-arr = np.stack(l,axis=-1)
-avg_results = pd.DataFrame(arr[:,:-1,:].mean(axis=2))
-avg_results['image'] = l[0]['image']
-avg_results.columns = l[0].columns
+    l=[]
+    for i,f in enumerate(filelist):
+        temp = pd.read_csv(f)
+        l.append(temp)
+    arr = np.stack(l,axis=-1)
+    avg_results = pd.DataFrame(arr[:,:-1,:].mean(axis=2))
+    avg_results['image'] = l[0]['image']
+    avg_results.columns = l[0].columns
 
-FIGURE 6.5: PyTorch code snippet for an ensemble
+    ```
 
-```
 <details><summary><b>Answer</b></summary>
 An Algebraic weighted average for class probabilities.
 </details>
@@ -961,6 +996,7 @@ fore this may lead to some instances being represented numerous times while othe
 **True**, In a bagging approach, we first randomly draw (with replacement), K examples where K is the size of the original training corpus therefore leading to an imbalanced representation of the instances.
 
 </details>
+
 ---
 
 8. Bagging and boosting are two popular ensembling methods. Random forest is a bagging example while XGBoost is a boosting example.
@@ -1204,6 +1240,7 @@ the number of adjustable parameters is large compared to cardinality (i.e., size
 **True** 
 
 </details>
+
 ---
 
 17.  **True or false**: If we have a committee of $K$ trained models and the errors are uncorrelated, then by averaging them the average error of a model is reduced by a factor of $K$.
@@ -1214,6 +1251,7 @@ the number of adjustable parameters is large compared to cardinality (i.e., size
 and therefore the actual error can not be reduced by a factor of K.
 
 </details>
+
 ---
 
 18. 1. Define ensemble learning in the context of machine learning.
@@ -1259,52 +1297,54 @@ for m in models:
 
 ---
 
-20. Assume further that your colleague amends the code as follows in Fig. 6.8.
+20. Assume further that your colleague amends the code as follows.
 
-```python
+  ```python
 
-import torchvision.models as models
-import random
-import np
-...
-models = ['resnext']
-for m in models:
-    train ...
-    compute loss ...
-    amend LR ...
-    manualSeed= draw a new random number
-    random.seed(manualSeed)
-    np.random.seed(manualSeed)
-    torch.manual_seed(manualSeed)
-    if (val_acc > 90.0):
-        saveModel()
+    import torchvision.models as models
+    import random
+    import np
+    ...
+    models = ['resnext']
+    for m in models:
+        train ...
+        compute loss ...
+        amend LR ...
+        manualSeed= draw a new random number
+        random.seed(manualSeed)
+        np.random.seed(manualSeed)
+        torch.manual_seed(manualSeed)
+        if (val_acc > 90.0):
+            saveModel()
 
-```
-Explain in detail what would be the possible effects of adding `lines 10-13`.
+  ```
+  Explain in detail what would be the possible effects of adding `lines 10-13`.
 
 <details><summary><b>Answer</b></summary>
+
 Changing the random seed at each iteration/epoch, helps in introducing variation which
 may contribute to diversifying the trained neural network models.
+
 </details>
 
 ---
 
-21. 1. Assume your colleague, a veteran in DL and an expert in ensembling methods writes the following Pseudo code shown in Fig. 6.9 for the training of several neural networks. This code snippet is executed inside a standard loop in each and every training/validation epoch.
+21. 1. Assume your colleague, a veteran in DL and an expert in ensembling methods writes the following Pseudo code shown in Fig. 6.9 for the training of several neural networks. This code snippet is executed inside a standard loop in each and every training/validation epoch. 
 
-```python
+        ```python
 
-import torchvision.models as models 
-...
-models = ['resnext','vgg','dense']
-for m in models: 
-    train ...
-    compute loss/acc 
-    ... 
-    if (val_acc > 90.0):
-        saveModel()
+        import torchvision.models as models 
+        ...
+        models = ['resnext','vgg','dense']
+        for m in models: 
+            train ...
+            compute loss/acc 
+            ... 
+            if (val_acc > 90.0):
+                saveModel()
 
-```
-What type of ensembling is being utilized in this approach? Explain in detail.
+        ```
+        What type of ensembling is being utilized in this approach? Explain in detail.
 
     2. Name one method by which NN models may be combined to yield a single prediction.
 
@@ -1317,22 +1357,22 @@ What type of ensembling is being utilized in this approach? Explain in detail.
 
 ---
 
-22. 1. Referring to Fig. (6.10) which depicts a specific learning rate schedule, describe the basic notion behind its mechanism.
+22. 1. Referring to Below fig. which depicts a specific learning rate schedule, describe the basic notion behind its mechanism.
 
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/nn_ensemble-6.png" alt= "A typical binary classification problem" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> A typical binary classification problem </td>
-</tr>
-</table>
+  <table align='center'>
+  <tr>
+  <td align="center">
+      <img src="img/nn_ensemble-6.png" alt= "A typical binary classification problem" style="max-width:70%;" />
+  </td>
+  </tr>
+  <tr>
+  <td align="center"> A typical binary classification problem </td>
+  </tr>
+  </table>
 
-    2. Explain how cyclic learning rates can be effective for the training of convolutional neural networks such as the ones in the code snippet of Fig. 6.10.
+  2. Explain how cyclic learning rates can be effective for the training of convolutional neural networks such as the ones in the code snippet.
 
-    3. Explain how a cyclic cosine annealing schedule as proposed by Loshchilov [10] and [13] is used to converge to multiple local minima.
+  3. Explain how a cyclic cosine annealing schedule as proposed by Loshchilov [10] and [13] is used to converge to multiple local minima.
 
 
 <details><summary><b>Answer</b></summary>

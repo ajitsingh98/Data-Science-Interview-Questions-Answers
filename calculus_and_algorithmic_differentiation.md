@@ -31,6 +31,7 @@ Contents
 - Simple differentiation 
 - The Beta-Binomial model
 
+---
 
 ### AD, Gradient descent and Backpropagation
 
