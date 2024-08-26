@@ -78,12 +78,15 @@ $$ w^Tx + b  = 0$$
 Now, we want to maximize the margin which is basically the distance between the decision boundary(hyperplane) and the closest points in the dataset(support vectors).  
 
 Assume $x_i$ is a support vector, the distance(d) from the hyperplane can be expressed as
+
 $$d = \frac{|w^Tx_i + b|}{||w||}$$
 
 If we assume data is perfectly separable:
+
 $$y_i(w^Tx_i + b) \ge 1$$
 
 Using above two equations, margin can be derived as 
+
 $$Margin = \frac{2}{||w||}$$
 
 Note that here $2$ comes from the distance between the two support vectors(one from each class), each being at the distance of $\frac{1}{||w||}$ from the hyperplane.

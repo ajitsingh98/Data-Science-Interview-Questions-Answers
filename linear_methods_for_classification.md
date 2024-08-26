@@ -76,6 +76,7 @@ Contents
 </details>
 
 ---
+
 6. Describe how in a logistic regression model, a transformation to the response variable is applied to yield a probability distribution. Why is it considered a more informative representation of the response?
 
 <details><summary><b>Answer</b></summary>
@@ -331,7 +332,7 @@ We know the odds i.e $e^{-1}$, so
 
 $$P(y = 1) = \frac{e^{-1}}{1+e^{-1}}$$
 
-On simplifying the above expression, we get
+On simplifying above expression, we get
 
 $$P(y = 1) = 0.2689$$
 
