@@ -8,9 +8,9 @@
 
 ## Vector
 
-1. Dot product
-    1. What’s the geometric interpretation of the dot product of two vectors?
-    1. Given a vector $u$ , find vector $v$  of unit length such that the dot product of $u$  and $v$  is maximum.
+Q. Dot product
+1. What’s the geometric interpretation of the dot product of two vectors?
+1. Given a vector $u$ , find vector $v$  of unit length such that the dot product of $u$  and $v$  is maximum.
 
 <details><summary><b>Answer</b></summary>
 
@@ -46,10 +46,11 @@ This vector \( v \) will have a unit length and the dot product \( u \cdot v \) 
 
 </details>
 
+---
 
-1. Outer product
-    1. Given two vectors $a=[3,2,1]$  and $b=[−1,0,1]$. Calculate the outer product $a^Tb$ ?
-    1. Give an example of how the outer product can be useful in ML.
+Q. Outer product
+1. Given two vectors $a=[3,2,1]$  and $b=[−1,0,1]$. Calculate the outer product $a^Tb$ ?
+1. Give an example of how the outer product can be useful in ML.
 
 <details><summary><b>Answer</b></summary>
 
@@ -68,7 +69,9 @@ $$
 
 </details>
 
-1. What does it mean for two vectors to be linearly independent?
+---
+
+Q. What does it mean for two vectors to be linearly independent?
 
 <details><summary><b>Answer</b></summary>
 
@@ -82,15 +85,21 @@ is $c_1 = 0$ and $c_2 = 0$, where $c_1$ and $c_2$ are scalars and $\vec{0}$ is t
 
 </details>
 
-1. Given two sets of vectors $A=a_1,a_2,a_3,...,a_n$  and $B=b_1,b_2,b_3,...,b_m$. How do you check that they share the same basis?
+---
+
+Q. Given two sets of vectors $A=a_1,a_2,a_3,...,a_n$  and $B=b_1,b_2,b_3,...,b_m$. How do you check that they share the same basis?
 
 <details><summary><b>Answer</b></summary>
 
 </details>
-1. Given $n$  vectors, each of $d$  dimensions. What is the dimension of their span?
-1. Norms and metrics
-    1. What's the norm? What is  $L_0,L_1,L_2,L_{norm}$?
-    1. How do norms and metrics differ? Given a norm, make a metric. Given a metric, can we make a norm?
+
+---
+
+Q. Given $n$  vectors, each of $d$  dimensions. What is the dimension of their span?
+Norms and metrics
+1. What's the norm? What is  $L_0,L_1,L_2,L_{norm}$?
+1. How do norms and metrics differ? Given a norm, make a metric. Given a metric, can we make a norm?
+
 <details><summary><b>Answer</b></summary>
 
 1. A **norm** on a vector space is a function that assigns a non-negative length or size to vectors, except for the zero vector, which is assigned a length of zero. Norms are denoted by \(\|\cdot\|\) and must satisfy the following properties for any vectors \(x, y\) and any scalar \(a\):
@@ -124,11 +133,12 @@ Not all metrics come from norms. To derive a norm from a metric \(d\), the metri
 2. **Homogeneity**: \(d(\alpha x, \alpha y) = |\alpha| d(x, y)\) for all scalars \(\alpha\).
 
 If a metric satisfies these conditions, it can be associated with a norm, where the norm \(\|x\|\) can be defined as \(d(x, 0)\). However, many metrics (like the discrete metric) do not satisfy these properties and thus cannot be associated with a norm.
+
 </details>
 
 ## Matrices
 
-1. Why do we say that matrices are linear transformations?
+Q. Why do we say that matrices are linear transformations?
 
 <details><summary><b>Answer</b></summary>
 
@@ -139,7 +149,7 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 ---
 
 
-2. What’s the inverse of a matrix? Do all matrices have an inverse? Is the inverse of a matrix always unique?
+Q. What’s the inverse of a matrix? Do all matrices have an inverse? Is the inverse of a matrix always unique?
 
 <details><summary><b>Answer</b></summary>
 
@@ -150,7 +160,7 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 ---
 
 
-3. What does the determinant of a matrix represent?
+Q. What does the determinant of a matrix represent?
 
 <details><summary><b>Answer</b></summary>
 
@@ -161,7 +171,7 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 ---
 
 
-4. What happens to the determinant of a matrix if we multiply one of its rows by a scalar  $t×R$ ?
+Q. What happens to the determinant of a matrix if we multiply one of its rows by a scalar  $t×R$ ?
 
 <details><summary><b>Answer</b></summary>
 
@@ -172,7 +182,7 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 ---
 
 
-5. A $4×4$  matrix has four eigenvalues $3,3,2,−1$. What can we say about the trace and the determinant of this matrix?
+Q. A $4×4$  matrix has four eigenvalues $3,3,2,−1$. What can we say about the trace and the determinant of this matrix?
 
 <details><summary><b>Answer</b></summary>
 
@@ -183,17 +193,17 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 ---
 
 
-6. Given the following matrix:
+Q. Given the following matrix:
 
-    $$
-    \begin{bmatrix}
-    1 & 4 & -2\\
-    -1 & 3 & 2 \\
-    3 & 5 & -6
-    \end{bmatrix}
-    $$
+$$
+\begin{bmatrix}
+1 & 4 & -2\\
+-1 & 3 & 2 \\
+3 & 5 & -6
+\end{bmatrix}
+$$
 
-    Without explicitly using the equation for calculating determinants, what can we say about this matrix’s determinant?
+Without explicitly using the equation for calculating determinants, what can we say about this matrix’s determinant?
 
 <details><summary><b>Answer</b></summary>
 
@@ -203,7 +213,7 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 ---
 
 
-7. What’s the difference between the covariance matrix $A^TA$  and the Gram matrix $AA^T$ ?
+Q. What’s the difference between the covariance matrix $A^TA$  and the Gram matrix $AA^T$?
 
 <details><summary><b>Answer</b></summary>
 
@@ -213,25 +223,11 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 
 ---
 
-
-8. Given $A∈R^{n×m}$  and $b∈R^n$ 
-    1. Find $x$ such that: $Ax=b$.
-    1. When does this have a unique solution?
-    1. Why is it when $A$ has more columns than rows, $Ax=b$ has multiple solutions?
-    1. Given a matrix $A$ with no inverse. How would you solve the equation  $Ax=b$? What is the pseudo inverse and how to calculate it?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-
-9. Derivative is the backbone of gradient descent.
-    1. What does derivative represent?
-    1. What’s the difference between derivative, gradient, and Jacobian?
+Q. Given $A∈R^{n×m}$  and $b∈R^n$ 
+1. Find $x$ such that: $Ax=b$.
+1. When does this have a unique solution?
+1. Why is it when $A$ has more columns than rows, $Ax=b$ has multiple solutions?
+1. Given a matrix $A$ with no inverse. How would you solve the equation  $Ax=b$? What is the pseudo inverse and how to calculate it?
 
 <details><summary><b>Answer</b></summary>
 
@@ -242,7 +238,9 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 ---
 
 
-10. Say we have the weights $w∈R^{d×m}$  and a mini-batch $x$  of $n$  elements, each element is of the shape $1×d$  so that $x∈R^{n×d}$. We have the output $y=f(x;w)=xw$. What’s the dimension of the Jacobian $\frac{δy}{δx}$?
+Q. Derivative is the backbone of gradient descent.
+1. What does derivative represent?
+1. What’s the difference between derivative, gradient, and Jacobian?
 
 <details><summary><b>Answer</b></summary>
 
@@ -253,7 +251,7 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 ---
 
 
-11. Given a very large symmetric matrix $A$ that doesn’t fit in memory, say $A∈R^{1M×1M}$  and a function $f$ that can quickly compute $f(x)=Ax$ for $x∈R1M$. Find the unit vector $x$ so that $x^TAx$  is minimal.
+Q. Say we have the weights $w∈R^{d×m}$  and a mini-batch $x$  of $n$  elements, each element is of the shape $1×d$  so that $x∈R^{n×d}$. We have the output $y=f(x;w)=xw$. What’s the dimension of the Jacobian $\frac{δy}{δx}$?
 
 <details><summary><b>Answer</b></summary>
 
@@ -263,3 +261,13 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 
 ---
 
+
+Q. Given a very large symmetric matrix $A$ that doesn’t fit in memory, say $A∈R^{1M×1M}$  and a function $f$ that can quickly compute $f(x)=Ax$ for $x∈R1M$. Find the unit vector $x$ so that $x^TAx$  is minimal.
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---

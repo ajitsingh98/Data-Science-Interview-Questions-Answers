@@ -508,7 +508,8 @@ $$x_1 = \frac{2.5}{0.05} = 50$$
    
 ---
 
-19. Recent research suggests that heating mercury containing dental amalgams may cause the release of toxic mercury fumes into the human airways. It is also presumed that drinking hot coffee, stimulates the release of mercury vapour from amalgam fillings (Fig. 2.4).
+19. Recent research suggests that heating mercury containing dental amalgams may cause the release of toxic mercury fumes into the human airways. It is also presumed that drinking hot coffee, stimulates the release of mercury vapour from amalgam fillings.
+
 <table align='center'>
   <tr>
     <td align="center">
@@ -519,12 +520,15 @@ $$x_1 = \frac{2.5}{0.05} = 50$$
     <td align="center"> A dental amalgam </td>
   </tr>
 </table>
+
 To study factors that affect migraines, and in particular, patients who have at least four dental amalgams in their mouth, a data scientist collects data from $200K$ users with and without dental amalgams. The data scientist then fits a logistic regression model with an indicator of a second migraine within a time frame of one hour after the onset of the first migraine, as the binary response variable (e.g., migraine=1, no migraine=0). The data scientist believes that the frequency of migraines may be related to the release of toxic mercury fumes.
 There are two independent variables:
 
   1. $X_1 = 1$ if the patient has at least four amalgams; $0$ otherwise.
   2. $X_2$ = coffee consumption (0 to 100 hot cups per month).
+
 The output from training a logistic regression classifier is as follows:
+
 <table align='center'>
   <tr>
     <td align="center">
@@ -543,33 +547,33 @@ The output from training a logistic regression classifier is as follows:
 
 <details><summary><b>Answer</b></summary>
 
-1. odds of migrane $Pr(migrane = 1)$ can be given by:
+1. odds of migraine $Pr(migraine = 1)$ can be given by:
 
-  $$\frac{Pr(migrane = 1 | X_1, X_2)}{1 - Pr(migrane = 1 | X_1, X_2)} = e^{\beta_0 + \beta_1X_1 + \beta_2X_2}$$
+  $$\frac{Pr(migraine = 1 | X_1, X_2)}{1 - Pr(migraine = 1 | X_1, X_2)} = e^{\beta_0 + \beta_1X_1 + \beta_2X_2}$$
 
-  $$\frac{Pr(migrane = 1 | X_1, X_2)}{1 - Pr(migrane = 1 | X_1, X_2)} =  e^{(-6.36347 - 1.02411X_1 + 0.11904X_2)}$$
+  $$\frac{Pr(migraine = 1 | X_1, X_2)}{1 - Pr(migraine = 1 | X_1, X_2)} =  e^{(-6.36347 - 1.02411X_1 + 0.11904X_2)}$$
 
 2. Given observation has following values
   - drank 100 cups per month i.e $X_2 = 100$
   - patient that has at least four amalgams i.e $X_1 = 1$
 
-  Using above values, Expression for $Pr(migrane=1 | X_1, X_2)$ can be given by:
+  Using above values, Expression for $Pr(migraine=1 | X_1, X_2)$ can be given by:
 
-  $$Pr(migrane=1 | X_1, X_2) = \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
+  $$Pr(migraine=1 | X_1, X_2) = \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
 
   On putting $X_1 = 1$ and $X_2 = 100$, we get
 
-  $$Pr(migrane=1 | X_1, X_2) = \frac{1}{1+e^{-(-6.36374 - 1.02411 + 11.904)}}$$
+  $$Pr(migraine=1 | X_1, X_2) = \frac{1}{1+e^{-(-6.36374 - 1.02411 + 11.904)}}$$
 
-  $$Pr(migrane=1 | X_1, X_2) = \frac{1}{1+e^{-(4.516)}} = 0.989$$
+  $$Pr(migraine=1 | X_1, X_2) = \frac{1}{1+e^{-(4.516)}} = 0.989$$
 
-3. For user that have atleast 4 amalgams (X1 = 1),
+3. For user that have at-least 4 amalgams $(X_1 = 1)$,
 
-  $$Pr(migrane=1 | X_1, X_2) =  \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
+  $$Pr(migraine=1 | X_1, X_2) =  \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$
 
-  $$Pr(migrane=1 | 1, X_2) =  \frac{1}{1+e^{-(-6.36347 - 1.02411 + 0.11904X_2)}}$$
+  $$Pr(migraine=1 | 1, X_2) =  \frac{1}{1+e^{-(-6.36347 - 1.02411 + 0.11904X_2)}}$$
 
-  $$Pr(migrane=1 | 1, X_2) =  \frac{1}{1+e^{7.38758 - 0.11904X_2}}$$
+  $$Pr(migraine=1 | 1, X_2) =  \frac{1}{1+e^{7.38758 - 0.11904X_2}}$$
 
   If we increase $X_2$, denominator in above expression will decrease and hence probability will increase.
 
@@ -796,7 +800,7 @@ $$\frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)$$
 
 5. What are the assumptions of logistic regression?
 
-6. How do you deal with multicollinearity in logistic regression?
+6. How do you deal with multi-collinearity in logistic regression?
 
 7. What is the purpose of regularization in logistic regression, and how does it work?
 

@@ -13,7 +13,7 @@ Topics
 
 ## Maximal Margin Classifier
 
-1. Is support vector machine(SVM) a generalization of maximal margin classifier?
+Q. Is support vector machine(SVM) a generalization of maximal margin classifier?
 
 <details><summary><b>Answer</b></summary>
 
@@ -23,7 +23,7 @@ True
 
 ---
 
-1. What is a hyperplane?
+Q. What is a hyperplane?
 
 <details><summary><b>Answer</b></summary>
 
@@ -33,7 +33,7 @@ In a p-dimensional space, a hyperplane is a flat affine subspace of dimension $p
 
 ---
 
-1. Write generic expression of a p-dimensional hyperplane?
+Q. Write generic expression of a p-dimensional hyperplane?
 
 <details><summary><b>Answer</b></summary>
 
@@ -43,7 +43,7 @@ $$\beta_0 + \beta_1X_1 + \beta_2X_2 + .... + \beta_pX_p  = 0$$
 
 ---
 
-1. How to determine whether a point or a vector lies on a hyperplane?
+Q. How to determine whether a point or a vector lies on a hyperplane?
 
 <details><summary><b>Answer</b></summary>
 
@@ -53,7 +53,7 @@ We can put the given point in the hyperplane equation and check the sign.
 
 ---
 
-1. How does maximal margin classifier work?
+Q. How does maximal margin classifier work?
 
 <details><summary><b>Answer</b></summary>
 
@@ -113,7 +113,7 @@ $$y_i(w^Tx_i + b) \ge 1 \forall i$$
 ---
 
 
-1. What is the main limitation of maximal margin classifier?
+Q. What is the main limitation of maximal margin classifier?
 
 <details><summary><b>Answer</b></summary>
 
@@ -127,7 +127,7 @@ Maximal margin classifier has following limitations:
 
 ---
 
-1. How can we overcome limitation of maximal margin classifier?
+Q. How can we overcome limitation of maximal margin classifier?
 
 <details><summary><b>Answer</b></summary>
 
@@ -137,7 +137,7 @@ We can use soft margin i.e a hyperplane that almost separates the classes. It is
 
 ---
 
-1. How can we overcome limitation of maximal margin classifier?
+Q. How can we overcome limitation of maximal margin classifier?
 
 <details><summary><b>Answer</b></summary>
 
@@ -147,7 +147,7 @@ We can use soft margin i.e a hyperplane that almost separates the classes. It is
 
 ---
 
-1. What is difference between Maximal margin classifier(MMC) and Support vector classifier(SVC)?
+Q. What is difference between Maximal margin classifier(MMC) and Support vector classifier(SVC)?
 
 <details><summary><b>Answer</b></summary>
 
@@ -159,7 +159,7 @@ But support vector machine, sometimes called as soft margin classifier allows so
 
 ---
 
-1. How does Support vector classifier(SVC) works?
+Q. How does Support vector classifier(SVC) works?
 
 <details><summary><b>Answer</b></summary>
 
@@ -188,7 +188,7 @@ Sign(f(x^*) = \beta_0 + \beta_1x_1^{*}+...+\beta_Px_p^*)$$
 
 ---
 
-1. What kind of information we get from slack variables $\epsilon$ in SVC?
+Q. What kind of information we get from slack variables $\epsilon$ in SVC?
 
 <details><summary><b>Answer</b></summary>
 
@@ -202,7 +202,7 @@ The slack variable $\epsilon_i$ tells us where the $i$th observations is located
 
 ---
 
-1. How to interpret regularization parameter $C$ in SVC?
+Q. How to interpret regularization parameter $C$ in SVC?
 
 <details><summary><b>Answer</b></summary>
 
@@ -212,7 +212,7 @@ We can think of $C$ as a budget for the amount that margin can be violated by $n
 
 ---
 
-1. What are support vectors in SVC?
+Q. What are support vectors in SVC?
 
 <details><summary><b>Answer</b></summary>
 
@@ -222,7 +222,7 @@ Observations that lie directly on the margin or on the wrong side of the margin 
 
 ---
 
-1. Explain bias-variance tradeoff in SVC?
+Q. Explain bias-variance tradeoff in SVC?
 
 <details><summary><b>Answer</b></summary>
 
@@ -235,7 +235,7 @@ The regularization parameter $C$ controls the bias-variance trade-off.
 
 ---
 
-1. Explain bias-variance tradeoff in SVC?
+Q. Explain bias-variance tradeoff in SVC?
 
 <details><summary><b>Answer</b></summary>
 
@@ -248,7 +248,7 @@ The regularization parameter $C$ controls the bias-variance trade-off.
 
 ---
 
-1. Is SVC robust to outliers?
+Q. Is SVC robust to outliers?
 
 <details><summary><b>Answer</b></summary>
 
@@ -258,7 +258,7 @@ Yeah mostly, since the decision boundary is influenced only by support vectors, 
 
 ---
 
-1. What is the main limitation of SVC?
+Q. What is the main limitation of SVC?
 
 <details><summary><b>Answer</b></summary>
 
@@ -268,7 +268,7 @@ It struggles with the cases having non-linear decision boundary.
 
 ---
 
-1. Can we use feature space enlarging technique to solve non linear decision boundary problem with SVC?
+Q. Can we use feature space enlarging technique to solve non linear decision boundary problem with SVC?
 
 <details><summary><b>Answer</b></summary>
 
@@ -278,7 +278,7 @@ Yeah we can address the problem of non-linear boundaries between classes by enla
 
 ---
 
-1. What is support vector machine(SVM)?
+Q. What is support vector machine(SVM)?
 
 <details><summary><b>Answer</b></summary>
 
@@ -287,7 +287,7 @@ The support vector machine(SVM) is an extension of the support vector classifier
 
 ---
 
-1. What do you mean by kernel function in SVM?
+Q. What do you mean by kernel function in SVM?
 
 <details><summary><b>Answer</b></summary>
 
@@ -300,7 +300,7 @@ Kernel function quantifies the similarity of two observations.
 - Polynomial kernel
 
     $$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$
-    
+
     where, $d > 1$
 
 - Radial kernel
@@ -314,7 +314,7 @@ where, $\gamma$ is positive constant.
 
 ---
 
-1. What is advantage of using kernel trick over simply enlarging feature space using functions of the original features?
+Q. What is advantage of using kernel trick over simply enlarging feature space using functions of the original features?
 
 <details><summary><b>Answer</b></summary>
 
@@ -324,7 +324,7 @@ Kernel trick is more computationally effective technique. We only need to comput
 
 ---
 
-1. What is advantage of using kernel trick over simply enlarging feature space using functions of the original features?
+Q. What is advantage of using kernel trick over simply enlarging feature space using functions of the original features?
 
 <details><summary><b>Answer</b></summary>
 
@@ -334,7 +334,7 @@ Kernel trick is more computationally effective technique. We only need to comput
 
 ---
 
-1. Is SVM a linear model or non-linear model?
+Q. Is SVM a linear model or non-linear model?
 
 <details><summary><b>Answer</b></summary>
 
@@ -344,7 +344,7 @@ SVM can be linear or non-linear depending on the kernels we are using. When we a
 
 ---
 
-1. What is the kernel trick in Support Vector Machines (SVM), and how does it work?
+Q. What is the kernel trick in Support Vector Machines (SVM), and how does it work?
 
 <details><summary><b>Answer</b></summary>
 
@@ -360,7 +360,7 @@ Instead of transforming the data explicitly:
 
 ---
 
-1. How can we set up SVMs to work with multi class classification problems?
+Q. How can we set up SVMs to work with multi class classification problems?
 
 <details><summary><b>Answer</b></summary>
 
@@ -381,7 +381,7 @@ To classify a new observation $x^*$, we compute the decision function values for
 ---
 
 
-1. Is the SVM unique in its use of kernels to enlarge the feature space to accommodate non-linear class boundaries?
+Q. Is the SVM unique in its use of kernels to enlarge the feature space to accommodate non-linear class boundaries?
 
 <details><summary><b>Answer</b></summary>
 
@@ -392,7 +392,7 @@ No, we could use it for other classification methods as well like with logistic 
 ---
 
 
-1. When should we use SVMs over logistic regression?
+Q. When should we use SVMs over logistic regression?
 
 <details><summary><b>Answer</b></summary>
 
@@ -402,7 +402,7 @@ When the classes are well separated, SVMs tend to behave better than logistic re
 
 ---
 
-1. When should we use SVMs over logistic regression?
+Q. When should we use SVMs over logistic regression?
 
 <details><summary><b>Answer</b></summary>
 
@@ -412,7 +412,7 @@ When the classes are well separated, SVMs tend to behave better than logistic re
 
 ---
 
-1. Given a true label $y = +1$ and a predicted score $\hat{y} = 0.5$, calculate the hinge loss for this classification example?
+Q. Given a true label $y = +1$ and a predicted score $\hat{y} = 0.5$, calculate the hinge loss for this classification example?
 
 <details><summary><b>Answer</b></summary>
 
@@ -430,15 +430,15 @@ $$Loss = max[0, 1 - 0.5] = 0.5$$
 
 ## Support Vector Machines
 
-1. SVM.
-    1. What’s linear separation? Why is it desirable when we use SVM?
-    ![image](img/svm1.png)
-    1. How well would vanilla SVM work on this dataset?
-    ![image](img/svm2.png)
-    1. How well would vanilla SVM work on this dataset?
-    ![image](img/svm3.png)
-    1. How well would vanilla SVM work on this dataset?
-    ![image](img/svm4.png)
+Q. SVM.
+1. What’s linear separation? Why is it desirable when we use SVM?
+![image](img/svm1.png)
+1. How well would vanilla SVM work on this dataset?
+![image](img/svm2.png)
+1. How well would vanilla SVM work on this dataset?
+![image](img/svm3.png)
+1. How well would vanilla SVM work on this dataset?
+![image](img/svm4.png)
 
 <details><summary><b>Answer</b></summary>
 
@@ -448,104 +448,159 @@ $$Loss = max[0, 1 - 0.5] = 0.5$$
 
 ---
 
-2. What is the main difference between Support Vector Machines (SVM) and Support Vector Regression (SVR)?
+## Support Vector Regression
+
+
+Q. What is the main difference between Support Vector Machines (SVM) and Support Vector Regression (SVR)?
 
 <details><summary><b>Answer</b></summary>
 
+SVM is designed for classification by finding the best decision boundary between classes, while SVR is tailored for regression, focusing on fitting data points within a defined margin of error. 
+
+SVM and SVR also differ in the loss function they want to minimize:
+
+- SVM Loss Function (Hinge Loss)
+
+$$\text{Loss} = \max(0, 1 - y_i \cdot (\mathbf{w} \cdot \mathbf{x}_i + b))$$
+
+-  SVR Loss Function (Epsilon-Insensitive Loss)
+
+$$
+\text{Loss} = 
+\begin{cases}
+0 & \text{if } |y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| \leq \epsilon \\
+|y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| - \epsilon & \text{otherwise}
+\end{cases}
+$$
 
 
 </details>
 
 ---
 
-3. What are the key components of SVR?
+Q. What are the key components of SVR?
 
 <details><summary><b>Answer</b></summary>
 
+The key components of SVR are:
+- $ε-tube$ (ε-insensitive tube), 
+- Support vectors
+- Hyperplane
+
+</details>
+
+---
+
+Q. What is the role of the ε-tube in SVR?
+
+<details><summary><b>Answer</b></summary>
+
+The ε-tube (epsilon-tube) in Support Vector Regression (SVR) plays a crucial role in defining the margin of error around the regression line within which the model does not penalize errors.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/SVR-e-tube.jpeg" alt= "E-tube in SVR" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center">ε-tube (epsilon-tube) in Support Vector Regression (SVR)</td>
+</tr>
+</table>
+
+Role of the ε-Tube in SVR:
+
+1. **Defines Tolerance Margin**: The ε-tube sets a tolerance level within which predictions can deviate from the actual target values without incurring a penalty. Points that lie inside this tube are considered acceptable deviations, and no loss is calculated for these points.
+
+2. **Controls Model Complexity**: By adjusting the width of the ε-tube (controlled by the epsilon parameter), you can make the model more or less sensitive to deviations from the actual data points. A wider ε-tube allows for more flexibility and fewer support vectors, leading to a simpler model, while a narrower tube makes the model stricter and more sensitive to the data points.
+
+3. **Balances Fit and Generalization**: The ε-tube helps SVR strike a balance between fitting the data closely and maintaining good generalization. By ignoring small errors within the tube, SVR avoids overfitting to minor variations or noise in the data.
+
+4. **Determines Support Vectors**: Only the data points that lie outside the ε-tube become support vectors, which influence the final regression model. Points inside the tube do not affect the optimization of the regression line, allowing the model to focus only on significant deviations.
 
 
 </details>
 
 ---
 
-4. What is the role of the ε-tube in SVR?
+Q. How do you tune the hyperparameters in SVR?
 
 <details><summary><b>Answer</b></summary>
 
+Hyperparameters in SVR include:
 
+- Regularization parameter $C$
+- Kernel type
+- Kernel-specific parameters (e.g., degree for polynomial kernels, gamma for RBF kernels)
+
+Tuning can be done using techniques like grid search or randomized search cross-validation to find the optimal combination of hyperparameters.
 
 </details>
 
 ---
 
-5. What are the different types of SVR Kernels, and when should they be used?
+Q. What is the significance of the regularization parameter ($C$) in SVR?
 
 <details><summary><b>Answer</b></summary>
 
-
+The parameter $C$$ determines how strictly the model should fit the data versus maintaining a smooth regression function. A high  value emphasizes minimizing errors (fitting the data closely), while a low value emphasizes maximizing the margin and maintaining model simplicity.
 
 </details>
 
 ---
 
-6. How do you tune the hyperparameters in SVR?
+Q. How does SVR handle outliers in the data?
 
 <details><summary><b>Answer</b></summary>
 
-
+SVR handles outliers by using an ε-insensitive loss function, a soft margin approach, and a tunable regularization parameter, making it more robust to outliers compared to traditional regression methods. However, extreme outliers can still affect the model, so proper preprocessing, such as scaling and outlier removal, is recommended.
 
 </details>
 
 ---
 
-7. What is the significance of the regularization parameter (C) in SVR?
+Q. What are the evaluation metrics used to assess the performance of SVR models?
 
 <details><summary><b>Answer</b></summary>
 
+Common evaluation metrics for SVR include:
 
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+- Mean Absolute Error (MAE) 
+- R-squared (R2) to measure the goodness of fit.
 
 </details>
 
 ---
 
-8. How does SVR handle outliers in the data?
+Q. What are the advantages and disadvantages of SVR compared to other regression techniques?
 
 <details><summary><b>Answer</b></summary>
 
+Advantages of using SVR:
 
+- **Robust to Outliers**: SVR uses a margin of tolerance (epsilon-insensitive loss), making it less sensitive to outliers compared to methods like linear regression.
+- **Non-Linear Relationships**: SVR can capture non-linear relationships using kernel tricks (e.g., RBF, polynomial kernels), making it more versatile than simple linear models.
+- **Generalization**: SVR aims to find a hyperplane that maximizes the margin, often resulting in better generalization on unseen data compared to other methods that minimize error without considering margin.
+
+Disadvantages of using SVR:
+
+- **Complexity and Computational Cost**: SVR can be computationally expensive, especially with large datasets or complex kernels, unlike simpler models like linear or ridge regression.
+- **Not Scale Invariant**: SVR is sensitive to the scale of input features, requiring careful feature scaling, unlike some tree-based methods that are more robust to unscaled data.
+-  **Interpretability Issue**: It is less interpretable because it doesn't provide clear coefficients for each feature.
 
 </details>
 
 ---
 
-9. What are the evaluation metrics used to assess the performance of SVR models?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-10. What are the advantages and disadvantages of SVR compared to other regression techniques?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-11. Can SVR be used for time series forecasting?
+Q. Can SVR be used for time series forecasting?
 
 
 <details><summary><b>Answer</b></summary>
 
-
+Yes, SVR can be applied to time series data by performing feature engineering on time/date attributes. However, it's not the best approach because SVR does not account for the temporal relationships in the data, which are crucial for time series forecasting.
 
 </details>
 
 ---
-

@@ -19,7 +19,7 @@ Along with you have some meta data tables like `title` and `bonus` which contain
 
 ## SQL Questions
 
-1. How do you retrieve the first name from the Worker table using an alias "WORKER NAME"?
+Q. How do you retrieve the first name from the Worker table using an alias "WORKER NAME"?
 
 <details ><summary><b>Answer</b></summary>
     <p>
@@ -29,7 +29,7 @@ Along with you have some meta data tables like `title` and `bonus` which contain
 
 ---
 
-2. How can you convert the first name from the Worker table to uppercase?
+Q. How can you convert the first name from the Worker table to uppercase?
 
 <details ><summary><b>Answer</b></summary>
     <p>
@@ -39,7 +39,7 @@ Along with you have some meta data tables like `title` and `bonus` which contain
 
 ---
 
-3. What SQL query would you use to fetch distinct department names from the Worker table?
+Q. What SQL query would you use to fetch distinct department names from the Worker table?
 
 <details ><summary><b>Answer</b></summary>
     <p>
@@ -49,7 +49,7 @@ Along with you have some meta data tables like `title` and `bonus` which contain
 
 ---
 
-4. How can you select the first three characters of the first name from the Worker table?
+Q. How can you select the first three characters of the first name from the Worker table?
 
 <details ><summary><b>Answer</b></summary>
     <p>
@@ -59,7 +59,7 @@ Along with you have some meta data tables like `title` and `bonus` which contain
 
 ---
 
-5. Write a query to find the position of 's' in the first name "Manish" within the Worker table.
+Q. Write a query to find the position of 's' in the first name "Manish" within the Worker table.
 
 <details ><summary><b>Answer</b></summary>
     <p>
@@ -69,7 +69,7 @@ Along with you have some meta data tables like `title` and `bonus` which contain
 
 ---
 
-6. How do you trim whitespace from the right side of the first name in the Worker table?
+Q. How do you trim whitespace from the right side of the first name in the Worker table?
 
 <details ><summary><b>Answer</b></summary>
     <p>

@@ -6,7 +6,7 @@ Topics
 - [Linear Regression and Least Squares](#linear-regression)
 - [Subset Selection](#subset-selection)
 - [Shrinkage Methods](#shrinkage-methods)
-
+- [Curse Of Dimensionality](#curse-of-dimensionality)
 
 ## Linear Regression
 
@@ -835,3 +835,116 @@ Yeah, It may occur when one predictor variable in a regression model is an exact
 </details>
 
 ---
+
+
+### Curse Of Dimensionality
+
+6. How can we determine whether a dataset is high-dimensional or low-dimensional?
+
+<details><summary><b>Answer</b></summary>
+
+We can determine whether a dataset is high-dimensional or low-dimensional by comparing the number of features($p$) to the number of observations($n$). 
+
+- High dimensional
+    
+    - $p \gg n$
+
+- Low dimensional
+
+    - $n \gg p$
+
+</details>
+
+---
+
+6. What is the issue of using least squares regression in high dimensional setting?
+
+<details><summary><b>Answer</b></summary>
+
+When $p > n$, where $p$ is the number of features and $n$ is the number of observations, the least squares method will produce coefficient estimates that perfectly fit the data, resulting in zero residuals. This occurs regardless of whether there is a true relationship between the features and the response. Such a perfect fit is problematic because it leads to overfitting, capturing noise rather than the underlying pattern. The issue is that when $p > n$ or $p \approx n$, least squares regression is too flexible, making the model prone to overfitting the data.
+
+</details>
+
+---
+
+6. What happens to the Train MSE and Test MSE in a linear regression model if we add features that are completely unrelated to the response?
+
+<details><summary><b>Answer</b></summary>
+
+As we induct more redundant features in a linear regression model, the Train MSE will typically decrease because the model can fit the training data better due to the additional features. However, the Test MSE is likely to increase because including the additional predictors leads to a vast increase in the variance of the coefficient estimates(overfitting).
+
+</details>
+
+---
+
+7. What is curse of dimensionality?
+
+<details><summary><b>Answer</b></summary>
+
+The curse of dimensionality refers to the phenomenon where the test error typically increases as the number of features or predictors in a dataset grows, unless these additional features have a genuine relationship with the response variable. This occurs because as dimensionality rises, the data becomes sparser, making it harder for models to generalize well and increasing the risk of overfitting.
+
+</details>
+
+---
+
+7. If I add a feature to my linear regression model, how will it affect the Train MSE and Test MSE?
+
+<details><summary><b>Answer</b></summary>
+
+When you add a feature to your linear regression model, the Train MSE will generally decrease because the model becomes better at fitting the training data. However, the Test MSE may increase if the new feature does not contribute meaningful information and instead leads to overfitting. This happens because the additional feature can cause the model to capture noise rather than the underlying pattern, which harms its performance on new, unseen data.
+
+</details>
+
+---
+
+7. Can we use lasso or ridge regression in high dimensional setup?
+
+<details><summary><b>Answer</b></summary>
+
+Yeah, They will make the linear regression less flexible in higher dimensional and prevent to overfit the train data.
+
+</details>
+
+---
+
+7. Can we use lasso or ridge regression in high dimensional setup?
+
+<details><summary><b>Answer</b></summary>
+
+Yeah, They will make the linear regression less flexible in higher dimensional and prevent to overfit the train data.
+
+</details>
+
+---
+
+7. [True/False] In the high-dimensional setting, the multicollinearity problem is extreme?
+
+<details><summary><b>Answer</b></summary>
+
+True
+
+</details>
+
+---
+
+7. [True/False] In the high-dimensional setting, the multicollinearity problem is extreme?
+
+<details><summary><b>Answer</b></summary>
+
+True
+
+</details>
+
+---
+
+7. Why should one be cautious when reporting errors and measures of model fit in high-dimensional settings?
+
+<details><summary><b>Answer</b></summary>
+
+In high-dimensional settings (where $p > n$), traditional measures like sum of squared errors, p-values, and $R^2$ can be misleading. A model might show zero residuals or an $R^2$ of 1 simply due to overfitting, not because it is genuinely good. To avoid misinterpretation, rely on performance metrics from an independent test set or cross-validation, as these provide a more accurate assessment of the model's true effectiveness.
+
+</details>
+
+---
+
+

@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
+        "autoencoder",
+        "autoencoders",
         "Backpropagation",
         "Collinearity",
         "Ensembling",
@@ -7,6 +9,7 @@
         "generalizability",
         "Homoscedasticity",
         "interpretability",
-        "overfitting"
+        "overfitting",
+        "undercomplete"
     ]
 }
