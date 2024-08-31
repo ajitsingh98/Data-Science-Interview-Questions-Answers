@@ -19,61 +19,137 @@ Topics
 
 ### Basic Probability
 
-1. What do you mean by probability?
+Q. What do you mean by probability?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
-2. Define probability of an event?
+Q. Define probability of an event?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
-3. Define disjoint sets.
+Q. Define disjoint sets.
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
-
-
 
 ### Conditional Probability
 
-1. Write the expression of probability of $A$ given that $B$ has already occured.
+Q. Write the expression of probability of $A$ given that $B$ has already occured.
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
-2. What is the law of total probability?
+
+Q. What is the law of total probability?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
-3. What does it mean for two variables to be independent?
+Q. What does it mean for two variables to be independent?
 
----
-4. Given two random variables $X$  and $Y$. We have the values $P(X|Y)$  and $P(Y)$  for all values of $X$  and $Y$. How would you calculate $P(X)$?
+<details><summary><b>Answer</b></summary>
 
----
-5. You know that your colleague Jason has two children and one of them is a boy. What’s the probability that Jason has two sons? 
 
----
-6. Consider a room of $n$ people. Suppose that their birthdays are randomly distributed among $365$ days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs $n$. Find the probability when $n=2$.
+
+</details>
 
 ---
 
-7. Given two events $A$ and $B$ in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively:
-    1. Define the conditional probability of $A$ given $B$. Mind singular cases. 
-    2. Annotate each part of the conditional probability formulae.
-    3. Draw an instance of Venn diagram, depicting the intersection of the events $A$ and $B$. Assume that $A  \cup B = H$.
+Q. Given two random variables $X$  and $Y$. We have the values $P(X|Y)$  and $P(Y)$  for all values of $X$  and $Y$. How would you calculate $P(X)$?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
-8. Assume you manage an unreliable file storage system that crashed 5 times in the last year, each crash happens independently.
-    1. What's the probability that it will crash in the next month?
-    1. What's the probability that it will crash at any given moment?
+
+Q. You know that your colleague Jason has two children and one of them is a boy. What’s the probability that Jason has two sons? 
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
-9. Say you built a classifier to predict the outcome of football matches. In the past, it's made 10 wrong predictions out of 100. Assume all predictions are made independently, what's the probability that the next 20 predictions are all correct?
+
+Q. Consider a room of $n$ people. Suppose that their birthdays are randomly distributed among $365$ days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs $n$. Find the probability when $n=2$.
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
+Q. Given two events $A$ and $B$ in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively:
+1. Define the conditional probability of $A$ given $B$. Mind singular cases. 
+2. Annotate each part of the conditional probability formulae.
+3. Draw an instance of Venn diagram, depicting the intersection of the events $A$ and $B$. Assume that $A  \cup B = H$.
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
+Q. Assume you manage an unreliable file storage system that crashed 5 times in the last year, each crash happens independently.
+1. What's the probability that it will crash in the next month?
+1. What's the probability that it will crash at any given moment?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
+Q. Say you built a classifier to predict the outcome of football matches. In the past, it's made 10 wrong predictions out of 100. Assume all predictions are made independently, what's the probability that the next 20 predictions are all correct?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
 
 ---
 
 ### Bayes Theorem
 
-1. State bayes theorem.
+Q. State bayes theorem.
 
 <details><summary><b>Answer</b></summary>
 
@@ -83,18 +159,7 @@ Topics
 
 ---
 
-2. Write the simplified version of bayes rules.
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
-
----
-
-3. Show the relationship between the prior, posterior and likelihood probabilities.
+Q. Write the simplified version of bayes rules.
 
 <details><summary><b>Answer</b></summary>
 
@@ -105,7 +170,7 @@ Topics
 
 ---
 
-4. In a Bayesian context, if a first experiment is conducted, and then another experiment is followed, what does the posterior become for the next experiment?
+Q. Show the relationship between the prior, posterior and likelihood probabilities.
 
 <details><summary><b>Answer</b></summary>
 
@@ -116,7 +181,7 @@ Topics
 
 ---
 
-5. What is the condition under which two events $A$ and $B$ are said to be statistically independent?
+Q. In a Bayesian context, if a first experiment is conducted, and then another experiment is followed, what does the posterior become for the next experiment?
 
 <details><summary><b>Answer</b></summary>
 
@@ -127,7 +192,7 @@ Topics
 
 ---
 
-6. Suppose there are three closed doors and a car has been placed behind one of the door at random. There are two goats behind the other two doors. Now you pick a door 1 but the admin knows where the car is and open the door 2 to reveal a goat(admin will always open the door with a goat). Now he offers you to stay at the same chosen door or switch between closed doors i.e door 1 and door 2. Should you switch the door to maximize chances of getting car?
+Q. What is the condition under which two events $A$ and $B$ are said to be statistically independent?
 
 <details><summary><b>Answer</b></summary>
 
@@ -138,21 +203,7 @@ Topics
 
 ---
 
-7. There are only two electronic chip manufacturers: $A$ and $B$, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of $70%$.
-    1. If you randomly pick a chip from the store, what is the probability that it is defective?
-    1. Suppose you now get two chips coming from the same company, but you don’t know which one. When you test the first chip, it appears to be functioning. What is the probability that the second electronic chip is also good?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-8. There’s a rare disease that only 1 in 10000 people get. Scientists have developed a test to diagnose the disease with the false positive rate and false negative rate of 1%.
-    1. Given a person is diagnosed positive, what’s the probability that this person actually has the disease?
-    1. What’s the probability that a person has the disease if two independent tests both come back positive?
+Q. Suppose there are three closed doors and a car has been placed behind one of the door at random. There are two goats behind the other two doors. Now you pick a door 1 but the admin knows where the car is and open the door 2 to reveal a goat(admin will always open the door with a goat). Now he offers you to stay at the same chosen door or switch between closed doors i.e door 1 and door 2. Should you switch the door to maximize chances of getting car?
 
 <details><summary><b>Answer</b></summary>
 
@@ -163,7 +214,21 @@ Topics
 
 ---
 
-9. A dating site allows users to select $10$ out of $50$ adjectives to describe themselves. Two users are said to match if they share at least $5$ adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?
+Q. There are only two electronic chip manufacturers: $A$ and $B$, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of $70%$.
+1. If you randomly pick a chip from the store, what is the probability that it is defective?
+1. Suppose you now get two chips coming from the same company, but you don’t know which one. When you test the first chip, it appears to be functioning. What is the probability that the second electronic chip is also good?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
+Q. There’s a rare disease that only 1 in 10000 people get. Scientists have developed a test to diagnose the disease with the false positive rate and false negative rate of 1%.
+1. Given a person is diagnosed positive, what’s the probability that this person actually has the disease?
+1. What’s the probability that a person has the disease if two independent tests both come back positive?
 
 <details><summary><b>Answer</b></summary>
 
@@ -174,7 +239,7 @@ Topics
 
 ---
 
-10. Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$  and the height of females follows $h_j=N(μ_j,σ^{2}_j)$ . Derive a probability density function to describe A’s height.
+Q. A dating site allows users to select $10$ out of $50$ adjectives to describe themselves. Two users are said to match if they share at least $5$ adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?
 
 <details><summary><b>Answer</b></summary>
 
@@ -185,7 +250,7 @@ Topics
 
 ---
 
-11. There are three weather apps, each the probability of being wrong $\frac{1}{3}$ of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy $50%$ of the time?
+Q. Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$  and the height of females follows $h_j=N(μ_j,σ^{2}_j)$ . Derive a probability density function to describe A’s height.
 
 <details><summary><b>Answer</b></summary>
 
@@ -196,7 +261,7 @@ Topics
 
 ---
 
-12. Given n  samples from a uniform distribution $[0,d]$. How do you estimate $d$? (Also known as the German tank problem)
+Q. There are three weather apps, each the probability of being wrong $\frac{1}{3}$ of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy $50%$ of the time?
 
 <details><summary><b>Answer</b></summary>
 
@@ -207,7 +272,7 @@ Topics
 
 ---
 
-13. You’re part of a class. How big the class has to be for the probability of at least a person sharing the same birthday with you is greater than $50%$?
+Q. Given n  samples from a uniform distribution $[0,d]$. How do you estimate $d$? (Also known as the German tank problem)
 
 <details><summary><b>Answer</b></summary>
 
@@ -218,7 +283,7 @@ Topics
 
 ---
 
-14. You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p$ of winning, which doubles your bet, and $1−p$ of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of $p$?
+Q. You’re part of a class. How big the class has to be for the probability of at least a person sharing the same birthday with you is greater than $50%$?
 
 <details><summary><b>Answer</b></summary>
 
@@ -229,7 +294,7 @@ Topics
 
 ---
 
-15. In national health research in the US, the results show that the top 3 cities with the lowest rate of kidney failure are cities with populations under $5,000$. Doctors originally thought that there must be something special about small town diets, but when they looked at the top 3 cities with the highest rate of kidney failure, they are also very small cities. What might be a probabilistic explanation for this phenomenon?
+Q. You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p$ of winning, which doubles your bet, and $1−p$ of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of $p$?
 
 <details><summary><b>Answer</b></summary>
 
@@ -240,7 +305,7 @@ Topics
 
 ---
 
-16. Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively. Given that $A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.
+Q. In national health research in the US, the results show that the top 3 cities with the lowest rate of kidney failure are cities with populations under $5,000$. Doctors originally thought that there must be something special about small town diets, but when they looked at the top 3 cities with the highest rate of kidney failure, they are also very small cities. What might be a probabilistic explanation for this phenomenon?
 
 <details><summary><b>Answer</b></summary>
 
@@ -251,7 +316,18 @@ Topics
 
 ---
 
-17. In an experiment conducted in the field of particle physics (Fig. 3.2), a certain particle may be in two distinct equally probable quantum states: integer spin or half-integer spin. It is well-known that particles with integer spin are bosons, while particles with half-integer spin are fermions.
+Q. Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively. Given that $A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
+---
+
+Q. In an experiment conducted in the field of particle physics (Fig. 3.2), a certain particle may be in two distinct equally probable quantum states: integer spin or half-integer spin. It is well-known that particles with integer spin are bosons, while particles with half-integer spin are fermions.
 <table align='center'>
 <tr>
 <td align="center">
@@ -273,7 +349,7 @@ A physicist is observing two such particles, while at least one of which is in a
 
 ---
 
-18. During pregnancy, the Placenta Chorion Test is commonly used for the diagnosis of hereditary diseases (Fig. 3.3). The test has a probability of $0.95$ of being correct whether or not a hereditary disease is present.
+Q. During pregnancy, the Placenta Chorion Test is commonly used for the diagnosis of hereditary diseases (Fig. 3.3). The test has a probability of $0.95$ of being correct whether or not a hereditary disease is present.
 
 <table align='center'>
 <tr>
@@ -294,9 +370,9 @@ It is known that $1\%$ of pregnancies result in hereditary diseases. Calculate t
 
 </details>
 
-
 ---
-19. The Dercum disease is an extremely rare disorder of multiple painful tissue growths.
+
+Q. The Dercum disease is an extremely rare disorder of multiple painful tissue growths.
 In a population in which the ratio of females to males is equal, 5% of females and 0.25% of males have the Dercum disease (Fig. 3.4).
 
 <table align='center'>
@@ -320,7 +396,7 @@ A person is chosen at random and that person has the Dercum disease. Calculate t
 
 ---
 
-20. There are numerous fraudulent binary options websites scattered around the Internet, and for every site that shuts down, new ones are sprouted like mushrooms. A fraudulent AI based stock-market prediction algorithm utilized at the New York Stock Exchange, (Fig. 3.6) can correctly predict if a certain binary option shifts states from 0 to 1 or the other way around, with $85\%$ certainty.
+Q. There are numerous fraudulent binary options websites scattered around the Internet, and for every site that shuts down, new ones are sprouted like mushrooms. A fraudulent AI based stock-market prediction algorithm utilized at the New York Stock Exchange, (Fig. 3.6) can correctly predict if a certain binary option shifts states from 0 to 1 or the other way around, with $85\%$ certainty.
 
 <table align='center'>
 <tr>
@@ -344,7 +420,7 @@ A financial engineer has created a portfolio consisting twice as many $state-1$ 
 
 ---
 
-21. In an experiment conducted by a hedge fund to determine if monkeys (Fig. 3.6) can
+Q. In an experiment conducted by a hedge fund to determine if monkeys (Fig. 3.6) can
 outperform humans in selecting better stock market portfolios, 0.05 of humans and 1 out of 15 monkeys could correctly predict stock market trends correctly.
 
 <table align='center'>
@@ -369,7 +445,7 @@ From an equally probable pool of humans and monkeys an “expert” is chosen at
 
 ---
 
-22. During the cold war, the U.S.A developed a speech to text (STT) algorithm that could theoretically detect the hidden dialects of Russian sleeper agents. These agents (Fig. 3.7), were trained to speak English in Russia and subsequently sent to the US to gather intelligence. The FBI was able to apprehend ten such hidden Russian spies and accused them of being "sleeper" agents.
+Q. During the cold war, the U.S.A developed a speech to text (STT) algorithm that could theoretically detect the hidden dialects of Russian sleeper agents. These agents (Fig. 3.7), were trained to speak English in Russia and subsequently sent to the US to gather intelligence. The FBI was able to apprehend ten such hidden Russian spies and accused them of being "sleeper" agents.
 
 <table align='center'>
 <tr>
@@ -393,7 +469,7 @@ The Algorithm relied on the acoustic properties of Russian pronunciation of the 
 
 ---
 
-23. During World War II, forces on both sides of the war relied on encrypted communications. The main encryption scheme used by the German military was an Enigma machine, which was employed extensively by Nazi Germany. Statistically, the Enigma machine sent the symbols X and Z Fig. (3.8) according to the following probabilities:
+Q. During World War II, forces on both sides of the war relied on encrypted communications. The main encryption scheme used by the German military was an Enigma machine, which was employed extensively by Nazi Germany. Statistically, the Enigma machine sent the symbols X and Z Fig. (3.8) according to the following probabilities:
 
 $$
 P(X) = \frac{2}{9} \\ 
@@ -423,7 +499,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-24.  What is the relationship between the likelihood function and the log-likelihood function?
+Q. What is the relationship between the likelihood function and the log-likelihood function?
 
 <details><summary><b>Answer</b></summary>
 
@@ -434,7 +510,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-25.  Describe how to analytically find the MLE of a likelihood function?
+Q. Describe how to analytically find the MLE of a likelihood function?
 
 <details><summary><b>Answer</b></summary>
 
@@ -445,7 +521,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-26. What is the term used to describe the first derivative of the log-likelihood function?
+Q. What is the term used to describe the first derivative of the log-likelihood function?
 
 <details><summary><b>Answer</b></summary>
 
@@ -456,19 +532,21 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-27. Naive Bayes classifier.
-    1. How is Naive Bayes classifier naive?
-    1. Let’s try to construct a Naive Bayes classifier to classify whether a tweet has a positive or negative sentiment. We have four training samples:
-    ```math
-    \begin{bmatrix} 
-        Tweet & Label \\
-        This makes me so upset & Negative\\
-        This puppy makes me happy & Positive \\
-        Look at this happy hamster & Positive \\
-        No hamsters allowed in my house	 & Negative
-        \end{bmatrix}
-    ```
-    According to your classifier, what's sentiment of the sentence The hamster is upset with the puppy?
+Q. Naive Bayes classifier.
+1. How is Naive Bayes classifier naive?
+1. Let’s try to construct a Naive Bayes classifier to classify whether a tweet has a positive or negative sentiment. We have four training samples:
+
+$$
+\begin{bmatrix} 
+    \text{Tweet} &  \text{Label} \\
+    \text{This makes me so upset} & \text{Negative}\\
+    \text{This puppy makes me happy} & \text{Positive} \\
+    \text{Look at this happy hamster} & \text{Positive} \\
+    \text{No hamsters allowed in my house} & \text{Negative}
+    \end{bmatrix}
+$$
+
+According to your classifier, what's sentiment of the sentence The hamster is upset with the puppy?
 
 <details><summary><b>Answer</b></summary>
 
@@ -478,18 +556,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-1. How does the Naive Bayes algorithm work?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-
-2. What is Laplace smoothing (additive smoothing) in Naive Bayes?
+Q. How does the Naive Bayes algorithm work?
 
 <details><summary><b>Answer</b></summary>
 
@@ -500,7 +567,7 @@ In one incident, the German military sent encoded messages while the British arm
 ---
 
 
-3. Can Naive Bayes handle continuous and categorical features?
+Q. What is Laplace smoothing (additive smoothing) in Naive Bayes?
 
 <details><summary><b>Answer</b></summary>
 
@@ -511,7 +578,7 @@ In one incident, the German military sent encoded messages while the British arm
 ---
 
 
-4. What are the advantages of using Naive Bayes?
+Q. Can Naive Bayes handle continuous and categorical features?
 
 <details><summary><b>Answer</b></summary>
 
@@ -522,7 +589,7 @@ In one incident, the German military sent encoded messages while the British arm
 ---
 
 
-5. What are the advantages of using Naive Bayes?
+Q. What are the advantages of using Naive Bayes?
 
 <details><summary><b>Answer</b></summary>
 
@@ -533,7 +600,7 @@ In one incident, the German military sent encoded messages while the British arm
 ---
 
 
-6. Can Naive Bayes handle missing data?
+Q. What are the advantages of using Naive Bayes?
 
 <details><summary><b>Answer</b></summary>
 
@@ -544,7 +611,7 @@ In one incident, the German military sent encoded messages while the British arm
 ---
 
 
-7. How do you evaluate the performance of a Naive Bayes classifier?
+Q. Can Naive Bayes handle missing data?
 
 <details><summary><b>Answer</b></summary>
 
@@ -555,7 +622,17 @@ In one incident, the German military sent encoded messages while the British arm
 ---
 
 
-8. What is the difference between Naive Bayes and other classification algorithms like Logistic Regression or Decision Trees?
+Q. How do you evaluate the performance of a Naive Bayes classifier?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
+Q. What is the difference between Naive Bayes and other classification algorithms like Logistic Regression or Decision Trees?
 
 
 <details><summary><b>Answer</b></summary>
@@ -568,7 +645,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ### Random Variables
 
-1. In context of random variables define the following terms:
+Q. In context of random variables define the following terms:
 
 - Distributions
 - Expectations
@@ -586,7 +663,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-2. Can the values of PDF be greater than 1? If so, how do we interpret PDF?
+Q. Can the values of PDF be greater than 1? If so, how do we interpret PDF?
 
 
 <details><summary><b>Answer</b></summary>
@@ -598,7 +675,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-3. What’s the difference between multivariate distribution and multimodal distribution?
+Q. What’s the difference between multivariate distribution and multimodal distribution?
 
 
 <details><summary><b>Answer</b></summary>
@@ -610,7 +687,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-4. How would you turn a probabilistic model into a deterministic model?
+Q. How would you turn a probabilistic model into a deterministic model?
 
 
 <details><summary><b>Answer</b></summary>
@@ -623,7 +700,7 @@ In one incident, the German military sent encoded messages while the British arm
 ---
 
 
-5.  What is the relationship between the likelihood function and the log-likelihood function?
+Q. What is the relationship between the likelihood function and the log-likelihood function?
 
 
 <details><summary><b>Answer</b></summary>
@@ -635,7 +712,7 @@ In one incident, the German military sent encoded messages while the British arm
 
 ---
 
-6. What is a moment of function? Explain the meanings of the zeroth to fourth moments.
+Q. What is a moment of function? Explain the meanings of the zeroth to fourth moments.
 
 
 <details><summary><b>Answer</b></summary>
@@ -690,7 +767,7 @@ $$\[Kurtosis = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^
 
 ### Discrete Random Variables
 
-1. List down some famous discrete distributions.
+Q. List down some famous discrete distributions.
 
 
 <details><summary><b>Answer</b></summary>
@@ -702,7 +779,7 @@ $$\[Kurtosis = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^
 
 ---
 
-1. Define what is meant by a Bernoulli trial.
+Q. Define what is meant by a Bernoulli trial.
 
 
 <details><summary><b>Answer</b></summary>
@@ -714,7 +791,7 @@ $$\[Kurtosis = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^
 
 ---
 
-2. The binomial distribution is often used to model the probability that $k$ out of a group of $n$
+Q. The binomial distribution is often used to model the probability that $k$ out of a group of $n$
 objects bare a specific characteristic. Define what is meant by a binomial random variable $X$.
 
 
@@ -727,7 +804,7 @@ objects bare a specific characteristic. Define what is meant by a binomial rando
 
 ---
 
-3. What does the following shorthand stand for?
+Q. What does the following shorthand stand for?
 
 $$
 X ∼ Binomial(n, p)
@@ -743,7 +820,7 @@ $$
 
 ---
 
-4. Find the probability mass function (PMF) of the following random variable:
+Q. Find the probability mass function (PMF) of the following random variable:
 
 $$
 X ∼ Binomial(n, p)
@@ -759,7 +836,7 @@ $$
 
 ---
 
-5. Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood.
+Q. Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood.
 
 
 <details><summary><b>Answer</b></summary>
@@ -771,7 +848,7 @@ $$
 
 ---
 
-6. Given a fair coin, what’s the number of flips you have to do to get two consecutive heads?
+Q. Given a fair coin, what’s the number of flips you have to do to get two consecutive heads?
 
 
 <details><summary><b>Answer</b></summary>
@@ -783,10 +860,10 @@ $$
 
 ---
 
-7. Answer the following questions:
-    1. Define what is meant by (mathematical) expectation.
-    2. Define what is meant by variance.
-    3. Derive the expectation and variance of a the binomial random variable $X ∼ Binomial(n, p)$ in terms of $p$ and $n$.
+Q. Answer the following questions:
+1. Define what is meant by (mathematical) expectation.
+2. Define what is meant by variance.
+3. Derive the expectation and variance of a the binomial random variable $X ∼ Binomial(n, p)$ in terms of $p$ and $n$.
 
 
 <details><summary><b>Answer</b></summary>
@@ -798,8 +875,9 @@ $$
 
 ---
 
-8. Proton therapy (PT) is a widely adopted form of treatment for many types of cancer.
+Q. Proton therapy (PT) is a widely adopted form of treatment for many types of cancer.
 A PT device which was not properly calibrated is used to treat a patient with pancreatic cancer (Fig. 3.1). As a result, a PT beam randomly shoots $200$ particles independently and correctly hits cancerous cells with a probability of $0.1$.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -821,10 +899,9 @@ A PT device which was not properly calibrated is used to treat a patient with pa
 
 </details>
 
-
 ---
 
-9.  What is likelihood function of the independent identically distributed (i.i.d) random variables:
+Q. What is likelihood function of the independent identically distributed (i.i.d) random variables:
 $X_1,··· ,X_n$ where $X_i ∼ binomial(n, p)$, $∀i ∈ [1,n]$, and where p is the parameter of interest?
 
 
@@ -837,7 +914,7 @@ $X_1,··· ,X_n$ where $X_i ∼ binomial(n, p)$, $∀i ∈ [1,n]$, and where p 
 
 ---
 
-10. How can we derive the maximum likelihood estimator (MLE) of the i.i.d samples $X_1, · · · , X_n$ introduced in above question?
+Q. How can we derive the maximum likelihood estimator (MLE) of the i.i.d samples $X_1, · · · , X_n$ introduced in above question?
 
 
 <details><summary><b>Answer</b></summary>
@@ -850,7 +927,8 @@ $X_1,··· ,X_n$ where $X_i ∼ binomial(n, p)$, $∀i ∈ [1,n]$, and where p 
 ---
 
 
-11. The 2014 west African Ebola (Fig. 9.10) epidemic has become the largest and fastest spreading outbreak of the disease in modern history with a death tool far exceeding all past outbreaks combined. Ebola (named after the Ebola River in Zaire) first emerged in 1976 in Sudan and Zaire and infected over 284 people with a mortality rate of 53%.
+Q. The 2014 west African Ebola epidemic has become the largest and fastest spreading outbreak of the disease in modern history with a death tool far exceeding all past outbreaks combined. Ebola (named after the Ebola River in Zaire) first emerged in 1976 in Sudan and Zaire and infected over 284 people with a mortality rate of 53%.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -891,9 +969,9 @@ Answer the following; for the likelihood function of the form $L_x(γ)$:
 
 ---
 
-12. Let y be the number of successes in 5 independent trials, where the probability of success is θ in each trial. Suppose your prior distribution for θ is as follows: $P(θ = 1/2) = 0.25, P (θ = 1/6) = 0.5, and P (θ = 1/4) = 0.25$.
-    1. Derive the posterior distribution $p(θ|y)$ after observing y. 
-    2. Derive the prior predictive distribution for y.
+Q. Let y be the number of successes in 5 independent trials, where the probability of success is θ in each trial. Suppose your prior distribution for θ is as follows: $P(θ = 1/2) = 0.25, P (θ = 1/6) = 0.5, and P (θ = 1/4) = 0.25$.
+1. Derive the posterior distribution $p(θ|y)$ after observing y. 
+2. Derive the prior predictive distribution for y.
 
 
 <details><summary><b>Answer</b></summary>
@@ -905,8 +983,9 @@ Answer the following; for the likelihood function of the form $L_x(γ)$:
 
 ---
 
-13. 1. Define the term conjugate prior.
-    2. Define the term non-informative prior.
+Q. 
+1. Define the term conjugate prior.
+2. Define the term non-informative prior.
 
 
 <details><summary><b>Answer</b></summary>
@@ -918,7 +997,7 @@ Answer the following; for the likelihood function of the form $L_x(γ)$:
 
 ---
 
-14. Prove that the family of beta distributions is conjugate to a binomial likelihood, so that if a prior is in that family then so is the posterior. That is, show that:
+Q. Prove that the family of beta distributions is conjugate to a binomial likelihood, so that if a prior is in that family then so is the posterior. That is, show that:
 
 $$
 x ∼ Ber(γ), γ ∼ B(α,β) ⇒ γ|x ∼ B(α′,β′)
@@ -940,7 +1019,8 @@ $$
 
 ---
 
-15. A recently published paper presents a new layer for a new Bayesian neural network (BNN). The layer behaves as follows. During the feed-forward operation, each of the hidden neurons $H_n , n ∈ 1, 2$ in the neural network (Fig. 3.10) may, or may not fire independently of each other according to a known prior distribution.
+Q. A recently published paper presents a new layer for a new Bayesian neural network (BNN). The layer behaves as follows. During the feed-forward operation, each of the hidden neurons $H_n , n ∈ 1, 2$ in the neural network (Fig. 3.10) may, or may not fire independently of each other according to a known prior distribution.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -965,7 +1045,7 @@ The chance of firing, γ, is the same for each hidden neuron. Using the formal d
 
 ---
 
-16. Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$. $X$ indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.
+Q. Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$. $X$ indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.
 
 <table align='center'>
 <tr>
@@ -987,7 +1067,7 @@ The chance of firing, γ, is the same for each hidden neuron. Using the formal d
 
 ---
 
-17. A Dropout layer(Fig. 3.12) is commonly used to regularize a neural network model by randomly equating several outputs (the crossed-out hidden node H) to 0.
+Q. A Dropout layer(Fig. 3.12) is commonly used to regularize a neural network model by randomly equating several outputs (the crossed-out hidden node H) to 0.
 <table align='center'>
 <tr>
 <td align="center">
@@ -1036,7 +1116,7 @@ You are interested in the proportion θ of dropped-out neurons. Assume that the 
 
 ---
 
-18. A new data scientist in your team, who was formerly a Quantum Physicist, suggests the following procedure for a Dropout layer entitled Quantum Drop which is based on Quantum principles and the Maxwell Boltzmann distribution. In the Maxwell-Boltzmann distribution, the likelihood of finding a particle with a particular velocity v is provided by:
+Q. A new data scientist in your team, who was formerly a Quantum Physicist, suggests the following procedure for a Dropout layer entitled Quantum Drop which is based on Quantum principles and the Maxwell Boltzmann distribution. In the Maxwell-Boltzmann distribution, the likelihood of finding a particle with a particular velocity v is provided by:
 
 $$
 n(v)dv = \frac{4\pi N}{V}(\frac{m}{2\pi kT})^{\frac{3}{2}}v^2e^{-\frac{mv^2}{2kT}}dv
@@ -1078,7 +1158,7 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ### Continuous Random Variables
 
-1. Given a uniform random variable X  in the range of [0,1]  inclusively. What’s the probability that X=0.5 ?
+Q. Given a uniform random variable X  in the range of [0,1]  inclusively. What’s the probability that X=0.5 ?
 
 
 <details><summary><b>Answer</b></summary>
@@ -1090,7 +1170,7 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ---
 
-2. You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than $0.5$?
+Q. You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than $0.5$?
 
 
 <details><summary><b>Answer</b></summary>
@@ -1102,7 +1182,7 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ---
 
-3. It’s a common practice to assume an unknown variable to be of the normal distribution. Why is that?
+Q. It’s a common practice to assume an unknown variable to be of the normal distribution. Why is that?
 
 
 <details><summary><b>Answer</b></summary>
@@ -1114,7 +1194,7 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ---
 
-4. Is it possible to transform non-normal variables into normal variables? How?
+Q. Is it possible to transform non-normal variables into normal variables? How?
 
 
 <details><summary><b>Answer</b></summary>
@@ -1126,7 +1206,7 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ---
 
-5. When is the t-distribution useful?
+Q. When is the t-distribution useful?
 
 
 <details><summary><b>Answer</b></summary>
@@ -1138,7 +1218,7 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ---
 
-6. Derive the maximum likelihood estimator of an exponential distribution.
+Q. Derive the maximum likelihood estimator of an exponential distribution.
 
 
 
@@ -1151,7 +1231,7 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ---
 
-7. Define the term prior distribution of a likelihood parameter $\gamma$ in the continuous case.
+Q. Define the term prior distribution of a likelihood parameter $\gamma$ in the continuous case.
 
 
 <details><summary><b>Answer</b></summary>
@@ -1163,18 +1243,19 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ---
 
-8. In this question, you are going to derive the Fisher information function for several distributions. Given a probability density function (PDF) $f(X|γ)$, you are provided with the following definitions:
-    1. The natural logarithm of the PDF $lnf(X|γ) = Φ(X|γ)$.
-    2. The first partial derivative $Φ′(X|γ)$.
-    3. The second partial derivative $Φ′′(X|γ)$.
-    4. The Fisher Information for a continuous random variable:
+Q. In this question, you are going to derive the Fisher information function for several distributions. Given a probability density function (PDF) $f(X|γ)$, you are provided with the following definitions:
+1. The natural logarithm of the PDF $lnf(X|γ) = Φ(X|γ)$.
+2. The first partial derivative $Φ′(X|γ)$.
+3. The second partial derivative $Φ′′(X|γ)$.
+4. The Fisher Information for a continuous random variable:
+
 $$
 I(γ) = −Eγ[Φ′(X|γ)]
 $$
 
 Find the Fisher Information $I(γ)$ for the following distributions:
-    1. The Bernoulli Distribution $X ∼ B(1, γ)$.
-    2. The Poisson Distribution $X ∼ Poiss(θ)$.
+1. The Bernoulli Distribution $X ∼ B(1, γ)$.
+2. The Poisson Distribution $X ∼ Poiss(θ)$.
 
 
 <details><summary><b>Answer</b></summary>
@@ -1185,8 +1266,9 @@ Find the Fisher Information $I(γ)$ for the following distributions:
 
 ---
 
-9. 1. Define the term posterior distribution.
-    2. Define the term prior predictive distribution.
+Q. 
+1. Define the term posterior distribution.
+2. Define the term prior predictive distribution.
 
 
 <details><summary><b>Answer</b></summary>
@@ -1200,7 +1282,7 @@ Find the Fisher Information $I(γ)$ for the following distributions:
 
 ### Correlation and Covariance
 
-1. Are independence and zero covariance the same? Give a counterexample if not.
+Q. Are independence and zero covariance the same? Give a counterexample if not.
 
 <details><summary><b>Answer</b></summary>
 
@@ -1229,7 +1311,7 @@ Now $Cov(X, Y)$ coming as zero and hence depicting the $X$ and $Y$ are independe
 
 ---
 
-2. Suppose we have a random variable X supported on $[0,1]$  from which we can draw samples. How can we come up with an unbiased estimate of the median of X?
+Q. Suppose we have a random variable X supported on $[0,1]$  from which we can draw samples. How can we come up with an unbiased estimate of the median of X?
 
 
 <details><summary><b>Answer</b></summary>
@@ -1241,7 +1323,7 @@ Now $Cov(X, Y)$ coming as zero and hence depicting the $X$ and $Y$ are independe
 
 ---
 
-3. Define variance and co-variance. What is the difference between them?
+Q. Define variance and co-variance. What is the difference between them?
 
 <details><summary><b>Answer</b></summary>
 
@@ -1254,7 +1336,7 @@ Variance can be only non-negative while co-variance can be positive, negative or
 ---
 
 
-4. How does sign of covariance decides the direction of relationship between two random variables?
+Q. How does sign of covariance decides the direction of relationship between two random variables?
 
 <details><summary><b>Answer</b></summary>
 
@@ -1269,7 +1351,7 @@ The sign of co-variance decides how two random variables vary together
 
 ---
 
-5. Suppose you are conducting an experiment for studying behavior of two random variables $X$ and $Y$ and you found out $Cov(X, Y) = 100$. Does it mean they are strongly correlated?
+Q. Suppose you are conducting an experiment for studying behavior of two random variables $X$ and $Y$ and you found out $Cov(X, Y) = 100$. Does it mean they are strongly correlated?
 
 <details><summary><b>Answer</b></summary>
 
@@ -1281,7 +1363,7 @@ Covariance is scale variant. It means its value is sensitive to scale of the mea
 
 ---
 
-6. Prove that $Cov(X, X) = Var(X)$.
+Q. Prove that $Cov(X, X) = Var(X)$.
 
 <details><summary><b>Answer</b></summary>
 
@@ -1299,11 +1381,9 @@ $$Cov(X, X) = E((X-E(X))^2) = Var(X)$$
 
 </details>
 
-
-
 ---
 
-7. Prove that $Cov(X, Y) = E(XY) - E(X)E(Y)$.
+Q. Prove that $Cov(X, Y) = E(XY) - E(X)E(Y)$.
 
 <details><summary><b>Answer</b></summary>
 
@@ -1336,11 +1416,11 @@ $$Cov(X, Y) = E(XY) - E(X)E(Y)$$
 
 ---
 
-8. What will be the value of $Cov(X, c) where $X$ is a random variable and $c$ is a constant value?
-    1. $Cov(X)$
-    2. $cCov(X)$
-    3. $c^2Cov(X)$
-    4. $0$
+Q. What will be the value of $Cov(X, c) where $X$ is a random variable and $c$ is a constant value?
+1. $Cov(X)$
+2. $cCov(X)$
+3. $c^2Cov(X)$
+4. $0$
 
 <details><summary><b>Answer</b></summary>
 
@@ -1352,7 +1432,7 @@ $Cov(X, c)$ encodes the information of how X and Y varies together. Since $c$ is
 
 ---
 
-9. Write down some properties of Covariance.
+Q. Write down some properties of Covariance.
 
 <details><summary><b>Answer</b></summary>
 
@@ -1372,7 +1452,7 @@ Here $X$, $Y$ and $Z$ are random variables and $c$ is a constant.
 
 ---
 
-10. Can the correlation be greater than 1? Why or why not? How to interpret a correlation value of 0.3?
+Q. Can the correlation be greater than 1? Why or why not? How to interpret a correlation value of 0.3?
 
 <details><summary><b>Answer</b></summary>
 
@@ -1421,7 +1501,7 @@ Note that the above conlusions are based on assumption that both variable are li
 
 ---
 
-11. What is the Pearson correlation coefficient, and how is it calculated?
+Q. What is the Pearson correlation coefficient, and how is it calculated?
 
 
 <details><summary><b>Answer</b></summary>
@@ -1432,7 +1512,7 @@ Note that the above conlusions are based on assumption that both variable are li
 
 ---
 
-12. What is the significance of a correlation coefficient value of 0?
+Q. What is the significance of a correlation coefficient value of 0?
 
 <details><summary><b>Answer</b></summary>
 
@@ -1442,7 +1522,7 @@ Note that the above conlusions are based on assumption that both variable are li
 
 ---
 
-13. What is the difference between positive and negative correlation?
+Q. What is the difference between positive and negative correlation?
 
 <details><summary><b>Answer</b></summary>
 
@@ -1452,7 +1532,7 @@ Note that the above conlusions are based on assumption that both variable are li
 
 ---
 
-14. What are some limitations of the Pearson correlation coefficient?
+Q. What are some limitations of the Pearson correlation coefficient?
 
 <details><summary><b>Answer</b></summary>
 
@@ -1462,7 +1542,7 @@ Note that the above conlusions are based on assumption that both variable are li
 
 ---
 
-15. Can you have a high correlation without causation?
+Q. Can you have a high correlation without causation?
 
 
 <details><summary><b>Answer</b></summary>

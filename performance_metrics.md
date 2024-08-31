@@ -10,7 +10,7 @@ Topics
 
 ## Regression Metrics
 
-1. What is R-squared (R2)?
+Q. What is R-squared (R2)?
 
 <details><summary><b>Answer</b></summary>
 
@@ -20,18 +20,7 @@ Topics
 
 ---
 
-2. What does an R-squared value of 0.75 mean?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-
-3. What is the range of possible values for R-squared?
+Q. What does an R-squared value of 0.75 mean?
 
 <details><summary><b>Answer</b></summary>
 
@@ -42,7 +31,7 @@ Topics
 ---
 
 
-4. Can R-squared be negative?
+Q. What is the range of possible values for R-squared?
 
 <details><summary><b>Answer</b></summary>
 
@@ -53,7 +42,7 @@ Topics
 ---
 
 
-5. How do you interpret R-squared?
+Q. Can R-squared be negative?
 
 <details><summary><b>Answer</b></summary>
 
@@ -64,7 +53,7 @@ Topics
 ---
 
 
-6. What are the limitations of R-squared?
+Q. How do you interpret R-squared?
 
 <details><summary><b>Answer</b></summary>
 
@@ -75,7 +64,7 @@ Topics
 ---
 
 
-7. What is the difference between adjusted R-squared and R-squared?
+Q. What are the limitations of R-squared?
 
 <details><summary><b>Answer</b></summary>
 
@@ -86,7 +75,7 @@ Topics
 ---
 
 
-8. When should you use R-squared as an evaluation metric?
+Q. What is the difference between adjusted R-squared and R-squared?
 
 <details><summary><b>Answer</b></summary>
 
@@ -97,7 +86,7 @@ Topics
 ---
 
 
-9. What is Mean Square Error (MSE)?
+Q. When should you use R-squared as an evaluation metric?
 
 <details><summary><b>Answer</b></summary>
 
@@ -108,7 +97,7 @@ Topics
 ---
 
 
-10. Why do we square the differences in MSE?
+Q. What is Mean Square Error (MSE)?
 
 <details><summary><b>Answer</b></summary>
 
@@ -119,7 +108,7 @@ Topics
 ---
 
 
-11. What is the significance of a low MSE value?
+Q. Why do we square the differences in MSE?
 
 <details><summary><b>Answer</b></summary>
 
@@ -130,7 +119,7 @@ Topics
 ---
 
 
-12. Can MSE be used for classification problems?
+Q. What is the significance of a low MSE value?
 
 <details><summary><b>Answer</b></summary>
 
@@ -141,7 +130,7 @@ Topics
 ---
 
 
-13. What are the limitations of MSE?
+Q. Can MSE be used for classification problems?
 
 <details><summary><b>Answer</b></summary>
 
@@ -152,7 +141,7 @@ Topics
 ---
 
 
-14. How can you minimize MSE in a machine learning model?
+Q. What are the limitations of MSE?
 
 <details><summary><b>Answer</b></summary>
 
@@ -163,7 +152,18 @@ Topics
 ---
 
 
-15. What is the difference between MSE and RMSE (Root Mean Square Error)?
+Q. How can you minimize MSE in a machine learning model?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
+
+Q. What is the difference between MSE and RMSE (Root Mean Square Error)?
 
 <details><summary><b>Answer</b></summary>
 
@@ -177,7 +177,7 @@ Topics
 
 ## Classification Metrics
 
-1. What is the purpose of a confusion matrix?
+Q. What is the purpose of a confusion matrix?
 
 <details><summary><b>Answer</b></summary>
 
@@ -188,7 +188,7 @@ Topics
 ---
 
 
-2. Explain True Positive (TP) and False Positive (FP).
+Q. Explain True Positive (TP) and False Positive (FP).
 
 <details><summary><b>Answer</b></summary>
 
@@ -199,7 +199,7 @@ Topics
 ---
 
 
-3. Define True Negative (TN) and False Negative (FN).
+Q. Define True Negative (TN) and False Negative (FN).
 
 <details><summary><b>Answer</b></summary>
 
@@ -210,7 +210,17 @@ Topics
 ---
 
 
-4. What is accuracy, and how is it calculated using a confusion matrix?
+Q. What is accuracy, and how is it calculated using a confusion matrix?
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+---
+
+Q. What are precision and recall, and how are they calculated from a confusion matrix?
 
 <details><summary><b>Answer</b></summary>
 
@@ -221,7 +231,7 @@ Topics
 ---
 
 
-5. What are precision and recall, and how are they calculated from a confusion matrix?
+Q. How can you use a confusion matrix to choose an appropriate threshold for a binary classifier?
 
 <details><summary><b>Answer</b></summary>
 
@@ -232,7 +242,7 @@ Topics
 ---
 
 
-6. How can you use a confusion matrix to choose an appropriate threshold for a binary classifier?
+Q. What is the F1 score, and how is it related to precision and recall?
 
 <details><summary><b>Answer</b></summary>
 
@@ -243,7 +253,7 @@ Topics
 ---
 
 
-7. What is the F1 score, and how is it related to precision and recall?
+Q. Explain the difference between Type I and Type II errors in the context of a confusion matrix.
 
 <details><summary><b>Answer</b></summary>
 
@@ -253,28 +263,9 @@ Topics
 
 ---
 
-
-8. Explain the difference between Type I and Type II errors in the context of a confusion matrix.
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-7. F1 score.
-    1. What’s the benefit of F1 over the accuracy?
-    1. Can we still use F1 for a problem with more than two classes. How?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-6. Your team is building a system to aid doctors in predicting whether a patient has cancer or not from their X-ray scan. Your colleague announces that the problem is solved now that they’ve built a system that can predict with 99.99% accuracy. How would you respond to that claim?
+Q. F1 score.
+1. What’s the benefit of F1 over the accuracy?
+1. Can we still use F1 for a problem with more than two classes. How?
 
 <details><summary><b>Answer</b></summary>
     
@@ -282,18 +273,7 @@ Topics
 
 ---
 
-8. Given a binary classifier that outputs the following confusion matrix.
-
-    $$
-    \begin{bmatrix} 
-        "" & \textbf{Predicted True} & \textbf{Predicted False} \\
-        \textbf{Actual True} & 30 & 20\\
-        \textbf{Actual False} & 5 & 40 \\
-        \end{bmatrix}
-    $$
-
-    1. Calculate the model’s precision, recall, and F1.
-    1. What can we do to improve the model’s performance?
+Q. Your team is building a system to aid doctors in predicting whether a patient has cancer or not from their X-ray scan. Your colleague announces that the problem is solved now that they’ve built a system that can predict with 99.99% accuracy. How would you respond to that claim?
 
 <details><summary><b>Answer</b></summary>
     
@@ -301,9 +281,18 @@ Topics
 
 ---
 
-9. Consider a classification where $99%$ of data belongs to class A and $1%$ of data belongs to class B.
-    1. If your model predicts A 100% of the time, what would the F1 score be? Hint: The F1 score when A is mapped to 0 and B to 1 is different from the F1 score when A is mapped to 1 and B to 0.
-    1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$ be?
+Q. Given a binary classifier that outputs the following confusion matrix.
+
+$$
+\begin{bmatrix} 
+    "" & \textbf{Predicted True} & \textbf{Predicted False} \\
+    \textbf{Actual True} & 30 & 20\\
+    \textbf{Actual False} & 5 & 40 \\
+    \end{bmatrix}
+$$
+
+1. Calculate the model’s precision, recall, and F1.
+1. What can we do to improve the model’s performance?
 
 <details><summary><b>Answer</b></summary>
     
@@ -311,7 +300,9 @@ Topics
 
 ---
 
-11. When should we use RMSE (Root Mean Squared Error) over MAE (Mean Absolute Error) and vice versa?
+Q. Consider a classification where $99%$ of data belongs to class A and $1%$ of data belongs to class B.
+1. If your model predicts A 100% of the time, what would the F1 score be? Hint: The F1 score when A is mapped to 0 and B to 1 is different from the F1 score when A is mapped to 1 and B to 0.
+1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$ be?
 
 <details><summary><b>Answer</b></summary>
     
@@ -319,7 +310,7 @@ Topics
 
 ---
 
-12. Show that the negative log-likelihood and cross-entropy are the same for binary classification tasks.
+Q. When should we use RMSE (Root Mean Squared Error) over MAE (Mean Absolute Error) and vice versa?
 
 <details><summary><b>Answer</b></summary>
     
@@ -327,7 +318,15 @@ Topics
 
 ---
 
-13. For classification tasks with more than two labels (e.g. MNIST with $10$ labels), why is cross-entropy a better loss function than MSE?
+Q. Show that the negative log-likelihood and cross-entropy are the same for binary classification tasks.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
+Q. For classification tasks with more than two labels (e.g. MNIST with $10$ labels), why is cross-entropy a better loss function than MSE?
 
 <details><summary><b>Answer</b></summary>
     
@@ -336,7 +335,7 @@ Topics
 ---
 
 
-14. Consider a language with an alphabet of $27$ characters. What would be the maximal entropy of this language?
+Q. Consider a language with an alphabet of $27$ characters. What would be the maximal entropy of this language?
 
 <details><summary><b>Answer</b></summary>
     
@@ -344,7 +343,7 @@ Topics
 
 ---
 
-17. Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?
+Q. Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?
 
 <details><summary><b>Answer</b></summary>
     

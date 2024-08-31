@@ -1,6 +1,6 @@
 # Data Science Interview Questions And Answers
 
-1. Explain frequentist vs. Bayesian statistics.
+Q. Explain frequentist vs. Bayesian statistics.
 
 <details><summary><b>Answer</b></summary>
 
@@ -52,7 +52,7 @@ Key Differences:
 
 ---
 
-2. Given the array $[1,5,3,2,4,4]$, find its mean, median, variance, and standard deviation.
+Q. Given the array $[1,5,3,2,4,4]$, find its mean, median, variance, and standard deviation.
 
 <details><summary><b>Answer</b></summary>
 
@@ -95,7 +95,7 @@ $$\text{\sigma} = 1.2124$$
 
 ---
 
-3. When should we use median instead of mean? When should we use mean instead of median?
+Q. When should we use median instead of mean? When should we use mean instead of median?
 
 <details><summary><b>Answer</b></summary>
 
