@@ -487,3 +487,25 @@ Q. Write a query to fetch three max salaries from a table using a co-related sub
 </details>
 
 ---
+
+Q. Write the order of executions of SQL operations.
+
+<details ><summary><b>Answer</b></summary>
+
+**Execution Order:**
+
+1. FROM
+2. ON
+3. WHERE
+4. GROUP BY
+5. Aggregation functions (COUNT, SUM, MIN/MAX, AVG)
+6. HAVING
+7. SELECT
+8. DISTINCT
+9. UNION, INTERSECT, EXCEPT
+10. ORDER BY
+11. LIMIT, TOP
+
+</details>
+
+---
