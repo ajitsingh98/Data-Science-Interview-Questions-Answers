@@ -1,10 +1,13 @@
 # Data Science Interview Questions And Answers
 
-## Maths Questions
+## Vector and Matrices
 
-## Contents
+Contents
+---
 - [Vector](#vector)
 - [Matrices](#matrices)
+
+---
 
 ## Vector
 

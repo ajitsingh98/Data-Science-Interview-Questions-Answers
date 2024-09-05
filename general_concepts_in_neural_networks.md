@@ -1,12 +1,5 @@
 # Data Science Interview Questions And Answers
 
-
-Topics
----
-
-- [Neural Networks](#neural-networks)
-
-
 ## Neural Networks
 
 Contents
@@ -19,6 +12,7 @@ Contents
 - [Optimization and Loss](#Optimization-and-Loss)
 - [NNLayers, Topologists and Blocks](#NNLayers,-Topologists-and-Blocks)
 
+---
 
 ### Perceptron
 

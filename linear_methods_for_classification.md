@@ -1,12 +1,6 @@
 # Data Science Interview Questions And Answers
 
-Topics
----
-
-- [Logistic Regression](#logistic-regression)
-
-
-## Logistic Regression
+## Linear Methods For Classification
 
 Contents
 ---
@@ -15,6 +9,8 @@ Contents
 - [The Sigmoid](#the-sigmoid)
 - [Truly Understanding Logistic Regression](#truly-understanding-logistic-regression)
 - [The Logit Function and Entropy](#the-logit-function-and-entropy)
+
+---
 
 ### General Concepts
 

@@ -1,5 +1,17 @@
 # Data Science Interview Questions And Answers
 
+## Descriptive Statistics
+
+Contents
+----
+
+- [Basics]()
+- [Measure of Center]()
+- [Measure of Spread]()
+- [Central Limit Theorem]()
+
+---
+
 Q. Explain frequentist vs. Bayesian statistics.
 
 <details><summary><b>Answer</b></summary>

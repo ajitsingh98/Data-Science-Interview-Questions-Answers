@@ -2,10 +2,13 @@
 
 # Computer Science Questions
 
-## Contents
+Contents
+---
+
 - [Algorithms](#algorithms)
 - [Complexity and Numerical Analysis](#complexity-and-numerical-analysis)
 
+---
 
 ## Algorithms
 

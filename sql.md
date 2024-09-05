@@ -1,9 +1,14 @@
 # Data Science Interview Questions And Answers
 
-Topics
----
+## SQL Questions
 
-- [SQL Questions](#sql-questions)
+Contents
+---
+- [SQL operations](#)
+- [String Manipulations](#)
+- [Join and Sub-queries](#) 
+
+---
 
 Consider you have a `worker` table with following fields:
 - first_name

@@ -1,12 +1,5 @@
 # Data Science Interview Questions And Answers
 
-
-Topics
----
-
-- [Convolution Neural Networks](#convolution-neural-networks)
-
-
 ## Convolution Neural Networks
 
 Contents
@@ -16,6 +9,8 @@ Contents
 2. [CNN as Fixed Feature Extractor](#CNN-as-Fixed-Feature-Extractor)
 3. [Fine-tuning CNNs](#Fine-Tuning-CNNs)
 4. [Neural Style Transfer](#Neural-Style-Transfer)
+
+---
 
 ### Convolution and Correlation
 

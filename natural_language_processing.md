@@ -1,5 +1,18 @@
 # Data Science Interview Questions And Answers
 
+## Natural Language Processing
+
+
+Contents
+---
+
+- RNNs and LSTMs
+- Density Estimation
+- Word Embeddings
+- TF/IDF and Cosine Similarity
+
+---
+
 1. RNNs
     1. What’s the motivation for RNN?
     1. What’s the motivation for LSTM?

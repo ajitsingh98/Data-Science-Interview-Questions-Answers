@@ -1,19 +1,18 @@
 # Data Science Interview Questions And Answers
 
 
-Topics
+## Inferential Statistics
+
+Contents
 ---
-
-- [Inferential Statistics](#inferential-statistics)
-
-
-## Contents
 
 - [Introduction](#introduction)
 - [Point Estimation](#point-estimation)
 - [Interval Estimation](#interval-estimation)
 - [Hypothesis Testing](#hypothesis-testing)
 - [Inference for Relationship](#inference-for-relationship)
+
+---
 
 ### Introduction
 

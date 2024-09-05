@@ -1,9 +1,6 @@
 # Data Science Interview Questions And Answers
 
-Topics
----
-
-- [Unsupervised Learning](#unsupervised-learning)
+## Unsupervised Learning
 
 Contents
 ---
@@ -14,6 +11,7 @@ Contents
 - [Recommendation Engines](#recommendation-engines)
 - [Autoencoders](#autoencoders)
 
+---
 
 ## General Concepts
 

@@ -1,11 +1,5 @@
 # Data Science Interview Questions And Answers
 
-
-Topics
----
-
-- [General Concepts In Machine Learning](#general-concepts-in-machine-learning)
-
 ## General Concepts In Machine Learning
 
 Contents
@@ -16,6 +10,8 @@ Contents
 - [Sampling Techniques and Creating Training Data](#sampling-techniques-and-creating-training-data)
 - [Feature Engineering](#feature-engineering)
 - [Bias and Variance](#bias-and-variance)
+
+---
 
 ### Basics
 

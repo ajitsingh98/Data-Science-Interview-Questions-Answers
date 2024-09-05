@@ -1,12 +1,16 @@
 # Data Science Interview Questions And Answers
 
-Topics
+## Linear Methods For Regression
+
+Contents
 ---
 
 - [Linear Regression and Least Squares](#linear-regression)
 - [Subset Selection](#subset-selection)
 - [Shrinkage Methods](#shrinkage-methods)
 - [Curse Of Dimensionality](#curse-of-dimensionality)
+
+---
 
 ## Linear Regression
 

@@ -1,11 +1,6 @@
 # Data Science Interview Questions And Answers
 
-
-Topics
----
-
-- [Probability]()
-
+## Probability
 
 ## Contents
 
@@ -16,6 +11,8 @@ Topics
 - [Discrete Random Variables](#discrete-random-variables)
 - [Continuous Random Variables](#continuous-random-variables)
 - [Correlation and Covariance](#correlation-and-variance)
+
+---
 
 ### Basic Probability
 

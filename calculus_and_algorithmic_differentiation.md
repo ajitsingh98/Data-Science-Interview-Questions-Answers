@@ -1,35 +1,28 @@
 # Data Science Interview Questions And Answers
 
-
-Topics
----
-
-- [Calculus and Algorithmic Differentiation]()
-
-
 ## Calculus and Algorithmic Differentiation
 
 Contents
 ----
 
-- AD,Gradient descent and Backpropagation
-- Numerical differentiation
-- Directed Acyclic Graphs
-- The chain rule  
-- Taylor series expansion 
-- Limits and continuity 
-- Partial derivatives 
-- Optimization 
-- The Gradient descent algorithm 
-- The Backpropagation algorithm
-- Feed forward neural networks
-- Activation functions, Autograd/JAX
-- Dual numbers in AD
-- Forward mode AD
-- Forward mode AD table construction
-- Symbolic differentiation
-- Simple differentiation 
-- The Beta-Binomial model
+- [AD,Gradient descent and Backpropagation]()
+- [Numerical differentiation]()
+- [Directed Acyclic Graphs]()
+- [The chain rule]()
+- [Taylor series expansion]()
+- [Limits and continuity]()
+- [Partial derivatives]() 
+- [Optimization]() 
+- [The Gradient descent algorithm]()
+- [The Backpropagation algorithm]()
+- [Feed forward neural networks]()
+- [Activation functions, Autograd/JAX]()
+- [Dual numbers in AD]()
+- [Forward mode AD]()
+- [Forward mode AD table construction]()
+- [Symbolic differentiation]()
+- [Simple differentiation]() 
+- [The Beta-Binomial model]()
 
 ---
 

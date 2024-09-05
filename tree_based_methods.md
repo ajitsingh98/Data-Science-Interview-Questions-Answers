@@ -1,24 +1,20 @@
 # Data Science Interview Questions And Answers
 
-
-Topics
----
-
 ## Tree Based Methods in Machine Learning
 
 Contents
 ----
 
-- Decision Trees
-- Bagging, Boosting, Stacking and Blending
-- Approaches for Combining Predictors
-- Monolithic and Heterogeneous Ensembling
-- Ensemble Learning
-- Snapshot Ensembling 
-- Multi-model Ensembling
-- Learning-rate Schedules in Ensembling
-- Random Forest
-- Boosting based Algorithms
+- [Decision Trees]()
+- [Bagging, Boosting, Stacking and Blending]()
+- [Approaches for Combining Predictors]()
+- [Monolithic and Heterogeneous Ensembling]()
+- [Ensemble Learning]()
+- [Snapshot Ensembling]()
+- [Multi-model Ensembling]()
+- [Learning-rate Schedules in Ensembling]()
+- [Random Forest]()
+- [Boosting based Algorithms]()
 
 ---
 

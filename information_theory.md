@@ -1,25 +1,17 @@
 # Data Science Interview Questions And Answers
 
-
-Topics
----
-
-- [Information Theory]()
-
-
 ## Information Theory
 
 Contents
 ----
 
-- Logarithms in Information Theory 
-- Shannon's Entropy
-- Kullback-Leibler Divergence(KLD)
-- Classification and Information Gain 
-- Mutual Information
-- Mechanical Statistics
-- Jensen's inequality
-
+- [Logarithms in Information Theory]()
+- [Shannon's Entropy]()
+- [Kullback-Leibler Divergence(KLD)]()
+- [Classification and Information Gain]()
+- [Mutual Information]()
+- [Mechanical Statistics]()
+- [Jensen's inequality]()
 
 ---
 
