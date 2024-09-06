@@ -237,19 +237,6 @@ The regularization parameter $C$ controls the bias-variance trade-off.
 
 ---
 
-Q. Explain bias-variance tradeoff in SVC?
-
-<details><summary><b>Answer</b></summary>
-
-The regularization parameter $C$ controls the bias-variance trade-off. 
-
-- C is small : Low bias and high variance 
-- C is large : High bias and low variance 
-
-</details>
-
----
-
 Q. Is SVC robust to outliers?
 
 <details><summary><b>Answer</b></summary>
@@ -285,6 +272,7 @@ Q. What is support vector machine(SVM)?
 <details><summary><b>Answer</b></summary>
 
 The support vector machine(SVM) is an extension of the support vector classifier that results from the enlarging the feature in a certain way using kernels.
+
 </details>
 
 ---
@@ -326,11 +314,28 @@ Kernel trick is more computationally effective technique. We only need to comput
 
 ---
 
-Q. What is advantage of using kernel trick over simply enlarging feature space using functions of the original features?
+Q. What are major drawbacks of kernel based machines?
 
 <details><summary><b>Answer</b></summary>
 
-Kernel trick is more computationally effective technique. We only need to compute $K(x_i, x'{_{i}})$ for all $\binom{n}{2}$ distinct pairs of $i, i'$. This can be done without explicitly working in the enlarged feature space. This is important because in many applications of SVMs, the enlarged feature space is so large that computations are intractable.
+- Computation cost : In kernel machines the cost of evaluating the decision function is linear in number of training examples i.e $O(n)$ time complexity.
+- Generic kernels struggles to generalize well.
+
+</details>
+
+---
+
+Q. Why kernel trick is popular in SVM?
+
+<details><summary><b>Answer</b></summary>
+
+Although kernel machines are computationally expensive, SVMs are inherently efficient because they rely only on a subset of the training data, called support vectors, to define the decision boundary. The number of support vectors is typically much smaller than the total number of data points, which significantly reduces both training and prediction time, making the kernel trick particularly popular in SVM.
+
+$$
+f(x) = b + \sum_i \alpha_i k(x, x^{(i)})
+$$
+
+In SVMs, the vector of coefficients, \(\alpha\), is sparse, with non-zero values only for the support vectors and zero for the rest of the training points.
 
 </details>
 
@@ -356,7 +361,13 @@ Instead of transforming the data explicitly:
 
 - The SVM algorithm computes the kernel function directly between pairs of data points.
 - This computation effectively simulates the inner products in the higher-dimensional space.
-- The optimization problem remains in the original space, but the decision boundary can capture complex, non-linear relationships.
+- The optimization problem remains linear in the original space, but the decision boundary can capture complex, non-linear relationships.
+
+The linear function used by SVM can be rewritten as follows:
+
+$$
+f(x) = w^{T}x + b = b + \sum_{i}\alpha_{i}k(x, x^{(i)})
+$$
 
 </details>
 
@@ -404,11 +415,11 @@ When the classes are well separated, SVMs tend to behave better than logistic re
 
 ---
 
-Q. When should we use SVMs over logistic regression?
+Q. What is the main benefit of using logistic regression over SVM?
 
 <details><summary><b>Answer</b></summary>
 
-When the classes are well separated, SVMs tend to behave better than logistic regression; in more overlapping regimes, logistic regression is often preferred.
+SVM does not provide probabilities like logistic regression output. It only outputs a class identity/label.
 
 </details>
 
