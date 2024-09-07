@@ -110,11 +110,13 @@ Q. Outer product
 
 $$
 \left[\begin{matrix}
-    -3 & 0 & 4 \\\
+    -3 & 0 & 3 \\\
     -2 & 0 & 2 \\\
     -1 & 0 & 1
 \end{matrix}\right]
 $$
+
+$$ \left[\begin{matrix} 00 & 01 & 02 \\ 10 & 11 & 12 \\ 20 & 21 & 22 \end{matrix}\right] $$
 
 2. One useful application of the outer product in machine learning is in the computation of covariance matrices, where the outer product is used to calculate the covariance of different feature vectors. For instance, the covariance matrix can be estimated as the average outer product of the centered data vectors (i.e., data vectors from which the mean has been subtracted). This is crucial for algorithms that rely on data distribution, such as Principal Component Analysis (PCA) and many types of clustering algorithms.
 
