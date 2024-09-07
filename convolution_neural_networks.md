@@ -102,9 +102,9 @@ $$
 \begin{equation}
 A =
 \begin{bmatrix}
-  0 & 0 & \ldots & 0 \\
-  \vdots & \vdots & \ddots & \vdots \\
-  0 & 0 & \ldots & 0 \\
+  0 & 0 & \ldots & 0 \\\\
+  \vdots & \vdots & \ddots & \vdots \\\\
+  0 & 0 & \ldots & 0 \\\\
 \end{bmatrix}
 \tag{8.4}
 \end{equation}
@@ -178,12 +178,12 @@ The input signal, arr001 is first initialized to all zeros as follows:
 
 $$ arr001 = 
 \begin{bmatrix}
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 \\\\
 \end{bmatrix}
 $$
 
@@ -210,7 +210,7 @@ $$
 
 $$
 K = \frac{1}{2} \begin{bmatrix}
--1 & 1 \\
+-1 & 1 \\\\
 -1 & 1
 \end{bmatrix}
 $$

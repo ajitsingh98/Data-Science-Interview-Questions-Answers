@@ -290,10 +290,10 @@ Q. Given a binary classifier that outputs the following confusion matrix.
 
 $$
 \begin{bmatrix} 
-    "" & \textbf{Predicted True} & \textbf{Predicted False} \\
-    \textbf{Actual True} & 30 & 20\\
-    \textbf{Actual False} & 5 & 40 \\
-    \end{bmatrix}
+    \textbf{""} & \textbf{Predicted True} & \textbf{Predicted False} \\\\
+    \textbf{Actual True} & 30 & 20 \\\\
+    \textbf{Actual False} & 5 & 40 \\\\
+\end{bmatrix}
 $$
 
 1. Calculate the model’s precision, recall, and F1.

@@ -37,10 +37,10 @@ Q. Naive Bayes classifier.
 
 $$
 \begin{bmatrix} 
-    \text{Tweet} &  \text{Label} \\
-    \text{This makes me so upset} & \text{Negative}\\
-    \text{This puppy makes me happy} & \text{Positive} \\
-    \text{Look at this happy hamster} & \text{Positive} \\
+    \text{Tweet} &  \text{Label} \\\\
+    \text{This makes me so upset} & \text{Negative}\\\\
+    \text{This puppy makes me happy} & \text{Positive} \\\\
+    \text{Look at this happy hamster} & \text{Positive} \\\\
     \text{No hamsters allowed in my house} & \text{Negative}
 \end{bmatrix}
 $$
