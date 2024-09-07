@@ -161,41 +161,51 @@ Q. How to check if two vectors are orthonormal?
 
 <details><summary><b>Answer</b></summary>
 
-Two vectors are orthonormal to each other they are orthogonal and both have unit norm.
+Two vectors are orthonormal to each other if they are orthogonal and both have unit norm.
 
 </details>
 
 ---
 
 Q. Given $n$  vectors, each of $d$  dimensions. What is the dimension of their span?
-Norms and metrics
+
+
+<details><summary><b>Answer</b></summary>
+
+$$
+\text{Dimension of the span} = \min(n, d)
+$$
+
+</details>
+
+---
+
+Q. Norms and metrics
 1. What's the norm? What is  $L_0,L_1,L_2,L_{norm}$?
 1. How do norms and metrics differ? Given a norm, make a metric. Given a metric, can we make a norm?
 
 <details><summary><b>Answer</b></summary>
 
 1. A **norm** on a vector space is a function that assigns a non-negative length or size to vectors, except for the zero vector, which is assigned a length of zero. Norms are denoted by $\|\cdot\|$ and must satisfy the following properties for any vectors $x, y$ and any scalar $a$:
+  - **Non-negativity**: $\|x\| \geq 0$ and $\|x\| = 0$ if and only if $x = 0$.
+  - **Scalar multiplication**: $\|a \cdot x\| = |a| \cdot \|x\|$.
+  - **Triangle inequality**: $\|x + y\| \leq \|x\| + \|y\|$.
 
-1. **Non-negativity**: $\|x\| \geq 0$ and $\|x\| = 0$ if and only if $x = 0$.
-2. **Scalar multiplication**: $\|a \cdot x\| = |a| \cdot \|x\|$.
-3. **Triangle inequality**: $\|x + y\| \leq \|x\| + \|y\|$.
-
-Different types of norms can be defined on vector spaces:
+  Different types of norms can be defined on vector spaces:
 
 - **$L_0$ norm** (not a true norm): It counts the number of non-zero entries in a vector. It does not satisfy the triangle inequality or the homogeneity property (scalar multiplication), which is why it's technically not a norm.
 - **$L_1$ norm**: It is defined as $\|x\|_1 = \sum |x_i|$, summing the absolute values of the entries of the vector.
 - **$L_2$ norm** (Euclidean norm): It is defined as $\|x\|_2 = \sqrt{\sum x_i^2}$, which corresponds to the usual geometric length of a vector.
 - **$L_p$ norm**: It generalizes the $L_1$ and $L_2$ norms and is defined as $\|x\|_p = (\sum |x_i|^p)^{1/p}$ for $1 \leq p < \infty$.
 
-2. 
-
+2. Norm vs Metric
 - A **norm** provides a way to measure the length of vectors in vector spaces.
 - A **metric** is a more general function that defines a distance between any two elements in a set, satisfying:
   1. **Non-negativity**: $d(x, y) \geq 0$ and $d(x, y) = 0$ if and only if $x = y$.
   2. **Symmetry**: $d(x, y) = d(y, x)$.
   3. **Triangle inequality**: $d(x, z) \leq d(x, y) + d(y, z)$.
 
-**Given a norm, make a metric.**
+**Given a norm, make a metric**
 
 If you have a norm $\|\cdot\|$ on a vector space, you can define a metric $d$ by $d(x, y) = \|x - y\|$. This metric satisfies all the metric properties, derived from the properties of the norm.
 
@@ -439,7 +449,9 @@ Q. How to check if matrix is full rank?
 
 <details><summary><b>Answer</b></summary>
 
-For square matrices, compute the determinant. If that is non-zero, the matrix is of full rank. If the matrix $\mathbf{A}$ is $n$ by $m$, assume that $m≤n$ and compute all determinants of $m$ by $m$ sub-matrices. If one of them is non-zero, the matrix has full rank.
+For square matrices, compute the determinant. If that is non-zero, the matrix is of full rank. 
+
+If the matrix $\mathbf{A}$ is $n$ by $m$, assume that $m≤n$ and compute all determinants of $m$ by $m$ sub-matrices. If one of them is non-zero, the matrix has full rank.
 
 </details>
 
@@ -513,20 +525,6 @@ The norm of a vector $x$ measures the distance from the origin to the point $x$.
 
 ---
 
-Q. Write the general expression of $L^{p}$ norm?
-
-<details><summary><b>Answer</b></summary>
-
-$L_{p}$ norm is given by
-
-$$
-||x||_p = (\sum_{i}|x_i|^p)^{\frac{1}{p}}
-$$
-
-</details>
-
----
-
 Q. Explain Euclidean norm?
 
 <details><summary><b>Answer</b></summary>
@@ -537,19 +535,6 @@ It is also a common to measure the size of a vector using the squared $L^2$ norm
 
 $$
 ||x|| = (\sum_{i} |x_i|^{2})^{\frac{1}{2}}
-$$
-
-</details>
-
----
-
-Q. Write the expression for $L^1$ norm?
-
-<details><summary><b>Answer</b></summary>
-
-
-$$
-||x||_1 = (\sum_{i} |x_i|)
 $$
 
 </details>
@@ -600,7 +585,7 @@ Q. How to measure size of a matrix?
 We can use Frobenius norm, which is like $L^2$ norm of a vector.
 
 $$
-\| \mathbf{A} \|_{F} = \sqrt{\sum_{i, j} A^{2}_{i, j}}
+\| \mathbf{A} \|_{F} = \sqrt{\sum_{i,j} A_{i,j}^2}
 $$
 
 </details>
@@ -824,13 +809,13 @@ Q. What does the determinant of a matrix represent?
 
 <details><summary><b>Answer</b></summary>
 
-The determinant of a square matrix denoted by $det(mathbf{A})$, is a function that maps matrices to real scalers. The determinant is equal to the product of all the eigenvalues of the matrix. 
+The determinant of a square matrix denoted by $\text{det}(\mathbf{A})$, is a function that maps matrices to real scalers. The determinant is equal to the product of all the eigenvalues of the matrix. 
 
 </details>
 
 ---
 
-Q. What does the absolute value of the determinant depict?
+Q. What does the absolute value of the determinant depicts?
 
 <details><summary><b>Answer</b></summary>
 
@@ -850,10 +835,10 @@ Q. What happens to the determinant of a matrix if we multiply one of its rows by
 
 <details><summary><b>Answer</b></summary>
 
-If you multiply one of the rows of a matrix \(\mathbf{A}\) by a scalar \(t\), the determinant of the matrix is scaled by the same factor \(t\). Specifically:
+If you multiply one of the rows of a matrix $\mathbf{A}$ by a scalar $t$, the determinant of the matrix is scaled by the same factor $t$. Specifically:
 
-- Let \(\mathbf{A}\) be an \(n \times n\) matrix.
-- If you multiply one row of \(\mathbf{A}\) by a scalar \(t\), the new matrix \(\mathbf{A}'\) will have a determinant given by:
+- Let $\mathbf{A}$ be an $n \times n$ matrix.
+- If you multiply one row of $\mathbf{A}$ by a scalar $t$, the new matrix $\mathbf{A'}$ will have a determinant given by:
 
 $$
 \text{det}(\mathbf{A}') = t \cdot \text{det}(\mathbf{A})
@@ -985,16 +970,16 @@ Q. What’s the difference between the covariance matrix $A^TA$  and the Gram ma
 <details><summary><b>Answer</b></summary>
 
 - **Dimensions**:
-  - \( A^T A \) is \( n \times n \) (columns of \( A \)).
-  - \( A A^T \) is \( m \times m \) (rows of \( A \)).
+  -  $A^T A$ is $n \times n$ (columns of $A$).
+  - $A A^T$ is $m \times m$ (rows of $A$).
 
 - **Focus**:
-  - \( A^T A \) focuses on the relationships between columns.
-  - \( A A^T \) focuses on the relationships between rows.
+  - $A^T A$ focuses on the relationships between columns.
+  - $A A^T$ focuses on the relationships between rows.
 
 - **Applications**:
-  - \( A^T A \) is used to understand the variance and covariance of data columns.
-  - \( A A^T \) is used to understand the similarity and inner product of data rows.
+  - $A^T A$ is used to understand the variance and covariance of data columns.
+  - $A A^T$ is used to understand the similarity and inner product of data rows.
 
 
 </details>
@@ -1009,28 +994,28 @@ Q. Given $A∈R^{n×m}$  and $b∈R^n$
 
 <details><summary><b>Answer</b></summary>
 
-1. To find \( x \) such that \( A x = b \) where \( A \in \mathbb{R}^{n \times m} \) and \( b \in \mathbb{R}^n \), you generally need to solve a linear system. The method used depends on the properties of \( A \):
+1. To find $x$ such that $A x = b$ where $A \in \mathbb{R}^{n \times m}$ and $b \in \mathbb{R}^n$, you generally need to solve a linear system. The method used depends on the properties of $A$:
 
-- **If \( A \) is square (i.e., \( n = m \)) and invertible**, you can find \( x \) directly using:
+- **If $A$ is square (i.e., $n = m$) and invertible**, you can find $x$ directly using:
 
 $$
   x = A^{-1} b
 $$
 
-- **If \( A \) is not square or not invertible**, we may use other methods such as:
+- **If $A$ is not square or not invertible**, we may use other methods such as:
   - **Gaussian Elimination**: Useful for finding solutions and performing row reductions.
-  - **Least Squares Solution**: If \( A \) has more rows than columns (\( n > m \)) and does not have an exact solution, find the least squares solution.
-  - **Pseudo-Inverse**: When \( A \) is not invertible or not square, the Moore-Penrose pseudo-inverse is used.
+  - **Least Squares Solution**: If $A$ has more rows than columns ($n > m$) and does not have an exact solution, find the least squares solution.
+  - **Pseudo-Inverse**: When $A$ is not invertible or not square, the Moore-Penrose pseudo-inverse is used.
 
-2. The linear system \( A x = b \) has a unique solution if:
+2. The linear system $A x = b$ has a unique solution if:
 
-- **The matrix \( A \) is square (\( n = m \)) and invertible**, meaning \( \text{det}(A) \neq 0 \). In this case, the matrix \( A \) has full rank, and the solution is given by \( x = A^{-1} b \).
+- **The matrix $A$ is square ($n = m$) and invertible**, meaning $\text{det}(A) \neq 0$. In this case, the matrix $A$ has full rank, and the solution is given by $x = A^{-1} b$.
 
 - **For non-square matrices**, a unique solution occurs when the system is consistent and has a unique solution if:
-  - The matrix \( A \) has full column rank (if \( m \leq n \)) and \( b \) is in the column space of \( A \).
-  - In the case of an over-determined system (more rows than columns), \( A \) should have full column rank.
+  - The matrix $A$ has full column rank (if $m \leq n$) and $b$ is in the column space of $A$.
+  - In the case of an over-determined system (more rows than columns), $A$ should have full column rank.
 
-3. The system \( A x = b \) has infinitely many solutions because there are free variables associated with the null space. This leads to a solution space that forms an affine subspace in \(\mathbb{R}^m\), where each solution can be expressed as \( x = x_0 + \text{null}(A) \), where \( x_0 \) is a particular solution and \(\text{null}(A)\) represents the null space of \( A \).
+3. The system $A x = b$ has infinitely many solutions because there are free variables associated with the null space. This leads to a solution space that forms an affine subspace in \(\mathbb{R}^m\), where each solution can be expressed as $x = x_0 + \text{null}(A)$, where $x_0$ is a particular solution and \(\text{null}(A)\) represents the null space of $A$.
 
 4. 
 
