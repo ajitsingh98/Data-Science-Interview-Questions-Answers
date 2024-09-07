@@ -738,7 +738,8 @@ Q. What is the benefit of using Singular Value Decomposition(SVD) over eigenvalu
 
 <details><summary><b>Answer</b></summary>
 
-Every real matrix has a singular value decomposition, but same is not true for eigenvalue decomposition.
+- Eigenvalue decomposition focuses on diagonalizing a square matrix, which may not always be possible.
+- SVD provides an orthogonal factorization that works for any matrix and is often used to analyze the matrix structure, solve least squares problems, and more.
 
 </details>
 
@@ -763,6 +764,20 @@ where:
 - $\mathbf{V}$ is an $n \times n$ orthogonal matrix whose columns are the right singular vectors.
 
 SVD provides a way to decompose a matrix into components that reveal important properties and facilitate various applications in data analysis, signal processing, and more.
+
+</details>
+
+---
+
+Q. What is the relationship between eigen-value decomposition and SVD? 
+
+<details><summary><b>Answer</b></summary>
+
+We can interpret the SVD of $\mathbf{A}$ in terms of the eigen value decomposition of $\mathbf{A}$
+
+- The left singular vectors $\mathbf{A}$ are the eigenvectors of $\mathbf{AA^T}$
+- The right singular vectors $\mathbf{A}$ are the eigenvectors of $\mathbf{A^{T}A}$
+- The non zero singular values of $\mathbf{A}$ are the square roots of the eigenvalues of $\mathbf{AA^T}$ (true for $\mathbf{A^{T}A}$ too).
 
 </details>
 
