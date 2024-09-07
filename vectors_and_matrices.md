@@ -108,13 +108,13 @@ Q. Outer product
 
 1. resultant product will be a $3 \times 3$ matrix, which can be given as follows:
 
-  $$
-  \begin{bmatrix}
-      -3 & 0 & 3 \newline
-      -2 & 0 & 2 \newline
-      -1 & 0 & 1
-  \end{bmatrix}
-  $$
+$$
+\begin{bmatrix}
+    -3 & 0 & 3 \\
+    -2 & 0 & 2 \\
+    -1 & 0 & 1
+\end{bmatrix}
+$$
 
 2. One useful application of the outer product in machine learning is in the computation of covariance matrices, where the outer product is used to calculate the covariance of different feature vectors. For instance, the covariance matrix can be estimated as the average outer product of the centered data vectors (i.e., data vectors from which the mean has been subtracted). This is crucial for algorithms that rely on data distribution, such as Principal Component Analysis (PCA) and many types of clustering algorithms.
 
