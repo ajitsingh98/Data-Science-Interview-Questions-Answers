@@ -231,6 +231,12 @@ The transpose of a matrix is mirror image of the matrix across a diagonal line, 
 
 $$\mathbf{A^T}_{i, j} = \mathbf{A_{j, i}}$$
 
+
+$$
+\mathbf{C_{m \times p}} = \mathbf{A_{m \times n}}\mathbf{B_{n \times p}}
+$$
+
+
 </details>
 
 ---
