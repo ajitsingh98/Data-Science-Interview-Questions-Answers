@@ -110,8 +110,8 @@ Q. Outer product
 
 $$
 \begin{bmatrix}
-    -3 & 0 & 3 \\
-    -2 & 0 & 2 \\
+    -3 & 0 & 3 \\\
+    -2 & 0 & 2 \\\
     -1 & 0 & 1
 \end{bmatrix}
 $$
@@ -227,15 +227,13 @@ Q. Explain transpose operation on matrices?
 
 <details><summary><b>Answer</b></summary>
 
-The transpose of a matrix is mirror image of the matrix across a diagonal line, called as main diagonal. We denote the transpose of a matrix $\mathbf{A}$ as $\mathbf{A^T}$ and it is defined as
+The transpose of a matrix is mirror image of the matrix across a diagonal line, called as main diagonal. We denote the transpose of a matrix $\mathbf{A}$ as $\mathbf{A^T}$. 
 
-$$\mathbf{A^T}_{i, j} = \mathbf{A_{j, i}}$$
-
+It is defined as:
 
 $$
-\mathbf{C_{m \times p}} = \mathbf{A_{m \times n}}\mathbf{B_{n \times p}}
+\mathbf{A^T}_{i, j} = \mathbf{A_{j, i}}
 $$
-
 
 </details>
 
