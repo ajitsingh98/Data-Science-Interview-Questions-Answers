@@ -12,11 +12,10 @@ Contents
 ## Vector
 
 Q. Define following terms
-
-1. Scalers
-2. Vectors
-3. Matrices
-4. Tensors
+  1. Scalers
+  2. Vectors
+  3. Matrices
+  4. Tensors
 
 <details><summary><b>Answer</b></summary>
 
@@ -61,8 +60,8 @@ In deep learning we allow the addition of vector and matrix, yielding another ma
 ---
 
 Q. Dot product
-1. What’s the geometric interpretation of the dot product of two vectors?
-1. Given a vector $u$ , find vector $v$  of unit length such that the dot product of $u$  and $v$  is maximum.
+  1. What’s the geometric interpretation of the dot product of two vectors?
+  1. Given a vector $u$ , find vector $v$  of unit length such that the dot product of $u$  and $v$  is maximum.
 
 <details><summary><b>Answer</b></summary>
 
@@ -74,7 +73,8 @@ The dot product has the following geometric interpretation: Let $\alpha$ be the 
 
 $$\vec{A} \cdot \vec{B} = |\vec{A}| \cdot |\vec{B}| \cdot \cos(\alpha)$$
 
-2. To find a vector $ v $ of unit length such that the dot product of $ u $ and $ v $ is maximum, we want to maximize the expression for the dot product $$ u \cdot v $$.
+2. To find a vector $ v $ of unit length such that the dot product of $ u $ and $ v $ is maximum, we want to maximize the expression for the dot product $ u \cdot v $
+
 According to the formula for the dot product:
 
 $$u \cdot v = |u| |v| \cos(\theta)$$
@@ -101,8 +101,8 @@ This vector $ v $ will have a unit length and the dot product $ u \cdot v $ will
 ---
 
 Q. Outer product
-1. Given two vectors $a=[3,2,1]$  and $b=[−1,0,1]$. Calculate the outer product $a^Tb$ ?
-1. Give an example of how the outer product can be useful in ML.
+  1. Given two vectors $a=[3,2,1]$  and $b=[−1,0,1]$. Calculate the outer product $a^Tb$ ?
+  1. Give an example of how the outer product can be useful in ML.
 
 <details><summary><b>Answer</b></summary>
 
@@ -110,8 +110,8 @@ Q. Outer product
 
 $$
 \begin{bmatrix}
-    -3 & 0 & 3\\
-    -2 & 0 & 2 \\
+    -3 & 0 & 3 \newline
+    -2 & 0 & 2 \newline
     -1 & 0 & 1
 \end{bmatrix}
 $$
