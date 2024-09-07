@@ -23,7 +23,7 @@ Q. Define following terms
 2. Vectors : A vector is an array of numbers. It is like identifying points in the space, with each element giving the coordinate along a different axis.
 
 $$
-\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}
+\mathbf{x} = \begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{bmatrix}
 $$
 
 3. Matrices : A matrix is 2D array of numbers. 
@@ -31,7 +31,7 @@ $$
 Let $\mathbf{A}$ be a matrix defined as:
 
 $$
-\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{bmatrix}
+\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \end{bmatrix}
 $$
 
 4. Tensors: An array of numbers arranged on a regular grid with a variable number of axes is known as a tensor.
@@ -40,8 +40,8 @@ Let $\mathcal{T}$ be a 3-dimensional tensor defined as:
 
 $$
 \mathcal{T} = \begin{bmatrix}
-\begin{bmatrix} t_{111} & t_{112} \\ t_{121} & t_{122} \end{bmatrix}, &
-\begin{bmatrix} t_{211} & t_{212} \\ t_{221} & t_{222} \end{bmatrix}
+\begin{bmatrix} t_{111} & t_{112} \\\\ t_{121} & t_{122} \end{bmatrix}, &
+\begin{bmatrix} t_{211} & t_{212} \\\\ t_{221} & t_{222} \end{bmatrix}
 \end{bmatrix}
 $$
 
@@ -115,8 +115,6 @@ $$
     -1 & 0 & 1
 \end{matrix}\right]
 $$
-
-$$ \left[\begin{matrix} 00 & 01 & 02 \\ 10 & 11 & 12 \\ 20 & 21 & 22 \end{matrix}\right] $$
 
 2. One useful application of the outer product in machine learning is in the computation of covariance matrices, where the outer product is used to calculate the covariance of different feature vectors. For instance, the covariance matrix can be estimated as the average outer product of the centered data vectors (i.e., data vectors from which the mean has been subtracted). This is crucial for algorithms that rely on data distribution, such as Principal Component Analysis (PCA) and many types of clustering algorithms.
 
@@ -273,7 +271,7 @@ The Hadamard product, also known as the element-wise product, is an operation th
 Mathematically, if $\mathbf{A} = [a_{ij}]$ and $\mathbf{B} = [b_{ij}]$ are two matrices of the same size, then the Hadamard product $\mathbf{C} = \mathbf{A} \circ \mathbf{B}$ is defined as:
 
 $$
-\mathbf{C} = \begin{bmatrix} a_{11} \cdot b_{11} & a_{12} \cdot b_{12} & \cdots \\ a_{21} \cdot b_{21} & a_{22} \cdot b_{22} & \cdots \\ \vdots & \vdots & \ddots \end{bmatrix}
+\mathbf{C} = \begin{bmatrix} a_{11} \cdot b_{11} & a_{12} \cdot b_{12} & \cdots \\\\ a_{21} \cdot b_{21} & a_{22} \cdot b_{22} & \cdots \\\\ \vdots & \vdots & \ddots \end{bmatrix}
 $$
 
 where $ c_{ij} = a_{ij} \cdot b_{ij} $.
@@ -311,18 +309,18 @@ The Hadamard product and dot product are distinct operations:
    - **Dot Product**: Used in vector projections, transformations, and solving linear systems.
 
 Example:  
-For matrices $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}$:
+For matrices $\mathbf{A} = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 5 & 6 \\\\ 7 & 8 \end{bmatrix}$:
 
 - **Hadamard Product**:
 
 $$
-  \mathbf{A} \circ \mathbf{B} = \begin{bmatrix} 5 & 12 \\ 21 & 32 \end{bmatrix}
+  \mathbf{A} \circ \mathbf{B} = \begin{bmatrix} 5 & 12 \\\\ 21 & 32 \end{bmatrix}
 $$
 
 - **Dot Product** (Matrix Multiplication):  
 
 $$
-  \mathbf{A} \cdot \mathbf{B} = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}
+  \mathbf{A} \cdot \mathbf{B} = \begin{bmatrix} 19 & 22 \\\\ 43 & 50 \end{bmatrix}
 $$
 
 </details>
@@ -895,8 +893,8 @@ Q. Given the following matrix:
 
 $$
 \begin{bmatrix}
-1 & 4 & -2\\
--1 & 3 & 2 \\
+1 & 4 & -2 \\\\
+-1 & 3 & 2 \\\\
 3 & 5 & -6
 \end{bmatrix}
 $$
@@ -915,8 +913,8 @@ $$
 
 $$
 \begin{bmatrix}
-1 & 4 & -2 \\
-0 & 7 & 0 \\
+1 & 4 & -2 \\\\
+0 & 7 & 0 \\\\
 3 & 5 & -6
 \end{bmatrix}
 $$
@@ -929,8 +927,8 @@ $$
 
 $$
 \begin{bmatrix}
-1 & 4 & -2 \\
-0 & 7 & 0 \\
+1 & 4 & -2 \\\\
+0 & 7 & 0 \\\\
 0 & -7 & 0
 \end{bmatrix}
 $$
@@ -943,8 +941,8 @@ $$
 
 $$
 \begin{bmatrix}
-1 & 4 & -2 \\
-0 & 1 & 0 \\
+1 & 4 & -2 \\\\
+0 & 1 & 0 \\\\
 0 & -7 & 0
 \end{bmatrix}
 $$
@@ -957,8 +955,8 @@ $$
 
 $$
      \begin{bmatrix}
-     1 & 4 & -2 \\
-     0 & 1 & 0 \\
+     1 & 4 & -2 \\\\
+     0 & 1 & 0 \\\\
      0 & 0 & 0
      \end{bmatrix}
 $$
@@ -971,8 +969,8 @@ $$
 
 $$
      \begin{bmatrix}
-     1 & 0 & -2 \\
-     0 & 1 & 0 \\
+     1 & 0 & -2 \\\\
+     0 & 1 & 0 \\\\
      0 & 0 & 0
      \end{bmatrix}
 $$
