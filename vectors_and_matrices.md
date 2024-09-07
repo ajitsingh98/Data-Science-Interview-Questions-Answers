@@ -229,9 +229,7 @@ Q. Explain transpose operation on matrices?
 
 The transpose of a matrix is mirror image of the matrix across a diagonal line, called as main diagonal. We denote the transpose of a matrix $\mathbf{A}$ as $\mathbf{A^T}$ and it is defined as
 
-$$
-\mathbf{A^T}_{i, j} = \mathbf{A_{j, i}}
-$$
+$$\mathbf{A^T}_{i, j} = \mathbf{A_{j, i}}$$
 
 </details>
 
