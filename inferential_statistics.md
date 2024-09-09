@@ -760,6 +760,18 @@ Q. Explain the difference between z-distribution and t-distribution.
 
 ---
 
+Q. When is the t-distribution useful?
+
+
+<details><summary><b>Answer</b></summary>
+
+
+
+</details>
+
+
+---
+
 Q. What is Type I and Type II error in case of hypothesis testing?
 
 <details><summary><b>Answer</b></summary>

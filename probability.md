@@ -20,7 +20,7 @@ Q. What do you mean by probability?
 
 <details><summary><b>Answer</b></summary>
 
-
+It is a mathematical framework for representing uncertain statements. It provides a means of quantifying uncertainty.
 
 </details>
 
@@ -30,7 +30,11 @@ Q. Define probability of an event?
 
 <details><summary><b>Answer</b></summary>
 
+The probability of an event $A$ is given by the ratio of the number of favorable outcomes to the total number of possible outcomes, expressed as:
 
+$$
+P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}
+$$
 
 </details>
 
@@ -40,7 +44,11 @@ Q. Define disjoint sets.
 
 <details><summary><b>Answer</b></summary>
 
+Disjoint sets are sets that have no elements in common. In other words, the intersection of disjoint sets is the empty set. If $A$ and $B$ are two sets, they are disjoint if:
 
+$$
+A \cap B = \emptyset
+$$
 
 </details>
 
@@ -48,11 +56,19 @@ Q. Define disjoint sets.
 
 ### Conditional Probability
 
-Q. Write the expression of probability of $A$ given that $B$ has already occured.
+Q. Write the expression of probability of $A$ given that $B$ has already occurred.
 
 <details><summary><b>Answer</b></summary>
 
+The conditional probability of $A$, given that event $B$ has already happened, is denoted by:
 
+$$
+P(A | B) = \frac{P(A \cap B)}{P(B)}
+$$
+
+where:
+- $P(A \cap B)$ is the probability that both events $A$ and $B$ occur.
+- $P(B)$ is the probability that event $B$ occurs, and it must be greater than zero.
 
 </details>
 
@@ -63,7 +79,15 @@ Q. What is the law of total probability?
 
 <details><summary><b>Answer</b></summary>
 
+The law of total probability is a fundamental rule that provides a way to compute the probability of an event by considering all possible scenarios or conditions. If $B_1, B_2, \ldots, B_n$ are mutually exclusive and exhaustive events (i.e., they cover the entire sample space), and $A$ is any event, then the probability of $A$ can be expressed as:
 
+$$
+P(A) = \sum_{i=1}^{n} P(A | B_i) \cdot P(B_i)
+$$
+
+where:
+- $P(A | B_i)$ is the conditional probability of $A$ given $B_i$.
+- $P(B_i)$ is the probability of $B_i$.
 
 </details>
 
@@ -73,17 +97,29 @@ Q. What does it mean for two variables to be independent?
 
 <details><summary><b>Answer</b></summary>
 
+Two random variables $x$ and $y$ are independent if their probabilities distribution can be expressed as a product of two factors, one involving only $x$ and one involving only $y$:
 
+$$
+\forall x \epsilon x, y \epsilon y, p(x=x, y=y) = p(x=x) \cdot p(y=y)
+$$
+
+This means that knowing whether $x$ has occurred does not change the probability of $y$, and vice versa.
 
 </details>
 
 ---
 
-Q. Given two random variables $X$  and $Y$. We have the values $P(X|Y)$  and $P(Y)$  for all values of $X$  and $Y$. How would you calculate $P(X)$?
+Q. Given two random variables $X$  and $Y$. We have the values $P(X|Y)$  and $P(Y)$ for all values of $X$ and $Y$. How would you calculate $P(X)$?
 
 <details><summary><b>Answer</b></summary>
 
+To calculate $P(X)$ given $P(X | Y)$ and $P(Y)$, we can use the law of total probability. The probability $P(X)$ is obtained by summing over all possible values of $Y$:
 
+$$
+P(X) = \sum_{Y} P(X | Y) \cdot P(Y)
+$$
+
+This expression accounts for the contribution of each conditional probability $P(X | Y)$ weighted by the probability $P(Y)$.
 
 </details>
 
@@ -150,7 +186,21 @@ Q. State bayes theorem.
 
 <details><summary><b>Answer</b></summary>
 
+Bayes' Theorem provides a way to update the probability of a hypothesis based on new evidence. It relates the conditional and marginal probabilities of random events. 
 
+Mathematically, Bayes' Theorem is stated as:
+
+$$
+P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
+$$
+
+where:
+- $P(A | B)$ is the probability of event $A$ given that $B$ has occurred (posterior probability).
+- $P(B | A)$ is the probability of event $B$ given that $A$ has occurred (likelihood).
+- $P(A)$ is the probability of event $A$ (prior probability).
+- $P(B)$ is the probability of event $B$ (marginal likelihood).
+
+It is named after *Reverend Thomas Bayes*
 
 </details>
 
@@ -160,10 +210,48 @@ Q. Write the simplified version of bayes rules.
 
 <details><summary><b>Answer</b></summary>
 
+Standard bayes theorem:
 
+$$
+P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
+$$
+
+We can use bayes' theorem with law of total probability:
+
+$$
+P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B|A) \cdot P(A) + P(B|A^C) \cdot P(A^C)}
+$$
+
+Here, we can also make it more general expression:
+
+$$
+P(A_i | B) = \frac{P(B | A_i) \cdot P(A_i)}{\sum_{j=1}^{n} P(B | A_j) \cdot P(B_j)}
+$$
 
 </details>
 
+---
+
+Q. What is normalization constant in Bayes Theorem?
+
+<details><summary><b>Answer</b></summary>
+
+The denominator in standard bayes theorem is called normalization constant. 
+
+$$
+P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
+$$
+
+It is called normalization constant since it is the same regardless of whether or not the event $A$ happens.
+
+In case it is unknown, we can use following expressions:
+
+$$
+P(B) = P(B|A)P(A) + P(B|A^C)P(A^C)
+$$
+
+
+</details>
 
 ---
 
@@ -171,7 +259,11 @@ Q. Show the relationship between the prior, posterior and likelihood probabiliti
 
 <details><summary><b>Answer</b></summary>
 
+The relationship between the prior, posterior, and likelihood probabilities is given by Bayes' Theorem, which can be expressed as:
 
+$$
+\text{Posterior} = \frac{\text{Likelihood} \times \text{Prior}}{\text{Evidence}}
+$$
 
 </details>
 
@@ -179,17 +271,6 @@ Q. Show the relationship between the prior, posterior and likelihood probabiliti
 ---
 
 Q. In a Bayesian context, if a first experiment is conducted, and then another experiment is followed, what does the posterior become for the next experiment?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
-
----
-
-Q. What is the condition under which two events $A$ and $B$ are said to be statistically independent?
 
 <details><summary><b>Answer</b></summary>
 
@@ -493,40 +574,6 @@ In one incident, the German military sent encoded messages while the British arm
 
 </details>
 
-
----
-
-Q. What is the relationship between the likelihood function and the log-likelihood function?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
-
----
-
-Q. Describe how to analytically find the MLE of a likelihood function?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
-
----
-
-Q. What is the term used to describe the first derivative of the log-likelihood function?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
-
 ---
 
 ### Random Variables
@@ -542,22 +589,151 @@ Q. In context of random variables define the following terms:
 
 <details><summary><b>Answer</b></summary>
 
+*Distributions*
 
+A distribution describes how the values of a random variable are spread or distributed. It provides a complete description of the probability of different outcomes of the random variable.
+
+*Expectations*
+
+The expectation of a random variable $X$, written $E[X]$ is the average of all the values the random variable can take on, each weighted by the probability that the random variable will take on that value.
+
+For discrete variables:
+
+$$
+E_{X~P}[f(x)] = \sum_{x}P(x)f(x)
+$$
+
+For continuous variables:
+
+$$
+E_{X~P}[f(x)] = \int p(x)f(x)dx
+$$
+
+*Variance*
+
+The variance gives a measure of how much the values of a function of a random variable $x$ vary as we sample different values of $x$ from its probability distributions. Variance quantifies how much the values of the variable differ from the expected value (mean).
+
+$$
+\text{Var}(f(x)) = E\left[(f(x) - E[f(x)])^2\right]
+$$
+
+Low variance means the values of $f(x)$ cluster near their expected value.
+
+*PMFs and CDFs*
+
+- Probability Mass Function (PMF): A PMF is used to describe the distribution of a discrete random variable. It specifies the probability of each possible value of the random variable. For a discrete random variable $X$, the PMF $P(X = x)$ gives the probability that $X$ takes the value $x$.
+
+- Cumulative Distribution Function (CDF): A CDF describes the probability that a random variable will take a value less than or equal to a certain threshold. For a random variable $X$, the CDF $F(x)$ is defined as:
+
+$$
+  F(x) = P(X \leq x)
+$$
+
+*Support*
+
+The support of a random variable is the set of values that the variable can take with non-zero probability. For a discrete random variable, it is the set of all values where the PMF is positive. For a continuous random variable, it is the interval or set of intervals where the PDF is positive. The support indicates the range over which the variable can realistically take values.
 
 </details>
-
 
 ---
 
-Q. Can the values of PDF be greater than 1? If so, how do we interpret PDF?
-
+Q. What are the key characteristics of a PDF?
 
 <details><summary><b>Answer</b></summary>
 
+To be a pdf a function $p$ must have following properties:
 
+- The domain of $p$ must be the set of all possible states of $x$
+- $\forall x \in x, p(x) \ge 0$, Note here we don't require $p(x) \le 1$
+- $\int p(x)dx = 1$
 
 </details>
 
+---
+
+Q. What are the properties of expectation?
+
+<details><summary><b>Answer</b></summary>
+
+- Linearity of expectation
+
+$$
+E[aX + b] = aE[X] + b
+$$
+
+Where $a$ and $b$ are constants and not random variables.
+
+-  Expectation of the Sum of Random Variables
+
+$$
+E[X+Y] = E[X] + E[Y]
+$$
+
+Note that this is true irrespective of relationship between $X$ and $Y$.
+
+- Law of Unconcious Statistician(LOTUS)
+
+$$
+E[g(X)] = \sum_{x}g(x)P(X = x)
+$$
+
+We can use this to calculate $E[X^2]$,
+
+$$
+E[X^2] = \sum_{x}x^{2}P(X=x)
+$$
+
+- Expectation of constants
+
+$$
+E[a] = a
+$$
+
+</details>
+
+---
+
+Q. Can the values of PMF be greater than 1?
+
+<details><summary><b>Answer</b></summary>
+
+PMF values are actual probabilities of discrete outcomes and must adhere strictly to the range $[0, 1]$.
+
+</details>
+
+---
+
+Q. Can a Probability Density Function (PDF) be bounded or unbounded?
+
+<details><summary><b>Answer</b></summary>
+
+Yes, a Probability Density Function (PDF) can be either bounded or unbounded.
+
+*Example*
+
+A PDF is unbounded if it can reach arbitrarily large values, especially over narrow intervals. For example, the PDF $f(x) = \frac{2}{3}x^{-1/3}$ for $0 < x < 1$ is unbounded as $x$ approaches zero, yet it still integrates to 1 over its domain, making it a valid PDF.
+
+</details>
+
+---
+
+Q. Write the expression of variance of a random variable?
+
+<details><summary><b>Answer</b></summary>
+
+Suppose $X$ is a random variable with $E[X] = \mu$,
+
+$$
+\text{Var}(X) = E[(X - \mu)^2]
+$$
+
+This is the average distance of a sample from the distribution to the mean. We can further simplify the above expressions with some workaround,
+
+$$
+\text{Var}(X) = E[X^2] - E[X]^2
+$$
+
+</details>
 
 ---
 
@@ -566,40 +742,39 @@ Q. What’s the difference between multivariate distribution and multimodal dist
 
 <details><summary><b>Answer</b></summary>
 
-
+Multi-model refers to a dataset (variable) in which there is more than one mode, while multivariate refers to a dataset in which there is more than one variable.
 
 </details>
 
+---
+
+Q. What do you mean by log probability? Explain why do we need it? 
+
+<details><summary><b>Answer</b></summary>
+
+A log probability $\log{P(E)}$ is simply the log function applied to a probability $P(E)$.
+
+Benefits of using log probability:
+
+- It converts product of probabilities into addition
+- Easier for computers to compute addition addition than multiplications
+- Computers use log probabilities to handle extremely small probabilities accurately due to limitations in floating-point precision.
+
+</details>
 
 ---
 
 Q. How would you turn a probabilistic model into a deterministic model?
 
-
 <details><summary><b>Answer</b></summary>
 
-
-
-</details>
-
-
----
-
-
-Q. What is the relationship between the likelihood function and the log-likelihood function?
-
-
-<details><summary><b>Answer</b></summary>
-
-
+We can do quantization of model's outputs. In models that generate probabilistic outputs (e.g., classification with probabilities), we can convert these into deterministic outputs by selecting the highest probability class or using a thresholding mechanism.
 
 </details>
-
 
 ---
 
 Q. What is a moment of function? Explain the meanings of the zeroth to fourth moments.
-
 
 <details><summary><b>Answer</b></summary>
 
@@ -624,19 +799,19 @@ First five moments in order from $0$th to $4$th moments: `total mass`, `mean`, `
 
 - <b>1st Moment(mean)</b> - The first moment is also known as the mean or expected value. It represents the center of the distribution and is a measure of the average or central location of the data points. 
 
-$$\(\mu = \frac{1}{n} \sum_{i=1}^{n} x_i\)$$
+$$$\mu = \frac{1}{n} \sum_{i=1}^{n} x_i$$$
 
 Where:
-- $\(\mu\)$ (mu) is the mean.
-- $\(n\)$ is the number of data points.
-- $\(x_i\)$ represents individual data points.
+- $$\mu$$ (mu) is the mean.
+- $$n$$ is the number of data points.
+- $$x_i$$ represents individual data points.
 
 - <b>2nd Moment(Variance)</b> - The second moment is the variance. It measures the spread or dispersion of the data points around the mean. It is calculated as the average of the squared differences between each data point and the mean. 
 
-$$\(\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2\)$$
+$$$\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2$$$
 
 Where:
-  - \(\sigma^2\) (sigma squared) is the variance.
+  - $\sigma^2$ (sigma squared) is the variance.
 
 - <b>3rd Moment(Skewness)</b> - The third moment is a measure of the skewness of the distribution. It indicates whether the distribution is skewed to the left (negatively skewed) or to the right (positively skewed). 
 
@@ -658,10 +833,12 @@ Q. List down some famous discrete distributions.
 
 <details><summary><b>Answer</b></summary>
 
-
+- Bernoulli Distribution : It is a distribution over a single binary random variable.
+- Binomial Distribution : Describes the number of successes in a fixed number of independent Bernoulli trials with the same probability of success.
+- Multinomial Distribution : Generalizes the binomial distribution to more than two possible outcomes per trial, modeling the frequencies of different outcomes in a fixed number of trials.
+- Poisson Distribution : Models the number of events occurring in a fixed interval of time or space, given a constant mean rate of occurrence and independence of events.
 
 </details>
-
 
 ---
 
@@ -670,10 +847,84 @@ Q. Define what is meant by a Bernoulli trial.
 
 <details><summary><b>Answer</b></summary>
 
-
+Independent repeated trials of an experiment with exactly two possible outcomes are called Bernoulli trials. 
 
 </details>
 
+---
+
+Q. Suppose $X$ is a random variable following bernoulli distribution. Express the following for $X$.
+
+- Support 
+- PMF Equation
+- Smooth PMF
+- Expectation
+- Variance 
+
+<details><summary><b>Answer</b></summary>
+
+- Support : $x$ is either $0$ and $1$
+- PMF Equation
+
+$$
+P(X = x) = 
+\begin{cases}
+p & \text{if } x = 1, \\
+1 - p & \text{if } x = 0,
+\end{cases}
+$$
+
+- Smooth PMF
+
+$$
+P(X = x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}.
+$$
+
+- Expectation
+
+$$
+E[X] = p
+$$
+
+- Variance
+
+$$
+\text{Var}(X) = p(1-p)
+$$
+
+</details>
+
+---
+
+Q. Suppose $X$ is a random variable following binomial distribution. Express the following for $X$.
+
+- Support 
+- PMF Equation
+- Expectation
+- Variance 
+
+<details><summary><b>Answer</b></summary>
+
+- Support : $x \in {0,1,...,n}$
+- PMF Equation
+
+$$
+P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k = 0, 1, 2, \ldots, n.
+$$
+
+- Expectation
+
+$$
+E[X] = n.p
+$$
+
+- Variance
+
+$$
+\text{Var}(X) = n.p.(1-p)
+$$
+
+<details>
 
 ---
 
@@ -693,16 +944,26 @@ objects bare a specific characteristic. Define what is meant by a binomial rando
 Q. What does the following shorthand stand for?
 
 $$
-X ∼ Binomial(n, p)
+X ∼ \text{Binomial}(n, p)
 $$
 
 
 <details><summary><b>Answer</b></summary>
 
+It means $X$ follows the binomial distribution with $n$ trials, each of which have a probability $p$ of success.
 
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/binomial_expr.png" alt= "Binomial Syntax" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> Binomial Random Variable </td>
+</tr>
+</table>
 
 </details>
-
 
 ---
 
@@ -711,6 +972,40 @@ Q. Find the probability mass function (PMF) of the following random variable:
 $$
 X ∼ Binomial(n, p)
 $$
+
+<details><summary><b>Answer</b></summary>
+
+The probability mass function (PMF) of the binomial distribution is given by:
+
+$$
+P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}
+$$
+
+where:
+- $n$ is the number of trials,
+- $k$ is the number of successes,
+- $p$ is the probability of success on each trial,
+- $\binom{n}{k}$ is the binomial coefficient, calculated as $\frac{n!}{k!(n - k)!}$.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/binomial_pmf.png" alt= "Binomial PMF" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> Binomial Probability Mass Function </td>
+</tr>
+</table>
+
+
+The PMF gives the probability of having exactly $k$ successes in $n$ independent Bernoulli trials with success probability $p$.
+
+</details>
+
+---
+
+Q. Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood.
 
 
 <details><summary><b>Answer</b></summary>
@@ -746,18 +1041,148 @@ Q. Given a fair coin, what’s the number of flips you have to do to get two con
 
 ---
 
-Q. Answer the following questions:
-1. Define what is meant by (mathematical) expectation.
-2. Define what is meant by variance.
-3. Derive the expectation and variance of a the binomial random variable $X ∼ Binomial(n, p)$ in terms of $p$ and $n$.
+Q. Derive the expectation and variance of a the binomial random variable $X ∼ Binomial(n, p)$ in terms of $p$ and $n$.
 
 
 <details><summary><b>Answer</b></summary>
 
+Here we can use the fact that binomial is the sum of bernoulli indicator random variables $X = \sum_{i=1}^{n}Y_i$
 
+- Expectation of $X ∼ Binomial(n, p)$ :
+
+$X$ is the sum of $n$ independent Bernoulli trials, each with a probability of success $p$. We can write $X$ as:
+
+$$
+X = X_1 + X_2 + \ldots + X_n,
+$$
+
+where each $X_i$ is a Bernoulli random variable with:
+
+$$
+P(X_i = 1) = p \quad \text{and} \quad P(X_i = 0) = 1 - p.
+$$
+
+The expectation of a Bernoulli random variable $X_i$ is:
+
+$$
+E[X_i] = 1 \cdot p + 0 \cdot (1 - p) = p.
+$$
+
+Using the linearity of expectation:
+
+$$
+E[X] = E[X_1 + X_2 + \ldots + X_n] = E[X_1] + E[X_2] + \ldots + E[X_n] = n \cdot p.
+$$
+
+$$
+\boxed{E[X] = n \cdot p.}
+$$
+
+- Variance of $X ∼ Binomial(n, p)$ :
+
+The variance of a Bernoulli random variable $X_i$ is:
+
+$$
+\text{Var}(X_i) = E[X_i^2] - (E[X_i])^2.
+$$
+
+Since $X_i$ can only be 0 or 1, $X_i^2 = X_i$, so:
+
+$$
+E[X_i^2] = E[X_i] = p.
+$$
+
+Thus, the variance of $X_i$ is:
+
+$$
+\text{Var}(X_i) = p - p^2 = p(1 - p).
+$$
+
+Since the $X_i$'s are independent, the variance of their sum is the sum of their variances:
+
+$$
+\text{Var}(X) = \text{Var}(X_1 + X_2 + \ldots + X_n) = \text{Var}(X_1) + \text{Var}(X_2) + \ldots + \text{Var}(X_n) = n \cdot p(1 - p).
+$$
+
+$$
+\boxed{\text{Var}(X) = n \cdot p(1 - p).}
+$$
 
 </details>
 
+---
+
+Q. What is poisson distribution? Define following in context of it.
+
+- Notation
+- Parameters
+- Support
+- PMF 
+- Expectation
+- Variance 
+
+<details><summary><b>Answer</b></summary>
+
+Poisson distribution gives the probability of a given number of events in a fixed interval of time(or space).
+
+*Notations*
+
+$$
+X ~ Poi(\lambda)
+$$
+
+*Parameters*
+
+It is constant average rate.
+
+$$\lambda \in {0, 1, ...}$$
+
+*Support*
+
+$$
+x \in {0,1,...}
+$$
+
+*PMF Expression*
+
+$$
+P(X = x) = \frac{\lambda^{x}e^{-\lambda}}{x!}
+$$
+
+*Expectation*
+
+$$
+E[X] = \lambda
+$$
+
+*Variance*
+
+$$
+\text{Var}(X) = \lambda
+$$
+
+</details>
+
+---
+
+Q. What are the main assumption for poisson distribution?
+
+<details><summary><b>Answer</b></summary>
+
+- Events should occur with a known constant mean rate i.e $\lambda$ should be fixed
+- Events should be independent of time since the last event
+
+</details>
+
+---
+
+Q. Define categorical distribution?
+
+<details><summary><b>Answer</b></summary>
+
+The Categorical Distribution is a fancy name for random variables which takes on values other than numbers. As an example, imagine a random variable for the weather today. A natural representation for the weather is one of a few categories: *{sunny, cloudy, rainy, snowy}*
+
+</details>
 
 ---
 
@@ -784,31 +1209,6 @@ A PT device which was not properly calibrated is used to treat a patient with pa
 
 
 </details>
-
----
-
-Q. What is likelihood function of the independent identically distributed (i.i.d) random variables:
-$X_1,··· ,X_n$ where $X_i ∼ binomial(n, p)$, $∀i ∈ [1,n]$, and where p is the parameter of interest?
-
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
-
----
-
-Q. How can we derive the maximum likelihood estimator (MLE) of the i.i.d samples $X_1, · · · , X_n$ introduced in above question?
-
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
 
 ---
 
@@ -1019,7 +1419,7 @@ $$
 </tr>
 </table>
 
-In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a molecule and is distributed according to the Maxwell-Boltzmann distribution and fires only when the most probable speed is reached. This speed is the velocity associated with the highest point in the Maxwell distribution (3.14). Using calculus, brain power and some mathem- atical manipulation, find the most likely value (speed) at which the neuron will fire.
+In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a molecule and is distributed according to the Maxwell-Boltzmann distribution and fires only when the most probable speed is reached. This speed is the velocity associated with the highest point in the Maxwell distribution (3.14). Using calculus, brain power and some mathematical manipulation, find the most likely value (speed) at which the neuron will fire.
 <table align='center'>
 <tr>
 <td align="center">
@@ -1044,15 +1444,259 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 
 ### Continuous Random Variables
 
+
+Q. List down important continuous probability distributions?
+
+
+<details><summary><b>Answer</b></summary>
+
+- Uniform distribution
+- Exponential distribution
+- Normal distribution
+
+</details>
+
+---
+
+Q. List down important continuous probability distributions?
+
+
+<details><summary><b>Answer</b></summary>
+
+- Uniform distribution
+- Exponential distribution
+- Normal distribution
+
+</details>
+
+---
+
+Q. Under what conditions can we say that a random variable is drawn from a uniform distribution?
+
+<details><summary><b>Answer</b></summary>
+
+A random variable can be said to be drawn from a uniform distribution if it exhibits equal likelihood across its range (for continuous) or set of values (for discrete), with a constant probability density (for continuous) or equal probability (for discrete).
+
+</details>
+
+---
+
+Q. Define the following in context of uniform probability distribution?
+
+- Support
+- PDF Expression
+- Expectations
+- Variance
+
+<details><summary><b>Answer</b></summary>
+
+- Support : $x \in [\alpha, \beta]$
+- PDF expression
+
+$$
+P(X = x_i) = \frac{1}{n} \text{ for each } x_i
+$$
+
+- Expectations
+
+$$
+E[X] = \frac{1}{2}(\alpha + \beta)
+$$
+
+- Variance
+
+$$
+Var(X) = \frac{1}{12}(\beta - \alpha)^2
+$$
+
+</details>
+
+---
+
 Q. Given a uniform random variable X  in the range of [0,1]  inclusively. What’s the probability that X=0.5 ?
 
 
 <details><summary><b>Answer</b></summary>
 
+Zero, For a continuous random variable, such as a uniform random variable $X$ that is uniformly distributed over the interval $[0,1]$ the probability of $X$ taking any specific single value is technically zero.
 
+$$
+P(X = x) = 0
+$$
 
 </details>
 
+---
+
+Q. In context of exponential distribution define following terms?
+
+- Notation
+- Parameters
+- Support
+- Pdf expression
+- Cdf expression
+- Expectation
+- Variance
+
+
+<details><summary><b>Answer</b></summary>
+
+*Notation*
+
+$$
+X ~ Exp(\lambda)
+$$
+
+*Parameters*
+
+$$\lambda \in {0,1,..}$$
+
+*Support*
+
+$$x \in R^{+}$$
+
+*PDF Expression*
+
+$$
+f(x) = \lambda e^{-\lambda x}
+$$
+
+*CDF Equation*
+
+$$
+F(x) = 1 - e^{-\lambda x}
+$$
+
+*Expectation*
+
+$$
+E[X] = \frac{1}{\lambda}
+$$
+
+*Variance*
+
+$$
+Var[X] = \frac{1}{\lambda^2}
+$$
+
+</details>
+
+---
+
+Q. Based on historical data from the USGS, earthquakes of magnitude 8.0+ happen in a certain location at a rate of 0.002 per year. Earthquakes are known to occur via a poisson process. What is the probability of a major earthquake in the next 4 years?
+
+
+<details><summary><b>Answer</b></summary>
+
+Let $Y$ be the years until the next major earthquake. Because $Y$ measures time until the next event it fits the description of an exponential random variable: $Y ~ Exp(\lambda = 0.002)$
+
+$$
+P(Y < 4) = F_{Y}(4) = 1 - e^{-lambda.y}
+$$
+
+$$
+P(Y < 4) = 1 - e^{-0.002*4} = 0.008
+$$
+
+So the probability of major earthquake in next 4 years is $0.008$
+
+</details>
+
+---
+
+Q. Can the values of PDF be greater than 1? If so, how do we interpret PDF?
+
+
+<details><summary><b>Answer</b></summary>
+
+Yes, the values of a Probability Density Function (PDF) can be greater than 1. 
+
+*PDF Values Are Not Probabilities*
+
+For continuous random variables, the probability of the variable taking any exact value, $P(X = x)$, is always 0. Instead, the PDF, denoted as $f(x)$, represents the density of probability around that point, not the probability itself.
+
+*Probability from a PDF*
+
+To find the probability of a random variable falling within a certain range, we need to integrate the PDF over that range. 
+
+$$
+P(a \leq X \leq b) = \int_{a}^{b} f(x) \, dx
+$$
+
+Here, $P(a \leq X \leq b)$ is always between $0$ and $1$
+
+*Example*
+
+Consider a PDF defined as $f(x) = 5$ for $x \in [0, 1/5]$ and 0 otherwise. Here, $f(x) \geq 0$, and the integral over its support is:
+
+$$
+\int_{0}^{1/5} 5 \, dx = 5 \times \frac{1}{5} = 1
+$$
+
+This is a valid PDF even though $f(x) = 5$ within the interval.
+
+</details>
+
+---
+
+Q. What is the expression for the probability density function (PDF) of a normal distribution, and what are the expectation and variance of this distribution?
+
+
+<details><summary><b>Answer</b></summary>
+
+The probability density function (PDF) of a normal distribution with mean $\mu$ and variance $\sigma^2$ is given by:
+
+$$
+f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2 \sigma^2}\right)
+$$
+
+- Expectation (Mean): $\mu$
+- Variance: $\sigma^2$
+
+</details>
+
+---
+
+Q. If $X$ is a normal such that $X ~ N(\mu, \sigma^2)$ and $Y$ is a linear transform of $X$ such that $Y = aX + b$, what will be pdf of $Y$?
+
+
+<details><summary><b>Answer</b></summary>
+
+$Y$ will have also a normal pdf with $\mu = a\mu_X$ and $Var(Y) = a^2\sigma^2$
+
+$$
+Y ~ N(a\mu+b, a^2\sigma^2)
+$$
+
+</details>
+
+---
+
+Q. What is the expression of CDF of normal distribution?
+
+
+<details><summary><b>Answer</b></summary>
+
+The cumulative distribution function (CDF) of a normal distribution gives the probability that a random variable $X$ takes on a value less than or equal to $x$. 
+
+- CDF of Normal Distribution: $F_X(x) = \Phi\left(\frac{x - \mu}{\sigma}\right)$
+- CDF of Standard Normal Distribution: $\Phi(z) = \frac{1}{2} \left[1 + \text{erf}\left(\frac{z}{\sqrt{2}}\right)\right]$
+
+</details>
+
+---
+
+Q. What are the properties of standard normal distribution?
+
+
+<details><summary><b>Answer</b></summary>
+
+The standard normal distribution is a special case of the normal distribution. It has the following characteristics:
+
+- $\mu = 0$
+- $\sigma^2 = 1$
+
+</details>
 
 ---
 
@@ -1068,12 +1712,24 @@ Q. You’re drawing from a random variable that is normally distributed, $X∼N(
 
 ---
 
+Q. In what condition we can approximate the binomial distribution into normal or poisson distribution?
+
+<details><summary><b>Answer</b></summary>
+
+- Use the Poisson approximation when $n$ is large (>20) and $p$ is small (<0.05).
+- Use the Normal approximation when $n$ is large (>20), and $p$ is mid-ranged.
+    - $np(1-p) > 10$
+
+</details>
+
+---
+
 Q. It’s a common practice to assume an unknown variable to be of the normal distribution. Why is that?
 
 
 <details><summary><b>Answer</b></summary>
 
-
+Assuming that an unknown variable follows a normal distribution is based on theoretical results like the Central Limit Theorem, mathematical convenience, the ability to approximate other distributions, practical evidence from real-world data, and the robustness of statistical methods. This assumption often simplifies analysis and provides useful approximations and insights.
 
 </details>
 
@@ -1085,35 +1741,15 @@ Q. Is it possible to transform non-normal variables into normal variables? How?
 
 <details><summary><b>Answer</b></summary>
 
+Yes it is possible to transform non-normal variables into normal variables. 
 
+We can try following methods to accomplished that:
 
-</details>
-
-
----
-
-Q. When is the t-distribution useful?
-
-
-<details><summary><b>Answer</b></summary>
-
-
+- Box-cox transformation
+- Log Transformation : In case of right skewed data
+- Quantile Transformation
 
 </details>
-
-
----
-
-Q. Derive the maximum likelihood estimator of an exponential distribution.
-
-
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
 
 ---
 
@@ -1168,6 +1804,40 @@ Q.
 
 ### Correlation and Covariance
 
+Q. What do you mean by covariance?
+
+<details><summary><b>Answer</b></summary>
+
+Covariance is a quantitative measure of the extent to which the deviation of one variable from its mean matches the deviation of the other from its mean.
+
+$$
+\text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])]
+$$
+
+</details>
+
+---
+
+Q. What is the co-variance of two independent random variables?
+
+<details><summary><b>Answer</b></summary>
+
+If two random variables $X$ and $Y$ are independent, than their covariance must be 0.
+
+$$
+Cov(X, Y) = E[XY] - E[Y]E[X]
+$$
+
+Using product of expectations for independent RV
+
+$$
+E[X]E[Y] - E[Y]E[X] = 0
+$$
+
+</details>
+
+---
+
 Q. Are independence and zero covariance the same? Give a counterexample if not.
 
 <details><summary><b>Answer</b></summary>
@@ -1213,9 +1883,9 @@ Q. Define variance and co-variance. What is the difference between them?
 
 <details><summary><b>Answer</b></summary>
 
-Variance measures the spread of a random variable while co-variance measures how two random variables vary together.
+- Variance measures the spread of a random variable while co-variance measures how two random variables vary together.
 
-Variance can be only non-negative while co-variance can be positive, negative or zero.
+- Variance can be only non-negative while co-variance can be positive, negative or zero.
 
 </details>
 
@@ -1335,6 +2005,41 @@ Here $X$, $Y$ and $Z$ are random variables and $c$ is a constant.
 
 </details>
 
+---
+
+Q. Define correlation. How is it related to Covariance?
+
+<details><summary><b>Answer</b></summary>
+
+Correlation between two random variables, $\rho(X, Y)$  is the covariance of the two variables normalized by the standard deviation of each variable.
+
+$$
+\rho(X, Y) = \frac{Cov(X, Y)}{\sqrt{Var(X)Var(Y)}}
+$$
+
+</details>
+
+---
+
+Q. What are the benefits of using correlation over covariance?
+
+<details><summary><b>Answer</b></summary>
+
+- Correlation is scale independent while covariance is scale dependent and hence harder to interpret and compare
+- Correlation is bounded i.e it is always between $-1$ and $1$
+- Covariance only measure directional relationship between two variables but correlation also measures strength and the direction both
+
+</details>
+
+---
+
+Q. If you are analyzing two random variables $X$ and $Y$ and find that the correlation $\rho(X, Y) = 0$, what does this indicate?
+
+<details><summary><b>Answer</b></summary>
+
+Absence of linear relationship between $X$ and $Y$
+
+</details>
 
 ---
 
@@ -1358,7 +2063,7 @@ We can now write the sample covariance and the sample variances in vector notati
 
 $$Covariance(u, v) = \frac{1}{n-1}\sum_{i=1}^n u_i v_i = \frac{1}{n-1}u \cdot v$$
 
-similary variance in X and Y can be expressed in vectorized form:
+similarly variance in X and Y can be expressed in vectorized form:
 
 $$Var(X) = \frac{1}{n-1}\sum_{i=1}^n {u_i}^{2} = \frac{1}{n-1} \| \mathbf{u} \|^2$$
 
@@ -1381,7 +2086,7 @@ For give $r = 0.3$, we can deduce following conclusions:
 - Relationship is positive but week.
 - Increasing one variable is resulting in increase in another variable too.
 
-Note that the above conlusions are based on assumption that both variable are linearly dependent.
+Note that the above conclusions are based on assumption that both variable are linearly dependent.
 
 </details>
 
@@ -1392,7 +2097,39 @@ Q. What is the Pearson correlation coefficient, and how is it calculated?
 
 <details><summary><b>Answer</b></summary>
 
+Correlation measures the degree to which there is a linear relationship between two variables.
 
+*Mathematical expression:*
+
+$$
+\rho(X, Y) = \frac{Con(X, Y)}{\sigma_{X} \sigma_{Y}}
+$$
+
+*Step-by-step calculation:*
+
+- Compute the mean of $X$ and $Y$:
+
+$$
+\bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i, \quad \bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i
+$$
+
+- Calculate the Covariance
+
+$$
+\text{Cov}(X, Y) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})
+$$
+
+- Calculate the standard deviation of $X$ and $Y$
+
+$$
+\sigma_X = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2}, \quad \sigma_Y = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (Y_i - \bar{Y})^2}
+$$
+
+- Substitute into the Pearson Correlation Formula
+
+$$
+r = \frac{\sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum_{i=1}^{n} (X_i - \bar{X})^2} \sqrt{\sum_{i=1}^{n} (Y_i - \bar{Y})^2}}
+$$
 
 </details>
 
@@ -1402,7 +2139,7 @@ Q. What is the significance of a correlation coefficient value of 0?
 
 <details><summary><b>Answer</b></summary>
 
-
+A correlation coefficient value of 0, suggests the absence of linear relationship between two random variable. It may indicate the presence of non-linear relationship between variables.
 
 </details>
 
@@ -1412,7 +2149,8 @@ Q. What is the difference between positive and negative correlation?
 
 <details><summary><b>Answer</b></summary>
 
-
+- Positive Correlation: An increase or decrease in one variable is associated with a similar change in the other variable ($\rho > 0$); both variables move in the same direction.
+- Negative Correlation: An increase in one variable is associated with a decrease in the other, and vice versa ($\rho < 0$); both variables move in opposite directions.
 
 </details>
 
@@ -1422,7 +2160,11 @@ Q. What are some limitations of the Pearson correlation coefficient?
 
 <details><summary><b>Answer</b></summary>
 
-
+- It only measures strength of linear relationship and can't be used to measure nonlinear relationship 
+- It can not distinguish between independent and dependent variable. Pearson’s r does not indicate which variable was *the cause* and which was *the effect*.
+- Can't handle categorical data
+- A high or low Pearson correlation does not imply causation.
+- It is sensitive to outliers
 
 </details>
 
@@ -1433,7 +2175,12 @@ Q. Can you have a high correlation without causation?
 
 <details><summary><b>Answer</b></summary>
 
+Yes, we can have a high correlation without causation. This phenomenon is often summarized by the phrase *correlation does not imply causation*. A strong correlation between two variables simply indicates that they move together in a predictable way, but it does not necessarily mean that one variable causes the other to change.
 
+We might have high correlation but not causality in following scenarios:
+
+- Presence of confounding/latent variables : Presence of third variable
+- Coincidence : Variables are related just by chance
 
 </details>
 
