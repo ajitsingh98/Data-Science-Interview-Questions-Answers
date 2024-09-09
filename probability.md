@@ -924,7 +924,7 @@ $$
 \text{Var}(X) = n.p.(1-p)
 $$
 
-<details>
+</details>
 
 ---
 
