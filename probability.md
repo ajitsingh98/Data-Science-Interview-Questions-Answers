@@ -1266,21 +1266,6 @@ Q. Let y be the number of successes in 5 independent trials, where the probabili
 
 </details>
 
-
----
-
-Q. 
-1. Define the term conjugate prior.
-2. Define the term non-informative prior.
-
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
-
 ---
 
 Q. Prove that the family of beta distributions is conjugate to a binomial likelihood, so that if a prior is in that family then so is the posterior. That is, show that:
@@ -1802,7 +1787,7 @@ Q.
 
 ---
 
-### Correlation and Covariance
+## Correlation and Covariance
 
 Q. What do you mean by covariance?
 
