@@ -1,8 +1,10 @@
 # Data Science Interview Questions and Answers 🚀
 
+webpage - https://ajitsingh98.github.io/interview_preparation/
+
 Greetings 👋!
 
-This repository is your golden ticket 🎟️ for acing data science interviews. Compiled here is a treasure trove 🏆 of topics you're likely to encounter during your data science journey. For better navigation and understanding, we've sorted the syllabus into neat categories.
+This repository is your golden ticket 🎟️ for acing data science interviews. Compiled here is a treasure trove 🏆 of topics you're likely to encounter during your data science journey. For better navigation and understanding, I've sorted the syllabus into neat categories and have made a serving page at https://ajitsingh98.github.io/interview_preparation/
 
 Dive into our vast collection of over **1000+** questions 📚 across different domains, complete with answers derived from thorough research and my personal insights. Found an error or have suggestions? Feel free to shoot me an email 📧 at sajit9285@gmail.com or connect with me on [LinkedIn](https://www.linkedin.com/in/sajit9285/).
 
