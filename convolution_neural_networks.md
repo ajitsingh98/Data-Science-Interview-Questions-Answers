@@ -12,7 +12,7 @@ Contents
 
 ---
 
-### Convolution and Correlation
+## Convolution and Correlation
 
 #### Contents
 
@@ -287,7 +287,7 @@ Answer the following questions:
 
 ---
 
-### CNN as Fixed Feature Extractor
+## CNN as Fixed Feature Extractor
 
 Q.  **True or False**: While AlexNet used 11 × 11 sized filters, the main novelty presented in the VGG architecture was utilizing filters with much smaller spatial extent, sized $3 × 3$.
 
@@ -658,7 +658,7 @@ Q. Pros and cons of FFT-based convolution and Winograd-based convolution.
 
 ---
 
-### Neural Style Transfer
+## Neural Style Transfer
 
 Q. Briefly describe how neural style transfer (NST) works?
 

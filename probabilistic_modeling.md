@@ -299,7 +299,7 @@ $$
 \frac{n}{\lambda} = \sum_{i=1}^{n} X_i.
 $$
 
-Therefore, the MLE of \(\lambda\) is:
+Therefore, the MLE of $\lambda$ is:
 
 $$
 \hat{\lambda} = \frac{n}{\sum_{i=1}^{n} X_i} = \frac{1}{\bar{X}},
@@ -339,7 +339,7 @@ $$
  \hat{\theta}_{\text{MAP}} = \arg\max_{\theta} P(\theta | X) = \arg\max_{\theta} \frac{P(X | \theta) P(\theta)}{P(X)}.
 $$
 
-Since \(P(X)\) is constant with respect to \(\theta\), it simplifies to:
+Since $P(X)$ is constant with respect to $\theta$, it simplifies to:
 
 $$
 \hat{\theta}_{\text{MAP}} = \arg\max_{\theta} P(X | \theta) P(\theta)
@@ -436,6 +436,18 @@ According to your classifier, what's sentiment of the sentence The hamster is up
 1. The Naive Bayes classifier is considered "naive" because it makes a strong and often unrealistic assumption: it assumes that all features (or predictors) in the dataset are independent of each other given the class label.
 
 2. 
+
+</details>
+
+---
+
+Q. Is Naive bayes a discriminative model? 
+
+<details><summary><b>Answer</b></summary>
+
+*True*
+
+The Naive Bayes algorithm is generative. It models $P(x|y)$ and makes explicit assumptions on its distribution (e.g. multinomial, categorical, Gaussian, ...). The parameters of this distributions are estimated with MLE or MAP. 
 
 </details>
 
@@ -631,11 +643,239 @@ No closed-form solution exist
 
 ---
 
-Q. ?
+Q. How can we learn the parameters of logistic regression model? 
 
 <details><summary><b>Answer</b></summary>
 
-No closed-form solution
+</details>
+
+---
+
+Q. State the difference between Naive bayes and Logistic regression model?
+
+<details><summary><b>Answer</b></summary>
+
+
+</details>
+
+---
+
+Q. What is the range of logistic(sigmoid function)?
+
+<details><summary><b>Answer</b></summary>
+
+$(0, 1)$
+
+</details>
+
+---
+
+Q. What is the difference between Conditional MLE and standard MLE, and how does it relate to logistic regression?
+
+<details><summary><b>Answer</b></summary>
+
+Conditional Maximum Likelihood Estimation (Conditional MLE) refers to MLE applied within a conditional model, where the parameters only influence the conditional probability $P(Y|X)$ and not the marginal probability $P(X)$. In contrast, standard MLE applies when the parameters affect both $P(Y|X)$ and $P(X)$.
+
+Logistic regression is an example of a conditional model because the parameters $\theta$ only control $P(Y|X)$, not $P(X)$. As a result, the MLE used in logistic regression is considered a Conditional MLE.
+
+
+</details>
+
+---
+
+Q. What is the issue with using squared losses(MSE) or absolute losses(MAE) for logistic regression model?
+
+<details><summary><b>Answer</b></summary>
+
+Squared and absolute losses are not typically used in logistic regression because they are not well-suited to the characteristics of the logistic function and can lead to significant issues during optimization.
+
+- Non-Convexity Issues: This non-convexity introduces multiple local minima, complicating optimization and often leading to suboptimal solutions.
+- Gradient Behavior: Squared loss flattens gradients, especially when predictions are close to 0 or 1, which is common in logistic regression. The derivative of the squared loss is proportional to the error $(y_i - \hat{y}_i)$. In logistic regression, where $\hat{y}_i$ is bounded between 0 and 1, the gradients can become very small, slowing down convergence. 
+- Poor Fit for Probabilistic Outputs : More fitted for regression task
+
+</details>
+
+---
+
+Q. Can we use logistic regression for multiclass classification problem?
+
+<details><summary><b>Answer</b></summary>
+
+Yes, logistic regression can be extended to handle multiclass classification problems through approaches like One-vs-Rest (OvR) and Softmax Regression (Multinomial Logistic Regression).
+
+</details>
+
+---
+
+Q. Write the expression of softmax function?
+
+<details><summary><b>Answer</b></summary>
+
+For a set of scores/logits $\mathbf{z} = [z_1, z_2, \ldots, z_K]$, the probability of class $j$ is given by:
+
+$$
+ P(y = j | \mathbf{x}) = \frac{\exp(z_j)}{\sum_{k=1}^{K} \exp(z_k)}
+$$
+
+
+</details>
+
+---
+
+Q. State one issue with softmax function over sigmoid?
+
+<details><summary><b>Answer</b></summary>
+
+Computationally more intensive compared to binary logistic regression, especially when the number of classes is large.
+
+</details>
+
+---
+
+Q. How is Maximum Likelihood Estimation (MLE) used in logistic regression, and why is it preferred over other estimation methods like least squares?
+
+<details><summary><b>Answer</b></summary>
+
+*Logistic Regression Model*
+
+Logistic regression models the probability that a binary outcome $y$ is 1 given an input vector $\mathbf{x}$. The model is defined as:
+
+$$
+P(y = 1 | \mathbf{x}) = \frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x} + b)}}
+$$
+
+*Likelihood Function*
+
+For a dataset with $n$ observations, the likelihood of the observed data given the parameters $\mathbf{w}$ and $b$ is:
+
+$$
+L(\mathbf{w}, b) = \prod_{i=1}^{n} P(y_i | \mathbf{x}_i)
+$$
+
+Since logistic regression deals with binary outcomes, this can be rewritten as:
+
+$$
+L(\mathbf{w}, b) = \prod_{i=1}^{n} \left(\frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{y_i} \left(\frac{e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{1 - y_i}
+$$
+
+*Log-Likelihood Function*
+
+$$
+\text{Log-Likelihood} = \sum_{i=1}^{n} \left( y_i \log P(y_i | \mathbf{x}_i) + (1 - y_i) \log (1 - P(y_i | \mathbf{x}_i)) \right)
+$$
+
+*Maximizing the Log-Likelihood*
+
+MLE estimates the parameters $w$ and $b$ by finding values that maximize the log-likelihood function. This is typically done using numerical optimization techniques like gradient descent or Newton-Raphson methods.
+
+MLE is Preferred Over Least Squares in Logistic Regression?
+
+- *Appropriate Loss Function*
+- *Convex Optimization*: The optimization problem derived from MLE is convex, meaning it has a single global minimum, which guarantees the stability and reliability of the solution.
+
+</details>
+
+---
+
+Q. What is Maximum A Posteriori (MAP) Estimation in logistic regression?
+
+<details><summary><b>Answer</b></summary>
+
+MAP estimation in logistic regression is a Bayesian approach that estimates model parameters by maximizing the posterior probability, which combines the likelihood of the observed data with a prior distribution over the parameters. 
+
+$$
+\hat{\mathbf{w}}_{\text{MAP}} = \arg\max_{\mathbf{w}} \, P(\mathbf{w} | \text{data}) = \arg\max_{\mathbf{w}} \, P(\text{data} | \mathbf{w}) \, P(\mathbf{w})
+$$
+
+Using Bayes' theorem, this becomes:
+
+$$
+\hat{\mathbf{w}}_{\text{MAP}} = \arg\max_{\mathbf{w}} \, \left(\prod_{i=1}^{n} P(y_i | \mathbf{x}_i; \mathbf{w})\right) P(\mathbf{w})
+$$
+
+</details>
+
+---
+
+Q. How does MAP differ from Maximum Likelihood Estimation (MLE) in logistic regression?
+
+<details><summary><b>Answer</b></summary>
+
+MLE maximizes the likelihood of the data given the parameters, relying solely on observed data. MAP, on the other hand, maximizes the posterior probability by incorporating a prior distribution, which acts as a regularization term.
+
+</details>
+
+---
+
+Q. What role do priors play in MAP estimation?
+
+<details><summary><b>Answer</b></summary>
+
+Priors in MAP estimation incorporate external knowledge or beliefs about the parameters, adding a regularization effect. Common priors include Gaussian (L2 regularization) and Laplace (L1 regularization), which help control model complexity and prevent overfitting.
+
+</details>
+
+---
+
+Q. Why might MAP be preferred over MLE in logistic regression?
+
+<details><summary><b>Answer</b></summary>
+
+MAP is preferred over MLE in scenarios where there is a risk of overfitting, when data is sparse, or when domain knowledge is important. The inclusion of priors in MAP acts as regularization, making the model more robust to noise and improving generalization.
+
+</details>
+
+---
+
+Q. How does MAP help in small datasets compared to MLE?
+
+<details><summary><b>Answer</b></summary>
+
+In small datasets, MLE may overfit because it relies only on the observed data. MAP’s use of priors helps stabilize parameter estimates, providing more reliable results when the data alone is insufficient.
+
+</details>
+
+---
+
+Q. What type of priors are commonly used in MAP for logistic regression?
+
+<details><summary><b>Answer</b></summary>
+
+Common priors used in MAP for logistic regression include:
+
+- Gaussian Prior (L2 Regularization): Penalizes large weights and prevents overfitting.
+- Laplace Prior (L1 Regularization): Encourages sparsity, leading to simpler models by driving some coefficients to zero.
+
+</details>
+
+---
+
+Q. How does MAP provide flexibility compared to MLE?
+
+<details><summary><b>Answer</b></summary>
+
+MAP allows the use of different priors based on the problem context, providing flexibility in how the model is regularized or adjusted. MLE lacks this capability as it does not incorporate any prior information.
+
+</details>
+
+---
+
+Q. What is the main advantage of using MAP in logistic regression?
+
+<details><summary><b>Answer</b></summary>
+
+The main advantage of using MAP in logistic regression is its ability to combine observed data with prior information, enhancing the model’s robustness against overfitting and making it better suited for small or noisy datasets.
+
+</details>
+
+---
+
+
+Q. Can you explain a situation where using MAP estimation could lead to worse results than MLE?
+
+<details><summary><b>Answer</b></summary>
+
+MAP estimation could lead to worse results if the prior is incorrect or misaligned with the actual data distribution. For example, if a strong prior incorrectly penalizes certain parameter values, the resulting estimates could be biased, leading to poor predictive performance compared to MLE, which only relies on the observed data.
 
 </details>
 

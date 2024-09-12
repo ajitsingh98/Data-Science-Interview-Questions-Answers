@@ -5,7 +5,7 @@
 Contents
 ----
 
-- [Decision Trees]()
+- [Decision Trees](#decision-trees)
 - [Bagging, Boosting, Stacking and Blending]()
 - [Approaches for Combining Predictors]()
 - [Monolithic and Heterogeneous Ensembling]()
@@ -17,6 +17,8 @@ Contents
 - [Boosting based Algorithms]()
 
 ---
+
+## Decision Trees
 
 Q. What is a decision tree?
 

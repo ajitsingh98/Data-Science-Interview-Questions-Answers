@@ -14,7 +14,7 @@ Contents
 
 ---
 
-### Perceptron
+## Perceptron
 
 - The single layer perceptron
 - The Multi Layer Perceptron
@@ -627,7 +627,7 @@ Q. In many interviews, you will be given a paper that you have never encountered
 
 ---
 
-### Performance Metrics
+## Performance Metrics
 
 - Confusion Matrix
 - precision and recall

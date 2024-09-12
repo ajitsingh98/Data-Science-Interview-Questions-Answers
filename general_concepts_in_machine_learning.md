@@ -13,7 +13,7 @@ Contents
 
 ---
 
-### Basics
+## Basics
 
 Q. Explain supervised, unsupervised, weakly supervised, semi-supervised, and active learning.
 
@@ -380,7 +380,7 @@ Q. What are some common encoding techniques in machine learning?
 
 ---
 
-### Cross Validation
+## Cross Validation
 
 #### Contents
 - [CV approaches](#cv-approaches)
@@ -611,7 +611,7 @@ Q. Can you combine RandomizedSearchCV and GridSearchCV techniques for hyperparam
 ---
 
 
-### Similarity Measures
+## Similarity Measures
 
 - Image, text similarity
 - Jcard similarity
@@ -757,7 +757,7 @@ $$
 ---
 
 
-### Sampling Techniques and Creating Training Data
+## Sampling Techniques and Creating Training Data
 
 Q. If you have 6 shirts and 4 pairs of pants, how many ways are there to choose 2 shirts and 1 pair of pants?
 
@@ -1094,7 +1094,7 @@ Q. Train, valid, test splits.
 ---
 
 
-### Feature Engineering
+## Feature Engineering
 
 Q. Feature selection.
 1. Why do we use feature selection?
@@ -1143,7 +1143,7 @@ Q. What are the different types of feature selection techniques?
 
 
 
-### Bias and Variance
+## Bias and Variance
 
 Q. Explain Bias and Variance?
 

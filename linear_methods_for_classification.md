@@ -12,7 +12,7 @@ Contents
 
 ---
 
-### General Concepts
+## General Concepts
 
 Q. **True or False**: For a fixed number of observations in a data set, introducing more variables normally generates a model that has a better fit to the data. What may be the drawback of such a model-fitting strategy?
 
@@ -132,7 +132,7 @@ Q. Assume the probability of an event occurring is `p = 0.1`.
 
 ---
 
-### Odds and Log-odds
+## Odds and Log-odds
 
 Q. **True or False**: If the odds of success in a binary response is $4$, the corresponding probability of success is $0.8$.
 
@@ -239,7 +239,7 @@ The above equation represents sigmoid function.
 
 ---
 
-### The Sigmoid
+## The Sigmoid
 
 Q. Compute the derivative of the natural sigmoid function:
 
@@ -347,7 +347,7 @@ $$P(y = 1) = 0.2689$$
 </details>
    
 ---
-### Truly Understanding Logistic Regression
+## Truly Understanding Logistic Regression
 
 Q. Proton therapy (PT) is a widely adopted form of treatment for many types of cancer including breast and lung cancer (Fig. 2.2).
 
@@ -751,7 +751,7 @@ $$(e^{0.4734}, e^{1.0889}) = (1.6060, 2.9710)$$
 
 ---
 
-### The Logit Function and Entropy
+## The Logit Function and Entropy
 
 Q. The entropy of a single binary outcome with probability $p$ to receive 1 is defined as:
     $$H(p) ≡ −p\log{p}−(1−p)\log(1−p)$$

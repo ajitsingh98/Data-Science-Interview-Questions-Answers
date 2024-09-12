@@ -1784,7 +1784,6 @@ Q.
 
 </details>
 
-
 ---
 
 ## Correlation and Covariance
@@ -2078,7 +2077,6 @@ Note that the above conclusions are based on assumption that both variable are l
 ---
 
 Q. What is the Pearson correlation coefficient, and how is it calculated?
-
 
 <details><summary><b>Answer</b></summary>
 

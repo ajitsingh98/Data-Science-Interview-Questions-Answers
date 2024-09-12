@@ -355,3 +355,9 @@ Q. Suppose you want to build a model to predict the price of a stock in the next
 </details>
 
 ---
+
+
+## Clustering Metrics
+
+
+## Metrics in NLP
