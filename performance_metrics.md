@@ -675,6 +675,7 @@ We can use following metrics/loss to handle asymmetric errors:
 
 ## Classification Metrics
 
+
 Q. What metrics we can use to evaluate a classifier?
 
 <details><summary><b>Answer</b></summary>
@@ -687,6 +688,70 @@ We can use following metrics for evaluation:
 - F-scores
 - Precision Recall curve
 - ROC curve
+
+</details>
+
+---
+
+
+Q. What is the purpose of a confusion matrix?
+
+<details><summary><b>Answer</b></summary>
+
+This a 2D matrix of size $n \times n$ where n is number of distinct tables we have. It stores information about the actual label and corresponding predicted values. A confusion matrix visualizes and summarizes the performance of a classification algorithm.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/confusion_matrix.png" alt= "Confusion Matrix" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> Confusion Matrix for Binary Classification </td>
+</tr>
+</table>
+
+</details>
+
+---
+
+
+Q. Explain True Positive (TP) and False Positive (FP).
+
+<details><summary><b>Answer</b></summary>
+
+- True Positive (TP): A true positive occurs when the model correctly predicts a positive class.
+- False Positive (FP): A false positive happens when the model incorrectly predicts a positive class when it is actually negative.
+
+</details>
+
+---
+
+
+Q. Define True Negative (TN) and False Negative (FN).
+
+<details><summary><b>Answer</b></summary>
+
+- True Negative (TN): A true negative occurs when the model correctly predicts a negative class. 
+- False Negative (FN): A false negative happens when the model incorrectly predicts a negative class when it is actually positive. 
+
+</details>
+
+---
+
+Q. How can you use a confusion matrix to choose an appropriate threshold for a binary classifier?
+
+<details><summary><b>Answer</b></summary>
+
+To choose an appropriate threshold for a binary classifier using a confusion matrix:
+
+1. Vary Thresholds: Adjust the threshold and observe changes in TP, TN, FP, and FN values.
+2. Evaluate Metrics: Calculate precision, recall, accuracy, and F1-score at each threshold.
+3. Analyze Trade-offs: Higher thresholds increase precision but reduce recall, and vice versa.
+4. Plot Curves: Use precision-recall or ROC curves to visualize the trade-offs.
+5. Select Optimal Threshold: Choose a threshold that meets your performance goals (e.g., maximizing F1-score).
+6. Balance Metrics: Adjust to prioritize precision (reduce FP) or recall (reduce FN) as needed.
+7. Validate Choice: Test the selected threshold on a validation set to ensure it generalizes well.
 
 </details>
 
@@ -963,81 +1028,16 @@ Bounds of F scores: $[0, 1]$, with $0$ the worst and $1$ the best, and guarantee
 
 ---
 
-Q. What is the purpose of a confusion matrix?
+Q. What are the weaknesses of F-1 score?
 
 <details><summary><b>Answer</b></summary>
 
-
+- The F-score only considers precision and recall, ignoring true negatives, which can lead to misleading results, especially in imbalanced datasets.
+- The F1-score equally weights precision and recall, which may not be ideal if one is more important than the other in a given context.
 
 </details>
 
 ---
-
-
-Q. Explain True Positive (TP) and False Positive (FP).
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-
-Q. Define True Negative (TN) and False Negative (FN).
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-
-Q. What is accuracy, and how is it calculated using a confusion matrix?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-Q. What are precision and recall, and how are they calculated from a confusion matrix?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-
-Q. How can you use a confusion matrix to choose an appropriate threshold for a binary classifier?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
-
-Q. What is the F1 score, and how is it related to precision and recall?
-
-<details><summary><b>Answer</b></summary>
-
-
-
-</details>
-
----
-
 
 Q. Explain the difference between Type I and Type II errors in the context of a confusion matrix.
 
@@ -1049,12 +1049,156 @@ Q. Explain the difference between Type I and Type II errors in the context of a 
 
 ---
 
-Q. F1 score.
-1. What’s the benefit of F1 over the accuracy?
-1. Can we still use F1 for a problem with more than two classes. How?
+Q. What is the main limitations with confusion matrix summarization?
 
 <details><summary><b>Answer</b></summary>
-    
+
+Confusion matrices hide a threshold for turning probabilities/scores into predicted labels. With precision–recall curves, we finally address this.
+
+</details>
+
+---
+
+Q. What is precision and recall curve?
+
+<details><summary><b>Answer</b></summary>
+
+A precision–recall curve is a method for summarizing the relationship between precision and recall for a binary classifier. 
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/precision-recall-curve.webp" alt= "Precision and Recall Curve" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> Precision and Recall Curve </td>
+</tr>
+</table>
+
+
+</details>
+
+---
+
+Q. State the use of precision and recall curve?
+
+<details><summary><b>Answer</b></summary>
+
+With precision–recall curves, we get a generalized perspective on F1 scores (and we could weight precision and recall differently to achieve the effects of $\beta$ for F scores more generally). These curves can be used, not only to assess a system, but also to identify an optimal decision boundary given external goals.
+
+</details>
+
+---
+
+Q. How can we construct precision and recall curve?
+
+<details><summary><b>Answer</b></summary>
+
+1. Obtain Prediction Scores: Use your classifier to get probability scores or confidence scores for each instance, indicating how likely it is to belong to the positive class.
+
+2. Sort Predictions: Sort the instances by their predicted scores in descending order, from the highest probability of being positive to the lowest.
+
+3. Vary the Classification Threshold: Adjust the threshold from high to low to classify instances as positive or negative. Each threshold value corresponds to a different set of predicted positives and negatives.
+
+4. Calculate Precision and Recall: For each threshold, calculate precision and recall:
+   - Precision = TP / (TP + FP): Measures the proportion of true positives among all predicted positives.
+   - Recall = TP / (TP + FN): Measures the proportion of actual positives correctly identified.
+
+5. Plot Precision vs. Recall: Plot the calculated precision values on the y-axis against the corresponding recall values on the x-axis for each threshold.
+
+6. Analyze the Curve: The resulting curve shows the trade-off between precision and recall. A curve closer to the top-right corner (high precision and high recall) indicates better performance.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/precision-recall-curve.webp" alt= "Precision and Recall Curve" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> Precision and Recall Curve </td>
+</tr>
+</table>
+
+</details>
+
+---
+
+Q. What are the limitations of precision and recall curve?
+
+<details><summary><b>Answer</b></summary>
+
+- Most implementations are limited to binary problems. The basic concepts are defined for multi-class problems, but it's very difficult to understand the resulting hyperplanes.
+
+- There is no single statistic that does justice to the full curve, so this metric isn't useful on its own for guiding development and optimization. Indeed, opening up the decision threshold in this way really creates another hyperparameter that one has to worry about!
+
+</details>
+
+---
+
+Q. What does ROC Curve depicts?
+
+<details><summary><b>Answer</b></summary>
+
+The Receiver Operating Characteristic (ROC) curve for a class $k$ depicts recall the false positive rate (FPR) for $k$ as a function of the recall for $k$.
+
+$$
+\text{False Positive Rate} = \frac{FP}{FP + TN}
+$$
+
+ROC curve indicates how well probabilities from positive class are separated from negative class.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/ROC-AUC-curve.png" alt= "AUC ROC Curve" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> AUC ROC Curve </td>
+</tr>
+</table>
+
+</details>
+
+---
+
+Q. For an ideal model what should ROC-AUC?
+
+<details><summary><b>Answer</b></summary>
+
+The ROC curve is a probability curve, and for an ideal model, the area under the ROC curve would be 1, indicating perfect classification performance.
+
+</details>
+
+---
+
+Q. State what does mean to have AUC of 0.2?
+
+<details><summary><b>Answer</b></summary>
+
+AUC of $0.2$ indicates there are $20%$ chance of fair classification.
+
+</details>
+
+---
+
+Q. Can we use ROC-AUC score for multi-class classification?
+
+<details><summary><b>Answer</b></summary>
+
+It's important to note that the AUROC is commonly used for binary class classification problems. For multiclass classification, there would be N number of AUROC curves using the one vs rest methodology, where each class is compared against the rest of the classes separately.
+
+</details>
+
+---
+
+Q. What is the range of ROC-AUC?
+
+<details><summary><b>Answer</b></summary>
+
+For ROC AUC: $[0, 1]$, with $1$ the best.
+
 </details>
 
 ---
@@ -1062,7 +1206,9 @@ Q. F1 score.
 Q. Your team is building a system to aid doctors in predicting whether a patient has cancer or not from their X-ray scan. Your colleague announces that the problem is solved now that they’ve built a system that can predict with 99.99% accuracy. How would you respond to that claim?
 
 <details><summary><b>Answer</b></summary>
-    
+
+Accuracy is not a reliable metric in this scenario because cancer is rare. A model that predicts all patients as cancer-free could still achieve high accuracy, but it would fail to correctly identify those with cancer. 
+
 </details>
 
 ---
@@ -1081,7 +1227,17 @@ $$
 1. What can we do to improve the model’s performance?
 
 <details><summary><b>Answer</b></summary>
-    
+
+1. Precision, Recall, and F1 Score Calculations:
+   -Precision: $\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{30}{30 + 5} = \frac{30}{35} \approx 0.857$
+   -Recall: $\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{30}{30 + 20} = \frac{30}{50} = 0.600$
+   -F1 Score: $\text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \times \frac{0.857 \times 0.600}{0.857 + 0.600} \approx 0.714$
+
+2. Improving the Model’s Performance:
+   - Adjust Threshold: Experiment with different classification thresholds to balance precision and recall.
+   - Collect More Data: Gather more samples to better train the model and improve generalization.
+   - Feature Engineering: Improve the feature set to provide the model with more relevant information.
+
 </details>
 
 ---
@@ -1089,14 +1245,6 @@ $$
 Q. Consider a classification where $99%$ of data belongs to class A and $1%$ of data belongs to class B.
 1. If your model predicts A 100% of the time, what would the F1 score be? Hint: The F1 score when A is mapped to 0 and B to 1 is different from the F1 score when A is mapped to 1 and B to 0.
 1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$ be?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. When should we use RMSE (Root Mean Squared Error) over MAE (Mean Absolute Error) and vice versa?
 
 <details><summary><b>Answer</b></summary>
     
