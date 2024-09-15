@@ -16,26 +16,29 @@ Contents
 
 Q. **True or False**: For a fixed number of observations in a data set, introducing more variables normally generates a model that has a better fit to the data. What may be the drawback of such a model-fitting strategy?
 
-<details style='color: red;'><summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
 
-    <p style='color: red'>
-    <b>True</b> But if the inducted features do not provide enough information and act like redundant predictors, then it does not make sense to add those predictors to the model. It unnecessarily increases the complexity of the model and may cause overfitting issues.
-    </p>
+True, But if the inducted features do not provide enough information and act like redundant predictors, then it does not make sense to add those predictors to the model. It unnecessarily increases the complexity of the model and may cause overfitting issues.
 
 </details>
 
 ---
 
-Q. Define the term **“odds of success”** both qualitatively and formally. Give a numerical example that stresses the relation between probability and odds of an event occurring.
+Q. Define the term **odds of success** both qualitatively and formally. Give a numerical example that stresses the relation between probability and odds of an event occurring.
 
 <details><summary><b>Answer</b></summary>
 
-    <p>  The term "odds of success" refers to the likelihood or probability of a favorable outcome or event occurring in a given situation or experiment. The odds of success express the relative chances of a positive outcome compared to a negative outcome. It tells you how much more likely success is compared to failure.</p>
-    <p>Odds of Success = $\frac{q}{p}$</p>
-    <p>Let's consider a simple numerical example to illustrate the relationship between probability and the odds of an event occurring:</p>
-     <p>  Suppose you are flipping a fair coin. The probability of getting heads ($p$) is $0.5$, and the probability of getting tails ($q$) is also $0.5$. To calculate the odds of success (getting heads):</p>
-     <p>Odds of Success = $\frac{q}{p}$ = $\frac{0.5}{0.5} = 1$</p>
-<p>In this case, the odds of success are 1. This means that the chances of getting heads and the chances of getting tails are equal. </p>
+The term "odds of success" refers to the likelihood or probability of a favorable outcome or event occurring in a given situation or experiment. The odds of success express the relative chances of a positive outcome compared to a negative outcome. It tells you how much more likely success is compared to failure.
+
+Odds of Success = $\frac{q}{p}$
+
+Let's consider a simple numerical example to illustrate the relationship between probability and the odds of an event occurring:
+
+Suppose you are flipping a fair coin. The probability of getting heads ($p$) is $0.5$, and the probability of getting tails ($q$) is also $0.5$. To calculate the odds of success (getting heads):
+
+Odds of Success = $\frac{q}{p}$ = $\frac{0.5}{0.5} = 1$
+
+In this case, the odds of success are 1. This means that the chances of getting heads and the chances of getting tails are equal. 
 
 </details>
 
@@ -47,14 +50,17 @@ Q. Answer the following:
 1. What statistical tests can be used to attest to the significance of an interaction term?
 
 <details><summary><b>Answer</b></summary>
-    <p> 1. An interaction is the product of two single predictor variables implying a non-additive effect.
- </p>
-    <p>2. Suppose in your model you have two predictors $X$ and $Y$, a model having interaction term can be expressed as :
+
+1. An interaction is the product of two single predictor variables implying a non-additive effect.
+ 
+2. Suppose in your model you have two predictors $X$ and $Y$, a model having interaction term can be expressed as:
+
     $$\beta_0 + \beta_1X + \beta_2Y + \beta_3XY$$
+
     The last term $\beta_3XY$ represents an interaction between these two predictors.
-    </p>
-     <p> 3.  For testing the contribution of an interaction, two principal methods are commonly employed; the Wald chi-squared test or a likelihood ratio test between the model with and without the interaction term.
- </p>
+    
+3.  For testing the contribution of an interaction, two principal methods are commonly employed; the Wald chi-squared test or a likelihood ratio test between the model with and without the interaction term.
+ 
 </details>
 
 ---
@@ -62,7 +68,9 @@ Q. Answer the following:
 Q. **True or False**: In machine learning terminology, unsupervised learning refers to the mapping of input covariates to a target response variable that is attempted to be predicted when the labels are known.
 
 <details><summary><b>Answer</b></summary>
-    <p> <b>False</b>, In unsupervised learning we don't have anything like targets/labels to guide the model's predictions. We mostly use unsupervised learning to gain insights from the data. Note that the above definition describes another paradigm of machine learning i.e. supervised learning. </p>
+
+False, In unsupervised learning we don't have anything like targets/labels to guide the model's predictions. We mostly use unsupervised learning to gain insights from the data. Note that the above definition describes another paradigm of machine learning i.e. supervised learning. 
+
 </details>
 
 ---
@@ -70,7 +78,7 @@ Q. **Complete the following sentence**: In the case of logistic regression, the 
 
 <details><summary><b>Answer</b></summary>
 
-   In the case of logistic regression, the response variable is the log of the odds of being classified in a group of binary or multi-class responses. This definition essentially demonstrates that odds can take the form of a vector, allowing for a linear relationship.
+In the case of logistic regression, the response variable is the log of the odds of being classified in a group of binary or multi-class responses. This definition essentially demonstrates that odds can take the form of a vector, allowing for a linear relationship.
 
 </details>
 
@@ -98,15 +106,13 @@ Q. Complete the following sentence: Minimizing the negative log-likelihood also 
 maximizing the `[...]` of selecting the `[...]` class.
 
 <details><summary><b>Answer</b></summary>
-    <p>
-    Minimizing the negative log-likelihood also means
-maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> class
-    </p>
+    
+Minimizing the negative log-likelihood also means maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> class
     
 </details>
 
-
 ---
+
 Q. Assume the probability of an event occurring is `p = 0.1`.
 1. What are the `odds` of the event occurring?
 2. What are the `log odds` of the event occurring?
@@ -138,21 +144,20 @@ Q. **True or False**: If the odds of success in a binary response is $4$, the co
 
 <details><summary><b>Answer</b></summary>
 
-  <p><b>True</b><p>
-  Let's calculate the probability of the succeess(p). We can define the probability(p) in terms of odds of the success as follows:
-  <p>
+True
 
-  $$p = \frac{odds}{1+odds}$$
+Let's calculate the probability of the success(p). We can define the probability(p) in terms of odds of the success as follows:
 
-  </p>
-  <p>Since odds of the success = 4.</p>
-  <p>
 
-    $$p = \frac{4}{1+4} = 0.8$$
+$$p = \frac{odds}{1+odds}$$
 
-  </p> 
+
+Since odds of the success = 4.
+
+
+$$p = \frac{4}{1+4} = 0.8$$
+
 </details>
-
 
 ---
 
@@ -161,9 +166,9 @@ their respective odds.
 
 <details><summary><b>Answer</b></summary>
 
-  Governing expression:
+Governing expression:
 
-  $$odds(p) = \frac{p}{1-p}$$
+$$odds(p) = \frac{p}{1-p}$$
 
 <table align='center'>
   <tr>
@@ -197,8 +202,7 @@ Note: Assume that Y denotes whether a human voice activity was detected $(Y = 1)
 
 ---
 
-Q. Let us consider the logit transformation, i.e., log-odds. Assume a scenario in which the
-logit forms the linear decision boundary, for a given vector of systematic components X and predictor variables θ. Write the mathematical expression for the hyperplane that describes the decision boundary.
+Q. Let us consider the logit transformation, i.e., log-odds. Assume a scenario in which the logit forms the linear decision boundary, for a given vector of systematic components X and predictor variables θ. Write the mathematical expression for the hyperplane that describes the decision boundary.
 
 $$
 \log{\frac{Pr(Y = 1 | X)}{Pr(Y = 0|X)}} = \theta_0 + \theta^TX
@@ -300,13 +304,15 @@ h_\beta(x) = g(\beta^Tx) =  \frac{1}{1+e^{-\beta^Tx}}\\
 = P(y = 1|x;\beta)
 $$
 
-where y holds the hypothesis value. Suppose the coefficients of a logistic regression model with independent variables are as follows: $\beta_0 = -1.5$, $\beta_1 = 3$, $\beta_2 = -0.5$. Assume additionally, that we have an observation with the following values for the independent variables: $x_1 = 1$, $x_2 = 5$. As a result, the logit equation becomes: $$logit = \beta_0 + \beta_1x_1 + \beta_2x_2$$.
+where y holds the hypothesis value. Suppose the coefficients of a logistic regression model with independent variables are as follows: $\beta_0 = -1.5$, $\beta_1 = 3$, $\beta_2 = -0.5$. Assume additionally, that we have an observation with the following values for the independent variables: $x_1 = 1$, $x_2 = 5$. As a result, the logit equation becomes: 
+
+$$\text{logit} = \beta_0 + \beta_1x_1 + \beta_2x_2$$
+
 1. What is the value of the logit for this observation?
 2. What is the value of the odds for this observation?
 3. What is the value of $P(y = 1)$ for this observation?
 
-<details>
-<summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
 
 1. Logit value can be obtained by substituting independent variables and model's coefficients as follows:
 
@@ -347,6 +353,7 @@ $$P(y = 1) = 0.2689$$
 </details>
    
 ---
+
 ## Truly Understanding Logistic Regression
 
 Q. Proton therapy (PT) is a widely adopted form of treatment for many types of cancer including breast and lung cancer (Fig. 2.2).
@@ -372,7 +379,7 @@ A PT device which was not properly calibrated is used to simulate the treatment 
     <td align="center">Tumour eradication statistics</td>
   </tr>
 </table>
-Referring to Table 2.1: Answer the following questions
+Referring to Table: Answer the following questions
 
 1. What is the explanatory variable and what is the response variable?
 2. Explain the use of relative risk and odds ratio for measuring association.

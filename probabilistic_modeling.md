@@ -25,6 +25,7 @@ We can understand both approaches from an example:
 Suppose you have a coin, and you want to determine the probability of it landing heads (H) when you toss it.
 
 <b>Frequentist Approach:</b>
+
 In the frequentist approach, probabilities are viewed as long-term relative frequencies based on repeated, identical experiments or events. To find the probability of getting a heads (H), you perform a large number of coin flips and calculate the proportion of times it lands heads.
 
 1. You flip the coin 100 times.
