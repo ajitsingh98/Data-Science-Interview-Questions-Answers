@@ -6,8 +6,8 @@
 Contents
 ---
 
-- [Regression Metrics](#linear-regression)
-- [Classification Metrics](#ridge-and-lasso-regularization)
+- [Regression Metrics](#regression-metrics)
+- [Classification Metrics](#classification-metrics)
 - [Clustering Metrics](#clustering-metrics)
 - [Metrics in NLP](#metrics-in-nlp)
 
