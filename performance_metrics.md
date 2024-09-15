@@ -8,8 +8,8 @@ Contents
 
 - [Regression Metrics](#linear-regression)
 - [Classification Metrics](#ridge-and-lasso-regularization)
-- [Clustering Metrics]()
-- [Metrics in NLP]()
+- [Clustering Metrics](#clustering-metrics)
+- [Metrics in NLP](#metrics-in-nlp)
 
 ---
 
@@ -1203,6 +1203,20 @@ For ROC AUC: $[0, 1]$, with $1$ the best.
 
 ---
 
+Q. What is the limitations of ROC-AUC score?
+
+<details><summary><b>Answer</b></summary>
+
+1. Insensitive to class imbalance: In datasets where one class dominates (e.g., 95% non-fraud, 5% fraud), a model can still have a high ROC-AUC score even if it performs poorly on the minority class.
+
+2. Misleading with skewed data: With heavily imbalanced data, a classifier that predicts the majority class can still have a good ROC-AUC, even if it's ineffective on the minority class.
+
+3. Limited multiclass interpretability: For multiclass classification (e.g., distinguishing between 3 diseases), extending ROC-AUC can be less intuitive and harder to interpret.
+
+</details>
+
+---
+
 Q. Your team is building a system to aid doctors in predicting whether a patient has cancer or not from their X-ray scan. Your colleague announces that the problem is solved now that they’ve built a system that can predict with 99.99% accuracy. How would you respond to that claim?
 
 <details><summary><b>Answer</b></summary>
@@ -1285,8 +1299,269 @@ Q. Suppose you want to build a model to predict the price of a stock in the next
 
 ---
 
-
 ## Clustering Metrics
 
 
+Q. What are common evaluation metrics used for clustering algorithms?
+
+<details><summary><b>Answer</b></summary>
+
+- Silhouette Score
+- Davies-Bouldin Index
+- Adjusted Rand Index (ARI)
+- Mutual Information (MI)
+- Purity
+
+
+</details>
+
+---
+
+Q. How does the Silhouette Score evaluate clustering performance?
+
+<details><summary><b>Answer</b></summary>
+
+It measures how similar an object is to its own cluster compared to other clusters. The score ranges from -1 to 1, where higher values indicate better-defined clusters.
+
+</details>
+
+---
+
+Q. State the expression of silhouette score?
+
+<details><summary><b>Answer</b></summary>
+
+$$
+S(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
+$$
+
+Where,
+
+- $a(i)$ is the average distance between the sample $i$ and all other points in the same cluster.
+- $b(i)$ is the minimum average distance between the sample $i$ and all points in the nearest cluster (not including $i$'s cluster).
+
+</details>
+
+---
+
+Q. What are the pros and cons of the Silhouette Score?
+
+<details><summary><b>Answer</b></summary>
+
+- Pros: It works with any distance metric and does not require external ground truth labels.
+- Cons: It can be computationally expensive for large datasets and may struggle with complex cluster shapes.
+
+</details>
+
+---
+
+Q. What does the Davies-Bouldin Index measure?
+
+<details><summary><b>Answer</b></summary>
+
+It quantifies the average similarity ratio of each cluster to its most similar cluster, with lower values indicating better clustering.
+
+</details>
+
+---
+
+Q. What are the advantages and disadvantages of the Davies-Bouldin Index?
+
+<details><summary><b>Answer</b></summary>
+
+- Pros: Easy to compute and considers both intra-cluster and inter-cluster distances.
+- Cons: It may not handle clusters of varying density and shape well.
+
+</details>
+
+---
+
+Q. Write the mathematical expression of Davies-Bouldin Index?
+
+<details><summary><b>Answer</b></summary>
+
+The Davies-Bouldin Index is calculated as:
+
+$$
+DBI = \frac{1}{n} \sum_{i=1}^{n} \max_{j \neq i} \left( \frac{\sigma_i + \sigma_j}{d(c_i, c_j)} \right)
+$$
+
+Where:
+
+- $\sigma_i$ is the average distance between each point in cluster $i$ and its centroid.
+- $d(c_i, c_j)$ is the distance between the centroids of clusters $i$ and $j$.
+
+</details>
+
+---
+
 ## Metrics in NLP
+
+
+Q. What is Word Error Rate (WER)?
+
+<details><summary><b>Answer</b></summary>
+
+WER is a measure of the accuracy of sequence predictions at the word level. It is calculated using the Levenshtein edit distance between the predicted sequence and the true sequence. 
+
+</details>
+
+---
+
+Q. How can we calculate Word Error Rate (WER)?
+
+<details><summary><b>Answer</b></summary>
+
+Mathematically, WER can be expressed as:
+
+$$
+\text{WER} = \frac{\text{Edit Distance}}{\text{Length of True Sequence}}
+$$
+
+Where the Edit Distance is the number of insertions, deletions, and substitutions needed to transform the predicted sequence into the true sequence.
+
+</details>
+
+---
+
+Q. How do you compute the WER over an entire dataset?
+
+<details><summary><b>Answer</b></summary>
+
+To compute WER over a dataset, calculate the edit distances for each pair of true and predicted sequences, and then normalize these distances by the total length of all true sequences:
+
+$$
+\text{Corpus WER} = \frac{\sum \text{Edit Distances}}{\sum \text{Length of True Sequences}}
+$$
+
+</details>
+
+---
+
+Q. What are the main advantages and disadvantages of using WER?
+
+<details><summary><b>Answer</b></summary>
+
+- Advantages: Provides a clear measure of accuracy at the word level, easy to compute.
+- Disadvantages: May not capture semantic meaning changes well (e.g., adding a negation changes meaning but may not significantly affect WER). Less effective for tasks with high semantic variability.
+
+</details>
+
+---
+
+Q. How is Word Accuracy Rate related to WER?
+
+<details><summary><b>Answer</b></summary>
+
+Word Accuracy Rate is 1.0 minus WER. It reflects the proportion of correctly predicted words, but it’s more akin to recall rather than accuracy.
+
+</details>
+
+---
+
+Q. What does the BLEU score measure?
+
+<details><summary><b>Answer</b></summary>
+
+The BLEU score measures the quality of generated text by comparing n-grams in the candidate text with n-grams in reference texts.
+
+</details>
+
+---
+
+Q. What are the key components of BLUE score?
+
+<details><summary><b>Answer</b></summary>
+
+Key components include:
+
+- Modified n-gram Precision: Adjusts the precision of n-grams by considering their maximum occurrences in reference texts.
+- Brevity Penalty (BP): Penalizes shorter candidate texts to avoid favoring them unduly.
+
+</details>
+
+---
+
+Q. What is the formula for the BLEU score, and how is it typically computed?
+
+<details><summary><b>Answer</b></summary>
+
+The BLEU score combines the modified n-gram precision for various n-gram levels (usually up to 4) and includes a brevity penalty. The formula is:
+
+$$
+\text{BLEU} = BP \times \exp \left( \sum_{n=1}^{N} w_n \log p_n \right)
+$$
+
+Where $p_n$ is the modified precision for n-grams, $w_n$ is the weight for each n-gram level, and BP is the brevity penalty.
+
+</details>
+
+---
+
+Q. What are the strengths and weaknesses of the BLEU score?
+
+<details><summary><b>Answer</b></summary>
+
+- Strengths: Provides a quantitative measure of precision with n-grams and adjusts for length.
+- Weaknesses: May not correlate well with human judgment, as it does not account for the order of n-grams or the type of words (e.g., function vs. content words).
+
+</details>
+
+---
+
+Q. How does BLEU compare to other metrics like ROUGE or METEOR?
+
+<details><summary><b>Answer</b></summary>
+
+ROUGE focuses on recall and is often used for summarization tasks, while METEOR incorporates synonyms and stemming to better match human judgments. BLEU is more commonly used in machine translation.
+
+</details>
+
+---
+
+Q. What is Perplexity and how is it used in evaluating language models?
+
+<details><summary><b>Answer</b></summary>
+
+Perplexity measures how well a probability model predicts a sample. For a sequence, it is calculated as the inverse probability of the sequence normalized by the number of words:
+
+$$
+\text{Perplexity} = \exp \left( - \frac{1}{N} \sum_{i=1}^{N} \log P(w_i) \right)
+$$
+
+Where $P(w_i)$ is the probability assigned to the $i$-th word by the model.
+
+</details>
+
+---
+
+Q. What are the bounds of Perplexity and what does it indicate?
+
+<details><summary><b>Answer</b></summary>
+
+Perplexity ranges from 1 to infinity, with 1 being the best. Lower perplexity indicates better performance, as it means the model assigns higher probabilities to the true sequences.
+
+</details>
+
+---
+
+Q. What are the limitations of using Perplexity as a metric?
+
+<details><summary><b>Answer</b></summary>
+
+Perplexity can be misleading if the vocabulary includes many UNK tokens, as it may artificially lower the perplexity. It also does not directly measure the quality of the generated text but rather how well the model predicts sequences.
+
+</details>
+
+---
+
+Q. How is Perplexity related to cross-entropy?
+
+<details><summary><b>Answer</b></summary>
+
+Perplexity is the exponentiated form of the average cross-entropy between the model’s predictions and the true sequence probabilities. Lower perplexity corresponds to lower cross-entropy.
+
+</details>
+
+---
+

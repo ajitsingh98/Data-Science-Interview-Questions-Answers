@@ -969,6 +969,39 @@ Q. Draw the loss curves for overfitting and underfitting.
 
 ---
 
+Q. While working on a modeling use case, you notice that your model is underfitting. What steps would you take to address this issue?
+
+<details><summary><b>Answer</b></summary>
+
+1. Increase model complexity: Use a more complex model or add polynomial features.
+2. Add more features: Introduce relevant features to improve learning.
+3. Reduce regularization: Lower regularization to allow the model more flexibility.
+4. Train longer: Increase training time by adding more epochs or iterations.
+6. Improve feature engineering: Refine features through transformation or selection.
+7. Tune hyperparameters: Adjust parameters like learning rate or model depth.
+
+</details>
+
+---
+
+Q. While working on a modeling use case, you observe that your model is overfitting. What steps would you take to resolve this?
+
+<details><summary><b>Answer</b></summary>
+
+1. Simplify the model: Use a less complex model with fewer parameters to reduce overfitting.
+2. Increase training data: Provide more data to help the model generalize better.
+3. Use regularization: Apply techniques like L1 (lasso) or L2 (ridge) regularization to penalize large coefficients.
+4. Early stopping: Stop training when performance on a validation set starts to decline.
+5. Data augmentation: Increase dataset diversity, especially in image or text data, through techniques like rotation or noise addition.
+6. Cross-validation: Use cross-validation to ensure the model generalizes well to unseen data.
+7. Reduce features: Perform feature selection to remove irrelevant or redundant features.
+8. Add dropout (for neural networks): Randomly drop neurons during training to prevent over-reliance on specific features.
+
+
+</details>
+
+---
+
 Q. Bias-variance trade-off
 1.  What’s the bias-variance trade-off?
 1. How’s this tradeoff related to overfitting and underfitting?

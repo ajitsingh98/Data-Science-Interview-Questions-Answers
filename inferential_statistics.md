@@ -14,7 +14,7 @@ Contents
 
 ---
 
-### Introduction
+## Introduction
 
 Q. What is statistical inference?
 
@@ -133,7 +133,7 @@ Only $\hat{X}$ is a random variable.
 
 ---
 
-### Point Estimation
+## Point Estimation
 
 Q. A study on exercise habits used a random sample of $2,540$ college students ($1,220$ females and $1,320$ males).
 
@@ -232,7 +232,7 @@ The point estimation is simple and intuitive but a little bit problematic. When 
 ---
 
 
-### Interval Estimation
+## Interval Estimation
 
 Q. How does interval estimation overcome limitation of point estimation?
 
@@ -581,7 +581,7 @@ Q. When should you use a Z-Test instead of a T-Test?
 
 ---
 
-### Hypothesis Testing
+## Hypothesis Testing
 
 Q. Define statistical hypothesis testing. Explain in detail how does it work?
 
@@ -905,7 +905,7 @@ Q. Statistical significance.
 
 </details>
 
-### Inference for Relationship
+## Inference for Relationship
 
 
 

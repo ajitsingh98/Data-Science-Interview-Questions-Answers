@@ -6,11 +6,11 @@ Contents
 ----
 
 - [Perceptron](#Perceptrons)
+- [NNLayers, Topologists and Blocks](#NNLayers,-Topologists-and-Blocks)
 - [Activation Functions(rectification)](#Activation-Functions)
-- [Performance Metrics](#Performance-Mertics) 
 - [Training Hyperparameter](#Training-Hyperparameters)
 - [Optimization and Loss](#Optimization-and-Loss)
-- [NNLayers, Topologists and Blocks](#NNLayers,-Topologists-and-Blocks)
+- [Regularization for deep learning](#Optimization-and-Loss)
 
 ---
 
@@ -1769,3 +1769,7 @@ Q. You’re building a neural network and you want to use both numerical and tex
 </details>
 
 ---
+
+
+## Regularization for deep learning
+
