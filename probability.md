@@ -10,7 +10,7 @@
 - [Random Variables](#random-variables)
 - [Discrete Random Variables](#discrete-random-variables)
 - [Continuous Random Variables](#continuous-random-variables)
-- [Correlation and Covariance](#correlation-and-variance)
+- [Correlation and Covariance](#correlation-and-covariance)
 
 ---
 
