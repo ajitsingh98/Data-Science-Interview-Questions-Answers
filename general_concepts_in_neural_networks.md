@@ -10,19 +10,11 @@ Contents
 - [Activation Functions(rectification)](#Activation-Functions)
 - [Training Hyperparameter](#Training-Hyperparameters)
 - [Optimization and Loss](#Optimization-and-Loss)
-- [Regularization for deep learning](#Optimization-and-Loss)
+- [Regularization for deep learning](#regularization-for-deep-learning)
 
 ---
 
 ## Perceptron
-
-- The single layer perceptron
-- The Multi Layer Perceptron
-- Activation functions in perceptron
-- Backpropagation in perceptron
-- The theory of perceptron
-- Learning logical gates
-
 
 Q. Neural network in simple Numpy.
 1. Write in plain NumPy the forward and backward pass for a two-layer feed-forward neural network with a ReLU layer in between.
@@ -55,7 +47,7 @@ Where weights are denoted by wj and biases are denoted by b. Answer the followin
 
 1. **True or False:** If such a perceptron is trained using a labelled corpus, for each participating neuron the values $w_j$ and $b$ are learned automatically.
 
-2. **True or False:** If we instead use a new perceptron (sigmoidial) defined as follows:
+2. **True or False:** If we instead use a new perceptron (sigmoidal) defined as follows:
 
 $$
 \sigma(wx + b)
@@ -177,6 +169,7 @@ Q. The following questions refer to the MLP depicted in (8.15).
 
 
 ---
+
 Q. Activation functions.
 1. Draw the graphs for sigmoid, tanh, ReLU, and leaky ReLU.
 1. Pros and cons of each activation function.
@@ -351,15 +344,6 @@ Q. Repeat the above assuming now that the bias term B1 was amended and equals �
 ---
 
 Q. Define what is the perceptron learning rule.
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
-
----
-
-Q. When building a neural network, should you overfit or underfit it first?
 
 <details><summary><b>Answer</b></summary>
     
@@ -627,92 +611,7 @@ Q. In many interviews, you will be given a paper that you have never encountered
 
 ---
 
-## Performance Metrics
-
-- Confusion Matrix
-- precision and recall
-- ROC-AUC
-
-Q. You design a binary classifier for detecting the presence of malfunctioning temperature sensors. Non-malfunctioning (N) devices are the majority class in the training corpus. While running inference on an unseen test-set, you discover that the Confusion Metrics (CM) has the following values 8.27:
-
-  <table align='center'>
-    <tr>
-      <td align="center">
-        <img src="img/metrics-1.png" alt= "A confusion metrics for functioning (N) temperature sensors. P stands for malfunctioning devices" style="max-width:70%;" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center"> A confusion metrics for functioning (N) temperature sensors. P stands for malfunctioning devices </td>
-    </tr>
-  </table>
-
-1. Find: TP, TN, FP, FN and correctly label the numbers in table 8.27. 
-2. What is the accuracy of the model?
-3. What is the precision of the model?
-4. What is the recall of the model?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
-
----
-
-Q. Complete the following sentences:
-
-1. Receiver Operating Characteristics of a classifier shows its performance as a trade off between `[...]` and `[...]`.
-2. It is a plot of `[...]` vs. the `[...]`. In place of `[...]`, one could also use `[...]` which are essen- tially {1 - ‘true negatives’}.
-3. A typical ROC curve has a concave shape with `[...]` as the beginning and `[...]` as the end point
-4. The ROC curve of a ‘random guess classifier’, when the classifier is completely con- fused and cannot at all distinguish between the two classes, has an AUC of `[...]` which is the `[...]` line in an ROC curve plot.
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
-
----
-
-Q. The code 8.30 and Figure 8.29 are the output from running XGBOOST for a binary
-classification task.
-
-  <table align='center'>
-    <tr>
-      <td align="center">
-        <img src="img/metrics-2.png" alt= "RUC AUC" style="max-width:70%;" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center"> RUC AUC </td>
-    </tr>
-  </table>
-
-  ```python
-  XGBClassifier(base_score=0.5, colsample_bylevel=1,colsample_bytree=0.5, gamma=0.017, learning_rate=0.15, max_delta_step=0, max_depth=9, min_child_weight=3, missing=None, n_estimators=1000, nthread=-1, objective='binary:logistic', reg_alpha=0, reg_lambda=1, scale_pos_weight=1, seed=0, silent=1, subsample=0.9)shape:(316200, 6)
-
-  >ROC AUC:0.984439608912
-  >LOG LOSS:0.0421598347226
-  ```
-How would you describe the results of the classification?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
-
----
-
 ### NNLayers, Topologists and Blocks
-
-* CNN Arithmetics
-* Dropout
-* Convolution Layer
-* Pooling layers
-* MaxPooling
-* Batch Normalization, Gaussian PDF
-* The Gausssian distributions
-* Batch Normalization(BN)
-* Theory of CNN design
-* CNN residual blocks
 
 Q. Given an input of size of $n×n$, filters of size $f×f$ and a stride of $s$ with padding of $p$, what is the output dimension?
 
@@ -996,37 +895,14 @@ Please run the code and answer the following questions:
     
 </details>
 
-
----
-
-Q.
-1. What is batch normalization?
-2. The normal distribution is defined as follows:
-
-$$
-P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}
-$$
-
-Generally i.i.d. $X ∼ N (μ, σ2)$ however BN uses the standard normal distribution. What mean and variance does the standard normal distribution have?
-3. What is the mathematical process of normalization?
-4. Describe, how normalization works in BN.
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
-
----
-
-Q. Compare batch norm and layer norm.
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
 ---
 
 Q. Weight normalization separates a weight vector’s norm from its gradient. How would it help with training?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
 
 ---
 
@@ -1100,7 +976,7 @@ Q. Which of the following core building blocks may be used to construct CNNs? Ch
 1. Pooling layers
 2. Convolutional layers
 3. Normalization layers
-4.  Non-linear activation function
+4. Non-linear activation function
 5. Linear activation function
 
 <details><summary><b>Answer</b></summary>
@@ -1242,15 +1118,7 @@ Q. Your friend was thinking about ResNet blocks, and tried to visualize them in 
 
 ---
 
-### Training and Hyperparameters
-
-* Hyperparameter optimization
-* Labelling and bias
-* Validation curve ACC
-* Validation curve Loss
-* Inference
-
----
+## Training and Hyperparameters
 
 Q. A certain training pipeline for the classification of large images (1024 x 1024) uses the following Hyperparameters (8.46):
 
@@ -1465,12 +1333,6 @@ Q. Complete the sentence: If the training loss is insignificant while the test l
 
 ### Optimization and Loss
 
-* Stochastic gradient descent, SGD
-* Momentum
-* Norms, L1, L2
-
----
-
 Q. What does the term stochastic in SGD actually mean? Does it use any random number generator?
 
 <details><summary><b>Answer</b></summary>
@@ -1481,8 +1343,8 @@ Q. What does the term stochastic in SGD actually mean? Does it use any random nu
 ---
 
 Q. Stochasticity.
-    1. What are some sources of randomness in a neural network?
-    1. Sometimes stochasticity is desirable when training neural networks. Why is that?
+  1. What are some sources of randomness in a neural network?
+  1. Sometimes stochasticity is desirable when training neural networks. Why is that?
 
 <details><summary><b>Answer</b></summary>
     
@@ -1692,16 +1554,6 @@ Q. When training a large neural network, say a language model with a billion par
 
 ---
 
-Q. What criteria would you use for early stopping?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
-
----
-
-
 Q. Your model’ weights fluctuate a lot during training. How does that affect your model’s performance? What to do about it?
 
 <details><summary><b>Answer</b></summary>
@@ -1744,6 +1596,33 @@ Q. Pruning.
 
 ---
 
+Q.
+1. What is batch normalization?
+2. The normal distribution is defined as follows:
+
+$$
+P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}
+$$
+
+Generally i.i.d. $X ∼ N (μ, σ2)$ however BN uses the standard normal distribution. What mean and variance does the standard normal distribution have?
+3. What is the mathematical process of normalization?
+4. Describe, how normalization works in BN.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
+Q. Compare batch norm and layer norm.
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+---
+
 Q. Under what conditions would it be possible to recover training data from the weight checkpoints?
 
 <details><summary><b>Answer</b></summary>
@@ -1773,3 +1652,632 @@ Q. You’re building a neural network and you want to use both numerical and tex
 
 ## Regularization for deep learning
 
+Q. What is regularization and why is it important?
+
+<details><summary><b>Answer</b></summary>
+
+Regularization refers to any adjustments made to a learning algorithm aimed at decreasing its generalization error without affecting its training error.
+
+We use regularization to improve our model's performance on unseen datasets as well. 
+
+</details>
+
+---
+
+Q. What are different kind of regularization techniques that we can use for deep neural networks?
+
+<details><summary><b>Answer</b></summary>
+
+We can use following techniques to regularize DNNs:
+- Parameter norm penalties
+  - $L^1$ regularizer
+  - $L^2$ regularizer
+- Dataset augmentation
+- Early stopping
+- Bagging and other ensemble techniques
+- Dropout
+- Multitask learning
+
+</details>
+
+---
+
+Q. Write the expression of cost function incase of parameter norm penalties?
+
+<details><summary><b>Answer</b></summary>
+
+In case of parameter norm penalities we denote the regularized objective function by $J$:
+
+$$
+\tilde{J}(\theta; X, y) =  J(\theta; X, y) + \alpha \Omega(\theta) 
+$$
+
+Where
+- $\alpha$ is hyperparameter range $[0, \infty]$
+- $ J(\theta; X, y)$ is standard objective function
+
+</details>
+
+---
+
+Q. What is the significant of hyperparameter $\alpha$ in regularized cost function?
+
+<details><summary><b>Answer</b></summary>
+
+$\alpha$ weighs the relative contribution of the norm penalty term $\Omega$, relative to the standard objective function $J$. Setting $\alpha$ to $0$ results in no regularization. Larger values of $\alpha$ corresponds to more regularization.
+
+</details>
+
+---
+
+Q. Why do we typically penalize only the model's weights and not the biases in parameter norm penalties?
+
+<details><summary><b>Answer</b></summary>
+
+The biases typically require less data than the weights to fit accurately. While each weight specifies how two variable interact. Fitting the weight well requires observing both variables in variety of conditions. Each bias controls only a single variable. It means we don't induce too much variance by leaving the biases unregularized. Also regularizing the biases can introduce significant amount of underfitting.
+
+</details>
+
+---
+
+Q. Should we use different penalty terms for each layer of neural networks?
+
+<details><summary><b>Answer</b></summary>
+
+We can use different $\alpha$ for each layer but it can be expensive to search for correct value of multiple hyperparameters. It is reasonable to use the same weight decay($\alpha$) for all the layers just to reduce the size of search space.
+
+</details>
+
+---
+
+Q. Write the expression of objective function $J$ in case of $L^2$ regularization?
+
+<details><summary><b>Answer</b></summary>
+
+$L^2$ regularization technique drives the weight closer to origin by adding a regularization term $\Omega(\theta) = \frac{1}{2}||w||^{2}_{2}$
+
+It has following total objective function:
+
+$$
+\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)
+$$
+
+</details>
+
+---
+
+Q. Why is the \(L^2\) parameter norm penalty referred to as weight decay?
+
+<details><summary><b>Answer</b></summary>
+
+The \(L^2\) parameter norm penalty is called weight decay because it effectively "decays" or shrinks the weights during the training process.
+
+$$
+\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)
+$$
+
+with corresponding parameter gradient
+
+$$
+\nabla \tilde{J}(w; X, y) = \alpha w + \nabla_{w} J(w; X, y)
+$$
+
+To take single gradient step to update the weights, we perform this update:
+
+$$
+w \leftarrow w - \eta \left( \alpha w + \nabla_{w} J(w; X, y) \right)
+$$
+
+We can further expand it
+
+$$
+w \leftarrow (1 - \eta \alpha) w -  \eta \nabla_{w} J(w; X, y)
+$$
+
+As we can see the addition of $L^2$ parameter norm penalty has modified the learning rule to multiplicatively shrink the weight vector by a constant factor on each step. The term "decay" reflects this gradual reduction in weight magnitude over time.
+
+</details>
+
+---
+
+Q. Why do we usually regularize model parameters toward zero instead of a specific point?
+
+<details><summary><b>Answer</b></summary>
+
+Actually we can regularize the parameters to any specific point in space and still get a regularization effect, but better result will be obtained for a value closer to the true one. Zero is being used as default value when we don't know the true value should be positive or negative.
+
+For regularizing the weights towards a point $w_0$, we can use following penalty term
+
+$$
+\frac{\alpha}{2} (w - w_0)^{T}(w - w_0)
+$$
+
+</details>
+
+---
+
+Q. Explain the impact of $L^2$ regularization on objective function of linear regression?
+
+<details><summary><b>Answer</b></summary>
+
+Adding \(L^2\) regularization to the objective function of linear regression modifies it to:
+
+$$
+\tilde{J}(w; X, y) = (Xw - y)^T(Xw - y) + \frac{1}{2}\alpha w^{T}w
+$$
+
+This means the weights \(w\) can be calculated as:
+
+$$
+w = (X^{T}X + \alpha I)^{-1}X^{T}y
+$$
+
+The diagonal entries of the matrix \((X^{T}X + \alpha I)^{-1}\) represent the variance of each input feature. \(L^2\) regularization makes the model view the input \(X\) as having higher variance, which leads to smaller weights for features that have low covariance with the output target.
+
+</details>
+
+---
+
+Q. Write the expression for $L^1$ regularization on the model parameters $w$?
+
+<details><summary><b>Answer</b></summary>
+
+It can be defined as 
+
+$$
+\Omega{\theta} = ||w||_{1} = \sum_{i}|w_i|
+$$
+
+</details>
+
+---
+
+Q. Compute the gradient of $L^1$ regularized objective function?
+
+<details><summary><b>Answer</b></summary>
+
+The regularized objective function $\tilde{J}(w; X, y)$ is given by
+
+$$
+\tilde{J}(w; X, y) = \alpha ||w||_1 + J(w; X, y)
+$$
+
+On taking gradient both side
+
+$$
+\nabla_{w}\tilde{J}(w; X, y) = \alpha \text{sign}(w) + \nabla_{w}J(X, y; w)
+$$
+
+Where sign($w$) is simply the sign of $w$ applied element wise.
+
+Not that here the gradient no longer scales linearly with each $w_i$, instead it is a constant factor with the sign equal to sign($w_i$). 
+
+
+</details>
+
+---
+
+Q. How does $L^1$ regularization results in more sparse parameters?
+
+<details><summary><b>Answer</b></summary>
+
+In linear regression, the objective function with L1 regularization can be expressed as:
+
+$$
+\tilde{J}(w; X, y) = \frac{1}{2} \sum_{i=1}^{n} (y_i - X_i^T w)^2 + \alpha \sum_{j=1}^{p} |w_j|
+$$
+
+When we optimize this objective function, we take the gradient and set it to zero:
+
+$$
+\nabla \tilde{J}(w; X, y) = -X^T(y - Xw) + \alpha \text{sign}(w) = 0
+$$
+
+This gives us:
+
+$$
+X^T(y - Xw) = \alpha \text{sign}(w)
+$$
+
+1. Impact on Weights: The \(\text{sign}(w)\) term introduces a non-smooth point at \(w_j = 0\). This means that during optimization, if a feature's contribution is minimal, the corresponding weight \(w_j\) may be driven to zero. 
+2. Zeroing Out Weights:
+  - If the contribution of a feature \(X_j\) to reducing the error is low (meaning \(X^T(y - Xw)\) for that feature is relatively small), the penalty term becomes large enough that:
+    $$
+    |X^T(y - Xw)| < \alpha
+    $$
+  - This condition leads to:
+    $$
+    w_j = 0
+    $$
+  - Thus, when \(\alpha\) is sufficiently large, features that do not significantly help in predicting the output will have their weights reduced to zero.
+
+</details>
+
+---
+
+Q. How do L1 and L2 regularization relate to Bayesian inference in the context of maximum a posteriori (MAP) estimation?
+
+<details><summary><b>Answer</b></summary>
+
+$L^2$ regularization is MAP bayesian inference with a Gaussian Prior on weights. For $L^1$ regularization the penalty term is equivalent to MAP bayesian inference with isotropic laplace distribution prior over weights $w$.
+
+</details>
+
+---
+
+Q. What is the main motivation behind using data augmentation techniques?
+
+<details><summary><b>Answer</b></summary>
+
+The primary motivation for data augmentation is to reduce generalization error by effectively increasing the size of the training dataset. Since we often have limited data available, data augmentation allows us to generate synthetic examples, thereby enriching the training set and improving the model's performance on unseen data.
+
+</details>
+
+---
+
+Q. State the some use cases where we can use data augmentation techniques?
+
+<details><summary><b>Answer</b></summary>
+
+- Image classification
+- Speech recognitions
+
+</details>
+
+---
+
+Q. State some data augmentation techniques?
+
+<details><summary><b>Answer</b></summary>
+
+General techniques:
+- Mixup: Combining two samples to create new training data.
+- Adding Noise: Introducing random noise to any data type.
+
+Domain Specific:
+
+Image
+- Flipping: Horizontally or vertically flipping images.
+- Rotation: Rotating images by a certain angle.
+
+Text
+- Synonym Replacement: Replacing words with their synonyms.
+- Random Insertion: Inserting random words into sentences.
+
+</details>
+
+---
+
+Q. What is label smoothing?
+
+<details><summary><b>Answer</b></summary>
+
+Label smoothing is a regularization technique used in machine learning, particularly in classification tasks, to improve model generalization. It modifies the target labels during training to prevent the model from becoming too confident in its predictions.
+
+</details>
+
+---
+
+Q. Why do we need label smoothing?
+
+<details><summary><b>Answer</b></summary>
+
+Label smoothing helps mitigate the risks associated with maximizing the likelihood of the original labels, which may contain errors. Specifically, let's assume that for a small constant \(\epsilon\), the training label \(y\) is considered correct with probability \(1 - \epsilon\) and incorrect otherwise. Label smoothing modifies the model's training by replacing the rigid \(0\) and \(1\) classification targets with softened targets of \(1 - \epsilon\) and \(\frac{\epsilon}{C}\), respectively, where \(C\) is the number of classes.
+
+</details>
+
+---
+
+Q. When do we use label smoothing?
+
+<details><summary><b>Answer</b></summary>
+
+Whenever a classification neural network suffers from overfitting and/or overconfidence, we can try label smoothing.
+
+</details>
+
+---
+
+Q. How do we choose $\alpha$ or $\eta$?
+
+<details><summary><b>Answer</b></summary>
+
+Just like other regularization hyperparameters, there is no formula for choosing $α$. It is usually done by trial and error, and $α = 0.1$ is a good place to start.
+
+</details>
+
+---
+
+Q. What challenges arise when using maximum likelihood learning with a softmax classifier and hard targets?
+
+<details><summary><b>Answer</b></summary>
+
+Using maximum likelihood learning with a softmax classifier and hard targets can lead to convergence issues. Since the softmax function cannot produce exact probabilities of \(0\) or \(1\), this can result in the model continuously increasing weights and making increasingly extreme predictions without stabilizing. 
+
+</details>
+
+---
+
+Q. What is multitask learning?
+
+<details><summary><b>Answer</b></summary>
+
+Multitask learning is a machine learning approach where a model is trained to perform multiple tasks simultaneously, leveraging shared representations and information across those tasks. Instead of building separate models for each task, a multitask learning framework allows the model to learn from related tasks, which can lead to improved performance and efficiency.
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/multitask-learning.png" alt= "Several nodes in a MLP." style="max-width:60%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> A common form of multitask learning </td>
+  </tr>
+</table>
+
+The model can be generally divided into two kind of parts and associated parameters:
+1. Task specific parameters 
+2. Generic parameters, shared across all the tasks
+
+</details>
+
+---
+
+Q. How does multitask learning prevents overfitting?
+
+<details><summary><b>Answer</b></summary>
+
+1. Sharing Representations: It captures common patterns across tasks, reducing overfitting to any single task.
+2. Improving Generalization: The model learns to focus on relevant features useful across tasks, enhancing generalization.
+3. Reducing Complexity: By consolidating multiple tasks into one model, it simplifies the overall architecture.
+4. Encouraging Task Diversity: Exposure to diverse tasks prevents overfitting by broadening the context for learning.
+5. Sharing Parameters: Constraining parameters across tasks limits model capacity, promoting robust learning.
+
+</details>
+
+---
+
+Q. What is early stopping in machine learning?
+
+<details><summary><b>Answer</b></summary>
+
+Early stopping is a form of regularization used to avoid overfitting when training a machine learning model, particularly in the context of neural networks. It involves monitoring the model's performance on a validation set during training and stopping the training process once the performance starts to degrade, or fails to improve for a predefined number of training epochs.
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/early_stopping.png" alt= "Early Stopping" style="max-width:60%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> Early stopping in training </td>
+  </tr>
+</table>
+
+</details>
+
+---
+
+Q. How do you implement early stopping in a training process?
+
+<details><summary><b>Answer</b></summary>
+
+1. Split your data into at least two subsets: the training set and the validation set.
+2. Monitor the performance of the model on the validation set at regular intervals during training, such as after each epoch.
+3. Define a criterion for stopping, usually based on the validation loss. If the validation loss does not improve or decreases for a predetermined number of consecutive epochs, called the "patience," the training is halted.
+4. Save the best model up to the point where the performance was optimal, which is typically the model with the lowest validation loss.
+
+</details>
+
+---
+
+Q. What criteria would you use for early stopping?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---
+
+Q. What are the benefits of using early stopping as regularizer over other methods like weight decay?
+
+<details><summary><b>Answer</b></summary>
+
+- Early stopping is an unobtrusive form of regularization, in that it requires almost no change in the underlying training procedure, the objective function, or the set of allowable parameter values.
+- Early stopping may be used either alone or in conjunction with other regularization strategies. 
+- Early stopping is also useful because it reduces the computational cost of the training procedure.
+
+</details>
+
+---
+
+Q. How does bagging technique help in reducing generalization error?
+
+<details><summary><b>Answer</b></summary>
+
+Bagging(short for bootstrap aggregating) employs a general strategy in machine learning called model averaging.
+The reason that model averaging works is that different models will usually not make all the same errors on the test set. 
+
+Consider for example a set of $k$ regression models. Suppose that each model makes an error $\eta_i$ on each example, with errors drawn from a zero-mean multivariate normal distribution with variances $\mathbf{E}[\eta_{i}^2] = v$ and covariances $\mathbf{E}[\eta_{i} \eta_{j}] = c$. Then the error made by the average prediction of all the ensemble models is $\frac{1}{k}\sum_{i} \eta_{i}$
+
+The expected squared error of the ensemble predictor is
+
+$$
+\mathbf{E}\left[\left(\frac{1}{k}\sum_{i=1}^k \eta_i\right)^2\right] = \frac{1}{k^2} \mathbf{E}\left[\sum_{i=1}^k \eta_i^2 + \sum_{i \neq j} \eta_i \eta_j\right]
+$$
+
+$$
+= \frac{1}{k}v + \frac{k-1}{k}c
+$$
+
+In the case where the errors are perfectly correlated and $c=v$, the mean squared error reduces to $v$, so the model averaging does not help at all. In case where we have perfectly uncorrelated errors and $c=0$, the expected squared error of the ensemble is only $\frac{1}{k}v$. This means that the expected squared error of the ensemble decreases linearly with the ensemble size. 
+
+In other words, on average, the model will perform at least as well as any of its members, and if memebers make independent errors, the ensemble will perform significantly better than its member.
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/bagging_in_regularization.png" alt= "Working methodology of Bagging technique" style="max-width:60%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> Working methodology of Bagging technique </td>
+  </tr>
+</table>
+
+</details>
+
+---
+
+Q. What are the challenges associated with using the bagging method with neural networks to prevent overfitting?
+
+<details><summary><b>Answer</b></summary>
+
+Bagging involves training multiple models and evaluating multiple models on each training test example. This seems impractical when each model is a large neural network, since training and evaluating such networks is costly in terms of runtime and memory. 
+
+</details>
+
+---
+
+Q. Show all the possible subnetworks that can be formed by dropping ot diffrent subsets of the units from the given base network?
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/base_network.png" alt= "Base Network" style="max-width:60%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> Base Network </td>
+  </tr>
+</table>
+
+<details><summary><b>Answer</b></summary>
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/all_possible_networks.png" alt= "All possible subnetworks" style="max-width:60%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> All Possible Sub Networks </td>
+  </tr>
+</table>
+
+</details>
+
+---
+
+Q. **[True/False]** Does dropout aim to approximate the bagging method for neural networks?
+
+<details><summary><b>Answer</b></summary>
+
+True
+
+</details>
+
+---
+
+Q. How does the dropout technique contrast with the bagging method?
+
+<details><summary><b>Answer</b></summary>
+
+Dropout and bagging differ in several key aspects:
+
+1. Model Independence:
+   - Bagging: Each model is independent and trained to convergence on its own subset of data.
+   - Dropout: Operates within a single neural network where models (sub-networks) share parameters, with each model inheriting different subsets of these parameters.
+
+2. Memory Usage:
+   - Bagging: Requires separate memory for each model, as no parameters are shared.
+   - Dropout: More memory efficient because it represents an exponential number of sub-models through parameter sharing within one network.
+
+3. Training Approach:
+   - Bagging: Each model is fully trained on its respective dataset.
+   - Dropout: Instead of training all sub-networks, only a tiny fraction are trained for a single step, leveraging parameter sharing to adjust the remaining sub-networks.
+
+</details>
+
+---
+
+Q. Which types of models can utilize the dropout technique?
+
+<details><summary><b>Answer</b></summary>
+
+Dropout works well with nearly any model that uses a distributed representation and can be trained with stochastic gradient descent.
+
+For example:
+- Feed forward neural networks
+- Restricted Boltzmann Machines
+- Recurrent Neural Networks
+
+</details>
+
+---
+
+Q. State the weight scaling inference rule in case of dropout method?
+
+<details><summary><b>Answer</b></summary>
+
+When dropout is applied during training, each unit in a layer is kept with a probability $p$ i.e keep probability. The units that are kept are expected to compensate not only for their own output but also for the absent units. As a result during training, the output from active neurons are scaled up by a factor of $\frac{1}{p}$ so that expected sum of the outputs remains constant whether dropout is used or not.
+
+However, at test time, all neurons are active (no dropout is applied). Without adjustment, this would result in a larger output from the network than what it was trained to produce, potentially leading to poor performance during inference. The weight scaling inference rule addresses this discrepancy.
+
+</details>
+
+---
+
+Q. How does weight scaling rule works?
+
+<details><summary><b>Answer</b></summary>
+
+To maintain the same expected output from neurons, the outputs are scaled down at test time. This is done by multiplying the weights by the dropout probability $p$ after training. This scaling down ensures that the contribution from neurons during inference matches the expected contribution (averaged over many training scenarios with dropout) during training.
+
+Suppose you have a simple network where dropout is applied with \( p = 0.5 \) (each neuron is kept with a 50% chance) in a particular layer during training. Here’s how the weight scaling works:
+
+1. During Training: A neuron's output is kept with a probability of 0.5. If it is active, its output effectively contributes twice as much as it would without dropout (because approximately half the neurons are dropped).
+   
+2. After Training for Inference: Multiply the weights of the neurons in that layer by 0.5. This adjustment reduces the output by half, compensating for the fact that during training, only about half of the neurons would have contributed on average.
+
+</details>
+
+---
+
+Q. What is inverted dropout?
+
+<details><summary><b>Answer</b></summary>
+
+Inverted dropout is a variation of the standard dropout technique it adjusts the approach by scaling up the activations of the neurons during training, rather than scaling them down during inference. 
+
+Here's how it is implemented:
+
+- Drop Neurons: During training, randomly set a proportion $p$ of the activations in a layer to zero, just like standard dropout.
+- Scale Up Active Neurons: Instead of leaving the remaining activations unchanged, scale them up by dividing by the keep probability \( (1 - p) \). This means that if \( p = 0.5 \), the outputs of the neurons that are not dropped are multiplied by \( \frac{1}{(1 - 0.5)} = 2 \) during training.
+- No Adjustment at Inference: Because the activations are scaled during training, no adjustments are necessary during inference. This simplifies the implementation and avoids the need to use different computation paths or weight adjustments when switching from training to inference.
+
+</details>
+
+---
+
+Q. What impact does dropout have on the learning of representations in neural networks?
+
+<details><summary><b>Answer</b></summary>
+
+Dropout significantly influences the way neural networks learn representations by promoting the development of more robust and generalizable features. By randomly deactivating a subset of neurons during training, dropout forces the remaining active neurons to independently manage the task of correct representation, without relying on specific other neurons.
+
+This method effectively prevents neurons from co-adapting too closely, ensuring that the network does not become too fitted to the noise and idiosyncrasies of the training data. 
+
+</details>
+
+---
+
+Q. When building a neural network, should you overfit or underfit it first?
+
+<details><summary><b>Answer</b></summary>
+    
+</details>
+
+
+---

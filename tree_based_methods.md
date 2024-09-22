@@ -43,7 +43,9 @@ The main purpose of DTs in machine learning is to model data by learning simple 
 Q. How is a decision tree built?
 
 <details><summary><b>Answer</b></summary>
+
 The main purpose of DTs in machine learning is to model data by learning simple decision rules inferred from the attributes of the datasets. A decision tree can be seen as piecewise constant approximation.
+
 </details>
 
 ---
