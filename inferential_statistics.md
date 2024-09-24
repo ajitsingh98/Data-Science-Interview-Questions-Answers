@@ -10,6 +10,7 @@ Contents
 - [Point Estimation](#point-estimation)
 - [Interval Estimation](#interval-estimation)
 - [Hypothesis Testing](#hypothesis-testing)
+- [A/B Testing](#ab-testing)
 - [Inference for Relationship](#inference-for-relationship)
 
 ---
@@ -822,7 +823,7 @@ We can find test statistic(z-score) using following approaches:
 
 <b>Under Normal distribution approximation:</b>
 
-Binomial distribution can be approaximated as normal distribution if the following condition statisfies:
+Binomial distribution can be approximated as normal distribution if the following condition satisfies:
 
 - $np > 5$ and $nq > 5$
 
@@ -904,6 +905,8 @@ Q. Statistical significance.
 
 
 </details>
+
+## A/B Testing
 
 ## Inference for Relationship
 

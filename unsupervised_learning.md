@@ -704,12 +704,441 @@ Q. Given this directed graph.
 
 ---
 
-Imagine we build a user-item collaborative filtering system to recommend to each user items similar to the items they’ve bought before.
+Q. What is a recommendation system?
+
+<details><summary><b>Answer</b></summary>
+
+A recommendation system is a subclass of information filtering system that seeks to predict the rating or preference a user would give to an item. These systems analyze data about user preferences and behaviors to suggest products, services, or content that users are likely to find valuable.
+
+</details>
+
+---
+
+Q. What is the importance of recommendation system?
+
+<details><summary><b>Answer</b></summary>
+
+A good recommendation system can help in
+- Personalization: Enhances user experience by providing personalized suggestions.
+- Engagement: Increases user engagement and time spent on the platform.
+- Revenue Growth: Drives sales and conversions by showcasing relevant items.
+- User Retention: Improves customer satisfaction and loyalty.
+
+</details>
+
+---
+
+Q. Define Items, Queries and Embedding in context of recommendation system?
+
+<details><summary><b>Answer</b></summary>
+
+- Items(also known as documents) : The entities a system recommends. For google play store, the items are apps to install. For YouTube, the items are videos.
+- Query(also known as context) : The information a system uses to make recommendation.
+    - User information
+        - the id of the user
+        - Items that user previously interacted with
+    - Additional Context
+        - Time of the day
+        - The user's device
+- Embedding: A mapping from discrete set(set of queries or set of items to recommend) to a vector space called the embeddings space.
+
+</details>
+
+---
+
+Q. What are the main components of a recommendation system?
+
+<details><summary><b>Answer</b></summary>
+
+Recommendation systems consists of the following components:
+- Candidate generation
+- Scoring
+- Re-ranking
+
+</details>
+
+---
+
+Q. What is candidate generation in a recommendation system, and what are the main approaches to accomplish it?
+
+<details><summary><b>Answer</b></summary>
+
+Candidate Generation is the initial phase in a recommendation system where a subset of potentially relevant items (called candidates) is retrieved from the entire item catalog for a user.
+
+There are two main approaches in candidate generation:
+- Content based filtering: Uses similarity between items to recommend items similar to what the user likes. For example - If user A watches two cute cat videos, then the system can recommend cute animal videos to that user.
+- Collaborative filtering: Uses similarities between queries and items simultaneously to provide recommendations. For example - If user A is similar to user B, and user B likes video 1, then system can recommend video 1 to user A
+
+</details>
+
+---
+
+Q. How do content-based and collaborative filtering methods utilize embedding spaces to represent items and queries?
+
+<details><summary><b>Answer</b></summary>
+
+Both content-based and collaborative filtering techniques employ embedding spaces to map items (such as products, movies, or videos) and user queries into numerical vectors within a common, low-dimensional space $E = \mathbf{R}^d$. This embedding space is significantly smaller than the size of the entire item corpus, enabling efficient computation and storage. It captures some latent structure of the item or query set. Similar items, such as YouTube videos that are usually watched by the same user, end up close together in the embedding space.
+
+</details>
+
+---
+
+Q. Define similarity measures in context of recommendation system?
+
+<details><summary><b>Answer</b></summary>
+
+A similarity measures is a function $s : E \times E \rightarrow \mathbf{R}$ that takes a pair of embeddings and returns a scaler measuring their similarity. The embeddings can be used candidate generation as follows:
+- Given a query embedding $q \in E$
+- System looks for item embeddings $x \in E$ that are close to $q$
+- Get the embeddings with high similarity $s(q, x)$
+
+</details>
+
+---
+
+Q. What are different methods to measure degree of similarity?
+
+<details><summary><b>Answer</b></summary>
+
+To determine the degree of similarity, most recommendation systems rely on one or more of the following:
+
+*Cosine*
+
+This is simply the cosine angle between two vectors, $s(q, x) = cos(q, x)$
+
+*Dot product*
+
+The dot product of two vectors is $s(q, x) = <q, x> = \sum_{i=1}^{d}q_{i}x_{i}$. It is also given by $s(q, x) = ||x|||q||cos(q, x)$. Thus, if the embeddings are normalized, then dot-product and cosine coincide.
+
+*Euclidean distance*
+
+Distance in euclidean space, $s(q, x) = ||q - x|| = [sum_{i=1}^{d}(q_i - x_i)^2]^{\frac{1}{2}}$. A smaller distance means higher similarity. Note that when the embeddings are normalized, the squared Euclidean distance coincides with dot-product (and cosine) up to a constant, since in that case $\frac{1}{2}||q-x||^2 = 1 - <q, x>$
+
+</details>
+
+---
+
+Q. How should one choose the appropriate similarity metric for candidate generation in recommendation systems?
+
+<details><summary><b>Answer</b></summary>
+
+Choosing the right similarity metric for candidate generation in recommendation systems depends on how the metric handles the norms of the embeddings, which impacts the type of items recommended:
+
+1. Dot Product Similarity:
+   - Sensitivity to Norms: The dot product similarity takes into account the magnitude (norm) of the embeddings. Items with larger norms tend to have higher similarity scores.
+   - Use Case: If the goal is to factor in the popularity of items—where popular items often have larger norms due to frequent updates during training—dot product similarity is advantageous.
+   - Consideration: Care must be taken as very popular items could overshadow less popular but relevant items.
+2. Adjustments for Popular Items:
+   - Modifications: To prevent popular items from dominating, consider using modified similarity metrics that normalize or scale down the influence of the norm. For example, \( \text{similarity} = \text{dot product} / \text{norm}^\alpha \), where \( \alpha \) is a parameter that adjusts the influence of the norm.
+   - Alternative Metrics: Metrics like cosine similarity inherently normalize the embeddings, making them less sensitive to the magnitudes and focusing purely on the direction (angle) of the vectors.
+3. Handling Rare Items:
+   - Challenges: Items that rarely appear may have embeddings that are not frequently updated, potentially making them less representative. If these embeddings are initialized with large norms, it could skew recommendations toward these less relevant items.
+   - Solutions: Ensure that embedding initialization and updates during training are managed carefully. Regularization techniques can be applied to prevent the norms of these embeddings from becoming too large.
+
+</details>
+
+---
+
+Q. How can we utilize content-based filtering in the candidate generation process?
+
+<details><summary><b>Answer</b></summary>
+
+Content-based filtering recommends items by analyzing item features and matching them with what a user has previously liked or interacted with. For example, in a Google Play store scenario, each app is represented by a feature matrix with attributes like categories or publishers. Similarly, the user's preferences are represented in the same feature space, based on explicit choices (e.g., selecting "Entertainment apps") or implicit behavior (e.g., previously installed apps). To recommend relevant apps, the system uses a similarity metric, such as dot product, to score each item, ensuring the recommendations are personalized and specific to that user without considering other users' data.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/user-item-data.png" alt= "Sample data in case of content-based filtering" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> Sample data in case of content-based filtering  </td>
+</tr>
+</table>
+
+</details>
+
+---
+
+Q. State the advantages and disadvantages of content-based filtering?
+
+<details><summary><b>Answer</b></summary>
+
+**Advantages**
+
+- The model doesn't need any data about other users, since the recommendations are specific to this user. This makes it easier to scale to a large number of users.
+- The model can capture the specific interests of a user, and can recommend niche items that very few other users are interested in.
+
+**Disadvantages**
+
+- Since the feature representation of the items are hand-engineered to some extent, this technique requires a lot of domain knowledge. Therefore, the model can only be as good as the hand-engineered features.
+- The model can only make recommendations based on existing interests of the user. In other words, the model has limited ability to expand on the users' existing interests.
+
+
+</details>
+
+---
+
+Q. What is the cold start problem in recommendation systems, and how can you address it?
+
+<details><summary><b>Answer</b></summary>
+
+It occurs when a recommendation system has insufficient data about new users or items, making it challenging to provide accurate recommendations.
+
+We can address cold start problem as follows
+
+- For new users
+    - Implement onboarding surveys to gather initial preferences
+    - Use demographic information to make initial recommendations
+- For new items
+    - Leverage content-based filtering using item attributes
+    - Encourage initial reviews or ratings through promotions
+
+</details>
+
+---
+
+Q. State explicit and implicit feedback with examples?
+
+<details><summary><b>Answer</b></summary>
+
+- Explicit — users specify how much they liked a particular movie by providing a numerical rating.
+- Implicit — if a user watches a movie, the system infers that the user is interested.
+
+
+</details>
+
+---
+
+Q. How does collaborative filtering work?
+
+<details><summary><b>Answer</b></summary>
+
+Collaborative filtering uses similarities between users and items simultaneously to provide recommendations. This allows for serendipitous recommendations; that is, collaborative filtering models can recommend an item to user A based on the interests of a similar user B.
+
+1. User-based Collaborative Filtering: 
+
+This method focuses on finding users with similar tastes or behaviors. For example:
+- The system identifies users who have rated or interacted with items similarly to the target user. It then recommends items that these similar users have liked but that the target user has not interacted with yet.
+- Example: If User A and User B have both liked several of the same movies, and User B has liked a movie that User A hasn’t seen yet, the system might recommend that movie to User A.
+
+2. Item-based Collaborative Filtering: 
+
+This method focuses on the similarity between items, rather than users. It looks at how users have rated or interacted with items and finds items that are frequently rated similarly.
+- How it works: The system identifies items that are similar to those the user has liked in the past, based on how other users have interacted with them. It recommends items that are highly correlated with the ones the user has shown interest in.
+- Example: If many users who liked a specific book also liked another book, then that second book might be recommended to someone who enjoyed the first book.
+
+</details>
+
+---
+
+Q. What are the advantages and disadvantages of collaborative filtering?
+
+<details><summary><b>Answer</b></summary>
+
+**Advantages**
+
+- No domain knowledge necessary: We don't need domain knowledge because the embeddings are automatically learned.
+- Serendipity: The model can help users discover new interests. In isolation, the ML system may not know the user is interested in a given item, but the model might still recommend it because similar users are interested in that item.
+- Great starting point: To some extent, the system needs only the feedback matrix to train a matrix factorization model. In particular, the system doesn't need contextual features. In practice, this can be used as one of multiple candidate generators.
+
+**Disadvantages**
+
+- Cannot handle fresh items/users
+- Hard to include side features for query/item: For movie recommendations, the side features might include country or age. Including available side features improves the quality of the model.
+
+</details>
+
+---
+
+Q. How can user and item embeddings be learned using matrix factorization in collaborative filtering?
+
+<details><summary><b>Answer</b></summary>
+
+In collaborative filtering, user and item embeddings can be learned through matrix factorization by decomposing the user-item interaction matrix into two lower-dimensional matrices. Here’s how it works:
+
+1. Interaction Matrix: First, create a matrix where rows represent users and columns represent items. Each cell in the matrix contains an interaction score (e.g., a rating or a binary interaction like a purchase) between a user and an item.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/user-item-interection.png" alt= "User Item Interaction Data" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> User Item Interaction matrix  </td>
+</tr>
+</table>
+
+2. Matrix Factorization: Matrix factorization techniques, such as Singular Value Decomposition (SVD) or Alternating Least Squares (ALS), break down this interaction matrix into two lower-dimensional matrices:
+- A user embedding matrix: Each row corresponds to a user and represents the user in a lower-dimensional latent space.
+- An item embedding matrix: Each row corresponds to an item, similarly represented in the same latent space.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/matrix-factorization.png" alt= "User Item Interaction Data factorization" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> User Item Interaction matrix factorization  </td>
+</tr>
+</table>
+
+3. Learning Embeddings: The goal of matrix factorization is to minimize the difference between the actual interaction values (from the original matrix) and the predicted values (from the dot product of the user and item embeddings). This process is often optimized using gradient descent or alternating least squares (ALS).
+4. Recommendations: Once the embeddings are learned, the system can make recommendations by computing the dot product of a user’s embedding with the embeddings of all items. Items with the highest scores (i.e., closest embeddings) are recommended to the user.
+
+</details>
+
+---
+
+Q. What is the issue with learning embeddings using matrix factorization?
+
+<details><summary><b>Answer</b></summary>
+
+Some limitations of matrix factorization include:
+
+- The difficulty of using side features (that is, any features beyond the query ID/item ID). As a result, the model can only be queried with a user or item present in the training set.
+- Relevance of recommendations. Popular items tend to be recommended for everyone, especially when using dot product as a similarity measure. It is better to capture specific user interests
+
+</details>
+
+---
+
+Q. How can we use Deep Neural Network model for recommendation?
+
+<details><summary><b>Answer</b></summary>
+
+Possible DNN model is softmax, which treats the problem as a multiclass prediction problem in which:
+- The input is the user query.
+- The output is a probability vector with size equal to the number of items in the corpus, representing the probability to interact with each item; for example, the probability to click on or watch a YouTube video.
+
+Here the user query can be
+- dense features (for example, watch time and time since last watch)
+- sparse features (for example, watch history and country)
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/dnn_for_recommendation.png" alt= "Softmax DNN for recommendation" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> Softmax DNN for recommendation  </td>
+</tr>
+</table>
+
+</details>
+
+---
+
+Q. What is the benefit of using matrix factorization to learn embeddings over softmax DNN?
+
+<details><summary><b>Answer</b></summary>
+
+Matrix factorization is usually the better choice for large corpora. It is easier to scale, cheaper to query, and less prone to folding.
+
+</details>
+
+---
+
+Q. What is the benefit of using softmax DNN over matrix factorization for learning embeddings?
+
+<details><summary><b>Answer</b></summary>
+
+DNN models are preferable to matrix factorization for scoring because DNN models can use more features to better capture relevance. Also, it is usually acceptable for DNN models to fold, since you mostly care about ranking a pre-filtered set of candidates assumed to be relevant.
+
+</details>
+
+---
+
+Q. What strategies can be employed to efficiently compute the nearest neighbors in the embedding space of a recommendation system, and how do they work?
+
+<details><summary><b>Answer</b></summary>
+
+When dealing with large corpora in recommendation systems, finding the nearest neighbors in the embedding space efficiently is a significant challenge due to the computational demands of exhaustive scoring.
+
+**Offline Exhaustive Scoring**
+
+- If the query embeddings are known statically, the system can compute the scores for all potential candidates offline, before any user interaction occurs. 
+- Once scored, the system precomputes and stores a ranked list of the top candidates for each query.
+-  During actual user queries, the system simply retrieves the precomputed list of top candidates, significantly reducing the computation required at runtime.
+
+**Approximate Nearest Neighbors (ANN)**
+
+- Implements algorithms such as Locality-Sensitive Hashing (LSH), KD-trees, or vector quantization to find the nearest neighbors approximately rather than exactly.
+- Builds an index of the item embeddings that allows for quicker approximate searches.
+- During runtime, the system queries this index to find items that are "close enough" to the target embedding, trading off a bit of accuracy for speed and efficiency.
+
+</details>
+
+---
+
+Q. Why should we avoid using candidate generators to rank items in a recommendation system, and what are the benefits of separating candidate generation from the ranking process?
+
+<details><summary><b>Answer</b></summary>
+
+While candidate generators compute a score (e.g., similarity in the embedding space), they should not be used to rank items for several important reasons:
+
+- Multiple Candidate Generators:
+    - In many recommendation systems, several candidate generators (e.g., content-based, collaborative filtering, popularity-based models) are used to produce a diverse pool of candidates. Each generator may compute scores differently, and these scores are often not directly comparable across models. If you let the candidate generators handle ranking, the system may end up mixing scores that are incompatible, leading to suboptimal or biased recommendations.
+- Complexity of Ranking:
+    - Once you have a smaller pool of candidates, the system can afford to use a more complex ranking model with additional features (such as user behavior patterns, real-time context, or item attributes) to better capture the nuances of user preferences. 
+
+</details>
+
+---
+
+Q. How does the choice of scoring function affects the ranking of items and quality of recommendations?
+
+<details><summary><b>Answer</b></summary>
+
+The choice of scoring function can dramatically affect the ranking of items, and ultimately the quality of the recommendations.
+
+- Maximize Click Rate: If the scoring function optimizes for clicks, the systems may recommend click-bait videos. This scoring function generates clicks but does not make a good user experience. Users' interest may quickly fade.
+- Maximize Watch Time: If the scoring function optimizes for watch time, the system might recommend very long videos, which might lead to a poor user experience. Note that multiple short watches can be just as good as one long watch.
+
+</details>
+
+---
+
+Q. What is the benefit of re-ranking in recommendation system?
+
+<details><summary><b>Answer</b></summary>
+
+Re-ranking is crucial because it allows for more personalized, context-aware, and business-oriented recommendations. It refines the initial list of candidates by considering a broader range of features, improving the overall relevance and quality of the recommendations, and addressing factors such as diversity, business goals, and user context that might not be considered during candidate generation.
+
+</details>
+
+---
+
+Q. Imagine we build a user-item collaborative filtering system to recommend to each user items similar to the items they’ve bought before.
 1. You can build either a user-item matrix or an item-item matrix. What are the pros and cons of each approach?
 1. How would you handle a new user who hasn’t made any purchases in the past?
 
 <details><summary><b>Answer</b></summary>
 
+1. 
+**User-Item Matrix:**
+- Pros
+    - Direct Modeling of User Preferences: Directly represents individual user behavior by logging interactions between users and items, facilitating personalized recommendations based on individual user patterns.
+    - Flexibility for User-Based Methods: Effective for implementing user-based collaborative filtering, which finds similar users to recommend items they have liked.
+- Cons
+    - Scalability Issues: As the number of users and items grows, the matrix can become extremely large and sparse, which may lead to performance and storage issues.
+    - Cold Start Problem for New Users: Lacks information on new users, making it challenging to provide accurate recommendations without prior data.
+
+**Item-Item Matrix:**
+- Pros
+    - Stability Over Time: Items typically do not change their intrinsic properties as frequently as user preferences might change, leading to a more stable matrix that doesn’t need to be updated as often.
+    - Efficiency with Fewer Users than Items: When there are fewer items than users, an item-item matrix can be more efficient to compute and store, as it's smaller.
+- Cons
+    - May Ignore Nuance in User Preferences
+    - Cold Start Problem for New Items: Similar
+
+2. Handling Cold Start Problem
+    - Use Demographic Information
+    - Item Popularity
+    - Ask for Preferences
 
 </details>
 

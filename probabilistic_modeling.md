@@ -9,6 +9,7 @@ Contents
 - [Maximum A Posteriori(MAP)](#maximum-a-posteriori)
 - [Naive Bayes](#naive-bayes)
 - [Logistic Regression](#logistic-regression)
+- [Bayesian Belief Networks](#bayesian-belief-networks)
 
 ---
 
@@ -932,3 +933,6 @@ MAP estimation could lead to worse results if the prior is incorrect or misalign
 </details>
 
 ---
+
+
+## Bayesian Belief Networks
