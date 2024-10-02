@@ -6,15 +6,9 @@ Contents
 ----
 
 - [Decision Trees](#decision-trees)
-- [Bagging, Boosting, Stacking and Blending]()
-- [Approaches for Combining Predictors]()
-- [Monolithic and Heterogeneous Ensembling]()
-- [Ensemble Learning]()
-- [Snapshot Ensembling]()
-- [Multi-model Ensembling]()
-- [Learning-rate Schedules in Ensembling]()
-- [Random Forest]()
-- [Boosting based Algorithms]()
+- [Ensemble Learning](#ensemble-learning)
+- [Random Forest](#random-forest)
+- [Boosting based Algorithms](#boosting-based-algorithms)
 
 ---
 
@@ -372,6 +366,8 @@ CART (Classification and Regression Trees) handles overfitting primarily through
 
 ---
 
+## Ensemble Learning
+
 Q. Mark all the approaches which can be utilized to boost a single model performance:
   1. Majority Voting
   2. Using K-identical base-learning algorithms
@@ -381,7 +377,9 @@ Q. Mark all the approaches which can be utilized to boost a single model perform
   6. A combination of all the above approaches
 
 <details><summary><b>Answer</b></summary>
+
 All options are correct.
+
 </details>
 
 ---
@@ -619,6 +617,309 @@ The correct choice would be stacking. Since data size is small, we would most li
 
 ---
 
+Q. Below Fig depicts a part of a specific ensembling approach applied to the models $x1, x2...xk$.
+In your opinion, which approach is being utilized?
+  <table align='center'>
+  <tr>
+  <td align="center">
+      <img src="img/nn_ensemble-1.png" alt= "A specific ensembling approach" style="max-width:70%;" />
+  </td>
+  </tr>
+  <tr>
+  <td align="center"> A specific ensembling approach </td>
+  </tr>
+  </table>
+
+- (i) Bootstrap aggregation 
+
+- (ii) Snapshot ensembling
+
+- (iii) Stacking
+
+- (iv) Classical committee machines
+
+<details><summary><b>Answer</b></summary>
+
+The approach which is depicted is the first phase of stacking. In stacking, we first (phase
+0) predict using several base learners and then use a generalizer (phase 1) that learns on top of the base learners predictions.
+
+</details>
+
+
+Q. 
+1. **True or false**: Training an ensemble of a single monolithic architecture results in lower model diversity and possibly decreased model prediction accuracy.
+2. **True or false**: The generalization accuracy of an ensemble increases with the number of well-trained models it consists of.
+3. **True or false**: Bootstrap aggregation (or bagging), refers to a process wherein a CNN ensemble is being trained using a random subset of the training corpus.
+4. **True or false**: Bagging assumes that if the single predictor shave independent errors, then a majority vote of their outputs should be better than the individual predictions.
+
+<details><summary><b>Answer</b></summary>
+
+1. **True** Due to their lack of diversity, an ensemble of monolithic architectures tends to
+perform worse than an heterogeneous ensemble.
+2. **True**, The generalization accuracy of an ensemble typically increases as the number of well-trained models it includes grows, provided that these models are sufficiently diverse.
+3. **True**
+4. **True**, The total error decreases with the addition of predictors to the ensemble.
+
+</details>
+
+---
+
+Q. 
+1. In a transfer-learning experiment conducted by a researcher, a number of ImageNet-pretrained CNN classifiers, selected from Table 6.1 are trained on five different folds drawn from the same corpus. Their outputs are fused together producing a composite machine. Ensembles of these convolutional neural networks architectures have been extensively studies an evaluated in various ensembling approaches. Is it likely that the composite machine will produce a prediction with higher accuracy than that of any individual classifier? Explain why.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/nn_ensemble-4.png" alt= "ImageNet-pretrained CNNs. Ensembles of these CNN architectures have been extensively studies and evaluated in various ensembling approaches" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> ImageNet-pretrained CNNs. Ensembles of these CNN architectures have been extensively studies and evaluated in various ensembling approaches </td>
+</tr>
+</table>
+
+2. **True or False**: In a classification task, the result of ensembling is always superior.
+
+3. **True or False**: In an ensemble, we want differently trained models converge to different local minima.
+
+<details><summary><b>Answer</b></summary>
+
+1. Yes, it is very likely, especially if their errors are independent.
+2. True It may be proven that ensembles of models perform at least as good as each of the ensemble members it consists of.
+3. True Different local minima add to the diversification of the models.
+
+</details>
+
+---
+
+Q. In committee machines, mark all the combiners that do not make direct use of the input:
+  1. A mixture of experts 
+  2. Bagging
+  3. Ensemble averaging 
+  4. Boosting
+
+<details><summary><b>Answer</b></summary>
+
+Boosting is the only one that does not.
+
+</details>
+
+---
+
+Q. Refer to the papers: <a href='https://arxiv.org/pdf/1506.02142.pdf'>Dropout as a Bayesian Approximation</a> and <a href='https://arxiv.org/pdf/1906.02530.pdf'>Can You TrustYour Model’s Uncertainty?</a> and answer the following question: 
+  1. Do deep ensembles achieve a better performance on out-of-distribution uncertainty benchmarks compared with Monte-Carlo (MC)-dropout?
+
+<details><summary><b>Answer</b></summary>
+
+Yes, they do
+
+</details>
+
+---
+
+Q. **True or False**: Considering a binary classification problem $(y = 0\ or \ y = 1)$, ensemble averaging, wherein the outputs of individual models are linearly combined to produce a fused output is a form of a static committee machine.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/nn_ensemble-5.png" alt= "A typical binary classification problem" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> A typical binary classification problem </td>
+</tr>
+</table>
+
+<details><summary><b>Answer</b></summary>
+
+**False** By definition, static committee machines use only the output of the single predict-
+ors.
+
+</details>
+
+---
+
+Q. **True or false**: When using a single model, the risk of overfitting the data increases when
+the number of adjustable parameters is large compared to cardinality (i.e., size of the set) of the training corpus.
+
+<details><summary><b>Answer</b></summary>
+
+**True** 
+
+</details>
+
+---
+
+Q. **True or false**: If we have a committee of $K$ trained models and the errors are uncorrelated, then by averaging them the average error of a model is reduced by a factor of $K$.
+
+<details><summary><b>Answer</b></summary>
+
+**False** Though this may be theoretically true, in practice the errors are rarely uncorrelated
+and therefore the actual error can not be reduced by a factor of K.
+
+</details>
+
+---
+
+Q. 
+1. Define ensemble learning in the context of machine learning.
+2. Provide examples of ensemble methods in classical machine-learning.
+3. **True or false**: Ensemble methods usually have stronger generalization ability.
+4. Complete the sentence: Bagging is `variance/bias` reduction scheme while boosting reduced `variance/bias`.
+
+<details><summary><b>Answer</b></summary>
+
+1. An ensemble method is an approach that combines many simple building blocks models in order to obtain a single and potentially very powerful model. These simple building block models are known as weak learners, since they may lead to mediocre predictions on their own.
+2. In classical machine learning Ensemble methods usually refer to bagging, boosting and the linear combination of regression or classification models.
+3. True The stronger generalization ability stems from the voting power of diverse models which are joined together.
+4. Bagging is variance reduction scheme while boosting reduced bias.
+
+</details>
+
+---
+
+Q. Your colleague, a well-known expert in ensembling methods, writes the following pseudo-code in Python shown in Fig. 6.7 for the training of a neural network. This runs inside a standard loop in each training and validation step.
+
+  ```python
+
+  import torchvision.models as models ...
+  models = ['resnext']
+  for m in models: 
+      train ...
+      compute VAL loss ... 
+      amend LR ...
+      if (val_acc > 90.0):
+          saveModel()
+
+  ```
+1. What type of ensembling can be used with this approach? Explain in detail.
+2. What is the main advantage of snapshot ensembling? What are the disadvantages, if any?
+
+<details><summary><b>Answer</b></summary>
+
+1. Since only a single model ie being utilized, this type of ensembling is known as snap- shot ensembling. Using this approach, during the training of a neural network and in each epoch, a snapshot, e.g. the weights of a trained instance of a model (a PTH file in PyTorch nomenclature) are persisted into permanent storage whenever a certain performance metrics, such as accuracy or loss is being surpassed. Therefore the name “snapshot”; weights of the neural network are being snapshot at specific instances in time. After several such epochs the top-5 performing Snapshots which converged to local minima are combined as part of an ensemble to yield a single prediction.
+2. Advantages: during a single training cycle, many model instances may be collected. Disadvantages: inherent lack of diversity by virtue of the fact that the same models is being repeatedly used.
+
+</details>
+
+---
+
+Q. Assume further that your colleague amends the code as follows.
+
+```python
+
+  import torchvision.models as models
+  import random
+  import np
+  ...
+  models = ['resnext']
+  for m in models:
+      train ...
+      compute loss ...
+      amend LR ...
+      manualSeed= draw a new random number
+      random.seed(manualSeed)
+      np.random.seed(manualSeed)
+      torch.manual_seed(manualSeed)
+      if (val_acc > 90.0):
+          saveModel()
+
+```
+Explain in detail what would be the possible effects of adding `lines 10-13`.
+
+<details><summary><b>Answer</b></summary>
+
+Changing the random seed at each iteration/epoch, helps in introducing variation which
+may contribute to diversifying the trained neural network models.
+
+</details>
+
+---
+
+Q. 
+1. Assume your colleague, a veteran in DL and an expert in ensembling methods writes the following Pseudo code shown in Fig. 6.9 for the training of several neural networks. This code snippet is executed inside a standard loop in each and every training/validation epoch. 
+
+    ```python
+
+    import torchvision.models as models 
+    ...
+    models = ['resnext','vgg','dense']
+    for m in models: 
+        train ...
+        compute loss/acc 
+        ... 
+        if (val_acc > 90.0):
+            saveModel()
+
+    ```
+    What type of ensembling is being utilized in this approach? Explain in detail.
+
+2. Name one method by which NN models may be combined to yield a single prediction.
+
+<details><summary><b>Answer</b></summary>
+
+1. Multi-model ensembling.
+2. Both averaging and majority voting.
+
+</details>
+
+---
+
+Q. 
+1. Referring to Below fig. which depicts a specific learning rate schedule, describe the basic notion behind its mechanism.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/nn_ensemble-6.png" alt= "A typical binary classification problem" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> A typical binary classification problem </td>
+</tr>
+</table>
+
+2. Explain how cyclic learning rates can be effective for the training of convolutional neural networks such as the ones in the code snippet.
+
+3. Explain how a cyclic cosine annealing schedule as proposed by Loshchilov [10] and [13] is used to converge to multiple local minima.
+
+
+<details><summary><b>Answer</b></summary>
+
+1. Capturing the best model of each training cycle allows to obtain multiple models settled on various local optima from cycle to cycle at the cost of training a single mode
+2. The approach is based on the non-convex nature of neural networks and the ability to converge and escape from local minima using a specific schedule to adjust the learning rate during training.
+3. Instead of monotonically decreasing the learning rate,this method lets the learning rate cyclically vary between reasonable boundary values.
+
+</details>
+
+---
+
+Q. Two popular algorithms for winning Kaggle solutions are Light GBM and XGBoost. They are both gradient boosting algorithms.
+  1. What is gradient boosting?
+  1. What problems is gradient boosting good for?
+
+
+<details><summary><b>Answer</b></summary>
+
+In gradient boosting, the ensemble model we try to build is also a weighted sum of weak learners.
+
+<table align='center'>
+<tr>
+<td align="center">
+    <img src="img/gbd_equation.webp" alt= "GB Equation" style="max-width:70%;" />
+</td>
+</tr>
+<tr>
+<td align="center"> GB governing equation </td>
+</tr>
+</table>
+
+</details>
+
+---
+
+## Random Forest 
+
 Q. Complete the sentence: A random forest is a type of a decision tree which utilizes `[bagging/boosting]`
 
 <details><summary><b>Answer</b></summary>
@@ -794,36 +1095,6 @@ Q. When would you choose a Random Forest over other machine learning algorithms?
 
 ---
 
-Below Fig depicts a part of a specific ensembling approach applied to the models $x1, x2...xk$.
-In your opinion, which approach is being utilized?
-  <table align='center'>
-  <tr>
-  <td align="center">
-      <img src="img/nn_ensemble-1.png" alt= "A specific ensembling approach" style="max-width:70%;" />
-  </td>
-  </tr>
-  <tr>
-  <td align="center"> A specific ensembling approach </td>
-  </tr>
-  </table>
-
-- (i) Bootstrap aggregation 
-
-- (ii) Snapshot ensembling
-
-- (iii) Stacking
-
-- (iv) Classical committee machines
-
-<details><summary><b>Answer</b></summary>
-
-The approach which is depicted is the first phase of stacking. In stacking, we first (phase
-0) predict using several base learners and then use a generalizer (phase 1) that learns on top of the base learners predictions.
-
-</details>
-
----
-
 Q. Consider training corpus consisting of balls which are glued together as triangles, each
 of which has either $1, 3, 6, 10, 15, 21, 28, 36, \hspace{0.1em}\text{or} \hspace{0.1em} 45 \hspace{0.5em} \text{balls}$.
 
@@ -906,16 +1177,6 @@ An Algebraic weighted average for class probabilities.
 
 ---
 
-Q. Read the paper **Neural Network Ensembles** and then **complete the sentence**: If the average error rate for a specific instance in the corpus is less than [...]% and the respective classifiers in the ensemble produce independent [...], then when the number of classifiers combined approaches infinity, the expected error can be diminished to zero.
-
-<details><summary><b>Answer</b></summary>
-
-If the average error rate for a specific instance in the corpus is less than `[...]`% and the respective classifiers in the ensemble produce independent `[...]`, then when the number of classifiers combined approaches infinity, the expected error can be diminished to zero.
-
-</details>
-
----
-
 Q. **True or False**: A perfect ensemble comprises of highly correct classifiers that differ as much as possible.
 
 <details><summary><b>Answer</b></summary>
@@ -925,6 +1186,8 @@ Q. **True or False**: A perfect ensemble comprises of highly correct classifiers
 </details>
 
 ---
+
+## Boosting based Algorithms
 
 Q. How does bagging work?
 
@@ -1027,7 +1290,7 @@ fore this may lead to some instances being represented numerous times while othe
 
 ---
 
-Bagging and boosting are two popular ensembling methods. Random forest is a bagging example while XGBoost is a boosting example.
+Q. Bagging and boosting are two popular ensembling methods. Random forest is a bagging example while XGBoost is a boosting example.
   1. What are some of the fundamental differences between bagging and boosting algorithms?
   1. How are they used in deep learning?
 
@@ -1171,270 +1434,3 @@ Q. What are some benefits of using CatBoost for gradient boosting?
 
 
 ---
-Q. 
-1. **True or false**: Training an ensemble of a single monolithic architecture results in lower model diversity and possibly decreased model prediction accuracy.
-2. **True or false**: The generalization accuracy of an ensemble increases with the number of well-trained models it consists of.
-3. **True or false**: Bootstrap aggregation (or bagging), refers to a process wherein a CNN ensemble is being trained using a random subset of the training corpus.
-4. **True or false**: Bagging assumes that if the single predictor shave independent errors, then a majority vote of their outputs should be better than the individual predictions.
-
-<details><summary><b>Answer</b></summary>
-
-1. **True** Due to their lack of diversity, an ensemble of monolithic architectures tends to
-perform worse than an heterogeneous ensemble.
-2. **True**, The generalization accuracy of an ensemble typically increases as the number of well-trained models it includes grows, provided that these models are sufficiently diverse.
-3. **True**
-4. **True**, The total error decreases with the addition of predictors to the ensemble.
-
-</details>
-
----
-
-Q. Refer to the papers: <a href='https://arxiv.org/pdf/1506.02142.pdf'>Dropout as a Bayesian Approximation</a> and <a href='https://arxiv.org/pdf/1906.02530.pdf'>Can You TrustYour Model’s Uncertainty?</a> and answer the following question: 
-  1. Do deep ensembles achieve a better performance on out-of-distribution uncertainty benchmarks compared with Monte-Carlo (MC)-dropout?
-
-<details><summary><b>Answer</b></summary>
-
-Yes, they do
-
-</details>
-
----
-Q. 
-1. In a transfer-learning experiment conducted by a researcher, a number of ImageNet-pretrained CNN classifiers, selected from Table 6.1 are trained on five different folds drawn from the same corpus. Their outputs are fused together producing a composite machine. Ensembles of these convolutional neural networks architectures have been extensively studies an evaluated in various ensembling approaches. Is it likely that the composite machine will produce a prediction with higher accuracy than that of any individual classifier? Explain why.
-
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/nn_ensemble-4.png" alt= "ImageNet-pretrained CNNs. Ensembles of these CNN architectures have been extensively studies and evaluated in various ensembling approaches" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> ImageNet-pretrained CNNs. Ensembles of these CNN architectures have been extensively studies and evaluated in various ensembling approaches </td>
-</tr>
-</table>
-
-2. **True or False**: In a classification task, the result of ensembling is always superior.
-
-3. **True or False**: In an ensemble, we want differently trained models converge to different local minima.
-
-<details><summary><b>Answer</b></summary>
-
-1. Yes, it is very likely, especially if their errors are independent.
-2. True It may be proven that ensembles of models perform at least as good as each of the ensemble members it consists of.
-3. True Different local minima add to the diversification of the models.
-
-</details>
-
----
-
-In committee machines, mark all the combiners that do not make direct use of the input:
-  1. A mixture of experts 
-  2. Bagging
-  3. Ensemble averaging 
-  4. Boosting
-
-<details><summary><b>Answer</b></summary>
-
-Boosting is the only one that does not.
-
-</details>
-
----
-
-Q. **True or False**: Considering a binary classification problem $(y = 0\ or \ y = 1)$, ensemble averaging, wherein the outputs of individual models are linearly combined to produce a fused output is a form of a static committee machine.
-
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/nn_ensemble-5.png" alt= "A typical binary classification problem" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> A typical binary classification problem </td>
-</tr>
-</table>
-
-<details><summary><b>Answer</b></summary>
-
-**False** By definition, static committee machines use only the output of the single predict-
-ors.
-
-</details>
-
----
-
-Q. **True or false**: When using a single model, the risk of overfitting the data increases when
-the number of adjustable parameters is large compared to cardinality (i.e., size of the set) of the training corpus.
-
-<details><summary><b>Answer</b></summary>
-
-**True** 
-
-</details>
-
----
-
-Q. **True or false**: If we have a committee of $K$ trained models and the errors are uncorrelated, then by averaging them the average error of a model is reduced by a factor of $K$.
-
-<details><summary><b>Answer</b></summary>
-
-**False** Though this may be theoretically true, in practice the errors are rarely uncorrelated
-and therefore the actual error can not be reduced by a factor of K.
-
-</details>
-
----
-Q. 
-1. Define ensemble learning in the context of machine learning.
-2. Provide examples of ensemble methods in classical machine-learning.
-3. **True or false**: Ensemble methods usually have stronger generalization ability.
-4. Complete the sentence: Bagging is `variance/bias` reduction scheme while boosting reduced `variance/bias`.
-
-<details><summary><b>Answer</b></summary>
-
-1. An ensemble method is an approach that combines many simple building blocks models in order to obtain a single and potentially very powerful model. These simple building block models are known as weak learners, since they may lead to mediocre predictions on their own.
-2. In classical machine learning Ensemble methods usually refer to bagging, boosting and the linear combination of regression or classification models.
-3. True The stronger generalization ability stems from the voting power of diverse models which are joined together.
-4. Bagging is variance reduction scheme while boosting reduced bias.
-
-</details>
-
----
-
-Q. Your colleague, a well-known expert in ensembling methods, writes the following pseudo-code in Python shown in Fig. 6.7 for the training of a neural network. This runs inside a standard loop in each training and validation step.
-
-  ```python
-
-  import torchvision.models as models ...
-  models = ['resnext']
-  for m in models: 
-      train ...
-      compute VAL loss ... 
-      amend LR ...
-      if (val_acc > 90.0):
-          saveModel()
-
-  ```
-1. What type of ensembling can be used with this approach? Explain in detail.
-2. What is the main advantage of snapshot ensembling? What are the disadvantages, if any?
-
-<details><summary><b>Answer</b></summary>
-
-1. Since only a single model ie being utilized, this type of ensembling is known as snap- shot ensembling. Using this approach, during the training of a neural network and in each epoch, a snapshot, e.g. the weights of a trained instance of a model (a PTH file in PyTorch nomenclature) are persisted into permanent storage whenever a certain performance metrics, such as accuracy or loss is being surpassed. Therefore the name “snapshot”; weights of the neural network are being snapshot at specific instances in time. After several such epochs the top-5 performing Snapshots which converged to local minima are combined as part of an ensemble to yield a single prediction.
-2. Advantages: during a single training cycle, many model instances may be collected. Disadvantages: inherent lack of diversity by virtue of the fact that the same models is being repeatedly used.
-
-</details>
-
----
-
-Q. Assume further that your colleague amends the code as follows.
-
-```python
-
-  import torchvision.models as models
-  import random
-  import np
-  ...
-  models = ['resnext']
-  for m in models:
-      train ...
-      compute loss ...
-      amend LR ...
-      manualSeed= draw a new random number
-      random.seed(manualSeed)
-      np.random.seed(manualSeed)
-      torch.manual_seed(manualSeed)
-      if (val_acc > 90.0):
-          saveModel()
-
-```
-Explain in detail what would be the possible effects of adding `lines 10-13`.
-
-<details><summary><b>Answer</b></summary>
-
-Changing the random seed at each iteration/epoch, helps in introducing variation which
-may contribute to diversifying the trained neural network models.
-
-</details>
-
----
-
-Q. 
-1. Assume your colleague, a veteran in DL and an expert in ensembling methods writes the following Pseudo code shown in Fig. 6.9 for the training of several neural networks. This code snippet is executed inside a standard loop in each and every training/validation epoch. 
-
-    ```python
-
-    import torchvision.models as models 
-    ...
-    models = ['resnext','vgg','dense']
-    for m in models: 
-        train ...
-        compute loss/acc 
-        ... 
-        if (val_acc > 90.0):
-            saveModel()
-
-    ```
-    What type of ensembling is being utilized in this approach? Explain in detail.
-
-2. Name one method by which NN models may be combined to yield a single prediction.
-
-<details><summary><b>Answer</b></summary>
-
-1. Multi-model ensembling.
-2. Both averaging and majority voting.
-
-</details>
-
----
-
-Q. 
-1. Referring to Below fig. which depicts a specific learning rate schedule, describe the basic notion behind its mechanism.
-
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/nn_ensemble-6.png" alt= "A typical binary classification problem" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> A typical binary classification problem </td>
-</tr>
-</table>
-
-2. Explain how cyclic learning rates can be effective for the training of convolutional neural networks such as the ones in the code snippet.
-
-3. Explain how a cyclic cosine annealing schedule as proposed by Loshchilov [10] and [13] is used to converge to multiple local minima.
-
-
-<details><summary><b>Answer</b></summary>
-
-1. Capturing the best model of each training cycle allows to obtain multiple models settled on various local optima from cycle to cycle at the cost of training a single mode
-2. The approach is based on the non-convex nature of neural networks and the ability to converge and escape from local minima using a specific schedule to adjust the learning rate during training.
-3. Instead of monotonically decreasing the learning rate,this method lets the learning rate cyclically vary between reasonable boundary values.
-
-</details>
-
----
-
-Q. Two popular algorithms for winning Kaggle solutions are Light GBM and XGBoost. They are both gradient boosting algorithms.
-  1. What is gradient boosting?
-  1. What problems is gradient boosting good for?
-
-
-<details><summary><b>Answer</b></summary>
-
-In gradient boosting, the ensemble model we try to build is also a weighted sum of weak learners.
-
-<table align='center'>
-<tr>
-<td align="center">
-    <img src="img/gbd_equation.webp" alt= "GB Equation" style="max-width:70%;" />
-</td>
-</tr>
-<tr>
-<td align="center"> GB governing equation </td>
-</tr>
-</table>
-
-</details>
