@@ -1147,7 +1147,230 @@ When assuming a normal distribution for residuals is not suitable, an alternativ
 
 ---
 
+Q. Can time series decomposition be utilized for forecasting, and if so, what is the method for doing so?
+
+<details><summary><b>Answer</b></summary>
+
+Yes, Time series decomposition can be a useful step in producing forecasts. Assuming an additive decomposition, the decomposed time series can be written as
+
+$$
+y_t = \hat{S}_t + \hat{A}_t
+$$
+
+Where $\hat{A}_t = \hat{T}_t + \hat{R}_t$ is the seasonally adjusted component. 
+
+To forecast a decomposed time series, we forecast the seasonal component, $\hat{S}_t$, and the seasonally adjusted component $\hat{A}_t$, separately. It is usually assumed that the seasonal component is unchanging, or changing extremely slowly, so it is forecast by simply taking the last year of the estimated component. In other words, a seasonal naïve method is used for the seasonal component.
+
+To forecast the seasonally adjusted component, any non-seasonal forecasting method may be used. For example, the drift method, or Holt’s method, or a non-seasonal ARIMA model may be used.
+
+</details>
+
+---
+
+Q. How does forecast errors differ from residuals?
+
+<details><summary><b>Answer</b></summary>
+
+Forecast errors are different from residuals in two ways. First, residuals are calculated on the training set while forecast errors are calculated on the test set. Second, residuals are based on one-step forecasts while forecast errors can involve multi-step forecasts.
+
+</details>
+
+---
+
+Q. What are different techniques for measuring forecast accuracy?
+
+<details><summary><b>Answer</b></summary>
+
+We can measure forecast accuracy by summarising the forecast errors in following ways:
+
+*Scale-dependent errors*
+- Mean absolute error(MAE)
+- Root mean squared error(RMSE)
+
+*Percentage errors*
+- Mean absolute percentage error(MAPE)
+
+*Scaled Errors*
+
+Scaled errors were proposed by Hyndman & Koehler (2006) as an alternative to using percentage errors when comparing forecast accuracy across series with different units. They proposed scaling the errors based on the training MAE from a simple forecast method.
+
+
+</details>
+
+---
+
+Q. Is it feasible to apply the cross-validation technique to evaluate the accuracy of forecasts?
+
+<details><summary><b>Answer</b></summary>
+
+Yes, In this procedure, there are a series of test sets, each consisting of a single observation. The corresponding training set consists only of observations that occurred prior to the observation that forms the test set.
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/time_series_cv.png" alt= "Cross-validation for time series forecasts" style="max-width:70%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> Cross-validation for time series forecasts </td>
+  </tr>
+</table>
+
+With time series forecasting, one-step forecasts may not be as relevant as multi-step forecasts. In this case, the cross-validation procedure based on a rolling forecasting origin can be modified to allow multi-step errors to be used. Suppose that we are interested in models that produce good 4-step-ahead forecasts. Then the corresponding diagram is shown below:
+
+<table align='center'>
+  <tr>
+    <td align="center">
+      <img src="img/time_series_cv_2.png" alt= "Cross-validation for time series multi-step forecasts" style="max-width:70%;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"> Cross-validation for time series multi-step forecasts </td>
+  </tr>
+</table>
+
+</details>
+
+---
+
 ## Time Series Regression Models
+
+Q. What assumptions do we make when using a linear regression model for forecasting?
+
+<details><summary><b>Answer</b></summary>
+
+When using a linear regression model, we assume:
+
+1. Model Approximation: The model is a reasonable approximation to reality. This implies that the relationship between the forecast variable and predictor variables is linear.
+
+2. Assumptions about the Errors:
+   - Mean Zero: The errors have a mean of zero to avoid systematic bias in forecasts.
+   - No Autocorrelation: The errors are not autocorrelated, ensuring forecasts are efficient without missed information in the data.
+   - Unrelated to Predictors: The errors are unrelated to predictor variables, suggesting that all relevant information is captured within the model's systematic part.
+   - Normal Distribution with Constant Variance: It is helpful for the errors to be normally distributed with constant variance (\( \sigma^2 \)) to facilitate prediction interval calculations.
+
+</details>
+
+---
+
+Q. Explain least squares principle?
+
+<details><summary><b>Answer</b></summary>
+
+The least squares principle provides a way of choosing the coefficients effectively by minimising the sum of the squared errors. That is, we choose the values of $\beta_0,\beta_1,..,\beta_k$ that minimise 
+
+$$
+\sum_{t=1}^T \eta_{t}^2 = \sum_{t=1}^T(y_t - \beta_0 - \beta_1x_{1, t} - ... - \beta_k x_{k, t})^2
+$$
+
+This is called least squares estimation because it gives the least value for the sum of squared errors. 
+
+</details>
+
+---
+
+Q. What are some typical predictors used in time series regression models?
+
+<details><summary><b>Answer</b></summary>
+
+There are several useful predictors that occur frequently when using regression for time series data.
+- Trend: It is common for time series data to be trending. A linear trend can be modelled by simply using $x_{1, t}=t$ as predictor,
+
+$$
+y_t = \beta_0 + \beta_1t + \eta_t
+$$
+- Dummy variables
+    - Public holiday 
+- Seasonal dummy variables
+    - Day of the week
+    - Weekends
+    - Week of the month
+    - Month
+    - Quarter
+- Intervention variables: It is often necessary to model interventions that may have affected the variable to be forecast.
+    - Competitor activity
+    - Advertising expenditure
+    - Industrial action
+- Trading days: The number of trading days in a month can vary considerably and can have a substantial effect on sales data.
+    - number of Mondays/Sundays in month
+- Distributed lags
+- Rolling stats
+
+</details>
+
+---
+
+Q. What is Akaike's Information Criterion (AIC)?
+
+<details><summary><b>Answer</b></summary>
+
+AIC is defined as:
+
+$$
+\text{AIC} = T\log(\frac{SSE}{T}) + 2(k+2)
+$$
+
+$$
+\text{SSE} = \sum_{t=1}^T \eta_{t}^2
+$$
+
+where $T$ is the number of observations used for estimation and $k$ is the number of predictors in the model.
+
+The $k+2$ part of the equation occurs because there are $k+2$ parameters in the model: the $k$ coefficients for the predictors, the intercept and the variance of the residuals. 
+
+</details>
+
+---
+
+Q. How can the AIC score be interpreted?
+
+<details><summary><b>Answer</b></summary>
+
+The model with the minimum value of the AIC is often the best model for forecasting. 
+
+</details>
+
+---
+
+Q. Why do we need to adjust bias in AIC score?
+
+<details><summary><b>Answer</b></summary>
+For small values of $T$, the AIC tends to select too many predictors, and so a bias-corrected version of the AIC has been developed.
+
+$$
+\text{AIC}_c = \text{AIC} + \frac{2(k+2)(k+3)}{(T-k-3)}
+$$
+
+</details>
+
+---
+
+Q. What is Bayesian Information Criterion (BIC)?
+
+<details><summary><b>Answer</b></summary>
+
+Schwarz’s Bayesian Information Criterion (usually abbreviated to BIC, SBIC or SC):
+
+$$
+\text{BIC} = T\log{\frac{SSE}{T}} + (k+2)\log(T)
+$$
+
+</details>
+
+---
+
+Q. How does AIC differs from BIC?
+
+<details><summary><b>Answer</b></summary>
+
+BIC penalizes the number of parameters more heavily than the AIC. Although  If the value of $T$ is large enough, both will lead to the same model.
+
+</details>
+
+---
+
+
+
 
 ## Exponential Smoothing
 
