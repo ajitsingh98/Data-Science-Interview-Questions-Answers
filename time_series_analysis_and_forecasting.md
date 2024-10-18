@@ -12,6 +12,7 @@ Contents
 - [Time Series Regression Models](#time-series-regression-models)
 - [Exponential Smoothing](#exponential-smoothing)
 - [ARIMA Models](#arima-models)
+- [Dynamic regression models](#dynamic-regression-models)
 - [Prophet Model](#prophet-model)
 - [Vector Autoregressions](#vector-autoregressions)
 - [Neural Networks](#neural-networks)
@@ -2036,26 +2037,204 @@ The SARIMA (Seasonal ARIMA) model is an extension of the ARIMA model that accoun
 
 ---
 
+Q. How does the value of \(d\) affect the prediction interval in ARIMA models?
+
+<details><summary><b>Answer</b></summary>
+
+Higher values of \(d\) (e.g., \(d = 1\) or \(d = 2\)) mean that the data is being differenced more, which can lead to a loss of information about the level of the original series. As a result, while forecasts may be less biased, the prediction intervals can become wider due to increased uncertainty.
+
+</details>
+
+---
+
 Q. State the difference between ARIMA and ETS models?
 
 <details><summary><b>Answer</b></summary>
 
 | Feature              | ARIMA                                                         | ETS                                                            |
 |----------------------|---------------------------------------------------------------|----------------------------------------------------------------|
-| **Model Structure**  | Uses past values and errors to model autocorrelations.        | Explicitly models error, trend, and seasonality components.    |
-| **Components**       | Defined by orders \( p \), \( d \), \( q \) for non-seasonal; \( P \), \( D \), \( Q \) for seasonal. | Models can be additive or multiplicative for each component.   |
-| **Data Requirements**| Requires data to be stationary.                               | No stationarity requirement; handles trends and seasonality directly. |
-| **Complexity**       | Requires identification of model orders, which can be complex. | Simpler setup with systematic component selection.             |
-| **Usage**            | Robust across various datasets, adaptable for complex patterns.| Easier to use when clear seasonal and trend patterns are present.|
-| **Predictive Performance** | Versatile but may require careful optimization.          | Generally effective, particularly in datasets with strong seasonal components. |
-| **Theoretical Basis**| Focuses on sequential dependencies in data.                    | Decomposes time series into error, trend, and seasonal elements.|
-| **Ideal Use Case**   | Best for datasets where autocorrelation modeling is critical. | Preferred for clear, straightforward seasonal and trend forecasting. |
+| Model Structure  | Uses past values and errors to model autocorrelations.        | Explicitly models error, trend, and seasonality components.    |
+| Components       | Defined by orders \( p \), \( d \), \( q \) for non-seasonal; \( P \), \( D \), \( Q \) for seasonal. | Models can be additive or multiplicative for each component.   |
+| Data Requirements| Requires data to be stationary.                               | No stationarity requirement; handles trends and seasonality directly. |
+| Complexity       | Requires identification of model orders, which can be complex. | Simpler setup with systematic component selection.             |
+| Usage            | Robust across various datasets, adaptable for complex patterns.| Easier to use when clear seasonal and trend patterns are present.|
+| Predictive Performance | Versatile but may require careful optimization.          | Generally effective, particularly in datasets with strong seasonal components. |
+| Theoretical Basis| Focuses on sequential dependencies in data.                    | Decomposes time series into error, trend, and seasonal elements.|
+| Ideal Use Case   | Best for datasets where autocorrelation modeling is critical. | Preferred for clear, straightforward seasonal and trend forecasting. |
+
+</details>
+
+---
+
+Q. What are the differences between ARIMA models and regression models?
+
+<details><summary><b>Answer</b></summary>
+
+| Feature                | ARIMA Models                         | Regression Models                   |
+|------------------------|--------------------------------------|-------------------------------------|
+| Purpose            | Time series forecasting              | Assessing relationships between variables |
+| Data Type          | Time series data                     | Various data types (cross-sectional, time series, panel) |
+| Assumptions        | Stationarity; relies on autocorrelation | Linear relationships; independent and identically distributed residuals |
+| Model Structure    | Comprises AR, I (differencing), and MA components | Linear equation with coefficients for independent variables |
+| Forecasting Method | Based on past values and patterns in time series | Based on established relationships between dependent and independent variables |
+| Focus              | Temporal dependencies                 | Relationships and influences among variables |
+
+</details>
+
+---
+
+## Dynamic regression models
+
+Q. What are the limitations of regression and ARIMA models, and how do dynamic regression models address these needs?
+
+<details><summary><b>Answer</b></summary>
+
+Regression models excel at incorporating relevant predictor variables but often overlook the subtle time series dynamics, such as trends and seasonality, that are essential for accurate forecasting. On the other hand, ARIMA models effectively capture these temporal patterns using past observations but fail to include other important external factors, like holidays, competitor actions, or economic changes, which can significantly influence the data.
+
+To overcome these limitations, dynamic regression models merge the strengths of both approaches. They allow for the inclusion of external variables while also accounting for time-dependent behaviors, enabling a more comprehensive analysis. This integration enhances forecast accuracy by leveraging both the historical patterns inherent in the time series and the additional context provided by relevant predictors.
+
+</details>
+
+---
+
+Q. How does dynamic regression models differ from regression models?
+
+<details><summary><b>Answer</b></summary>
+
+Traditional regression model takes the form of
+
+$$
+y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \epsilon_t
+$$
+
+where $y_t$ is a linear function of the $k$ predictor variables $(x_{1, t},...,x_{k, t})$ and $\eta_t$ is usually assumed to be an uncorrelated error term (i.e it is white noise).
+
+Dynamic regression allows the errors from a regression to contain autocorrelation. To emphasise this change in perspective, we will replace $\epsilon_t$ with $\eta_t$ in the equation. The error series $\eta_t$ is assumed to follow an ARIMA model. 
+
+If $\eta_t$ follows an ARIMA(1, 1, 1) model, we can write 
+
+$$
+y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \eta_t
+$$
+
+$$
+(1 - \phi_1 B)(1 - B)\eta_t = (1 + \theta_1 B)\epsilon_t
+$$
+
+Where $\epsilon_t$ is a white noise series.
+
+Note that the model includes two error terms: the error from the regression model, denoted as \( \eta_t \), and the error from the ARIMA model, denoted as \( \epsilon_t \). It is important to note that only the errors from the ARIMA model are assumed to be white noise.
+
+
+</details>
+
+---
+
+Q. What must be checked before estimating a regression with ARMA errors?
+
+<details><summary><b>Answer</b></summary>
+
+All of the variables in the model, including \(y_t\) and the predictors \((x_{1,t}, \ldots, x_{k,t})\), must be stationary. If any of these are non-stationary, the estimated coefficients may not be consistent. However, if the non-stationary variables are co-integrated and there exists a stationary linear combination, then the estimated coefficients will be consistent.
+
+</details>
+
+---
+
+Q. How do you forecast using a regression model with ARIMA errors?
+
+<details><summary><b>Answer</b></summary>
+
+To forecast using a regression model with ARIMA errors, you need to forecast both the regression part and the ARIMA part of the model and then combine the results. If the predictors are known into the future, forecasting is straightforward. However, if the predictors are unknown, you must either model them separately or use assumed future values for each predictor.
+
+</details>
+
+---
+
+Q. How do you forecast using a regression model with ARIMA errors?
+
+<details><summary><b>Answer</b></summary>
+
+To forecast using a regression model with ARIMA errors, you need to forecast both the regression part and the ARIMA part of the model and then combine the results. If the predictors are known into the future, forecasting is straightforward. However, if the predictors are unknown, you must either model them separately or use assumed future values for each predictor.
+
+</details>
+
+---
+
+Q. What is dynamic harmonic regression?
+
+<details><summary><b>Answer</b></summary>
+
+Harmonic regression is a type of regression analysis used to model periodic or seasonal data. It incorporates sine and cosine terms to capture the cyclical patterns within the data. This method is particularly useful when the data exhibits regular fluctuations, such as daily, monthly, or yearly trends.
+
+The model typically includes terms like:
+
+\[
+y_t = \beta_0 + \beta_1 \cos(2\pi ft) + \beta_2 \sin(2\pi ft) + \epsilon_t
+\]
+
+where \(f\) is the frequency of the cycles.
+
+</details>
+
+---
+
+Q. What is benefit of dynamic harmonic regression?
+
+<details><summary><b>Answer</b></summary>
+
+- It allows any length seasonality;
+- for data with more than one seasonal period, Fourier terms of different frequencies can be included;
+- the smoothness of the seasonal pattern can be controlled by $K$, the number of Fourier sin and cos pairs – the seasonal pattern is smoother for smaller values of $K$
+- the short-term dynamics are easily handled with a simple ARMA error.
+
+</details>
+
+---
+
+Q. What are lag predictors?
+
+<details><summary><b>Answer</b></summary>
+
+Lagged predictors are predictors that have an impact that is not immediate. For example, an advertising campaign's impact on sales may continue for some time after the campaign ends.
+
+</details>
+
+---
+
+Q. What challenges arise when forecasting higher frequency time series data with complicated seasonal patterns?
+
+<details><summary><b>Answer</b></summary>
+
+Higher frequency time series data, such as daily and hourly data, often exhibit complex seasonal patterns, including multiple types of seasonality (e.g., daily, weekly, and annual). For example, daily data can have both weekly and annual patterns, while hourly data typically includes daily, weekly, and annual seasonality. Additionally, weekly data poses challenges because there are not a whole number of weeks in a year, resulting in an average annual seasonal period of approximately \(365.25/7 \approx 52.179\).
 
 </details>
 
 ---
 
 ## Prophet Model
+
+Q. What is the Prophet model, and what are its key features?
+
+<details><summary><b>Answer</b></summary>
+
+The Prophet model, developed by Facebook, is designed for forecasting time series data, particularly daily data with strong seasonal patterns and holiday effects. It can handle various types of seasonal data and works best with several seasons of historical data. The model can be represented as:
+
+\[
+y_t = g(t) + s(t) + h(t) + \epsilon_t
+\]
+
+where \(g(t)\) describes a piecewise-linear trend, \(s(t)\) captures seasonal patterns using Fourier terms, \(h(t)\) accounts for holiday effects, and \(\epsilon_t\) is a white noise error term. 
+
+Key features include:
+
+- Automatic selection of knots (changepoints) for the trend.
+- Optional logistic function for setting an upper trend bound.
+- Default settings of order 10 for annual seasonality and order 3 for weekly seasonality.
+- Use of a Bayesian approach for model estimation, allowing for automatic selection of changepoints and other characteristics.
+
+</details>
+
+---
 
 ## Vector Autoregressions
 
