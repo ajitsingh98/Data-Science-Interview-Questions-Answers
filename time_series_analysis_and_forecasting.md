@@ -41,6 +41,16 @@ Anything that is observed sequentially over time is a time series. The observati
 
 ---
 
+Q. State the difference between univariate and multivariate time series?
+
+<details><summary><b>Answer</b></summary>
+
+Univariate time series refers to a single variable tracked over time, such as daily temperature readings in a city. In contrast, multivariate time series encompasses multiple variables measured over the same period, like daily temperature, humidity, and wind speed.
+
+</details>
+
+---
+
 Q. Define following terms:
 - Short-term forecasts
 - Medium-term forecasts
@@ -112,6 +122,17 @@ Quantitative forecasting can be applied when two conditions are satisfied:
 
 ---
 
+Q. State the difference between exogenous and endogenous variables?
+
+<details><summary><b>Answer</b></summary>
+
+Exogenous Variables: Determined outside the model and not influenced by other variables within it; serve as inputs.
+
+Endogenous Variables: Determined by relationships within the model; influenced by other variables and represent the outcomes the model aims to explain. 
+
+</details>
+
+---
 
 
 ## Time Series Graphics
@@ -2238,4 +2259,75 @@ Key features include:
 
 ## Vector Autoregressions
 
-## Neural Networks
+Q. What is vector autoregression?
+
+<details><summary><b>Answer</b></summary>
+
+Vector autoregression (VAR) is a statistical model designed to capture the relationships among multiple variables as they evolve over time. As a type of stochastic process model, VAR extends the concept of univariate autoregressive models to accommodate multivariate time series data.
+
+</details>
+
+---
+
+Q. How does the VAR model address stationarity and non-stationarity in time series data?
+
+<details><summary><b>Answer</b></summary>
+
+If the series are stationary, we forecast them by fitting a VAR to the data directly (known as a “VAR in levels”). If the series are non-stationary, we take differences of the data in order to make them stationary, then fit a VAR model (known as a “VAR in differences”).
+
+</details>
+
+---
+
+Q. Write the governing equation of 2-dimensional VAR(1) model?
+
+<details><summary><b>Answer</b></summary>
+
+2-dimensional VAR(1) model as:
+
+$$
+y_{1, t} = c_1 + \phi_{11,1}y_{1,t-1} + \phi_{12,1}y_{2,t-1} + \epsilon_{1, t}
+$$
+
+$$
+y_{2, t} = c_2 + \phi_{21,1}y_{1,t-1} + \phi_{22,1}y_{2,t-1} + \epsilon_{2, t}
+$$
+
+</details>
+
+---
+
+Q. What are the challenges of dealing with weekly, daily and sub-daily data?
+
+<details><summary><b>Answer</b></summary>
+
+*Issue Weekly Data*
+
+Working with weekly data is challenging because the seasonal period is large and non-integer, averaging 52.18 weeks in a year. Most methods require the seasonal period to be an integer, and even approximating it to 52 can lead to inefficiencies in handling such a long seasonal cycle.
+
+*Daily and sub-daily data*
+
+They involve multiple seasonal patterns, and so we need to use a method that handles such complex seasonality. 
+
+
+</details>
+
+---
+
+Q. How to handle missing values in time series?
+
+<details><summary><b>Answer</b></summary>
+
+We can use following approaches for handling missing data:
+
+1. Assess Potential Bias: Determine if the missing data could introduce bias in your forecasts. For instance, if missing sales data occurs on public holidays, it may lead to underestimating sales on the following day.
+
+2. Use Dynamic Regression Models: For situations where the missingness is related to specific events (like public holidays), implement dynamic regression models with dummy variables to indicate relevant days, as automated methods may not adequately address such context-specific effects.
+
+3. Random Missingness: If the missing values are random (e.g., due to recording errors), and their absence is not informative for forecasting, you can handle them more easily, possibly through imputation methods.
+
+4. Remove Unusual Observations: If certain unusual observations are removed from the dataset, this may create missing values, which can also be managed depending on the context.
+
+</details>
+
+---
