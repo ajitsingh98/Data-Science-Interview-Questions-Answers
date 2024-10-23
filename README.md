@@ -35,6 +35,8 @@ Contents 📖
 - 🗣️ [Natural Language Processing Questions](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/natural_language_processing_questions.md)
 - 🤖 [Unsupervised Learning](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/unsupervised_learning.md)
 - 📈 [Time Series Analysis and Forecasting](https://github.com/ajitsingh98/Data-Science-Interview-Questions-Answers/blob/main/time_series_analysis_and_forecasting.md)
+- ⚙️ [ML System Design](https://github.com/ajitsingh98/Data-Science-Interview-Questions-Answers/blob/main/machine_learning_system_design.md)
+- 🔧 [Machine Learning Operations](https://github.com/ajitsingh98/Data-Science-Interview-Questions-Answers/blob/main/machine_learning_operations.md)
 - 📜 [SQL Questions](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/sql.md)
 
 ---
