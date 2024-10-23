@@ -34,6 +34,7 @@ Contents 📖
 - 👁️ [Computer Vision Topics](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/computer_vision_topics.md)
 - 🗣️ [Natural Language Processing Questions](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/natural_language_processing_questions.md)
 - 🤖 [Unsupervised Learning](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/unsupervised_learning.md)
+- 📈 [Time Series Analysis and Forecasting](https://github.com/ajitsingh98/Data-Science-Interview-Questions-Answers/blob/main/time_series_analysis_and_forecasting.md)
 - 📜 [SQL Questions](https://github.com/ajitsingh98/Data-Science-Interview-Questions/blob/main/sql.md)
 
 ---
