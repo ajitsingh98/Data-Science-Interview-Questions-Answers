@@ -1,9 +1,10 @@
-# Data Science Interview Questions And Answers
+# General Concepts In Machine Learning
 
-## General Concepts In Machine Learning
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-Contents
-----
+
+## Table of Contents
+
 - [Basics](#basics)
 - [Cross Validation](#cross-validation)
 - [Similarity Measures](#Similarity-Measures)
@@ -15,9 +16,7 @@ Contents
 
 ## Basics
 
-
 ### Q: Explain supervised, unsupervised, weakly supervised, semi-supervised, and active learning.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -46,14 +45,11 @@ It involves an iterative process where the model actively selects the most infor
 
 ---
 
-
-
 ### Q: Empirical risk minimization.
 
 1. What’s the risk in empirical risk minimization?
 1. Why is it empirical?
 1. How do we minimize that risk?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -64,7 +60,11 @@ It involves an iterative process where the model actively selects the most infor
 
 3. Minimizing the empirical risk involves finding the model parameters that minimize the average loss over the training data. The steps are as follows:
 
-- Define the Loss Function: Choose an appropriate loss function $L(y,f(x))$that quantifies the error for each prediction.$$R_{\text{emp}}(f) = \frac{1}{n} \sum_{i=1}^n L(y_i, f(x_i))$$
+- Define the Loss Function: Choose an appropriate loss function $L(y,f(x))$  that quantifies the error for each prediction.
+
+$$
+R_{\text{emp}}(f) = \frac{1}{n} \sum_{i=1}^n L(y_i, f(x_i))
+$$
 
 - Minimize the empirical risk by adjusting the model parameters using an optimization algorithm, such as gradient descent. The goal is to find the parameters that yield the lowest empirical risk.
 
@@ -72,9 +72,7 @@ It involves an iterative process where the model actively selects the most infor
 
 ---
 
-
 ### Q: What are the exhaustive steps we need to perform when tackling any generic machine learning problem, specifically for both regression and classification tasks?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -155,9 +153,7 @@ It involves an iterative process where the model actively selects the most infor
 
 ---
 
-
 ### Q: Explain the tradeoff between model's flexibility vs interpretability?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -181,9 +177,7 @@ Here is the a plot of model's flexibility vs interpretability:
 
 ---
 
-
 ### Q: Occam's razor states that when the simple explanation and complex explanation both work equally well, the simple explanation is usually correct. How do we apply this principle in ML?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -194,9 +188,7 @@ Occam's Razor can be applied in model selection during machine learning. If two 
 
 ---
 
-
 ### Q: If we have a wide NN and a deep NN with the same number of parameters, which one is more expressive and why?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -207,9 +199,7 @@ A deep neural network (DNN) is generally more expressive than a wide neural netw
 
 ---
 
-
 ### Q: The Universal Approximation Theorem states that a neural network with 1 hidden layer can approximate any continuous function for inputs within a specific range. Then why can’t a simple neural network reach an arbitrarily small positive error?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -220,9 +210,7 @@ A deep neural network (DNN) is generally more expressive than a wide neural netw
 
 ---
 
-
 ### Q: What are saddle points and local minima? Which are thought to cause more problems for training large NNs?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -248,13 +236,11 @@ Saddle point cause more problem in training large Neural Networks. Because they 
 
 ---
 
-
 ### Q: Hyper-parameters.
 
 1. What are the differences between parameters and hyper-parameters?
 1. Why is hyperparameter tuning important?
 1. List down methods for tuning hyper-parameters.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -280,7 +266,6 @@ Saddle point cause more problem in training large Neural Networks. Because they 
 </details>
 
 ---
-
 
 ### Q: Classification vs. regression.
 
@@ -308,14 +293,15 @@ Saddle point cause more problem in training large Neural Networks. Because they 
 
     Alternatively, if the classification algorithm predicts probabilities for each class, these probabilities could be scaled to a continuous range using a formula like:
 
-$$\text{quantity} = \text{min} + \text{probability} \times \text{range}$$
+$$
+\text{quantity} = \text{min} + \text{probability} \times \text{range}
+$$
 
 However, if the class labels in the original classification problem do not have a natural ordinal relationship, converting it to a regression problem might lead to poor performance. The model could mistakenly infer a relationship between the input features and the continuous output that doesn’t actually exist, leading to inaccurate predictions.
 
 </details>
 
 ---
-
 
 ### Q: Parametric vs. non-parametric methods.
 
@@ -332,7 +318,6 @@ However, if the class labels in the original classification problem do not have 
     - **Non-parametric** methods do not assume a specific form for the distribution of the data and do not use a fixed number of parameters. They are more flexible and can adapt to the structure of the data without making strong assumptions.
     - Example - Kernel density estimation
 
-
 2. When to use them
 
     - Use Parametric Methods When:
@@ -348,9 +333,7 @@ However, if the class labels in the original classification problem do not have 
 
 ---
 
-
 ### Q: Why does an ML model’s performance degrade in production?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -376,9 +359,7 @@ ML model's performance degrade in production due to following reasons:
 
 ---
 
-
 ### Q: What problems might we run into when deploying large machine learning models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -390,7 +371,6 @@ ML model's performance degrade in production due to following reasons:
 </details>
 
 ---
-
 
 ### Q: Your model performs really well on the test set but poorly in production.
 
@@ -409,9 +389,7 @@ ML model's performance degrade in production due to following reasons:
 
 ---
 
-
 ### Q: What are some common encoding techniques in machine learning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -441,9 +419,7 @@ ML model's performance degrade in production due to following reasons:
 
 ---
 
-
 ### Q: Below Fig depicts two different cross-validation approaches. Name them.
-
 
 <table align='center'>
   <tr>
@@ -465,7 +441,6 @@ ML model's performance degrade in production due to following reasons:
 
 ---
 
-
 ### Q: 1. What is the purpose of following Python code snippet?
 
         ```python
@@ -486,9 +461,7 @@ ML model's performance degrade in production due to following reasons:
 
 ---
 
-
 ### Q: **True or False:** In a K-fold CV approach, the testing set is completely excluded from the process and only the training and validation sets are involved in this approach.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -499,20 +472,24 @@ ML model's performance degrade in production due to following reasons:
 
 ---
 
-
 ### Q: **True or False:** In a K-fold CV approach, the final test error is:
 
-$$CV_k = \frac{1}{k}\sum_{i=1}^{k}MSE_i$$
+$$
+CV_k = \frac{1}{k}\sum_{i=1}^{k}MSE_i
+$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-**True**, This is average of individual errors of $K$estimates of the test errors$$MSE_1,...,MSE_k$$
+**True**, This is average of individual errors of $K$ estimates of the test errors
+
+$$
+MSE_1,...,MSE_k
+$$
 
 </details>
 
 ---
-
 
 ### Q: Mark all the correct choices regarding a cross-validation approach:
 
@@ -530,7 +507,6 @@ $$CV_k = \frac{1}{k}\sum_{i=1}^{k}MSE_i$$
 
 ---
 
-
 ### Q: Mark all the correct choices regarding the approach that should be taken to compute the performance of K-fold cross-validation:
 
 1. We compute the cross-validation performance as the arithmetic mean over the K performance estimates from the validation sets.
@@ -545,9 +521,7 @@ Correct answer : We compute the cross-validation performance as the arithmetic m
 
 ---
 
-
 ### Q: A data-scientist who is interested in classifying cross sections of histopathology image slices decides to adopt a cross-validation approach he once read about in a book.
-
 
 <table align='center'>
   <tr>
@@ -569,7 +543,7 @@ Name the approach from the following options:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The correct answer is: 3-fold CV. A k-fold cross-validation is a special case of cross-validation where we iterate over a dataset set k times. In each round, we split the dataset into k parts: one part is used for validation, and the remaining $k − 1 $parts are merged into a training subset for model evaluation. 
+The correct answer is: 3-fold CV. A k-fold cross-validation is a special case of cross-validation where we iterate over a dataset set k times. In each round, we split the dataset into k parts: one part is used for validation, and the remaining $k − 1$ parts are merged into a training subset for model evaluation. 
 
 Stratification is used to balance the classes in the training and validation splits in cases where the corpus is imbalanced.
 
@@ -577,15 +551,14 @@ Stratification is used to balance the classes in the training and validation spl
 
 ---
 
-
 ### Q: 1. **True or false**: The leave-one-out cross-validation (LOOCV) approach is a sub-case of k-fold cross-validation wherein K equals N , the sample size.
 
-    1. **True or false**: It is always possible to find an optimal value $n$, $K = n$ in K-fold cross-validation.
+    1. **True or false**: It is always possible to find an optimal value $n$, $K = n$  in K-fold cross-validation.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **True**: leave-one-out cross-validation (LOOCV) is a special case of k-fold cross validation where $k$ise set equal to$n$
+1. **True**: leave-one-out cross-validation (LOOCV) is a special case of k-fold cross validation where $k$ise set equal to$n$ 
 
 2. **False**: There is no way of a-priori finding an optimal value for K, and the relationship between the actual sample size and the resulting accuracy is unknown.
 
@@ -593,9 +566,7 @@ Stratification is used to balance the classes in the training and validation spl
 
 ---
 
-
 ### Q: What is the main difference between RandomizedSearchCV and GridSearchCV?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -613,9 +584,7 @@ The main difference between **RandomizedSearchCV** and **GridSearchCV** lies in 
 
 ---
 
-
 ### Q: When would you prefer to use RandomizedSearchCV over GridSearchCV, and vice versa?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -627,23 +596,19 @@ The main difference between **RandomizedSearchCV** and **GridSearchCV** lies in 
 
 ---
 
-
 ### Q: What are the advantages of RandomizedSearchCV?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Efficiency**: Samples a fixed number of parameter settings, scaling linearly $O(k)$rather than exponentially$O(\prod m_i)$.
+1. **Efficiency**: Samples a fixed number of parameter settings, scaling linearly $O(k)$rather than exponentially$ O(\prod m_i)$.
 2. **Continuous Distributions**: Can sample from continuous parameter distributions (e.g., log-uniform) rather than static grids.
 
 </details>
 
 ---
 
-
 ### Q: What are the advantages of GridSearchCV?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -655,9 +620,7 @@ The main difference between **RandomizedSearchCV** and **GridSearchCV** lies in 
 
 ---
 
-
 ### Q: What is cross-validation in the context of hyperparameter tuning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -690,9 +653,7 @@ The hyperparameter configuration that yields the best average validation perform
 
 ---
 
-
 ### Q: Can you combine RandomizedSearchCV and GridSearchCV techniques for hyperparameter tuning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -704,7 +665,6 @@ The hyperparameter configuration that yields the best average validation perform
 
 ---
 
-
 ## Similarity Measures
 
 - Image, text similarity
@@ -713,9 +673,7 @@ The hyperparameter configuration that yields the best average validation perform
 - Min Hash
 ---
 
-
 ### Q: A data scientist extracts a feature vector from an image using a pre-trained ResNet34 CNN as follows
-
 
     ```python
     import torchvision.models as models
@@ -729,12 +687,12 @@ The hyperparameter configuration that yields the best average validation perform
 
     def xxx(arr):
         mod = 0.0
-        
+
         for i in arr:
             mod += i * i
-        
+
         mag = math.sqrt(mod)
-        
+
         for i in range(len(arr)):
             arr[i] /= mag
 
@@ -765,9 +723,7 @@ Name the algorithm that he used and explain in detail why he used it.
 
 ---
 
-
 ### Q: Further to the above, the scientist then applies the following algorithm:
-
 
 **Algo 1**
 
@@ -783,7 +739,7 @@ def algo2(v1, v2):
         mul += v1[i] * v2[i]
     if mul < 0:
         return 0
-    
+
     return mul
 ```
 1. Name the algorithm algo2 that he used and explain in detail what he used it for.
@@ -801,7 +757,6 @@ Name the measure.
 </details>
 
 ---
-
 
 ### Q: 1. What is the formulae for the Jaccard similarity of two sets?
 
@@ -834,24 +789,32 @@ Name the measure.
 
 ---
 
-
 ### Q: In this problem, you have to actually read 4 different papers, so you will probably not encounter such a question during an interview, however reading academic papers is an excellent skill to master for becoming a DL researcher.
-
 
 The Kullback-Leibler divergence is a meas- ure of how different two probability distribution are. As noted, the KL divergence of the probability distributions P, Q on a set X is defined as shown in Equation 8.11.
 
-$$D_{KL}(P \| Q) = \sum_{x \in X} P(x) \log\left(\frac{P(x)}{Q(x)}\right)$$
+$$
+D_{KL}(P \| Q) = \sum_{x \in X} P(x) \log\left(\frac{P(x)}{Q(x)}\right)
+$$
 
 Note however that since KL divergence is a non-symmetric information theoretical meas- ure of distance of P from Q, then it is not strictly a distance metric. During the past years, various KL based distance measures (rather than divergence based) have been introduced in the literature generalizing this measure.
 Name each of the following KL based distances:
 
-$$D_{KLD1}(P \| Q) = D_{KL}(P \| Q) + D_{KL}(Q \| P)$$
+$$
+D_{KLD1}(P \| Q) = D_{KL}(P \| Q) + D_{KL}(Q \| P)
+$$
 
-$$D_{KLD2}(P \| Q) = \sum_{x \in X} (P(x) - Q(x)) \log(P(x))$$
+$$
+D_{KLD2}(P \| Q) = \sum_{x \in X} (P(x) - Q(x)) \log(P(x))
+$$
 
-$$D_{KLD3}(P \| Q) = \frac{1}{2} [D_{KL}\left(Q\|\right(\frac{P+Q}{2})) +  D_{KL}\left(P\|\right(\frac{P+Q}{2})) ]$$
+$$
+D_{KLD3}(P \| Q) = \frac{1}{2} [D_{KL}\left(Q\|\right(\frac{P+Q}{2})) +  D_{KL}\left(P\|\right(\frac{P+Q}{2})) ]
+$$
 
-$$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))$$
+$$
+D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
+$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -863,12 +826,9 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
 ## Sampling Techniques and Creating Training Data
 
-
 ### Q: If you have 6 shirts and 4 pairs of pants, how many ways are there to choose 2 shirts and 1 pair of pants?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -880,9 +840,7 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
 ### Q: What is the difference between sampling with vs. without replacement? Name an example of when you would use one rather than the other?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -894,9 +852,7 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
 ### Q: Explain Markov chain Monte Carlo sampling.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -908,9 +864,7 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
 ### Q: If you need to sample from high-dimensional data, which sampling method would you choose?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -922,9 +876,7 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
 ### Q: Suppose we have a classification task with many classes. An example is when you have to predict the next word in a sentence -- the next word can be one of many, many possible words. If we have to calculate the probabilities for all classes, it’ll be prohibitively expensive. Instead, we can calculate the probabilities for a small set of candidate classes. This method is called candidate sampling. Name and explain some of the candidate sampling algorithms.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -936,39 +888,34 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
+### Q: Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$million unlabeled comments from$ 10K$users over the last$ 24$months and you want to label$ 100K$  of them.
 
-### Q: Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$million unlabeled comments from$10K$users over the last$24$months and you want to label$100K$ of them.
-
-    1. How would you sample $100K$ comments to label?
-    1. Suppose you get back $100K$labeled comments from$20$ annotators and you want to look at some labels to estimate the quality of the labels. How many labels would you look at? How would you sample them?
+    1. How would you sample $100K$  comments to label?
+    1. Suppose you get back $100K$labeled comments from$20$  annotators and you want to look at some labels to estimate the quality of the labels. How many labels would you look at? How would you sample them?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$million unlabeled comments from$10K$users over the last$24$months and you want to label$100K$ of them.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$million unlabeled comments from$ 10K$users over the last$ 24$months and you want to label$ 100K$  of them.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-
-### Q: Suppose you work for a news site that historically has translated only $1%$ of all its articles. Your coworker argues that we should translate more articles into Chinese because translations help with the readership. On average, your translated articles have twice as many views as your non-translated articles. What might be wrong with this argument?
-
+### Q: Suppose you work for a news site that historically has translated only $1%$  of all its articles. Your coworker argues that we should translate more articles into Chinese because translations help with the readership. On average, your translated articles have twice as many views as your non-translated articles. What might be wrong with this argument?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you work for a news site that historically has translated only $1%$ of all its articles. Your coworker argues that we should translate more articles into Chinese because translations help with the readership. On average, your translated articles have twice as many views as your non-translated articles. What might be wrong with this argument?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you work for a news site that historically has translated only $1%$  of all its articles. Your coworker argues that we should translate more articles into Chinese because translations help with the readership. On average, your translated articles have twice as many views as your non-translated articles. What might be wrong with this argument?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
-
 
 ### Q: How to determine whether two sets of samples (e.g. train and test splits) come from the same distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -980,9 +927,7 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
 ### Q: How do you know you’ve collected enough samples to train your ML model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -994,9 +939,7 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
 ### Q: How to determine outliers in your data samples? What to do with them?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1007,7 +950,6 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 </details>
 
 ---
-
 
 ### Q: Sample duplication
 
@@ -1024,8 +966,6 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
-
 ### Q: Missing data
 
 1. In your dataset, two out of 20 variables have more than 30% missing values. What would you do?
@@ -1041,10 +981,7 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
-
 ### Q: Why is randomization important when designing experiments (experimental design)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1056,13 +993,11 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
-
 ### Q: Class imbalance.
 
 1. How would class imbalance affect your model?
 1. Why is it hard for ML models to perform well on data with class imbalance?
-1. Imagine you want to build a model to detect skin legions from images. In your training dataset, only $1%$ of your images shows signs of legions. After training, your model seems to make a lot more false negatives than false positives. What are some of the techniques you'd use to improve your model?
+1. Imagine you want to build a model to detect skin legions from images. In your training dataset, only $1%$  of your images shows signs of legions. After training, your model seems to make a lot more false negatives than false positives. What are some of the techniques you'd use to improve your model?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1073,8 +1008,6 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 </details>
 
 ---
-
-
 
 ### Q: Training data leakage.
 
@@ -1091,10 +1024,7 @@ $$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 
 ---
 
-
-
 ### Q: How does data sparsity affect your models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1113,8 +1043,6 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 ---
 
-
-
 ### Q: Feature leakage
 
 1. What are some causes of feature leakage?
@@ -1131,10 +1059,7 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 ---
 
-
-
 ### Q: Suppose you want to build a model to classify whether a tweet spreads misinformation. You have 100K labeled tweets over the last 24 months. You decide to randomly shuffle on your data and pick 80% to be the train split, 10% to be the valid split, and 10% to be the test split. What might be the problem with this way of partitioning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1146,9 +1071,7 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 ---
 
-
 ### Q: Your model has been performing fairly well using just a subset of features available in your data. Your boss decided that you should use all the features available instead. What might happen to the training error? What might happen to the test error?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1160,10 +1083,7 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 ---
 
-
-
 ### Objective Functions and Performance Metrics
-
 
 ### Q: Convergence.
 
@@ -1180,10 +1100,7 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 ---
 
-
-
 ### Q: Draw the loss curves for overfitting and underfitting.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1195,9 +1112,7 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 ---
 
-
 ### Q: While working on a modeling use case, you notice that your model is underfitting. What steps would you take to address this issue?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1213,9 +1128,7 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 ---
 
-
 ### Q: While working on a modeling use case, you observe that your model is overfitting. What steps would you take to resolve this?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1232,7 +1145,6 @@ Data sparsity can negatively impact machine learning models in several ways:
 </details>
 
 ---
-
 
 ### Q: Bias-variance trade-off
 
@@ -1251,9 +1163,7 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 ---
 
-
 ### Q: What are the potential drawbacks of using the validation set approach for estimating the test error rate?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1268,8 +1178,6 @@ The validation set approach, while simple and easy to implement, has two main dr
 
 ---
 
-
-
 ### Q: Cross-validation.
 
 1. Explain different methods for cross-validation.
@@ -1279,10 +1187,14 @@ The validation set approach, while simple and easy to implement, has two main dr
 <summary><b>💡 Show Answer</b></summary>
 
 1. Different methods in cross-validation
-    
+
     *Leave-One-Out Cross-Validation(LOOCV)*
 
-    In this method a single observation $(x_1, y_1)$is used for the validation set, and the remaining observations${(x_2, y_2),...,(x_n, y_n)}$make up the training set. We then fit the model on the training set and calculate the error on validation set. Repeating this approach iteratively with different set of predictors$n$times and corresponding response yields$n$squared errors,$MSE_1,..,MSE_n$. The LOOCV estimate for the test MSE is the average of these $n$test error estimates:$$CV_{(n)} = \frac{1}{n}\sum_{i=1}^{n}MSE_i$$
+    In this method a single observation $(x_1, y_1)$is used for the validation set, and the remaining observations${(x_2, y_2),...,(x_n, y_n)}$make up the training set. We then fit the model on the training set and calculate the error on validation set. Repeating this approach iteratively with different set of predictors$ n$times and corresponding response yields$ n$squared errors,$ MSE_1,..,MSE_n$. The LOOCV estimate for the test MSE is the average of these $n$test error estimates:
+
+$$
+CV_{(n)} = \frac{1}{n}\sum_{i=1}^{n}MSE_i
+$$
 
     <table align='center'>
     <tr>
@@ -1297,9 +1209,11 @@ The validation set approach, while simple and easy to implement, has two main dr
 
     *k-Fold Cross-Validation*
 
-    This approach involves randomly dividing the set of observations into $k$groups, or folds, of approximately equal size. The first fold is treated as a validation set, and the method is fit on the remaining$k − 1$folds. The mean squared error,$MSE_1$, is then computed on the observations in the held-out fold. This procedure is repeated k times; each time, a different group of observations is treated as a validation set. This process results in $k$estimates of the test error,$MSE_1, MSE_2, . . . , MSE_k$. The k-fold CV estimate is computed by averaging these values.
+    This approach involves randomly dividing the set of observations into $k$groups, or folds, of approximately equal size. The first fold is treated as a validation set, and the method is fit on the remaining$k − 1$folds. The mean squared error,$ MSE_1$, is then computed on the observations in the held-out fold. This procedure is repeated k times; each time, a different group of observations is treated as a validation set. This process results in$k$estimates of the test error,$MSE_1, MSE_2, . . . , MSE_k$. The k-fold CV estimate is computed by averaging these values.
 
-    $$CV_{(k)} = \frac{1}{k}\sum_{i=1}^{k}MSE_i$$
+$$
+CV_{(k)} = \frac{1}{k}\sum_{i=1}^{k}MSE_i
+$$
 
     <table align='center'>
     <tr>
@@ -1313,7 +1227,7 @@ The validation set approach, while simple and easy to implement, has two main dr
     </table>
 
 2. Cross-validation is less prevalent on deep learning due to following reasons:
-    
+
     - Deep learning models are computationally expensive to train. Cross-validation involves training the model multiple times on different subsets of data, significantly increasing the overall training time. This can be prohibitive for large datasets and complex models. 
     - In neural networks we use different techniques such as dropout or early stopping to prevent overfitting instead of cross validation
 
@@ -1321,36 +1235,29 @@ The validation set approach, while simple and easy to implement, has two main dr
 
 ---
 
-
 ### Q: Is LOOCV a special case of k-fold CV?
-
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Yes, It is a special case of k-fold CV in which $k$is set to equal$n$
+Yes, It is a special case of k-fold CV in which $k$is set to equal$n$ 
 
 </details>
 
 ---
 
-
 ### Q: Explain the bias variance tradeoff with the choice of k in k-fold validation?
-
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-As we increase k, we reduces bias in the estimation of the test error. LOOCV ($k=n$) will give unbiased estimation of the test error. An performing k-fold CV for $k=5$or$k=10$will lead to an intermediate level of bias since each training set contains approximately$\frac{(k-1)n}{k}$ observations which is fewer than in the LOOCV approach. 
+As we increase k, we reduces bias in the estimation of the test error. LOOCV ($k=n$) will give unbiased estimation of the test error. An performing k-fold CV for $k=5$or$k=10$will lead to an intermediate level of bias since each training set contains approximately$\frac{(k-1)n}{k}$  observations which is fewer than in the LOOCV approach. 
 
 On variance side, LOOCV has higher variance than does k-fold CV for $k<n$. When we perform LOOCV, we are in effect averaging the outputs of $n$fitted models, each of which is trained on an almost identical set of observations; therefore, these outputs are highly (positively) correlated with each other. In contrast, when we perform k-fold CV with$k < n$, we are averaging the outputs of k fitted models that are somewhat less correlated with each other, since the overlap between the training sets in each model is smaller. Since the mean of many highly correlated quantities has higher variance than does the mean of many quantities that are not as highly correlated, the test error estimate resulting from LOOCV tends to have higher variance than does the test error estimate resulting from k-fold CV.
 
 </details>
 
 ---
-
 
 ### Q: Train, valid, test splits.
 
@@ -1365,7 +1272,7 @@ On variance side, LOOCV has higher variance than does k-fold CV for $k<n$. When 
 1. Training and testing a model on the same data is problematic because it leads to overfitting and gives a misleading estimate of the model's performance.
 
 2. We need validation set for following reasons:
-    
+
     - Hyper-parameter tuning
     - Model Selection
     - To get good estimate of test error(prevents over-fitting to test set)
@@ -1376,9 +1283,7 @@ On variance side, LOOCV has higher variance than does k-fold CV for $k<n$. When 
 
 ---
 
-
 ## Feature Engineering
-
 
 ### Q: Feature selection.
 
@@ -1395,19 +1300,29 @@ On variance side, LOOCV has higher variance than does k-fold CV for $k<n$. When 
 
 ---
 
-
-
 ### Q: Is feature scaling necessary for kernel methods?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Yes, All kernel methods are based on distance. For example the RBF kernel function is
 
-$$K(u, v) = \exp(-\gamma||u - v||^2)$$Given$3$feature vectors:$$x_1 = [1000, 1, 2], \hspace{1em} x_2 = [900, 1, 2], \hspace{1em} x_3 = [1050, -10, 20]$$then for$\gamma = 1$, $\hspace{0.5em}$ $K(x_1, x_2) = \exp(-10000) \ll K(x_1, x_3) = \exp(-2095)$, that is $x_1$is supposedly more similar to$x_3$than to$x_2$.
+$$
+K(u, v) = \exp(-\gamma||u - v||^2)
+$$
+Given $3$  feature vectors:
 
-The relative distance between $x_1$and:$$x_2 \rightarrow [0.1, 0, 0], \hspace{0.5em} x_3 \rightarrow [0.05, -10, 10]$$So without scaling, we conclude that$x_1$s more similar to$x_3$than to$x_2$, even though the relative differences per feature between $x_1$and$x_3$are much larger than those of$x_1$and$x_2$.
+$$
+x_1 = [1000, 1, 2], \hspace{1em} x_2 = [900, 1, 2], \hspace{1em} x_3 = [1050, -10, 20]
+$$
+
+then for $\gamma = 1$,$\hspace{0.5em}$$K(x_1, x_2) = \exp(-10000) \ll K(x_1, x_3) = \exp(-2095)$, that is $ x_1 $is supposedly more similar to $ x_3 $than to $ x_2 $.
+
+The relative distance between $x_1$  and:
+
+$$
+x_2 \rightarrow [0.1, 0, 0], \hspace{0.5em} x_3 \rightarrow [0.05, -10, 10]
+$$So without scaling, we conclude that$x_1$s more similar to$x_3$than to$x_2$, even though the relative differences per feature between$x_1$and$x_3$are much larger than those of$x_1$and$x_2$.
 
 If we don't scale all features to comparable ranges, the features with largest range will completely dominate the computation of kernel matrix.
 
@@ -1415,10 +1330,7 @@ If we don't scale all features to comparable ranges, the features with largest r
 
 ---
 
-
-
 ### Q: What are the different types of feature selection techniques?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1430,13 +1342,9 @@ If we don't scale all features to comparable ranges, the features with largest r
 
 ---
 
-
-
 ## Bias and Variance
 
-
 ### Q: Explain Bias and Variance?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1448,10 +1356,7 @@ If we don't scale all features to comparable ranges, the features with largest r
 
 ---
 
-
-
 ### Q: Why is the bias-variance tradeoff important in machine learning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1463,10 +1368,7 @@ If we don't scale all features to comparable ranges, the features with largest r
 
 ---
 
-
-
 ### Q: How can you tell if your model has a high bias or high variance problem?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1478,10 +1380,7 @@ If we don't scale all features to comparable ranges, the features with largest r
 
 ---
 
-
-
 ### Q: What are some techniques to reduce bias in a model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1493,10 +1392,7 @@ If we don't scale all features to comparable ranges, the features with largest r
 
 ---
 
-
-
 ### Q: What are some techniques to reduce variance in a model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1508,10 +1404,7 @@ If we don't scale all features to comparable ranges, the features with largest r
 
 ---
 
-
-
 ### Q: Can you explain cross-validation's role in addressing the bias-variance tradeoff?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1523,10 +1416,7 @@ If we don't scale all features to comparable ranges, the features with largest r
 
 ---
 
-
-
 ### Q: Is it always better to reduce bias and variance simultaneously?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>

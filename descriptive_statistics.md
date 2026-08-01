@@ -1,9 +1,9 @@
-# Data Science Interview Questions And Answers
+# Descriptive Statistics
 
-## Descriptive Statistics
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-Contents
-----
+
+## Table of Contents
 
 - [Basics](#basics)
 - [Examining Distribution - Univariate](#examining-distribution---univariate)
@@ -15,9 +15,7 @@ Contents
 
 ## Basics
 
-
 ### Q: What do you mean by Data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -28,9 +26,7 @@ Data are pieces of information about individuals organized into variables.
 
 ---
 
-
 ### Q: Define dataset.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -41,9 +37,7 @@ A dataset is a set of data identified with particular circumstances. Datasets ar
 
 ---
 
-
 ### Q: What are the two main types of variables?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -57,9 +51,7 @@ A dataset is a set of data identified with particular circumstances. Datasets ar
 
 ## Examining Distribution - Univariate
 
-
 ### Q: How can we summarize distribution of categorical variable?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -72,9 +64,7 @@ The distribution of a categorical variable is summarized using:
 
 ---
 
-
 ### Q: State some methods for visualizing the numerical summaries of categorical data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -87,9 +77,7 @@ The distribution of a categorical variable is summarized using:
 
 ---
 
-
 ### Q: State the difference between pie chart and bar chart?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -101,9 +89,7 @@ The distribution of a categorical variable is summarized using:
 
 ---
 
-
 ### Q: What are graphical methods to visualize the distribution of a quantitative variable?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -116,9 +102,7 @@ The distribution of a categorical variable is summarized using:
 
 ---
 
-
 ### Q: Define histogram?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -129,9 +113,7 @@ The histogram is a graphical display of the distribution of a quantitative varia
 
 ---
 
-
 ### Q: Write the steps of plotting histogram?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -147,9 +129,7 @@ The histogram is a graphical display of the distribution of a quantitative varia
 
 ---
 
-
 ### Q: How can we numerically summarize a distribution represented by histogram?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -166,9 +146,7 @@ We can using following features of the histogram to summarize it
 
 ---
 
-
 ### Q: What insights can be gained from examining the shape of a histogram?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -180,9 +158,7 @@ We can using following features of the histogram to summarize it
 
 ---
 
-
 ### Q: What is the difference between a unimodal, a bimodal and a multimodal histogram?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -206,9 +182,7 @@ We can using following features of the histogram to summarize it
 
 ---
 
-
 ### Q: State the modality of an uniform distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -219,9 +193,7 @@ Uniform distributions has no modes i.e no values around which observations are c
 
 ---
 
-
 ### Q: Under what conditions does a distribution become skewed to the right?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -232,9 +204,7 @@ A distribution is said to be skewed right (or positively skewed) when the right 
 
 ---
 
-
 ### Q: What does right skewed histogram indicates about the dataset?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -245,9 +215,7 @@ It indicates that the bulk of the data values are clustered towards the lower en
 
 ---
 
-
 ### Q: Can you draw a right skewed histogram?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -267,24 +235,22 @@ It indicates that the bulk of the data values are clustered towards the lower en
 
 ---
 
-
 ### Q: State the relationship between mean, median and mode in case of skewed right distributions?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 For a right-skewed distribution, the general order is:
 
-$$\text{Mode} < \text{Median} < \text{Mean}$$
+$$
+\text{Mode} < \text{Median} < \text{Mean}
+$$
 
 </details>
 
 ---
 
-
 ### Q: State a real-life scenario of a distribution which is skewed right?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -295,9 +261,7 @@ Salary of workers across industries. Most people earn in the low/medium range of
 
 ---
 
-
 ### Q: Under what conditions does a distribution become skewed to the left?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -308,9 +272,7 @@ A distribution is said to be skewed left (or negatively skewed) when the left ta
 
 ---
 
-
 ### Q: What does left skewed histogram indicates about the dataset?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -321,9 +283,7 @@ It indicates that the bulk of the data values are clustered towards the higher e
 
 ---
 
-
 ### Q: Can you draw a left skewed histogram?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -343,39 +303,37 @@ It indicates that the bulk of the data values are clustered towards the higher e
 
 ---
 
-
 ### Q: State the relationship between mean, median and mode in case of skewed left distributions?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 For a left-skewed distribution, the general order is:
 
-$$\text{Mode} > \text{Median} > \text{Mean}$$
+$$
+\text{Mode} > \text{Median} > \text{Mean}
+$$
 
 </details>
 
 ---
-
 
 ### Q: State the relationship between mean, median and mode in case of symmetric distributions?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 For a left-skewed distribution, the general order is:
 
-$$\text{Mode} ~ \text{Median} ~ \text{Mean}$$
+$$
+\text{Mode} ~ \text{Median} ~ \text{Mean}
+$$
 
 </details>
 
 ---
 
-
 ### Q: State a real-life scenario of a distribution which is skewed left?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -386,9 +344,7 @@ An example of a real life variable that has a skewed left distribution is age of
 
 ---
 
-
 ### Q: What is a stemplot? What are benefits of using it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -404,9 +360,7 @@ Benefits of using it:
 
 ---
 
-
 ### Q: State the main numerical measures of center of a quantitative variable distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -420,9 +374,7 @@ The three main numerical measures for the center of a distribution are:
 
 ---
 
-
 ### Q: What is mode of a distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -433,25 +385,22 @@ Mode is the most commonly occurring value in a distribution.
 
 ---
 
-
-
 ### Q: What is mean of a distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The mean is the average of a set of observations (i.e., the sum of the observations divided by the number of observations). If the n observations are $x_1, x_2,..,x_n$their mean, which we denote by$\bar{x}$
+The mean is the average of a set of observations (i.e., the sum of the observations divided by the number of observations). If the n observations are $x_1, x_2,..,x_n$their mean, which we denote by$\bar{x}$ 
 
-$$\bar{x} = \frac{x_1 + x_2 + ... + x_n}{n}$$
+$$
+\bar{x} = \frac{x_1 + x_2 + ... + x_n}{n}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What is median of a distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -462,9 +411,7 @@ The median M is the midpoint of the distribution. It is the number such that hal
 
 ---
 
-
 ### Q: How can we calculate median of a distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -473,17 +420,15 @@ To find the median:
 
 - Order the data from smallest to largest.
 - Consider whether $n$, the number of observations, is even or odd.
-   - If $n$is odd, the median$M$is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$ spot in the ordered list.
-   - If $n$is even, the median$M$is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2$and$n/2 + 1$ spots in the ordered list.
+   - If $n$is odd, the median$M$is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$  spot in the ordered list.
+   - If $n$is even, the median$M$is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2$and$ n/2 + 1$  spots in the ordered list.
 
 </details>
 
 ---
-
 
 ### Q: How can we calculate median of a distribution? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -491,16 +436,14 @@ To find the median:
 
 - Order the data from smallest to largest.
 - Consider whether $n$, the number of observations, is even or odd.
-   - If $n$is odd, the median$M$is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$ spot in the ordered list.
-   - If $n$is even, the median$M$is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2$and$n/2 + 1$ spots in the ordered list.
+   - If $n$is odd, the median$M$is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$  spot in the ordered list.
+   - If $n$is even, the median$M$is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2$and$ n/2 + 1$  spots in the ordered list.
 
 </details>
 
 ---
 
-
 ### Q: State the main difference between mean and median?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -511,9 +454,7 @@ The mean is very sensitive to outliers (because it factors in their magnitude), 
 
 ---
 
-
 ### Q: How can we decide which measure should we choose as center of distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -524,9 +465,7 @@ The mean is an appropriate measure of center only for symmetric distributions wi
 
 ---
 
-
 ### Q: What are commonly used measures of spread?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -539,29 +478,27 @@ The mean is an appropriate measure of center only for symmetric distributions wi
 
 ---
 
-
 ### Q: What do you mean by range of a distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The range covered by the data is the most intuitive measure of variability. The range is exactly the distance between the smallest data point (min) and the largest one (Max).
 
-$$\text{Range} = \text{Max} - \text{Min}$$
+$$
+\text{Range} = \text{Max} - \text{Min}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What is IQR? How can we calculate it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-IQR measures the variability of a distribution by giving us the range covered by the middle $50%$ of the data.
+IQR measures the variability of a distribution by giving us the range covered by the middle $50%$  of the data.
 
 <table align='center'>
 <tr>
@@ -578,11 +515,13 @@ IQR calculations:
 
 - Arrange the data in increasing order, and find the median M. Recall that the median divides the data, so that 50% of the data points are below the median, and 50% of the data points are above the median.
 
-- Find the median of the lower 50% of the data($Q1$) and upper 50% of the data $Q3$.
+- Find the median of the lower 50% of the data($Q1$) and upper 50% of the data$Q3$.
 
-- The middle 50% of the data falls between $Q1$and$Q3$, and therefore:
+- The middle 50% of the data falls between $Q1$and$ Q3$, and therefore:
 
-$$\text{IQR} = Q3 - Q1$$
+$$
+\text{IQR} = Q3 - Q1
+$$
 
 <table align='center'>
 <tr>
@@ -599,16 +538,14 @@ $$\text{IQR} = Q3 - Q1$$
 
 ---
 
-
 ### Q: Can we use IQR to detect outliers?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Yes, we can use IQR as basis for a rule of thumb for identifying outliers. 
 
-It is $1.5(IQR)$ criteria for outliers. An observation is considered a suspected outlier if it is:
+It is $1.5(IQR)$  criteria for outliers. An observation is considered a suspected outlier if it is:
 
 - below Q1 - 1.5(IQR) or
 - above Q3 + 1.5(IQR)
@@ -628,9 +565,7 @@ It is $1.5(IQR)$ criteria for outliers. An observation is considered a suspected
 
 ---
 
-
 ### Q: How to deal with outliers in the data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -644,9 +579,7 @@ We can handle outliers with following approach:
 
 ---
 
-
 ### Q: What are the five-number summary statistics of a distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -657,9 +590,7 @@ The five-number summary of a distribution consists of the median (M), the two qu
 
 ---
 
-
 ### Q: What is a box-plot?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -681,9 +612,7 @@ The boxplot graphically represents the distribution of a quantitative variable b
 
 ---
 
-
 ### Q: State one benefit of using box-plot?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -694,29 +623,27 @@ Boxplots are most useful when presented side-by-side to compare and contrast dis
 
 ---
 
-
 ### Q: What does the standard deviation represent in a distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-standard deviation quantifies the spread of a distribution by measuring how far the observations are from their mean $\bar{x}$. The standard deviation gives the average (or typical distance) between a data point and the mean $\bar{x}$.
+standard deviation quantifies the spread of a distribution by measuring how far the observations are from their mean $\bar{x}$. The standard deviation gives the average (or typical distance) between a data point and the mean$\bar{x}$.
 
-$$\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}$$
+$$
+\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}
+$$
 
 where:
-- $N$ is the number of observations in the population.
-- $x_i$ represents each individual observation.
-- $\mu$ is the mean of the population.
+- $N$  is the number of observations in the population.
+- $x_i$  represents each individual observation.
+- $\mu$  is the mean of the population.
 
 </details>
 
 ---
 
-
 ### Q: What is the benefit of using IQR over SD for measure of spread?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -727,50 +654,79 @@ The SD is strongly influenced by outliers in the data.
 
 ---
 
-
 ### Q: Given the array $[1,5,3,2,4,4]$, find its mean, median, variance, and standard deviation.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Given:
 
-$$arr = [1, 5, 3, 2, 4, 4]$$Sort the above series in ascending order:$$arr = [1, 2, 3, 4, 4, 5]$$
+$$
+arr = [1, 5, 3, 2, 4, 4]
+$$
+Sort the above series in ascending order:
+
+$$
+arr = [1, 2, 3, 4, 4, 5]
+$$
 
 <b>Mean($\bar{x}$)</b>
 
-$$\bar{x}= \frac{\sum_{i=1}^{n}arr}{n}$$Here number of elements(n) = 6$$\bar{x} = \frac{\sum_{i=1}^{6}arr}{6} = \frac{1+2+3+4+4+5}{6} = 3.166$$
+$$
+\bar{x}= \frac{\sum_{i=1}^{n}arr}{n}
+$$
+Here number of elements(n) = 6
+
+$$
+\bar{x} = \frac{\sum_{i=1}^{6}arr}{6} = \frac{1+2+3+4+4+5}{6} = 3.166
+$$
 
 <b>Median($M$)</b>
 
-Since $n$is even, we can use following expression:$$\text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}$$
-$$\text{M} = \frac{3+4}{2} = 3.5$$
+Since $n$ is even, we can use following expression:
+
+$$
+\text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
+$$
+
+$$
+\text{M} = \frac{3+4}{2} = 3.5
+$$
 
 <b>Variance($\sigma^2$)</b>
 
-$$\text{\sigma^2} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2$$
-$$\text{\sigma^2} = \frac{1}{6} \sum_{i=1}^{n} (x_i - 3.166)^2$$
-$$\text{\sigma^2} ≈ 1.47$$
+$$
+\text{\sigma^2} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+$$
+
+$$
+\text{\sigma^2} = \frac{1}{6} \sum_{i=1}^{n} (x_i - 3.166)^2
+$$
+
+$$
+\text{\sigma^2} ≈ 1.47
+$$
 
 <b>Standard deviation($\sigma$)</b>
 
-$$\text{\sigma} = \sqrt{variance} = \sqrt{1.47}$$
+$$
+\text{\sigma} = \sqrt{variance} = \sqrt{1.47}
+$$
 
-$$\text{\sigma} = 1.2124$$
+$$
+\text{\sigma} = 1.2124
+$$
 
 </details>
 
 ---
 
-
 ### Q: How do we determine which numerical summaries to use for describing a distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- Use $\bar{x}$(the mean) and the standard deviation$\sigma$ as measures of center and spread only for reasonably symmetric distributions with no outliers.
+- Use $\bar{x}$(the mean) and the standard deviation$\sigma$  as measures of center and spread only for reasonably symmetric distributions with no outliers.
 
 - Use the five-number summary (which gives the median, IQR and range) for all other cases.
 
@@ -778,17 +734,15 @@ $$\text{\sigma} = 1.2124$$
 
 ---
 
-
 ### Q: State standard deviation rule?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 For distributions having bell shaped (also known as the normal shape), the following rule applies:
-- Approximately $68%$ of the observations fall within 1 standard deviation of the mean.
-- Approximately $95%$ of the observations fall within 2 standard deviations of the mean.
-- Approximately $99.7%$(or virtually all) of the observations fall within$3$ standard deviations of the mean.
+- Approximately $68%$  of the observations fall within 1 standard deviation of the mean.
+- Approximately $95%$  of the observations fall within 2 standard deviations of the mean.
+- Approximately $99.7%$(or virtually all) of the observations fall within$3$  standard deviations of the mean.
 
 <table align='center'>
 <tr>
@@ -807,9 +761,7 @@ For distributions having bell shaped (also known as the normal shape), the follo
 
 ## Examining Relationships - Multivariate
 
-
 ### Q: Define explanatory and response variable?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -821,9 +773,7 @@ For distributions having bell shaped (also known as the normal shape), the follo
 
 --- 
 
-
 ### Q: How can we examine the relationship between a categorical explanatory variable and quantitative response variable?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -837,9 +787,7 @@ We can use following techniques:
 
 ---
 
-
 ### Q: How can we examine the relationship between a categorical explanatory variable and categorical response variable?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -852,9 +800,7 @@ The relationship between two categorical variables is summarized using
 
 ---
 
-
 ### Q: How can we examine the relationship between a numerical explanatory variable and numerical response variable?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -876,9 +822,7 @@ The relationship between two quantitative variables is visually displayed using 
 
 ---
 
-
 ### Q: What is Simpsons Paradox?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -889,9 +833,7 @@ Simpsons Paradox is a statistical phenomenon that occurs when you combine subgro
 
 ---
 
-
 ### Q: Why Does Simpson’s Paradox Occur?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -901,8 +843,6 @@ Simpson’s Paradox occurs because a third variable can affect the relationship 
 </details>
 
 ---
-
-
 
 ## Sampling
 

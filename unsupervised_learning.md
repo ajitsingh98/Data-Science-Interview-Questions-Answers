@@ -1,9 +1,10 @@
-# Data Science Interview Questions And Answers
+# Unsupervised Learning
 
-## Unsupervised Learning
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-Contents
----
+
+## Table of Contents
+
 - [General Concepts](#general-concepts)
 - [Association Mining](#association-mining)
 - [Clustering](#clustering)
@@ -15,23 +16,18 @@ Contents
 
 ## General Concepts
 
-
 ### Q: What is unsupervised learning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-It is a set of statistical tools intended for the setting in which we have only a set of features $X1, X2, . . . , Xp$measured on$n$observations. We are not interested in prediction, because we do not have an associated response variable$Y$. Rather, the goal is to discover interesting patterns in the measurements on $X1, X2, . . . , X_p$
+It is a set of statistical tools intended for the setting in which we have only a set of features $X1, X2, . . . , Xp$measured on$n$observations. We are not interested in prediction, because we do not have an associated response variable$Y$. Rather, the goal is to discover interesting patterns in the measurements on $X1, X2, . . . , X_p$ 
 
 </details>
 
 ---
 
-
 ### Q: Name some scenarios where we can use unsupervised learning algorithms?
-
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -46,17 +42,13 @@ We can use unsupervised learning in following use-cases:
 
 ---
 
-
-
 ## Association Mining
 
 ---
 
 ## Clustering
 
-
 ### Q: What do you mean by clustering?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -67,9 +59,7 @@ Clustering refers to a very broad set of techniques for finding subgroups, or cl
 
 ---
 
-
 ### Q: What is the main difference between clustering and PCA?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -83,22 +73,18 @@ Although both clustering and PCA seeks to simplify the data via a small number o
 
 ---
 
-
-### Q: What is the role of the $K$ in K-means?
-
+### Q: What is the role of the $K$  in K-means?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$K$ is a hyperparameter that decides number of clusters we want from the model to find in the underlying data.
+$K$  is a hyperparameter that decides number of clusters we want from the model to find in the underlying data.
 
 </details>
 
 ---
 
-
 ### Q: What are the advantages of K-means clustering?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -115,8 +101,6 @@ K-means clustering offers several key advantages:
 
 ---
 
-
-
 ### Q: K-means clustering:
 
 1. How would you choose the value of k?
@@ -128,19 +112,19 @@ K-means clustering offers several key advantages:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. We can use following methods to get the optimal value $K$
+1. We can use following methods to get the optimal value $K$ 
 
     - **Elbow Method**:
         - Plot the sum of squared distances from each point to its assigned cluster centroid (known as the Within-Cluster Sum of Squares or WCSS) against the number of clusters $K$.
-        - As $K$increases, WCSS decreases. The idea is to choose the value of$K$at the "elbow" point where the rate of decrease sharply slows down. This indicates diminishing returns and is a good trade-off between reducing WCSS and keeping$K$ manageable.
+        - As $K$increases, WCSS decreases. The idea is to choose the value of$K$at the "elbow" point where the rate of decrease sharply slows down. This indicates diminishing returns and is a good trade-off between reducing WCSS and keeping$K$  manageable.
 
     - **Silhouette Score**:
         - Calculate the silhouette score for different values of $K$. The silhouette score measures how similar a data point is to its own cluster compared to other clusters.
-        - The value of $K$ that maximizes the average silhouette score across all data points is typically considered optimal.
+        - The value of $K$  that maximizes the average silhouette score across all data points is typically considered optimal.
 
     - **Cross-Validation**:
         - Split the data into training and validation sets, perform K-means clustering on the training set for different values of $K$, and evaluate the clustering performance on the validation set.
-        - Choose the $K$ that gives the best performance on the validation set.
+        - Choose the $K$  that gives the best performance on the validation set.
 
 2.
 
@@ -148,10 +132,7 @@ K-means clustering offers several key advantages:
 
 ---
 
-
-
 ### Q: What are the limitations of K-means clustering?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -174,10 +155,7 @@ K-means clustering suffers from following limitations:
 
 ---
 
-
-
 ### Q: How do you initialize the centroids in K-means?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -186,7 +164,7 @@ Initializing centroid plays crucial role in model's performance and can impact q
 
 - Random Initialization
 
-    - Select $k$ data points randomly from the dataset as initial centroid
+    - Select $k$  data points randomly from the dataset as initial centroid
     - It may lead to suboptimal clustering or slow convergence 
 
 - K-means++ Initialization
@@ -199,9 +177,7 @@ Initializing centroid plays crucial role in model's performance and can impact q
 
 ---
 
-
 ### Q: Why is it important to run the K-means algorithm multiple times with different initial cluster assignments, and how is the best solution selected?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -225,23 +201,22 @@ To select the best solution, compare the objective values (within-cluster sum of
 
 ---
 
-
 ### Q: What does within-cluster variation depicts?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The *within-cluster variation* for cluster $C_k$is a measure$W(C_k)$of the amount by which the observations within a cluster differ from each other.$$W(C_k) = \frac{1}{|C_k|}\sum_{i, i'\epsilon C_k}\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2$$
+The *within-cluster variation* for cluster $C_k$is a measure$W(C_k)$  of the amount by which the observations within a cluster differ from each other.
+
+$$
+W(C_k) = \frac{1}{|C_k|}\sum_{i, i'\epsilon C_k}\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2
+$$
 
 </details>
 
 ---
 
-
-
 ### Q: What is the convergence criteria in K-means?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -259,9 +234,7 @@ These criteria ensure the algorithm stops when clusters are stable and further i
 
 ---
 
-
 ### Q: What is Silhouette score, and How do we calculate it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -274,36 +247,50 @@ We can calculate it using following expressions:
 
     - For a given data point $i$, compute the average distance of all other points within the same cluster.
 
-    $$a(i) = \frac{1}{|C_i| - 1}\sum_{j\epsilon C,j!=i}d(i, j)$$where,$C_i$is the cluster to which point$i$belongs, and$d(i, j)$is the distance between$i$and$j$.
+$$
+a(i) = \frac{1}{|C_i| - 1}\sum_{j\epsilon C,j!=i}d(i, j)
+$$
+
+where, $C_i$is the cluster to which point$i$belongs, and$d(i, j)$is the distance between$i$and$j$.
 
 2. Find average nearest cluster distance 
     - For the same data point $i$, compute the average distance to all points in the nearest neighboring cluster.
 
-    $$b(i) = \min_{C \ne C_i}(\frac{1}{|C|}\sum_{j \epsilon C}d(i, j))$$where,$C$is a cluster different from$C_i$and$d(i, j)$is the distance between points$i$and$j$ in the nearest cluster.
+$$
+b(i) = \min_{C \ne C_i}(\frac{1}{|C|}\sum_{j \epsilon C}d(i, j))
+$$
+
+where, $C$is a cluster different from$C_i$and$d(i, j)$is the distance between points$i$and$j$  in the nearest cluster.
 
 3. Compute Silhouette score for each data point
 
-    - Calculate the Silhouette score for each data point $i$using values of$a(i)$and$b(i)$ $$s(i) = \frac{b(i) - a(i)}{max(a(i),b(i))}$$
+    - Calculate the Silhouette score for each data point $i$using values of$a(i)$and$ b(i)$
+
+$$
+s(i) = \frac{b(i) - a(i)}{max(a(i),b(i))}
+$$
 
     - Note the score ranges from -1 to 1
-        
-        - $-1$ means data point is misclassified 
-        - $0$ means data point is on or very close to the decision boundary between two neighboring clusters
-        - $1$ means data point is well clustered   
+
+        - $-1$  means data point is misclassified 
+        - $0$  means data point is on or very close to the decision boundary between two neighboring clusters
+        - $1$  means data point is well clustered   
 
 4. Calculate average Silhouette score
 
     - Calculate average silhouette score across all data points to get measure of overall cluster quality
 
-    $$ \text{Average Silhouette Score} = \frac{1}{n} \sum_{i=1}^{n}s(i)$$where$n$ is the number of data points.
+$$
+\text{Average Silhouette Score} = \frac{1}{n} \sum_{i=1}^{n}s(i)
+$$
+
+where $n$  is the number of data points.
 
 </details>
 
 ---
 
-
 ### Q: What are some applications of K-means clustering?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -319,10 +306,7 @@ Here are some application of K-Means clustering:
 
 ---
 
-
-
 ### Q: Can K-means handle categorical data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -335,10 +319,7 @@ We can use a variation of K-means called K-modes. It uses *Hamming distance* as 
 
 ---
 
-
-
 ### Q: How do you evaluate the quality of K-means clusters?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -352,26 +333,22 @@ We can use following metrics to evaluate the K-means clusters:
 
 ---
 
-
 ### Q: k-means and GMM are both powerful clustering algorithms.
 
 1. Compare the two.
 1. When would you choose one over another?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 - **K-Means**: Hard clustering assigning points to nearest centroid using Euclidean distance. Assumes spherical, equal-variance clusters.
-- **GMM (Gaussian Mixture Model)**: Soft probabilistic clustering assigning posterior membership probabilities $P(k|x_i)$ via Expectation-Maximization (EM). Models elliptical clusters with arbitrary covariance matrices.
+- **GMM (Gaussian Mixture Model)**: Soft probabilistic clustering assigning posterior membership probabilities $P(k|x_i)$  via Expectation-Maximization (EM). Models elliptical clusters with arbitrary covariance matrices.
 
 </details>
 
 ---
 
-
 ### Q: What are the key parameters in DBSCAN, and what do they represent?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -383,9 +360,7 @@ We can use following metrics to evaluate the K-means clusters:
 
 ---
 
-
 ### Q: What is the difference between core points, border points, and noise points in DBSCAN?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -398,9 +373,7 @@ We can use following metrics to evaluate the K-means clusters:
 
 ---
 
-
 ### Q: How does DBSCAN handle clusters of different shapes?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -411,27 +384,22 @@ We can use following metrics to evaluate the K-means clusters:
 
 ---
 
-
 ### Q: What are the advantages of using DBSCAN over other clustering algorithms, such as K-means?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 1. **Arbitrary Cluster Shapes**: Does not assume spherical clusters like K-Means.
-2. **No Prior $K$ Required**: Automatically determines cluster count based on local density.
+2. **No Prior $K$  Required**: Automatically determines cluster count based on local density.
 3. **Robust Outlier Handling**: Explicitly identifies noise points rather than forcing outliers into clusters.
 
 </details>
-
 
 ---
 
 ## Dimensionality Reduction
 
-
 ### Q: Why do we need dimensionality reduction?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -447,9 +415,7 @@ We may need dimensionality reduction for following reasons:
 
 ---
 
-
 ### Q: List down the two main approaches for dimensionality reduction?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -464,9 +430,7 @@ Dimensionality reduction can be achieved through two main approaches:
 
 ---
 
-
 ### Q: What are some linear techniques of dimensionality reduction?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -482,9 +446,7 @@ We can use following linear feature extraction techniques that can transform the
 
 ---
 
-
 ### Q: What is the benefit of using linear methods for dimensionality reduction?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -496,11 +458,9 @@ We can use following linear feature extraction techniques that can transform the
 </details>
 
 ---
-
 
 ### Q: What is the benefit of using linear methods for dimensionality reduction? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -512,9 +472,7 @@ We can use following linear feature extraction techniques that can transform the
 
 ---
 
-
 ### Q: What are the drawbacks of using linear methods for dimensionality reduction?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -528,9 +486,7 @@ We can use following linear feature extraction techniques that can transform the
 
 ---
 
-
 ### Q: What are the benefits of using nonlinear methods in dimensionality reduction?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -544,9 +500,7 @@ We can use following linear feature extraction techniques that can transform the
 
 ---
 
-
 ### Q: What are some non-linear techniques of dimensionality reduction?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -565,9 +519,7 @@ Deep learning technique:
 
 ---
 
-
 ### Q: Eigen decomposition is a common factorization technique used for dimensionality reduction. Is the eigen decomposition of a matrix always unique?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -579,10 +531,7 @@ Deep learning technique:
 
 ---
 
-
-
 ### Q: Name some applications of eigenvalues and eigenvectors.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -594,10 +543,7 @@ Deep learning technique:
 
 ---
 
-
-
-### Q: We want to do PCA on a dataset of multiple features in different ranges. For example, one is in the range $0-1$and one is in the range$10 - 1000$. Will PCA work on this dataset?
-
+### Q: We want to do PCA on a dataset of multiple features in different ranges. For example, one is in the range $0-1$and one is in the range$ 10 - 1000$. Will PCA work on this dataset?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -623,8 +569,6 @@ It is important to scale the data points such that they are centered to have mea
 
 ---
 
-
-
 ### Q: Under what conditions can one apply eigen decomposition? What about SVD?
 
 1. What is the relationship between SVD and eigen decomposition?
@@ -640,23 +584,19 @@ It is important to scale the data points such that they are centered to have mea
 
 ---
 
-
-### Q: How does $t-SNE$ (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?
-
+### Q: How does $t-SNE$  (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `How does $t-SNE$ (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `How does $t-SNE$  (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-
 ### Q: Is it good to use PCA as a feature selection method?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -667,9 +607,7 @@ No, PCA is not a good way to do feature selection as it does not consider respon
 
 ---
 
-
 ### Q: Is PCA a linear model or non-linear model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -680,9 +618,7 @@ PCA is a linear model. Because, PCA works by finding new axes (principal compone
 
 ---
 
-
 ### Q: What is the importance of eigenvalues and eigenvectors in PCA?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -694,9 +630,7 @@ PCA is a linear model. Because, PCA works by finding new axes (principal compone
 
 ---
 
-
 ### Q: How do you decide the number of principal components to retain in PCA?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -733,16 +667,13 @@ Certainly! Here are the main points summarized:
 </tr>
 </table>
 
-
 4. **Cross-Validation:** Select components that optimize the performance of a predictive model through cross-validation if we are using PCA as a feature extraction tool.
 
 </details>
 
 ---
 
-
 ### Q: What is the difference between PCA and Linear Discriminant Analysis (LDA)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -755,9 +686,7 @@ Certainly! Here are the main points summarized:
 
 ---
 
-
 ### Q: What are the limitations of PCA?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -776,9 +705,7 @@ Here are main limitations of PCA:
 
 ---
 
-
 ### Q: Explain the concept of whitening in PCA.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -802,7 +729,6 @@ Whitening has two simple steps:
 
 ## Recommendation Engines
 
-
 ### Q: Given this directed graph.
 
     ![image](img/dag.png)
@@ -820,9 +746,7 @@ Whitening has two simple steps:
 
 ---
 
-
 ### Q: What is a recommendation system?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -833,9 +757,7 @@ A recommendation system is a subclass of information filtering system that seeks
 
 ---
 
-
 ### Q: What is the importance of recommendation system?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -850,9 +772,7 @@ A good recommendation system can help in
 
 ---
 
-
 ### Q: Define Items, Queries and Embedding in context of recommendation system?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -871,9 +791,7 @@ A good recommendation system can help in
 
 ---
 
-
 ### Q: What are the main components of a recommendation system?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -887,9 +805,7 @@ Recommendation systems consists of the following components:
 
 ---
 
-
 ### Q: What is candidate generation in a recommendation system, and what are the main approaches to accomplish it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -904,9 +820,7 @@ There are two main approaches in candidate generation:
 
 ---
 
-
 ### Q: How do content-based and collaborative filtering methods utilize embedding spaces to represent items and queries?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -917,23 +831,19 @@ Both content-based and collaborative filtering techniques employ embedding space
 
 ---
 
-
 ### Q: Define similarity measures in context of recommendation system?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-A similarity measures is a function $s : E \times E \rightarrow \mathbf{R}$ that takes a pair of embeddings and returns a scaler measuring their similarity. The embeddings can be used candidate generation as follows:
-- Given a query embedding $q \in E$- System looks for item embeddings$x \in E$that are close to$q$- Get the embeddings with high similarity$s(q, x)$
+A similarity measures is a function $s : E \times E \rightarrow \mathbf{R}$  that takes a pair of embeddings and returns a scaler measuring their similarity. The embeddings can be used candidate generation as follows:
+- Given a query embedding $q \in E$- System looks for item embeddings$x \in E$ that are close to$q$- Get the embeddings with high similarity$s(q, x)$ 
 
 </details>
 
 ---
 
-
 ### Q: What are different methods to measure degree of similarity?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -942,23 +852,21 @@ To determine the degree of similarity, most recommendation systems rely on one o
 
 *Cosine*
 
-This is simply the cosine angle between two vectors, $s(q, x) = cos(q, x)$
+This is simply the cosine angle between two vectors, $s(q, x) = cos(q, x)$ 
 
 *Dot product*
 
-The dot product of two vectors is $s(q, x) = <q, x> = \sum_{i=1}^{d}q_{i}x_{i}$. It is also given by $s(q, x) = ||x|||q||cos(q, x)$. Thus, if the embeddings are normalized, then dot-product and cosine coincide.
+The dot product of two vectors is $s(q, x) = <q, x> = \sum_{i=1}^{d}q_{i}x_{i}$. It is also given by$s(q, x) = ||x|||q||cos(q, x)$. Thus, if the embeddings are normalized, then dot-product and cosine coincide.
 
 *Euclidean distance*
 
-Distance in euclidean space, $s(q, x) = ||q - x|| = [sum_{i=1}^{d}(q_i - x_i)^2]^{\frac{1}{2}}$. A smaller distance means higher similarity. Note that when the embeddings are normalized, the squared Euclidean distance coincides with dot-product (and cosine) up to a constant, since in that case $\frac{1}{2}||q-x||^2 = 1 - <q, x>$
+Distance in euclidean space, $s(q, x) = ||q - x|| = [sum_{i=1}^{d}(q_i - x_i)^2]^{\frac{1}{2}}$. A smaller distance means higher similarity. Note that when the embeddings are normalized, the squared Euclidean distance coincides with dot-product (and cosine) up to a constant, since in that case$\frac{1}{2}||q-x||^2 = 1 - <q, x>$ 
 
 </details>
 
 ---
 
-
 ### Q: How should one choose the appropriate similarity metric for candidate generation in recommendation systems?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -980,9 +888,7 @@ Choosing the right similarity metric for candidate generation in recommendation 
 
 ---
 
-
 ### Q: How can we utilize content-based filtering in the candidate generation process?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1004,9 +910,7 @@ Content-based filtering recommends items by analyzing item features and matching
 
 ---
 
-
 ### Q: State the advantages and disadvantages of content-based filtering?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1025,9 +929,7 @@ Content-based filtering recommends items by analyzing item features and matching
 
 ---
 
-
 ### Q: What is the cold start problem in recommendation systems, and how can you address it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1047,9 +949,7 @@ We can address cold start problem as follows
 
 ---
 
-
 ### Q: State explicit and implicit feedback with examples?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1061,9 +961,7 @@ We can address cold start problem as follows
 
 ---
 
-
 ### Q: How does collaborative filtering work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1086,9 +984,7 @@ This method focuses on the similarity between items, rather than users. It looks
 
 ---
 
-
 ### Q: What are the advantages and disadvantages of collaborative filtering?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1108,9 +1004,7 @@ This method focuses on the similarity between items, rather than users. It looks
 
 ---
 
-
 ### Q: How can user and item embeddings be learned using matrix factorization in collaborative filtering?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1152,9 +1046,7 @@ In collaborative filtering, user and item embeddings can be learned through matr
 
 ---
 
-
 ### Q: What is the issue with learning embeddings using matrix factorization?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1168,9 +1060,7 @@ Some limitations of matrix factorization include:
 
 ---
 
-
 ### Q: How can we use Deep Neural Network model for recommendation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1198,9 +1088,7 @@ Here the user query can be
 
 ---
 
-
 ### Q: What is the benefit of using matrix factorization to learn embeddings over softmax DNN?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1211,9 +1099,7 @@ Matrix factorization is usually the better choice for large corpora. It is easie
 
 ---
 
-
 ### Q: What is the benefit of using softmax DNN over matrix factorization for learning embeddings?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1224,9 +1110,7 @@ DNN models are preferable to matrix factorization for scoring because DNN models
 
 ---
 
-
 ### Q: What strategies can be employed to efficiently compute the nearest neighbors in the embedding space of a recommendation system, and how do they work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1249,9 +1133,7 @@ When dealing with large corpora in recommendation systems, finding the nearest n
 
 ---
 
-
 ### Q: Why should we avoid using candidate generators to rank items in a recommendation system, and what are the benefits of separating candidate generation from the ranking process?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1267,9 +1149,7 @@ While candidate generators compute a score (e.g., similarity in the embedding sp
 
 ---
 
-
 ### Q: How does the choice of scoring function affects the ranking of items and quality of recommendations?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1283,9 +1163,7 @@ The choice of scoring function can dramatically affect the ranking of items, and
 
 ---
 
-
 ### Q: What is the benefit of re-ranking in recommendation system?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1295,7 +1173,6 @@ Re-ranking is crucial because it allows for more personalized, context-aware, an
 </details>
 
 ---
-
 
 ### Q: Imagine we build a user-item collaborative filtering system to recommend to each user items similar to the items they’ve bought before.
 
@@ -1333,9 +1210,7 @@ Re-ranking is crucial because it allows for more personalized, context-aware, an
 
 ## Autoencoders
 
-
 ### Q: What is an autoencoder?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1344,9 +1219,8 @@ An autoencoder is a specific type of a neural network, which is mainly designed 
 
 The network maybe viewed as consisting of two parts:
 
-- Encoder function $h = f(x)$ and,
-- Decoder that produces a reconstruction $r = g(h)$
-
+- Encoder function $h = f(x)$  and,
+- Decoder that produces a reconstruction $r = g(h)$ 
 
 <table align='center'>
 <tr>
@@ -1363,9 +1237,7 @@ The network maybe viewed as consisting of two parts:
 
 ---
 
-
 ### Q: Is an autoencoder example of semi-supervised or self-supervised learning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1376,9 +1248,7 @@ True, It sort-of is supervised learning because we give the system explicit goal
 
 ---
 
-
 ### Q: Why do we need autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1391,9 +1261,7 @@ True, It sort-of is supervised learning because we give the system explicit goal
 
 ---
 
-
 ### Q: What is the expression of a linear autoencoder? Is it similar to PCA?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1402,7 +1270,14 @@ A simple linear autoencoder can be defined as follows:
 
 **Encoder:**
 
-$$h = f(x) = Wx + b$$**Decoder:**$$\hat{x} = g(h) = W^{*}h + c$$
+$$
+h = f(x) = Wx + b
+$$
+**Decoder:**
+
+$$
+\hat{x} = g(h) = W^{*}h + c
+$$
 
 where \( W \in \mathbb{R}^{K \times D} \), \( b \in \mathbb{R}^{K \times 1} \), \( W^* \in \mathbb{R}^{D \times K} \), and \( c \in \mathbb{R}^{D \times 1} \). 
 
@@ -1412,9 +1287,7 @@ If we learn the functions \( f \) and \( g \) to minimize the squared reconstruc
 
 ---
 
-
 ### Q: What are the common loss functions used in training autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1423,15 +1296,20 @@ The choice of loss function depends on the type of data being used:
 
 - **Continuous Input Data**: Mean Squared Error (MSE) is typically used to measure the reconstruction error.
 
-$$L_{AE}(X, X') = \min(||X - X'||_{F}^2)$$- **Binary Input Data**: Binary Cross-Entropy (BCE) is used when the input data is binary (values of 0 or 1).$$L_{AE}(X, X') = -\sum_{i=1}^n (x_i \log(x_i^') + (1 - x_i) \log(1 - x_i^'))$$
+$$
+L_{AE}(X, X') = \min(||X - X'||_{F}^2)
+$$
+- **Binary Input Data**: Binary Cross-Entropy (BCE) is used when the input data is binary (values of 0 or 1).
+
+$$
+L_{AE}(X, X') = -\sum_{i=1}^n (x_i \log(x_i^') + (1 - x_i) \log(1 - x_i^'))
+$$
 
 </details>
 
 ---
 
-
 ### Q: Can backpropagation be used to train autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1442,9 +1320,7 @@ Yes, the standard backpropagation technique can be used to train the parameters 
 
 ---
 
-
 ### Q: What is the bottleneck layer in autoencoders, and what is its significance?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1466,9 +1342,7 @@ The bottleneck layer is the central, smallest hidden layer in an autoencoder tha
 
 ---
 
-
 ### Q: Should the encoder and decoder have the same size in an autoencoder? Which one is typically deeper?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1479,9 +1353,7 @@ The encoder and decoder in an autoencoder do not need to have the same size or a
 
 ---
 
-
 ### Q: What issues might arise if the decoder is deeper than the encoder in an autoencoder?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1492,9 +1364,7 @@ Having a deeper decoder than the encoder can lead to potential issues. A powerfu
 
 ---
 
-
 ### Q: What is the benefit of using tied weights in autoencoder model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1510,9 +1380,7 @@ Autoencoders with tied weights have some important advantages:
 
 ---
 
-
 ### Q: What is an undercomplete and overcomplete autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1521,13 +1389,17 @@ Autoencoders with tied weights have some important advantages:
 
 An undercomplete autoencoder has a bottleneck layer (latent space) with fewer neurons than the input layer. 
 
-$$dim(h) < dim(x_{input})$$
+$$
+dim(h) < dim(x_{input})
+$$
 
 *Overcomplete Autoencoders*
 
 An overcomplete autoencoder has a bottleneck layer with more neurons than the input layer, creating a latent representation that is higher-dimensional than the input.
 
-$$dim(h) >= dim(x_{input})$$
+$$
+dim(h) >= dim(x_{input})
+$$
 
 <table align='center'>
 <tr>
@@ -1544,9 +1416,7 @@ $$dim(h) >= dim(x_{input})$$
 
 ---
 
-
 ### Q: Why are overcomplete autoencoders less commonly used in practice?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1557,16 +1427,14 @@ Overcomplete autoencoders have a latent space dimension larger than the input di
 
 ---
 
-
 ### Q: Why do we need to regularize the autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-In undercomplete autoencoders suppose  latent dimension $K=1$and very powerful encoder$f(x)$and decoder$g(x). In this case we can achieve very small reconstruction error but learned values will not capture any interesting properties.
+In undercomplete autoencoders suppose  latent dimension $K=1$and very powerful encoder$ f(x)$and decoder$ g(x). In this case we can achieve very small reconstruction error but learned values will not capture any interesting properties.
 
-In overcomplete autoencoder, suppose encoder $f(x)$and decoder$g(x)$ are trivial(identity) functions. In this case also we can achieve even zero construction error but learned values will not capture any interesting properties.
+In overcomplete autoencoder, suppose encoder $f(x)$and decoder$ g(x)$  are trivial(identity) functions. In this case also we can achieve even zero construction error but learned values will not capture any interesting properties.
 
 In both cases we need to control the capacity of encoder and decoder. Therefore we need to regularize the functions as well as the learned code, not just reconstruction error.
 
@@ -1574,9 +1442,7 @@ In both cases we need to control the capacity of encoder and decoder. Therefore 
 
 ---
 
-
 ### Q: What are different ways to regularize autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1591,9 +1457,7 @@ There are several ways to regularize autoencoders:
 
 ---
 
-
 ### Q: What do you mean by deep/stacked autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1615,9 +1479,7 @@ Autoencoders having more than one hidden layer are called deep autoencoders.
 
 ---
 
-
 ### Q: Why do we need sparsity in autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1642,9 +1504,7 @@ Autoencoders having more than one hidden layer are called deep autoencoders.
 
 ---
 
-
 ### Q: In sparse encoders do we regularize weights or activations of the network?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1655,9 +1515,7 @@ We regularize the activations of a network not the weights
 
 ---
 
-
 ### Q: How can we introduce sparsity constraint in autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1666,7 +1524,16 @@ There are two main ways by which we can impose sparsity constraint
 
 - L1 Regularization: We can add a term to our loss function that penalizes the absolute value of the vector of the activations $a$in layer$h$for observation$i$, scaled by a tuning parameter $\lambda$.
 
-$$L(x, \hat{x}) + \lambda \sum_{i}|a_i^{(h)}|$$- KL-Divergence: KL-divergence is a measure of the difference between two probability distributions.$$L(x, \hat{x}) + \sum_{j}KL(\rho || \hat{\rho_j})$$Where$\rho$is sparsity parameter and$\hat{\rho}$is mean activation of a neuron over a collection of samples.$$\hat{\rho_j} = \frac{1}{m}\sum_{i}[a_i^{(h)}(x)]$$where the subscript$j$denotes the specific neuron in layer$h$
+$$
+L(x, \hat{x}) + \lambda \sum_{i}|a_i^{(h)}|
+$$
+- KL-Divergence: KL-divergence is a measure of the difference between two probability distributions.$$L(x, \hat{x}) + \sum_{j}KL(\rho || \hat{\rho_j})$$Where $\rho$is sparsity parameter and$\hat{\rho}$  is mean activation of a neuron over a collection of samples.
+
+$$
+\hat{\rho_j} = \frac{1}{m}\sum_{i}[a_i^{(h)}(x)]
+$$
+
+where the subscript $j$denotes the specific neuron in layer$h$ 
 
 In essence, by constraining the average activation of a neuron over a collection of samples we're encouraging neurons to only fire for a subset of the observations.
 
@@ -1674,9 +1541,7 @@ In essence, by constraining the average activation of a neuron over a collection
 
 ---
 
-
 ### Q: What is denoising method in autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1698,9 +1563,7 @@ Denoising autoencoders are a type of autoencoder designed to make the learned re
 
 ---
 
-
 ### Q: What are the benefits of denoising encoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1715,9 +1578,7 @@ Advantages of denoising encoders:
 
 ---
 
-
 ### Q: Define Contractive Autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1728,22 +1589,24 @@ Contractive Autoencoders (CAE) are a type of autoencoder designed to learn robus
 
 ---
 
-
 ### Q: What is the loss function in contractive autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Loss function in contractive autoencoders:
 
-$$\text{Loss} = \text{Reconstruction Loss} + \lambda \sum_{i=1}^{n}\|\frac{\partial h}{\partial x_i}\|^2$$
+$$
+\text{Loss} = \text{Reconstruction Loss} + \lambda \sum_{i=1}^{n}\|\frac{\partial h}{\partial x_i}\|^2
+$$
 
 The penalty is Contractive penalty and, it is penalizes the Ferbenius norm (squared sum of all elements) of the Jacobian matrix of the encoder’s activations with respect to the input. 
 
 This forces the encoder to produce stable representations that are less sensitive to small changes in the input.
 
-$$\sum_{i=1}^{n} \left\| \frac{\partial h}{\partial x_i} \right\|^2$$
+$$
+\sum_{i=1}^{n} \left\| \frac{\partial h}{\partial x_i} \right\|^2
+$$
 
 - Here, \( h \) represents the hidden layer activations (latent representation), \( x_i \) is the input, and \( \lambda \) is a regularization parameter controlling the importance of the contractive term.
 
@@ -1751,9 +1614,7 @@ $$\sum_{i=1}^{n} \left\| \frac{\partial h}{\partial x_i} \right\|^2$$
 
 ---
 
-
 ### Q: State the difference between contractive autoencoders and denoising autoencoders.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1764,9 +1625,7 @@ Contractive autoencoders and denoising autoencoders both aim to make the model r
 
 ---
 
-
 ### Q: Is Variational Autoencoder(VAE) kind of Stochastic Autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1777,9 +1636,7 @@ True, VAE is popular example of stochastic autoencoders.
 
 ---
 
-
 ### Q: State the difference between standard autoencoders and variational autoencoder(VAE)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1801,24 +1658,22 @@ Standard autoencoders output a single value for each encoding dimension. The dec
 
 ---
 
-
 ### Q: What reconstruction function do we use in stochastic autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Negative log-likelihood:
 
-$$-\log\rho_{decoder}(\frac{x|h})$$
+$$
+-\log\rho_{decoder}(\frac{x|h})
+$$
 
 </details>
 
 ---
 
-
 ### Q: What is reparameterization trick in VAE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1829,15 +1684,12 @@ The Reparameterization Trick in Variational Autoencoders (VAEs) is a technique u
 
 ---
 
-
 ### Q: Why do we need reparameterization trick in VAE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 In VAE decoder randomly samples from from true posterior $Z ~ q(z | \phi, x)$. To implement encoder and decoder as a neural network and use gradient descent for training we need to backpropogate through random sampling and that is the issue since backpropogation simply can't flow through random node; to overcome this issue we use reparameterization trick.
-
 
 <table align='center'>
 <tr>
@@ -1854,9 +1706,7 @@ In VAE decoder randomly samples from from true posterior $Z ~ q(z | \phi, x)$. T
 
 ---
 
-
 ### Q: What loss function we use in Variational Autoencoder(VAE)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1867,15 +1717,26 @@ The loss function in VAE combines two key components
 
 Measures how well the VAE can reconstruct the input data from the latent representation
 
-$$L_{\text{reconstruction_loss}} = \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \hat{x}_i)^2$$
+$$
+L_{\text{reconstruction_loss}} = \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \hat{x}_i)^2
+$$
 
 *KL Divergence loss*
 
-Measures the difference between the learned latent distribution $q(z|x)$and a prior distribution$p(z)$, typically a standard normal distribution $\mathcal{N}(0, 1)$.
+Measures the difference between the learned latent distribution $q(z|x)$and a prior distribution$ p(z)$, typically a standard normal distribution$\mathcal{N}(0, 1)$.
 
 It encourages the latent space to be well-structured and similar to the prior, enabling smooth interpolation and generation of new data.
 
-$$\text{KL Divergence} = D_{KL}(q(z|x) \| p(z))$$*Loss Function*$$\text{Loss} = \text{Reconstruction Loss} + \beta \dot \text{KL Divergence}$$Balancing Parameter$\beta$The parameter$\beta$controls the trade-off between reconstruction accuracy and the regularization effect on the latent space. Setting$\beta = 1$is typical, but variations (like$\beta$-VAE) allow tuning this balance.
+$$
+\text{KL Divergence} = D_{KL}(q(z|x) \| p(z))
+$$
+*Loss Function*
+
+$$
+\text{Loss} = \text{Reconstruction Loss} + \beta \dot \text{KL Divergence}
+$$
+
+Balancing Parameter $\beta$The parameter$\beta$controls the trade-off between reconstruction accuracy and the regularization effect on the latent space. Setting$\beta = 1$is typical, but variations (like$\beta$-VAE) allow tuning this balance.
 
 Here, reconstruction loss makes sure decoder accurately reconstruct the input data and, KL divergence loss encourages the latent space to be well-structured and similar to the prior, enabling smooth interpolation and generation of new data.
 
@@ -1883,9 +1744,7 @@ Here, reconstruction loss makes sure decoder accurately reconstruct the input da
 
 ---
 
-
 ### Q: How can we use autoencoders for classification task?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1900,9 +1759,7 @@ Autoencoders can be used for classification by leveraging their ability to learn
 
 ---
 
-
 ### Q: What are the limitations of autoencoders?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>

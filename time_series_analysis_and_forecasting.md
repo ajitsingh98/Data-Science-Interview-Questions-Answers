@@ -1,9 +1,9 @@
-# Data Science Interview Questions And Answers
+# Time Series Analysis and Forecasting
 
-## Time Series Analysis and Forecasting
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-Contents
-----
+
+## Table of Contents
 
 - [Introduction](#introduction)
 - [Time Series Graphics](#time-series-graphics)
@@ -21,9 +21,7 @@ Contents
 
 ## Introduction
 
-
 ### Q: What is forecasting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -34,9 +32,7 @@ Forecasting is about predicting the future as accurately as possible, given all 
 
 ---
 
-
 ### Q: What do you mean by time series?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -47,9 +43,7 @@ Anything that is observed sequentially over time is a time series. The observati
 
 ---
 
-
 ### Q: State the difference between univariate and multivariate time series?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -59,7 +53,6 @@ Univariate time series refers to a single variable tracked over time, such as da
 </details>
 
 ---
-
 
 ### Q: Define following terms:
 
@@ -86,9 +79,7 @@ It is used in strategic planning. Such decisions must take account of market opp
 
 ---
 
-
 ### Q: List down factors on which predictability of an event or quantity depends?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -103,9 +94,7 @@ The predictability of an event or a quantity depends on several factors includin
 
 ---
 
-
 ### Q: Is it correct to assume that forecasts are not possible in a changing environment?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -116,9 +105,7 @@ No it is not correct. Forecasts rarely assume that the environment is unchanging
 
 ---
 
-
 ### Q: How would you approach forecasting if there is no available data, or if the data you have is not relevant to the forecasts?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -129,9 +116,7 @@ In this scenario we can use qualitative forecasting methods. These methods are n
 
 ---
 
-
 ### Q: When can we use Quantitative methods for forecasting use-cases?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -145,9 +130,7 @@ Quantitative forecasting can be applied when two conditions are satisfied:
 
 ---
 
-
 ### Q: State the difference between exogenous and endogenous variables?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -160,12 +143,9 @@ Endogenous Variables: Determined by relationships within the model; influenced b
 
 ---
 
-
 ## Time Series Graphics
 
-
 ### Q: Which is the most common plot in time series EDA?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -187,9 +167,7 @@ Time plot - the observations are plotted against the time of observation, with c
 
 ---
 
-
 ### Q: What is the difference between seasonal plot and time plot?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -210,11 +188,9 @@ A seasonal plot is similar to a time plot except that the data are plotted again
 </details>
 
 ---
-
 
 ### Q: What is the difference between seasonal plot and time plot? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -235,9 +211,7 @@ A seasonal plot is similar to a time plot except that the data are plotted again
 
 ---
 
-
 ### Q: What is the benefit of seasonal plots?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -248,9 +222,7 @@ A seasonal plot allows the underlying seasonal pattern to be seen more clearly, 
 
 ---
 
-
 ### Q: What is seasonal subseries plots?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -271,11 +243,9 @@ An alternative plot that emphasises the seasonal patterns is where the data for 
 </details>
 
 ---
-
 
 ### Q: What is seasonal subseries plots? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -296,9 +266,7 @@ An alternative plot that emphasises the seasonal patterns is where the data for 
 
 ---
 
-
 ### Q: Can we use scatter plots for time series EDA?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -309,9 +277,7 @@ Yes, scatterplot helps us to visualise the relationship between the variables. F
 
 ---
 
-
 ### Q: What is the difference between correlation and autocorrelation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -322,9 +288,7 @@ Correlation measures the extent of a linear relationship between two variables, 
 
 ---
 
-
 ### Q: What is the autocorrelation function (ACF)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -346,21 +310,21 @@ The ACF is a plot of autocorrelation between a variable and itself separated by 
 
 ---
 
-
 ### Q: Write the expression for autocorrelation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$r_k = \frac{\sum_{t=k+1}^{T}(y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^{T}(y_t - \bar{y})^2}$$Where$T$ is the length of the time series.
+$$
+r_k = \frac{\sum_{t=k+1}^{T}(y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^{T}(y_t - \bar{y})^2}
+$$
+Where $T$  is the length of the time series.
 
-Note that $r_1$measures the relationship between$y_t$and$y_{t-1}$, $r_2$measures the relationship between$y_t$and$y_{t-2}$ and so on.
+Note that $r_1$measures the relationship between$ y_t$and$ y_{t-1}$,$r_2$measures the relationship between$y_t$and$y_{t-2}$  and so on.
 
 </details>
 
 ---
-
 
 ### Q: Define following terms: (Part 2)
 
@@ -387,9 +351,7 @@ A cycle occurs when the data exhibit rises and falls that are not of a fixed fre
 
 ---
 
-
 ### Q: How can we check for trend in time series data using ACF plots?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -411,9 +373,7 @@ When data have a trend, the autocorrelations for small lags tend to be large and
 
 ---
 
-
 ### Q: How can we check for seasonality in time series data using ACF plots?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -435,9 +395,7 @@ When data are seasonal, the autocorrelations will be larger for the seasonal lag
 
 ---
 
-
 ### Q: How does the ACF plot looks like if data has both trend and seasonality?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -459,9 +417,7 @@ The slow decrease in the ACF as the lags increase is due to the trend, while the
 
 ---
 
-
 ### Q: What does white noise mean in time series?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -483,28 +439,24 @@ Time series that show no autocorrelation are called white noise.
 
 ---
 
-
 ### Q: What are the statistical properties of white noise?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 - For white noise series, autocorrelation to be close to zero.
-- For a white noise series, we expect $95%$of the spikes in the ACF to lie within$±1.96/\sqrt{T}$where$T$ is the length of the time series.
+- For a white noise series, we expect $95%$of the spikes in the ACF to lie within$±1.96/\sqrt{T}$where$ T$  is the length of the time series.
 
 </details>
 
 ---
 
-
 ### Q: How could you check if the given time series is white noise?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can use the fact that for a white noise series, we expect $95%$of the spikes in the ACF to lie within$±1.96/\sqrt{T}$where$T$ is the length of the time series.
+We can use the fact that for a white noise series, we expect $95%$of the spikes in the ACF to lie within$±1.96/\sqrt{T}$where$ T$  is the length of the time series.
 
 It is common to plot these bounds on a graph of the ACF (the blue dashed lines above). If one or more large spikes are outside these bounds, or if substantially more than 5% of spikes are outside these bounds, then the series is probably not white noise.
 
@@ -514,9 +466,7 @@ It is common to plot these bounds on a graph of the ACF (the blue dashed lines a
 
 ## Time Series Decomposition
 
-
 ### Q: What is time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -530,9 +480,7 @@ Splitting a time series into several components, each representing an underlying
 
 ---
 
-
 ### Q: Can a given time series posses more than one seasonal component?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -543,9 +491,7 @@ For some time series (e.g., those that are observed at least daily), there can b
 
 ---
 
-
 ### Q: What are the benefits of time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -557,9 +503,7 @@ For some time series (e.g., those that are observed at least daily), there can b
 
 ---
 
-
 ### Q: What kind of adjustments we can do with time series data to simplify the patterns in it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -574,9 +518,7 @@ We can do four kinds of adjustments:
 
 ---
 
-
 ### Q: Why is it recommended to make adjustments or transformations to time series data before decomposing it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -586,11 +528,9 @@ The purpose of adjustments and transformations is to simplify the patterns in th
 </details>
 
 ---
-
 
 ### Q: Why is it recommended to make adjustments or transformations to time series data before decomposing it? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -600,9 +540,7 @@ The purpose of adjustments and transformations is to simplify the patterns in th
 
 ---
 
-
 ### Q: What are some common mathematical transformations that can be applied to time series data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -616,9 +554,7 @@ We can apply following transformations to time series depending on the scenarios
 
 ---
 
-
 ### Q: What are the benefits of using mathematical transformations?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -629,9 +565,7 @@ Mathematical transformations are techniques used to modify data in ways that mak
 
 ---
 
-
 ### Q: What is log transformation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -642,9 +576,7 @@ If we denote the original observations as $y_1,...,y_T$and the transformed obser
 
 ---
 
-
 ### Q: In which scenarios we should use log transformations?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -655,16 +587,16 @@ Log transformations reduce right-skewness and stabilizes variance, especially in
 
 ---
 
-
 ### Q: What is power transformations?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 It uses mapping as:
 
-$$y' = y^p$$
+$$
+y' = y^p
+$$
 
 It Increases or decreases the rate of change for different data values. Depending on the power \( p \) (for example, \( p = 2 \) for a square transformation or \( p = -1 \) for a reciprocal transformation), this transformation can reduce skewness or stabilize variance.
 
@@ -672,14 +604,12 @@ It Increases or decreases the rate of change for different data values. Dependin
 
 ---
 
-
 ### Q: What are Box-Cox transformations?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-A useful family of transformations, that includes both logarithms and power transformations, is the family of Box-Cox transformations, which depend on the parameter $λ$and are defined as follows:$$
+A useful family of transformations, that includes both logarithms and power transformations, is the family of Box-Cox transformations, which depend on the parameter $λ$ and are defined as follows:$$ 
 
 y(\lambda) = 
 \begin{cases} 
@@ -688,7 +618,6 @@ y(\lambda) =
 \end{cases}
 
 $$
-
 where:
 - \( y \) is the original data,
 - \( \lambda \) is the transformation parameter.
@@ -699,9 +628,7 @@ For \( \lambda = 0 \), the natural logarithm of \( y \) is used instead, which i
 
 ---
 
-
 ### Q: What are additive and multiplicative models in time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -712,9 +639,7 @@ In time series decomposition, additive and multiplicative models are used to bre
 
 ---
 
-
 ### Q: Explain additive model in time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -724,16 +649,14 @@ In an additive model, the time series value at any given time \( Y_t \) is the s
 - Trend (\( T_t \)) – the long-term increase or decrease in the data.
 - Seasonal (\( S_t \)) – the repeating short-term cycle in the data (such as monthly or yearly seasonality).
 - Residual (\( R_t \)) – the remaining random variation or noise.
-
-$$Y_t = T_t + S_t + R_t$$
+$$
+Y_t = T_t + S_t + R_t$$ 
 
 </details>
 
 ---
 
-
 ### Q: When should we use additive model for time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -744,9 +667,7 @@ An additive model is appropriate when the trend and seasonal variations are rela
 
 ---
 
-
 ### Q: Explain multiplicative model in time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -757,15 +678,15 @@ In an multiplicative model, the time series value at any given time \( Y_t \) is
 - Seasonal (\( S_t \)) – the repeating short-term cycle in the data (such as monthly or yearly seasonality).
 - Residual (\( R_t \)) – the remaining random variation or noise.
 
-$$Y_t = T_t \times S_t \times R_t$$
+$$
+Y_t = T_t \times S_t \times R_t
+$$
 
 </details>
 
 ---
 
-
 ### Q: When should we use multiplicative model for time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -776,9 +697,7 @@ A multiplicative model is appropriate when the seasonal variations change propor
 
 ---
 
-
 ### Q: How do we determine whether to use an additive or multiplicative model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -790,50 +709,55 @@ A multiplicative model is appropriate when the seasonal variations change propor
 
 ---
 
-
 ### Q: How does a log transformation allow additive decomposition to approximate a multiplicative decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 An alternative to using a multiplicative decomposition is to first transform the data until the variation in the series appears to be stable over time, then use an additive decomposition. When a log transformation has been used, this is equivalent to using a multiplicative decomposition on the original data because
 
-$$y_t = S_t \times T_t \times R_t$$On taking$\log$both side:$$\log{y_t} = \log{S_t} + \log{T_t} + \log{R_t}$$
+$$
+y_t = S_t \times T_t \times R_t
+$$
+On taking $\log$  both side:
+
+$$
+\log{y_t} = \log{S_t} + \log{T_t} + \log{R_t}
+$$
 
 </details>
 
 ---
-
 
 ### Q: What is seasonally adjusted data?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-If the seasonal component is removed from the original data, the resulting values are the "seasonally adjusted" data. For an additive decomposition, the seasonally adjusted data are given by $y_t - S_t$and for multiplicative data, the seasonally adjusted values are obtained using$\frac{y_t}{S_t}$
+If the seasonal component is removed from the original data, the resulting values are the "seasonally adjusted" data. For an additive decomposition, the seasonally adjusted data are given by $y_t - S_t$and for multiplicative data, the seasonally adjusted values are obtained using$\frac{y_t}{S_t}$ 
 
 </details>
 
 ---
-
 
 ### Q: Explain moving average smoothing in time series decomposition?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-A moving average of order $m$can be written as$$\hat{T}_{t} = \frac{1}{m}\sum_{j=-k}{k}y_{t+j}$$where$m = 2k+1$. That is, the estimate of the trend-cycle at time $t$is obtained by averaging values of the time series within$k$periods of$t$. Observations that are nearby in time are also likely to be close in value. Therefore, the average eliminates some of the randomness in the data, leaving a smooth trend-cycle component.
+A moving average of order $m$ can be written as
+
+$$
+\hat{T}_{t} = \frac{1}{m}\sum_{j=-k}{k}y_{t+j}
+$$
+
+where $m = 2k+1$. That is, the estimate of the trend-cycle at time$t$is obtained by averaging values of the time series within$k$ periods of$t$. Observations that are nearby in time are also likely to be close in value. Therefore, the average eliminates some of the randomness in the data, leaving a smooth trend-cycle component.
 
 </details>
 
 ---
 
-
-### Q: How does order $m$ of moving average impact the modelling?
-
+### Q: How does order $m$  of moving average impact the modelling?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -844,9 +768,7 @@ The order of the moving average determines the smoothness of the trend-cycle est
 
 ---
 
-
 ### Q: In an m-order moving average, is symmetry important?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -857,24 +779,23 @@ In an m-order moving average, symmetry is important because it ensures that each
 
 ---
 
-
 ### Q: Explain weighted moving averages?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Combinations of moving averages result in weighted moving averages. In general, a weighted m-MA can be written as:
 
-$$\hat{T}_t = \sum^{k}_{j=-k}a_j y_{t+j}$$where$k = (m-1)/2$, and weights are given by $[a_{-k},..,a_k]$. It is important that the weights all sum to one and that they are symmetric so that $a_j = a_{-j}$.
+$$
+\hat{T}_t = \sum^{k}_{j=-k}a_j y_{t+j}
+$$
+where $k = (m-1)/2$, and weights are given by$[a_{-k},..,a_k]$. It is important that the weights all sum to one and that they are symmetric so that$a_j = a_{-j}$.
 
 </details>
 
 ---
 
-
 ### Q: What is the major advantage of using weighted moving averages over m-MA?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -885,9 +806,7 @@ A major advantage of weighted moving averages is that they yield a smoother esti
 
 ---
 
-
 ### Q: How can we use m-MA for time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -895,7 +814,7 @@ A major advantage of weighted moving averages is that they yield a smoother esti
 An m-Moving Average (m-MA) can be used for time series decomposition by helping to separate the trend and seasonal components from the data.
 
 1. Identify the Seasonal Period: 
-- Determine the period of seasonality in your data, such as daily, monthly, or quarterly, depending on the time series. The chosen value of $m$ is usually equal to this seasonal period.
+- Determine the period of seasonality in your data, such as daily, monthly, or quarterly, depending on the time series. The chosen value of $m$  is usually equal to this seasonal period.
 2. Calculate the Moving Average: 
 - Apply an m-point moving average to smooth the data. The choice of m depends on the frequency of seasonality. For example, with monthly data and yearly seasonality, you’d use a 12-point moving average.
 - For symmetric smoothing, use a centered moving average, where you calculate the average over equal numbers of points before and after a central point
@@ -912,9 +831,7 @@ An m-Moving Average (m-MA) can be used for time series decomposition by helping 
 
 ---
 
-
 ### Q: What are the limitations of classical time series decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -930,9 +847,7 @@ Classical time series decomposition has these main limitations:
 
 ---
 
-
 ### Q: How does STL decomposition work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -957,9 +872,7 @@ Here's how STL decomposition works:
 
 ---
 
-
 ### Q: What are the advantages of using STL over classical decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -973,9 +886,7 @@ STL has several advantages over classical decomposition:
 
 ---
 
-
 ### Q: What are the limitations of STL decomposition?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -989,22 +900,24 @@ STL (Seasonal-Trend Decomposition using Loess) is a powerful decomposition metho
 
 ---
 
-
 ### Q: How can we use time series decomposition to  measure the strength of trend and seasonality in a time series?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 A time series decomposition can be used to measure the strength of trend and seasonality in a time series:
 
-$$y_t = T_t + S_t + R_t$$
+$$
+y_t = T_t + S_t + R_t
+$$
 
 *Strength of Trend*
 
 For strongly trended data, the seasonally adjusted data should have much more variation than the remainder component.
 
-$$F_T = max(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(T_t + R_t)})$$
+$$
+F_T = max(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(T_t + R_t)})
+$$
 
 This will give a measure of the strength of the trend between 0 and 1.
 
@@ -1012,7 +925,10 @@ This will give a measure of the strength of the trend between 0 and 1.
 
 The strength of seasonality is defined similarly, but with respect to the detrended data rather than the seasonally adjusted data:
 
-$$F_S = max(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(S_t + R_t)})$$A series with seasonal strength$F_S$ close to 0 exhibits almost no seasonality.
+$$
+F_S = max(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(S_t + R_t)})
+$$
+A series with seasonal strength $F_S$  close to 0 exhibits almost no seasonality.
 
 </details>
 
@@ -1020,9 +936,7 @@ $$F_S = max(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(S_t + R_t)})$$A series with
 
 ## Benchmark Forecasting Methods
 
-
 ### Q: What are some simple forecasting methods?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1036,16 +950,16 @@ $$F_S = max(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(S_t + R_t)})$$A series with
 
 ---
 
-
 ### Q: Explain mean method in time series forecasting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Mean method assumes that forecasts of all future values are equal to average of historical data. If we let the historical data denoted by $y_1,..,y_T$, then we can write forecasts as
 
-$$\hat{y}_{T+h|T} = \bar{y} = (y_1 + ... + y_T)/T$$
+$$
+\hat{y}_{T+h|T} = \bar{y} = (y_1 + ... + y_T)/T
+$$
 
 <table align='center'>
   <tr>
@@ -1062,16 +976,16 @@ $$\hat{y}_{T+h|T} = \bar{y} = (y_1 + ... + y_T)/T$$
 
 ---
 
-
 ### Q: How does naive method works in forecasting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 For naïve forecasts, we simply set all forecasts to be the value of the last observation. That is,
 
-$$\hat{y}_{T+h|T} = y_T$$
+$$
+\hat{y}_{T+h|T} = y_T
+$$
 
 Note that naive method is also called random walk forecasts.
 
@@ -1090,16 +1004,17 @@ Note that naive method is also called random walk forecasts.
 
 ---
 
-
 ### Q: How does seasonal naive method works in forecasting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 We  set each forecast to be equal to the last observed value from the same season (e.g., the same month of the previous year).
 
-$$\hat{y}_{T+h|T} = y_{T+h - m(k+1)}$$Where m = the seasonal period, and$k$is the integer part of$(h-1)/m$(i.e., the number of complete years in the forecast period prior to time$T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
+$$
+\hat{y}_{T+h|T} = y_{T+h - m(k+1)}
+$$
+Where m = the seasonal period, and $k$is the integer part of$(h-1)/m$(i.e., the number of complete years in the forecast period prior to time $T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
 
 <table align='center'>
   <tr>
@@ -1116,17 +1031,20 @@ $$\hat{y}_{T+h|T} = y_{T+h - m(k+1)}$$Where m = the seasonal period, and$k$is th
 
 ---
 
-
 ### Q: How does drift method works in forecasting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 A variation on the naïve method is to allow the forecasts to increase or decrease over time, where the amount of change over time (called the drift) is set to be the average change seen in the historical data. 
 
-Forecast for time $T+h$is given by$$\hat{y}_{T+h|T} = y_T + \frac{h}{T-1} \sum_{t=2}^{T}(y_t - y_{t-1}) = Y_T + h(\frac{y_t - y_1}{T - 1})$$Where m = the seasonal period, and$k$is the integer part of$(h-1)/m$(i.e., the number of complete years in the forecast period prior to time$T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
+Forecast for time $T+h$ is given by
 
+$$
+\hat{y}_{T+h|T} = y_T + \frac{h}{T-1} \sum_{t=2}^{T}(y_t - y_{t-1}) = Y_T + h(\frac{y_t - y_1}{T - 1})
+$$
+
+Where m = the seasonal period, and $k$is the integer part of$(h-1)/m$(i.e., the number of complete years in the forecast period prior to time $T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
 
 <table align='center'>
   <tr>
@@ -1143,16 +1061,16 @@ Forecast for time $T+h$is given by$$\hat{y}_{T+h|T} = y_T + \frac{h}{T-1} \sum_{
 
 ---
 
-
 ### Q: What do you mean by residual in time series model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The "residuals" in a time series model are what is left over after fitting a model. The residuals are equal to the difference between the observations and the corresponding fitted values:
 
-$$e_t = y_t - \hat{y}_t$$
+$$
+e_t = y_t - \hat{y}_t
+$$
 
 Residuals are useful in checking whether a model has adequately captured the information in the data.
 
@@ -1160,9 +1078,7 @@ Residuals are useful in checking whether a model has adequately captured the inf
 
 ---
 
-
 ### Q: What properties should innovation residuals have to indicate a good forecasting method?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1179,11 +1095,9 @@ Good to have:
 </details>
 
 ---
-
 
 ### Q: What properties should innovation residuals have to indicate a good forecasting method? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -1200,58 +1114,71 @@ Good to have:
 
 ---
 
-
 ### Q: How do you determine the prediction interval for forecasted values?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t$to lie with a specified probability. For example, assuming that distribution of future observations is normal, a$95\%$prediction interval for the h-step forecast is:$$\hat{y}_{T+h|T} \pm 1.96\hat{\sigma}_h$$where$\hat{\sigma}_h$ is an estimate of the standard deviation of the  h-step forecast distribution.
+Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t$to lie with a specified probability. For example, assuming that distribution of future observations is normal, a$95\%$  prediction interval for the h-step forecast is:
+
+$$
+\hat{y}_{T+h|T} \pm 1.96\hat{\sigma}_h
+$$
+
+where $\hat{\sigma}_h$  is an estimate of the standard deviation of the  h-step forecast distribution.
 
 More generally, a prediction interval can be written as
 
-$$\hat{y}_{T+h|T} \pm c\hat{\sigma}_h$$where the multiplier$c$ depends on the coverage probability.
+$$
+\hat{y}_{T+h|T} \pm c\hat{\sigma}_h
+$$
+where the multiplier $c$  depends on the coverage probability.
 
 </details>
 
 ---
-
 
 ### Q: How do you determine the prediction interval for forecasted values? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t$to lie with a specified probability. For example, assuming that distribution of future observations is normal, a$95\%$prediction interval for the h-step forecast is:$$\hat{y}_{T+h|T} \pm 1.96\hat{\sigma}_h$$where$\hat{\sigma}_h$ is an estimate of the standard deviation of the  h-step forecast distribution.
+Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t$to lie with a specified probability. For example, assuming that distribution of future observations is normal, a$95\%$  prediction interval for the h-step forecast is:
+
+$$
+\hat{y}_{T+h|T} \pm 1.96\hat{\sigma}_h
+$$
+
+where $\hat{\sigma}_h$  is an estimate of the standard deviation of the  h-step forecast distribution.
 
 More generally, a prediction interval can be written as
 
-$$\hat{y}_{T+h|T} \pm c\hat{\sigma}_h$$where the multiplier$c$ depends on the coverage probability.
+$$
+\hat{y}_{T+h|T} \pm c\hat{\sigma}_h
+$$
+where the multiplier $c$  depends on the coverage probability.
 
 </details>
 
 ---
 
-
 ### Q: Express the standard deviation of the forecast distribution in case of one step prediction?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 When forecasting one step ahead, the standard deviation of the forecast distribution can be estimated using the standard deviation of the residuals given by
 
-$$\hat{\sigma} = \sqrt{\frac{1}{T - K - M}\sum_{t=1}^{T}e_{t}^2}$$where$K$is the number of parameters estimated in the forecasting method, and$M$ is the number of missing values in the residuals.
+$$
+\hat{\sigma} = \sqrt{\frac{1}{T - K - M}\sum_{t=1}^{T}e_{t}^2}
+$$
+where $K$is the number of parameters estimated in the forecasting method, and$M$  is the number of missing values in the residuals.
 
 </details>
 
 ---
 
-
 ### Q: What happens with prediction intervals in case of multi-step forecasting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1262,9 +1189,7 @@ Prediction intervals usually increase in length as the forecast horizon increase
 
 ---
 
-
 ### Q: For benchmark methods write the standard deviation expression for h-step forecast distribution?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1272,30 +1197,26 @@ Prediction intervals usually increase in length as the forecast horizon increase
 For the four benchmark methods, it is possible to mathematically derive the forecast standard deviation under the assumption of uncorrelated residuals.
 
 $$
-
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Forecasting Method} & \textbf{h-step forecast standard deviation} \\ \hline
-Mean                        & $\hat{\sigma}_h = \hat{\sigma} \sqrt{1 + \frac{1}{T}}$                 \\ \hline
-Naïve                       & $\hat{\sigma}_h = \hat{\sigma} \sqrt{h}$                               \\ \hline
-Seasonal Naïve              & $\hat{\sigma}_h = \hat{\sigma} \sqrt{k + 1}$                           \\ \hline
-Drift                       & $\hat{\sigma}_h = \hat{\sigma} \sqrt{h \left(1 + \frac{h}{T - 1}\right)}$ \\ \hline
+Mean                        & $\hat{\sigma}_h = \hat{\sigma} \sqrt{1 + \frac{1}{T}}$                  \\ \hline
+Naïve                       & $\hat{\sigma}_h = \hat{\sigma} \sqrt{h}$                                \\ \hline
+Seasonal Naïve              & $\hat{\sigma}_h = \hat{\sigma} \sqrt{k + 1}$                            \\ \hline
+Drift                       & $\hat{\sigma}_h = \hat{\sigma} \sqrt{h \left(1 + \frac{h}{T - 1}\right)}$  \\ \hline
 \end{tabular}
 \caption{Standard Deviation Equations for Different Forecasting Methods}
 \label{tab:forecast_sd}
 \end{table}
-
 $$
 
 </details>
 
 ---
 
-
 ### Q: If the residuals from a fitted forecasting model do not exhibit a normal distribution, how would you establish prediction intervals for the forecasted values?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1306,16 +1227,17 @@ When assuming a normal distribution for residuals is not suitable, an alternativ
 
 ---
 
-
 ### Q: Can time series decomposition be utilized for forecasting, and if so, what is the method for doing so?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Yes, Time series decomposition can be a useful step in producing forecasts. Assuming an additive decomposition, the decomposed time series can be written as
 
-$$y_t = \hat{S}_t + \hat{A}_t$$Where$\hat{A}_t = \hat{T}_t + \hat{R}_t$ is the seasonally adjusted component. 
+$$
+y_t = \hat{S}_t + \hat{A}_t
+$$
+Where $\hat{A}_t = \hat{T}_t + \hat{R}_t$  is the seasonally adjusted component. 
 
 To forecast a decomposed time series, we forecast the seasonal component, $\hat{S}_t$, and the seasonally adjusted component $\hat{A}_t$, separately. It is usually assumed that the seasonal component is unchanging, or changing extremely slowly, so it is forecast by simply taking the last year of the estimated component. In other words, a seasonal naïve method is used for the seasonal component.
 
@@ -1325,9 +1247,7 @@ To forecast the seasonally adjusted component, any non-seasonal forecasting meth
 
 ---
 
-
 ### Q: How does forecast errors differ from residuals?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1338,9 +1258,7 @@ Forecast errors are different from residuals in two ways. First, residuals are c
 
 ---
 
-
 ### Q: What are different techniques for measuring forecast accuracy?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1362,9 +1280,7 @@ Scaled errors were proposed by Hyndman & Koehler (2006) as an alternative to usi
 
 ---
 
-
 ### Q: Is it feasible to apply the cross-validation technique to evaluate the accuracy of forecasts?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1401,9 +1317,7 @@ With time series forecasting, one-step forecasts may not be as relevant as multi
 
 ## Time Series Regression Models
 
-
 ### Q: What assumptions do we make when using a linear regression model for forecasting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1422,14 +1336,16 @@ When using a linear regression model, we assume:
 
 ---
 
-
 ### Q: Explain least squares principle?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The least squares principle provides a way of choosing the coefficients effectively by minimising the sum of the squared errors. That is, we choose the values of $\beta_0,\beta_1,..,\beta_k$that minimise$$\sum_{t=1}^T \eta_{t}^2 = \sum_{t=1}^T(y_t - \beta_0 - \beta_1x_{1, t} - ... - \beta_k x_{k, t})^2$$
+The least squares principle provides a way of choosing the coefficients effectively by minimising the sum of the squared errors. That is, we choose the values of $\beta_0,\beta_1,..,\beta_k$ that minimise
+
+$$
+\sum_{t=1}^T \eta_{t}^2 = \sum_{t=1}^T(y_t - \beta_0 - \beta_1x_{1, t} - ... - \beta_k x_{k, t})^2
+$$
 
 This is called least squares estimation because it gives the least value for the sum of squared errors.
 
@@ -1437,15 +1353,17 @@ This is called least squares estimation because it gives the least value for the
 
 ---
 
-
 ### Q: What are some typical predictors used in time series regression models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 There are several useful predictors that occur frequently when using regression for time series data.
-- Trend: It is common for time series data to be trending. A linear trend can be modelled by simply using $x_{1, t}=t$as predictor,$$y_t = \beta_0 + \beta_1t + \eta_t$$
+- Trend: It is common for time series data to be trending. A linear trend can be modelled by simply using $x_{1, t}=t$ as predictor,
+
+$$
+y_t = \beta_0 + \beta_1t + \eta_t
+$$
 
 - Dummy variables
     - Public holiday 
@@ -1468,28 +1386,29 @@ There are several useful predictors that occur frequently when using regression 
 
 ---
 
-
 ### Q: What is Akaike's Information Criterion (AIC)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 AIC is defined as:
 
-$$\text{AIC} = T\log(\frac{SSE}{T}) + 2(k+2)$$
+$$
+\text{AIC} = T\log(\frac{SSE}{T}) + 2(k+2)
+$$
 
-$$\text{SSE} = \sum_{t=1}^T \eta_{t}^2$$where$T$is the number of observations used for estimation and$k$ is the number of predictors in the model.
+$$
+\text{SSE} = \sum_{t=1}^T \eta_{t}^2
+$$
+where $T$is the number of observations used for estimation and$k$  is the number of predictors in the model.
 
-The $k+2$part of the equation occurs because there are$k+2$parameters in the model: the$k$ coefficients for the predictors, the intercept and the variance of the residuals.
+The $k+2$part of the equation occurs because there are$ k+2$parameters in the model: the$ k$  coefficients for the predictors, the intercept and the variance of the residuals.
 
 </details>
 
 ---
 
-
 ### Q: How can the AIC score be interpreted?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1500,55 +1419,50 @@ The model with the minimum value of the AIC is often the best model for forecast
 
 ---
 
-
 ### Q: Why do we need to adjust bias in AIC score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 For small values of $T$, the AIC tends to select too many predictors, and so a bias-corrected version of the AIC has been developed.
 
-$$\text{AIC}_c = \text{AIC} + \frac{2(k+2)(k+3)}{(T-k-3)}$$
+$$
+\text{AIC}_c = \text{AIC} + \frac{2(k+2)(k+3)}{(T-k-3)}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What is Bayesian Information Criterion (BIC)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Schwarz’s Bayesian Information Criterion (usually abbreviated to BIC, SBIC or SC):
 
-$$\text{BIC} = T\log{\frac{SSE}{T}} + (k+2)\log(T)$$
+$$
+\text{BIC} = T\log{\frac{SSE}{T}} + (k+2)\log(T)
+$$
 
 </details>
 
 ---
 
-
 ### Q: How does AIC differs from BIC?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-BIC penalizes the number of parameters more heavily than the AIC. Although  If the value of $T$ is large enough, both will lead to the same model.
+BIC penalizes the number of parameters more heavily than the AIC. Although  If the value of $T$  is large enough, both will lead to the same model.
 
 </details>
 
 ---
 
-
 ## Exponential Smoothing
 
-
 ### Q: What are exponential smoothing methods?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1559,37 +1473,34 @@ Exponential smoothing methods are weighted averages of past observations, with t
 
 ---
 
-
 ### Q: What is simple exponential smoothing method?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Simple Exponential Weighted Average, or simple exponential smoothing, is a forecasting method that assigns larger weights to more recent observations and gradually decreases the weights for older observations.
 
-$$\hat{y}_{T+1 | T} = \alpha y_T + \alpha(1-\alpha)y_{T-1}+\alpha(1-\alpha)^2y_{T-2}+...$$Where$0 \le \alpha \le 1$is the smoothing parameter. The rate at which the weights decrease is controlled by the parameter$α$.
+$$
+\hat{y}_{T+1 | T} = \alpha y_T + \alpha(1-\alpha)y_{T-1}+\alpha(1-\alpha)^2y_{T-2}+...
+$$
+Where $0 \le \alpha \le 1$is the smoothing parameter. The rate at which the weights decrease is controlled by the parameter$α$.
 
 </details>
 
 ---
 
-
 ### Q: What occurs in simple exponential smoothing when \(\alpha = 1\)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-For the extreme case where $\alpha = 1$, $\hat{y}_{T+1 | T} = y_T$, and the forecasts are equal to the naïve forecasts.
+For the extreme case where $\alpha = 1$,$\hat{y}_{T+1 | T} = y_T$, and the forecasts are equal to the naïve forecasts.
 
 </details>
 
 ---
 
-
 ### Q: Write the component form of simple exponential smoothing?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1599,27 +1510,26 @@ For simple exponential smoothing, the only component included is the level, $l_t
 The component form of simple exponential smoothing is given by:
 
 $$
-
 \text{Forecast equation} \hat{y}_{t+h | t} = l_t  \\
 
 \text{Smoothing equation} l_t = \alpha y_t + (1-\alpha)l_{t-1}
-
-$$where$l_t$is the level (or the smoothed value) of the series at time$t$.
+$$
+where $l_t$is the level (or the smoothed value) of the series at time$t$.
 
 </details>
 
 ---
 
-
 ### Q: Why can’t we use the exponential smoothing method for data with seasonality and trend?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Simple exponential smoothing has a "flat" forecast function:
 
-$$\hat{y}_{T+h | T} = \hat{y}_{T+1 | T} = l_T, h = 2, 3, ..$$
+$$
+\hat{y}_{T+h | T} = \hat{y}_{T+1 | T} = l_T, h = 2, 3, ..
+$$
 
 That is, all forecasts take the same value, equal to the last level component.
 
@@ -1627,9 +1537,7 @@ That is, all forecasts take the same value, equal to the last level component.
 
 ---
 
-
 ### Q: How does Holt's linear trend method work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1637,22 +1545,19 @@ That is, all forecasts take the same value, equal to the last level component.
 Holt extended simple exponential smoothing to allow the forecasting of data with a trend. This method involves a forecast equation and two smoothing equations (one for the level and one for the trend):
 
 $$
-
 \text{Forecast equation}  \hat{y}_{t+h | t} = l_t + hb_t \\
 
 \text{Level equation}  l_t = \alpha y_t + (1-\alpha)(l_{t-1} + b_{t-1}) \\
 
 \text{Trend equation}  b_t = \beta^* (l_t - l_{t-1}) + (1-\beta^*)b_{t-1}
-
-$$where$l_t$denotes an estimate of the level of the series at time$t$, $b_t$denotes an estimate of the trend (slope) of the series at time$t$, $\alpha$is the smoothing parameter for the level and$\beta^*$ is the smoothing parameter for the trend.
+$$
+where $l_t$denotes an estimate of the level of the series at time$t$, $b_t$denotes an estimate of the trend (slope) of the series at time$t$,$\alpha$is the smoothing parameter for the level and$\beta^*$  is the smoothing parameter for the trend.
 
 </details>
 
 ---
 
-
 ### Q: What is the main issue with Holt's linear trend method?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1663,52 +1568,56 @@ The forecasts generated by Holt’s linear method display a constant trend (incr
 
 ---
 
-
 ### Q: Explain working of damped trend methods?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-In conjunction with the smoothing parameters $\alpha$and$\beta^*$(with values between 0 and 1 as in Holt’s method), damped trend method also includes a damping parameter$0 < \phi < 1$:
+In conjunction with the smoothing parameters $\alpha$and$\beta^*$(with values between 0 and 1 as in Holt’s method), damped trend method also includes a damping parameter$0 < \phi < 1 $:
 
 $$
-
 \text{Forecast equation}  \hat{y}_{t+h | t} = l_t + (\phi + \phi^2 + ... + \phi^h)b_t \\
 
 \text{Level equation}  l_t = \alpha y_t + (1-\alpha)(l_{t-1} + \phi b_{t-1}) \\
 
 \text{Trend equation}  b_t = \beta^* (l_t - l_{t-1}) + (1-\beta^*)\phi b_{t-1}
-
-$$If$\phi = 1$,  the method is identical to Holt’s linear method. For values between $0$and$1$, $\phi$ dampens the trend so that it approaches a constant some time in the future.
+$$
+If $\phi = 1$,  the method is identical to Holt’s linear method. For values between$0$and$1$, $\phi$  dampens the trend so that it approaches a constant some time in the future.
 
 </details>
 
 ---
 
-
 ### Q: What is Holt-Winter's method?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Holt and Winters extended Holt’s method to capture seasonality. The Holt-Winters seasonal method comprises the forecast equation and three smoothing equations:
-- Level $l_t$- Trend$b_t$- Seasonal Component$s_t$*Holt-Winters’ additive method*$$\hat{y}_{t+h|t} = \ell_t + h b_t + s_{t + h - m(k+1)}$$
+- Level $l_t$- Trend$b_t$- Seasonal Component$s_t$*Holt-Winters’ additive method*
 
-$$\ell_t = \alpha (y_t - s_{t-m}) + (1 - \alpha)(\ell_{t-1} + b_{t-1})$$
+$$
+\hat{y}_{t+h|t} = \ell_t + h b_t + s_{t + h - m(k+1)}
+$$
 
-$$b_t = \beta^* (\ell_t - \ell_{t-1}) + (1 - \beta^*) b_{t-1}$$
+$$
+\ell_t = \alpha (y_t - s_{t-m}) + (1 - \alpha)(\ell_{t-1} + b_{t-1})
+$$
 
-$$s_t = \gamma (y_t - \ell_{t-1} - b_{t-1}) + (1 - \gamma) s_{t-m}$$Where$k$is the integer part of$(h-1)/m$. $\alpha$, $\ell_t$and$\gamma$ are the smoothing parameter of level, trend and seasonality.
+$$
+b_t = \beta^* (\ell_t - \ell_{t-1}) + (1 - \beta^*) b_{t-1}
+$$
+
+$$
+s_t = \gamma (y_t - \ell_{t-1} - b_{t-1}) + (1 - \gamma) s_{t-m}
+$$
+Where $k$is the integer part of$(h-1)/m$. $\alpha$, $\ell_t$and$\gamma$  are the smoothing parameter of level, trend and seasonality.
 
 </details>
 
 ---
 
-
 ### Q: In the damped Holt-Winters method with multiplicative seasonality, what role does the parameter \( \phi \) play, and what would be the effect on the trend if \( \phi = 1 \) versus \( \phi < 1 \)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1721,9 +1630,7 @@ This damping effect is beneficial for situations where a continuously increasing
 
 ---
 
-
 ### Q: What are state space models in the context of time series analysis?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1734,9 +1641,7 @@ State space models in time series analysis consist of two main components: a mea
 
 ---
 
-
 ### Q: What is difference between methods and models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1748,43 +1653,45 @@ State space models in time series analysis consist of two main components: a mea
 
 ---
 
-
 ### Q: What is the forecast error in simple exponential smoothing model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Forecast error is given by:
 
-$$e_t = y_t - \hat{y}_{t | t-1}$$
+$$
+e_t = y_t - \hat{y}_{t | t-1}
+$$
 
-$$e_t = y_t - l_{t-1}$$
+$$
+e_t = y_t - l_{t-1}
+$$
 
 </details>
 
 ---
-
 
 ### Q: What is the forecast error in simple exponential smoothing model? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Forecast error is given by:
 
-$$e_t = y_t - \hat{y}_{t | t-1}$$
+$$
+e_t = y_t - \hat{y}_{t | t-1}
+$$
 
-$$e_t = y_t - l_{t-1}$$
+$$
+e_t = y_t - l_{t-1}
+$$
 
 </details>
 
 ---
 
-
 ### Q: Write the expression for SES with additive errors?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1793,15 +1700,20 @@ Forecast error is given by:
 
 - Measurement equation: It captures relationship between observations and states
 
-$$y_t = l_{t-1} + \eta_t$$- State equation: Evolution of states through time$$l_t = l_{t-1} + \alpha \eta_t$$
+$$
+y_t = l_{t-1} + \eta_t
+$$
+- State equation: Evolution of states through time
+
+$$
+l_t = l_{t-1} + \alpha \eta_t
+$$
 
 </details>
 
 ---
 
-
 ### Q: For an additive error model, maximising the likelihood (assuming normally distributed errors) gives the same results as minimising the sum of squared errors?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1812,9 +1724,7 @@ True
 
 ---
 
-
 ### Q: For an multiplicative error model, maximising the likelihood (assuming normally distributed errors) gives the same results as minimising the sum of squared errors?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1825,22 +1735,29 @@ False
 
 ---
 
-
-### Q: Write the expression of $AIC$, $AIC_{c}$and$BIC$ for ETS models?
-
+### Q: Write the expression of $AIC$, $AIC_{c}$and$BIC$  for ETS models?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 For ETS models, Akaike’s Information Criterion (AIC) is defined as
 
-$$AIC = -2\log{(L)} + 2k$$
+$$
+AIC = -2\log{(L)} + 2k
+$$
 
 where L is the likelihood of the model and k is the total number of parameters and initial states that have been estimated (including the residual variance).
 
 The AIC corrected for small sample bias ($AIC_c$) is defined as:
 
-$$AIC_c = AIC + \frac{2k(k+1)}{T - k -1}$$and the Bayesian Information Criterion (BIC) is$$BIC = AIC + k[\log{(T)} - 2]$$
+$$
+AIC_c = AIC + \frac{2k(k+1)}{T - k -1}
+$$
+and the Bayesian Information Criterion (BIC) is
+
+$$
+BIC = AIC + k[\log{(T)} - 2]
+$$
 
 </details>
 
@@ -1848,9 +1765,7 @@ $$AIC_c = AIC + \frac{2k(k+1)}{T - k -1}$$and the Bayesian Information Criterion
 
 ## ARIMA Models
 
-
 ### Q: What is the main difference between ARIMA models and exponential smoothing models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1861,9 +1776,7 @@ Exponential smoothing models are based on a description of the trend and seasona
 
 ---
 
-
 ### Q: What What do you mean by stationary time series?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1874,9 +1787,7 @@ A stationary time series is one whose statistical properties do not depend on th
 
 ---
 
-
 ### Q: What What do you mean by stationary time series? (Part 2)
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1887,9 +1798,7 @@ A stationary time series is characterized by statistical properties such as mean
 
 ---
 
-
 ### Q: When is a time series considered non-stationary?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1900,9 +1809,7 @@ Non-stationary time series exhibit trends or seasonal patterns that affect their
 
 ---
 
-
 ### Q: Is white noise series stationary?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1913,9 +1820,7 @@ Yes, white noise series is stationary — it does not matter when you observe it
 
 ---
 
-
 ### Q: Is a time series that exhibits cyclic behavior but lacks any trend or seasonality considered stationary?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1926,9 +1831,7 @@ Yes, a time series with cyclic behaviour (but with no trend or seasonality) is s
 
 ---
 
-
 ### Q: How can we make non-stationary time series stationary?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1939,9 +1842,7 @@ To make a non-stationary time series stationary — compute the differences betw
 
 ---
 
-
 ### Q: How does differencing transform a non-stationary time series into a stationary one?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1952,9 +1853,7 @@ Differencing can help stabilize the mean of a time series by removing changes in
 
 ---
 
-
 ### Q: How can we stabilize the variance of a time series?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1965,9 +1864,7 @@ Transformations such as logarithms can help to stabilise the variance of a time 
 
 ---
 
-
 ### Q: How can one determine if a time series is stationary?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1978,9 +1875,7 @@ An ACF (Autocorrelation Function) plot can help identify whether a time series i
 
 ---
 
-
 ### Q: What is second order differencing?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1988,15 +1883,20 @@ An ACF (Autocorrelation Function) plot can help identify whether a time series i
 Second-order differencing is a technique used in time series analysis to make a non-stationary series stationary. It involves applying differencing twice to the original time series data.
 - The first-order difference of a time series is calculated by subtracting the previous observation from the current observation:
 
-$$Y'_{t} = Y_t - Y_{t-1}$$- The second-order difference is calculated as:$$Y''_{t} = Y'_{t} - Y'_{t-1} = Y_t - 2Y_{t-1} + Y_{t-2}$$
+$$
+Y'_{t} = Y_t - Y_{t-1}
+$$
+- The second-order difference is calculated as:
+
+$$
+Y''_{t} = Y'_{t} - Y'_{t-1} = Y_t - 2Y_{t-1} + Y_{t-2}
+$$
 
 </details>
 
 ---
 
-
 ### Q: When is Second-Order Differencing Used?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2007,28 +1907,26 @@ Second-order differencing is useful when the data has a second-degree trend or w
 
 ---
 
-
 ### Q: What is seasonal differencing?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 A seasonal difference is the difference between an observation and the previous observation from the same season. So
 
-$$y'_{t} = y_t - y_{t-m}$$
+$$
+y'_{t} = y_t - y_{t-m}
+$$
 
 where m = the number of seasons.
 
-Note that these are also called lag-m differences, as we subtract the observation after a lag of $m$ periods.
+Note that these are also called lag-m differences, as we subtract the observation after a lag of $m$  periods.
 
 </details>
 
 ---
 
-
 ### Q: Why is it important to avoid applying more differencing than necessary in time series analysis?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2039,9 +1937,7 @@ Applying more differences than necessary in time series analysis can lead to fal
 
 ---
 
-
 ### Q: How can we determine the required order of differencing?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2054,24 +1950,22 @@ We can conduct some statistical tests to determine the required order of differe
 
 ---
 
-
-### Q: How can the $d$th-order difference be expressed using backshift notation?
-
+### Q: How can the $d$  th-order difference be expressed using backshift notation?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-In general, a $d$th-order difference can be written as:
+In general, a $d$  th-order difference can be written as:
 
-$$(1-B)^d y_t$$
+$$
+(1-B)^d y_t
+$$
 
 </details>
 
 ---
 
-
 ### Q: What does autoregression indicates?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2082,9 +1976,7 @@ The term autoregression indicates that it is a regression of the variable agains
 
 ---
 
-
 ### Q: What are the differences between a linear regression model and an autoregression model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2095,9 +1987,7 @@ In a multiple regression model, the variable of interest is forecasted using a l
 
 ---
 
-
 ### Q: What are the differences between a linear regression model and an autoregression model? (Part 2)
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2108,22 +1998,24 @@ In a linear regression model, the variable of interest is forecasted using a lin
 
 ---
 
-
 ### Q: State the expression of autoregressive model of order $p$?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-An autoregressive model of order $p$**AR(p) model** can be written as:$$y_t = c + \phi_1 y_{t-1} + \phi_2 y_{t-2} + ... + \phi_p y_{t-p} + \eta_t$$where$\eta_t$ is white noise.
+An autoregressive model of order $p$**AR(p) model** can be written as:
+
+$$
+y_t = c + \phi_1 y_{t-1} + \phi_2 y_{t-2} + ... + \phi_p y_{t-p} + \eta_t
+$$
+
+where $\eta_t$  is white noise.
 
 </details>
 
 ---
 
-
 ### Q: Why are autoregressive models typically restricted to stationary data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2134,9 +2026,7 @@ Autoregressive models are typically restricted to stationary data because their 
 
 ---
 
-
 ### Q: What are the parameter constraints for stationarity in AR(1) and AR(2) models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2150,24 +2040,23 @@ For the model to remain stationary, certain constraints are placed on the parame
 
 ---
 
-
 ### Q: How does moving average model works?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 A moving average model uses past forecast errors in a regression-like model:
 
-$$y_t = c + \eta_t + \theta_1 \eta_{t-1} + \theta_2 \eta_{t-2} + ... + \theta_q \eta_{t-q}$$where$\eta_t$is white noise. It is called as a moving average model of order$q$.
+$$
+y_t = c + \eta_t + \theta_1 \eta_{t-1} + \theta_2 \eta_{t-2} + ... + \theta_q \eta_{t-q}
+$$
+where $\eta_t$is white noise. It is called as a moving average model of order$ q$.
 
 </details>
 
 ---
 
-
 ### Q: What is the difference between moving average model and moving average smoothing?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2178,9 +2067,7 @@ A moving average model is used for forecasting future values, while moving avera
 
 ---
 
-
 ### Q: In the context of ARIMA what does integration mean?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2191,9 +2078,7 @@ Integration is the reverse of differencing.
 
 ---
 
-
 ### Q: What does ARIMA stands for?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2204,9 +2089,7 @@ ARIMA is an acronym for AutoRegressive Integrated Moving Average
 
 ---
 
-
 ### Q: What is non seasonal ARIMA model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2215,30 +2098,29 @@ Non seasonal ARIMA model combines differencing with autoregression and a moving 
 
 The full model **ARIMA(p, d, q)** can be written as:
 
-$$y'_t = c + \phi_1 y'_{t-1} + ... + \phi_p y'_{t-p} + \theta_1 \eta_{t-1} + ... + \theta_q \eta_{t-q} + \eta_t$$where$y'_t$is the differenced series (it may have been differenced more than once). The “predictors” on the right hand side include both lagged values of$y_t$ and lagged errors. 
+$$
+y'_t = c + \phi_1 y'_{t-1} + ... + \phi_p y'_{t-p} + \theta_1 \eta_{t-1} + ... + \theta_q \eta_{t-q} + \eta_t
+$$
+where $y'_t$is the differenced series (it may have been differenced more than once). The “predictors” on the right hand side include both lagged values of$y_t$  and lagged errors. 
 
-Here, $p$is order of the autoregressive part,$d$is degree of first differencing involved and$q$ is order of the moving average part.
+Here, $p$is order of the autoregressive part,$d$is degree of first differencing involved and$q$  is order of the moving average part.
 
 </details>
 
 ---
 
-
 ### Q: What is partial autocorrelation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Partial autocorrelation measures the relationship between $y_t$and$y_{t-k}$after removing effects of lags$1, ,2 , 3,.., k-1$.
+Partial autocorrelation measures the relationship between $y_t$and$y_{t-k}$after removing effects of lags$ 1, ,2 , 3,.., k-1$.
 
 </details>
 
 ---
 
-
 ### Q: Why do we need partial autocorrelation instead of just autocorrelation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2249,9 +2131,7 @@ Autocorrelations measure the relationship between \( y_t \) and \( y_{t-k} \) fo
 
 ---
 
-
 ### Q: How can we determine the parameters of ARIMA models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2262,9 +2142,7 @@ Using maximum likelihood estimation (MLE)
 
 ---
 
-
 ### Q: How does seasonal ARIMA (SARIMA) works?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2286,9 +2164,7 @@ The SARIMA (Seasonal ARIMA) model is an extension of the ARIMA model that accoun
 
 ---
 
-
 ### Q: How does the value of \(d\) affect the prediction interval in ARIMA models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2299,9 +2175,7 @@ Higher values of \(d\) (e.g., \(d = 1\) or \(d = 2\)) mean that the data is bein
 
 ---
 
-
 ### Q: State the difference between ARIMA and ETS models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2321,9 +2195,7 @@ Higher values of \(d\) (e.g., \(d = 1\) or \(d = 2\)) mean that the data is bein
 
 ---
 
-
 ### Q: What are the differences between ARIMA models and regression models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2343,9 +2215,7 @@ Higher values of \(d\) (e.g., \(d = 1\) or \(d = 2\)) mean that the data is bein
 
 ## Dynamic regression models
 
-
 ### Q: What are the limitations of regression and ARIMA models, and how do dynamic regression models address these needs?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2358,22 +2228,30 @@ To overcome these limitations, dynamic regression models merge the strengths of 
 
 ---
 
-
 ### Q: How does dynamic regression models differ from regression models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Traditional regression model takes the form of
 
-$$y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \epsilon_t$$where$y_t$is a linear function of the$k$predictor variables$(x_{1, t},...,x_{k, t})$and$\eta_t$ is usually assumed to be an uncorrelated error term (i.e it is white noise).
+$$
+y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \epsilon_t
+$$
+where $y_t$is a linear function of the$k$predictor variables$(x_{1, t},...,x_{k, t})$and$\eta_t$  is usually assumed to be an uncorrelated error term (i.e it is white noise).
 
-Dynamic regression allows the errors from a regression to contain autocorrelation. To emphasise this change in perspective, we will replace $\epsilon_t$with$\eta_t$in the equation. The error series$\eta_t$ is assumed to follow an ARIMA model. 
+Dynamic regression allows the errors from a regression to contain autocorrelation. To emphasise this change in perspective, we will replace $\epsilon_t$with$\eta_t$in the equation. The error series$\eta_t$  is assumed to follow an ARIMA model. 
 
-If $\eta_t$follows an ARIMA(1, 1, 1) model, we can write$$y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \eta_t$$
+If $\eta_t$ follows an ARIMA(1, 1, 1) model, we can write
 
-$$(1 - \phi_1 B)(1 - B)\eta_t = (1 + \theta_1 B)\epsilon_t$$Where$\epsilon_t$ is a white noise series.
+$$
+y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \eta_t
+$$
+
+$$
+(1 - \phi_1 B)(1 - B)\eta_t = (1 + \theta_1 B)\epsilon_t
+$$
+Where $\epsilon_t$  is a white noise series.
 
 Note that the model includes two error terms: the error from the regression model, denoted as \( \eta_t \), and the error from the ARIMA model, denoted as \( \epsilon_t \). It is important to note that only the errors from the ARIMA model are assumed to be white noise.
 
@@ -2381,9 +2259,7 @@ Note that the model includes two error terms: the error from the regression mode
 
 ---
 
-
 ### Q: What must be checked before estimating a regression with ARMA errors?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2394,9 +2270,7 @@ All of the variables in the model, including \(y_t\) and the predictors \((x_{1,
 
 ---
 
-
 ### Q: How do you forecast using a regression model with ARIMA errors?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2406,11 +2280,9 @@ To forecast using a regression model with ARIMA errors, you need to forecast bot
 </details>
 
 ---
-
 
 ### Q: How do you forecast using a regression model with ARIMA errors? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -2420,9 +2292,7 @@ To forecast using a regression model with ARIMA errors, you need to forecast bot
 
 ---
 
-
 ### Q: What is dynamic harmonic regression?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2441,25 +2311,21 @@ where \(f\) is the frequency of the cycles.
 
 ---
 
-
 ### Q: What is benefit of dynamic harmonic regression?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 - It allows any length seasonality;
 - for data with more than one seasonal period, Fourier terms of different frequencies can be included;
-- the smoothness of the seasonal pattern can be controlled by $K$, the number of Fourier sin and cos pairs – the seasonal pattern is smoother for smaller values of $K$
+- the smoothness of the seasonal pattern can be controlled by $K$, the number of Fourier sin and cos pairs – the seasonal pattern is smoother for smaller values of $K$ 
 - the short-term dynamics are easily handled with a simple ARMA error.
 
 </details>
 
 ---
 
-
 ### Q: What are lag predictors?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2470,9 +2336,7 @@ Lagged predictors are predictors that have an impact that is not immediate. For 
 
 ---
 
-
 ### Q: What challenges arise when forecasting higher frequency time series data with complicated seasonal patterns?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2485,9 +2349,7 @@ Higher frequency time series data, such as daily and hourly data, often exhibit 
 
 ## Prophet Model
 
-
 ### Q: What is the Prophet model, and what are its key features?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2513,9 +2375,7 @@ Key features include:
 
 ## Vector Autoregressions
 
-
 ### Q: What is vector autoregression?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2526,9 +2386,7 @@ Vector autoregression (VAR) is a statistical model designed to capture the relat
 
 ---
 
-
 ### Q: How does the VAR model address stationarity and non-stationarity in time series data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2539,26 +2397,26 @@ If the series are stationary, we forecast them by fitting a VAR to the data dire
 
 ---
 
-
 ### Q: Write the governing equation of 2-dimensional VAR(1) model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 2-dimensional VAR(1) model as:
 
-$$y_{1, t} = c_1 + \phi_{11,1}y_{1,t-1} + \phi_{12,1}y_{2,t-1} + \epsilon_{1, t}$$
+$$
+y_{1, t} = c_1 + \phi_{11,1}y_{1,t-1} + \phi_{12,1}y_{2,t-1} + \epsilon_{1, t}
+$$
 
-$$y_{2, t} = c_2 + \phi_{21,1}y_{1,t-1} + \phi_{22,1}y_{2,t-1} + \epsilon_{2, t}$$
+$$
+y_{2, t} = c_2 + \phi_{21,1}y_{1,t-1} + \phi_{22,1}y_{2,t-1} + \epsilon_{2, t}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What are the challenges of dealing with weekly, daily and sub-daily data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2575,9 +2433,7 @@ They involve multiple seasonal patterns, and so we need to use a method that han
 
 ---
 
-
 ### Q: How to handle missing values in time series?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>

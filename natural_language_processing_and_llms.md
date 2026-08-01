@@ -11,7 +11,6 @@
 
 ## RNNs, LSTMs & Language Models
 
-
 ### Q: What is the primary motivation for RNNs and LSTMs in NLP? How do you apply dropout in RNNs?
 
 <details>
@@ -27,20 +26,23 @@
 
 ## Density Estimation & Training Paradigms
 
-
 ### Q: What is Density Estimation? Why is a Language Model considered a Density Estimator?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Density Estimation**: The task of estimating the probability distribution $P(X)$from observed sample data$X$.
-- **LM as Density Estimator**: A language model models the joint probability distribution of sequences of words $W = (w_1, w_2, \dots, w_T)$using the chain rule of probability:$$P(W) = \prod_{t=1}^{T} P(w_t \mid w_1, w_2, \dots, w_{t-1})$$
+- **Density Estimation**: The task of estimating the probability distribution $P(X)$from observed sample data$ X$.
+- **LM as Density Estimator**: A language model models the joint probability distribution of sequences of words $W = (w_1, w_2, \dots, w_T)$  using the chain rule of probability:
+
+$$
+P(W) = \prod_{t=1}^{T} P(w_t \mid w_1, w_2, \dots, w_{t-1})
+$$
+
   It assigns probabilities to token sequences, identifying fluent vs ungrammatical sequences.
 
 </details>
 
 ---
-
 
 ### Q: Language models are often called unsupervised, but some argue their mechanism is self-supervised/supervised. What are your thoughts?
 
@@ -58,7 +60,6 @@ Language modeling is best described as **Self-Supervised Learning**:
 
 ## Word Embeddings
 
-
 ### Q: Why do we need Word Embeddings? Compare Count-Based vs Prediction-Based Embeddings.
 
 <details>
@@ -75,16 +76,23 @@ Language modeling is best described as **Self-Supervised Learning**:
 
 ## TF-IDF & Cosine Similarity
 
-
 ### Q: Given 5 documents and Query Q: "The early bird gets the worm", how does TF-IDF rank document relevance?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Term Frequency ($\text{TF}_{t,d}$)**: Number of occurrences of term $t$in document$d$.
+1. **Term Frequency ($\text{TF}_{t,d}$)**: Number of occurrences of term$t$in document$d$.
 2. **Inverse Document Frequency ($\text{IDF}_t$)**: Downweights terms that appear frequently across all documents:
-   $$\text{IDF}_t = \log\left(\frac{N}{\text{DF}_t}\right)$$3. **Cosine Similarity**: Measures directional alignment between query vector$\vec{q}$and document vector$\vec{d}$:
-   $$\text{Sim}(\vec{q}, \vec{d}) = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|}$$
+
+$$
+\text{IDF}_t = \log\left(\frac{N}{\text{DF}_t}\right)
+$$
+
+3. **Cosine Similarity**: Measures directional alignment between query vector $\vec{q}$and document vector$\vec{d}$:
+
+$$
+\text{Sim}(\vec{q}, \vec{d}) = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|}
+$$
 
 Rare, informative words (e.g., "worm", "early") contribute heavily to TF-IDF score, while common stop words ("the") are penalized by low IDF.
 
@@ -93,7 +101,6 @@ Rare, informative words (e.g., "worm", "early") contribute heavily to TF-IDF sco
 ---
 
 ## N-Gram Language Models
-
 
 ### Q: Should you choose an N-Gram or Neural Language Model for a tiny dataset (~10,000 tokens)?
 
@@ -108,8 +115,7 @@ For a tiny dataset of 10,000 tokens:
 
 ---
 
-
-### Q: Does increasing context length $N$ in N-gram models always improve performance?
+### Q: Does increasing context length $N$  in N-gram models always improve performance?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>

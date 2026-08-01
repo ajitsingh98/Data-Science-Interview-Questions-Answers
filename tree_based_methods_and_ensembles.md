@@ -1,9 +1,9 @@
-# Data Science Interview Questions And Answers
+# Tree Based Methods in Machine Learning
 
-## Tree Based Methods in Machine Learning
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-Contents
-----
+
+## Table of Contents
 
 - [Decision Trees](#decision-trees)
 - [Ensemble Learning](#ensemble-learning)
@@ -14,9 +14,7 @@ Contents
 
 ## Decision Trees
 
-
 ### Q: What is a decision tree?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -27,9 +25,7 @@ Decision Trees(DTs) are non-parametric supervised learning method which can be e
 
 ---
 
-
 ### Q: What is the purpose of decision trees in machine learning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -39,11 +35,9 @@ The main purpose of DTs in machine learning is to model data by learning simple 
 </details>
 
 ---
-
 
 ### Q: How is a decision tree built?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -53,9 +47,7 @@ The main purpose of DTs in machine learning is to model data by learning simple 
 
 ---
 
-
 ### Q: What is over-fitting in decision trees, and how can it be prevented?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -82,9 +74,7 @@ Different ways of preventing over-fitting:
 
 ---
 
-
 ### Q: What are some common impurity measures used in decision tree algorithms?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -107,9 +97,7 @@ Here are the most common ones:
 
 ---
 
-
 ### Q: List down pros and cons of different splitting criteria?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -159,9 +147,7 @@ Here are the most common ones:
 
 ---
 
-
 ### Q: What is pruning in decision trees?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -177,9 +163,7 @@ There are two main types of pruning:
 
 ---
 
-
 ### Q: Can decision trees handle categorical data, and how is it done?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -200,9 +184,7 @@ Yes, decision trees can handle categorical data effectively. Here's how it is do
 
 ---
 
-
 ### Q: What are some advantages of decision trees in machine learning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -217,9 +199,7 @@ Yes, decision trees can handle categorical data effectively. Here's how it is do
 
 ---
 
-
 ### Q: What are some limitations of decision trees?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -235,9 +215,7 @@ Yes, decision trees can handle categorical data effectively. Here's how it is do
 
 ---
 
-
 ### Q: What is ID3, and how does it work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -250,10 +228,7 @@ It uses top down greedy approach ti build a decision tree and was invented by Ro
 
 ---
 
-
-
 ### Q: What is information gain in ID3?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -262,22 +237,23 @@ Information Gain calculates the reduction in the entropy and measures how good a
 
 Information Gain for a feature column A is calculated as:
 
-$$IG(S, A) = Entropy(S) - \sum{((|S_v|/|S|)*Entropy(S_v))}$$where$S_v$is the set of rows in$S$for which the feature column$A$has value$v$, $|Sᵥ|$is the number of rows in$S_v$and likewise$|S|$is the number of rows in$S$.
+$$
+IG(S, A) = Entropy(S) - \sum{((|S_v|/|S|)*Entropy(S_v))}
+$$
+where $S_v$is the set of rows in$S$for which the feature column$A$has value$v$, $|Sᵥ|$is the number of rows in$ S_v$and likewise$|S|$is the number of rows in$ S$.
 
 </details>
 
 ---
 
-
 ### Q: What are the steps involved in building a decision tree with ID3?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The following steps involve in building a ID3 trees:
 1. Calculate the Information Gain for each attribute.
-2. Split the dataset $S$ into subsets with the attribute having highest IG.
+2. Split the dataset $S$  into subsets with the attribute having highest IG.
 3. Make a decision tree node using the feature with maximum Information Gain.
 4. If all the rows belong to same class, make the current node as leaf node with the class as it label.
 5. Repeat for the remaining feature until we run out of all features or the decision tree has all leaf nodes.
@@ -286,9 +262,7 @@ The following steps involve in building a ID3 trees:
 
 ---
 
-
 ### Q: What are the limitations of ID3?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -303,9 +277,7 @@ Limitations of ID3:
 
 ---
 
-
 ### Q: How does ID3 handle over-fitting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -318,9 +290,7 @@ It handles overfitting cases using following methods:
 
 ---
 
-
 ### Q: What is the difference between ID3 and C4.5?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -339,9 +309,7 @@ It handles overfitting cases using following methods:
 
 ---
 
-
 ### Q: Can you explain how the concept of entropy is used in ID3?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -350,11 +318,13 @@ Here's how entropy is used in the ID3 algorithm:
 
 - **Dataset Splitting**: ID3 uses entropy to decide which attribute to split the data on at each step in the tree. The goal is to find the attribute that results in the highest gain in information or the largest decrease in entropy. This is done by calculating the entropy before and after the dataset is split on each attribute.
 
-- **Information Gain**: The information gain for an attribute is calculated as the difference between the entropy of the parent dataset and the weighted sum of the entropies of the subsets that result from splitting the dataset on the attribute. The formula for information gain $\( IG \)$is:$$
+- **Information Gain**: The information gain for an attribute is calculated as the difference between the entropy of the parent dataset and the weighted sum of the entropies of the subsets that result from splitting the dataset on the attribute. The formula for information gain $\( IG \)$ is:$$ 
+
   \[
   IG(S, A) = H(S) - \sum_{v \in Values(A)} \frac{|S_v|}{|S|} H(S_v)
   \]
-  $$
+  $$ 
+
   Here, \( A \) is the attribute being considered for splitting, \( Values(A) \) are the different values that \( A \) can take, \( S_v \) is the subset of \( S \) for which \( A \) has value \( v \), and \( |S_v|/|S| \) is the proportion of the number of elements in \( S_v \) to the number of elements in \( S \).
 
 - **Selecting the Best Attribute**: The attribute with the highest information gain is chosen for the split because it provides the most significant reduction in entropy, indicating a more definitive classification rule at that node of the tree.
@@ -363,9 +333,7 @@ Here's how entropy is used in the ID3 algorithm:
 
 </details>
 
-
 ### Q: What are different criteria along which the implementation of DTs varies?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -377,9 +345,7 @@ Here's how entropy is used in the ID3 algorithm:
 
 </details>
 
-
 ### Q: What is the difference between CART and ID3/C4.5?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -396,9 +362,7 @@ Here's how entropy is used in the ID3 algorithm:
 
 ---
 
-
 ### Q: How does CART handle over-fitting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -422,7 +386,6 @@ CART (Classification and Regression Trees) handles overfitting primarily through
 ---
 
 ## Ensemble Learning
-
 
 ### Q: Mark all the approaches which can be utilized to boost a single model performance:
 
@@ -456,9 +419,7 @@ Stacking mainly differ from bagging and boosting on two points:
 
 ---
 
-
 ### Q: What are the key components of a stacking ensemble?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -478,9 +439,7 @@ The main components involved in stacking are as follows:
 
 ---
 
-
 ### Q: How do you prevent over-fitting in a stacked ensemble?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -499,9 +458,7 @@ Techniques to reduce overfitting in a stacked ensemble:
 
 ---
 
-
 ### Q: Can you explain the process of creating a stacking ensemble?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -530,9 +487,7 @@ So, assume that we want to fit a stacking ensemble composed of L weak learners. 
 
 ---
 
-
 ### Q: What is the advantage of stacking over using a single powerful model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -553,9 +508,7 @@ Here are the key benefits:
 
 ---
 
-
 ### Q: What are some popular algorithms used as base models in stacking ensembles?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -589,9 +542,7 @@ Yes, stacking ensembles come with several limitations and challenges that can af
 
 ---
 
-
 ### Q: When should you consider using stacking in a machine learning project?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -602,9 +553,7 @@ Yes, stacking ensembles come with several limitations and challenges that can af
 
 ---
 
-
 ### Q: How does blending work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -623,9 +572,7 @@ You can consider the blending process to be:
 
 ---
 
-
 ### Q: Can you explain the difference between stacking and blending?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -636,9 +583,7 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 
 ---
 
-
 ### Q: What is the purpose of a meta-model in blending?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -649,9 +594,7 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 
 ---
 
-
 ### Q: What are the advantages of blending?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -664,9 +607,7 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 
 ---
 
-
 ### Q: What are the common algorithms used for blending?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -677,9 +618,7 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 
 ---
 
-
 ### Q: What precautions should you take when implementing blending?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -691,9 +630,7 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 
 ---
 
-
 ### Q: Can you explain the difference between bagging, boosting, and blending?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -705,9 +642,7 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 
 ---
 
-
 ### Q: When should you consider using blending in a machine learning project?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -719,9 +654,7 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 
 ---
 
-
 ### Q: What challenges can arise when implementing blending in practice?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -732,7 +665,6 @@ The difference between stacking and blending is that Stacking uses out-of-fold p
 </details>
 
 ---
-
 
 ### Q: An argument erupts between two senior data-scientists regarding the choice of an approach for training of a very small medical corpus. One suggest that bagging is superior while the other suggests stacking. Which technique, bagging or stacking, in your opinion is superior? Explain in detail.
 
@@ -747,7 +679,6 @@ The correct choice would be stacking. Since data size is small, we would most li
 </details>
 
 ---
-
 
 ### Q: Below Fig depicts a part of a specific ensembling approach applied to the models $x1, x2...xk$.
 
@@ -779,8 +710,6 @@ The approach which is depicted is the first phase of stacking. In stacking, we f
 
 </details>
 
-
-
 ### Q: 1. **True or false**: Training an ensemble of a single monolithic architecture results in lower model diversity and possibly decreased model prediction accuracy.
 
 2. **True or false**: The generalization accuracy of an ensemble increases with the number of well-trained models it consists of.
@@ -800,9 +729,7 @@ perform worse than an heterogeneous ensemble.
 
 ---
 
-
 ### Q: 1. In a transfer-learning experiment conducted by a researcher, a number of ImageNet-pretrained CNN classifiers, selected from Table 6.1 are trained on five different folds drawn from the same corpus. Their outputs are fused together producing a composite machine. Ensembles of these convolutional neural networks architectures have been extensively studies an evaluated in various ensembling approaches. Is it likely that the composite machine will produce a prediction with higher accuracy than that of any individual classifier? Explain why.
-
 
 <table align='center'>
 <tr>
@@ -830,7 +757,6 @@ perform worse than an heterogeneous ensemble.
 
 ---
 
-
 ### Q: In committee machines, mark all the combiners that do not make direct use of the input:
 
   1. A mixture of experts 
@@ -847,7 +773,6 @@ Boosting is the only one that does not.
 
 ---
 
-
 ### Q: Refer to the papers: <a href='https://arxiv.org/pdf/1506.02142.pdf'>Dropout as a Bayesian Approximation</a> and <a href='https://arxiv.org/pdf/1906.02530.pdf'>Can You TrustYour Model’s Uncertainty?</a> and answer the following question:
 
   1. Do deep ensembles achieve a better performance on out-of-distribution uncertainty benchmarks compared with Monte-Carlo (MC)-dropout?
@@ -861,9 +786,7 @@ Yes, they do
 
 ---
 
-
 ### Q: **True or False**: Considering a binary classification problem $(y = 0\ or \ y = 1)$, ensemble averaging, wherein the outputs of individual models are linearly combined to produce a fused output is a form of a static committee machine.
-
 
 <table align='center'>
 <tr>
@@ -886,7 +809,6 @@ ors.
 
 ---
 
-
 ### Q: **True or false**: When using a single model, the risk of overfitting the data increases when
 
 the number of adjustable parameters is large compared to cardinality (i.e., size of the set) of the training corpus.
@@ -900,9 +822,7 @@ the number of adjustable parameters is large compared to cardinality (i.e., size
 
 ---
 
-
 ### Q: **True or false**: If we have a committee of $K$trained models and the errors are uncorrelated, then by averaging them the average error of a model is reduced by a factor of$K$.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -913,7 +833,6 @@ and therefore the actual error can not be reduced by a factor of K.
 </details>
 
 ---
-
 
 ### Q: 1. Define ensemble learning in the context of machine learning.
 
@@ -933,9 +852,7 @@ and therefore the actual error can not be reduced by a factor of K.
 
 ---
 
-
 ### Q: Your colleague, a well-known expert in ensembling methods, writes the following pseudo-code in Python shown in Fig. 6.7 for the training of a neural network. This runs inside a standard loop in each training and validation step.
-
 
   ```python
 
@@ -962,9 +879,7 @@ and therefore the actual error can not be reduced by a factor of K.
 
 ---
 
-
 ### Q: Assume further that your colleague amends the code as follows.
-
 
 ```python
 
@@ -997,9 +912,7 @@ may contribute to diversifying the trained neural network models.
 
 ---
 
-
 ### Q: 1. Assume your colleague, a veteran in DL and an expert in ensembling methods writes the following Pseudo code shown in Fig. 6.9 for the training of several neural networks. This code snippet is executed inside a standard loop in each and every training/validation epoch.
-
 
     ```python
 
@@ -1028,9 +941,7 @@ may contribute to diversifying the trained neural network models.
 
 ---
 
-
 ### Q: 1. Referring to Below fig. which depicts a specific learning rate schedule, describe the basic notion behind its mechanism.
-
 
 <table align='center'>
 <tr>
@@ -1047,7 +958,6 @@ may contribute to diversifying the trained neural network models.
 
 3. Explain how a cyclic cosine annealing schedule as proposed by Loshchilov [10] and [13] is used to converge to multiple local minima.
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -1059,12 +969,10 @@ may contribute to diversifying the trained neural network models.
 
 ---
 
-
 ### Q: Two popular algorithms for winning Kaggle solutions are Light GBM and XGBoost. They are both gradient boosting algorithms.
 
   1. What is gradient boosting?
   1. What problems is gradient boosting good for?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1088,9 +996,7 @@ In gradient boosting, the ensemble model we try to build is also a weighted sum 
 
 ## Random Forest 
 
-
 ### Q: Complete the sentence: A random forest is a type of a decision tree which utilizes `[bagging/boosting]`
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1099,9 +1005,7 @@ A random forest is a type of a decision tree which utilizes **bagging**
 
 </details>
 
-
 ---
-
 
 ### Q: The algorithm depicted in Fig. 6.1 was found in an old book about ensembling. Name the
 
@@ -1137,9 +1041,7 @@ The given algorithm is a typical bagging method.
 
 ---
 
-
 ### Q: What is a Random Forest, and how does it work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1151,9 +1053,7 @@ The given algorithm is a typical bagging method.
 
 ---
 
-
 ### Q: How do you choose between different types of decision tree algorithms (e.g., CART, ID3, C4.5, Random Forest)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1165,9 +1065,7 @@ The given algorithm is a typical bagging method.
 
 ---
 
-
 ### Q: What is the difference between a decision tree and a Random Forest?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1179,10 +1077,7 @@ The given algorithm is a typical bagging method.
 
 ---
 
-
-
 ### Q: Why is it called a "Random" Forest?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1194,9 +1089,7 @@ The given algorithm is a typical bagging method.
 
 ---
 
-
 ### Q: What is the purpose of feature bagging in a Random Forest?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1208,9 +1101,7 @@ The given algorithm is a typical bagging method.
 
 ---
 
-
 ### Q: How does a Random Forest handle missing data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1222,9 +1113,7 @@ The given algorithm is a typical bagging method.
 
 ---
 
-
 ### Q: What are the advantages of using Random Forests?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1236,9 +1125,7 @@ The given algorithm is a typical bagging method.
 
 ---
 
-
 ### Q: What is out-of-bag error, and how is it used in Random Forests?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1249,9 +1136,7 @@ Out-of-Bag estimation is
 
 ---
 
-
 ### Q: What is the issue with Gini impurity?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1263,9 +1148,7 @@ Out-of-Bag estimation is
 
 ---
 
-
 ### Q: Can you explain the concept of feature importance in a Random Forest?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1276,7 +1159,7 @@ There are primarily two ways to compute feature importance in Random Forests:
 
 1. Mean decrease impurity
 
-We can obtain overall summary of the importance of each predictor using the RSS(for bagging regression trees) or Gini index(for bagging classification trees). In case of bagging regression trees, we can record total amount that the RSS is decreased due to splits over a given predictor, averaged over all $B$trees. A large value indicates an important predictor. Similarly, in the context of bagging classification trees, we can add up the total amount that the Gini index is decreased by splits over a given predictor, averaged over all$B$ trees.
+We can obtain overall summary of the importance of each predictor using the RSS(for bagging regression trees) or Gini index(for bagging classification trees). In case of bagging regression trees, we can record total amount that the RSS is decreased due to splits over a given predictor, averaged over all $B$trees. A large value indicates an important predictor. Similarly, in the context of bagging classification trees, we can add up the total amount that the Gini index is decreased by splits over a given predictor, averaged over all$B$  trees.
 
 2. Mean Decrease in Accuracy(Permutation Importance)
 
@@ -1286,9 +1169,7 @@ Permutation Importance is based on the idea of measuring the impact on model acc
 
 ---
 
-
 ### Q: What are some potential drawbacks of using Random Forests?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1300,9 +1181,7 @@ Permutation Importance is based on the idea of measuring the impact on model acc
 
 ---
 
-
 ### Q: When would you choose a Random Forest over other machine learning algorithms?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1313,7 +1192,6 @@ Permutation Importance is based on the idea of measuring the impact on model acc
 </details>
 
 ---
-
 
 ### Q: Consider training corpus consisting of balls which are glued together as triangles, each
 
@@ -1371,7 +1249,6 @@ of which has either $1, 3, 6, 10, 15, 21, 28, 36, \hspace{0.1em}\text{or} \hspac
 
 ---
 
-
 ### Q: There are several methods by which the outputs of base classifiers can be combined to yield a single prediction. Below code snippet depicts part of a specific ensembling approach applied to several CNN model predictions for a labelled data-set. Which approach is being utilized?
 
   1. Majority voting for binary classification
@@ -1402,9 +1279,7 @@ An Algebraic weighted average for class probabilities.
 
 ---
 
-
 ### Q: **True or False**: A perfect ensemble comprises of highly correct classifiers that differ as much as possible.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1417,9 +1292,7 @@ An Algebraic weighted average for class probabilities.
 
 ## Boosting based Algorithms
 
-
 ### Q: How does bagging work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1431,9 +1304,7 @@ An Algebraic weighted average for class probabilities.
 
 ---
 
-
 ### Q: What are the advantages of bagging over decision trees?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1445,9 +1316,7 @@ An Algebraic weighted average for class probabilities.
 
 ---
 
-
 ### Q: How does bagging reduces the variance in decision trees?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1459,9 +1328,7 @@ An Algebraic weighted average for class probabilities.
 
 ---
 
-
 ### Q: What are some popular algorithms that use bagging?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1473,9 +1340,7 @@ An Algebraic weighted average for class probabilities.
 
 ---
 
-
 ### Q: What's the difference between bagging and boosting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1487,9 +1352,7 @@ An Algebraic weighted average for class probabilities.
 
 ---
 
-
 ### Q: How does bagging handle imbalanced datasets?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1499,12 +1362,9 @@ An Algebraic weighted average for class probabilities.
 
 </details>
 
-
 ---
 
-
 ### Q: Can bagging be used with any base model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1514,12 +1374,9 @@ An Algebraic weighted average for class probabilities.
 
 </details>
 
-
 ---
 
-
 ### Q: What are some potential drawbacks of bagging?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1529,12 +1386,9 @@ An Algebraic weighted average for class probabilities.
 
 </details>
 
-
 ---
 
-
 ### Q: What is the trade-off between bagging and variance?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1544,9 +1398,7 @@ An Algebraic weighted average for class probabilities.
 
 </details>
 
-
 ---
-
 
 ### Q: **True or false**: In bagging, we re-sample the training corpus with replacement and there-
 
@@ -1561,7 +1413,6 @@ fore this may lead to some instances being represented numerous times while othe
 
 ---
 
-
 ### Q: Bagging and boosting are two popular ensembling methods. Random forest is a bagging example while XGBoost is a boosting example.
 
   1. What are some of the fundamental differences between bagging and boosting algorithms?
@@ -1575,12 +1426,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: How does boosting work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1590,12 +1438,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: What are some popular boosting algorithms?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1605,12 +1450,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: What is the key idea behind AdaBoost?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1620,12 +1462,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: What is overfitting, and how does boosting address it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1635,12 +1474,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: Can boosting models handle noisy data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1650,12 +1486,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: What are the hyperparameters in boosting algorithms?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1665,12 +1498,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: What is the key idea behind XGBoost?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1680,12 +1510,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: What are some advantages of using XGBoost?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1695,12 +1522,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: How does LightGBM differ from traditional gradient boosting algorithms?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1710,12 +1534,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: What is the trade-off between LightGBM's speed and memory consumption?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1725,12 +1546,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: How does CatBoost handle categorical features?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1740,12 +1558,9 @@ fore this may lead to some instances being represented numerous times while othe
 
 </details>
 
-
 ---
 
-
 ### Q: What are some benefits of using CatBoost for gradient boosting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1754,7 +1569,6 @@ fore this may lead to some instances being represented numerous times while othe
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
-
 
 ---
 

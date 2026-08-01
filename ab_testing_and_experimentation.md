@@ -29,7 +29,10 @@
 <summary><b>💡 Show Answer</b></summary>
 
 CUPED reduces metric variance by removing predictable variation using pre-experiment feature $X$:
-$$Y_{\text{CUPED}} = Y - \theta (X - \mathbb{E}[X]), \quad \text{where } \theta = \frac{\text{Cov}(Y, X)}{\text{Var}(X)}$$
+
+$$
+Y_{\text{CUPED}} = Y - \theta (X - \mathbb{E}[X]), \quad \text{where } \theta = \frac{\text{Cov}(Y, X)}{\text{Var}(X)}
+$$
 
 This increases statistical power and decreases required sample size without bias.
 

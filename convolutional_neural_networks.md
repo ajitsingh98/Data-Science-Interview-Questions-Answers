@@ -1,9 +1,9 @@
-# Data Science Interview Questions And Answers
+# Convolution Neural Networks
 
-## Convolution Neural Networks
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-Contents
-----
+
+## Table of Contents
 
 1. [Convolution and Correlation](#convolution-and-correlation)
 2. [CNN as Fixed Feature Extractor](#CNN-as-Fixed-Feature-Extractor)
@@ -23,24 +23,24 @@ Contents
 
 ---
 
-
 ### Q: This Equation is commonly used in image processing:
 
-$$(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau$$
+$$
+(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau
+$$
 
 1. What does the above equation represent?
-2. What does $g(t)$ represent?
+2. What does $g(t)$  represent?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 1. **Operation**: Continuous 1D Convolution of signals $f$and$g$.
-2. **$g(t)$**: The filter kernel/impulse response applied to input signal $f(t)$.
+2. **$g(t)$**: The filter kernel/impulse response applied to input signal$f(t)$.
 
 </details>
 
 ---
-
 
 ### Q: A data-scientist assumes that:
 
@@ -61,7 +61,6 @@ Is he right in assuming so? Explain in detail the meaning of these statements.
 
 ---
 
-
 ### Q: Mark the correct choice(s):
 
 1. The cross-correlation operator is used to find the location where two different signals are most similar.
@@ -78,22 +77,25 @@ Is he right in assuming so? Explain in detail the meaning of these statements.
 
 ---
 
-
 ### Q: A data-scientist provides you with a formulae for a discrete 2D convolution operation
 
-$$f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)$$
+$$
+f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
+$$
 
 Using above, write the equivalent 2D correlation operation.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$(I * K)(i, j) = \sum_{m} \sum_{n} I(i - m, j - n) K(m, n)$$Where$I$is input image matrix,$K$ is convolution kernel.
+$$
+(I * K)(i, j) = \sum_{m} \sum_{n} I(i - m, j - n) K(m, n)
+$$
+Where $I$is input image matrix,$K$  is convolution kernel.
 
 </details>
 
 ---
-
 
 ### Q: When designing a convolutional neural network layer, one must also define how the filter or kernel slides through the input signal. This is controlled by what is known as the stride and padding parameters or modes. The two most commonly used padding approached in convolutions are the VALID and the SAME modes. Given an input stride of 1:
 
@@ -103,16 +105,14 @@ $$(I * K)(i, j) = \sum_{m} \sum_{n} I(i - m, j - n) K(m, n)$$Where$I$is input im
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **VALID mode**: No padding applied ($P=0$). Output spatial size shrinks: $O = \lfloor \frac{W - K}{S} \rfloor + 1$.
-- **SAME mode**: Zero padding applied such that output spatial dimensions equal input dimensions when stride $S=1$: $P = \lfloor \frac{K - 1}{2} \rfloor$.
+- **VALID mode**: No padding applied ($P=0$). Output spatial size shrinks:$O = \lfloor \frac{W - K}{S} \rfloor + 1$.
+- **SAME mode**: Zero padding applied such that output spatial dimensions equal input dimensions when stride $S=1$:$P = \lfloor \frac{K - 1}{2} \rfloor$.
 
 </details>
 
 ---
 
-
 ### Q: **True or False:** A valid convolution is a type of convolution operation that does not use any padding on the input.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -124,8 +124,7 @@ $$(I * K)(i, j) = \sum_{m} \sum_{n} I(i - m, j - n) K(m, n)$$Where$I$is input im
 
 ---
 
-
-### Q: You are provided with a $K × K$input signal and a$θ × θ$filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?$$
+### Q: You are provided with a $K × K$input signal and a$θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?$$ 
 
 \begin{equation}
 A =
@@ -138,20 +137,17 @@ A =
 \end{equation}
 
 $$
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `You are provided with a $K × K$input signal and a$θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `You are provided with a $K × K$input signal and a$θ × θ$  filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-
-### Q: As depicted in below figure, a filter is applied to $a × 3$ input signal. Identify the correct choice given a stride of 1 and Same padding mode.
-
+### Q: As depicted in below figure, a filter is applied to $a × 3$  input signal. Identify the correct choice given a stride of 1 and Same padding mode.
 
 <table align='center'>
   <tr>
@@ -167,13 +163,12 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `As depicted in below figure, a filter is applied to $a × 3$ input signal. Identify the correct choice given a stride of 1 and Same padding mode.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `As depicted in below figure, a filter is applied to $a × 3$  input signal. Identify the correct choice given a stride of 1 and Same padding mode.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
-
 
 ### Q: As depicted in in (8.5), a filter is applied to a 3 × 3 input signal, mark the correct choices given a stride of 1.
 
@@ -203,9 +198,7 @@ $$
 
 ---
 
-
 ### Q: In this question we discuss the two most commonly used padding approaches in convolutions; `VALID` and `SAME` . Below python code for generating an input signal arr001 and a convolution kernel filter001.
-
 
   ```python
 
@@ -222,8 +215,8 @@ $$
 
   ```
 The input signal, arr001 is first initialized to all zeros as follows:
-
-$$ arr001 = 
+$$
+  arr001 = 
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\\\
 0 & 0 & 0 & 0 & 0 & 0 \\\\
@@ -234,7 +227,6 @@ $$ arr001 =
 \end{bmatrix}
 
 $$
-
 1. Without actually executing the code, determine what would be the resulting shape of the convolve2d() operation.
 2. Manually compute the result of convolving the input signal with the provided filter.
 3. Elaborate why the size of the resulting convolutions is smaller than the size of the input signal.
@@ -249,9 +241,7 @@ $$
 
 ---
 
-
 ### Q: Equation 8.6 is the discrete equivalent of equation 8.2 which is frequently used in image processing:
-
 $$
 
 \begin{equation}
@@ -259,7 +249,9 @@ f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
 \tag{8.6}
 \end{equation}
 
-$$1. Given the following discrete kernel in the X direction, what would be the equivalent Y direction?$$
+$$
+1. Given the following discrete kernel in the X direction, what would be the equivalent Y direction?
+$$
 
 K = \frac{1}{2} \begin{bmatrix}
 -1 & 1 \\\\
@@ -267,7 +259,6 @@ K = \frac{1}{2} \begin{bmatrix}
 \end{bmatrix}
 
 $$
-
 2. Identify the discrete convolution kernel presented in (8.6).*Kernels and Filters
 
 <table align='center'>
@@ -291,23 +282,19 @@ $$
 
 ---
 
-
-### Q: Given an image of size $w × h$, and a kernel with width $K$ , how many multiplications and additions are required to convolve the image?
-
+### Q: Given an image of size $w × h$, and a kernel with width $K$  , how many multiplications and additions are required to convolve the image?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given an image of size $w × h$, and a kernel with width $K$ , how many multiplications and additions are required to convolve the image?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given an image of size $w × h$, and a kernel with width $K$  , how many multiplications and additions are required to convolve the image?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-
 ### Q: Presents two built-in Python functions for the convolution and correlation operators.
-
 
 ```python
 import nympy as np
@@ -327,9 +314,7 @@ np.correlate(A,B,"full") # for cross correlation
 
 ---
 
-
 ### Q: The Gaussian distribution in the 1D and 2D is shown in Equations 8.8 and 8.9.
-
 $$
 
 \begin{equation}
@@ -340,13 +325,13 @@ G(x) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2}{2\sigma^2}}
 $$
 
 $$
+
 \begin{equation}
 G(x, y) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}}
 \tag{8.9}
 \end{equation}
 
 $$
-
 The Gaussian filter, is an operator that is used to blur images and remove detail and noise while acting like a low-pass filter. This is similar to the way a mean filter works, but the Gaussian filter uses a different kernel. This kernel is represented with a Gaussian bell shaped bump.
 
 Answer the following questions:
@@ -366,9 +351,7 @@ Answer the following questions:
 
 ## CNN as Fixed Feature Extractor
 
-
 ### Q: **True or False**: While AlexNet used 11 × 11 sized filters, the main novelty presented in the VGG architecture was utilizing filters with much smaller spatial extent, sized $3 × 3$.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -379,7 +362,6 @@ Answer the following questions:
 </details>
 
 ---
-
 
 ### Q: **True or False**: Unlike CNN architectures such as AlexNet or VGG, ResNet does not
 
@@ -395,9 +377,7 @@ have any hidden FC layers?
 
 ---
 
-
 ### Q: Assuming the VGG-Net has 138, 357, 544 floating point parameters, what is the physical size in Mega-Bytes (MB) required for persisting a trained instance of VGG-Net on permanent storage?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -408,7 +388,6 @@ have any hidden FC layers?
 </details>
 
 ---
-
 
 ### Q: **True or False**: Most attempts at researching image representation using FE, focused
 
@@ -424,7 +403,6 @@ solely on reusing the activations obtained from layers close to the output of th
 
 ---
 
-
 ### Q: **True or False**: FE in the context of deep learning is particularly useful when the target
 
 problem does not include enough labeled data to successfully train CNN that generalizes well.
@@ -439,9 +417,7 @@ problem does not include enough labeled data to successfully train CNN that gene
 
 ---
 
-
 ### Q: Why is a CNN trained on the ImageNet dataset a good candidate for a source problem?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -452,7 +428,6 @@ problem does not include enough labeled data to successfully train CNN that gene
 </details>
 
 ---
-
 
 ### Q: Complete the missing parts regarding the VGG19 CNN architecture:
 
@@ -479,7 +454,6 @@ problem does not include enough labeled data to successfully train CNN that gene
 </details>
 
 ---
-
 
 ### Q: The following question discusses the method of fixed feature extraction from layers of the
 
@@ -522,7 +496,6 @@ Table (9.3) presents an incomplete listing of the of the VGG19 architecture. As 
 
 ---
 
-
 ### Q: Still referring to Table (9.3), a data scientist suggests using the output layer of the
 
 VGG19 CNN as a fixed FE. What is the main advantage of using this layer over using for instance, the fc7 layer? (Hint: think about an ensemble of feature extractors)
@@ -536,7 +509,6 @@ VGG19 CNN as a fixed FE. What is the main advantage of using this layer over usi
 </details>
 
 ---
-
 
 ### Q: Still referring to Table (9.3) and also to the code snippet in Fig.(7.4), which represents a
 
@@ -576,7 +548,6 @@ new CNN derived from the VGG19 CNN:
 
 ---
 
-
 ### Q: We are still referring to Table (9.3) and using the skeleton code provided in Fig. (7.5)
 
 to derive a new CNN entitled `ResNetBottom` from the ResNet34 CNN, to extract a 512- dimensional FV for a given input image. 
@@ -594,7 +565,7 @@ Complete the code as follows:
       x = [???]
       x = x.view(x.size(0), -1)
       return x
-      
+
 ```
 
 1. The value of self.features in line 7. 
@@ -609,7 +580,6 @@ Complete the code as follows:
 </details>
 
 ---
-
 
 ### Q: Still referring to Table (9.3), the PyTorch based pseudo code snippet in Fig. (7.6) returns
 
@@ -661,9 +631,7 @@ Answer the following questions regarding the code in Fig. (7.6):
 
 ---
 
-
 ### Q: Define the term fine-tuning (FT) of an ImageNet pre-trained CNN.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -675,9 +643,7 @@ Answer the following questions regarding the code in Fig. (7.6):
 
 ---
 
-
 ### Q: Describe three different methods by which one can fine-tune an ImageNet pre-trained CNN.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -688,7 +654,6 @@ Answer the following questions regarding the code in Fig. (7.6):
 </details>
 
 ---
-
 
 ### Q: Melanoma is a lethal form of malignant skin cancer, frequently misdiagnosed as a benign
 
@@ -711,7 +676,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 1. Given that the skin lesions fall into seven distinct categories, and you are training using cross-entropy loss, how should the classes be represented so that a typical PyTorch training loop will successfully converge?
 2. Suggest several data augmentation techniques to augment the data.
 3. Write a code snippet in PyTorch to adapt the CNN so that it can predict 7 classes instead of the original source size of 1000.
-4. In order to fine tune our CNN, the (original) output layer with $1000$ classes was removed and the CNN was adjusted so that the (new) classification layer comprised seven softmax neurons emitting posterior probabilities of class membership for each lesion type.
+4. In order to fine tune our CNN, the (original) output layer with $1000$  classes was removed and the CNN was adjusted so that the (new) classification layer comprised seven softmax neurons emitting posterior probabilities of class membership for each lesion type.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -723,9 +688,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: For neural networks that work with images like VGG-19, InceptionNet, you often see a visualization of what type of features each filter captures. How are these visualizations created?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -736,7 +699,6 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 </details>
 
 ---
-
 
 ### Q: Filter size.
 
@@ -753,9 +715,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: Convolutional layers are also known as “locally connected.” Explain what it means.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -767,9 +727,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: When we use CNNs for text data, what would the number of channels be for the first conv layer?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -781,9 +739,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: What is the role of zero padding?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -795,9 +751,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: Why do we need upsampling? How to do it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -809,9 +763,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: What does a 1x1 convolutional layer do?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -822,7 +774,6 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 </details>
 
 ---
-
 
 ### Q: Pooling.
 
@@ -841,9 +792,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: When we replace a normal convolutional layer with a depth wise separable convolutional layer, the number of parameters can go down. How does this happen? Give an example to illustrate this.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -855,9 +804,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: Can you use a base model trained on ImageNet (image size 256 x 256) for an object classification task on images of size 320 x 360? How?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -869,9 +816,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: How can a fully-connected layer be converted to a convolutional layer?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -883,9 +828,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: Pros and cons of FFT-based convolution and Winograd-based convolution.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -899,9 +842,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ## Neural Style Transfer
 
-
 ### Q: Briefly describe how neural style transfer (NST) works?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -913,9 +854,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: Complete the sentence: When using the VGG-19 CNN for neural-style transfer, there different images are involved. Namely they are: `[...]`, `[...]` and `[...]`
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -927,9 +866,7 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: Refer to below figure and answer the following questions:
-
 
 <table align='center'>
   <tr>
@@ -955,7 +892,6 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: Still referring to above image:
 
 1. How are the activations utilized in comparing the content of the content image to the content of the combined image?
@@ -971,7 +907,6 @@ Therefore, there is a very real need for automated analysis tools, providing ass
 
 ---
 
-
 ### Q: Still referring to the image in **Q18**. For a new style transfer algorithm, a data scientist extracts a
 
 feature vector from an image using a pre-trained `ResNet34 CNN`.
@@ -986,8 +921,12 @@ feature vector from an image using a pre-trained `ResNet34 CNN`.
 
 He then defines the cosine similarity between two vectors:
 
-$u = {u_1,u_2,....,u_N}$
-$v = {v_1,v_2,....,v_N}$as:$$sim(u, v) = \frac{u.v}{|u||v|} = \frac{\sum_{i=1}^Nu_iv_i}{\sqrt{(\sum_{i=1}^Nu_i^2)(\sum_{i=1}^Nv_i^2)}}$$
+$u = {u_1,u_2,....,u_N}$ $v = {v_1,v_2,....,v_N}$  as:
+$$
+
+sim(u, v) = \frac{u.v}{|u||v|} = \frac{\sum_{i=1}^Nu_iv_i}{\sqrt{(\sum_{i=1}^Nu_i^2)(\sum_{i=1}^Nv_i^2)}}
+
+$$
 
 Thus, the cosine similarity between two vectors measures the cosine of the angle between the vectors irrespective of their magnitude. It is calculated as the dot product of two numeric vectors, and is normalized by the product of the length of the vectors.
 

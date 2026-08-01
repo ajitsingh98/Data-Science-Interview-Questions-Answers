@@ -8,7 +8,6 @@
 
 ## Algorithms & Data Structures
 
-
 ### Q: Write a Python function to recursively read and traverse a JSON file or nested dictionary.
 
 <details>
@@ -40,8 +39,7 @@ def traverse_json(data, prefix=""):
 
 ---
 
-
-### Q: Implement an $O(N \log N)$ sorting algorithm (QuickSort or MergeSort in Python).
+### Q: Implement an $O(N \log N)$  sorting algorithm (QuickSort or MergeSort in Python).
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -65,7 +63,6 @@ print(quicksort([3, 6, 8, 10, 1, 2, 1]))
 </details>
 
 ---
-
 
 ### Q: Find the length of the Longest Increasing Subsequence (LIS) in an array/string.
 
@@ -96,7 +93,6 @@ print(length_of_lis([10, 9, 2, 5, 3, 7, 101, 18]))  # Output: 4 ([2, 3, 7, 101])
 
 ---
 
-
 ### Q: Find the Longest Common Subsequence (LCS) between two strings.
 
 <details>
@@ -109,14 +105,14 @@ def longest_common_subsequence(text1: str, text2: str) -> int:
     """
     m, n = len(text1), len(text2)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
-    
+
     for i in range(1, m + 1):
         for j in range(1, n + 1):
             if text1[i - 1] == text2[j - 1]:
                 dp[i][j] = dp[i - 1][j - 1] + 1
             else:
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
-                
+
     return dp[m][n]
 
 # Example
@@ -126,7 +122,6 @@ print(longest_common_subsequence("abcde", "ace"))  # Output: 3 ("ace")
 </details>
 
 ---
-
 
 ### Q: Traverse a Binary Tree in Pre-Order, In-Order, and Post-Order (Iterative or Recursive).
 
@@ -154,8 +149,7 @@ def post_order(root):
 
 ---
 
-
-### Q: Given an array of integers and an integer $k$, find the total number of continuous subarrays whose sum equals $k$in$O(N)$ runtime.
+### Q: Given an array of integers and an integer $k$, find the total number of continuous subarrays whose sum equals $k$in$O(N)$  runtime.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -168,13 +162,13 @@ def subarray_sum(nums, k):
     count = 0
     current_sum = 0
     prefix_sums = {0: 1}  # Base case: sum of 0 appears once
-    
+
     for num in nums:
         current_sum += num
         if current_sum - k in prefix_sums:
             count += prefix_sums[current_sum - k]
         prefix_sums[current_sum] = prefix_sums.get(current_sum, 0) + 1
-        
+
     return count
 
 # Example
@@ -185,8 +179,7 @@ print(subarray_sum([1, 1, 1], 2))  # Output: 2
 
 ---
 
-
-### Q: Find the Median of Two Sorted Arrays in $O(\log(m+n))$ runtime.
+### Q: Find the Median of Two Sorted Arrays in $O(\log(m+n))$  runtime.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -196,20 +189,20 @@ def find_median_sorted_arrays(nums1, nums2):
     """Binary Search partition method in O(log(min(m, n))) time."""
     if len(nums1) > len(nums2):
         nums1, nums2 = nums2, nums1
-        
+
     x, y = len(nums1), len(nums2)
     low, high = 0, x
-    
+
     while low <= high:
         partitionX = (low + high) // 2
         partitionY = (x + y + 1) // 2 - partitionX
-        
+
         maxX = float('-inf') if partitionX == 0 else nums1[partitionX - 1]
         minX = float('inf') if partitionX == x else nums1[partitionX]
-        
+
         maxY = float('-inf') if partitionY == 0 else nums2[partitionY - 1]
         minY = float('inf') if partitionY == y else nums2[partitionY]
-        
+
         if maxX <= minY and maxY <= minX:
             if (x + y) % 2 == 0:
                 return (max(maxX, maxY) + min(minX, minY)) / 2.0
@@ -224,7 +217,6 @@ def find_median_sorted_arrays(nums1, nums2):
 </details>
 
 ---
-
 
 ### Q: Write a program to solve a Sudoku puzzle using Backtracking.
 

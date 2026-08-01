@@ -1,10 +1,9 @@
-# Data Science Interview Questions And Answers
+# Performance Metrics
+
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
 
-## Performance Metrics
-
-Contents
----
+## Table of Contents
 
 - [Regression Metrics](#regression-metrics)
 - [Classification Metrics](#classification-metrics)
@@ -15,9 +14,7 @@ Contents
 
 ## Regression Metrics
 
-
 ### Q: List down metrics for evaluating regression tasks?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -36,26 +33,24 @@ We can use following regression metrics for evaluation
 
 ---
 
-
 ### Q: Write down mathematical expression of MSE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$\text{MSE} = \frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2$$
+$$
+\text{MSE} = \frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2
+$$
 
 Where
 
-- $y_{pred, i}$: Predicted value by model for input vector$x_i$-$y_{true, i}$: Ground truth value/label by model for input vector$x_i$
+- $y_{pred, i}$: Predicted value by model for input vector$x_i$-$y_{true, i}$: Ground truth value/label by model for input vector$x_i$ 
 
 </details>
 
 ---
 
-
 ### Q: What are benefits of using MSE as loss function?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -68,24 +63,23 @@ Where
 
 ---
 
-
 ### Q: State the range of MSE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Bounds of mean-squared error(mse)
 
-$$[0, \inf)$$with$0$ the best mse
+$$
+[0, \inf)
+$$
+with $0$  the best mse
 
 </details>
 
 ---
 
-
 ### Q: How can we interpret mse value?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -100,9 +94,7 @@ MSE estimates the average squared difference of predicted values and actual valu
 
 ---
 
-
 ### Q: What value MSE encode?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -113,9 +105,7 @@ MSE measures seeks to summarize the errors made by regression model. The smaller
 
 ---
 
-
 ### Q: Why do we square the differences in MSE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -126,10 +116,7 @@ Squaring the differences in MSE is done to emphasize larger errors, ensure non-n
 
 ---
 
-
-
 ### Q: What is the significance of a low MSE value?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -140,10 +127,7 @@ A low Mean Squared Error (MSE) value signifies that a model's predictions are cl
 
 ---
 
-
-
 ### Q: How can you minimize MSE in a machine learning model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -158,9 +142,7 @@ Minimizing MSE involves a combination of techniques:
 
 ---
 
-
 ### Q: What are weaknesses of mean-squared error(mse)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -177,24 +159,22 @@ Minimizing MSE involves a combination of techniques:
 
 ---
 
-
 ### Q: Write the expression for Root Mean Squared Error(RMSE)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 RMSE is basically root of mean-squared error
 
-$$\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2}$$
+$$
+\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What is the benefit of using RMSE over MSE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -207,9 +187,7 @@ $$\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2}$$
 
 ---
 
-
 ### Q: What are weaknesses of RMSE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -224,24 +202,22 @@ $$\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2}$$
 
 ---
 
-
 ### Q: Write the mathematical expression for Mean Absolute Error(MAE)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 MAE is average of absolute difference of predicted and actual values.
 
-$$\text{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_{true, i} - y_{pred, i}|$$
+$$
+\text{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_{true, i} - y_{pred, i}|
+$$
 
 </details>
 
 ---
 
-
 ### Q: What is the benefit of using MAE over RMSE or MSE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -252,9 +228,7 @@ It is more robust to outliers unlike MSE and RMSE
 
 ---
 
-
 ### Q: State one drawback of using MAE over RMSE or MSE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -265,10 +239,7 @@ MAE uses `|.|` function which is not differential at zero
 
 ---
 
-
-
 ### Q: What is the difference between MSE and RMSE (Root Mean Square Error)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -281,24 +252,23 @@ MAE uses `|.|` function which is not differential at zero
 
 ---
 
-
 ### Q: What is Mean Absolute Percentage Error (MAPE), and how is it calculated?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 MAPE is a metric used to evaluate the accuracy of a forecasting or regression model. It measures the average absolute percentage error between predicted and actual values. It is calculated as:
 
-$$\text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100$$where$y_i$is the actual value,$\hat{y}_i$is the predicted value, and$n$ is the number of observations.
+$$
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100
+$$
+where $y_i$is the actual value,$\hat{y}_i$is the predicted value, and$ n$  is the number of observations.
 
 </details>
 
 ---
 
-
 ### Q: Why might MAPE be misleading if the actual values of the target variable are very small?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -309,9 +279,7 @@ MAPE can be misleading if the actual values are very small because the percentag
 
 ---
 
-
 ### Q: In which scenarios would MAPE be preferred over metrics like RMSE or MAE?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -322,9 +290,7 @@ MAPE is preferred over metrics like RMSE or MAE when you want to evaluate the mo
 
 ---
 
-
 ### Q: How does MAPE handle negative values in the actual data, and why might this be problematic?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -335,9 +301,7 @@ MAPE is not well-suited for datasets with negative values because the percentage
 
 ---
 
-
 ### Q: Can MAPE be used to evaluate a model’s performance if the target variable contains zero values?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -348,9 +312,7 @@ MAPE cannot be reliably used when the target variable contains zero values, as i
 
 ---
 
-
 ### Q: What are the benefits of using MAPE in a business context, and what potential pitfalls should be considered?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -369,9 +331,7 @@ MAPE cannot be reliably used when the target variable contains zero values, as i
 
 ---
 
-
 ### Q: How does MAPE handle asymmetric errors, and what might be the implications for model evaluation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -382,9 +342,7 @@ MAPE does not account for the direction of errors (whether they are positive or 
 
 ---
 
-
 ### Q: What is R-squared ($R^2$)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -395,9 +353,7 @@ R-squared is also called coefficient of determination. It is a statistical measu
 
 ---
 
-
 ### Q: When R-squared is more suitable to use?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -408,42 +364,38 @@ R-squared is more useful when we have linear relationship between dependent and 
 
 ---
 
-
 ### Q: What is the range of R-squared values?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-R-squared ranges from $0$to$1$, with $1$indicating a perfect fit and$0$ indicating no fit at all.
+R-squared ranges from $0$to$ 1$, with$1$indicating a perfect fit and$0$  indicating no fit at all.
 
 </details>
 
 ---
-
 
 ### Q: What does an R-squared value of 0.75 mean?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-An R-squared value of $0.75$means that 75% of the variance in the dependent variable (target) can be explained by the independent variables (predictors) in the model. In other words, the model accounts for$75%$ of the variability in the data, indicating a relatively good fit.
+An R-squared value of $0.75$means that 75% of the variance in the dependent variable (target) can be explained by the independent variables (predictors) in the model. In other words, the model accounts for$ 75%$  of the variability in the data, indicating a relatively good fit.
 
 </details>
 
 ---
 
-
 ### Q: State the expression for R-squared?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Mathematically, It can be expressed as:
 
-$$\text{R-squared} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{N}(y_i - \hta{y}_{i})^2}{\sum_{i}^{N}(y_i - \bar{y}_{i})^2}$$
+$$
+\text{R-squared} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{N}(y_i - \hta{y}_{i})^2}{\sum_{i}^{N}(y_i - \bar{y}_{i})^2}
+$$
 
 Where:
 
@@ -454,24 +406,22 @@ Where:
 
 ---
 
-
 ### Q: Can R-squared be negative?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Yeah, `R-squared` value can be negative due to outliers i.e when `MSE(model) > MSE(Baseline)`. It is the case when we have heavy outliers in predictions.
 
-$$\text{SSR} > \text{SST}$$
+$$
+\text{SSR} > \text{SST}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What are the benefits of using R-squared as performance indicator?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -484,9 +434,7 @@ $$\text{SSR} > \text{SST}$$
 
 ---
 
-
 ### Q: How do you interpret R-squared?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -500,9 +448,7 @@ $$\text{SSR} > \text{SST}$$
 
 ---
 
-
 ### Q: What are the limitations of R-squared?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -517,9 +463,7 @@ $$\text{SSR} > \text{SST}$$
 
 ---
 
-
 ### Q: When should you use R-squared as an evaluation metric?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -530,9 +474,7 @@ Use R-squared as an evaluation metric when you are working with linear regressio
 
 ---
 
-
 ### Q: Why do we need adjusted R-squared instead of standard R-squared?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -543,16 +485,16 @@ R-squared suffers from problem that the scores keep improving on addition of pre
 
 ---
 
-
 ### Q: What is the expression of adjusted R-squared?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Mathematically It can be expressed as:
 
-$$\text{Adjusted R-squared} = 1 - (\frac{(1-R^2).(n-1)}{n - k -1})$$
+$$
+\text{Adjusted R-squared} = 1 - (\frac{(1-R^2).(n-1)}{n - k -1})
+$$
 
 Where:
 
@@ -564,9 +506,7 @@ Where:
 
 ---
 
-
 ### Q: What is the limitation of adjusted R-squared?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -577,9 +517,7 @@ Adjusted R-squared value is sensitive to sample size. It means the value may dec
 
 ---
 
-
 ### Q: What is pearson correlation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -590,35 +528,33 @@ Pearson Correlation is a statistical method that measures the similarity or corr
 
 ---
 
-
 ### Q: Write the expression of pearson correlation $\rho$?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The Pearson correlation coefficient between two vectors $y$and$\cap{y}$of dimension is:$$\rho(y, \hat(y)) = \frac{\text{Cov}(y, \hat{y})}{\sigma_{y} \sigma_{\hat{y}}}$$
+The Pearson correlation coefficient between two vectors $y$and$\cap{y}$  of dimension is:
+
+$$
+\rho(y, \hat(y)) = \frac{\text{Cov}(y, \hat{y})}{\sigma_{y} \sigma_{\hat{y}}}
+$$
 
 </details>
 
 ---
-
 
 ### Q: What is the range of pearson correlations?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Bound of $\rhi$is$[0, 1]$, $+1$is complete positive linear correlation, and$0$ is no linear correlation at all.
+Bound of $\rhi$is$[0, 1]$,$+1$is complete positive linear correlation, and$ 0$  is no linear correlation at all.
 
 </details>
 
 ---
 
-
 ### Q: State the weakness of pearson correlation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -630,9 +566,7 @@ Bound of $\rhi$is$[0, 1]$, $+1$is complete positive linear correlation, and$0$ i
 
 ---
 
-
 ### Q: What is spearman correlation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -643,9 +577,7 @@ Spearman's rank correlation coefficient, often denoted as $\rho_s$or$r_s$, is a 
 
 ---
 
-
 ### Q: What is the benefit of using spearman correlation over pearson correlation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -660,24 +592,23 @@ Spearman's rank correlation coefficient, often denoted as $\rho_s$or$r_s$, is a 
 
 ---
 
-
 ### Q: Write the formula of spearman correlation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The formula for Spearman’s rank correlation is:
 
-$$\rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}$$Where$d_i$is the difference between the ranks of each pair of values, and$n$ is the number of observations.
+$$
+\rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}
+$$
+Where $d_i$is the difference between the ranks of each pair of values, and$n$  is the number of observations.
 
 </details>
 
 ---
 
-
 ### Q: How can you compute the spearman correlation between two variable $X$and$Y$?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -686,21 +617,21 @@ $$\rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}$$Where$d_i$is the difference betwe
 
 - Assign ranks to values of both variables and if there are ties, assign the average rank to the tied values.
 
-2. Calculate the differences and squared sum $\sum d_{i}^2$
+2. Calculate the differences and squared sum $\sum d_{i}^2$ 
 
 - Compute the difference between the ranks for each pair of values
 
 3. Apply the expression of spearman correlation
 
-$$\rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}$$
+$$
+\rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}
+$$
 
 </details>
 
 ---
 
-
 ### Q: How to interpret spearman correlation values?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -713,9 +644,7 @@ $$\rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}$$
 
 ---
 
-
 ### Q: State the one scenario where spearman correlation is more appropriate than pearson coefficients?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -738,9 +667,7 @@ In the above scenario spearman is more appropriate than the pearson coefficients
 
 </details>
 
-
 ### Q: What is the limitation of spearman correlation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -752,9 +679,7 @@ In the above scenario spearman is more appropriate than the pearson coefficients
 
 ---
 
-
 ### Q: How can we handle asymmetric errors?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -770,13 +695,9 @@ We can use following metrics/loss to handle asymmetric errors:
 
 ---
 
-
 ## Classification Metrics
 
-
-
 ### Q: What metrics we can use to evaluate a classifier?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -794,15 +715,12 @@ We can use following metrics for evaluation:
 
 ---
 
-
-
 ### Q: What is the purpose of a confusion matrix?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-This a 2D matrix of size $n \times n$ where n is number of distinct tables we have. It stores information about the actual label and corresponding predicted values. A confusion matrix visualizes and summarizes the performance of a classification algorithm.
+This a 2D matrix of size $n \times n$  where n is number of distinct tables we have. It stores information about the actual label and corresponding predicted values. A confusion matrix visualizes and summarizes the performance of a classification algorithm.
 
 <table align='center'>
 <tr>
@@ -819,10 +737,7 @@ This a 2D matrix of size $n \times n$ where n is number of distinct tables we ha
 
 ---
 
-
-
 ### Q: Explain True Positive (TP) and False Positive (FP).
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -834,10 +749,7 @@ This a 2D matrix of size $n \times n$ where n is number of distinct tables we ha
 
 ---
 
-
-
 ### Q: Define True Negative (TN) and False Negative (FN).
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -849,9 +761,7 @@ This a 2D matrix of size $n \times n$ where n is number of distinct tables we ha
 
 ---
 
-
 ### Q: How can you use a confusion matrix to choose an appropriate threshold for a binary classifier?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -870,9 +780,7 @@ To choose an appropriate threshold for a binary classifier using a confusion mat
 
 ---
 
-
 ### Q: Define accuracy score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -883,16 +791,16 @@ Accuracy scores signifies the portion of true predictions among total cases exam
 
 ---
 
-
 ### Q: Write the mathematical expression of accuracy score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 It is mathematically expressed as:
 
-$$\text{accuracy score} = \frac{TP + TN}{TP + FP + FN + TN}$$
+$$
+\text{accuracy score} = \frac{TP + TN}{TP + FP + FN + TN}
+$$
 
 Where:
 
@@ -905,24 +813,20 @@ Where:
 
 ---
 
-
 ### Q: What is the range of accuracy score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 *Accuracy bounds*
 
-$[0, 1]$, with $0$the worst and$1$ the best.
+$[0, 1]$, with$0$the worst and$1$  the best.
 
 </details>
 
 ---
 
-
 ### Q: How does accuracy is related with negative log(logistic) loss?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -933,9 +837,7 @@ Accuracy of a classifier on a validation set will be negatively correlated with 
 
 ---
 
-
 ### Q: What is the main issue with accuracy score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -946,9 +848,7 @@ Accuracy score provides an overall evaluation of the model's performance across 
 
 ---
 
-
 ### Q: How can we overcome with accuracy score limitations?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -959,9 +859,7 @@ To address accuracy score limitation issue, it's recommended to use other perfor
 
 ---
 
-
 ### Q: What do you mean by precision? How can we calculate it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -970,7 +868,9 @@ Precision is the portion of true positive class among predicted positive classes
 
 It can be expressed as:
 
-$$\text{Precision Score} = \frac{TP}{TP+FP}$$
+$$
+\text{Precision Score} = \frac{TP}{TP+FP}
+$$
 
 Note that precision is per-class notion.
 
@@ -978,9 +878,7 @@ Note that precision is per-class notion.
 
 ---
 
-
 ### Q: When precision is preferred?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -991,22 +889,18 @@ It is preferable choice when you want to be very sure of your predictions.
 
 ---
 
-
 ### Q: What is the range of precision value?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$[0, 1]$, with $0$the worst and$1$ the best.
+$[0, 1]$, with$0$the worst and$1$  the best.
 
 </details>
 
 ---
 
-
 ### Q: What are the weaknesses of precision as a metric in classification, and how can it be misleading in certain scenarios?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1019,9 +913,7 @@ For example, By focusing on precision, the model may become overly conservative,
 
 ---
 
-
 ### Q: State one scenario where you should use precision of the system as evaluation metric?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1032,9 +924,7 @@ In an email marketing campaign, high precision means emails are sent mostly to r
 
 ---
 
-
 ### Q: What is the other name of recall?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1045,9 +935,7 @@ True Positive Rate
 
 ---
 
-
 ### Q: Define recall score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1058,9 +946,7 @@ Recall is the sum of correct predictions divided by the sum of all true instance
 
 ---
 
-
 ### Q: What does recall measures? How is it calculated?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1069,15 +955,15 @@ Recall measures the proportion of actual positives cases that are correctly pred
 
 It is calculated as:
 
-$$\text{recall score} = \frac{TP}{TP+FN}$$
+$$
+\text{recall score} = \frac{TP}{TP+FN}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What does higher value of recall indicates?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1088,9 +974,7 @@ A higher recall score indicates that the model is effectively capturing a larger
 
 ---
 
-
 ### Q: When should we use recall?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1101,22 +985,18 @@ It is a suitable metric when the goal is to minimize false negatives, i.e., corr
 
 ---
 
-
 ### Q: What is the range of recall metric?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$[0, 1]$, with $0$the worst and$1$ the best.
+$[0, 1]$, with$0$the worst and$1$  the best.
 
 </details>
 
 ---
 
-
 ### Q: What is the main limitation of recall metric?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1127,9 +1007,7 @@ Recall's dangerous edge case is that one can achieve very high recall for a cate
 
 ---
 
-
 ### Q: State one scenario where recall is more desirable?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1140,9 +1018,7 @@ Recall is prioritized when the cost of missing positive instances (false negativ
 
 ---
 
-
 ### Q: Explain the tradeoff between recall and precision?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1153,9 +1029,7 @@ The tradeoff between precision and recall arises because adjusting the classific
 
 ---
 
-
 ### Q: Define F Scores?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1164,22 +1038,24 @@ F scores combine precision and recall via their harmonic mean, with a value  tha
 
 It captures the tradeoff between precision and recall:
 
-$$\text{F Score} = (\beta^2 + 1)\frac{\text{precision} \cdot \text{recall}}{\beta^{2} \cdot \text{precision} + \text{recall}}$$
+$$
+\text{F Score} = (\beta^2 + 1)\frac{\text{precision} \cdot \text{recall}}{\beta^{2} \cdot \text{precision} + \text{recall}}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What is F-1 Score? When should we use it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-F-1 Score is a special case of F scores when we give equal weighage to precision and recall. In this setup $\beta  = 1$
+F-1 Score is a special case of F scores when we give equal weighage to precision and recall. In this setup $\beta  = 1$ 
 
-$$\text{F-1 Score} = \frac{2 * \text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}$$
+$$
+\text{F-1 Score} = \frac{2 * \text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
+$$
 
 The F1 score is a suitable choice when both precision and recall are equally important, and we want to balance between the two.
 
@@ -1187,22 +1063,18 @@ The F1 score is a suitable choice when both precision and recall are equally imp
 
 ---
 
-
 ### Q: What is range of F Scores?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Bounds of F scores: $[0, 1]$, with $0$the worst and$1$ the best, and guaranteed to be between precision and recall.
+Bounds of F scores: $[0, 1]$, with$0$the worst and$1$  the best, and guaranteed to be between precision and recall.
 
 </details>
 
 ---
 
-
 ### Q: What are the weaknesses of F-1 score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1214,25 +1086,24 @@ Bounds of F scores: $[0, 1]$, with $0$the worst and$1$ the best, and guaranteed 
 
 ---
 
-
 ### Q: Explain the difference between Type I and Type II errors in the context of a confusion matrix.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Type I Error ($\alpha$, False Positive)**: Rejecting the null hypothesis $H_0$ when it is actually true (e.g., classifying a healthy patient as sick).
-- **Type II Error ($\beta$, False Negative)**: Failing to reject the null hypothesis $H_0$ when it is false (e.g., missing a fraudulent transaction).
+- **Type I Error ($\alpha$, False Positive)**: Rejecting the null hypothesis $H_0$  when it is actually true (e.g., classifying a healthy patient as sick).
+- **Type II Error ($\beta$, False Negative)**: Failing to reject the null hypothesis $H_0$  when it is false (e.g., missing a fraudulent transaction).
 - **Confusion Matrix Relationship**:
-  $$\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \quad (\text{penalizes Type I}), \quad \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \quad (\text{penalizes Type II})$$
+
+$$
+\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \quad (\text{penalizes Type I}), \quad \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \quad (\text{penalizes Type II})
+$$
 
 </details>
 
 ---
 
-
 ### Q: What is the main limitations with confusion matrix summarization?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1243,9 +1114,7 @@ Confusion matrices hide a threshold for turning probabilities/scores into predic
 
 ---
 
-
 ### Q: What is precision and recall curve?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1267,22 +1136,18 @@ A precision–recall curve is a method for summarizing the relationship between 
 
 ---
 
-
 ### Q: State the use of precision and recall curve?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-With precision–recall curves, we get a generalized perspective on F1 scores (and we could weight precision and recall differently to achieve the effects of $\beta$ for F scores more generally). These curves can be used, not only to assess a system, but also to identify an optimal decision boundary given external goals.
+With precision–recall curves, we get a generalized perspective on F1 scores (and we could weight precision and recall differently to achieve the effects of $\beta$  for F scores more generally). These curves can be used, not only to assess a system, but also to identify an optimal decision boundary given external goals.
 
 </details>
 
 ---
 
-
 ### Q: How can we construct precision and recall curve?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1316,9 +1181,7 @@ With precision–recall curves, we get a generalized perspective on F1 scores (a
 
 ---
 
-
 ### Q: What are the limitations of precision and recall curve?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1331,16 +1194,16 @@ With precision–recall curves, we get a generalized perspective on F1 scores (a
 
 ---
 
-
 ### Q: What does ROC Curve depicts?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The Receiver Operating Characteristic (ROC) curve for a class $k$depicts recall the false positive rate (FPR) for$k$as a function of the recall for$k$.
 
-$$\text{False Positive Rate} = \frac{FP}{FP + TN}$$
+$$
+\text{False Positive Rate} = \frac{FP}{FP + TN}
+$$
 
 ROC curve indicates how well probabilities from positive class are separated from negative class.
 
@@ -1359,9 +1222,7 @@ ROC curve indicates how well probabilities from positive class are separated fro
 
 ---
 
-
 ### Q: For an ideal model what should ROC-AUC?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1372,22 +1233,18 @@ The ROC curve is a probability curve, and for an ideal model, the area under the
 
 ---
 
-
 ### Q: State what does mean to have AUC of 0.2?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-AUC of $0.2$indicates there are$20%$ chance of fair classification.
+AUC of $0.2$indicates there are$ 20%$  chance of fair classification.
 
 </details>
 
 ---
 
-
 ### Q: Can we use ROC-AUC score for multi-class classification?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1398,22 +1255,18 @@ It's important to note that the AUROC is commonly used for binary class classifi
 
 ---
 
-
 ### Q: What is the range of ROC-AUC?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-For ROC AUC: $[0, 1]$, with $1$ the best.
+For ROC AUC: $[0, 1]$, with$1$  the best.
 
 </details>
 
 ---
 
-
 ### Q: What is the limitations of ROC-AUC score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1428,9 +1281,7 @@ For ROC AUC: $[0, 1]$, with $1$ the best.
 
 ---
 
-
 ### Q: Your team is building a system to aid doctors in predicting whether a patient has cancer or not from their X-ray scan. Your colleague announces that the problem is solved now that they’ve built a system that can predict with 99.99% accuracy. How would you respond to that claim?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1441,17 +1292,14 @@ Accuracy is not a reliable metric in this scenario because cancer is rare. A mod
 
 ---
 
-
 ### Q: Given a binary classifier that outputs the following confusion matrix.
 
 $$
-
 \begin{bmatrix} 
     \textbf{""} & \textbf{Predicted True} & \textbf{Predicted False} \\\\
     \textbf{Actual True} & 30 & 20 \\\\
     \textbf{Actual False} & 5 & 40 \\\\
 \end{bmatrix}
-
 $$
 
 1. Calculate the model’s precision, recall, and F1.
@@ -1461,7 +1309,7 @@ $$
 <summary><b>💡 Show Answer</b></summary>
 
 1. Precision, Recall, and F1 Score Calculations:
-   -Precision: $\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{30}{30 + 5} = \frac{30}{35} \approx 0.857$-Recall:$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{30}{30 + 20} = \frac{30}{50} = 0.600$-F1 Score:$\text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \times \frac{0.857 \times 0.600}{0.857 + 0.600} \approx 0.714$
+   -Precision: $\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{30}{30 + 5} = \frac{30}{35} \approx 0.857$-Recall:$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{30}{30 + 20} = \frac{30}{50} = 0.600$-F1 Score:$\text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \times \frac{0.857 \times 0.600}{0.857 + 0.600} \approx 0.714$ 
 
 2. Improving the Model’s Performance:
    - Adjust Threshold: Experiment with different classification thresholds to balance precision and recall.
@@ -1472,41 +1320,45 @@ $$
 
 ---
 
-
-### Q: Consider a classification where $99%$of data belongs to class A and$1%$ of data belongs to class B.
+### Q: Consider a classification where $99%$of data belongs to class A and$ 1%$  of data belongs to class B.
 
 1. If your model predicts A 100% of the time, what would the F1 score be? Hint: The F1 score when A is mapped to 0 and B to 1 is different from the F1 score when A is mapped to 1 and B to 0.
-1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$ be?
+1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$  be?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a classification where $99%$of data belongs to class A and$1%$ of data belongs to class B.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a classification where $99%$of data belongs to class A and$ 1%$  of data belongs to class B.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-
 ### Q: Show that the negative log-likelihood and cross-entropy are the same for binary classification tasks.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 - **Negative Log-Likelihood (NLL)** for Bernoulli distribution with targets $y_i \in \{0, 1\}$and predicted probabilities$\hat{y}_i$:
-  $$\mathcal{L}_{\text{NLL}}(\theta) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]$$- **Cross-Entropy** between empirical data distribution$p(y_i)$and model distribution$q(y_i) = \hat{y}_i$:
-  $$H(p, q) = -\sum_{x} p(x) \log q(x) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]$$
+
+$$
+\mathcal{L}_{\text{NLL}}(\theta) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]
+$$
+
+- **Cross-Entropy** between empirical data distribution $p(y_i)$and model distribution$q(y_i) = \hat{y}_i$:
+
+$$
+H(p, q) = -\sum_{x} p(x) \log q(x) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]
+$$
+
 - **Conclusion**: Minimizing Negative Log-Likelihood of Bernoulli targets is mathematically identical to minimizing Cross-Entropy.
 
 </details>
 
 ---
 
-
-### Q: For classification tasks with more than two labels (e.g. MNIST with $10$ labels), why is cross-entropy a better loss function than MSE?
-
+### Q: For classification tasks with more than two labels (e.g. MNIST with $10$  labels), why is cross-entropy a better loss function than MSE?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1518,29 +1370,24 @@ $$
 
 ---
 
-
-
-### Q: Consider a language with an alphabet of $27$ characters. What would be the maximal entropy of this language?
-
+### Q: Consider a language with an alphabet of $27$  characters. What would be the maximal entropy of this language?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a language with an alphabet of $27$ characters. What would be the maximal entropy of this language?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a language with an alphabet of $27$  characters. What would be the maximal entropy of this language?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-
-### Q: Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?
-
+### Q: Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$  from the actual price. Which metric would you use?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$  from the actual price. Which metric would you use?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -1549,10 +1396,7 @@ $$
 
 ## Clustering Metrics
 
-
-
 ### Q: What are common evaluation metrics used for clustering algorithms?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1567,9 +1411,7 @@ $$
 
 ---
 
-
 ### Q: How does the Silhouette Score evaluate clustering performance?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1580,27 +1422,25 @@ It measures how similar an object is to its own cluster compared to other cluste
 
 ---
 
-
 ### Q: State the expression of silhouette score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$S(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}$$
+$$
+S(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
+$$
 
 Where,
 
-- $a(i)$is the average distance between the sample$i$ and all other points in the same cluster.
-- $b(i)$is the minimum average distance between the sample$i$and all points in the nearest cluster (not including$i$'s cluster).
+- $a(i)$is the average distance between the sample$ i$  and all other points in the same cluster.
+- $b(i)$is the minimum average distance between the sample$ i$and all points in the nearest cluster (not including$ i$'s cluster).
 
 </details>
 
 ---
 
-
 ### Q: What are the pros and cons of the Silhouette Score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1612,9 +1452,7 @@ Where,
 
 ---
 
-
 ### Q: What does the Davies-Bouldin Index measure?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1625,9 +1463,7 @@ It quantifies the average similarity ratio of each cluster to its most similar c
 
 ---
 
-
 ### Q: What are the advantages and disadvantages of the Davies-Bouldin Index?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1639,21 +1475,21 @@ It quantifies the average similarity ratio of each cluster to its most similar c
 
 ---
 
-
 ### Q: Write the mathematical expression of Davies-Bouldin Index?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The Davies-Bouldin Index is calculated as:
 
-$$DBI = \frac{1}{n} \sum_{i=1}^{n} \max_{j \neq i} \left( \frac{\sigma_i + \sigma_j}{d(c_i, c_j)} \right)$$
+$$
+DBI = \frac{1}{n} \sum_{i=1}^{n} \max_{j \neq i} \left( \frac{\sigma_i + \sigma_j}{d(c_i, c_j)} \right)
+$$
 
 Where:
 
-- $\sigma_i$is the average distance between each point in cluster$i$ and its centroid.
-- $d(c_i, c_j)$is the distance between the centroids of clusters$i$and$j$.
+- $\sigma_i$is the average distance between each point in cluster$i$  and its centroid.
+- $d(c_i, c_j)$is the distance between the centroids of clusters$ i$and$ j$.
 
 </details>
 
@@ -1661,10 +1497,7 @@ Where:
 
 ## Metrics in NLP
 
-
-
 ### Q: What is Word Error Rate (WER)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1675,16 +1508,16 @@ WER is a measure of the accuracy of sequence predictions at the word level. It i
 
 ---
 
-
 ### Q: How can we calculate Word Error Rate (WER)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Mathematically, WER can be expressed as:
 
-$$\text{WER} = \frac{\text{Edit Distance}}{\text{Length of True Sequence}}$$
+$$
+\text{WER} = \frac{\text{Edit Distance}}{\text{Length of True Sequence}}
+$$
 
 Where the Edit Distance is the number of insertions, deletions, and substitutions needed to transform the predicted sequence into the true sequence.
 
@@ -1692,24 +1525,22 @@ Where the Edit Distance is the number of insertions, deletions, and substitution
 
 ---
 
-
 ### Q: How do you compute the WER over an entire dataset?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 To compute WER over a dataset, calculate the edit distances for each pair of true and predicted sequences, and then normalize these distances by the total length of all true sequences:
 
-$$\text{Corpus WER} = \frac{\sum \text{Edit Distances}}{\sum \text{Length of True Sequences}}$$
+$$
+\text{Corpus WER} = \frac{\sum \text{Edit Distances}}{\sum \text{Length of True Sequences}}
+$$
 
 </details>
 
 ---
 
-
 ### Q: What are the main advantages and disadvantages of using WER?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1721,9 +1552,7 @@ $$\text{Corpus WER} = \frac{\sum \text{Edit Distances}}{\sum \text{Length of Tru
 
 ---
 
-
 ### Q: How is Word Accuracy Rate related to WER?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1734,9 +1563,7 @@ Word Accuracy Rate is 1.0 minus WER. It reflects the proportion of correctly pre
 
 ---
 
-
 ### Q: What does the BLEU score measure?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1747,9 +1574,7 @@ The BLEU score measures the quality of generated text by comparing n-grams in th
 
 ---
 
-
 ### Q: What are the key components of BLUE score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1763,24 +1588,23 @@ Key components include:
 
 ---
 
-
 ### Q: What is the formula for the BLEU score, and how is it typically computed?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The BLEU score combines the modified n-gram precision for various n-gram levels (usually up to 4) and includes a brevity penalty. The formula is:
 
-$$\text{BLEU} = BP \times \exp \left( \sum_{n=1}^{N} w_n \log p_n \right)$$Where$p_n$is the modified precision for n-grams,$w_n$ is the weight for each n-gram level, and BP is the brevity penalty.
+$$
+\text{BLEU} = BP \times \exp \left( \sum_{n=1}^{N} w_n \log p_n \right)
+$$
+Where $p_n$is the modified precision for n-grams,$w_n$  is the weight for each n-gram level, and BP is the brevity penalty.
 
 </details>
 
 ---
 
-
 ### Q: What are the strengths and weaknesses of the BLEU score?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1792,9 +1616,7 @@ $$\text{BLEU} = BP \times \exp \left( \sum_{n=1}^{N} w_n \log p_n \right)$$Where
 
 ---
 
-
 ### Q: How does BLEU compare to other metrics like ROUGE or METEOR?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1805,24 +1627,23 @@ ROUGE focuses on recall and is often used for summarization tasks, while METEOR 
 
 ---
 
-
 ### Q: What is Perplexity and how is it used in evaluating language models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Perplexity measures how well a probability model predicts a sample. For a sequence, it is calculated as the inverse probability of the sequence normalized by the number of words:
 
-$$\text{Perplexity} = \exp \left( - \frac{1}{N} \sum_{i=1}^{N} \log P(w_i) \right)$$Where$P(w_i)$is the probability assigned to the$i$-th word by the model.
+$$
+\text{Perplexity} = \exp \left( - \frac{1}{N} \sum_{i=1}^{N} \log P(w_i) \right)
+$$
+Where $P(w_i)$is the probability assigned to the$i$-th word by the model.
 
 </details>
 
 ---
 
-
 ### Q: What are the bounds of Perplexity and what does it indicate?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1833,9 +1654,7 @@ Perplexity ranges from 1 to infinity, with 1 being the best. Lower perplexity in
 
 ---
 
-
 ### Q: What are the limitations of using Perplexity as a metric?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1846,9 +1665,7 @@ Perplexity can be misleading if the vocabulary includes many UNK tokens, as it m
 
 ---
 
-
 ### Q: How is Perplexity related to cross-entropy?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>

@@ -13,7 +13,6 @@
 
 ## System Design Framework & Fundamentals
 
-
 ### Q: What is the step-by-step framework to approach a Machine Learning System Design interview?
 
 <details>
@@ -43,7 +42,6 @@
 
 ## Problem Formulation & Metrics
 
-
 ### Q: How do you choose between Batch Inference vs Real-Time Online Inference?
 
 <details>
@@ -62,7 +60,6 @@
 
 ## Data Pipeline & Feature Engineering
 
-
 ### Q: How do you prevent Data Leakage between feature stores, training data, and online serving?
 
 <details>
@@ -78,7 +75,6 @@
 
 ## Model Design & Selection
 
-
 ### Q: Explain the Two-Tower Architecture for Large-Scale Candidate Generation (Retrieval).
 
 <details>
@@ -90,7 +86,7 @@ In systems with millions of items (e.g., YouTube, E-commerce):
 3. **Scoring & Approximate Nearest Neighbor (ANN)**:
    - Similarity is dot product $\langle \vec{u}, \vec{v} \rangle$.
    - Item embeddings are pre-indexed offline in an ANN vector database (Faiss, HNSW).
-   - At runtime, query vector $\vec{u}$ retrieves top-100 candidates in < 5ms.
+   - At runtime, query vector $\vec{u}$  retrieves top-100 candidates in < 5ms.
 
 </details>
 
@@ -98,13 +94,12 @@ In systems with millions of items (e.g., YouTube, E-commerce):
 
 ## Scalability & Real-Time Serving
 
-
 ### Q: What techniques reduce deep learning model latency for online real-time serving (< 20ms QPS)?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Quantization**: Convert FP32 model weights to INT8 precision (up to $4\times$footprint reduction,$2-3\times$ speedup with minimal accuracy loss).
+1. **Quantization**: Convert FP32 model weights to INT8 precision (up to $4\times$footprint reduction,$2-3\times$  speedup with minimal accuracy loss).
 2. **Knowledge Distillation**: Train a compact "Student" network to mimic outputs of an ensemble "Teacher".
 3. **Graph Optimizations & Engines**: Use ONNX Runtime or TensorRT to fuse operations (e.g., Conv + ReLU fusion).
 4. **Multi-Tier Caching**: Cache top query results in Redis/Memcached.
@@ -115,15 +110,14 @@ In systems with millions of items (e.g., YouTube, E-commerce):
 
 ## System Monitoring & Maintenance
 
-
 ### Q: How do you detect and handle Concept Drift and Covariate Shift in production ML systems?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Covariate Shift**: $P(X)$changes while$P(Y|X)$ remains constant.
+- **Covariate Shift**: $P(X)$changes while$ P(Y|X)$  remains constant.
   - *Detection*: Compare input feature distributions over time using Kolmogorov-Smirnov (KS) test or Population Stability Index (PSI).
-- **Concept Drift**: $P(Y|X)$ changes (e.g., user preferences shift post-pandemic).
+- **Concept Drift**: $P(Y|X)$  changes (e.g., user preferences shift post-pandemic).
   - *Detection*: Monitor online metrics (CTR, conversion rate, precision@k) and compare prediction probability distributions vs true feedback.
 - **Remediation**:
   - Automated continuous retraining pipelines (airflow/KubeFlow) triggered by PSI threshold breaches.
@@ -135,7 +129,6 @@ In systems with millions of items (e.g., YouTube, E-commerce):
 
 ## End-to-End Case Studies
 
-
 ### Q: Design an End-to-End E-Commerce Product Recommendation System.
 
 <details>
@@ -146,7 +139,7 @@ In systems with millions of items (e.g., YouTube, E-commerce):
    - Model: Two-Tower Neural Network / Matrix Factorization retrieving Top 500 items from 10M catalog in ~10ms via FAISS.
 2. **Stage 2: Ranking**
    - Model: Deep & Cross Network (DCN-v2) scoring candidate items using rich interactions (user-category history, price sensitivity).
-   - Loss: Multi-task learning (pCTR $\times$ pCVR).
+   - Loss: Multi-task learning (pCTR $\times$  pCVR).
 3. **Stage 3: Re-ranking & Business Logic**
    - Diversity filtering, out-of-stock exclusion, freshness boosting, sponsored ad insertion.
 4. **Infrastructure**:

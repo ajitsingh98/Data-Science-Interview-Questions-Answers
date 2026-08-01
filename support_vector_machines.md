@@ -1,10 +1,9 @@
-# Data Science Interview Questions And Answers
+# Support Vector Machines
+
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
 
-## Support Vector Machines
-
-Contents
----
+## Table of Contents
 
 - [Maximal Margin Classifier](#maximal-margin-classifier)
 - [Support Vector Classifier](#support-vector-classifier)
@@ -15,9 +14,7 @@ Contents
 
 ## Maximal Margin Classifier
 
-
 ### Q: Is support vector machine(SVM) a generalization of maximal margin classifier?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -28,9 +25,7 @@ True
 
 ---
 
-
 ### Q: What is a hyperplane?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -41,22 +36,20 @@ In a p-dimensional space, a hyperplane is a flat affine subspace of dimension $p
 
 ---
 
-
 ### Q: Write generic expression of a p-dimensional hyperplane?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$\beta_0 + \beta_1X_1 + \beta_2X_2 + .... + \beta_pX_p  = 0$$
+$$
+\beta_0 + \beta_1X_1 + \beta_2X_2 + .... + \beta_pX_p  = 0
+$$
 
 </details>
 
 ---
 
-
 ### Q: How to determine whether a point or a vector lies on a hyperplane?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -67,9 +60,7 @@ We can put the given point in the hyperplane equation and check the sign.
 
 ---
 
-
 ### Q: How does maximal margin classifier work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -78,39 +69,59 @@ Maximal margin classifier is a linear classifier that attempts to separate two c
 
 It works as follows:
 
-Suppose we are working on a binary classification problem with $n$training examples$\{(x_i, y_i)\}^n_{i=1}$ where
+Suppose we are working on a binary classification problem with $n$training examples$\{(x_i, y_i)\}^n_{i=1}$  where
 
 - $x_i \in \mathbb{R}^n$is a$p$-dimensional feature vector
-- $y_i \in \{-1, +1\}$With the above setup, maximal margin classifier tries to find a hyperplane which can be represented as:$$f(x) = w^Tx + b$$
+- $y_i \in \{-1, +1\}$  With the above setup, maximal margin classifier tries to find a hyperplane which can be represented as:
+
+$$
+f(x) = w^Tx + b
+$$
 
 where:
 
-- $w \in \mathbb{R}^p$ is the weight vector (normal to the hyperplane)
-- $b \in \mathbb{R}$ is the offset of the hyperplane from the origin
+- $w \in \mathbb{R}^p$  is the weight vector (normal to the hyperplane)
+- $b \in \mathbb{R}$  is the offset of the hyperplane from the origin
 
 Decision boundary can be defined by:
 
-$$f(x) = 0$$
+$$
+f(x) = 0
+$$
 
-$$ w^Tx + b  = 0$$
+$$
+w^Tx + b  = 0
+$$
 
 Now, we want to maximize the margin which is basically the distance between the decision boundary(hyperplane) and the closest points in the dataset(support vectors).  
 
-Assume $x_i$is a support vector, the distance(d) from the hyperplane can be expressed as$$d = \frac{|w^Tx_i + b|}{||w||}$$If we assume data is perfectly separable:$$y_i(w^Tx_i + b) \ge 1$$Using above two equations, margin can be derived as$$\text{Margin} = \frac{2}{||w||}$$Note that here$2$comes from the distance between the two support vectors(one from each class), each being at the distance of$\frac{1}{||w||}$ from the hyperplane.
+Assume $x_i$ is a support vector, the distance(d) from the hyperplane can be expressed as $$d = \frac{|w^Tx_i + b|}{||w||}$$If we assume data is perfectly separable:$$y_i(w^Tx_i + b) \ge 1$$Using above two equations, margin can be derived as
+
+$$
+\text{Margin} = \frac{2}{||w||}
+$$
+
+Note that here $2$comes from the distance between the two support vectors(one from each class), each being at the distance of$\frac{1}{||w||}$  from the hyperplane.
 
 So, maximal margin classifier tends to optimize the margin subject to the constraints that all points are classified correctly:
 
-$$\min_{\mathbf{w}, b}\frac{1}{2}||w||^2$$subject to:$$y_i(w^Tx_i + b) \ge 1 \forall i$$- Here we have used$||w||^2$instead of$||w||$ to make the objective function convex and differential
+$$
+\min_{\mathbf{w}, b}\frac{1}{2}||w||^2
+$$
+subject to:
+
+$$
+y_i(w^Tx_i + b) \ge 1 \forall i
+$$
+
+- Here we have used $||w||^2$instead of$||w||$  to make the objective function convex and differential
 - The constraints ensures that all points are on the correct side of the margin
 
 </details>
 
 ---
 
-
-
 ### Q: What is the main limitation of maximal margin classifier?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -125,9 +136,7 @@ Maximal margin classifier has following limitations:
 
 ---
 
-
 ### Q: How can we overcome limitation of maximal margin classifier?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -137,11 +146,9 @@ We can use soft margin i.e a hyperplane that almost separates the classes. It is
 </details>
 
 ---
-
 
 ### Q: How can we overcome limitation of maximal margin classifier? (Part 2)
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -151,9 +158,7 @@ We can use soft margin i.e a hyperplane that almost separates the classes. It is
 
 ---
 
-
 ### Q: What is difference between Maximal margin classifier(MMC) and Support vector classifier(SVC)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -166,9 +171,7 @@ But support vector machine, sometimes called as soft margin classifier allows so
 
 ---
 
-
 ### Q: How does Support vector classifier(SVC) works?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -177,30 +180,40 @@ The support vector classifier classifies a test observations depending on which 
 
 It is the solution to the optimization problem:
 
-$$\max_{\mathbf{\beta_0,..,\beta_p}, \epsilon_1,..,\epsilon_n, M} M$$subjected to$$\sum_{j=1}^p\beta_j^2 = 1$$
+$$
+\max_{\mathbf{\beta_0,..,\beta_p}, \epsilon_1,..,\epsilon_n, M} M
+$$
+subjected to
 
-$$y_i(\beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + ... + \beta_px_{ip}) \ge M(1-\epsilon_i)$$
+$$
+\sum_{j=1}^p\beta_j^2 = 1
+$$
 
-$$\epsilon_i \ge 0, \sum_{i=1}^{n}\epsilon_i \le C$$Where$C$is a nonnegative tuning parameter.$M$is the width of the margin and$\epsilon_1,....\epsilon_n$ are slack variables that allows individual observations on the wrong side of the margin or the hyperplane.
+$$
+y_i(\beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + ... + \beta_px_{ip}) \ge M(1-\epsilon_i)
+$$
+
+$$
+\epsilon_i \ge 0, \sum_{i=1}^{n}\epsilon_i \le C
+$$
+Where $C$is a nonnegative tuning parameter.$M$is the width of the margin and$\epsilon_1,....\epsilon_n$  are slack variables that allows individual observations on the wrong side of the margin or the hyperplane.
 
 Once we have hyperplane after solving above set of equations, we classify a test observations $x^*$, by simply determining on which side of hyperplane it lies.
 
 $$
-
-Sign(f(x^*) = \beta_0 + \beta_1x_1^{*}+...+\beta_Px_p^*)$$
+Sign(f(x^*) = \beta_0 + \beta_1x_1^{*}+...+\beta_Px_p^*)
+$$
 
 </details>
 
 ---
 
-
-### Q: What kind of information we get from slack variables $\epsilon$ in SVC?
-
+### Q: What kind of information we get from slack variables $\epsilon$  in SVC?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The slack variable $\epsilon_i$tells us where the$i$th observations is located, relative to the hyperplane and relative to the margin.
+The slack variable $\epsilon_i$tells us where the$i$  th observations is located, relative to the hyperplane and relative to the margin.
 
 - If $\epsilon_i > 0$:$i$th observation is on the wrong side of the margin
 - If $\epsilon_i = 0$:$i$th observation is on the correct side of the margin
@@ -210,22 +223,18 @@ The slack variable $\epsilon_i$tells us where the$i$th observations is located, 
 
 ---
 
-
-### Q: How to interpret regularization parameter $C$ in SVC?
-
+### Q: How to interpret regularization parameter $C$  in SVC?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can think of $C$as a budget for the amount that margin can be violated by$n$observations. If$C=0$then there is no budget for violations to the margin i.e maximal margin classifier. As the budget$C$ increases, the model becomes more tolerant of violations to the margin, and so the margin will widen. Conversely, as C decreases, we become less tolerant of violations to the margin and so the margin narrows.
+We can think of $C$as a budget for the amount that margin can be violated by$n$observations. If$C=0$then there is no budget for violations to the margin i.e maximal margin classifier. As the budget$ C$  increases, the model becomes more tolerant of violations to the margin, and so the margin will widen. Conversely, as C decreases, we become less tolerant of violations to the margin and so the margin narrows.
 
 </details>
 
 ---
 
-
 ### Q: What are support vectors in SVC?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -236,14 +245,12 @@ Observations that lie directly on the margin or on the wrong side of the margin 
 
 ---
 
-
 ### Q: Explain bias-variance tradeoff in SVC?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The regularization parameter $C$ controls the bias-variance trade-off. 
+The regularization parameter $C$  controls the bias-variance trade-off. 
 
 - C is small : Low bias and high variance 
 - C is large : High bias and low variance
@@ -252,9 +259,7 @@ The regularization parameter $C$ controls the bias-variance trade-off.
 
 ---
 
-
 ### Q: Is SVC robust to outliers?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -265,9 +270,7 @@ Yeah mostly, since the decision boundary is influenced only by support vectors, 
 
 ---
 
-
 ### Q: What is the main limitation of SVC?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -278,9 +281,7 @@ It struggles with the cases having non-linear decision boundary.
 
 ---
 
-
 ### Q: Can we use feature space enlarging technique to solve non linear decision boundary problem with SVC?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -291,9 +292,7 @@ Yeah we can address the problem of non-linear boundaries between classes by enla
 
 ---
 
-
 ### Q: What is support vector machine(SVM)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -304,9 +303,7 @@ The support vector machine(SVM) is an extension of the support vector classifier
 
 ---
 
-
 ### Q: What do you mean by kernel function in SVM?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -315,49 +312,51 @@ Kernel function quantifies the similarity of two observations.
 
 - Linear kernel
 
-    $$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$- Polynomial kernel$$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$where,$d > 1$- Radial kernel$$K(x_i,x_{i'}) = exp(-\gamma\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2)$$where,$\gamma$ is positive constant.
+    $$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$- Polynomial kernel$$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$where, $d > 1$- Radial kernel
+
+$$
+K(x_i,x_{i'}) = exp(-\gamma\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2)
+$$
+
+where, $\gamma$  is positive constant.
 
 </details>
 
 ---
-
 
 ### Q: What is advantage of using kernel trick over simply enlarging feature space using functions of the original features?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Kernel trick is more computationally effective technique. We only need to compute $K(x_i, x'{_{i}})$for all$\binom{n}{2}$distinct pairs of$i, i'$. This can be done without explicitly working in the enlarged feature space. This is important because in many applications of SVMs, the enlarged feature space is so large that computations are intractable.
+Kernel trick is more computationally effective technique. We only need to compute $K(x_i, x'{_{i}})$for all$\binom{n}{2}$distinct pairs of$ i, i'$. This can be done without explicitly working in the enlarged feature space. This is important because in many applications of SVMs, the enlarged feature space is so large that computations are intractable.
 
 </details>
 
 ---
 
-
 ### Q: What are major drawbacks of kernel based machines?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- Computation cost : In kernel machines the cost of evaluating the decision function is linear in number of training examples i.e $O(n)$ time complexity.
+- Computation cost : In kernel machines the cost of evaluating the decision function is linear in number of training examples i.e $O(n)$  time complexity.
 - Generic kernels struggles to generalize well.
 
 </details>
 
 ---
 
-
 ### Q: Why kernel trick is popular in SVM?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Although kernel machines are computationally expensive, SVMs are inherently efficient because they rely only on a subset of the training data, called support vectors, to define the decision boundary. The number of support vectors is typically much smaller than the total number of data points, which significantly reduces both training and prediction time, making the kernel trick particularly popular in SVM.
 
-$$f(x) = b + \sum_i \alpha_i k(x, x^{(i)})$$
+$$
+f(x) = b + \sum_i \alpha_i k(x, x^{(i)})
+$$
 
 In SVMs, the vector of coefficients, \(\alpha\), is sparse, with non-zero values only for the support vectors and zero for the rest of the training points.
 
@@ -365,9 +364,7 @@ In SVMs, the vector of coefficients, \(\alpha\), is sparse, with non-zero values
 
 ---
 
-
 ### Q: Is SVM a linear model or non-linear model?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -378,9 +375,7 @@ SVM can be linear or non-linear depending on the kernels we are using. When we a
 
 ---
 
-
 ### Q: What is the kernel trick in Support Vector Machines (SVM), and how does it work?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -395,15 +390,15 @@ Instead of transforming the data explicitly:
 
 The linear function used by SVM can be rewritten as follows:
 
-$$f(x) = w^{T}x + b = b + \sum_{i}\alpha_{i}k(x, x^{(i)})$$
+$$
+f(x) = w^{T}x + b = b + \sum_{i}\alpha_{i}k(x, x^{(i)})
+$$
 
 </details>
 
 ---
 
-
 ### Q: How can we set up SVMs to work with multi class classification problems?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -412,22 +407,19 @@ We can use following approaches to accomplish it:
 
 *One-versus-one classification*
 
-To classify data with SVMs when there are $( K > 2 )$classes, the *one-versus-one* (or *all-pairs*) approach is used. This method involves constructing$\binom{K}{2}$SVM classifiers, each trained to distinguish between a pair of classes. For example, one SVM might compare the$k$th class with the $k'$th class. To classify a new observation, each of these classifiers is used to predict the class, and the observation is assigned to the class that receives the most votes from the pairwise classifiers.
+To classify data with SVMs when there are $( K > 2 )$classes, the *one-versus-one* (or *all-pairs*) approach is used. This method involves constructing$\binom{K}{2}$SVM classifiers, each trained to distinguish between a pair of classes. For example, one SVM might compare the$ k$th class with the$ k'$  th class. To classify a new observation, each of these classifiers is used to predict the class, and the observation is assigned to the class that receives the most votes from the pairwise classifiers.
 
 *One-Versus-All classification*
 
-In the one-versus-all (or one-versus-rest) approach for classifying with SVMs when there are $K > 2$classes,$K$separate SVMs are trained. Each SVM is designed to distinguish one class from the rest. For each SVM, the class of interest is coded as$+1$, while the remaining classes are coded as $-1$. 
+In the one-versus-all (or one-versus-rest) approach for classifying with SVMs when there are $K > 2$classes,$ K$separate SVMs are trained. Each SVM is designed to distinguish one class from the rest. For each SVM, the class of interest is coded as$+1$, while the remaining classes are coded as$-1$. 
 
-To classify a new observation $x^*$, we compute the decision function values for all $K$ SVMs. The observation is assigned to the class for which this decision function value is the highest, indicating the strongest confidence that the observation belongs to that class.
+To classify a new observation $x^*$, we compute the decision function values for all$K$  SVMs. The observation is assigned to the class for which this decision function value is the highest, indicating the strongest confidence that the observation belongs to that class.
 
 </details>
 
 ---
 
-
-
 ### Q: Is the SVM unique in its use of kernels to enlarge the feature space to accommodate non-linear class boundaries?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -438,10 +430,7 @@ No, we could use it for other classification methods as well like with logistic 
 
 ---
 
-
-
 ### Q: When should we use SVMs over logistic regression?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -452,9 +441,7 @@ When the classes are well separated, SVMs tend to behave better than logistic re
 
 ---
 
-
 ### Q: What is the main benefit of using logistic regression over SVM?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -465,23 +452,25 @@ SVM does not provide probabilities like logistic regression output. It only outp
 
 ---
 
-
 ### Q: Given a true label $y = +1$and a predicted score$\hat{y} = 0.5$, calculate the hinge loss for this classification example?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 To calculate the hinge loss for the given true label and predicted score, use the hinge loss formula:
 
-$$L(X, y, \beta) = \sum_{i=1}^{n}max[0, 1 - y_i(\beta_0 + \beta_1x_{i1} + ... + \beta_{p}x_{ip})]$$On putting the given values:$$Loss = max[0, 1 - 0.5] = 0.5$$
+$$
+L(X, y, \beta) = \sum_{i=1}^{n}max[0, 1 - y_i(\beta_0 + \beta_1x_{i1} + ... + \beta_{p}x_{ip})]
+$$
+On putting the given values:
+
+$$
+Loss = max[0, 1 - 0.5] = 0.5
+$$
 
 </details>
 
-
-
 ## Support Vector Machines
-
 
 ### Q: SVM.
 
@@ -497,9 +486,14 @@ $$L(X, y, \beta) = \sum_{i=1}^{n}max[0, 1 - y_i(\beta_0 + \beta_1x_{i1} + ... + 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Support Vector Machine (SVM)**: A supervised learning algorithm that finds an optimal hyper-plane maximizing the geometric margin $\frac{2}{\|w\|}$ between classes.
+- **Support Vector Machine (SVM)**: A supervised learning algorithm that finds an optimal hyper-plane maximizing the geometric margin $\frac{2}{\|w\|}$  between classes.
 - **Formulation**:
-  $$\min_{w, b, \xi} \frac{1}{2} \|w\|^2 + C \sum_{i=1}^N \xi_i \quad \text{s.t. } y_i(w^T x_i + b) \ge 1 - \xi_i, \, \xi_i \ge 0$$- **Kernel Trick**: Replaces inner products$x_i^T x_j$with kernel functions$K(x_i, x_j) = \phi(x_i)^T \phi(x_j)$ (e.g., RBF kernel) to project data into high-dimensional feature spaces implicitly.
+
+$$
+\min_{w, b, \xi} \frac{1}{2} \|w\|^2 + C \sum_{i=1}^N \xi_i \quad \text{s.t. } y_i(w^T x_i + b) \ge 1 - \xi_i, \, \xi_i \ge 0
+$$
+
+- **Kernel Trick**: Replaces inner products $x_i^T x_j$with kernel functions$K(x_i, x_j) = \phi(x_i)^T \phi(x_j)$  (e.g., RBF kernel) to project data into high-dimensional feature spaces implicitly.
 
 </details>
 
@@ -507,10 +501,7 @@ $$L(X, y, \beta) = \sum_{i=1}^{n}max[0, 1 - y_i(\beta_0 + \beta_1x_{i1} + ... + 
 
 ## Support Vector Regression
 
-
-
 ### Q: What is the main difference between Support Vector Machines (SVM) and Support Vector Regression (SVR)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -521,29 +512,31 @@ SVM and SVR also differ in the loss function they want to minimize:
 
 - SVM Loss Function (Hinge Loss)
 
-$$\text{Loss} = \max(0, 1 - y_i \cdot (\mathbf{w} \cdot \mathbf{x}_i + b))$$-  SVR Loss Function (Epsilon-Insensitive Loss)$$
+$$
+\text{Loss} = \max(0, 1 - y_i \cdot (\mathbf{w} \cdot \mathbf{x}_i + b))
+$$
 
+-  SVR Loss Function (Epsilon-Insensitive Loss)
+
+$$
 \text{Loss} = 
 \begin{cases}
 0 & \text{if } |y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| \leq \epsilon \\
 |y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| - \epsilon & \text{otherwise}
 \end{cases}
-
 $$
 
 </details>
 
 ---
 
-
 ### Q: What are the key components of SVR?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The key components of SVR are:
-- $ε-tube$ (ε-insensitive tube), 
+- $ε-tube$  (ε-insensitive tube), 
 - Support vectors
 - Hyperplane
 
@@ -551,9 +544,7 @@ The key components of SVR are:
 
 ---
 
-
 ### Q: What is the role of the ε-tube in SVR?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -585,16 +576,14 @@ Role of the ε-Tube in SVR:
 
 ---
 
-
 ### Q: How do you tune the hyperparameters in SVR?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Hyperparameters in SVR include:
 
-- Regularization parameter $C$
+- Regularization parameter $C$ 
 - Kernel type
 - Kernel-specific parameters (e.g., degree for polynomial kernels, gamma for RBF kernels)
 
@@ -604,22 +593,18 @@ Tuning can be done using techniques like grid search or randomized search cross-
 
 ---
 
-
 ### Q: What is the significance of the regularization parameter ($C$) in SVR?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The parameter $C$$ determines how strictly the model should fit the data versus maintaining a smooth regression function. A high  value emphasizes minimizing errors (fitting the data closely), while a low value emphasizes maximizing the margin and maintaining model simplicity.
+The parameter $C$$  determines how strictly the model should fit the data versus maintaining a smooth regression function. A high  value emphasizes minimizing errors (fitting the data closely), while a low value emphasizes maximizing the margin and maintaining model simplicity.
 
 </details>
 
 ---
 
-
 ### Q: How does SVR handle outliers in the data?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -630,9 +615,7 @@ SVR handles outliers by using an ε-insensitive loss function, a soft margin app
 
 ---
 
-
 ### Q: What are the evaluation metrics used to assess the performance of SVR models?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -648,9 +631,7 @@ Common evaluation metrics for SVR include:
 
 ---
 
-
 ### Q: What are the advantages and disadvantages of SVR compared to other regression techniques?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -671,10 +652,7 @@ Disadvantages of using SVR:
 
 ---
 
-
 ### Q: Can SVR be used for time series forecasting?
-
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>

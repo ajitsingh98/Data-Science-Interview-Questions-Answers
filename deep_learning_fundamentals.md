@@ -1,9 +1,9 @@
-# Data Science Interview Questions And Answers
+# Neural Networks
 
-## Neural Networks
+> 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-Contents
-----
+
+## Table of Contents
 
 - [Perceptron](#Perceptrons)
 - [NNLayers, Topologists and Blocks](#NNLayers,-Topologists-and-Blocks)
@@ -15,7 +15,6 @@ Contents
 ---
 
 ## Perceptron
-
 
 ### Q: Neural network in simple Numpy.
 
@@ -43,12 +42,9 @@ out = sigmoid(np.dot(h1, W2) + b2)
 
 </details>
 
-
 ---
 
-
 ### Q: In a single-layer feed-forward NN, there are [...] input(s) and [...]. output layer(s) and no [...] connections at all.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -57,50 +53,57 @@ out = sigmoid(np.dot(h1, W2) + b2)
 
 </details>
 
-
 ---
-
 
 ### Q: In its simplest form, a perceptron (8.16) accepts only a binary input and emits a binary output. The output, can be evaluated as follows:
 
-
-$$output = \begin{cases}
+$$
+output = \begin{cases}
               0, & \text{if } \sum_j(w_jx_j + b) \leq 0, \\
               1, & \text{if } \sum_j(w_jx_j + b) > 0
-           \end{cases}$$
+           \end{cases}
+$$
 
 Where weights are denoted by wj and biases are denoted by b. Answer the following questions:
 
-1. **True or False:** If such a perceptron is trained using a labelled corpus, for each participating neuron the values $w_j$and$b$ are learned automatically.
+1. **True or False:** If such a perceptron is trained using a labelled corpus, for each participating neuron the values $w_j$and$b$  are learned automatically.
 
 2. **True or False:** If we instead use a new perceptron (sigmoidal) defined as follows:
 
-$$\sigma(wx + b)$$where$\sigma$is the sigmoid function$$\sigma(z) = \frac{1}{1+e^{-z}}$$
+$$
+\sigma(wx + b)
+$$
+where $\sigma$  is the sigmoid function
+
+$$
+\sigma(z) = \frac{1}{1+e^{-z}}
+$$
 
 Then the new perceptron can process inputs ranging between 0 and 1 and emit output ranging between 0 and 1.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$y = f(z) = \begin{cases} 1 & \text{if } w^T x + b \ge 0 \\ 0 & \text{if } w^T x + b < 0 \end{cases}$$
+$$
+y = f(z) = \begin{cases} 1 & \text{if } w^T x + b \ge 0 \\ 0 & \text{if } w^T x + b < 0 \end{cases}
+$$
 
 </details>
 
-
 ---
 
-
 ### Q: Write the cost function associated with the sigmoidial neuron.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 - **Mean Squared Error (MSE)** or **Binary Cross-Entropy (BCE)**:
-  $$L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]$$
+
+$$
+L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]
+$$
 
 </details>
-
 
 ---
 
@@ -110,16 +113,16 @@ $$y = f(z) = \begin{cases} 1 & \text{if } w^T x + b \ge 0 \\ 0 & \text{if } w^T 
 <summary><b>💡 Show Answer</b></summary>
 
 - **Mean Squared Error (MSE)** or **Binary Cross-Entropy (BCE)**:
-  $$L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]$$
+
+$$
+L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]
+$$
 
 </details>
 
-
 ---
 
-
 ### Q: Complete the sentence: To solve this mathematical equation, we have to apply $[...]$?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -129,13 +132,18 @@ $$y = f(z) = \begin{cases} 1 & \text{if } w^T x + b \ge 0 \\ 0 & \text{if } w^T 
 
 </details>
 
-
 ---
-
 
 ### Q: What does the following equation stands for?
 
-$$\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}$$Where:$$C_x = \frac{1}{2}\|y(x) - a(x,w,b)\|^2$$
+$$
+\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}
+$$
+Where:
+
+$$
+C_x = \frac{1}{2}\|y(x) - a(x,w,b)\|^2
+$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -145,27 +153,21 @@ $$\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}$$Where:$$C_x = \frac{1}{2}\|y(x) - a(
 
 </details>
 
-
 ---
 
-
-### Q: Complete the sentence: Due to the time-consuming nature of computing gradients for each entry in the training corpus, modern DL libraries utilize a technique that gauges the gradient by first randomly sampling a subset from the training corpus, and then averaging only this subset in every epoch. This approach is known as $[...]$. The actual number of randomly chosen samples in each epoch is termed $[...]$. The gradient itself is obtained by an algorithm known as $[...]$.
-
+### Q: Complete the sentence: Due to the time-consuming nature of computing gradients for each entry in the training corpus, modern DL libraries utilize a technique that gauges the gradient by first randomly sampling a subset from the training corpus, and then averaging only this subset in every epoch. This approach is known as $[...]$. The actual number of randomly chosen samples in each epoch is termed$[...]$. The gradient itself is obtained by an algorithm known as$[...]$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Complete the sentence: Due to the time-consuming nature of computing gradients for each entry in the training corpus, modern DL libraries utilize a technique that gauges the gradient by first randomly sampling a subset from the training corpus, and then averaging only this subset in every epoch. This approach is known as $[...]$. The actual number of randomly chosen samples in each epoch is termed $[...]$. The gradient itself is obtained by an algorithm known as $[...]$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Complete the sentence: Due to the time-consuming nature of computing gradients for each entry in the training corpus, modern DL libraries utilize a technique that gauges the gradient by first randomly sampling a subset from the training corpus, and then averaging only this subset in every epoch. This approach is known as $[...]$. The actual number of randomly chosen samples in each epoch is termed$[...]$. The gradient itself is obtained by an algorithm known as$[...]$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
-
 ---
 
-
-### Q: The following questions refer to the MLP depicted in (9.1).The inputs to the MLP are $x1 = 0.9$and$x2 = 0.7$respectively, and the weights$w1 = −0.3$and$w2 = 0.15$respectively. There is a single hidden node,$H1$. The bias term, $B1$equals$0.001$.
-
+### Q: The following questions refer to the MLP depicted in (9.1).The inputs to the MLP are $x1 = 0.9$and$ x2 = 0.7$respectively, and the weights$ w1 = −0.3$and$ w2 = 0.15$respectively. There is a single hidden node,$ H1$. The bias term,$B1$equals$0.001$.
 
 <table align='center'>
   <tr>
@@ -185,19 +187,16 @@ $$\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}$$Where:$$C_x = \frac{1}{2}\|y(x) - a(
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `The following questions refer to the MLP depicted in (9.1).The inputs to the MLP are $x1 = 0.9$and$x2 = 0.7$respectively, and the weights$w1 = −0.3$and$w2 = 0.15$respectively. There is a single hidden node,$H1$. The bias term, $B1$equals$0.001$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `The following questions refer to the MLP depicted in (9.1).The inputs to the MLP are $x1 = 0.9$and$ x2 = 0.7$respectively, and the weights$ w1 = −0.3$and$ w2 = 0.15$respectively. There is a single hidden node,$ H1$. The bias term,$B1$equals$0.001$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
-
 ---
-
 
 ### Q: The following questions refer to the MLP depicted in (8.15).
 
-
-1. Further to the above, the ReLU non-linear activation function $g(z) = max{0, z}$ is applied (8.15) to the output of the linear transformation. What is the value of the output (out2) now?
+1. Further to the above, the ReLU non-linear activation function $g(z) = max{0, z}$  is applied (8.15) to the output of the linear transformation. What is the value of the output (out2) now?
 
 <table align='center'>
   <tr>
@@ -220,9 +219,7 @@ $$\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}$$Where:$$C_x = \frac{1}{2}\|y(x) - a(
 
 </details>
 
-
 ---
-
 
 ### Q: Activation functions.
 
@@ -239,12 +236,9 @@ $$\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}$$Where:$$C_x = \frac{1}{2}\|y(x) - a(
 
 </details>
 
-
 ---
 
-
 ### Q: Why shouldn’t we have two consecutive linear layers in a neural network?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -254,12 +248,9 @@ $$\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}$$Where:$$C_x = \frac{1}{2}\|y(x) - a(
 
 </details>
 
-
 ---
 
-
 ### Q: Can a neural network with only RELU (non-linearity) act as a linear classifier?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -269,22 +260,20 @@ $$\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}$$Where:$$C_x = \frac{1}{2}\|y(x) - a(
 
 </details>
 
-
 ---
-
 
 ### Q: Your co-worker, an postgraduate student at M.I.T, suggests using the following activa-
 
 tion functions in a MLP. Which ones can never be back-propagated and why?
 
-1. $f(x) = |x|$2.$f(x) = f(x)$3.$f(x)= \begin{cases}
+1. $f(x) = |x|$2.$f(x) = f(x)$3.$  f(x)= \begin{cases}
            0, & \text{if } x = 0, \\
            x \sin\left(\frac{1}{x}\right), & \text{if } x \neq 0.
-       \end{cases}$4.$f(x)= \begin{cases}
+       \end{cases}$4.$  f(x)= \begin{cases}
            0 & \text{if } x = 0 \\
            -x & \text{if } x < 0 \\
            x^2 & \text{if } x > 0
-       \end{cases}$
+       \end{cases}$ 
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -294,12 +283,9 @@ tion functions in a MLP. Which ones can never be back-propagated and why?
 
 </details>
 
-
 ---
 
-
 ### Q: You are provided with the following MLP as depicted in 8.16.
-
 
 <table align='center'>
   <tr>
@@ -312,8 +298,8 @@ tion functions in a MLP. Which ones can never be back-propagated and why?
   </tr>
 </table>
 
-The ReLU non-linear activation function $g(z) = max{0,z}$is applied to the hidden layers$H1...H3$and the bias term equals$0.001$.
-At a certain point in time it has the following values $8.17$ all of which are belong to the type `torch.F loatTensor`:
+The ReLU non-linear activation function $g(z) = max{0,z}$is applied to the hidden layers$ H1...H3$and the bias term equals$ 0.001$.
+At a certain point in time it has the following values $8.17$  all of which are belong to the type `torch.F loatTensor`:
 
 ```python
 import torch
@@ -326,7 +312,7 @@ w= torch.tensor([
 B= torch.tensor([0.002]) # Bias
 ```
 1. Using Python, calculate the output of the MLP at the hidden layers $H1...H3$.
-2. Further to the above, you discover that at a certain point in time that the weights between the hidden layers and the output layers $γ1$ have the following values:
+2. Further to the above, you discover that at a certain point in time that the weights between the hidden layers and the output layers $γ1$  have the following values:
 ```python
 w1= torch.tensor([0.15,-0.46,0.59], [0.10,0.32,-0.79])
 ```
@@ -334,7 +320,9 @@ What is the value observed at the output nodes $γ1..γ2$?
 3. Assume now that a Softmax activation is applied to the output. What are the resulting values?
 4. Assume now that a cross-entropy loss is applied to the output of the Softmax.
 
-$$L = -\sum_i{y_i\log(y_i)}$$
+$$
+L = -\sum_i{y_i\log(y_i)}
+$$
 
 What are the resulting values?
 
@@ -346,12 +334,9 @@ What are the resulting values?
 
 </details>
 
-
 ---
 
-
 ### Q: If someone is quoted saying: MLP networks are universal function approximators. What does he mean?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -361,12 +346,9 @@ What are the resulting values?
 
 </details>
 
-
 ---
 
-
 ### Q: **True or False**: the output of a perceptron is 0 or 1.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -376,12 +358,9 @@ What are the resulting values?
 
 </details>
 
-
 ---
 
-
 ### Q: **True or False:** A multi-layer perceptron falls under the category of supervised machine learning.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -391,9 +370,7 @@ What are the resulting values?
 
 </details>
 
-
 ---
-
 
 ### Q: **True or False:** The accuracy of a perceptron is calculated as the number of correctly
 
@@ -407,12 +384,9 @@ classified samples divided by the total number of incorrectly classified samples
 
 </details>
 
-
 ---
 
-
-### Q: The following questions refer to the SLP depicted in (8.18). The weights in the SLP are $w1 = 1$and$w2 = 1$respectively. There is a single hidden node, H1. The bias term, B1 equals$−2.5$.
-
+### Q: The following questions refer to the SLP depicted in (8.18). The weights in the SLP are $w1 = 1$and$ w2 = 1$respectively. There is a single hidden node, H1. The bias term, B1 equals$−2.5$.
 
 <table align='center'>
   <tr>
@@ -436,17 +410,14 @@ What is the value resulting from the application the sum operator?
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `The following questions refer to the SLP depicted in (8.18). The weights in the SLP are $w1 = 1$and$w2 = 1$respectively. There is a single hidden node, H1. The bias term, B1 equals$−2.5$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `The following questions refer to the SLP depicted in (8.18). The weights in the SLP are $w1 = 1$and$ w2 = 1$respectively. There is a single hidden node, H1. The bias term, B1 equals$−2.5$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
-
 ---
 
-
 ### Q: Repeat the above assuming now that the bias term B1 was amended and equals −0.25.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -456,12 +427,9 @@ What is the value resulting from the application the sum operator?
 
 </details>
 
-
 ---
 
-
 ### Q: Define what is the perceptron learning rule.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -471,9 +439,7 @@ What is the value resulting from the application the sum operator?
 
 </details>
 
-
 ---
-
 
 ### Q: What was the most crucial difference between Rosenblatt’s original algorithm and Hinton’s fundamental papers of 1986: <a href="">Learning representations by back-propagating errors</a> and 2012:
 
@@ -487,12 +453,9 @@ What is the value resulting from the application the sum operator?
 
 </details>
 
-
 ---
 
-
 ### Q: The AND logic gate is defined by the following table:
-
 
 <table align='center'>
   <tr>
@@ -515,12 +478,9 @@ Can a perceptron with only two inputs and a single output function as an AND log
 
 </details>
 
-
 ---
 
-
 ### Q: Design the smallest neural network that can function as an XOR gate.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -530,12 +490,9 @@ Can a perceptron with only two inputs and a single output function as an AND log
 
 </details>
 
-
 ---
 
-
-### Q: The Sigmoid s(x) = 1 , also commonly known as the logistic function (Fig. 8.20),$s_c(x) = \frac{1}{1+e^-cx}$ is widely used in binary classification and as a neuron activation function in artificial neural networks. Typically, during the training of an ANN, a Sigmoid layer applies the Sigmoid function to elements in the forward pass, while in the backward pass the chain rule is being utilized as part of the backpropagation algorithm. In 8.20 the constant c was selected arbitrarily as 2 and 5 respectively.
-
+### Q: The Sigmoid s(x) = 1 , also commonly known as the logistic function (Fig. 8.20), $s_c(x) = \frac{1}{1+e^-cx}$  is widely used in binary classification and as a neuron activation function in artificial neural networks. Typically, during the training of an ANN, a Sigmoid layer applies the Sigmoid function to elements in the forward pass, while in the backward pass the chain rule is being utilized as part of the backpropagation algorithm. In 8.20 the constant c was selected arbitrarily as 2 and 5 respectively.
 
 <table align='center'>
   <tr>
@@ -550,7 +507,10 @@ Can a perceptron with only two inputs and a single output function as an AND log
 
 Digital hardware implementations of the sigmoid function do exist but they are expensive to compute and therefore several approximation methods were introduced by the research community. The method by [10] uses the following formulas to approximate the exponential function:
 
-$$\exp{x} = Ex(x) = 2^{1.44x}$$Based on this formulation, one can calculate the sigmoid function as:$Sigmoid(x) = \frac{1}{1+2^{-1.44x}} = \frac{1}{1+2^{-1.5}}$
+$$
+\exp{x} = Ex(x) = 2^{1.44x}
+$$
+Based on this formulation, one can calculate the sigmoid function as: $Sigmoid(x) = \frac{1}{1+2^{-1.44x}} = \frac{1}{1+2^{-1.5}}$ 
 
 1. Code snippet 8.21 provides a pure C++ based (e.g. not using Autograd) implementation of the forward pass for the Sigmoid function. Implement the backward pass that directly computes the analytical gradients in C++ using Libtorch [19] style tensors.
 
@@ -578,7 +538,7 @@ $$\exp{x} = Ex(x) = 2^{1.44x}$$Based on this formulation, one can calculate the 
 
 3. Manually derive the derivative of eq. 8.27, e.g:
 
-    $\frac{d}{dx}[\frac{1}{1+2^{-1.5x}}]$
+    $\frac{d}{dx}[\frac{1}{1+2^{-1.5x}}]$ 
 
 4. Implement both the forward pass for the Sigmoid function approximation eq.8.27 that directly computes the analytical gradients in C++ using Libtorch [19].
 
@@ -588,18 +548,18 @@ v = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.99]
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `The Sigmoid s(x) = 1 , also commonly known as the logistic function (Fig. 8.20),$s_c(x) = \frac{1}{1+e^-cx}$ is widely used in binary classification and as a neuron activation function in artificial neural networks. Typically, during the training of an ANN, a Sigmoid layer applies the Sigmoid function to elements in the forward pass, while in the backward pass the chain rule is being utilized as part of the backpropagation algorithm. In 8.20 the constant c was selected arbitrarily as 2 and 5 respectively.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `The Sigmoid s(x) = 1 , also commonly known as the logistic function (Fig. 8.20), $s_c(x) = \frac{1}{1+e^-cx}$  is widely used in binary classification and as a neuron activation function in artificial neural networks. Typically, during the training of an ANN, a Sigmoid layer applies the Sigmoid function to elements in the forward pass, while in the backward pass the chain rule is being utilized as part of the backpropagation algorithm. In 8.20 the constant c was selected arbitrarily as 2 and 5 respectively.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
-
 ---
-
 
 ### Q: The Hyperbolic tangent nonlinearity, or the tanh function (Fig. 8.23), is a widely used neuron activation function in artificial neural networks:
 
-$$f_{tanh}(x) = \frac{sinh(x)}{cosh(x)} = \frac{e^x - e^-x}{e^x + e^-x}$$
+$$
+f_{tanh}(x) = \frac{sinh(x)}{cosh(x)} = \frac{e^x - e^-x}{e^x + e^-x}
+$$
 
 <table align='center'>
   <tr>
@@ -625,9 +585,7 @@ $$f_{tanh}(x) = \frac{sinh(x)}{cosh(x)} = \frac{e^x - e^-x}{e^x + e^-x}$$
 
 </details>
 
-
 ---
-
 
 ### Q: The code snippet in 8.24 makes use of the tanh function.
 
@@ -653,12 +611,9 @@ $$f_{tanh}(x) = \frac{sinh(x)}{cosh(x)} = \frac{e^x - e^-x}{e^x + e^-x}$$
 
 </details>
 
-
 ---
 
-
 ### Q: Your friend, a veteran of the DL community claims that MLPs based on tanh activation function, have a symmetry around 0 and consequently cannot be saturated. Saturation, so he claims is a phenomenon typical of the top hidden layers in sigmoid based MLPs. Is he right or wrong?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -668,9 +623,7 @@ $$f_{tanh}(x) = \frac{sinh(x)}{cosh(x)} = \frac{e^x - e^-x}{e^x + e^-x}$$
 
 </details>
 
-
 ---
-
 
 ### Q: If we initialize the weights of a tanh based NN, which of the following approaches will lead to the vanishing gradients problem?
 
@@ -688,12 +641,9 @@ Xavier Glorot [9].
 
 </details>
 
-
 ---
 
-
 ### Q: You friend, who is experimenting with the tanh activation function designed a small CNN with only one hidden layer and a linear output (8.25):
-
 
 <table align='center'>
   <tr>
@@ -716,25 +666,25 @@ He initialized all the weights and biases (biases not shown for brevity) to zero
 
 </details>
 
-
 ---
 
+### Q: The rectified linear unit, or ReLU $g(z) = max{0, z}$  is the default for many CNN architectures. It is defined by the following function:
 
-### Q: The rectified linear unit, or ReLU $g(z) = max{0, z}$is the default for many CNN architectures. It is defined by the following function:$$f_{ReLU} = max(0, x)$$
+$$
+f_{ReLU} = max(0, x)
+$$
 
 1. In what sense is the ReLU better than traditional sigmoidal activation functions?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `The rectified linear unit, or ReLU $g(z) = max{0, z}$ is the default for many CNN architectures. It is defined by the following function:`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `The rectified linear unit, or ReLU $g(z) = max{0, z}$  is the default for many CNN architectures. It is defined by the following function:`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
-
 ---
-
 
 ### Q: You are experimenting with the ReLU activation function, and you design a small CNN (8.26) which accepts an RGB image as an input. Each CNN kernel is denoted by $w$.
 
@@ -759,17 +709,16 @@ What is the shape of the resulting tensor W?
 
 </details>
 
-
 ---
-
 
 ### Q: Name the following activation function where $a ∈ (0, 1)$:
 
-
-$$f(x) = \begin{cases}
+$$
+f(x) = \begin{cases}
     x & \text{if } x > 0 \\
     ax & \text{otherwise}
-\end{cases}$$
+\end{cases}
+$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -779,9 +728,7 @@ $$f(x) = \begin{cases}
 
 </details>
 
-
 ---
-
 
 ### Q: In many interviews, you will be given a paper that you have never encountered before, and be required to read and subsequently discuss it. Please read <a href="https://arxiv.org/pdf/1710.05941.pdf">Searching for Activation Functions</a> before attempting the questions in this question.
 
@@ -798,29 +745,23 @@ $$f(x) = \begin{cases}
 
 </details>
 
-
 ---
 
 ### NNLayers, Topologists and Blocks
 
-
-### Q: Given an input of size of $n×n$, filters of size $f×f$and a stride of$s$with padding of$p$, what is the output dimension?
-
+### Q: Given an input of size of $n×n$, filters of size $f×f$and a stride of$s$ with padding of$p$, what is the output dimension?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given an input of size of $n×n$, filters of size $f×f$and a stride of$s$with padding of$p$, what is the output dimension?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given an input of size of $n×n$, filters of size $f×f$and a stride of$s$ with padding of$p$, what is the output dimension?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
-
 ---
 
-
 ### Q: Referring the code snippet in Fig. (8.31), answer the following questions regarding the VGG11 architecture [25]:
-
 
 ```python
   import torchvision
@@ -855,9 +796,7 @@ $$f(x) = \begin{cases}
 
 </details>
 
-
 ---
-
 
 ### Q: Still referring the code snippet in Fig. (8.31), and specifically to line 7, the code is amended so that the line is replaced by the line: `vgg_layers=vgg11.features[:3]`.
 
@@ -872,12 +811,9 @@ $$f(x) = \begin{cases}
 
 </details>
 
-
 ---
 
-
 ### Q: Table (8.1) presents an incomplete listing of the of the VGG11 architecture [25]. As depicted, for each layer the number of filters (i. e., neurons with unique set of parameters) are presented.
-
 
 <table align='center'>
   <tr>
@@ -905,12 +841,9 @@ Complete the missing parts regarding the dimensions and arithmetics of the VGG11
 
 </details>
 
-
 ---
 
-
 ### Q: A Dropout layer [26] (Fig. 8.32) is commonly used to regularize a neural network model by randomly equating several outputs (the crossed-out hidden node H) to 0.
-
 
 <table align='center'>
   <tr>
@@ -955,10 +888,7 @@ During the training of a neural network, the Dropout layer randomly drops out ou
 
 </details>
 
-
 ---
-
-
 
 ### Q: A co-worker claims he discovered an equivalence theorem where, two consecutive Dropout layers [26] can be replaced and represented by a single Dropout layer 8.34.
 
@@ -973,7 +903,7 @@ During the training of a neural network, the Dropout layer randomly drops out ou
   </tr>
 </table>
 
-$Hi$ realized two consecutive layers in PyTorch [20], declared as follows (8.3):
+$Hi$  realized two consecutive layers in PyTorch [20], declared as follows (8.3):
 
 ```python
 import torch
@@ -997,9 +927,7 @@ Where nn.Dropout(0.1) (Line #6 in 8.3) indicates that the probability of zeroing
 
 </details>
 
-
 ---
-
 
 ### Q: If he uses the following filter for the convolutional operation, what would be the resulting
 
@@ -1023,9 +951,7 @@ tensor after the application of the convolutional layer?
 
 </details>
 
-
 ---
-
 
 ### Q: What would be the resulting tensor after the application of the ReLU layer (8.37)?
 
@@ -1048,12 +974,9 @@ tensor after the application of the convolutional layer?
 
 </details>
 
-
 ---
 
-
 ### Q: What would be the resulting tensor after the application of the MaxPool layer (8.78)?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1063,9 +986,7 @@ tensor after the application of the convolutional layer?
 
 </details>
 
-
 ---
-
 
 ### Q: The following input 8.38 is subjected to a MaxPool2D(2,2) operation having 2 × 2 max-pooling filter with a stride of 2 and no padding at all.
 
@@ -1092,12 +1013,9 @@ Answer the following questions:
 
 </details>
 
-
 ---
 
-
-### Q: While reading a paper about the MaxPool operation, you encounter the following code snippet $9.1$ of a PyTorch module that the authors implemented. You download their pre- trained model, and evaluate its behaviour during inference:
-
+### Q: While reading a paper about the MaxPool operation, you encounter the following code snippet $9.1$  of a PyTorch module that the authors implemented. You download their pre- trained model, and evaluate its behaviour during inference:
 
 ```python
 import torch
@@ -1146,16 +1064,14 @@ Please run the code and answer the following questions:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `While reading a paper about the MaxPool operation, you encounter the following code snippet $9.1$ of a PyTorch module that the authors implemented. You download their pre- trained model, and evaluate its behaviour during inference:`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `While reading a paper about the MaxPool operation, you encounter the following code snippet $9.1$  of a PyTorch module that the authors implemented. You download their pre- trained model, and evaluate its behaviour during inference:`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-
 ### Q: Weight normalization separates a weight vector’s norm from its gradient. How would it help with training?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1165,12 +1081,9 @@ Please run the code and answer the following questions:
 
 </details>
 
-
 ---
 
-
 ### Q: In python, the probability density function for a normal distribution is given by 8.40:
-
 
 ```python
 import scipy
@@ -1187,12 +1100,9 @@ scipy.stats.norm.pdf(x, mu, sigma)
 
 </details>
 
-
 ---
 
-
 ### Q: Your friend, a novice data scientist, uses an RGB image (8.41) which he then subjects to BN as part of training a CNN.
-
 
 <table align='center'>
   <tr>
@@ -1234,12 +1144,9 @@ class BNl001(nn.Module):
 
 </details>
 
-
 ---
 
-
 ### Q: **True or false**: An activation function applied after a Dropout, is equivalent to an activation function applied before a dropout.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1249,9 +1156,7 @@ class BNl001(nn.Module):
 
 </details>
 
-
 ---
-
 
 ### Q: Which of the following core building blocks may be used to construct CNNs? Choose all the options that apply:
 
@@ -1269,9 +1174,7 @@ class BNl001(nn.Module):
 
 </details>
 
-
 ---
-
 
 ### Q: You are designing a CNN which has a single BN layer. Which of the following core CNN designs are valid? Choose all the options that apply:
 
@@ -1290,13 +1193,18 @@ class BNl001(nn.Module):
 
 </details>
 
-
 ---
-
 
 ### Q: The following operator is known as the Hadamard product:
 
-$$OUT = A⊙B$$Where:$$(A⊙B)i,j :=(A)i,j(B)i,j$$
+$$
+OUT = A⊙B
+$$
+Where:
+
+$$
+(A⊙B)i,j :=(A)i,j(B)i,j
+$$
 
 A scientist, constructs a Dropout layer using the following algorithm:
 
@@ -1305,7 +1213,16 @@ A scientist, constructs a Dropout layer using the following algorithm:
 3. Generate a new tensor T ‘ ∈ {0, 1}^S
 4. Assign each element in T‘a randomly and independently sampled value from a Bernoulli distribution:
 
-$$T‘i ∼  B(1,p)$$5. Calculate the OUT tensor as follows:$$OUT = T‘⊙T$$You are surprised to find out that his last step is to multiply the output of a dropout layer with:$$\frac{1}{1-p}$$Explain what is the purpose of multiplying by the term$\frac{1}{1-p}$
+$$
+T‘i ∼  B(1,p)
+$$
+5. Calculate the OUT tensor as follows:$$OUT = T‘⊙T$$You are surprised to find out that his last step is to multiply the output of a dropout layer with:
+
+$$
+\frac{1}{1-p}
+$$
+
+Explain what is the purpose of multiplying by the term $\frac{1}{1-p}$ 
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1315,12 +1232,9 @@ $$T‘i ∼  B(1,p)$$5. Calculate the OUT tensor as follows:$$OUT = T‘⊙T$$Yo
 
 </details>
 
-
 ---
 
-
 ### Q: Visualized in (8.43) from a high-level view, is an MLP which implements a well-known idiom in DL.
-
 
 <table align='center'>
   <tr>
@@ -1358,14 +1272,16 @@ Name one disadvantage of this new architecture.
 
 </details>
 
-
 ---
-
 
 ### Q: Answer the following questions regarding residual networks.
 
 1. Mathematically, the residual block may be represented by:
-$$y = x + F(x)$$ 
+
+$$
+y = x + F(x)
+$$
+
 What is the function F?
 2. In one sentence, what was the main idea behind deep residual networks (ResNets) as introduced in the original paper?
 
@@ -1377,9 +1293,7 @@ What is the function F?
 
 </details>
 
-
 ---
-
 
 ### Q: Your friend was thinking about ResNet blocks, and tried to visualize them in (8.45).
 
@@ -1395,7 +1309,7 @@ What is the function F?
 </table>
 
 1. Assuming a residual of the form $y = x + F(x)$, complete the missing parts in Fig. (8.45).
-2. What does the symbol $⊕$ denotes?
+2. What does the symbol $⊕$  denotes?
 3. A fellow data scientist,who had coffee with you said that residual blocks may compute the identity function. Explain what he meant by that.
 
 <details>
@@ -1406,20 +1320,16 @@ What is the function F?
 
 </details>
 
-
 ---
 
 ## Training and Hyperparameters
 
-
 ### Q: A certain training pipeline for the classification of large images (1024 x 1024) uses the following Hyperparameters (8.46):
-
 
     Initial learning rate 0.1 
     Weight decay 0.0001 
     Momentum 0.9 
     Batch size 1024
-
 
 ```python
 
@@ -1443,12 +1353,9 @@ In your opinion, what could possibly go wrong with this training pipeline?
 
 </details>
 
-
 ---
 
-
 ### Q: A junior data scientist in your team who is interested in Hyperparameter tuning, wrote the following code (8.5) for spiting his corpus into two distinct sets and fitting an LR model:
-
 
 ```python
 
@@ -1466,7 +1373,7 @@ He then evaluated the performance of the trained model on the Xtest set.
 1. Explain why his methodology is far from perfect.
 2. Help him resolve the problem by utilizing a difference splitting methodology.
 3. Your friend now amends the code an uses:
-   
+
 ```python
 clf = GridSearchCV(method, params, scoring='roc_auc', cv=5) clf.fit(train_X, train_y)
 ```
@@ -1480,12 +1387,9 @@ Explain why his new approach may work better?
 
 </details>
 
-
 ---
 
-
 ### Q: In the context of Hyperparameter optimization, explain the difference between grid search and random search.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1495,9 +1399,7 @@ Explain why his new approach may work better?
 
 </details>
 
-
 ---
-
 
 ### Q: Non-invasive methods that forecast the existence of lung nodules (8.47), is a precursor to lung cancer. Yet, in spite of acquisition standardization attempts, the manual detection of lung nodules still remains predisposed to inter mechanical and observer variability. What is more, it is a highly laborious task.
 
@@ -1524,12 +1426,9 @@ In the majority of cases, the training data is manually labelled by radiologists
 
 </details>
 
-
 ---
 
-
 ### Q: Answer the following questions regarding the validation curve visualized in (8.48):
-
 
 <table align='center'>
   <tr>
@@ -1548,7 +1447,7 @@ In the majority of cases, the training data is manually labelled by radiologists
 4. Which positive phenomena happens when we train a NN longer?
 5. Which negative phenomena happens when we train a NN longer than we should?
 6. How this negative phenomena is reflected in 8.48?
- 
+
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
@@ -1557,9 +1456,7 @@ In the majority of cases, the training data is manually labelled by radiologists
 
 </details>
 
-
 ---
-
 
 ### Q: Learning rate.
 
@@ -1577,9 +1474,7 @@ In the majority of cases, the training data is manually labelled by radiologists
 
 </details>
 
-
 ---
-
 
 ### Q: It’s a common practice for the learning rate to be reduced throughout the training.
 
@@ -1594,12 +1489,9 @@ In the majority of cases, the training data is manually labelled by radiologists
 
 </details>
 
-
 ---
 
-
 ### Q: Refer to the validation log-loss curve visualized in (8.49) and answer the following questions:
-
 
 <table align='center'>
   <tr>
@@ -1637,12 +1529,9 @@ What do you think about his idea?
 
 </details>
 
-
 ---
 
-
 ### Q: Why don’t we just initialize all weights in a neural network to zero?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1652,9 +1541,7 @@ What do you think about his idea?
 
 </details>
 
-
 ---
-
 
 ### Q: You finished training a face recognition algorithm, which uses a feature vector of 128
 
@@ -1670,12 +1557,9 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
-
 ### Q: Complete the sentence: If the training loss is insignificant while the test loss is significantly higher, the network has almost certainly learned features which are not present in an `[...]` set. This phenomena is referred to as `[...]`
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1685,14 +1569,11 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
 ### Optimization and Loss
 
-
 ### Q: What does the term stochastic in SGD actually mean? Does it use any random number generator?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1702,9 +1583,7 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
-
 
 ### Q: Stochasticity.
 
@@ -1719,12 +1598,9 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
-
 ### Q: Gradient descent vs SGD vs mini-batch SGD.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1734,12 +1610,9 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
-
 ### Q: Write the vanilla gradient update.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1749,12 +1622,9 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
-
 ### Q: Explain why in SGD, the number of epochs required to surpass a certain loss threshold increases as the batch size decreases?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1764,12 +1634,9 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
-
 ### Q: It’s a common practice to train deep learning models using epochs: we sample batches from data without replacement. Why would we use epochs instead of just sampling data with replacement?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1779,9 +1646,7 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
-
 
 ### Q: Batch size.
 
@@ -1797,9 +1662,7 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
-
 
 ### Q: Vanishing and exploding gradients.
 
@@ -1814,12 +1677,9 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
-
 ### Q: How does momentum work? Explain the role of exponential decay in the gradient descent update rule?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1829,12 +1689,9 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
-
 ### Q: Why is Adagrad sometimes favored in problems with sparse gradients?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1844,9 +1701,7 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
-
 
 ### Q: Adam vs. SGD.
 
@@ -1861,12 +1716,9 @@ elements. During inference, you notice that the performance is not that good. A 
 
 </details>
 
-
 ---
 
-
 ### Q: With model parallelism, you might update your model weights using the gradients from each machine asynchronously or synchronously. What are the pros and cons of asynchronous SGD vs. synchronous SGD?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1877,7 +1729,6 @@ elements. During inference, you notice that the performance is not that good. A 
 </details>
 
 ---
-
 
 ### Q: In your training loop, you are using SGD and a logistic activation function which is
 
@@ -1894,9 +1745,7 @@ known to suffer from the phenomenon of saturated units.
 
 </details>
 
-
 ---
-
 
 ### Q: Which of the following statements holds true?
 
@@ -1913,20 +1762,24 @@ known to suffer from the phenomenon of saturated units.
 
 </details>
 
-
 ---
-
 
 ### Q: Answer the following questions regarding norms.
 
-  
 1. Which norm does the following equation represent?
 
-$$|x1 − x2| + |y1 − y2|$$2. Which formulae does the following equation represent?$$\sqrt{\sum_{i=1}^n(x_i - y_i)^2}$$
+$$
+|x1 − x2| + |y1 − y2|
+$$
+2. Which formulae does the following equation represent?
+
+$$
+\sqrt{\sum_{i=1}^n(x_i - y_i)^2}
+$$
 
 3. When your read that someone penalized the L2 norm, was the euclidean or the Manhattan distance involved?
 
-4. Compute both the Euclidean and Manhattan distance of the vectors: $x1$= [6,1,4,5] and$x2$ = [2,8,3,−1].
+4. Compute both the Euclidean and Manhattan distance of the vectors: $x1$= [6,1,4,5] and$x2$  = [2,8,3,−1].
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1936,12 +1789,9 @@ $$|x1 − x2| + |y1 − y2|$$2. Which formulae does the following equation repre
 
 </details>
 
-
 ---
 
-
 ### Q: Why is squared L2 norm sometimes preferred to L2 norm for regularizing neural networks?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1951,9 +1801,7 @@ $$|x1 − x2| + |y1 − y2|$$2. Which formulae does the following equation repre
 
 </details>
 
-
 ---
-
 
 ### Q: You are provided with a pure Python code implementation of the Manhattan distance
 
@@ -1977,12 +1825,9 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 </details>
 
-
 ---
 
-
 ### Q: Your friend is training a logistic regression model for a binary classification problem using the L2 loss for optimization. Explain to him why this is a bad choice and which loss he should be using instead.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1992,12 +1837,9 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 </details>
 
-
 ---
 
-
 ### Q: What’s the motivation for skip connection in neural works?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2007,12 +1849,9 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 </details>
 
-
 ---
 
-
 ### Q: When training a large neural network, say a language model with a billion parameters, you evaluate your model on a validation set at the end of every epoch. You realize that your validation loss is often lower than your train loss. What might be happening?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2022,12 +1861,9 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 </details>
 
-
 ---
 
-
 ### Q: Your model’ weights fluctuate a lot during training. How does that affect your model’s performance? What to do about it?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2037,13 +1873,9 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 </details>
 
-
 ---
 
-
-
 ### Q: Some models use weight decay: after each gradient update, the weights are multiplied by a factor slightly less than 1. What is this useful for?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2053,9 +1885,7 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 </details>
 
-
 ---
-
 
 ### Q: Dead neuron.
 
@@ -2071,9 +1901,7 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 </details>
 
-
 ---
-
 
 ### Q: Pruning.
 
@@ -2088,15 +1916,16 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 </details>
 
-
 ---
-
 
 ### Q: 1. What is batch normalization?
 
 2. The normal distribution is defined as follows:
 
-$$P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$Generally i.i.d.$X ∼ N (μ, σ2)$ however BN uses the standard normal distribution. What mean and variance does the standard normal distribution have?
+$$
+P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}
+$$
+Generally i.i.d. $X ∼ N (μ, σ2)$  however BN uses the standard normal distribution. What mean and variance does the standard normal distribution have?
 3. What is the mathematical process of normalization?
 4. Describe, how normalization works in BN.
 
@@ -2108,12 +1937,9 @@ $$P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$Generally 
 
 </details>
 
-
 ---
 
-
 ### Q: Compare batch norm and layer norm.
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2125,9 +1951,7 @@ $$P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$Generally 
 
 ---
 
-
 ### Q: Under what conditions would it be possible to recover training data from the weight checkpoints?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2137,12 +1961,9 @@ $$P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$Generally 
 
 </details>
 
-
 ---
 
-
 ### Q: Why do we try to reduce the size of a big trained model through techniques such as knowledge distillation instead of just training a small model from the beginning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2152,12 +1973,9 @@ $$P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$Generally 
 
 </details>
 
-
 ---
 
-
 ### Q: You’re building a neural network and you want to use both numerical and textual features. How would you process those different features?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2169,12 +1987,9 @@ $$P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$Generally 
 
 ---
 
-
 ## Regularization for deep learning
 
-
 ### Q: What is regularization and why is it important?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2187,17 +2002,15 @@ We use regularization to improve our model's performance on unseen datasets as w
 
 ---
 
-
 ### Q: What are different kind of regularization techniques that we can use for deep neural networks?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 We can use following techniques to regularize DNNs:
 - Parameter norm penalties
-  - $L^1$ regularizer
-  - $L^2$ regularizer
+  - $L^1$  regularizer
+  - $L^2$  regularizer
 - Dataset augmentation
 - Early stopping
 - Bagging and other ensemble techniques
@@ -2208,40 +2021,36 @@ We can use following techniques to regularize DNNs:
 
 ---
 
-
 ### Q: Write the expression of cost function incase of parameter norm penalties?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 In case of parameter norm penalities we denote the regularized objective function by $J$:
 
-$$\tilde{J}(\theta; X, y) =  J(\theta; X, y) + \alpha \Omega(\theta)$$
+$$
+\tilde{J}(\theta; X, y) =  J(\theta; X, y) + \alpha \Omega(\theta)
+$$
 
 Where
-- $\alpha$is hyperparameter range$[0, \infty]$-$ J(\theta; X, y)$ is standard objective function
+- $\alpha$is hyperparameter range$[0, \infty]$-$J(\theta; X, y)$  is standard objective function
 
 </details>
 
 ---
 
-
-### Q: What is the significant of hyperparameter $\alpha$ in regularized cost function?
-
+### Q: What is the significant of hyperparameter $\alpha$  in regularized cost function?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$\alpha$weighs the relative contribution of the norm penalty term$\Omega$, relative to the standard objective function $J$. Setting $\alpha$to$0$results in no regularization. Larger values of$\alpha$ corresponds to more regularization.
+$\alpha$weighs the relative contribution of the norm penalty term$\Omega$, relative to the standard objective function $J$. Setting$\alpha $to$0$results in no regularization. Larger values of$\alpha$  corresponds to more regularization.
 
 </details>
 
 ---
 
-
 ### Q: Why do we typically penalize only the model's weights and not the biases in parameter norm penalties?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2252,50 +2061,55 @@ The biases typically require less data than the weights to fit accurately. While
 
 ---
 
-
 ### Q: Should we use different penalty terms for each layer of neural networks?
 
-
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can use different $\alpha$ for each layer but it can be expensive to search for correct value of multiple hyperparameters. It is reasonable to use the same weight decay($\alpha$) for all the layers just to reduce the size of search space.
+We can use different $\alpha$for each layer but it can be expensive to search for correct value of multiple hyperparameters. It is reasonable to use the same weight decay($\alpha$) for all the layers just to reduce the size of search space.
 
 </details>
 
 ---
 
-
-### Q: Write the expression of objective function $J$in case of$L^2$ regularization?
-
+### Q: Write the expression of objective function $J$in case of$L^2$  regularization?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$L^2$regularization technique drives the weight closer to origin by adding a regularization term$\Omega(\theta) = \frac{1}{2}||w||^{2}_{2}$It has following total objective function:$$\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)$$
+$L^2$regularization technique drives the weight closer to origin by adding a regularization term$\Omega(\theta) = \frac{1}{2}||w||^{2}_{2}$  It has following total objective function:
+
+$$
+\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)
+$$
 
 </details>
 
 ---
-
 
 ### Q: Why is the \(L^2\) parameter norm penalty referred to as weight decay?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 The \(L^2\) parameter norm penalty is called weight decay because it effectively "decays" or shrinks the weights during the training process.
 
-$$\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)$$with corresponding parameter gradient$$\nabla \tilde{J}(w; X, y) = \alpha w + \nabla_{w} J(w; X, y)$$To take single gradient step to update the weights, we perform this update:$$w \leftarrow w - \eta \left( \alpha w + \nabla_{w} J(w; X, y) \right)$$We can further expand it$$w \leftarrow (1 - \eta \alpha) w -  \eta \nabla_{w} J(w; X, y)$$As we can see the addition of$L^2$ parameter norm penalty has modified the learning rule to multiplicatively shrink the weight vector by a constant factor on each step. The term "decay" reflects this gradual reduction in weight magnitude over time.
+$$
+\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)
+$$
+with corresponding parameter gradient$$\nabla \tilde{J}(w; X, y) = \alpha w + \nabla_{w} J(w; X, y)$$To take single gradient step to update the weights, we perform this update:$$w \leftarrow w - \eta \left( \alpha w + \nabla_{w} J(w; X, y) \right)$$We can further expand it
+
+$$
+w \leftarrow (1 - \eta \alpha) w -  \eta \nabla_{w} J(w; X, y)
+$$
+
+As we can see the addition of $L^2$  parameter norm penalty has modified the learning rule to multiplicatively shrink the weight vector by a constant factor on each step. The term "decay" reflects this gradual reduction in weight magnitude over time.
 
 </details>
 
 ---
 
-
 ### Q: Why do we usually regularize model parameters toward zero instead of a specific point?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2304,22 +2118,29 @@ Actually we can regularize the parameters to any specific point in space and sti
 
 For regularizing the weights towards a point $w_0$, we can use following penalty term
 
-$$\frac{\alpha}{2} (w - w_0)^{T}(w - w_0)$$
+$$
+\frac{\alpha}{2} (w - w_0)^{T}(w - w_0)
+$$
 
 </details>
 
 ---
 
-
-### Q: Explain the impact of $L^2$ regularization on objective function of linear regression?
-
+### Q: Explain the impact of $L^2$  regularization on objective function of linear regression?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Adding \(L^2\) regularization to the objective function of linear regression modifies it to:
 
-$$\tilde{J}(w; X, y) = (Xw - y)^T(Xw - y) + \frac{1}{2}\alpha w^{T}w$$This means the weights \(w\) can be calculated as:$$w = (X^{T}X + \alpha I)^{-1}X^{T}y$$
+$$
+\tilde{J}(w; X, y) = (Xw - y)^T(Xw - y) + \frac{1}{2}\alpha w^{T}w
+$$
+This means the weights \(w\) can be calculated as:
+
+$$
+w = (X^{T}X + \alpha I)^{-1}X^{T}y
+$$
 
 The diagonal entries of the matrix \((X^{T}X + \alpha I)^{-1}\) represent the variance of each input feature. \(L^2\) regularization makes the model view the input \(X\) as having higher variance, which leads to smaller weights for features that have low covariance with the output target.
 
@@ -2327,31 +2148,33 @@ The diagonal entries of the matrix \((X^{T}X + \alpha I)^{-1}\) represent the va
 
 ---
 
-
-### Q: Write the expression for $L^1$regularization on the model parameters$w$?
-
+### Q: Write the expression for $L^1$regularization on the model parameters$ w$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 It can be defined as
 
-$$\Omega{\theta} = ||w||_{1} = \sum_{i}|w_i|$$
+$$
+\Omega{\theta} = ||w||_{1} = \sum_{i}|w_i|
+$$
 
 </details>
 
 ---
 
-
-### Q: Compute the gradient of $L^1$ regularized objective function?
-
+### Q: Compute the gradient of $L^1$  regularized objective function?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The regularized objective function $\tilde{J}(w; X, y)$is given by$$\tilde{J}(w; X, y) = \alpha ||w||_1 + J(w; X, y)$$On taking gradient both side$$\nabla_{w}\tilde{J}(w; X, y) = \alpha \text{sign}(w) + \nabla_{w}J(X, y; w)$$
+The regularized objective function $\tilde{J}(w; X, y)$ is given by$$\tilde{J}(w; X, y) = \alpha ||w||_1 + J(w; X, y)$$On taking gradient both side
 
-Where sign($w$) is simply the sign of $w$ applied element wise.
+$$
+\nabla_{w}\tilde{J}(w; X, y) = \alpha \text{sign}(w) + \nabla_{w}J(X, y; w)
+$$
+
+Where sign($w$) is simply the sign of $w$  applied element wise.
 
 Not that here the gradient no longer scales linearly with each $w_i$, instead it is a constant factor with the sign equal to sign($w_i$).
 
@@ -2359,43 +2182,49 @@ Not that here the gradient no longer scales linearly with each $w_i$, instead it
 
 ---
 
-
-### Q: How does $L^1$ regularization results in more sparse parameters?
-
+### Q: How does $L^1$  regularization results in more sparse parameters?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 In linear regression, the objective function with L1 regularization can be expressed as:
 
-$$\tilde{J}(w; X, y) = \frac{1}{2} \sum_{i=1}^{n} (y_i - X_i^T w)^2 + \alpha \sum_{j=1}^{p} |w_j|$$When we optimize this objective function, we take the gradient and set it to zero:$$\nabla \tilde{J}(w; X, y) = -X^T(y - Xw) + \alpha \text{sign}(w) = 0$$This gives us:$$X^T(y - Xw) = \alpha \text{sign}(w)$$
+$$
+\tilde{J}(w; X, y) = \frac{1}{2} \sum_{i=1}^{n} (y_i - X_i^T w)^2 + \alpha \sum_{j=1}^{p} |w_j|
+$$
+When we optimize this objective function, we take the gradient and set it to zero:$$\nabla \tilde{J}(w; X, y) = -X^T(y - Xw) + \alpha \text{sign}(w) = 0$$This gives us:
+
+$$
+X^T(y - Xw) = \alpha \text{sign}(w)
+$$
 
 1. Impact on Weights: The \(\text{sign}(w)\) term introduces a non-smooth point at \(w_j = 0\). This means that during optimization, if a feature's contribution is minimal, the corresponding weight \(w_j\) may be driven to zero. 
 2. Zeroing Out Weights:
   - If the contribution of a feature \(X_j\) to reducing the error is low (meaning \(X^T(y - Xw)\) for that feature is relatively small), the penalty term becomes large enough that:
-    $$|X^T(y - Xw)| < \alpha$$- This condition leads to:$$w_j = 0$$
+    $$|X^T(y - Xw)| < \alpha$$- This condition leads to:
+
+$$
+w_j = 0
+$$
+
   - Thus, when \(\alpha\) is sufficiently large, features that do not significantly help in predicting the output will have their weights reduced to zero.
 
 </details>
 
 ---
 
-
 ### Q: How do L1 and L2 regularization relate to Bayesian inference in the context of maximum a posteriori (MAP) estimation?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$L^2$regularization is MAP bayesian inference with a Gaussian Prior on weights. For$L^1$regularization the penalty term is equivalent to MAP bayesian inference with isotropic laplace distribution prior over weights$w$.
+$L^2$regularization is MAP bayesian inference with a Gaussian Prior on weights. For$ L^1$regularization the penalty term is equivalent to MAP bayesian inference with isotropic laplace distribution prior over weights$ w$.
 
 </details>
 
 ---
 
-
 ### Q: What is the main motivation behind using data augmentation techniques?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2406,9 +2235,7 @@ The primary motivation for data augmentation is to reduce generalization error b
 
 ---
 
-
 ### Q: State the some use cases where we can use data augmentation techniques?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2420,9 +2247,7 @@ The primary motivation for data augmentation is to reduce generalization error b
 
 ---
 
-
 ### Q: State some data augmentation techniques?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2445,9 +2270,7 @@ Text
 
 ---
 
-
 ### Q: What is label smoothing?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2458,9 +2281,7 @@ Label smoothing is a regularization technique used in machine learning, particul
 
 ---
 
-
 ### Q: Why do we need label smoothing?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2471,9 +2292,7 @@ Label smoothing helps mitigate the risks associated with maximizing the likeliho
 
 ---
 
-
 ### Q: When do we use label smoothing?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2484,22 +2303,18 @@ Whenever a classification neural network suffers from overfitting and/or overcon
 
 ---
 
-
 ### Q: How do we choose $\alpha$or$\eta$?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Just like other regularization hyperparameters, there is no formula for choosing $α$. It is usually done by trial and error, and $α = 0.1$ is a good place to start.
+Just like other regularization hyperparameters, there is no formula for choosing $α$. It is usually done by trial and error, and$α = 0.1$  is a good place to start.
 
 </details>
 
 ---
 
-
 ### Q: What challenges arise when using maximum likelihood learning with a softmax classifier and hard targets?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2510,9 +2325,7 @@ Using maximum likelihood learning with a softmax classifier and hard targets can
 
 ---
 
-
 ### Q: What is multitask learning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2538,9 +2351,7 @@ The model can be generally divided into two kind of parts and associated paramet
 
 ---
 
-
 ### Q: How does multitask learning prevents overfitting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2555,9 +2366,7 @@ The model can be generally divided into two kind of parts and associated paramet
 
 ---
 
-
 ### Q: What is early stopping in machine learning?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2579,9 +2388,7 @@ Early stopping is a form of regularization used to avoid overfitting when traini
 
 ---
 
-
 ### Q: How do you implement early stopping in a training process?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2595,9 +2402,7 @@ Early stopping is a form of regularization used to avoid overfitting when traini
 
 ---
 
-
 ### Q: What criteria would you use for early stopping?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2607,12 +2412,9 @@ Early stopping is a form of regularization used to avoid overfitting when traini
 
 </details>
 
-
 ---
 
-
 ### Q: What are the benefits of using early stopping as regularizer over other methods like weight decay?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2625,9 +2427,7 @@ Early stopping is a form of regularization used to avoid overfitting when traini
 
 ---
 
-
 ### Q: How does bagging technique help in reducing generalization error?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2635,9 +2435,16 @@ Early stopping is a form of regularization used to avoid overfitting when traini
 Bagging(short for bootstrap aggregating) employs a general strategy in machine learning called model averaging.
 The reason that model averaging works is that different models will usually not make all the same errors on the test set. 
 
-Consider for example a set of $k$regression models. Suppose that each model makes an error$\eta_i$on each example, with errors drawn from a zero-mean multivariate normal distribution with variances$\mathbf{E}[\eta_{i}^2] = v$and covariances$\mathbf{E}[\eta_{i} \eta_{j}] = c$. Then the error made by the average prediction of all the ensemble models is $\frac{1}{k}\sum_{i} \eta_{i}$The expected squared error of the ensemble predictor is$$\mathbf{E}\left[\left(\frac{1}{k}\sum_{i=1}^k \eta_i\right)^2\right] = \frac{1}{k^2} \mathbf{E}\left[\sum_{i=1}^k \eta_i^2 + \sum_{i \neq j} \eta_i \eta_j\right]$$
+Consider for example a set of $k$regression models. Suppose that each model makes an error$\eta_i$on each example, with errors drawn from a zero-mean multivariate normal distribution with variances$\mathbf{E}[\eta_{i}^2] = v$and covariances$\mathbf{E}[\eta_{i} \eta_{j}] = c$. Then the error made by the average prediction of all the ensemble models is $\frac{1}{k}\sum_{i} \eta_{i}$  The expected squared error of the ensemble predictor is
 
-$$= \frac{1}{k}v + \frac{k-1}{k}c$$In the case where the errors are perfectly correlated and$c=v$, the mean squared error reduces to $v$, so the model averaging does not help at all. In case where we have perfectly uncorrelated errors and $c=0$, the expected squared error of the ensemble is only $\frac{1}{k}v$. This means that the expected squared error of the ensemble decreases linearly with the ensemble size. 
+$$
+\mathbf{E}\left[\left(\frac{1}{k}\sum_{i=1}^k \eta_i\right)^2\right] = \frac{1}{k^2} \mathbf{E}\left[\sum_{i=1}^k \eta_i^2 + \sum_{i \neq j} \eta_i \eta_j\right]
+$$
+
+$$
+= \frac{1}{k}v + \frac{k-1}{k}c
+$$
+In the case where the errors are perfectly correlated and $c=v$, the mean squared error reduces to $v$, so the model averaging does not help at all. In case where we have perfectly uncorrelated errors and$c=0$, the expected squared error of the ensemble is only$\frac{1}{k}v$. This means that the expected squared error of the ensemble decreases linearly with the ensemble size. 
 
 In other words, on average, the model will perform at least as well as any of its members, and if memebers make independent errors, the ensemble will perform significantly better than its member.
 
@@ -2656,9 +2463,7 @@ In other words, on average, the model will perform at least as well as any of it
 
 ---
 
-
 ### Q: What are the challenges associated with using the bagging method with neural networks to prevent overfitting?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2669,9 +2474,7 @@ Bagging involves training multiple models and evaluating multiple models on each
 
 ---
 
-
 ### Q: Show all the possible subnetworks that can be formed by dropping ot diffrent subsets of the units from the given base network?
-
 
 <table align='center'>
   <tr>
@@ -2702,9 +2505,7 @@ Bagging involves training multiple models and evaluating multiple models on each
 
 ---
 
-
 ### Q: **[True/False]** Does dropout aim to approximate the bagging method for neural networks?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2715,9 +2516,7 @@ True
 
 ---
 
-
 ### Q: How does the dropout technique contrast with the bagging method?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2740,9 +2539,7 @@ Dropout and bagging differ in several key aspects:
 
 ---
 
-
 ### Q: Which types of models can utilize the dropout technique?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2758,14 +2555,12 @@ For example:
 
 ---
 
-
 ### Q: State the weight scaling inference rule in case of dropout method?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-When dropout is applied during training, each unit in a layer is kept with a probability $p$i.e keep probability. The units that are kept are expected to compensate not only for their own output but also for the absent units. As a result during training, the output from active neurons are scaled up by a factor of$\frac{1}{p}$ so that expected sum of the outputs remains constant whether dropout is used or not.
+When dropout is applied during training, each unit in a layer is kept with a probability $p$i.e keep probability. The units that are kept are expected to compensate not only for their own output but also for the absent units. As a result during training, the output from active neurons are scaled up by a factor of$\frac{1}{p}$  so that expected sum of the outputs remains constant whether dropout is used or not.
 
 However, at test time, all neurons are active (no dropout is applied). Without adjustment, this would result in a larger output from the network than what it was trained to produce, potentially leading to poor performance during inference. The weight scaling inference rule addresses this discrepancy.
 
@@ -2773,28 +2568,24 @@ However, at test time, all neurons are active (no dropout is applied). Without a
 
 ---
 
-
 ### Q: How does weight scaling rule works?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-To maintain the same expected output from neurons, the outputs are scaled down at test time. This is done by multiplying the weights by the dropout probability $p$ after training. This scaling down ensures that the contribution from neurons during inference matches the expected contribution (averaged over many training scenarios with dropout) during training.
+To maintain the same expected output from neurons, the outputs are scaled down at test time. This is done by multiplying the weights by the dropout probability $p$  after training. This scaling down ensures that the contribution from neurons during inference matches the expected contribution (averaged over many training scenarios with dropout) during training.
 
 Suppose you have a simple network where dropout is applied with \( p = 0.5 \) (each neuron is kept with a 50% chance) in a particular layer during training. Here’s how the weight scaling works:
 
 1. During Training: A neuron's output is kept with a probability of 0.5. If it is active, its output effectively contributes twice as much as it would without dropout (because approximately half the neurons are dropped).
-   
+
 2. After Training for Inference: Multiply the weights of the neurons in that layer by 0.5. This adjustment reduces the output by half, compensating for the fact that during training, only about half of the neurons would have contributed on average.
 
 </details>
 
 ---
 
-
 ### Q: What is inverted dropout?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2803,7 +2594,7 @@ Inverted dropout is a variation of the standard dropout technique it adjusts the
 
 Here's how it is implemented:
 
-- Drop Neurons: During training, randomly set a proportion $p$ of the activations in a layer to zero, just like standard dropout.
+- Drop Neurons: During training, randomly set a proportion $p$  of the activations in a layer to zero, just like standard dropout.
 - Scale Up Active Neurons: Instead of leaving the remaining activations unchanged, scale them up by dividing by the keep probability \( (1 - p) \). This means that if \( p = 0.5 \), the outputs of the neurons that are not dropped are multiplied by \( \frac{1}{(1 - 0.5)} = 2 \) during training.
 - No Adjustment at Inference: Because the activations are scaled during training, no adjustments are necessary during inference. This simplifies the implementation and avoids the need to use different computation paths or weight adjustments when switching from training to inference.
 
@@ -2811,9 +2602,7 @@ Here's how it is implemented:
 
 ---
 
-
 ### Q: What impact does dropout have on the learning of representations in neural networks?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2826,9 +2615,7 @@ This method effectively prevents neurons from co-adapting too closely, ensuring 
 
 ---
 
-
 ### Q: When building a neural network, should you overfit or underfit it first?
-
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2837,7 +2624,6 @@ This method effectively prevents neurons from co-adapting too closely, ensuring 
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
-
 
 ---
 
