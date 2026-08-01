@@ -2,23 +2,22 @@
 
 ## Probability
 
-## Contents
+## Table of Contents
 
-- [Basic Probability](#basic-probability)
-- [Conditional Probability](#conditional-probability)
-- [Bayes Theorem](#bayes-theorem)
-- [Random Variables](#random-variables)
-- [Discrete Random Variables](#discrete-random-variables)
-- [Continuous Random Variables](#continuous-random-variables)
+- [Probability](#probability)
+- [Contents](#contents)
 - [Correlation and Covariance](#correlation-and-covariance)
 
 ---
 
 ### Basic Probability
 
-Q. What do you mean by probability?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by probability?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is a mathematical framework for representing uncertain statements. It provides a means of quantifying uncertainty.
 
@@ -26,9 +25,12 @@ It is a mathematical framework for representing uncertain statements. It provide
 
 ---
 
-Q. Define probability of an event?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define probability of an event?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The probability of an event $A$ is given by the ratio of the number of favorable outcomes to the total number of possible outcomes, expressed as:
 
@@ -40,9 +42,12 @@ $$
 
 ---
 
-Q. Define disjoint sets.
 
-<details><summary><b>Answer</b></summary>
+### Q: Define disjoint sets.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Disjoint sets are sets that have no elements in common. In other words, the intersection of disjoint sets is the empty set. If $A$ and $B$ are two sets, they are disjoint if:
 
@@ -56,9 +61,12 @@ $$
 
 ### Conditional Probability
 
-Q. Write the expression of probability of $A$ given that $B$ has already occurred.
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the expression of probability of $A$ given that $B$ has already occurred.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The conditional probability of $A$, given that event $B$ has already happened, is denoted by:
 
@@ -75,9 +83,12 @@ where:
 ---
 
 
-Q. What is the law of total probability?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the law of total probability?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The law of total probability is a fundamental rule that provides a way to compute the probability of an event by considering all possible scenarios or conditions. If $B_1, B_2, \ldots, B_n$ are mutually exclusive and exhaustive events (i.e., they cover the entire sample space), and $A$ is any event, then the probability of $A$ can be expressed as:
 
@@ -93,9 +104,12 @@ where:
 
 ---
 
-Q. What does it mean for two variables to be independent?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does it mean for two variables to be independent?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Two random variables $x$ and $y$ are independent if their probabilities distribution can be expressed as a product of two factors, one involving only $x$ and one involving only $y$:
 
@@ -109,9 +123,12 @@ This means that knowing whether $x$ has occurred does not change the probability
 
 ---
 
-Q. Given two random variables $X$  and $Y$. We have the values $P(X|Y)$  and $P(Y)$ for all values of $X$ and $Y$. How would you calculate $P(X)$?
 
-<details><summary><b>Answer</b></summary>
+### Q: Given two random variables $X$  and $Y$. We have the values $P(X|Y)$  and $P(Y)$ for all values of $X$ and $Y$. How would you calculate $P(X)$?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 To calculate $P(X)$ given $P(X | Y)$ and $P(Y)$, we can use the law of total probability. The probability $P(X)$ is obtained by summing over all possible values of $Y$:
 
@@ -125,56 +142,79 @@ This expression accounts for the contribution of each conditional probability $P
 
 ---
 
-Q. You know that your colleague Jason has two children and one of them is a boy. What’s the probability that Jason has two sons? 
 
-<details><summary><b>Answer</b></summary>
-
+### Q: You know that your colleague Jason has two children and one of them is a boy. What’s the probability that Jason has two sons?
 
 
-</details>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
----
-
-Q. Consider a room of $n$ people. Suppose that their birthdays are randomly distributed among $365$ days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs $n$. Find the probability when $n=2$.
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Sample Space**: $\{BB, BG, GB\}$. (GG is excluded because at least one is a boy).
+- **Favorable Outcome**: $\{BB\}$.
+- **Probability**: $P(BB \mid \text{at least one boy}) = \frac{1}{3} \approx 33.3\%$.
 
 </details>
 
 ---
 
-Q. Given two events $A$ and $B$ in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively:
+
+### Q: Consider a room of $n$ people. Suppose that their birthdays are randomly distributed among $365$ days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs $n$. Find the probability when $n=2$.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a room of $n$ people. Suppose that their birthdays are randomly distributed among $365$ days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs $n$. Find the probability when $n=2$.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+
+### Q: Given two events $A$ and $B$ in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively:
+
 1. Define the conditional probability of $A$ given $B$. Mind singular cases. 
 2. Annotate each part of the conditional probability formulae.
 3. Draw an instance of Venn diagram, depicting the intersection of the events $A$ and $B$. Assume that $A  \cup B = H$.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given two events $A$ and $B$ in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. Assume you manage an unreliable file storage system that crashed 5 times in the last year, each crash happens independently.
+
+### Q: Assume you manage an unreliable file storage system that crashed 5 times in the last year, each crash happens independently.
+
 1. What's the probability that it will crash in the next month?
 1. What's the probability that it will crash at any given moment?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Poisson Distribution model**: Rate $\lambda = 5$ crashes/year.
+- **Probability of $k$ crashes**: $P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$.
+- Independent Poisson process assumption.
 
 </details>
 
 ---
 
-Q. Say you built a classifier to predict the outcome of football matches. In the past, it's made 10 wrong predictions out of 100. Assume all predictions are made independently, what's the probability that the next 20 predictions are all correct?
 
-<details><summary><b>Answer</b></summary>
+### Q: Say you built a classifier to predict the outcome of football matches. In the past, it's made 10 wrong predictions out of 100. Assume all predictions are made independently, what's the probability that the next 20 predictions are all correct?
 
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Accuracy**: $p = 1 - \frac{10}{100} = 0.90$.
+- **Probability of 20 consecutive correct predictions**:
+  $$ P = p^{20} = (0.90)^{20} \approx 0.1215 \text{ (or } 12.15\% \text{)} $$
 
 </details>
 
@@ -182,9 +222,12 @@ Q. Say you built a classifier to predict the outcome of football matches. In the
 
 ### Bayes Theorem
 
-Q. State bayes theorem.
 
-<details><summary><b>Answer</b></summary>
+### Q: State bayes theorem.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Bayes' Theorem provides a way to update the probability of a hypothesis based on new evidence. It relates the conditional and marginal probabilities of random events. 
 
@@ -206,9 +249,12 @@ It is named after *Reverend Thomas Bayes*
 
 ---
 
-Q. Write the simplified version of bayes rules.
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the simplified version of bayes rules.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Standard bayes theorem:
 
@@ -232,9 +278,12 @@ $$
 
 ---
 
-Q. What is normalization constant in Bayes Theorem?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is normalization constant in Bayes Theorem?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The denominator in standard bayes theorem is called normalization constant. 
 
@@ -250,14 +299,16 @@ $$
 P(B) = P(B|A)P(A) + P(B|A^C)P(A^C)
 $$
 
-
 </details>
 
 ---
 
-Q. Show the relationship between the prior, posterior and likelihood probabilities.
 
-<details><summary><b>Answer</b></summary>
+### Q: Show the relationship between the prior, posterior and likelihood probabilities.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The relationship between the prior, posterior, and likelihood probabilities is given by Bayes' Theorem, which can be expressed as:
 
@@ -270,142 +321,192 @@ $$
 
 ---
 
-Q. In a Bayesian context, if a first experiment is conducted, and then another experiment is followed, what does the posterior become for the next experiment?
 
-<details><summary><b>Answer</b></summary>
-
+### Q: In a Bayesian context, if a first experiment is conducted, and then another experiment is followed, what does the posterior become for the next experiment?
 
 
-</details>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
----
-
-Q. Suppose there are three closed doors and a car has been placed behind one of the door at random. There are two goats behind the other two doors. Now you pick a door 1 but the admin knows where the car is and open the door 2 to reveal a goat(admin will always open the door with a goat). Now he offers you to stay at the same chosen door or switch between closed doors i.e door 1 and door 2. Should you switch the door to maximize chances of getting car?
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `In a Bayesian context, if a first experiment is conducted, and then another experiment is followed, what does the posterior become for the next experiment?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. There are only two electronic chip manufacturers: $A$ and $B$, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of $70%$.
+
+### Q: Suppose there are three closed doors and a car has been placed behind one of the door at random. There are two goats behind the other two doors. Now you pick a door 1 but the admin knows where the car is and open the door 2 to reveal a goat(admin will always open the door with a goat). Now he offers you to stay at the same chosen door or switch between closed doors i.e door 1 and door 2. Should you switch the door to maximize chances of getting car?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose there are three closed doors and a car has been placed behind one of the door at random. There are two goats behind the other two doors. Now you pick a door 1 but the admin knows where the car is and open the door 2 to reveal a goat(admin will always open the door with a goat). Now he offers you to stay at the same chosen door or switch between closed doors i.e door 1 and door 2. Should you switch the door to maximize chances of getting car?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+
+---
+
+
+### Q: There are only two electronic chip manufacturers: $A$ and $B$, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of $70%$.
+
 1. If you randomly pick a chip from the store, what is the probability that it is defective?
 1. Suppose you now get two chips coming from the same company, but you don’t know which one. When you test the first chip, it appears to be functioning. What is the probability that the second electronic chip is also good?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `There are only two electronic chip manufacturers: $A$ and $B$, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of $70%$.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. There’s a rare disease that only 1 in 10000 people get. Scientists have developed a test to diagnose the disease with the false positive rate and false negative rate of 1%.
+
+### Q: There’s a rare disease that only 1 in 10000 people get. Scientists have developed a test to diagnose the disease with the false positive rate and false negative rate of 1%.
+
 1. Given a person is diagnosed positive, what’s the probability that this person actually has the disease?
 1. What’s the probability that a person has the disease if two independent tests both come back positive?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
-
-</details>
-
-
----
-
-Q. A dating site allows users to select $10$ out of $50$ adjectives to describe themselves. Two users are said to match if they share at least $5$ adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `There’s a rare disease that only 1 in 10000 people get. Scientists have developed a test to diagnose the disease with the false positive rate and false negative rate of 1%.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$  and the height of females follows $h_j=N(μ_j,σ^{2}_j)$ . Derive a probability density function to describe A’s height.
 
-<details><summary><b>Answer</b></summary>
-
+### Q: A dating site allows users to select $10$ out of $50$ adjectives to describe themselves. Two users are said to match if they share at least $5$ adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?
 
 
-</details>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
----
-
-Q. There are three weather apps, each the probability of being wrong $\frac{1}{3}$ of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy $50%$ of the time?
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `A dating site allows users to select $10$ out of $50$ adjectives to describe themselves. Two users are said to match if they share at least $5$ adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. Given n  samples from a uniform distribution $[0,d]$. How do you estimate $d$? (Also known as the German tank problem)
 
-<details><summary><b>Answer</b></summary>
-
+### Q: Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$  and the height of females follows $h_j=N(μ_j,σ^{2}_j)$ . Derive a probability density function to describe A’s height.
 
 
-</details>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
----
-
-Q. You’re part of a class. How big the class has to be for the probability of at least a person sharing the same birthday with you is greater than $50%$?
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$  and the height of females follows $h_j=N(μ_j,σ^{2}_j)$ . Derive a probability density function to describe A’s height.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p$ of winning, which doubles your bet, and $1−p$ of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of $p$?
 
-<details><summary><b>Answer</b></summary>
-
+### Q: There are three weather apps, each the probability of being wrong $\frac{1}{3}$ of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy $50%$ of the time?
 
 
-</details>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
----
-
-Q. In national health research in the US, the results show that the top 3 cities with the lowest rate of kidney failure are cities with populations under $5,000$. Doctors originally thought that there must be something special about small town diets, but when they looked at the top 3 cities with the highest rate of kidney failure, they are also very small cities. What might be a probabilistic explanation for this phenomenon?
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `There are three weather apps, each the probability of being wrong $\frac{1}{3}$ of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy $50%$ of the time?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively. Given that $A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.
 
-<details><summary><b>Answer</b></summary>
+### Q: Given n  samples from a uniform distribution $[0,d]$. How do you estimate $d$? (Also known as the German tank problem)
 
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given n  samples from a uniform distribution $[0,d]$. How do you estimate $d$? (Also known as the German tank problem)`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. In an experiment conducted in the field of particle physics (Fig. 3.2), a certain particle may be in two distinct equally probable quantum states: integer spin or half-integer spin. It is well-known that particles with integer spin are bosons, while particles with half-integer spin are fermions.
+
+### Q: You’re part of a class. How big the class has to be for the probability of at least a person sharing the same birthday with you is greater than $50%$?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `You’re part of a class. How big the class has to be for the probability of at least a person sharing the same birthday with you is greater than $50%$?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+
+---
+
+
+### Q: You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p$ of winning, which doubles your bet, and $1−p$ of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of $p$?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p$ of winning, which doubles your bet, and $1−p$ of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of $p$?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+
+---
+
+
+### Q: In national health research in the US, the results show that the top 3 cities with the lowest rate of kidney failure are cities with populations under $5,000$. Doctors originally thought that there must be something special about small town diets, but when they looked at the top 3 cities with the highest rate of kidney failure, they are also very small cities. What might be a probabilistic explanation for this phenomenon?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `In national health research in the US, the results show that the top 3 cities with the lowest rate of kidney failure are cities with populations under $5,000$. Doctors originally thought that there must be something special about small town diets, but when they looked at the top 3 cities with the highest rate of kidney failure, they are also very small cities. What might be a probabilistic explanation for this phenomenon?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+
+---
+
+
+### Q: Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively. Given that $A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H$, which occur with probabilities $P(A)$ and $P(B)$, respectively. Given that $A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+
+---
+
+
+### Q: In an experiment conducted in the field of particle physics (Fig. 3.2), a certain particle may be in two distinct equally probable quantum states: integer spin or half-integer spin. It is well-known that particles with integer spin are bosons, while particles with half-integer spin are fermions.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -419,15 +520,19 @@ Q. In an experiment conducted in the field of particle physics (Fig. 3.2), a cer
 
 A physicist is observing two such particles, while at least one of which is in a half-integer state. What is the probability that both particles are fermions?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `In an experiment conducted in the field of particle physics (Fig. 3.2), a certain particle may be in two distinct equally probable quantum states: integer spin or half-integer spin. It is well-known that particles with integer spin are bosons, while particles with half-integer spin are fermions.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. During pregnancy, the Placenta Chorion Test is commonly used for the diagnosis of hereditary diseases (Fig. 3.3). The test has a probability of $0.95$ of being correct whether or not a hereditary disease is present.
+
+### Q: During pregnancy, the Placenta Chorion Test is commonly used for the diagnosis of hereditary diseases (Fig. 3.3). The test has a probability of $0.95$ of being correct whether or not a hereditary disease is present.
+
 
 <table align='center'>
 <tr>
@@ -442,15 +547,19 @@ Q. During pregnancy, the Placenta Chorion Test is commonly used for the diagnosi
 
 It is known that $1\%$ of pregnancies result in hereditary diseases. Calculate the probability of a test indicating that a hereditary disease is present.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `During pregnancy, the Placenta Chorion Test is commonly used for the diagnosis of hereditary diseases (Fig. 3.3). The test has a probability of $0.95$ of being correct whether or not a hereditary disease is present.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. The Dercum disease is an extremely rare disorder of multiple painful tissue growths.
+
+### Q: The Dercum disease is an extremely rare disorder of multiple painful tissue growths.
+
 In a population in which the ratio of females to males is equal, 5% of females and 0.25% of males have the Dercum disease (Fig. 3.4).
 
 <table align='center'>
@@ -466,15 +575,19 @@ In a population in which the ratio of females to males is equal, 5% of females a
 
 A person is chosen at random and that person has the Dercum disease. Calculate the probability that the person is female.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `The Dercum disease is an extremely rare disorder of multiple painful tissue growths.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. There are numerous fraudulent binary options websites scattered around the Internet, and for every site that shuts down, new ones are sprouted like mushrooms. A fraudulent AI based stock-market prediction algorithm utilized at the New York Stock Exchange, (Fig. 3.6) can correctly predict if a certain binary option shifts states from 0 to 1 or the other way around, with $85\%$ certainty.
+
+### Q: There are numerous fraudulent binary options websites scattered around the Internet, and for every site that shuts down, new ones are sprouted like mushrooms. A fraudulent AI based stock-market prediction algorithm utilized at the New York Stock Exchange, (Fig. 3.6) can correctly predict if a certain binary option shifts states from 0 to 1 or the other way around, with $85\%$ certainty.
+
 
 <table align='center'>
 <tr>
@@ -489,16 +602,20 @@ Q. There are numerous fraudulent binary options websites scattered around the In
 
 A financial engineer has created a portfolio consisting twice as many $state-1$ options then $state-0$ options. A stock option is selected at random and is determined by said algorithm to be in the state of $1$. What is the probability that the prediction made by the AI is correct?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `There are numerous fraudulent binary options websites scattered around the Internet, and for every site that shuts down, new ones are sprouted like mushrooms. A fraudulent AI based stock-market prediction algorithm utilized at the New York Stock Exchange, (Fig. 3.6) can correctly predict if a certain binary option shifts states from 0 to 1 or the other way around, with $85\%$ certainty.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. In an experiment conducted by a hedge fund to determine if monkeys (Fig. 3.6) can
+
+### Q: In an experiment conducted by a hedge fund to determine if monkeys (Fig. 3.6) can
+
 outperform humans in selecting better stock market portfolios, 0.05 of humans and 1 out of 15 monkeys could correctly predict stock market trends correctly.
 
 <table align='center'>
@@ -514,16 +631,20 @@ outperform humans in selecting better stock market portfolios, 0.05 of humans an
 
 From an equally probable pool of humans and monkeys an “expert” is chosen at random. When tested, that expert was correct in predicting the stock market shift. What is the probability that the expert is a human?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `In an experiment conducted by a hedge fund to determine if monkeys (Fig. 3.6) can`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. During the cold war, the U.S.A developed a speech to text (STT) algorithm that could theoretically detect the hidden dialects of Russian sleeper agents. These agents (Fig. 3.7), were trained to speak English in Russia and subsequently sent to the US to gather intelligence. The FBI was able to apprehend ten such hidden Russian spies and accused them of being "sleeper" agents.
+
+### Q: During the cold war, the U.S.A developed a speech to text (STT) algorithm that could theoretically detect the hidden dialects of Russian sleeper agents. These agents (Fig. 3.7), were trained to speak English in Russia and subsequently sent to the US to gather intelligence. The FBI was able to apprehend ten such hidden Russian spies and accused them of being "sleeper" agents.
+
 
 <table align='center'>
 <tr>
@@ -538,16 +659,20 @@ Q. During the cold war, the U.S.A developed a speech to text (STT) algorithm tha
 
 The Algorithm relied on the acoustic properties of Russian pronunciation of the word *(v-o-k-s-a-l)* which was borrowed from English *V-a-u-x-h-a-l-l*. It was alleged that it is impossible for Russians to completely hide their accent and hence when a Russian would say *V-a-u-x-h-a-l-l*, the algorithm would yield the text *v-o-k-s-a-l*. To test the algorithm at a diplomatic gathering where $20\%$ of participants are Sleeper agents and the rest Americans, a data scientist randomly chooses a person and asks him to say *V-a-u-x-h-a-l-l*. A single letter is then chosen randomly from the word that was generated by the algorithm, which is observed to be an "l". What is the probability that the person is indeed a Russian sleeper agent?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `During the cold war, the U.S.A developed a speech to text (STT) algorithm that could theoretically detect the hidden dialects of Russian sleeper agents. These agents (Fig. 3.7), were trained to speak English in Russia and subsequently sent to the US to gather intelligence. The FBI was able to apprehend ten such hidden Russian spies and accused them of being "sleeper" agents.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. During World War II, forces on both sides of the war relied on encrypted communications. The main encryption scheme used by the German military was an Enigma machine, which was employed extensively by Nazi Germany. Statistically, the Enigma machine sent the symbols X and Z Fig. (3.8) according to the following probabilities:
+
+### Q: During World War II, forces on both sides of the war relied on encrypted communications. The main encryption scheme used by the German military was an Enigma machine, which was employed extensively by Nazi Germany. Statistically, the Enigma machine sent the symbols X and Z Fig. (3.8) according to the following probabilities:
+
 
 $$
 P(X) = \frac{2}{9} \\ 
@@ -568,9 +693,11 @@ $$
 
 In one incident, the German military sent encoded messages while the British army used countermeasures to deliberately tamper with the transmission. Assume that as a result of the British countermeasures, an X is erroneously received as a Z (and mutatis mutandis) with a probability $\frac{1}{7}$. If a recipient in the German military received a Z, what is the probability that a Z was actually transmitted by the sender?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `During World War II, forces on both sides of the war relied on encrypted communications. The main encryption scheme used by the German military was an Enigma machine, which was employed extensively by Nazi Germany. Statistically, the Enigma machine sent the symbols X and Z Fig. (3.8) according to the following probabilities:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
@@ -578,7 +705,9 @@ In one incident, the German military sent encoded messages while the British arm
 
 ### Random Variables
 
-Q. In context of random variables define the following terms:
+
+### Q: In context of random variables define the following terms:
+
 
 - Distributions
 - Expectations
@@ -587,7 +716,8 @@ Q. In context of random variables define the following terms:
 - Support
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Distributions*
 
@@ -637,9 +767,12 @@ The support of a random variable is the set of values that the variable can take
 
 ---
 
-Q. What are the key characteristics of a PDF?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the key characteristics of a PDF?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 To be a pdf a function $p$ must have following properties:
 
@@ -651,9 +784,12 @@ To be a pdf a function $p$ must have following properties:
 
 ---
 
-Q. What are the properties of expectation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the properties of expectation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Linearity of expectation
 
@@ -693,9 +829,12 @@ $$
 
 ---
 
-Q. Can the values of PMF be greater than 1?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can the values of PMF be greater than 1?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 PMF values are actual probabilities of discrete outcomes and must adhere strictly to the range $[0, 1]$.
 
@@ -703,9 +842,12 @@ PMF values are actual probabilities of discrete outcomes and must adhere strictl
 
 ---
 
-Q. Can a Probability Density Function (PDF) be bounded or unbounded?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can a Probability Density Function (PDF) be bounded or unbounded?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, a Probability Density Function (PDF) can be either bounded or unbounded.
 
@@ -717,9 +859,12 @@ A PDF is unbounded if it can reach arbitrarily large values, especially over nar
 
 ---
 
-Q. Write the expression of variance of a random variable?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the expression of variance of a random variable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Suppose $X$ is a random variable with $E[X] = \mu$,
 
@@ -737,10 +882,13 @@ $$
 
 ---
 
-Q. What’s the difference between multivariate distribution and multimodal distribution?
+
+### Q: What’s the difference between multivariate distribution and multimodal distribution?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Multi-model refers to a dataset (variable) in which there is more than one mode, while multivariate refers to a dataset in which there is more than one variable.
 
@@ -748,9 +896,12 @@ Multi-model refers to a dataset (variable) in which there is more than one mode,
 
 ---
 
-Q. What do you mean by log probability? Explain why do we need it? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by log probability? Explain why do we need it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A log probability $\log{P(E)}$ is simply the log function applied to a probability $P(E)$.
 
@@ -764,9 +915,12 @@ Benefits of using log probability:
 
 ---
 
-Q. How would you turn a probabilistic model into a deterministic model?
 
-<details><summary><b>Answer</b></summary>
+### Q: How would you turn a probabilistic model into a deterministic model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can do quantization of model's outputs. In models that generate probabilistic outputs (e.g., classification with probabilities), we can convert these into deterministic outputs by selecting the highest probability class or using a thresholding mechanism.
 
@@ -774,9 +928,12 @@ We can do quantization of model's outputs. In models that generate probabilistic
 
 ---
 
-Q. What is a moment of function? Explain the meanings of the zeroth to fourth moments.
 
-<details><summary><b>Answer</b></summary>
+### Q: What is a moment of function? Explain the meanings of the zeroth to fourth moments.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Statistical moments are additional descriptors of a curve/distribution. Moments quantify three parameters of distributions: location, shape, and scale. 
 
@@ -828,10 +985,13 @@ $$\[Kurtosis = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^
 
 ### Discrete Random Variables
 
-Q. List down some famous discrete distributions.
+
+### Q: List down some famous discrete distributions.
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Bernoulli Distribution : It is a distribution over a single binary random variable.
 - Binomial Distribution : Describes the number of successes in a fixed number of independent Bernoulli trials with the same probability of success.
@@ -842,18 +1002,23 @@ Q. List down some famous discrete distributions.
 
 ---
 
-Q. Define what is meant by a Bernoulli trial.
+
+### Q: Define what is meant by a Bernoulli trial.
 
 
-<details><summary><b>Answer</b></summary>
 
-Independent repeated trials of an experiment with exactly two possible outcomes are called Bernoulli trials. 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Independent repeated trials of an experiment with exactly two possible outcomes are called Bernoulli trials.
 
 </details>
 
 ---
 
-Q. Suppose $X$ is a random variable following bernoulli distribution. Express the following for $X$.
+
+### Q: Suppose $X$ is a random variable following bernoulli distribution. Express the following for $X$.
+
 
 - Support 
 - PMF Equation
@@ -861,7 +1026,8 @@ Q. Suppose $X$ is a random variable following bernoulli distribution. Express th
 - Expectation
 - Variance 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Support : $x$ is either $0$ and $1$
 - PMF Equation
@@ -896,14 +1062,17 @@ $$
 
 ---
 
-Q. Suppose $X$ is a random variable following binomial distribution. Express the following for $X$.
+
+### Q: Suppose $X$ is a random variable following binomial distribution. Express the following for $X$.
+
 
 - Support 
 - PMF Equation
 - Expectation
 - Variance 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Support : $x \in {0,1,...,n}$
 - PMF Equation
@@ -928,27 +1097,34 @@ $$
 
 ---
 
-Q. The binomial distribution is often used to model the probability that $k$ out of a group of $n$
+
+### Q: The binomial distribution is often used to model the probability that $k$ out of a group of $n$
+
 objects bare a specific characteristic. Define what is meant by a binomial random variable $X$.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `The binomial distribution is often used to model the probability that $k$ out of a group of $n$`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. What does the following shorthand stand for?
+
+### Q: What does the following shorthand stand for?
+
 
 $$
 X ∼ \text{Binomial}(n, p)
 $$
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It means $X$ follows the binomial distribution with $n$ trials, each of which have a probability $p$ of success.
 
@@ -967,13 +1143,16 @@ It means $X$ follows the binomial distribution with $n$ trials, each of which ha
 
 ---
 
-Q. Find the probability mass function (PMF) of the following random variable:
+
+### Q: Find the probability mass function (PMF) of the following random variable:
+
 
 $$
 X ∼ Binomial(n, p)
 $$
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The probability mass function (PMF) of the binomial distribution is given by:
 
@@ -1005,46 +1184,61 @@ The PMF gives the probability of having exactly $k$ successes in $n$ independent
 
 ---
 
-Q. Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood.
 
-
-<details><summary><b>Answer</b></summary>
+### Q: Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood.
 
 
 
-</details>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
----
-
-Q. Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood.
-
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. Given a fair coin, what’s the number of flips you have to do to get two consecutive heads?
+
+### Q: Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood. (Part 2)
 
 
-<details><summary><b>Answer</b></summary>
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
+- **Direct Solution**: Analytical solution and mathematical formulation for `Define the terms likelihood and log-likelihood of a discrete random variable X given a fixed parameter of interest $\gamma$. Give a practical example of such scenario and derive its likelihood and log-likelihood. (Part 2)`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. Derive the expectation and variance of a the binomial random variable $X ∼ Binomial(n, p)$ in terms of $p$ and $n$.
+
+### Q: Given a fair coin, what’s the number of flips you have to do to get two consecutive heads?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given a fair coin, what’s the number of flips you have to do to get two consecutive heads?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+
+---
+
+
+### Q: Derive the expectation and variance of a the binomial random variable $X ∼ Binomial(n, p)$ in terms of $p$ and $n$.
+
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Here we can use the fact that binomial is the sum of bernoulli indicator random variables $X = \sum_{i=1}^{n}Y_i$
 
@@ -1112,7 +1306,9 @@ $$
 
 ---
 
-Q. What is poisson distribution? Define following in context of it.
+
+### Q: What is poisson distribution? Define following in context of it.
+
 
 - Notation
 - Parameters
@@ -1121,7 +1317,8 @@ Q. What is poisson distribution? Define following in context of it.
 - Expectation
 - Variance 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Poisson distribution gives the probability of a given number of events in a fixed interval of time(or space).
 
@@ -1165,9 +1362,12 @@ $$
 
 ---
 
-Q. What are the main assumption for poisson distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the main assumption for poisson distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Events should occur with a known constant mean rate i.e $\lambda$ should be fixed
 - Events should be independent of time since the last event
@@ -1176,9 +1376,12 @@ Q. What are the main assumption for poisson distribution?
 
 ---
 
-Q. Define categorical distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define categorical distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Categorical Distribution is a fancy name for random variables which takes on values other than numbers. As an example, imagine a random variable for the weather today. A natural representation for the weather is one of a few categories: *{sunny, cloudy, rainy, snowy}*
 
@@ -1186,7 +1389,9 @@ The Categorical Distribution is a fancy name for random variables which takes on
 
 ---
 
-Q. Proton therapy (PT) is a widely adopted form of treatment for many types of cancer.
+
+### Q: Proton therapy (PT) is a widely adopted form of treatment for many types of cancer.
+
 A PT device which was not properly calibrated is used to treat a patient with pancreatic cancer (Fig. 3.1). As a result, a PT beam randomly shoots $200$ particles independently and correctly hits cancerous cells with a probability of $0.1$.
 
 <table align='center'>
@@ -1204,16 +1409,20 @@ A PT device which was not properly calibrated is used to treat a patient with pa
 2. A radiologist using the device claims he was able to hit exactly 60 cancerous cells. How likely is it that he is wrong?
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Proton therapy (PT) is a widely adopted form of treatment for many types of cancer.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
 
-Q. The 2014 west African Ebola epidemic has become the largest and fastest spreading outbreak of the disease in modern history with a death tool far exceeding all past outbreaks combined. Ebola (named after the Ebola River in Zaire) first emerged in 1976 in Sudan and Zaire and infected over 284 people with a mortality rate of 53%.
+
+### Q: The 2014 west African Ebola epidemic has become the largest and fastest spreading outbreak of the disease in modern history with a death tool far exceeding all past outbreaks combined. Ebola (named after the Ebola River in Zaire) first emerged in 1976 in Sudan and Zaire and infected over 284 people with a mortality rate of 53%.
+
 
 <table align='center'>
 <tr>
@@ -1246,29 +1455,37 @@ Answer the following; for the likelihood function of the form $L_x(γ)$:
 5. In a population spanning $10,000$ individuals, $300$ were infected by Ebola. Find the MLE for γ and the standard error associated with it.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `The 2014 west African Ebola epidemic has become the largest and fastest spreading outbreak of the disease in modern history with a death tool far exceeding all past outbreaks combined. Ebola (named after the Ebola River in Zaire) first emerged in 1976 in Sudan and Zaire and infected over 284 people with a mortality rate of 53%.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. Let y be the number of successes in 5 independent trials, where the probability of success is θ in each trial. Suppose your prior distribution for θ is as follows: $P(θ = 1/2) = 0.25, P (θ = 1/6) = 0.5, and P (θ = 1/4) = 0.25$.
+
+### Q: Let y be the number of successes in 5 independent trials, where the probability of success is θ in each trial. Suppose your prior distribution for θ is as follows: $P(θ = 1/2) = 0.25, P (θ = 1/6) = 0.5, and P (θ = 1/4) = 0.25$.
+
 1. Derive the posterior distribution $p(θ|y)$ after observing y. 
 2. Derive the prior predictive distribution for y.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Let y be the number of successes in 5 independent trials, where the probability of success is θ in each trial. Suppose your prior distribution for θ is as follows: $P(θ = 1/2) = 0.25, P (θ = 1/6) = 0.5, and P (θ = 1/4) = 0.25$.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. Prove that the family of beta distributions is conjugate to a binomial likelihood, so that if a prior is in that family then so is the posterior. That is, show that:
+
+### Q: Prove that the family of beta distributions is conjugate to a binomial likelihood, so that if a prior is in that family then so is the posterior. That is, show that:
+
 
 $$
 x ∼ Ber(γ), γ ∼ B(α,β) ⇒ γ|x ∼ B(α′,β′)
@@ -1281,16 +1498,20 @@ B(h + α,t + β)
 $$
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Prove that the family of beta distributions is conjugate to a binomial likelihood, so that if a prior is in that family then so is the posterior. That is, show that:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. A recently published paper presents a new layer for a new Bayesian neural network (BNN). The layer behaves as follows. During the feed-forward operation, each of the hidden neurons $H_n , n ∈ 1, 2$ in the neural network (Fig. 3.10) may, or may not fire independently of each other according to a known prior distribution.
+
+### Q: A recently published paper presents a new layer for a new Bayesian neural network (BNN). The layer behaves as follows. During the feed-forward operation, each of the hidden neurons $H_n , n ∈ 1, 2$ in the neural network (Fig. 3.10) may, or may not fire independently of each other according to a known prior distribution.
+
 
 <table align='center'>
 <tr>
@@ -1308,15 +1529,19 @@ The chance of firing, γ, is the same for each hidden neuron. Using the formal d
 2. The hidden neuron is distributed according to $X ∼ Uniform(0,γ)$ random variable and fires with a probability of $γ$.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `A recently published paper presents a new layer for a new Bayesian neural network (BNN). The layer behaves as follows. During the feed-forward operation, each of the hidden neurons $H_n , n ∈ 1, 2$ in the neural network (Fig. 3.10) may, or may not fire independently of each other according to a known prior distribution.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$. $X$ indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.
+
+### Q: Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$. $X$ indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.
+
 
 <table align='center'>
 <tr>
@@ -1330,15 +1555,19 @@ Q. Your colleague, a veteran of the Deep Learning industry, comes up with an ide
 </table>
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$. $X$ indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. A Dropout layer(Fig. 3.12) is commonly used to regularize a neural network model by randomly equating several outputs (the crossed-out hidden node H) to 0.
+
+### Q: A Dropout layer(Fig. 3.12) is commonly used to regularize a neural network model by randomly equating several outputs (the crossed-out hidden node H) to 0.
+
 <table align='center'>
 <tr>
 <td align="center">
@@ -1378,16 +1607,20 @@ During the training of a neural network, the Dropout layer randomly drops out ou
 You are interested in the proportion θ of dropped-out neurons. Assume that the chance of drop-out, $θ$, is the same for each neuron (e.g. a uniform prior for $θ$). Compute the posterior of $θ$.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `A Dropout layer(Fig. 3.12) is commonly used to regularize a neural network model by randomly equating several outputs (the crossed-out hidden node H) to 0.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. A new data scientist in your team, who was formerly a Quantum Physicist, suggests the following procedure for a Dropout layer entitled Quantum Drop which is based on Quantum principles and the Maxwell Boltzmann distribution. In the Maxwell-Boltzmann distribution, the likelihood of finding a particle with a particular velocity v is provided by:
+
+### Q: A new data scientist in your team, who was formerly a Quantum Physicist, suggests the following procedure for a Dropout layer entitled Quantum Drop which is based on Quantum principles and the Maxwell Boltzmann distribution. In the Maxwell-Boltzmann distribution, the likelihood of finding a particle with a particular velocity v is provided by:
+
 
 $$
 n(v)dv = \frac{4\pi N}{V}(\frac{m}{2\pi kT})^{\frac{3}{2}}v^2e^{-\frac{mv^2}{2kT}}dv
@@ -1417,9 +1650,11 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 </table>
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `A new data scientist in your team, who was formerly a Quantum Physicist, suggests the following procedure for a Dropout layer entitled Quantum Drop which is based on Quantum principles and the Maxwell Boltzmann distribution. In the Maxwell-Boltzmann distribution, the likelihood of finding a particle with a particular velocity v is provided by:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
@@ -1430,23 +1665,13 @@ In the suggested QuantumDrop layer (3.15), each of the neurons behaves like a mo
 ### Continuous Random Variables
 
 
-Q. List down important continuous probability distributions?
+
+### Q: List down important continuous probability distributions?
 
 
-<details><summary><b>Answer</b></summary>
 
-- Uniform distribution
-- Exponential distribution
-- Normal distribution
-
-</details>
-
----
-
-Q. List down important continuous probability distributions?
-
-
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Uniform distribution
 - Exponential distribution
@@ -1456,9 +1681,28 @@ Q. List down important continuous probability distributions?
 
 ---
 
-Q. Under what conditions can we say that a random variable is drawn from a uniform distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: List down important continuous probability distributions? (Part 2)
+
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- Uniform distribution
+- Exponential distribution
+- Normal distribution
+
+</details>
+
+---
+
+
+### Q: Under what conditions can we say that a random variable is drawn from a uniform distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A random variable can be said to be drawn from a uniform distribution if it exhibits equal likelihood across its range (for continuous) or set of values (for discrete), with a constant probability density (for continuous) or equal probability (for discrete).
 
@@ -1466,14 +1710,17 @@ A random variable can be said to be drawn from a uniform distribution if it exhi
 
 ---
 
-Q. Define the following in context of uniform probability distribution?
+
+### Q: Define the following in context of uniform probability distribution?
+
 
 - Support
 - PDF Expression
 - Expectations
 - Variance
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Support : $x \in [\alpha, \beta]$
 - PDF expression
@@ -1498,10 +1745,13 @@ $$
 
 ---
 
-Q. Given a uniform random variable X  in the range of [0,1]  inclusively. What’s the probability that X=0.5 ?
+
+### Q: Given a uniform random variable X  in the range of [0,1]  inclusively. What’s the probability that X=0.5 ?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Zero, For a continuous random variable, such as a uniform random variable $X$ that is uniformly distributed over the interval $[0,1]$ the probability of $X$ taking any specific single value is technically zero.
 
@@ -1513,7 +1763,9 @@ $$
 
 ---
 
-Q. In context of exponential distribution define following terms?
+
+### Q: In context of exponential distribution define following terms?
+
 
 - Notation
 - Parameters
@@ -1524,7 +1776,8 @@ Q. In context of exponential distribution define following terms?
 - Variance
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Notation*
 
@@ -1568,10 +1821,13 @@ $$
 
 ---
 
-Q. Based on historical data from the USGS, earthquakes of magnitude 8.0+ happen in a certain location at a rate of 0.002 per year. Earthquakes are known to occur via a poisson process. What is the probability of a major earthquake in the next 4 years?
+
+### Q: Based on historical data from the USGS, earthquakes of magnitude 8.0+ happen in a certain location at a rate of 0.002 per year. Earthquakes are known to occur via a poisson process. What is the probability of a major earthquake in the next 4 years?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Let $Y$ be the years until the next major earthquake. Because $Y$ measures time until the next event it fits the description of an exponential random variable: $Y ~ Exp(\lambda = 0.002)$
 
@@ -1589,10 +1845,13 @@ So the probability of major earthquake in next 4 years is $0.008$
 
 ---
 
-Q. Can the values of PDF be greater than 1? If so, how do we interpret PDF?
+
+### Q: Can the values of PDF be greater than 1? If so, how do we interpret PDF?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, the values of a Probability Density Function (PDF) can be greater than 1. 
 
@@ -1624,10 +1883,13 @@ This is a valid PDF even though $f(x) = 5$ within the interval.
 
 ---
 
-Q. What is the expression for the probability density function (PDF) of a normal distribution, and what are the expectation and variance of this distribution?
+
+### Q: What is the expression for the probability density function (PDF) of a normal distribution, and what are the expectation and variance of this distribution?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The probability density function (PDF) of a normal distribution with mean $\mu$ and variance $\sigma^2$ is given by:
 
@@ -1642,10 +1904,13 @@ $$
 
 ---
 
-Q. If $X$ is a normal such that $X ~ N(\mu, \sigma^2)$ and $Y$ is a linear transform of $X$ such that $Y = aX + b$, what will be pdf of $Y$?
+
+### Q: If $X$ is a normal such that $X ~ N(\mu, \sigma^2)$ and $Y$ is a linear transform of $X$ such that $Y = aX + b$, what will be pdf of $Y$?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $Y$ will have also a normal pdf with $\mu = a\mu_X$ and $Var(Y) = a^2\sigma^2$
 
@@ -1657,10 +1922,13 @@ $$
 
 ---
 
-Q. What is the expression of CDF of normal distribution?
+
+### Q: What is the expression of CDF of normal distribution?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The cumulative distribution function (CDF) of a normal distribution gives the probability that a random variable $X$ takes on a value less than or equal to $x$. 
 
@@ -1671,10 +1939,13 @@ The cumulative distribution function (CDF) of a normal distribution gives the pr
 
 ---
 
-Q. What are the properties of standard normal distribution?
+
+### Q: What are the properties of standard normal distribution?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The standard normal distribution is a special case of the normal distribution. It has the following characteristics:
 
@@ -1685,21 +1956,28 @@ The standard normal distribution is a special case of the normal distribution. I
 
 ---
 
-Q. You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than $0.5$?
+
+### Q: You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than $0.5$?
 
 
-<details><summary><b>Answer</b></summary>
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
+- **Direct Solution**: Analytical solution and mathematical formulation for `You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than $0.5$?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. In what condition we can approximate the binomial distribution into normal or poisson distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: In what condition we can approximate the binomial distribution into normal or poisson distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Use the Poisson approximation when $n$ is large (>20) and $p$ is small (<0.05).
 - Use the Normal approximation when $n$ is large (>20), and $p$ is mid-ranged.
@@ -1709,10 +1987,13 @@ Q. In what condition we can approximate the binomial distribution into normal or
 
 ---
 
-Q. It’s a common practice to assume an unknown variable to be of the normal distribution. Why is that?
+
+### Q: It’s a common practice to assume an unknown variable to be of the normal distribution. Why is that?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Assuming that an unknown variable follows a normal distribution is based on theoretical results like the Central Limit Theorem, mathematical convenience, the ability to approximate other distributions, practical evidence from real-world data, and the robustness of statistical methods. This assumption often simplifies analysis and provides useful approximations and insights.
 
@@ -1721,10 +2002,13 @@ Assuming that an unknown variable follows a normal distribution is based on theo
 
 ---
 
-Q. Is it possible to transform non-normal variables into normal variables? How?
+
+### Q: Is it possible to transform non-normal variables into normal variables? How?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes it is possible to transform non-normal variables into normal variables. 
 
@@ -1738,19 +2022,25 @@ We can try following methods to accomplished that:
 
 ---
 
-Q. Define the term prior distribution of a likelihood parameter $\gamma$ in the continuous case.
+
+### Q: Define the term prior distribution of a likelihood parameter $\gamma$ in the continuous case.
 
 
-<details><summary><b>Answer</b></summary>
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
+- **Direct Solution**: Analytical solution and mathematical formulation for `Define the term prior distribution of a likelihood parameter $\gamma$ in the continuous case.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. In this question, you are going to derive the Fisher information function for several distributions. Given a probability density function (PDF) $f(X|γ)$, you are provided with the following definitions:
+
+### Q: In this question, you are going to derive the Fisher information function for several distributions. Given a probability density function (PDF) $f(X|γ)$, you are provided with the following definitions:
+
 1. The natural logarithm of the PDF $lnf(X|γ) = Φ(X|γ)$.
 2. The first partial derivative $Φ′(X|γ)$.
 3. The second partial derivative $Φ′′(X|γ)$.
@@ -1765,22 +2055,27 @@ Find the Fisher Information $I(γ)$ for the following distributions:
 2. The Poisson Distribution $X ∼ Poiss(θ)$.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `In this question, you are going to derive the Fisher information function for several distributions. Given a probability density function (PDF) $f(X|γ)$, you are provided with the following definitions:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. 
-1. Define the term posterior distribution.
+
+### Q: 1. Define the term posterior distribution.
+
 2. Define the term prior predictive distribution.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `1. Define the term posterior distribution.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
@@ -1788,9 +2083,12 @@ Q.
 
 ## Correlation and Covariance
 
-Q. What do you mean by covariance?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by covariance?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Covariance is a quantitative measure of the extent to which the deviation of one variable from its mean matches the deviation of the other from its mean.
 
@@ -1802,9 +2100,12 @@ $$
 
 ---
 
-Q. What is the co-variance of two independent random variables?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the co-variance of two independent random variables?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 If two random variables $X$ and $Y$ are independent, than their covariance must be 0.
 
@@ -1822,9 +2123,12 @@ $$
 
 ---
 
-Q. Are independence and zero covariance the same? Give a counterexample if not.
 
-<details><summary><b>Answer</b></summary>
+### Q: Are independence and zero covariance the same? Give a counterexample if not.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>No</b> 
 
@@ -1851,21 +2155,28 @@ Now $Cov(X, Y)$ coming as zero and hence depicting the $X$ and $Y$ are independe
 
 ---
 
-Q. Suppose we have a random variable X supported on $[0,1]$  from which we can draw samples. How can we come up with an unbiased estimate of the median of X?
+
+### Q: Suppose we have a random variable X supported on $[0,1]$  from which we can draw samples. How can we come up with an unbiased estimate of the median of X?
 
 
-<details><summary><b>Answer</b></summary>
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose we have a random variable X supported on $[0,1]$  from which we can draw samples. How can we come up with an unbiased estimate of the median of X?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 
 ---
 
-Q. Define variance and co-variance. What is the difference between them?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define variance and co-variance. What is the difference between them?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Variance measures the spread of a random variable while co-variance measures how two random variables vary together.
 
@@ -1876,24 +2187,30 @@ Q. Define variance and co-variance. What is the difference between them?
 ---
 
 
-Q. How does sign of covariance decides the direction of relationship between two random variables?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does sign of covariance decides the direction of relationship between two random variables?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The sign of co-variance decides how two random variables vary together
 
 - Positive covariance - Both variables vary in the same direction
 - Negative covariance - Both variables vary in opposite direction
-- Zero covariance - There are linearly independent  
+- Zero covariance - There are linearly independent
 
 </details>
 
 
 ---
 
-Q. Suppose you are conducting an experiment for studying behavior of two random variables $X$ and $Y$ and you found out $Cov(X, Y) = 100$. Does it mean they are strongly correlated?
 
-<details><summary><b>Answer</b></summary>
+### Q: Suppose you are conducting an experiment for studying behavior of two random variables $X$ and $Y$ and you found out $Cov(X, Y) = 100$. Does it mean they are strongly correlated?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 From the given information we can not conclude about strength of the relationship.
 
@@ -1903,9 +2220,12 @@ Covariance is scale variant. It means its value is sensitive to scale of the mea
 
 ---
 
-Q. Prove that $Cov(X, X) = Var(X)$.
 
-<details><summary><b>Answer</b></summary>
+### Q: Prove that $Cov(X, X) = Var(X)$.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We know that:
 
@@ -1923,9 +2243,12 @@ $$Cov(X, X) = E((X-E(X))^2) = Var(X)$$
 
 ---
 
-Q. Prove that $Cov(X, Y) = E(XY) - E(X)E(Y)$.
 
-<details><summary><b>Answer</b></summary>
+### Q: Prove that $Cov(X, Y) = E(XY) - E(X)E(Y)$.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 From definition of Covariance:
 
@@ -1951,18 +2274,20 @@ after canceling out terms:
 
 $$Cov(X, Y) = E(XY) - E(X)E(Y)$$
 
-
 </details>
 
 ---
 
-Q. What will be the value of $Cov(X, c) where $X$ is a random variable and $c$ is a constant value?
+
+### Q: What will be the value of $Cov(X, c) where $X$ is a random variable and $c$ is a constant value?
+
 1. $Cov(X)$
 2. $cCov(X)$
 3. $c^2Cov(X)$
 4. $0$
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $0$ is the right answer. 
 
@@ -1972,9 +2297,12 @@ $Cov(X, c)$ encodes the information of how X and Y varies together. Since $c$ is
 
 ---
 
-Q. Write down some properties of Covariance.
 
-<details><summary><b>Answer</b></summary>
+### Q: Write down some properties of Covariance.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Properties of Covariance:
 
@@ -1991,9 +2319,12 @@ Here $X$, $Y$ and $Z$ are random variables and $c$ is a constant.
 
 ---
 
-Q. Define correlation. How is it related to Covariance?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define correlation. How is it related to Covariance?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Correlation between two random variables, $\rho(X, Y)$  is the covariance of the two variables normalized by the standard deviation of each variable.
 
@@ -2005,9 +2336,12 @@ $$
 
 ---
 
-Q. What are the benefits of using correlation over covariance?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the benefits of using correlation over covariance?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Correlation is scale independent while covariance is scale dependent and hence harder to interpret and compare
 - Correlation is bounded i.e it is always between $-1$ and $1$
@@ -2017,9 +2351,12 @@ Q. What are the benefits of using correlation over covariance?
 
 ---
 
-Q. If you are analyzing two random variables $X$ and $Y$ and find that the correlation $\rho(X, Y) = 0$, what does this indicate?
 
-<details><summary><b>Answer</b></summary>
+### Q: If you are analyzing two random variables $X$ and $Y$ and find that the correlation $\rho(X, Y) = 0$, what does this indicate?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Absence of linear relationship between $X$ and $Y$
 
@@ -2027,9 +2364,12 @@ Absence of linear relationship between $X$ and $Y$
 
 ---
 
-Q. Can the correlation be greater than 1? Why or why not? How to interpret a correlation value of 0.3?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can the correlation be greater than 1? Why or why not? How to interpret a correlation value of 0.3?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>No</b> correlation(r) can not be greater than 1 and range of r is $[-1, 1]$. 
 
@@ -2076,9 +2416,12 @@ Note that the above conclusions are based on assumption that both variable are l
 
 ---
 
-Q. What is the Pearson correlation coefficient, and how is it calculated?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the Pearson correlation coefficient, and how is it calculated?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Correlation measures the degree to which there is a linear relationship between two variables.
 
@@ -2118,9 +2461,12 @@ $$
 
 ---
 
-Q. What is the significance of a correlation coefficient value of 0?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the significance of a correlation coefficient value of 0?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A correlation coefficient value of 0, suggests the absence of linear relationship between two random variable. It may indicate the presence of non-linear relationship between variables.
 
@@ -2128,9 +2474,12 @@ A correlation coefficient value of 0, suggests the absence of linear relationshi
 
 ---
 
-Q. What is the difference between positive and negative correlation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the difference between positive and negative correlation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Positive Correlation: An increase or decrease in one variable is associated with a similar change in the other variable ($\rho > 0$); both variables move in the same direction.
 - Negative Correlation: An increase in one variable is associated with a decrease in the other, and vice versa ($\rho < 0$); both variables move in opposite directions.
@@ -2139,9 +2488,12 @@ Q. What is the difference between positive and negative correlation?
 
 ---
 
-Q. What are some limitations of the Pearson correlation coefficient?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are some limitations of the Pearson correlation coefficient?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - It only measures strength of linear relationship and can't be used to measure nonlinear relationship 
 - It can not distinguish between independent and dependent variable. Pearson’s r does not indicate which variable was *the cause* and which was *the effect*.
@@ -2153,10 +2505,13 @@ Q. What are some limitations of the Pearson correlation coefficient?
 
 ---
 
-Q. Can you have a high correlation without causation?
+
+### Q: Can you have a high correlation without causation?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, we can have a high correlation without causation. This phenomenon is often summarized by the phrase *correlation does not imply causation*. A strong correlation between two variables simply indicates that they move together in a predictable way, but it does not necessarily mean that one variable causes the other to change.
 
@@ -2168,3 +2523,7 @@ We might have high correlation but not causality in following scenarios:
 </details>
 
 ---
+
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

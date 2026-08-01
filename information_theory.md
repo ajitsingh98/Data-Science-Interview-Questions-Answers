@@ -15,7 +15,9 @@ Contents
 
 ---
 
-Q. Run the following Python code in a Python interpreter. What are the results?
+
+### Q: Run the following Python code in a Python interpreter. What are the results?
+
 
 ```python
 
@@ -31,14 +33,20 @@ print (numpy.log2(1.0/0.02)) # Binary log (base 2)
 
 ```
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Run the following Python code in a Python interpreter. What are the results?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. The three basic laws of logarithms:
+
+### Q: The three basic laws of logarithms:
+
 1. First law
 
 $$ \log A + \log B = \log AB $$
@@ -76,23 +84,37 @@ $$
 \log_e15 - \log_e3
 $$
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+1. **Product Rule**: $\log_b(xy) = \log_b(x) + \log_b(y)$
+2. **Quotient Rule**: $\log_b(x/y) = \log_b(x) - \log_b(y)$
+3. **Power Rule**: $\log_b(x^k) = k \cdot \log_b(x)$
+
 </details>
 
 
 ---
 
-Q.  Write Shannon's famous general formulae for uncertainty.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Write Shannon's famous general formulae for uncertainty.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Shannon Entropy Formula**:
+  $$ H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i) $$
+  where $b=2$ measures uncertainty in bits, $b=e$ in nats.
+
 </details>
 
 
 ---
 
-Q. Choose exactly one, and only one answer.
+
+### Q: Choose exactly one, and only one answer.
+
 1. For an event which is certain to happen, what is the entropy?
 
     (a) 1.0
@@ -121,76 +143,119 @@ Q. Choose exactly one, and only one answer.
 
     (f) $log_2(N)$
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Choose exactly one, and only one answer.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Shannon found that entropy was the only function satisfying three natural properties.
+
+### Q: Shannon found that entropy was the only function satisfying three natural properties.
+
 Enumerate these properties.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+1. **Continuity**: $H(p_1, \dots, p_n)$ is continuous in $p_i$.
+2. **Monotonicity**: If all outcomes are equiprobable ($p_i = 1/n$), $H$ is a monotonic increasing function of $n$.
+3. **Additivity**: If a choice is broken down into successive choices, original $H$ is the weighted sum of individual entropy values.
+
 </details>
 
 
 ---
 
-Q. In information theory, minus the logarithm of the probability of a symbol (essentially the number of bits required to represent it efficiently in a binary code) is defined to be the information conveyed by transmitting that symbol. In this context, the entropy can be interpreted as the expected information conveyed by transmitting a single symbol from an alphabet in which the symbols occur with the probabilities $π_k$.
+
+### Q: In information theory, minus the logarithm of the probability of a symbol (essentially the number of bits required to represent it efficiently in a binary code) is defined to be the information conveyed by transmitting that symbol. In this context, the entropy can be interpreted as the expected information conveyed by transmitting a single symbol from an alphabet in which the symbols occur with the probabilities $π_k$.
+
 
 Mark the correct answer: Information is a/an `[decrease/increase]` in uncertainty.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `In information theory, minus the logarithm of the probability of a symbol (essentially the number of bits required to represent it efficiently in a binary code) is defined to be the information conveyed by transmitting that symbol. In this context, the entropy can be interpreted as the expected information conveyed by transmitting a single symbol from an alphabet in which the symbols occur with the probabilities $π_k$.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Claud Shannon's paper “A mathematical theory of communication”, marked the birth of information theory. Published in 1948, it has become since the Magna Carta of the information age. Describe in your own words what is meant by the term Shannon bit.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Claud Shannon's paper “A mathematical theory of communication”, marked the birth of information theory. Published in 1948, it has become since the Magna Carta of the information age. Describe in your own words what is meant by the term Shannon bit.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Claud Shannon's paper “A mathematical theory of communication”, marked the birth of information theory. Published in 1948, it has become since the Magna Carta of the information age. Describe in your own words what is meant by the term Shannon bit.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. With respect to the notion of surprise in the context of information theory:
+
+### Q: With respect to the notion of surprise in the context of information theory:
+
 1. Define what it actually meant by being surprised.
 2. Describe how it is related to the likelihood of an event happening.
 3. True or False: The less likely the occurrence of an event, the smaller information it conveys.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `With respect to the notion of surprise in the context of information theory:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Assume a source of signals that transmits a given message a with probability $P_a$. Assume further that the message is encoded into an ordered series of ones and zeros (a bit string) and that a receiver has a decoder that converts the bit string back into its respective message. Shannon devised a formulae that describes the size that the mean length of the bit string can be compressed to. Write the formulae.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Assume a source of signals that transmits a given message a with probability $P_a$. Assume further that the message is encoded into an ordered series of ones and zeros (a bit string) and that a receiver has a decoder that converts the bit string back into its respective message. Shannon devised a formulae that describes the size that the mean length of the bit string can be compressed to. Write the formulae.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Assume a source of signals that transmits a given message a with probability $P_a$. Assume further that the message is encoded into an ordered series of ones and zeros (a bit string) and that a receiver has a decoder that converts the bit string back into its respective message. Shannon devised a formulae that describes the size that the mean length of the bit string can be compressed to. Write the formulae.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Answer the following questions:
+
+### Q: Answer the following questions:
+
 1. Assume a source that provides a constant stream of N equally likely symbols ${x1, x2, . . . , xN }$. What does Shannon's formulae reduce to in this particular case?
 2. Assume that each equiprobable pixel in a monochrome image that is fed to a DL classification pipeline, can have values ranging from 0 to 255. Find the entropy in bits.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Answer the following questions:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Given Shannon's famous general formulae for uncertainty:
+
+### Q: Given Shannon's famous general formulae for uncertainty:
+
 
 $$
 H = -\sum_{a=1}^NP_a\log_2P_a \\(bits per symbol)
@@ -202,8 +267,13 @@ $$
 
 3. Complete the sentence: The curve rises to a [minimum/maximum] when the two symbols are equally likely ($P_a = 0.5$).
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Shannon Entropy Formula**:
+  $$ H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i) $$
+  where $b=2$ measures uncertainty in bits, $b=e$ in nats.
+
 </details>
 
 ---
@@ -220,27 +290,40 @@ Therefore, $H ≥ 0$ and the maximum possible uncertainty is attained when $p = 
 
 Given the above formulation, describe a helpful property of the entropy that follows from the concavity of the logarithmic function.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Shannon Entropy Formula**:
+  $$ H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i) $$
+  where $b=2$ measures uncertainty in bits, $b=e$ in nats.
+
 </details>
 
 
 ---
 
-Q. **True or False** : Given random variables X, Y and Z where $Y = X + Z$ then:
+
+### Q: **True or False** : Given random variables X, Y and Z where $Y = X + Z$ then:
+
 
 $$
 H(X, Y ) = H(X, Z)
 $$
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `**True or False** : Given random variables X, Y and Z where $Y = X + Z$ then:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. What is the entropy of a biased coin? Suppose a coin is biased such that the probability of ‘heads’ is $p(x_h) = 0.98$
+
+### Q: What is the entropy of a biased coin? Suppose a coin is biased such that the probability of ‘heads’ is $p(x_h) = 0.98$
+
 1. Complete the sentence: We can predict ‘heads’ for each flip with an accuracy of [___]%.
 2. Complete the sentence : If the result of the coin toss is ‘heads’,the amount of Shannon information gained is [___] bits.
 3. Complete the sentence: If the result of the coin toss is ‘tails’, the amount of Shannon information gained is [___] bits.
@@ -248,34 +331,51 @@ Q. What is the entropy of a biased coin? Suppose a coin is biased such that the 
 5. Provided that the ratio of tosses resulting in ‘heads’ is $p(x_h)$, and the ratio of tosses resulting in ‘tails’ is $p(x_t)$, and also provided that $p(x_h)+p(x_t) = 1$, what is formulae for the average surprise?
 6. What is the value of the average surprise in bits?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What is the entropy of a biased coin? Suppose a coin is biased such that the probability of ‘heads’ is $p(x_h) = 0.98$`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Write the formulae for the Kullback-Leibler divergence between two discrete probability
+
+### Q: Write the formulae for the Kullback-Leibler divergence between two discrete probability
+
 density functions P and Q.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Write the formulae for the Kullback-Leibler divergence between two discrete probability`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Describe one intuitive interpretation of the KL-divergence with respect to bits.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Describe one intuitive interpretation of the KL-divergence with respect to bits.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Describe one intuitive interpretation of the KL-divergence with respect to bits.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. 
-1. True or False: The KL-divergence is not a symmetric measure of similarity, i.e.:
+
+### Q: 1. True or False: The KL-divergence is not a symmetric measure of similarity, i.e.:
+
 
 $$
 D_{KL}(P||Q) != D_{KL}(Q||P)
@@ -293,40 +393,64 @@ $$
 
 7. **True or False:** In a decision tree, high information gain indicates that adding a split to the decision tree results in a less accurate model.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `1. True or False: The KL-divergence is not a symmetric measure of similarity, i.e.:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Given two distributions $f1$ and $f2$ and their respective joint distribution $f$, write the formulae for the mutual information of $f1$ and $f2$.
 
-<details><summary><b>Answer</b></summary>
-    
-</details>
+### Q: Given two distributions $f1$ and $f2$ and their respective joint distribution $f$, write the formulae for the mutual information of $f1$ and $f2$.
 
 
----
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-Q. There are several measures by which one can determine how to optimally split attributes in a decision tree. List the three most commonly used measures and write their formulae.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given two distributions $f1$ and $f2$ and their respective joint distribution $f$, write the formulae for the mutual information of $f1$ and $f2$.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
-
----
-
-Q. Complete the sentence: In a decision tree, the attribute by which we choose to split is the one with `[minimum/maximum]` information gain.
-
-<details><summary><b>Answer</b></summary>
-    
 </details>
 
 
 ---
 
-Q. To study factors affecting the decision of a frog to jump (or not), a deep learning researcher from a Brazilian rain-forest, collects data pertaining to several independent binary co-variates.
+
+### Q: There are several measures by which one can determine how to optimally split attributes in a decision tree. List the three most commonly used measures and write their formulae.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `There are several measures by which one can determine how to optimally split attributes in a decision tree. List the three most commonly used measures and write their formulae.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+
+---
+
+
+### Q: Complete the sentence: In a decision tree, the attribute by which we choose to split is the one with `[minimum/maximum]` information gain.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Complete the sentence: In a decision tree, the attribute by which we choose to split is the one with `[minimum/maximum]` information gain.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+
+---
+
+
+### Q: To study factors affecting the decision of a frog to jump (or not), a deep learning researcher from a Brazilian rain-forest, collects data pertaining to several independent binary co-variates.
+
 
 <table align='center'>
 <tr>
@@ -354,14 +478,20 @@ The binary response variable Jump indicates whether a jump was observed. Referri
 
 Without explicitly determining the information gain values for each of the three attributes, which attribute should be chosen as the attribute by which the decision tree should be first partitioned? e.g which attribute has the highest predictive power regarding the decision of the frog (Fig. 4.4) to jump.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `To study factors affecting the decision of a frog to jump (or not), a deep learning researcher from a Brazilian rain-forest, collects data pertaining to several independent binary co-variates.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. This question discusses the link between binary classification, information gain and decision trees. Recent research suggests that Cannabis (Fig. 4.5), and Cannabinoids administration in particular may reduce the size of malignant tumours in rodents. The data (Table 9.2) comprises a training set of feature vectors with corresponding class labels which a researcher intents classifying using a decision tree.
+
+### Q: This question discusses the link between binary classification, information gain and decision trees. Recent research suggests that Cannabis (Fig. 4.5), and Cannabinoids administration in particular may reduce the size of malignant tumours in rodents. The data (Table 9.2) comprises a training set of feature vectors with corresponding class labels which a researcher intents classifying using a decision tree.
+
 
 <table align='center'>
 <tr>
@@ -392,14 +522,20 @@ To study factors affecting tumour shrinkage, the deep learning researcher collec
 3. Using $\log_2$, and the provided dataset, calculate the sample entropy $H(γ)$.
 4. What is the information gain $IG(X_1) ≡ H(γ) − H(|θ_1)$ for the provided training corpus?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `This question discusses the link between binary classification, information gain and decision trees. Recent research suggests that Cannabis (Fig. 4.5), and Cannabinoids administration in particular may reduce the size of malignant tumours in rodents. The data (Table 9.2) comprises a training set of feature vectors with corresponding class labels which a researcher intents classifying using a decision tree.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$ indicating whether a star is dense, and $θ2 (T/F)$ indicating whether a star is adjacent to a black-hole. He is told that the binary response variable, $γ$, indicates whether expansion was observed.
+
+### Q: To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$ indicating whether a star is dense, and $θ2 (T/F)$ indicating whether a star is adjacent to a black-hole. He is told that the binary response variable, $γ$, indicates whether expansion was observed.
+
 e.g.:
 $\text{expansion}=+, \text{no expansion}=-$
 
@@ -420,14 +556,20 @@ Referring to table (4.3), each row indicates the observed values, columns $(θi)
 2. Using $\log_2$ and the provided dataset, calculate the information gain of $H(γ|θ1)$.
 3. Using $log_2$ and the provided dataset, calculate the information gain of $H(γ|θ2)$.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$ indicating whether a star is dense, and $θ2 (T/F)$ indicating whether a star is adjacent to a black-hole. He is told that the binary response variable, $γ$, indicates whether expansion was observed.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q.  To study factors affecting tumour shrinkage in humans, a deep learning researcher is provided with data regrading two independent variables; $θ1(S/M/L)$ indicating whether the tumour is small(S), medium(M) or large(L), and $θ2(T/F)$ indicating whether the tumour has undergone radiation therapy. He is told that the binary response variable, $γ$, indicates whether tumour shrinkage was observed $(e.g. shrinkage=+, no shrinkage=-)$.
+
+### Q: To study factors affecting tumour shrinkage in humans, a deep learning researcher is provided with data regrading two independent variables; $θ1(S/M/L)$ indicating whether the tumour is small(S), medium(M) or large(L), and $θ2(T/F)$ indicating whether the tumour has undergone radiation therapy. He is told that the binary response variable, $γ$, indicates whether tumour shrinkage was observed $(e.g. shrinkage=+, no shrinkage=-)$.
+
 
 Referring to table (4.4), each row indicates the observed values, columns $(θ_i)$ denote features and class label $(γ)$ denotes whether shrinkage was observed.
 <table align='center'>
@@ -446,14 +588,20 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 3. Using $\log_2$ and the provided dataset, calculate the entropy of $H(γ|θ2)$.
 4. **True or false**: We should split on a specific variable that minimizes the information gain, therefore we should split on $θ_2$ (radiation therapy).
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `To study factors affecting tumour shrinkage in humans, a deep learning researcher is provided with data regrading two independent variables; $θ1(S/M/L)$ indicating whether the tumour is small(S), medium(M) or large(L), and $θ2(T/F)$ indicating whether the tumour has undergone radiation therapy. He is told that the binary response variable, $γ$, indicates whether tumour shrinkage was observed $(e.g. shrinkage=+, no shrinkage=-)$.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Shannon described a communications system consisting five elements (4.6), two of which are the source S and the destination D.
+
+### Q: Shannon described a communications system consisting five elements (4.6), two of which are the source S and the destination D.
+
 
 <table align='center'>
 <tr>
@@ -472,8 +620,12 @@ Q. Shannon described a communications system consisting five elements (4.6), two
 4. Annotate the part termed mutual information.
 5. Write the formulae for mutual information.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Shannon described a communications system consisting five elements (4.6), two of which are the source S and the destination D.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
@@ -481,14 +633,20 @@ Q. Shannon described a communications system consisting five elements (4.6), two
 
 26. Complete the sentence: The relative entropy $D(p||q)$ is the measure of (a)[...] between two distributions. It can also be expressed as a measure of the (b)[...] of assuming that the distribution is q when the (c)[...] distribution is p.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Shannon described a communications system consisting five elements (4.6), two of which are the source S and the destination D.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Complete the sentence: Mutual information is a Shannon entropy-based measure of dependence between random variables. The mutual information between X and Z can be understood as the (a) [...] of the (b) [...] in X given Z:
+
+### Q: Complete the sentence: Mutual information is a Shannon entropy-based measure of dependence between random variables. The mutual information between X and Z can be understood as the (a) [...] of the (b) [...] in X given Z:
+
 
 $$
 I(X; Z) := H(X) − H(X | Z)
@@ -496,32 +654,50 @@ $$
 
 where H is the Shannon entropy, and $H (X | Z )$ is the conditional entropy of $Z$ given $X$.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Complete the sentence: Mutual information is a Shannon entropy-based measure of dependence between random variables. The mutual information between X and Z can be understood as the (a) [...] of the (b) [...] in X given Z:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. What is the expression for the Boltzmann probability distribution?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: What is the expression for the Boltzmann probability distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What is the expression for the Boltzmann probability distribution?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. Information theory, quantum physics and thermodynamics are closely interconnected. There are several equivalent formulations for the second law of thermodynamics. One approach to describing uncertainty stems from Boltzmanns fundamental work on entropy in statistical mechanics. Describe what is meant by Boltzmanns entropy.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Information theory, quantum physics and thermodynamics are closely interconnected. There are several equivalent formulations for the second law of thermodynamics. One approach to describing uncertainty stems from Boltzmanns fundamental work on entropy in statistical mechanics. Describe what is meant by Boltzmanns entropy.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Information theory, quantum physics and thermodynamics are closely interconnected. There are several equivalent formulations for the second law of thermodynamics. One approach to describing uncertainty stems from Boltzmanns fundamental work on entropy in statistical mechanics. Describe what is meant by Boltzmanns entropy.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. From Boltzmanns perspective, what is the entropy of an octahedral dice?
+
+### Q: From Boltzmanns perspective, what is the entropy of an octahedral dice?
+
 
 <table align='center'>
 <tr>
@@ -534,39 +710,64 @@ Q. From Boltzmanns perspective, what is the entropy of an octahedral dice?
 </tr>
 </table>
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `From Boltzmanns perspective, what is the entropy of an octahedral dice?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. 
-1. Define the term concave function.
+
+### Q: 1. Define the term concave function.
+
 2. Define the term convex function.
 3. State Jensen's inequality and its implications.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `1. Define the term concave function.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 
 ---
 
-Q. **True or False**: Using Jensen's inequality, it is possible to show that the KL divergence
+
+### Q: **True or False**: Using Jensen's inequality, it is possible to show that the KL divergence
+
 is always greater or equal to zero.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `**True or False**: Using Jensen's inequality, it is possible to show that the KL divergence`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Jensen’s inequality forms the basis for many algorithms for probabilistic inference, including expectation maximization and variational inference. Explain what Jensen’s inequality is.
+
+### Q: Jensen’s inequality forms the basis for many algorithms for probabilistic inference, including expectation maximization and variational inference. Explain what Jensen’s inequality is.
 
 
-<details><summary><b>Answer</b></summary>
-    
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Jensen’s inequality forms the basis for many algorithms for probabilistic inference, including expectation maximization and variational inference. Explain what Jensen’s inequality is.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
+
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

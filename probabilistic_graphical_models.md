@@ -15,9 +15,12 @@ Contents
 
 ## Maximum Likelihood Estimation
 
-Q. Explain frequentist vs. Bayesian statistics.
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain frequentist vs. Bayesian statistics.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Frequentist and Bayesian statistics represents two different school of thoughts while building probabilistic model from the data.
 
@@ -68,9 +71,12 @@ Key Differences:
 
 ---
 
-Q. How can we estimate the parameters of a given probability distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we estimate the parameters of a given probability distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use following methods to estimates parameters:
 
@@ -81,9 +87,12 @@ We can use following methods to estimates parameters:
 
 ---
 
-Q. What is the main assumption of MAP and MLE?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the main assumption of MAP and MLE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MLE/MAP both assumes the data are independent and identically distributed(iid)
 
@@ -91,9 +100,12 @@ MLE/MAP both assumes the data are independent and identically distributed(iid)
 
 ---
 
-Q. How is likelihood different than probability?
 
-<details><summary><b>Answer</b></summary>
+### Q: How is likelihood different than probability?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In the case of discrete distributions, likelihood is a synonym for the probability mass, or joint probability mass, of the data. In the case of continuous distribution, likelihood refers to the probability density of the data distribution.
 
@@ -101,9 +113,12 @@ In the case of discrete distributions, likelihood is a synonym for the probabili
 
 ---
 
-Q. Write the mathematical expression of likelihood?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the mathematical expression of likelihood?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It represents the probability of observing the given data as a function of the parameters of the statistical model.
 
@@ -119,9 +134,12 @@ Since we assumed that each data point is independent, the likelihood of all of o
 
 ---
 
-Q. What does *Argmax* mean?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does *Argmax* mean?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Argmax is short for Arguments for the maxima. The argmax of a function is the value of the domain at which the function is maximized.
 
@@ -129,9 +147,12 @@ Argmax is short for Arguments for the maxima. The argmax of a function is the va
 
 ---
 
-Q. Describe how to analytically find the MLE of a likelihood function?
 
-<details><summary><b>Answer</b></summary>
+### Q: Describe how to analytically find the MLE of a likelihood function?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 To analytically find the Maximum Likelihood Estimator (MLE) of a likelihood function, we can follow below steps:
 
@@ -196,9 +217,12 @@ $$
 
 ---
 
-Q. What is the term used to describe the first derivative of the log-likelihood function?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the term used to describe the first derivative of the log-likelihood function?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Score function : The score function measures the sensitivity of the log-likelihood function to changes in the parameter $\theta$. It is the gradient (or derivative) of the log-likelihood with respect to the parameter.
 
@@ -207,9 +231,12 @@ Score function : The score function measures the sensitivity of the log-likeliho
 
 ---
 
-Q. What is the relationship between the likelihood function and the log-likelihood function?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the relationship between the likelihood function and the log-likelihood function?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The log-likelihood function is derived by taking the natural logarithm of the likelihood function.
 
@@ -225,11 +252,14 @@ $$
 ---
 
 
-Q. What is likelihood function of the independent identically distributed (i.i.d) random variables:
+
+### Q: What is likelihood function of the independent identically distributed (i.i.d) random variables:
+
 $X_1,··· ,X_n$ where $X_i ∼ binomial(n, p)$, $∀i ∈ [1,n]$, and where p is the parameter of interest?
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Likelihood function in case of discrete random variables is jus the PMF. 
 
@@ -250,9 +280,12 @@ $$
 
 ---
 
-Q. How can we derive the maximum likelihood estimator (MLE) of the i.i.d samples $X_1, · · · , X_n$ introduced in above question?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we derive the maximum likelihood estimator (MLE) of the i.i.d samples $X_1, · · · , X_n$ introduced in above question?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Likelihood function in case of binomial distribution:
 
@@ -286,14 +319,16 @@ $$
 p = \frac{x}{n}
 $$
 
-
 </details>
 
 ---
 
-Q. Derive the maximum likelihood estimator of an exponential distribution.
 
-<details><summary><b>Answer</b></summary>
+### Q: Derive the maximum likelihood estimator of an exponential distribution.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *PDF of exponential distribution:*
 
@@ -363,9 +398,12 @@ $$
 
 ---
 
-Q. A lot of machine learning models aim to approximate probability distributions. Let’s say P is the distribution of the data and Q is the distribution learned by our model. How do measure how close Q is to P?
 
-<details><summary><b>Answer</b></summary>
+### Q: A lot of machine learning models aim to approximate probability distributions. Let’s say P is the distribution of the data and Q is the distribution learned by our model. How do measure how close Q is to P?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use KL Divergence formula which is a measure of how one probability distribution $Q$ diverges from a second, expected probability distribution $P$.
 
@@ -383,9 +421,12 @@ $$
 
 ## Maximum A Posteriori
 
-Q. What is MAP? How is it different than MLE?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is MAP? How is it different than MLE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAP estimation finds the parameter values that maximize the posterior distribution of the parameters given the data, inducing prior beliefs about the parameters.
 
@@ -406,20 +447,25 @@ $$
 
 ---
 
-Q. When to use MAP over MLE?
 
-<details><summary><b>Answer</b></summary>
+### Q: When to use MAP over MLE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 If prior probability is provided in the problem setup, that information should be used (i.e., apply MAP). However, if no prior information is given or assumed, MAP cannot be used, and MLE becomes a suitable approach.
-
 
 </details>
 
 ---
 
-Q. When do MAP and MLE yield similar parameter estimates?
 
-<details><summary><b>Answer</b></summary>
+### Q: When do MAP and MLE yield similar parameter estimates?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAP and MLE will yield similar parameter estimates in following situations:
 
@@ -427,17 +473,18 @@ MAP and MLE will yield similar parameter estimates in following situations:
 - Non-informative Priors : Priors that are weakly informative (e.g., with very high variance) have little impact on the posterior,
 - Data Size is large : With a large amount of data, the likelihood dominates the posterior, reducing the influence of the prior
 
-
 </details>
 
 ---
 
-Q. 
-1. Define the term conjugate prior.
+
+### Q: 1. Define the term conjugate prior.
+
 2. Define the term non-informative prior.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Conjugate Prior*
 
@@ -451,25 +498,33 @@ The prior $p(\theta)$ is conjugate to the posterior $p(\theta | x)$ if both are 
 
 *Non-Informative Prior*
 
-
-
 </details>
 
 ---
 
-Q. MPE (Most Probable Explanation) vs. MAP (Maximum A Posteriori)
+
+### Q: MPE (Most Probable Explanation) vs. MAP (Maximum A Posteriori)
+
 1. How do MPE and MAP differ?
 1. Give an example of when they would produce different results.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **MAP (Maximum A Posteriori)**: Finds the most likely assignment for a subset of query variables $Y$ given evidence $E=e$, marginalizing over unobserved variables $Z$:
+  $$ y^* = \arg\max_y \sum_z P(Y=y, Z=z \mid E=e) $$
+- **MPE (Most Probable Explanation)**: Special case of MAP where all unobserved variables are assigned a joint instantiation (no marginalization):
+  $$ (y^*, z^*) = \arg\max_{y, z} P(Y=y, Z=z \mid E=e) $$
+
 </details>
 
 ---
 
 ## Naive Bayes
 
-Q. Naive Bayes classifier.
+
+### Q: Naive Bayes classifier.
+
 1. How is Naive Bayes classifier naive?
 1. Let’s try to construct a Naive Bayes classifier to classify whether a tweet has a positive or negative sentiment. We have four training samples:
 
@@ -485,31 +540,38 @@ $$
 
 According to your classifier, what's sentiment of the sentence The hamster is upset with the puppy?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. The Naive Bayes classifier is considered "naive" because it makes a strong and often unrealistic assumption: it assumes that all features (or predictors) in the dataset are independent of each other given the class label.
 
-2. 
+2.
 
 </details>
 
 ---
 
-Q. Is Naive bayes a discriminative model? 
 
-<details><summary><b>Answer</b></summary>
+### Q: Is Naive bayes a discriminative model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *True*
 
-The Naive Bayes algorithm is generative. It models $P(x|y)$ and makes explicit assumptions on its distribution (e.g. multinomial, categorical, Gaussian, ...). The parameters of this distributions are estimated with MLE or MAP. 
+The Naive Bayes algorithm is generative. It models $P(x|y)$ and makes explicit assumptions on its distribution (e.g. multinomial, categorical, Gaussian, ...). The parameters of this distributions are estimated with MLE or MAP.
 
 </details>
 
 ---
 
-Q. How does the Naive Bayes algorithm work?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does the Naive Bayes algorithm work?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Naive Bayes Assumption*
 
@@ -549,9 +611,12 @@ Here we can calculate all the terms of Bayes theorem:
 ---
 
 
-Q. Why is Naive Bayes still used despite its flawed assumption of feature independence?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why is Naive Bayes still used despite its flawed assumption of feature independence?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Naive Bayes is beneficial primarily because of its "naive" assumption of feature independence, which, although technically incorrect, offers some practical advantages:
 
@@ -565,35 +630,42 @@ Naive Bayes is beneficial primarily because of its "naive" assumption of feature
 ---
 
 
-Q. What is Laplace smoothing (additive smoothing) in Naive Bayes?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Laplace smoothing (additive smoothing) in Naive Bayes?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Laplace smoothing, also known as additive smoothing, is a technique used in Naive Bayes to handle zero probabilities that occur when a feature (e.g., a word in text classification) does not appear in the training data for a given class. Without smoothing, if a word never appears in a class during training, its probability would be zero, which could incorrectly influence the final prediction.
-
-
 
 </details>
 
 ---
 
-Q. Can Naive Bayes handle continuous and categorical features?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can Naive Bayes handle continuous and categorical features?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yeah, We can handle both categorical and continuous features both using Naive Bayes
 
 - Categorical Features : can be handled with methods like multinomial and bernoulli distributions 
 - Continuous Features : Can be handled using Gaussian assumptions
-- Mixed Data : We can either convert continuous values into bins(categorization) and treat it as only categorical features or, we can fit separate model on categorical and numeric data and then combine to make prediction 
+- Mixed Data : We can either convert continuous values into bins(categorization) and treat it as only categorical features or, we can fit separate model on categorical and numeric data and then combine to make prediction
 
 </details>
 
 ---
 
-Q. Can Naive Bayes handle missing data?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can Naive Bayes handle missing data?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Naive Bayes does not directly handle missing data, but several practical strategies, such as ignoring missing features, imputing missing values, or creating indicator variables, can be employed to manage it effectively.
 
@@ -601,12 +673,16 @@ Naive Bayes does not directly handle missing data, but several practical strateg
 
 ---
 
-Q. What is the difference between Naive Bayes and other classification algorithms like Logistic Regression or Decision Trees?
+
+### Q: What is the difference between Naive Bayes and other classification algorithms like Logistic Regression or Decision Trees?
 
 
-<details><summary><b>Answer</b></summary>
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
+- **Generative vs Discriminative**: Naive Bayes is a generative model estimating joint distribution $P(X, Y) = P(X|Y)P(Y)$, whereas Logistic Regression is discriminative modeling conditional distribution $P(Y|X)$.
+- **Feature Independence Assumption**: Naive Bayes assumes features $X_i$ are conditionally independent given class $Y$, allowing linear scaling $O(d)$ during training.
 
 </details>
 
@@ -614,19 +690,25 @@ Q. What is the difference between Naive Bayes and other classification algorithm
 
 ## Logistic Regression
 
-Q. Define logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define logistic regression?
 
-Logistic Regression is a discriminative classifier that works by trying to learn a function that approximates $P(y|x)$. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Logistic Regression is a discriminative classifier that works by trying to learn a function that approximates $P(y|x)$.
 
 </details>
 
 ---
 
-Q. What is the main assumption of logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the main assumption of logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The central assumption that $P(y|x)$ can be approximated as a sigmoid function function applied to a linear combination of input features.
 
@@ -640,9 +722,12 @@ $$
 
 ---
 
-Q. Write the expression of sigmoid or logistic function?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the expression of sigmoid or logistic function?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $$
 \sigma(z) = \frac{1}{1+\exp(-z)}
@@ -652,9 +737,12 @@ $$
 
 ---
 
-Q. Prove that logistic regression is a linear classifier?
 
-<details><summary><b>Answer</b></summary>
+### Q: Prove that logistic regression is a linear classifier?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 At the decision boundary:
 
@@ -686,9 +774,12 @@ This equation defines the decision boundary of logistic regression. Since it rep
 
 ---
 
-Q. Does closed-form solution exists for logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: Does closed-form solution exists for logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 No closed-form solution exist. That's why we use gradient descent to estimate the parameters.
 
@@ -696,26 +787,41 @@ No closed-form solution exist. That's why we use gradient descent to estimate th
 
 ---
 
-Q. How can we learn the parameters of logistic regression model? 
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we learn the parameters of logistic regression model?
 
-</details>
 
----
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-Q. State the difference between Naive bayes and Logistic regression model?
-
-<details><summary><b>Answer</b></summary>
-
+- **Maximum Likelihood Estimation (MLE)**: Minimize Negative Log-Likelihood (Binary Cross-Entropy):
+  $$ L(w) = -\sum_{i=1}^N \left[ y_i \log(\sigma(w^T x_i)) + (1-y_i) \log(1 - \sigma(w^T x_i)) \right] $$
+- **Optimization**: Loss is strictly convex, optimized via Gradient Descent, L-BFGS, or Newton-Raphson (Iteratively Reweighted Least Squares - IRLS).
 
 </details>
 
 ---
 
-Q. What is the range of logistic(sigmoid function)?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the difference between Naive bayes and Logistic regression model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Naive Bayes**: Generative model, faster training $O(N \cdot d)$, performs well on small datasets with independent features, higher asymptotic error if independence assumption is violated.
+- **Logistic Regression**: Discriminative model, requires iterative optimization, handles correlated features better, lower asymptotic error as sample size $N \to \infty$.
+
+</details>
+
+---
+
+
+### Q: What is the range of logistic(sigmoid function)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $(0, 1)$
 
@@ -723,22 +829,27 @@ $(0, 1)$
 
 ---
 
-Q. What is the difference between Conditional MLE and standard MLE, and how does it relate to logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the difference between Conditional MLE and standard MLE, and how does it relate to logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Conditional Maximum Likelihood Estimation (Conditional MLE) refers to MLE applied within a conditional model, where the parameters only influence the conditional probability $P(Y|X)$ and not the marginal probability $P(X)$. In contrast, standard MLE applies when the parameters affect both $P(Y|X)$ and $P(X)$.
 
 Logistic regression is an example of a conditional model because the parameters $\theta$ only control $P(Y|X)$, not $P(X)$. As a result, the MLE used in logistic regression is considered a Conditional MLE.
 
-
 </details>
 
 ---
 
-Q. What is the issue with using squared losses(MSE) or absolute losses(MAE) for logistic regression model?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the issue with using squared losses(MSE) or absolute losses(MAE) for logistic regression model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Squared and absolute losses are not typically used in logistic regression because they are not well-suited to the characteristics of the logistic function and can lead to significant issues during optimization.
 
@@ -750,9 +861,12 @@ Squared and absolute losses are not typically used in logistic regression becaus
 
 ---
 
-Q. Can we use logistic regression for multiclass classification problem?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can we use logistic regression for multiclass classification problem?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, logistic regression can be extended to handle multiclass classification problems through approaches like One-vs-Rest (OvR) and Softmax Regression (Multinomial Logistic Regression).
 
@@ -760,9 +874,12 @@ Yes, logistic regression can be extended to handle multiclass classification pro
 
 ---
 
-Q. Write the expression of softmax function?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the expression of softmax function?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 For a set of scores/logits $\mathbf{z} = [z_1, z_2, \ldots, z_K]$, the probability of class $j$ is given by:
 
@@ -770,14 +887,16 @@ $$
  P(y = j | \mathbf{x}) = \frac{\exp(z_j)}{\sum_{k=1}^{K} \exp(z_k)}
 $$
 
-
 </details>
 
 ---
 
-Q. State one issue with softmax function over sigmoid?
 
-<details><summary><b>Answer</b></summary>
+### Q: State one issue with softmax function over sigmoid?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Computationally more intensive compared to binary logistic regression, especially when the number of classes is large.
 
@@ -785,9 +904,12 @@ Computationally more intensive compared to binary logistic regression, especiall
 
 ---
 
-Q. How is Maximum Likelihood Estimation (MLE) used in logistic regression, and why is it preferred over other estimation methods like least squares?
 
-<details><summary><b>Answer</b></summary>
+### Q: How is Maximum Likelihood Estimation (MLE) used in logistic regression, and why is it preferred over other estimation methods like least squares?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Logistic Regression Model*
 
@@ -830,9 +952,12 @@ MLE is Preferred Over Least Squares in Logistic Regression?
 
 ---
 
-Q. What is Maximum A Posteriori (MAP) Estimation in logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Maximum A Posteriori (MAP) Estimation in logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAP estimation in logistic regression is a Bayesian approach that estimates model parameters by maximizing the posterior probability, which combines the likelihood of the observed data with a prior distribution over the parameters. 
 
@@ -850,9 +975,12 @@ $$
 
 ---
 
-Q. How does MAP differ from Maximum Likelihood Estimation (MLE) in logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does MAP differ from Maximum Likelihood Estimation (MLE) in logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MLE maximizes the likelihood of the data given the parameters, relying solely on observed data. MAP, on the other hand, maximizes the posterior probability by incorporating a prior distribution, which acts as a regularization term.
 
@@ -860,9 +988,12 @@ MLE maximizes the likelihood of the data given the parameters, relying solely on
 
 ---
 
-Q. What role do priors play in MAP estimation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What role do priors play in MAP estimation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Priors in MAP estimation incorporate external knowledge or beliefs about the parameters, adding a regularization effect. Common priors include Gaussian (L2 regularization) and Laplace (L1 regularization), which help control model complexity and prevent overfitting.
 
@@ -870,9 +1001,12 @@ Priors in MAP estimation incorporate external knowledge or beliefs about the par
 
 ---
 
-Q. Why might MAP be preferred over MLE in logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why might MAP be preferred over MLE in logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAP is preferred over MLE in scenarios where there is a risk of overfitting, when data is sparse, or when domain knowledge is important. The inclusion of priors in MAP acts as regularization, making the model more robust to noise and improving generalization.
 
@@ -880,9 +1014,12 @@ MAP is preferred over MLE in scenarios where there is a risk of overfitting, whe
 
 ---
 
-Q. How does MAP help in small datasets compared to MLE?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does MAP help in small datasets compared to MLE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In small datasets, MLE may overfit because it relies only on the observed data. MAP’s use of priors helps stabilize parameter estimates, providing more reliable results when the data alone is insufficient.
 
@@ -890,9 +1027,12 @@ In small datasets, MLE may overfit because it relies only on the observed data. 
 
 ---
 
-Q. What type of priors are commonly used in MAP for logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What type of priors are commonly used in MAP for logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Common priors used in MAP for logistic regression include:
 
@@ -903,9 +1043,12 @@ Common priors used in MAP for logistic regression include:
 
 ---
 
-Q. How does MAP provide flexibility compared to MLE?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does MAP provide flexibility compared to MLE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAP allows the use of different priors based on the problem context, providing flexibility in how the model is regularized or adjusted. MLE lacks this capability as it does not incorporate any prior information.
 
@@ -913,9 +1056,12 @@ MAP allows the use of different priors based on the problem context, providing f
 
 ---
 
-Q. What is the main advantage of using MAP in logistic regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the main advantage of using MAP in logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The main advantage of using MAP in logistic regression is its ability to combine observed data with prior information, enhancing the model’s robustness against overfitting and making it better suited for small or noisy datasets.
 
@@ -924,9 +1070,12 @@ The main advantage of using MAP in logistic regression is its ability to combine
 ---
 
 
-Q. Can you explain a situation where using MAP estimation could lead to worse results than MLE?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can you explain a situation where using MAP estimation could lead to worse results than MLE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAP estimation could lead to worse results if the prior is incorrect or misaligned with the actual data distribution. For example, if a strong prior incorrectly penalizes certain parameter values, the resulting estimates could be biased, leading to poor predictive performance compared to MLE, which only relies on the observed data.
 
@@ -936,3 +1085,7 @@ MAP estimation could lead to worse results if the prior is incorrect or misalign
 
 
 ## Bayesian Belief Networks
+
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

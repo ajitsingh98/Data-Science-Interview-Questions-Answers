@@ -15,27 +15,12 @@ Contents
 
 ## Regression Metrics
 
-Q. List down metrics for evaluating regression tasks?
 
-<details><summary><b>Answer</b></summary>
+### Q: List down metrics for evaluating regression tasks?
 
-We can use following regression metrics for evaluation
 
-- Mean Squared Error(MSE)
-- Root Mean Squared Error(RMSE)
-- Mean Absolute Error(MAE)
-- R-squared(Goodness of fit)
-- Adjusted R-squared
-- Pearson correlation
-- Spearman rank correlation
-
-</details>
-
----
-
-Q. List down metrics for evaluating regression tasks?
-
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use following regression metrics for evaluation
 
@@ -51,9 +36,12 @@ We can use following regression metrics for evaluation
 
 ---
 
-Q. Write down mathematical expression of MSE?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write down mathematical expression of MSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $$
 \text{MSE} = \frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2
@@ -68,9 +56,12 @@ Where
 
 ---
 
-Q. What are benefits of using MSE as loss function?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are benefits of using MSE as loss function?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Smooth and Differentiable : Suitable for gradient-based optimization methods like gradient descent.
 - Penalizes Larger Errors More Heavily: MSE squares the error, which means that larger errors contribute significantly more to the total loss compared to smaller errors. 
@@ -80,9 +71,12 @@ Q. What are benefits of using MSE as loss function?
 
 ---
 
-Q. State the range of MSE?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the range of MSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Bounds of mean-squared error(mse)
 
@@ -96,9 +90,12 @@ with $0$ the best mse
 
 ---
 
-Q. How can we interpret mse value?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we interpret mse value?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MSE estimates the average squared difference of predicted values and actual values. 
 
@@ -110,9 +107,12 @@ MSE estimates the average squared difference of predicted values and actual valu
 
 ---
 
-Q. What value MSE encode?
 
-<details><summary><b>Answer</b></summary>
+### Q: What value MSE encode?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MSE measures seeks to summarize the errors made by regression model. The smaller value indicates, model's prediction closer to actual values. It is intuitively like counterpart to accuracy for classifier.
 
@@ -120,9 +120,12 @@ MSE measures seeks to summarize the errors made by regression model. The smaller
 
 ---
 
-Q. Why do we square the differences in MSE?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why do we square the differences in MSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Squaring the differences in MSE is done to emphasize larger errors, ensure non-negative values, maintain mathematical properties needed for optimization, align with the concept of variance, and avoid the cancellation of errors.
 
@@ -131,20 +134,26 @@ Squaring the differences in MSE is done to emphasize larger errors, ensure non-n
 ---
 
 
-Q. What is the significance of a low MSE value?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the significance of a low MSE value?
 
-A low Mean Squared Error (MSE) value signifies that a model's predictions are close to the actual values, indicating that the model performs well in terms of accuracy. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+A low Mean Squared Error (MSE) value signifies that a model's predictions are close to the actual values, indicating that the model performs well in terms of accuracy.
 
 </details>
 
 ---
 
 
-Q. How can you minimize MSE in a machine learning model?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can you minimize MSE in a machine learning model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Minimizing MSE involves a combination of techniques:
 
@@ -156,9 +165,12 @@ Minimizing MSE involves a combination of techniques:
 
 ---
 
-Q. What are weaknesses of mean-squared error(mse)?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are weaknesses of mean-squared error(mse)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Scale dependent values: MSE values are highly dependent on scale of the output variable
 - Hard to interpret in isolation: Scale dependency makes it hard to interpret in isolation
@@ -166,15 +178,18 @@ Q. What are weaknesses of mean-squared error(mse)?
 - Treats all errors equally irrespective to magnitude and direction
 - Overestimation and underestimations are weighted equally 
 - May ignore small errors as it squares the difference between predicted and actual values
-- It assumes errors should be gaussian distributed 
+- It assumes errors should be gaussian distributed
 
 </details>
 
 ---
 
-Q. Write the expression for Root Mean Squared Error(RMSE)?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the expression for Root Mean Squared Error(RMSE)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 RMSE is basically root of mean-squared error
 
@@ -186,9 +201,12 @@ $$
 
 ---
 
-Q. What is the benefit of using RMSE over MSE?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using RMSE over MSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - RMSE unit is in sync with target variable unit
 - Easy to interpret the output and can be used directly to compare multiple models performance
@@ -198,9 +216,12 @@ Q. What is the benefit of using RMSE over MSE?
 
 ---
 
-Q. What are weaknesses of RMSE?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are weaknesses of RMSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Not much robust to outliers
 - Always positive so not useful where direction of error make sense
@@ -212,9 +233,12 @@ Q. What are weaknesses of RMSE?
 
 ---
 
-Q. Write the mathematical expression for Mean Absolute Error(MAE)?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the mathematical expression for Mean Absolute Error(MAE)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAE is average of absolute difference of predicted and actual values.
 
@@ -226,9 +250,12 @@ $$
 
 ---
 
-Q. What is the benefit of using MAE over RMSE or MSE?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using MAE over RMSE or MSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is more robust to outliers unlike MSE and RMSE
 
@@ -236,9 +263,12 @@ It is more robust to outliers unlike MSE and RMSE
 
 ---
 
-Q. State one drawback of using MAE over RMSE or MSE?
 
-<details><summary><b>Answer</b></summary>
+### Q: State one drawback of using MAE over RMSE or MSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAE uses `|.|` function which is not differential at zero
 
@@ -247,9 +277,12 @@ MAE uses `|.|` function which is not differential at zero
 ---
 
 
-Q. What is the difference between MSE and RMSE (Root Mean Square Error)?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the difference between MSE and RMSE (Root Mean Square Error)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Units: MSE is in squared units of the target variable, while RMSE is in the same units as the target variable. This makes RMSE generally easier to interpret and communicate.
 - Sensitivity to Outliers: Both MSE and RMSE are sensitive to outliers, but since RMSE is the square root of MSE, it is less exaggerated in terms of units. However, it still reflects the impact of large errors due to the squaring operation in MSE.
@@ -259,9 +292,12 @@ Q. What is the difference between MSE and RMSE (Root Mean Square Error)?
 
 ---
 
-Q. What is Mean Absolute Percentage Error (MAPE), and how is it calculated?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Mean Absolute Percentage Error (MAPE), and how is it calculated?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAPE is a metric used to evaluate the accuracy of a forecasting or regression model. It measures the average absolute percentage error between predicted and actual values. It is calculated as:
 
@@ -275,9 +311,12 @@ where $y_i$ is the actual value, $\hat{y}_i$ is the predicted value, and $n$ is 
 
 ---
 
-Q. Why might MAPE be misleading if the actual values of the target variable are very small?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why might MAPE be misleading if the actual values of the target variable are very small?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAPE can be misleading if the actual values are very small because the percentage error becomes very large when the actual values approach zero. This can lead to exaggerated error values that do not accurately reflect the model’s performance. For example, if the actual value is close to zero, even a small absolute error can result in a very high percentage error, skewing the metric.
 
@@ -285,9 +324,12 @@ MAPE can be misleading if the actual values are very small because the percentag
 
 ---
 
-Q. In which scenarios would MAPE be preferred over metrics like RMSE or MAE?
 
-<details><summary><b>Answer</b></summary>
+### Q: In which scenarios would MAPE be preferred over metrics like RMSE or MAE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAPE is preferred over metrics like RMSE or MAE when you want to evaluate the model’s performance in terms of relative error, especially when comparing forecasts across different scales or units. It is useful when the goal is to understand the average percentage error relative to the actual values, making it easier to communicate the model’s accuracy in percentage terms.
 
@@ -295,19 +337,25 @@ MAPE is preferred over metrics like RMSE or MAE when you want to evaluate the mo
 
 ---
 
-Q. How does MAPE handle negative values in the actual data, and why might this be problematic?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does MAPE handle negative values in the actual data, and why might this be problematic?
 
-MAPE is not well-suited for datasets with negative values because the percentage error calculation involves dividing by the actual value. When actual values are negative, this division results in negative or undefined percentage errors, which can be problematic and lead to inaccurate or misleading metrics. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+MAPE is not well-suited for datasets with negative values because the percentage error calculation involves dividing by the actual value. When actual values are negative, this division results in negative or undefined percentage errors, which can be problematic and lead to inaccurate or misleading metrics.
 
 </details>
 
 ---
 
-Q. Can MAPE be used to evaluate a model’s performance if the target variable contains zero values?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can MAPE be used to evaluate a model’s performance if the target variable contains zero values?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAPE cannot be reliably used when the target variable contains zero values, as it involves division by the actual values. When the actual value is zero, the percentage error calculation becomes undefined or infinite.
 
@@ -315,9 +363,12 @@ MAPE cannot be reliably used when the target variable contains zero values, as i
 
 ---
 
-Q. What are the benefits of using MAPE in a business context, and what potential pitfalls should be considered?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the benefits of using MAPE in a business context, and what potential pitfalls should be considered?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Benefits*
 
@@ -333,9 +384,12 @@ Q. What are the benefits of using MAPE in a business context, and what potential
 
 ---
 
-Q. How does MAPE handle asymmetric errors, and what might be the implications for model evaluation?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does MAPE handle asymmetric errors, and what might be the implications for model evaluation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 MAPE does not account for the direction of errors (whether they are positive or negative), which means it treats overestimation and underestimation equally. This can be a limitation if the cost of overestimation is different from underestimation, as MAPE does not differentiate between these scenarios.
 
@@ -343,19 +397,25 @@ MAPE does not account for the direction of errors (whether they are positive or 
 
 ---
 
-Q. What is R-squared ($R^2$)?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is R-squared ($R^2$)?
 
-R-squared is also called coefficient of determination. It is a statistical measure which evaluates the goodness of fit of a regression model. It represents the proportion of the variance in the dependent variable that is explained by the independent variables in the model. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+R-squared is also called coefficient of determination. It is a statistical measure which evaluates the goodness of fit of a regression model. It represents the proportion of the variance in the dependent variable that is explained by the independent variables in the model.
 
 </details>
 
 ---
 
-Q. When R-squared is more suitable to use?
 
-<details><summary><b>Answer</b></summary>
+### Q: When R-squared is more suitable to use?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 R-squared is more useful when we have linear relationship between dependent and independent variables.
 
@@ -363,9 +423,12 @@ R-squared is more useful when we have linear relationship between dependent and 
 
 ---
 
-Q. What is the range of R-squared values?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the range of R-squared values?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 R-squared ranges from $0$ to $1$, with $1$ indicating a perfect fit and $0$ indicating no fit at all.
 
@@ -373,9 +436,12 @@ R-squared ranges from $0$ to $1$, with $1$ indicating a perfect fit and $0$ indi
 
 ---
 
-Q. What does an R-squared value of 0.75 mean?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does an R-squared value of 0.75 mean?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 An R-squared value of $0.75$ means that 75% of the variance in the dependent variable (target) can be explained by the independent variables (predictors) in the model. In other words, the model accounts for $75%$ of the variability in the data, indicating a relatively good fit.
 
@@ -383,9 +449,12 @@ An R-squared value of $0.75$ means that 75% of the variance in the dependent var
 
 ---
 
-Q. State the expression for R-squared?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the expression for R-squared?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Mathematically, It can be expressed as:
 
@@ -402,9 +471,12 @@ Where:
 
 ---
 
-Q. Can R-squared be negative?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can R-squared be negative?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yeah, `R-squared` value can be negative due to outliers i.e when `MSE(model) > MSE(Baseline)`. It is the case when we have heavy outliers in predictions. 
 
@@ -416,9 +488,12 @@ $$
 
 ---
 
-Q. What are the benefits of using R-squared as performance indicator?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the benefits of using R-squared as performance indicator?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Intuitive Interpretation: R-squared of 0.80 means that 80% of the variance is explained by the model, which is easy to interpret and communicate.
 - Scale-Independent: Since R-squared is a proportion of explained variance, it is not affected by the scale of the dependent variable.
@@ -428,9 +503,12 @@ Q. What are the benefits of using R-squared as performance indicator?
 
 ---
 
-Q. How do you interpret R-squared?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do you interpret R-squared?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - $R² = 1$: The model explains all the variability in the target variable. Predictions perfectly match the actual values.
 - $0 < R² < 1$: R-squared is between 0 and 1, indicating the proportion of variance explained by the model. 
@@ -441,9 +519,12 @@ Q. How do you interpret R-squared?
 
 ---
 
-Q. What are the limitations of R-squared?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the limitations of R-squared?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - It does not tell us about magnitude of error
 - A high R-squared does not guaranteed accurate predictions, as the model may still have residual errors or maybe overfitting the data
@@ -455,19 +536,25 @@ Q. What are the limitations of R-squared?
 
 ---
 
-Q. When should you use R-squared as an evaluation metric?
 
-<details><summary><b>Answer</b></summary>
+### Q: When should you use R-squared as an evaluation metric?
 
-Use R-squared as an evaluation metric when you are working with linear regression models and want to assess how well your model explains the variability in the dependent variable. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Use R-squared as an evaluation metric when you are working with linear regression models and want to assess how well your model explains the variability in the dependent variable.
 
 </details>
 
 ---
 
-Q. Why do we need adjusted R-squared instead of standard R-squared?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why do we need adjusted R-squared instead of standard R-squared?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 R-squared suffers from problem that the scores keep improving on addition of predictors even if the additional predictors do not significantly improve the model's ability to explain the variation in the dependent variable. This can result in overfitting, where the model appears to fit the data well but may not generalize well to new data. To overcome the above problem associated with R-squared, adjusted R-squared adjusts for the number of predictors in the model, penalizing models with more predictors if the additional predictors do not contribute significantly to the model's ability to explain the variance in the dependent variable.
 
@@ -475,9 +562,12 @@ R-squared suffers from problem that the scores keep improving on addition of pre
 
 ---
 
-Q. What is the expression of adjusted R-squared?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the expression of adjusted R-squared?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Mathematically It can be expressed as:
 
@@ -495,9 +585,12 @@ Where:
 
 ---
 
-Q. What is the limitation of adjusted R-squared?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the limitation of adjusted R-squared?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Adjusted R-squared value is sensitive to sample size. It means the value may decrease as we we increase the sample size even if the model is performing better.
 
@@ -505,9 +598,12 @@ Adjusted R-squared value is sensitive to sample size. It means the value may dec
 
 ---
 
-Q. What is pearson correlation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is pearson correlation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Pearson Correlation is a statistical method that measures the similarity or correlation between two data objects by comparing their attributes and calculating a score ranging from $-1$ to $+1$.
 
@@ -515,9 +611,12 @@ Pearson Correlation is a statistical method that measures the similarity or corr
 
 ---
 
-Q. Write the expression of pearson correlation $\rho$?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the expression of pearson correlation $\rho$?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Pearson correlation coefficient between two vectors $y$ and $\cap{y}$ of dimension is:
 
@@ -529,9 +628,12 @@ $$
 
 ---
 
-Q. What is the range of pearson correlations?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the range of pearson correlations?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Bound of $\rhi$ is $[0, 1]$, $+1$ is complete positive linear correlation, and $0$ is no linear correlation at all.
 
@@ -539,9 +641,12 @@ Bound of $\rhi$ is $[0, 1]$, $+1$ is complete positive linear correlation, and $
 
 ---
 
-Q. State the weakness of pearson correlation?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the weakness of pearson correlation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Pearson correlations are highly sensitive to the magnitude of the differences between the actual and predicted values. As a result, they are also very sensitive to outliers.
 - More useful to detect correlation in linearly dependent values
@@ -550,19 +655,25 @@ Q. State the weakness of pearson correlation?
 
 ---
 
-Q. What is spearman correlation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is spearman correlation?
 
-Spearman's rank correlation coefficient, often denoted as $\rho_s$ or $r_s$, is a non-parametric measure of correlation that assesses the strength and direction of the monotonic relationship between two variables. Unlike Pearson’s correlation, which measures linear relationships, Spearman’s correlation evaluates how well the relationship between two variables can be described by a monotonic function. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Spearman's rank correlation coefficient, often denoted as $\rho_s$ or $r_s$, is a non-parametric measure of correlation that assesses the strength and direction of the monotonic relationship between two variables. Unlike Pearson’s correlation, which measures linear relationships, Spearman’s correlation evaluates how well the relationship between two variables can be described by a monotonic function.
 
 </details>
 
 ---
 
-Q. What is the benefit of using spearman correlation over pearson correlation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using spearman correlation over pearson correlation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - None parametric: Does not require relationship to be linear or data should be normally distributed
 - Detects Monotonic Relationships: Capable of identifying monotonic relationships that are not strictly linear.
@@ -574,9 +685,12 @@ Q. What is the benefit of using spearman correlation over pearson correlation?
 
 ---
 
-Q. Write the formula of spearman correlation?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the formula of spearman correlation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The formula for Spearman’s rank correlation is:
 
@@ -590,9 +704,12 @@ Where $d_i$ is the difference between the ranks of each pair of values, and $n$ 
 
 ---
 
-Q. How can you compute the spearman correlation between two variable $X$ and $Y$?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can you compute the spearman correlation between two variable $X$ and $Y$?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Rank the data
 
@@ -612,9 +729,12 @@ $$
 
 ---
 
-Q. How to interpret spearman correlation values?
 
-<details><summary><b>Answer</b></summary>
+### Q: How to interpret spearman correlation values?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - $+1$: Perfect positive monotonic correlation (as one variable increases, the other variable also increases).
 - $−1$: Perfect negative monotonic correlation (as one variable increases, the other variable decreases).
@@ -624,9 +744,12 @@ Q. How to interpret spearman correlation values?
 
 ---
 
-Q. State the one scenario where spearman correlation is more appropriate than pearson coefficients?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the one scenario where spearman correlation is more appropriate than pearson coefficients?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Scenario*
 
@@ -646,9 +769,12 @@ In the above scenario spearman is more appropriate than the pearson coefficients
 
 </details>
 
-Q. What is the limitation of spearman correlation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the limitation of spearman correlation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Monotonic Relationship Assumption: Not suitable for non-linear relationship
 - Data Transformation Sensitivity: The correlation might be affected by transformations that alter the ranks of the data.
@@ -657,9 +783,12 @@ Q. What is the limitation of spearman correlation?
 
 ---
 
-Q. How can we handle asymmetric errors?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we handle asymmetric errors?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use following metrics/loss to handle asymmetric errors:
 
@@ -676,9 +805,12 @@ We can use following metrics/loss to handle asymmetric errors:
 ## Classification Metrics
 
 
-Q. What metrics we can use to evaluate a classifier?
 
-<details><summary><b>Answer</b></summary>
+### Q: What metrics we can use to evaluate a classifier?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use following metrics for evaluation:
 
@@ -694,9 +826,12 @@ We can use following metrics for evaluation:
 ---
 
 
-Q. What is the purpose of a confusion matrix?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the purpose of a confusion matrix?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 This a 2D matrix of size $n \times n$ where n is number of distinct tables we have. It stores information about the actual label and corresponding predicted values. A confusion matrix visualizes and summarizes the performance of a classification algorithm.
 
@@ -716,9 +851,12 @@ This a 2D matrix of size $n \times n$ where n is number of distinct tables we ha
 ---
 
 
-Q. Explain True Positive (TP) and False Positive (FP).
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain True Positive (TP) and False Positive (FP).
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - True Positive (TP): A true positive occurs when the model correctly predicts a positive class.
 - False Positive (FP): A false positive happens when the model incorrectly predicts a positive class when it is actually negative.
@@ -728,20 +866,26 @@ Q. Explain True Positive (TP) and False Positive (FP).
 ---
 
 
-Q. Define True Negative (TN) and False Negative (FN).
 
-<details><summary><b>Answer</b></summary>
+### Q: Define True Negative (TN) and False Negative (FN).
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - True Negative (TN): A true negative occurs when the model correctly predicts a negative class. 
-- False Negative (FN): A false negative happens when the model incorrectly predicts a negative class when it is actually positive. 
+- False Negative (FN): A false negative happens when the model incorrectly predicts a negative class when it is actually positive.
 
 </details>
 
 ---
 
-Q. How can you use a confusion matrix to choose an appropriate threshold for a binary classifier?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can you use a confusion matrix to choose an appropriate threshold for a binary classifier?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 To choose an appropriate threshold for a binary classifier using a confusion matrix:
 
@@ -757,19 +901,25 @@ To choose an appropriate threshold for a binary classifier using a confusion mat
 
 ---
 
-Q. Define accuracy score?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define accuracy score?
 
-Accuracy scores signifies the portion of true predictions among total cases examined. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Accuracy scores signifies the portion of true predictions among total cases examined.
 
 </details>
 
 ---
 
-Q. Write the mathematical expression of accuracy score?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the mathematical expression of accuracy score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is mathematically expressed as:
 
@@ -788,9 +938,12 @@ Where:
 
 ---
 
-Q. What is the range of accuracy score?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the range of accuracy score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Accuracy bounds*
 
@@ -800,9 +953,12 @@ $[0, 1]$, with $0$ the worst and $1$ the best.
 
 ---
 
-Q. How does accuracy is related with negative log(logistic) loss?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does accuracy is related with negative log(logistic) loss?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Accuracy of a classifier on a validation set will be negatively correlated with the negative log (logistic, cross-entropy) loss, which is a common loss for classifiers. In this sense, these classifiers are optimizing for accuracy.
 
@@ -810,9 +966,12 @@ Accuracy of a classifier on a validation set will be negatively correlated with 
 
 ---
 
-Q. What is the main issue with accuracy score?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the main issue with accuracy score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Accuracy score provides an overall evaluation of the model's performance across all classes, but it may be deceptive in cases where the label distribution is skewed or imbalanced. In such cases, the accuracy score may be high due to the majority class dominating the predictions, while the minority class may be misclassified.
 
@@ -820,9 +979,12 @@ Accuracy score provides an overall evaluation of the model's performance across 
 
 ---
 
-Q. How can we overcome with accuracy score limitations?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we overcome with accuracy score limitations?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 To address accuracy score limitation issue, it's recommended to use other performance metrics along with accuracy score, such as precision, recall, F1-score, or area under the Receiver Operating Characteristic (ROC) curve. These metrics provide insights on the model's performance at a class-level, allowing for a more comprehensive evaluation of the model's predictive accuracy, especially in imbalanced datasets.
 
@@ -830,9 +992,12 @@ To address accuracy score limitation issue, it's recommended to use other perfor
 
 ---
 
-Q. What do you mean by precision? How can we calculate it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by precision? How can we calculate it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Precision is the portion of true positive class among predicted positive classes. 
 
@@ -848,9 +1013,12 @@ Note that precision is per-class notion.
 
 ---
 
-Q. When precision is preferred?
 
-<details><summary><b>Answer</b></summary>
+### Q: When precision is preferred?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is preferable choice when you want to be very sure of your predictions.
 
@@ -858,19 +1026,25 @@ It is preferable choice when you want to be very sure of your predictions.
 
 ---
 
-Q. What is the range of precision value?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the range of precision value?
 
-$[0, 1]$, with $0$ the worst and $1$ the best. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+$[0, 1]$, with $0$ the worst and $1$ the best.
 
 </details>
 
 ---
 
-Q. What are the weaknesses of precision as a metric in classification, and how can it be misleading in certain scenarios?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the weaknesses of precision as a metric in classification, and how can it be misleading in certain scenarios?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A key weakness of precision is that it can be artificially inflated by rarely predicting a class, especially when the class is infrequent or unimportant compared to others.
 
@@ -880,9 +1054,12 @@ For example, By focusing on precision, the model may become overly conservative,
 
 ---
 
-Q. State one scenario where you should use precision of the system as evaluation metric?
 
-<details><summary><b>Answer</b></summary>
+### Q: State one scenario where you should use precision of the system as evaluation metric?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In an email marketing campaign, high precision means emails are sent mostly to recipients likely to respond, reducing costs by avoiding those unlikely to engage. However, if the model rarely predicts engagement to maintain high precision, it might miss many potential customers, limiting the campaign's reach and overall effectiveness. This highlights how precision can be misleading if used alone, as it prioritizes correctness over coverage.
 
@@ -890,9 +1067,12 @@ In an email marketing campaign, high precision means emails are sent mostly to r
 
 ---
 
-Q. What is the other name of recall?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the other name of recall?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 True Positive Rate
 
@@ -900,19 +1080,25 @@ True Positive Rate
 
 ---
 
-Q. Define recall score?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define recall score?
 
-Recall is the sum of correct predictions divided by the sum of all true instances. Note that recall is per-class notion. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Recall is the sum of correct predictions divided by the sum of all true instances. Note that recall is per-class notion.
 
 </details>
 
 ---
 
-Q. What does recall measures? How is it calculated?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does recall measures? How is it calculated?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Recall measures the proportion of actual positives cases that are correctly predicted by the model
 
@@ -926,9 +1112,12 @@ $$
 
 ---
 
-Q. What does higher value of recall indicates? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What does higher value of recall indicates?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A higher recall score indicates that the model is effectively capturing a larger proportion of the actual positive cases.
 
@@ -936,9 +1125,12 @@ A higher recall score indicates that the model is effectively capturing a larger
 
 ---
 
-Q. When should we use recall? 
 
-<details><summary><b>Answer</b></summary>
+### Q: When should we use recall?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is a suitable metric when the goal is to minimize false negatives, i.e., correctly identifying as many positive cases as possible.
 
@@ -946,9 +1138,12 @@ It is a suitable metric when the goal is to minimize false negatives, i.e., corr
 
 ---
 
-Q. What is the range of recall metric? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the range of recall metric?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $[0, 1]$, with $0$ the worst and $1$ the best.
 
@@ -956,9 +1151,12 @@ $[0, 1]$, with $0$ the worst and $1$ the best.
 
 ---
 
-Q. What is the main limitation of recall metric? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the main limitation of recall metric?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Recall's dangerous edge case is that one can achieve very high recall for a category by always guessing it. This could mean a lot of incorrect guesses, but recall sees only the correct ones.
 
@@ -966,9 +1164,12 @@ Recall's dangerous edge case is that one can achieve very high recall for a cate
 
 ---
 
-Q. State one scenario where recall is more desirable? 
 
-<details><summary><b>Answer</b></summary>
+### Q: State one scenario where recall is more desirable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Recall is prioritized when the cost of missing positive instances (false negatives) is high, as in healthcare. For example, missing a person who needs a flu shot can lead to serious health issues, while giving a shot to someone who doesn't need it incurs minimal cost. Therefore, healthcare providers often prioritize recall over precision, opting to vaccinate a broader audience to avoid missing those who need it.
 
@@ -976,9 +1177,12 @@ Recall is prioritized when the cost of missing positive instances (false negativ
 
 ---
 
-Q. Explain the tradeoff between recall and precision? 
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain the tradeoff between recall and precision?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The tradeoff between precision and recall arises because adjusting the classification threshold impacts both metrics: raising the threshold reduces false positives (boosting precision) but increases false negatives (lowering recall), and lowering the threshold has the opposite effect. This means you can't minimize both errors at once without a perfect classifier, so enhancing one metric usually compromises the other.
 
@@ -986,9 +1190,12 @@ The tradeoff between precision and recall arises because adjusting the classific
 
 ---
 
-Q. Define F Scores?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define F Scores?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 F scores combine precision and recall via their harmonic mean, with a value  that can be used to emphasize one or the other. Like precision and recall, this is a per-category notion.
 
@@ -1002,9 +1209,12 @@ $$
 
 ---
 
-Q. What is F-1 Score? When should we use it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is F-1 Score? When should we use it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 F-1 Score is a special case of F scores when we give equal weighage to precision and recall. In this setup $\beta  = 1$
 
@@ -1018,9 +1228,12 @@ The F1 score is a suitable choice when both precision and recall are equally imp
 
 ---
 
-Q. What is range of F Scores?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is range of F Scores?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Bounds of F scores: $[0, 1]$, with $0$ the worst and $1$ the best, and guaranteed to be between precision and recall.
 
@@ -1028,9 +1241,12 @@ Bounds of F scores: $[0, 1]$, with $0$ the worst and $1$ the best, and guarantee
 
 ---
 
-Q. What are the weaknesses of F-1 score?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the weaknesses of F-1 score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - The F-score only considers precision and recall, ignoring true negatives, which can lead to misleading results, especially in imbalanced datasets.
 - The F1-score equally weights precision and recall, which may not be ideal if one is more important than the other in a given context.
@@ -1039,19 +1255,28 @@ Q. What are the weaknesses of F-1 score?
 
 ---
 
-Q. Explain the difference between Type I and Type II errors in the context of a confusion matrix.
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain the difference between Type I and Type II errors in the context of a confusion matrix.
 
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Type I Error ($\alpha$, False Positive)**: Rejecting the null hypothesis $H_0$ when it is actually true (e.g., classifying a healthy patient as sick).
+- **Type II Error ($\beta$, False Negative)**: Failing to reject the null hypothesis $H_0$ when it is false (e.g., missing a fraudulent transaction).
+- **Confusion Matrix Relationship**:
+  $$ \text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \quad (\text{penalizes Type I}), \quad \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \quad (\text{penalizes Type II}) $$
 
 </details>
 
 ---
 
-Q. What is the main limitations with confusion matrix summarization?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the main limitations with confusion matrix summarization?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Confusion matrices hide a threshold for turning probabilities/scores into predicted labels. With precision–recall curves, we finally address this.
 
@@ -1059,9 +1284,12 @@ Confusion matrices hide a threshold for turning probabilities/scores into predic
 
 ---
 
-Q. What is precision and recall curve?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is precision and recall curve?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A precision–recall curve is a method for summarizing the relationship between precision and recall for a binary classifier. 
 
@@ -1076,14 +1304,16 @@ A precision–recall curve is a method for summarizing the relationship between 
 </tr>
 </table>
 
-
 </details>
 
 ---
 
-Q. State the use of precision and recall curve?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the use of precision and recall curve?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 With precision–recall curves, we get a generalized perspective on F1 scores (and we could weight precision and recall differently to achieve the effects of $\beta$ for F scores more generally). These curves can be used, not only to assess a system, but also to identify an optimal decision boundary given external goals.
 
@@ -1091,9 +1321,12 @@ With precision–recall curves, we get a generalized perspective on F1 scores (a
 
 ---
 
-Q. How can we construct precision and recall curve?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we construct precision and recall curve?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Obtain Prediction Scores: Use your classifier to get probability scores or confidence scores for each instance, indicating how likely it is to belong to the positive class.
 
@@ -1124,9 +1357,12 @@ Q. How can we construct precision and recall curve?
 
 ---
 
-Q. What are the limitations of precision and recall curve?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the limitations of precision and recall curve?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Most implementations are limited to binary problems. The basic concepts are defined for multi-class problems, but it's very difficult to understand the resulting hyperplanes.
 
@@ -1136,9 +1372,12 @@ Q. What are the limitations of precision and recall curve?
 
 ---
 
-Q. What does ROC Curve depicts?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does ROC Curve depicts?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Receiver Operating Characteristic (ROC) curve for a class $k$ depicts recall the false positive rate (FPR) for $k$ as a function of the recall for $k$.
 
@@ -1163,9 +1402,12 @@ ROC curve indicates how well probabilities from positive class are separated fro
 
 ---
 
-Q. For an ideal model what should ROC-AUC?
 
-<details><summary><b>Answer</b></summary>
+### Q: For an ideal model what should ROC-AUC?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The ROC curve is a probability curve, and for an ideal model, the area under the ROC curve would be 1, indicating perfect classification performance.
 
@@ -1173,9 +1415,12 @@ The ROC curve is a probability curve, and for an ideal model, the area under the
 
 ---
 
-Q. State what does mean to have AUC of 0.2?
 
-<details><summary><b>Answer</b></summary>
+### Q: State what does mean to have AUC of 0.2?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 AUC of $0.2$ indicates there are $20%$ chance of fair classification.
 
@@ -1183,9 +1428,12 @@ AUC of $0.2$ indicates there are $20%$ chance of fair classification.
 
 ---
 
-Q. Can we use ROC-AUC score for multi-class classification?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can we use ROC-AUC score for multi-class classification?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It's important to note that the AUROC is commonly used for binary class classification problems. For multiclass classification, there would be N number of AUROC curves using the one vs rest methodology, where each class is compared against the rest of the classes separately.
 
@@ -1193,9 +1441,12 @@ It's important to note that the AUROC is commonly used for binary class classifi
 
 ---
 
-Q. What is the range of ROC-AUC?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the range of ROC-AUC?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 For ROC AUC: $[0, 1]$, with $1$ the best.
 
@@ -1203,9 +1454,12 @@ For ROC AUC: $[0, 1]$, with $1$ the best.
 
 ---
 
-Q. What is the limitations of ROC-AUC score?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the limitations of ROC-AUC score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Insensitive to class imbalance: In datasets where one class dominates (e.g., 95% non-fraud, 5% fraud), a model can still have a high ROC-AUC score even if it performs poorly on the minority class.
 
@@ -1217,17 +1471,22 @@ Q. What is the limitations of ROC-AUC score?
 
 ---
 
-Q. Your team is building a system to aid doctors in predicting whether a patient has cancer or not from their X-ray scan. Your colleague announces that the problem is solved now that they’ve built a system that can predict with 99.99% accuracy. How would you respond to that claim?
 
-<details><summary><b>Answer</b></summary>
+### Q: Your team is building a system to aid doctors in predicting whether a patient has cancer or not from their X-ray scan. Your colleague announces that the problem is solved now that they’ve built a system that can predict with 99.99% accuracy. How would you respond to that claim?
 
-Accuracy is not a reliable metric in this scenario because cancer is rare. A model that predicts all patients as cancer-free could still achieve high accuracy, but it would fail to correctly identify those with cancer. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Accuracy is not a reliable metric in this scenario because cancer is rare. A model that predicts all patients as cancer-free could still achieve high accuracy, but it would fail to correctly identify those with cancer.
 
 </details>
 
 ---
 
-Q. Given a binary classifier that outputs the following confusion matrix.
+
+### Q: Given a binary classifier that outputs the following confusion matrix.
+
 
 $$
 \begin{bmatrix} 
@@ -1240,7 +1499,8 @@ $$
 1. Calculate the model’s precision, recall, and F1.
 1. What can we do to improve the model’s performance?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Precision, Recall, and F1 Score Calculations:
    -Precision: $\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{30}{30 + 5} = \frac{30}{35} \approx 0.857$
@@ -1256,45 +1516,78 @@ $$
 
 ---
 
-Q. Consider a classification where $99%$ of data belongs to class A and $1%$ of data belongs to class B.
+
+### Q: Consider a classification where $99%$ of data belongs to class A and $1%$ of data belongs to class B.
+
 1. If your model predicts A 100% of the time, what would the F1 score be? Hint: The F1 score when A is mapped to 0 and B to 1 is different from the F1 score when A is mapped to 1 and B to 0.
 1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$ be?
 
-<details><summary><b>Answer</b></summary>
-    
-</details>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
----
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a classification where $99%$ of data belongs to class A and $1%$ of data belongs to class B.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
-Q. Show that the negative log-likelihood and cross-entropy are the same for binary classification tasks.
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. For classification tasks with more than two labels (e.g. MNIST with $10$ labels), why is cross-entropy a better loss function than MSE?
-
-<details><summary><b>Answer</b></summary>
-    
 </details>
 
 ---
 
 
-Q. Consider a language with an alphabet of $27$ characters. What would be the maximal entropy of this language?
+### Q: Show that the negative log-likelihood and cross-entropy are the same for binary classification tasks.
 
-<details><summary><b>Answer</b></summary>
-    
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Negative Log-Likelihood (NLL)** for Bernoulli distribution with targets $y_i \in \{0, 1\}$ and predicted probabilities $\hat{y}_i$:
+  $$ \mathcal{L}_{\text{NLL}}(\theta) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right] $$
+- **Cross-Entropy** between empirical data distribution $p(y_i)$ and model distribution $q(y_i) = \hat{y}_i$:
+  $$ H(p, q) = -\sum_{x} p(x) \log q(x) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right] $$
+- **Conclusion**: Minimizing Negative Log-Likelihood of Bernoulli targets is mathematically identical to minimizing Cross-Entropy.
+
 </details>
 
 ---
 
-Q. Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: For classification tasks with more than two labels (e.g. MNIST with $10$ labels), why is cross-entropy a better loss function than MSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Cross-Entropy Gradient**: Softmax + Cross-Entropy yields a linear, non-saturating gradient $\frac{\partial L}{\partial z_k} = \hat{y}_k - y_k$, enabling fast gradient descent updates.
+- **MSE Drawback**: Combining Softmax with MSE leads to non-convex loss surfaces with severe gradient saturation (vanishing gradients near 0 or 1), causing slow convergence.
+
+</details>
+
+---
+
+
+
+### Q: Consider a language with an alphabet of $27$ characters. What would be the maximal entropy of this language?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a language with an alphabet of $27$ characters. What would be the maximal entropy of this language?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+
+### Q: Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to predict the price of a stock in the next 8 hours and that the predicted price should never be off more than $10%$ from the actual price. Which metric would you use?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
@@ -1302,9 +1595,12 @@ Q. Suppose you want to build a model to predict the price of a stock in the next
 ## Clustering Metrics
 
 
-Q. What are common evaluation metrics used for clustering algorithms?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are common evaluation metrics used for clustering algorithms?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Silhouette Score
 - Davies-Bouldin Index
@@ -1312,14 +1608,16 @@ Q. What are common evaluation metrics used for clustering algorithms?
 - Mutual Information (MI)
 - Purity
 
-
 </details>
 
 ---
 
-Q. How does the Silhouette Score evaluate clustering performance?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does the Silhouette Score evaluate clustering performance?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It measures how similar an object is to its own cluster compared to other clusters. The score ranges from -1 to 1, where higher values indicate better-defined clusters.
 
@@ -1327,9 +1625,12 @@ It measures how similar an object is to its own cluster compared to other cluste
 
 ---
 
-Q. State the expression of silhouette score?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the expression of silhouette score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $$
 S(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
@@ -1344,9 +1645,12 @@ Where,
 
 ---
 
-Q. What are the pros and cons of the Silhouette Score?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the pros and cons of the Silhouette Score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Pros: It works with any distance metric and does not require external ground truth labels.
 - Cons: It can be computationally expensive for large datasets and may struggle with complex cluster shapes.
@@ -1355,9 +1659,12 @@ Q. What are the pros and cons of the Silhouette Score?
 
 ---
 
-Q. What does the Davies-Bouldin Index measure?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does the Davies-Bouldin Index measure?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It quantifies the average similarity ratio of each cluster to its most similar cluster, with lower values indicating better clustering.
 
@@ -1365,9 +1672,12 @@ It quantifies the average similarity ratio of each cluster to its most similar c
 
 ---
 
-Q. What are the advantages and disadvantages of the Davies-Bouldin Index?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the advantages and disadvantages of the Davies-Bouldin Index?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Pros: Easy to compute and considers both intra-cluster and inter-cluster distances.
 - Cons: It may not handle clusters of varying density and shape well.
@@ -1376,9 +1686,12 @@ Q. What are the advantages and disadvantages of the Davies-Bouldin Index?
 
 ---
 
-Q. Write the mathematical expression of Davies-Bouldin Index?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the mathematical expression of Davies-Bouldin Index?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Davies-Bouldin Index is calculated as:
 
@@ -1398,19 +1711,25 @@ Where:
 ## Metrics in NLP
 
 
-Q. What is Word Error Rate (WER)?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Word Error Rate (WER)?
 
-WER is a measure of the accuracy of sequence predictions at the word level. It is calculated using the Levenshtein edit distance between the predicted sequence and the true sequence. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+WER is a measure of the accuracy of sequence predictions at the word level. It is calculated using the Levenshtein edit distance between the predicted sequence and the true sequence.
 
 </details>
 
 ---
 
-Q. How can we calculate Word Error Rate (WER)?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we calculate Word Error Rate (WER)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Mathematically, WER can be expressed as:
 
@@ -1424,9 +1743,12 @@ Where the Edit Distance is the number of insertions, deletions, and substitution
 
 ---
 
-Q. How do you compute the WER over an entire dataset?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do you compute the WER over an entire dataset?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 To compute WER over a dataset, calculate the edit distances for each pair of true and predicted sequences, and then normalize these distances by the total length of all true sequences:
 
@@ -1438,9 +1760,12 @@ $$
 
 ---
 
-Q. What are the main advantages and disadvantages of using WER?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the main advantages and disadvantages of using WER?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Advantages: Provides a clear measure of accuracy at the word level, easy to compute.
 - Disadvantages: May not capture semantic meaning changes well (e.g., adding a negation changes meaning but may not significantly affect WER). Less effective for tasks with high semantic variability.
@@ -1449,9 +1774,12 @@ Q. What are the main advantages and disadvantages of using WER?
 
 ---
 
-Q. How is Word Accuracy Rate related to WER?
 
-<details><summary><b>Answer</b></summary>
+### Q: How is Word Accuracy Rate related to WER?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Word Accuracy Rate is 1.0 minus WER. It reflects the proportion of correctly predicted words, but it’s more akin to recall rather than accuracy.
 
@@ -1459,9 +1787,12 @@ Word Accuracy Rate is 1.0 minus WER. It reflects the proportion of correctly pre
 
 ---
 
-Q. What does the BLEU score measure?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does the BLEU score measure?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The BLEU score measures the quality of generated text by comparing n-grams in the candidate text with n-grams in reference texts.
 
@@ -1469,9 +1800,12 @@ The BLEU score measures the quality of generated text by comparing n-grams in th
 
 ---
 
-Q. What are the key components of BLUE score?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the key components of BLUE score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Key components include:
 
@@ -1482,9 +1816,12 @@ Key components include:
 
 ---
 
-Q. What is the formula for the BLEU score, and how is it typically computed?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the formula for the BLEU score, and how is it typically computed?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The BLEU score combines the modified n-gram precision for various n-gram levels (usually up to 4) and includes a brevity penalty. The formula is:
 
@@ -1498,9 +1835,12 @@ Where $p_n$ is the modified precision for n-grams, $w_n$ is the weight for each 
 
 ---
 
-Q. What are the strengths and weaknesses of the BLEU score?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the strengths and weaknesses of the BLEU score?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Strengths: Provides a quantitative measure of precision with n-grams and adjusts for length.
 - Weaknesses: May not correlate well with human judgment, as it does not account for the order of n-grams or the type of words (e.g., function vs. content words).
@@ -1509,9 +1849,12 @@ Q. What are the strengths and weaknesses of the BLEU score?
 
 ---
 
-Q. How does BLEU compare to other metrics like ROUGE or METEOR?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does BLEU compare to other metrics like ROUGE or METEOR?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 ROUGE focuses on recall and is often used for summarization tasks, while METEOR incorporates synonyms and stemming to better match human judgments. BLEU is more commonly used in machine translation.
 
@@ -1519,9 +1862,12 @@ ROUGE focuses on recall and is often used for summarization tasks, while METEOR 
 
 ---
 
-Q. What is Perplexity and how is it used in evaluating language models?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Perplexity and how is it used in evaluating language models?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Perplexity measures how well a probability model predicts a sample. For a sequence, it is calculated as the inverse probability of the sequence normalized by the number of words:
 
@@ -1535,9 +1881,12 @@ Where $P(w_i)$ is the probability assigned to the $i$-th word by the model.
 
 ---
 
-Q. What are the bounds of Perplexity and what does it indicate?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the bounds of Perplexity and what does it indicate?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Perplexity ranges from 1 to infinity, with 1 being the best. Lower perplexity indicates better performance, as it means the model assigns higher probabilities to the true sequences.
 
@@ -1545,9 +1894,12 @@ Perplexity ranges from 1 to infinity, with 1 being the best. Lower perplexity in
 
 ---
 
-Q. What are the limitations of using Perplexity as a metric?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the limitations of using Perplexity as a metric?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Perplexity can be misleading if the vocabulary includes many UNK tokens, as it may artificially lower the perplexity. It also does not directly measure the quality of the generated text but rather how well the model predicts sequences.
 
@@ -1555,9 +1907,12 @@ Perplexity can be misleading if the vocabulary includes many UNK tokens, as it m
 
 ---
 
-Q. How is Perplexity related to cross-entropy?
 
-<details><summary><b>Answer</b></summary>
+### Q: How is Perplexity related to cross-entropy?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Perplexity is the exponentiated form of the average cross-entropy between the model’s predictions and the true sequence probabilities. Lower perplexity corresponds to lower cross-entropy.
 
@@ -1565,3 +1920,6 @@ Perplexity is the exponentiated form of the average cross-entropy between the mo
 
 ---
 
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

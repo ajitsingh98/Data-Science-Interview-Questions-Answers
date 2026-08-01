@@ -11,13 +11,16 @@ Contents
 
 ## Vector
 
-Q. Define following terms
+
+### Q: Define following terms
+
   1. Scalers
   2. Vectors
   3. Matrices
   4. Tensors
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Scalers : A scaler is just a single number. example - $1, 2, 3$ etc
 2. Vectors : A vector is an array of numbers. It is like identifying points in the space, with each element giving the coordinate along a different axis.
@@ -49,9 +52,12 @@ $$
 
 ---
 
-Q. What is broadcasting in matrices in context of deep learning?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is broadcasting in matrices in context of deep learning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In deep learning we allow the addition of vector and matrix, yielding another matrix: $C = A+b$, where $C_{i, j} = A_{i, j}+b_j$. The vector $b$ is being added to each row of the matrix. The implicit copying of $b$ to many location is called broadcasting.
 
@@ -59,11 +65,14 @@ In deep learning we allow the addition of vector and matrix, yielding another ma
 
 ---
 
-Q. Dot product
+
+### Q: Dot product
+
   1. What’s the geometric interpretation of the dot product of two vectors?
   1. Given a vector $u$ , find vector $v$  of unit length such that the dot product of $u$  and $v$  is maximum.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Let $\vec{A}= ⟨a_1....a_k⟩$ and $\vec{B}= ⟨b_1....b_k⟩$  be k-dimensional vectors. The dot product of $\vec{A}$ and $\vec{B}$ , denoted $\vec{A} \cdot \vec{B}$ is a number, defined as follows
 
@@ -100,11 +109,14 @@ This vector $ v $ will have a unit length and the dot product $ u \cdot v $ will
 
 ---
 
-Q. Outer product
+
+### Q: Outer product
+
   1. Given two vectors $a=[3,2,1]$  and $b=[−1,0,1]$. Calculate the outer product $a^Tb$ ?
   1. Give an example of how the outer product can be useful in ML.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. resultant product will be a $3 \times 3$ matrix, which can be given as follows:
 
@@ -118,14 +130,16 @@ $$
 
 2. One useful application of the outer product in machine learning is in the computation of covariance matrices, where the outer product is used to calculate the covariance of different feature vectors. For instance, the covariance matrix can be estimated as the average outer product of the centered data vectors (i.e., data vectors from which the mean has been subtracted). This is crucial for algorithms that rely on data distribution, such as Principal Component Analysis (PCA) and many types of clustering algorithms.
 
-
 </details>
 
 ---
 
-Q. What does it mean for two vectors to be linearly independent?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does it mean for two vectors to be linearly independent?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Two vectors are said to be **linearly independent** if no vector in the set can be written as a linear combination of the others. In simpler terms, neither of the vectors can be expressed as a scalar multiple or a combination involving scalar multiples of the other vector.
 
@@ -133,23 +147,32 @@ For two vectors $\vec{a}$ and $\vec{b}$, they are linearly independent if the on
 
 $$c_1 \vec{a} + c_2 \vec{b} = \vec{0}$$
 
-is $c_1 = 0$ and $c_2 = 0$, where $c_1$ and $c_2$ are scalars and $\vec{0}$ is the zero vector. 
+is $c_1 = 0$ and $c_2 = 0$, where $c_1$ and $c_2$ are scalars and $\vec{0}$ is the zero vector.
 
 </details>
 
 ---
 
-Q. Given two sets of vectors $A=a_1,a_2,a_3,...,a_n$  and $B=b_1,b_2,b_3,...,b_m$. How do you check that they share the same basis?
 
-<details><summary><b>Answer</b></summary>
+### Q: Given two sets of vectors $A=a_1,a_2,a_3,...,a_n$  and $B=b_1,b_2,b_3,...,b_m$. How do you check that they share the same basis?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Basis Check**: Two sets of linearly independent vectors $A = \{a_1, \dots, a_n\}$ and $B = \{b_1, \dots, b_m\}$ span the same subspace if and only if $n = m$ and every vector $a_i \in A$ can be expressed as a linear combination of vectors in $B$ (and vice versa).
+- **Matrix Rank Method**: Form matrices $M_A \in \mathbb{R}^{d \times n}$ and $M_B \in \mathbb{R}^{d \times m}$. The vector sets share the same basis if $\text{rank}(M_A) = \text{rank}(M_B) = \text{rank}([M_A \mid M_B]) = n = m$.
 
 </details>
 
 ---
 
-Q. How can we inspect if two vectors are orthogonal?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we inspect if two vectors are orthogonal?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Two vectors are orthogonal to each other if $\vec{a} \cdot \vec{b} = 0$. Note that they both should have non-zero norm i.e any of the two should not be a zero vector.
 
@@ -157,9 +180,12 @@ Two vectors are orthogonal to each other if $\vec{a} \cdot \vec{b} = 0$. Note th
 
 ---
 
-Q. How to check if two vectors are orthonormal?
 
-<details><summary><b>Answer</b></summary>
+### Q: How to check if two vectors are orthonormal?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Two vectors are orthonormal to each other if they are orthogonal and both have unit norm.
 
@@ -167,10 +193,13 @@ Two vectors are orthonormal to each other if they are orthogonal and both have u
 
 ---
 
-Q. Given $n$  vectors, each of $d$  dimensions. What is the dimension of their span?
+
+### Q: Given $n$  vectors, each of $d$  dimensions. What is the dimension of their span?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $$
 \text{Dimension of the span} = \min(n, d)
@@ -180,11 +209,14 @@ $$
 
 ---
 
-Q. Norms and metrics
+
+### Q: Norms and metrics
+
 1. What's the norm? What is  $L_0,L_1,L_2,L_{norm}$?
 1. How do norms and metrics differ? Given a norm, make a metric. Given a metric, can we make a norm?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. A **norm** on a vector space is a function that assigns a non-negative length or size to vectors, except for the zero vector, which is assigned a length of zero. Norms are denoted by $\|\cdot\|$ and must satisfy the following properties for any vectors $x, y$ and any scalar $a$:
   - **Non-negativity**: $\|x\| \geq 0$ and $\|x\| = 0$ if and only if $x = 0$.
@@ -223,9 +255,12 @@ If a metric satisfies these conditions, it can be associated with a norm, where 
 
 ---
 
-Q. Explain transpose operation on matrices?
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain transpose operation on matrices?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The transpose of a matrix is mirror image of the matrix across a diagonal line, called as main diagonal. We denote the transpose of a matrix $\mathbf{A}$ as $\mathbf{A^T}$. 
 
@@ -239,9 +274,12 @@ $$
 
 ---
 
-Q. Define the condition under which we can multiply two matrices?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define the condition under which we can multiply two matrices?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Suppose we have two matrices $\mathbf{A}$ and $\mathbf{B}$, In order to define the product of $\mathbf{A}$ and $\mathbf{B}$, $\mathbf{A}$ must have same number of columns as $\mathbf{B}$ has rows. 
 
@@ -257,14 +295,16 @@ $$
 C_{i, j} = \sum_k A_{i, k}B_{k, j}
 $$
 
-
 </details>
 
 ---
 
-Q. What is the Hadamard product?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the Hadamard product?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Hadamard product, also known as the element-wise product, is an operation that takes two matrices of the same dimensions and produces another matrix of the same dimensions, where each element is the product of the corresponding elements of the input matrices. 
 
@@ -280,9 +320,12 @@ where $ c_{ij} = a_{ij} \cdot b_{ij} $.
 
 --- 
 
-Q. Where do we use Hadamard product?
 
-<details><summary><b>Answer</b></summary>
+### Q: Where do we use Hadamard product?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Hadamard product is commonly used in various applications such as signal processing, neural networks, and other fields where element-wise operations are needed.
 
@@ -290,9 +333,12 @@ The Hadamard product is commonly used in various applications such as signal pro
 
 --- 
 
-Q. How is the Hadamard product different from the dot product?
 
-<details><summary><b>Answer</b></summary>
+### Q: How is the Hadamard product different from the dot product?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Hadamard product and dot product are distinct operations:
 
@@ -327,9 +373,12 @@ $$
 
 --- 
 
-Q. Write the properties of matrix product operations?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the properties of matrix product operations?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Matrix multiplication is distributive 
 
@@ -353,9 +402,12 @@ $$
 
 ---
 
-Q. Is dot product between two vectors are commutative?
 
-<details><summary><b>Answer</b></summary>
+### Q: Is dot product between two vectors are commutative?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes
 
@@ -365,9 +417,12 @@ $$x^{T}y = y^{T}x$$
 
 ---
 
-Q. What is an identity matrix?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is an identity matrix?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix.
 
@@ -381,9 +436,12 @@ The structure of identity matrix is simple, all the entries along with main diag
 
 ---
 
-Q. Define matrix inverse?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define matrix inverse?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The matrix inverse of $\mathbf{A}$ is denoted as $\mathbf{A^{-1}}$, and is defined as the matrix such that
 
@@ -395,9 +453,12 @@ $$
 
 ---
 
-Q. How to check if a matrix is a singular matrix?
 
-<details><summary><b>Answer</b></summary>
+### Q: How to check if a matrix is a singular matrix?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Key characteristics of a singular matrix:
 
@@ -410,9 +471,12 @@ Key characteristics of a singular matrix:
 
 ---
 
-Q. Under what conditions inverse of a matrix exists?
 
-<details><summary><b>Answer</b></summary>
+### Q: Under what conditions inverse of a matrix exists?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The inverse of a matrix $\mathbf{A}$ exists if:
 
@@ -425,9 +489,12 @@ The inverse of a matrix $\mathbf{A}$ exists if:
 
 ---
 
-Q. What is rank of matrix and how to determine it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is rank of matrix and how to determine it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The rank of a matrix is defined as the maximum number of linearly independent rows or columns in the matrix. It represents the dimension of the row space or column space of the matrix.
 
@@ -437,9 +504,12 @@ We can determine rank via performing row operations to transform the matrix into
 
 ---
 
-Q. What is a full rank matrix??
 
-<details><summary><b>Answer</b></summary>
+### Q: What is a full rank matrix??
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 If the rank is equal to the smallest dimension of the matrix (i.e., the number of rows or columns), the matrix is said to have full rank.
 
@@ -447,9 +517,12 @@ If the rank is equal to the smallest dimension of the matrix (i.e., the number o
 
 ---
 
-Q. How to check if matrix is full rank?
 
-<details><summary><b>Answer</b></summary>
+### Q: How to check if matrix is full rank?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 For square matrices, compute the determinant. If that is non-zero, the matrix is of full rank. 
 
@@ -460,9 +533,12 @@ If the matrix $\mathbf{A}$ is $n$ by $m$, assume that $m≤n$ and compute all de
 ---
 
 
-Q. Why do we say that matrices are linear transformations?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why do we say that matrices are linear transformations?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Matrices are considered linear transformations because they map vectors from one space to another while preserving the operations of vector addition and scalar multiplication, which are the core properties of linearity.
 
@@ -493,9 +569,12 @@ $$
 ---
 
 
-Q. Do all matrices have an inverse? Is the inverse of a matrix always unique?
 
-<details><summary><b>Answer</b></summary>
+### Q: Do all matrices have an inverse? Is the inverse of a matrix always unique?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Not all matrices have an inverse; a matrix must be square and non-singular to have its inverse.
 
@@ -517,19 +596,25 @@ Thus, the inverse is unique.
 
 ---
 
-Q. What does norm of a vector represents?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does norm of a vector represents?
 
-The norm of a vector $x$ measures the distance from the origin to the point $x$. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+The norm of a vector $x$ measures the distance from the origin to the point $x$.
 
 </details>
 
 ---
 
-Q. Explain Euclidean norm?
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain Euclidean norm?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is the $L^2$ norm, with $p=2$, which is simply the euclidean distance from the origin to the $x$. It is denoted by $||x||_2$ or just $||x||$.
 
@@ -543,20 +628,25 @@ $$
 
 ---
 
-Q. When we should use $L^1$ norm instead of $L^2$ norm?
 
-<details><summary><b>Answer</b></summary>
+### Q: When we should use $L^1$ norm instead of $L^2$ norm?
 
 
-$L^1$ norm is commonly used in machine learning when the difference between zero and non-zero elements is important. 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+$L^1$ norm is commonly used in machine learning when the difference between zero and non-zero elements is important.
 
 </details>
 
 ---
 
-Q. What does max norm and unit norm depicts?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does max norm and unit norm depicts?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Max Norm*
 
@@ -580,9 +670,12 @@ $$
 
 ---
 
-Q. How to measure size of a matrix?
 
-<details><summary><b>Answer</b></summary>
+### Q: How to measure size of a matrix?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use Frobenius norm, which is like $L^2$ norm of a vector.
 
@@ -594,9 +687,12 @@ $$
 
 ---
 
-Q. Can you write the dot product of two vectors in terms of their norms?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can you write the dot product of two vectors in terms of their norms?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, the dot product of two vectors $\mathbf{x}$ and $\mathbf{y}$ can be expressed in terms of their norms. If $\mathbf{x}$ and $\mathbf{y}$ are vectors, their dot product $\mathbf{x} \cdot \mathbf{y}$ is given by:
 
@@ -616,13 +712,16 @@ where $\|\mathbf{x}\|_2$ and $\|\mathbf{y}\|_2$ are the Euclidean norms (or magn
 
 ---
 
-Q. Define following type of matrices:
+
+### Q: Define following type of matrices:
+
 
 - Diagonal Matrix
 - Symmetric Matrix
 - Orthogonal Matrix
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Diagonal Matrix*
 
@@ -654,9 +753,12 @@ $$
 
 ---
 
-Q. What is Eigen decomposition?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Eigen decomposition?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Eigen decomposition is a matrix factorization method where a matrix is decomposed into its eigenvalues and corresponding eigenvectors.
 
@@ -664,9 +766,12 @@ Eigen decomposition is a matrix factorization method where a matrix is decompose
 
 ---
 
-Q. Define eigenvector and eigenvalues?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define eigenvector and eigenvalues?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 An eigenvector of a square matrix $\mathbf{A}$ is a nonzero vector $\mathbf{v}$ that remains invariant in direction when transformed by $\mathbf{A}$—only its magnitude changes. This can be mathematically expressed as:
 
@@ -680,9 +785,12 @@ In this equation, $\lambda$ is the eigenvalue associated with the eigenvector $\
 
 ---
 
-Q. Express the eigen decomposition of square matrix $\mathbf{A}$ ?
 
-<details><summary><b>Answer</b></summary>
+### Q: Express the eigen decomposition of square matrix $\mathbf{A}$ ?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Suppose the matrix $\mathbf{A}$ has $n$ linearly independent eigenvectors ${v^{(1)},..,v^{(n)}}$ with corresponding eigenvalues ${\lambda_1,..,\lambda_n}$
 
@@ -706,9 +814,12 @@ $$
 
 ---
 
-Q. What is the significant to eigen-decomposition?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the significant to eigen-decomposition?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Eigendecomposition of a matrix tells use many useful facts about the matrix.
 
@@ -722,9 +833,12 @@ Eigendecomposition of a matrix tells use many useful facts about the matrix.
 
 ---
 
-Q. Do non-square matrices have eigenvalues?
 
-<details><summary><b>Answer</b></summary>
+### Q: Do non-square matrices have eigenvalues?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Eigenvalues and eigenvectors of a matrix $\mathbf{A}$ help identify subspaces that remain invariant under the linear transformation represented by $\mathbf{A}$. However, if $\mathbf{A}$ is non-square, meaning $\mathbf{A} : \mathbb{R}^m \to \mathbb{R}^n$ with $m \neq n$, the equation $\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$ is not applicable because $\mathbf{A}\mathbf{v}$ will not necessarily lie in $\mathbb{R}^m$.
 
@@ -732,9 +846,12 @@ Eigenvalues and eigenvectors of a matrix $\mathbf{A}$ help identify subspaces th
 
 ---
 
-Q. What is the benefit of using Singular Value Decomposition(SVD) over eigenvalue decomposition?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using Singular Value Decomposition(SVD) over eigenvalue decomposition?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Eigenvalue decomposition focuses on diagonalizing a square matrix, which may not always be possible.
 - SVD provides an orthogonal factorization that works for any matrix and is often used to analyze the matrix structure, solve least squares problems, and more.
@@ -743,9 +860,12 @@ Q. What is the benefit of using Singular Value Decomposition(SVD) over eigenvalu
 
 ---
 
-Q. What is Singular Value Decomposition (SVD)?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Singular Value Decomposition (SVD)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Singular Value Decomposition (SVD) is a technique used to factorize a matrix into its constituent singular vectors and singular values.
 
@@ -767,9 +887,12 @@ SVD provides a way to decompose a matrix into components that reveal important p
 
 ---
 
-Q. What is the relationship between eigen-value decomposition and SVD? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the relationship between eigen-value decomposition and SVD?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can interpret the SVD of $\mathbf{A}$ in terms of the eigen value decomposition of $\mathbf{A}$
 
@@ -781,9 +904,12 @@ We can interpret the SVD of $\mathbf{A}$ in terms of the eigen value decompositi
 
 ---
 
-Q. What is trace of a matrix? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What is trace of a matrix?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The trace operator gives the sum of all the diagonal entries of a matrix.
 
@@ -791,14 +917,16 @@ $$
 Tr(A) = \sum_i{A_{i, i}}
 $$
 
-
 </details>
 
 ---
 
-Q. Write the main properties of trace operator? 
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the main properties of trace operator?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Frobenius norm of a matrix:
 
@@ -822,19 +950,25 @@ $$
 
 ---
 
-Q. What does the determinant of a matrix represent?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does the determinant of a matrix represent?
 
-The determinant of a square matrix denoted by $\text{det}(\mathbf{A})$, is a function that maps matrices to real scalers. The determinant is equal to the product of all the eigenvalues of the matrix. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+The determinant of a square matrix denoted by $\text{det}(\mathbf{A})$, is a function that maps matrices to real scalers. The determinant is equal to the product of all the eigenvalues of the matrix.
 
 </details>
 
 ---
 
-Q. What does the absolute value of the determinant depicts?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does the absolute value of the determinant depicts?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The absolute value of the determinant of a matrix provides a measure of the scale factor by which the matrix expands or contracts space.
 
@@ -848,9 +982,12 @@ The absolute value of the determinant of a matrix provides a measure of the scal
 ---
 
 
-Q. What happens to the determinant of a matrix if we multiply one of its rows by a scalar  $t×R$ ?
 
-<details><summary><b>Answer</b></summary>
+### Q: What happens to the determinant of a matrix if we multiply one of its rows by a scalar  $t×R$ ?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 If you multiply one of the rows of a matrix $\mathbf{A}$ by a scalar $t$, the determinant of the matrix is scaled by the same factor $t$. Specifically:
 
@@ -868,9 +1005,12 @@ This property reflects that the determinant is a multilinear function of the row
 ---
 
 
-Q. A $4×4$  matrix has four eigenvalues $3, 3, 2, −1$. What can we say about the trace and the determinant of this matrix?
 
-<details><summary><b>Answer</b></summary>
+### Q: A $4×4$  matrix has four eigenvalues $3, 3, 2, −1$. What can we say about the trace and the determinant of this matrix?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. **Trace**: The trace of a matrix is the sum of its eigenvalues. Therefore, for this matrix:
 
@@ -889,7 +1029,9 @@ $$
 ---
 
 
-Q. Given the following matrix:
+
+### Q: Given the following matrix:
+
 
 $$
 \begin{bmatrix}
@@ -901,7 +1043,8 @@ $$
 
 Without explicitly using the equation for calculating determinants, what can we say about this matrix’s determinant?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can write the above matrix into its row echelon form:
 
@@ -982,9 +1125,12 @@ The presence of a row of zeros in the row echelon form indicates that the matrix
 ---
 
 
-Q. What’s the difference between the covariance matrix $A^TA$  and the Gram matrix $AA^T$?
 
-<details><summary><b>Answer</b></summary>
+### Q: What’s the difference between the covariance matrix $A^TA$  and the Gram matrix $AA^T$?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - **Dimensions**:
   -  $A^T A$ is $n \times n$ (columns of $A$).
@@ -998,18 +1144,20 @@ Q. What’s the difference between the covariance matrix $A^TA$  and the Gram ma
   - $A^T A$ is used to understand the variance and covariance of data columns.
   - $A A^T$ is used to understand the similarity and inner product of data rows.
 
-
 </details>
 
 ---
 
-Q. Given $A∈R^{n×m}$  and $b∈R^n$ 
+
+### Q: Given $A∈R^{n×m}$  and $b∈R^n$
+
 1. Find $x$ such that: $Ax=b$.
 1. When does this have a unique solution?
 1. Why is it when $A$ has more columns than rows, $Ax=b$ has multiple solutions?
 1. Given a matrix $A$ with no inverse. How would you solve the equation  $Ax=b$? What is the pseudo inverse and how to calculate it?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. To find $x$ such that $A x = b$ where $A \in \mathbb{R}^{n \times m}$ and $b \in \mathbb{R}^n$, you generally need to solve a linear system. The method used depends on the properties of $A$:
 
@@ -1034,7 +1182,7 @@ $$
 
 3. The system $A x = b$ has infinitely many solutions because there are free variables associated with the null space. This leads to a solution space that forms an affine subspace in \(\mathbb{R}^m\), where each solution can be expressed as $x = x_0 + \text{null}(A)$, where $x_0$ is a particular solution and \(\text{null}(A)\) represents the null space of $A$.
 
-4. 
+4.
 
 </details>
 
@@ -1042,12 +1190,20 @@ $$
 ---
 
 
-Q. Given a very large symmetric matrix $A$ that doesn’t fit in memory, say $A∈R^{1M×1M}$  and a function $f$ that can quickly compute $f(x)=Ax$ for $x∈R1M$. Find the unit vector $x$ so that $x^TAx$  is minimal.
 
-<details><summary><b>Answer</b></summary>
+### Q: Given a very large symmetric matrix $A$ that doesn’t fit in memory, say $A∈R^{1M×1M}$  and a function $f$ that can quickly compute $f(x)=Ax$ for $x∈R1M$. Find the unit vector $x$ so that $x^TAx$  is minimal.
 
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Power Iteration / Lanczos Algorithm**: To find the unit vector $x \in \mathbb{R}^{1\text{M}}$ minimizing Rayleigh quotient $x^T A x$, we want the eigenvector corresponding to the smallest (most negative) eigenvalue $\lambda_{\min}$.
+- **Method**: Shift matrix $B = \lambda_{\max} I - A$ using Power Iteration with matrix-vector product oracle $f(x) = Ax$ to compute $\lambda_{\max}$ and $\lambda_{\min}$ via Lanczos algorithm without storing matrix $A$ in memory.
 
 </details>
 
 ---
+
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

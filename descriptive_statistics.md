@@ -15,9 +15,12 @@ Contents
 
 ## Basics
 
-Q. What do you mean by Data?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by Data?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Data are pieces of information about individuals organized into variables.
 
@@ -25,9 +28,12 @@ Data are pieces of information about individuals organized into variables.
 
 ---
 
-Q. Define dataset.
 
-<details><summary><b>Answer</b></summary>
+### Q: Define dataset.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A dataset is a set of data identified with particular circumstances. Datasets are typically displayed in tables, in which rows represent individuals and columns represent variables.
 
@@ -35,9 +41,12 @@ A dataset is a set of data identified with particular circumstances. Datasets ar
 
 ---
 
-Q. What are the two main types of variables?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the two main types of variables?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Categorical/qualitative variables - It take category or label values and place an individual into one of several groups.
 - Quantitative variables - It takes numerical values and represent some kind of measurement.
@@ -48,9 +57,12 @@ Q. What are the two main types of variables?
 
 ## Examining Distribution - Univariate
 
-Q. How can we summarize distribution of categorical variable?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we summarize distribution of categorical variable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The distribution of a categorical variable is summarized using:
 - Graphical display: pie chart or bar chart
@@ -60,9 +72,12 @@ The distribution of a categorical variable is summarized using:
 
 ---
 
-Q. State some methods for visualizing the numerical summaries of categorical data?
 
-<details><summary><b>Answer</b></summary>
+### Q: State some methods for visualizing the numerical summaries of categorical data?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Pie Chart
 - Bar graph 
@@ -72,9 +87,12 @@ Q. State some methods for visualizing the numerical summaries of categorical dat
 
 ---
 
-Q. State the difference between pie chart and bar chart?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the difference between pie chart and bar chart?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Pie charts are used to show the proportion or percentage of categories as parts of a whole. They illustrate how each category contributes to the total.
 - Bar charts are used to compare quantities across different categories. They show the magnitude of each category in a visual format.
@@ -83,9 +101,12 @@ Q. State the difference between pie chart and bar chart?
 
 ---
 
-Q. What are graphical methods to visualize the distribution of a quantitative variable?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are graphical methods to visualize the distribution of a quantitative variable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Histogram
 - Stemplot
@@ -95,9 +116,12 @@ Q. What are graphical methods to visualize the distribution of a quantitative va
 
 ---
 
-Q. Define histogram?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define histogram?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The histogram is a graphical display of the distribution of a quantitative variable.
 
@@ -105,9 +129,12 @@ The histogram is a graphical display of the distribution of a quantitative varia
 
 ---
 
-Q. Write the steps of plotting histogram?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the steps of plotting histogram?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Collect and Organize Data: Sort the data into intervals or bins. Each bin will represent a range of values.
 - Determine Bin Intervals: Decide the width of each bin, which depends on the range and distribution of your data. This step often involves balancing between having too many narrow bins or too few wide bins.
@@ -120,9 +147,12 @@ Q. Write the steps of plotting histogram?
 
 ---
 
-Q. How can we numerically summarize a distribution represented by histogram?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we numerically summarize a distribution represented by histogram?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can using following features of the histogram to summarize it
 
@@ -136,9 +166,12 @@ We can using following features of the histogram to summarize it
 
 ---
 
-Q. What insights can be gained from examining the shape of a histogram?
 
-<details><summary><b>Answer</b></summary>
+### Q: What insights can be gained from examining the shape of a histogram?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Symmetry/skewness of the distribution.
 - Peakedness (modality) — The number of peaks (modes) the distribution has.
@@ -147,9 +180,12 @@ Q. What insights can be gained from examining the shape of a histogram?
 
 ---
 
-Q. What is the difference between a unimodal, a bimodal and a multimodal histogram?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the difference between a unimodal, a bimodal and a multimodal histogram?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Unimodal histogram has only one peak or mode.
 - A bimodal histogram has two distinct peaks or modes. 
@@ -170,9 +206,12 @@ Q. What is the difference between a unimodal, a bimodal and a multimodal histogr
 
 ---
 
-Q. State the modality of an uniform distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the modality of an uniform distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Uniform distributions has no modes i.e no values around which observations are concentrated.
 
@@ -180,9 +219,12 @@ Uniform distributions has no modes i.e no values around which observations are c
 
 ---
 
-Q. Under what conditions does a distribution become skewed to the right?
 
-<details><summary><b>Answer</b></summary>
+### Q: Under what conditions does a distribution become skewed to the right?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A distribution is said to be skewed right (or positively skewed) when the right tail (the higher value side) of the distribution is longer or fatter than the left tail.
 
@@ -190,9 +232,12 @@ A distribution is said to be skewed right (or positively skewed) when the right 
 
 ---
 
-Q. What does right skewed histogram indicates about the dataset?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does right skewed histogram indicates about the dataset?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It indicates that the bulk of the data values are clustered towards the lower end of the range, with a few extreme values stretching out towards the higher end.
 
@@ -200,9 +245,12 @@ It indicates that the bulk of the data values are clustered towards the lower en
 
 ---
 
-Q. Can you draw a right skewed histogram?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can you draw a right skewed histogram?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <table align='center'>
 <tr>
@@ -215,14 +263,16 @@ Q. Can you draw a right skewed histogram?
 </tr>
 </table>
 
-
 </details>
 
 ---
 
-Q. State the relationship between mean, median and mode in case of skewed right distributions?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the relationship between mean, median and mode in case of skewed right distributions?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 For a right-skewed distribution, the general order is:
 
@@ -232,9 +282,12 @@ $$\text{Mode} < \text{Median} < \text{Mean}$$
 
 ---
 
-Q. State a real-life scenario of a distribution which is skewed right?
 
-<details><summary><b>Answer</b></summary>
+### Q: State a real-life scenario of a distribution which is skewed right?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Salary of workers across industries. Most people earn in the low/medium range of salaries, with a few exceptions (CEOs, professional athletes etc.) that are distributed along a large range (long "tail") of higher values.
 
@@ -242,9 +295,12 @@ Salary of workers across industries. Most people earn in the low/medium range of
 
 ---
 
-Q. Under what conditions does a distribution become skewed to the left?
 
-<details><summary><b>Answer</b></summary>
+### Q: Under what conditions does a distribution become skewed to the left?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A distribution is said to be skewed left (or negatively skewed) when the left tail (the lower value side) of the distribution is longer or fatter than the right tail.
 
@@ -252,9 +308,12 @@ A distribution is said to be skewed left (or negatively skewed) when the left ta
 
 ---
 
-Q. What does left skewed histogram indicates about the dataset?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does left skewed histogram indicates about the dataset?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It indicates that the bulk of the data values are clustered towards the higher end of the range, with a few extreme values stretching out towards the lower end i.e outliers are on lower end of the distribution.
 
@@ -262,9 +321,12 @@ It indicates that the bulk of the data values are clustered towards the higher e
 
 ---
 
-Q. Can you draw a left skewed histogram?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can you draw a left skewed histogram?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <table align='center'>
 <tr>
@@ -281,9 +343,12 @@ Q. Can you draw a left skewed histogram?
 
 ---
 
-Q. State the relationship between mean, median and mode in case of skewed left distributions?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the relationship between mean, median and mode in case of skewed left distributions?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 For a left-skewed distribution, the general order is:
 
@@ -293,9 +358,12 @@ $$\text{Mode} > \text{Median} > \text{Mean}$$
 
 ---
 
-Q. State the relationship between mean, median and mode in case of symmetric distributions?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the relationship between mean, median and mode in case of symmetric distributions?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 For a left-skewed distribution, the general order is:
 
@@ -305,9 +373,12 @@ $$\text{Mode} ~ \text{Median} ~ \text{Mean}$$
 
 ---
 
-Q. State a real-life scenario of a distribution which is skewed left?
 
-<details><summary><b>Answer</b></summary>
+### Q: State a real-life scenario of a distribution which is skewed left?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 An example of a real life variable that has a skewed left distribution is age of death from natural causes (heart disease, cancer etc.). Most such deaths happen at older ages, with fewer cases happening at younger ages.
 
@@ -315,9 +386,12 @@ An example of a real life variable that has a skewed left distribution is age of
 
 ---
 
-Q. What is a stemplot? What are benefits of using it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is a stemplot? What are benefits of using it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The stemplot is a simple but useful visual display of quantitative data distribution.
 
@@ -330,9 +404,12 @@ Benefits of using it:
 
 ---
 
-Q. State the main numerical measures of center of a quantitative variable distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the main numerical measures of center of a quantitative variable distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The three main numerical measures for the center of a distribution are:
 - Mode
@@ -343,9 +420,12 @@ The three main numerical measures for the center of a distribution are:
 
 ---
 
-Q. What is mode of a distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is mode of a distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Mode is the most commonly occurring value in a distribution.
 
@@ -354,9 +434,12 @@ Mode is the most commonly occurring value in a distribution.
 ---
 
 
-Q. What is mean of a distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is mean of a distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The mean is the average of a set of observations (i.e., the sum of the observations divided by the number of observations). If the n observations are $x_1, x_2,..,x_n$ their mean, which we denote by $\bar{x}$
 
@@ -368,9 +451,12 @@ $$
 
 ---
 
-Q. What is median of a distribution? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What is median of a distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The median M is the midpoint of the distribution. It is the number such that half of the observations fall above, and half fall below.
 
@@ -378,24 +464,12 @@ The median M is the midpoint of the distribution. It is the number such that hal
 
 ---
 
-Q. How can we calculate median of a distribution? 
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we calculate median of a distribution?
 
-To find the median:
 
-- Order the data from smallest to largest.
-- Consider whether $n$, the number of observations, is even or odd.
-   - If $n$ is odd, the median $M$ is the center observation in the ordered list. This observation is the one "sitting" in the $(n + 1)/2$ spot in the ordered list.
-   - If $n$ is even, the median $M$ is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the $n/2$ and $n/2 + 1$ spots in the ordered list.
-
-</details>
-
----
-
-Q. How can we calculate median of a distribution? 
-
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 To find the median:
 
@@ -408,9 +482,30 @@ To find the median:
 
 ---
 
-Q. State the main difference between mean and median?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we calculate median of a distribution? (Part 2)
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+To find the median:
+
+- Order the data from smallest to largest.
+- Consider whether $n$, the number of observations, is even or odd.
+   - If $n$ is odd, the median $M$ is the center observation in the ordered list. This observation is the one "sitting" in the $(n + 1)/2$ spot in the ordered list.
+   - If $n$ is even, the median $M$ is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the $n/2$ and $n/2 + 1$ spots in the ordered list.
+
+</details>
+
+---
+
+
+### Q: State the main difference between mean and median?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The mean is very sensitive to outliers (because it factors in their magnitude), while the median is resistant to outliers.
 
@@ -418,9 +513,12 @@ The mean is very sensitive to outliers (because it factors in their magnitude), 
 
 ---
 
-Q. How can we decide which measure should we choose as center of distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we decide which measure should we choose as center of distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The mean is an appropriate measure of center only for symmetric distributions with no outliers. In all other cases, the median should be used to describe the center of the distribution.
 
@@ -428,9 +526,12 @@ The mean is an appropriate measure of center only for symmetric distributions wi
 
 ---
 
-Q. What are commonly used measures of spread?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are commonly used measures of spread?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Range
 - Inter-quartile range (IQR)
@@ -440,9 +541,12 @@ Q. What are commonly used measures of spread?
 
 ---
 
-Q. What do you mean by range of a distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by range of a distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The range covered by the data is the most intuitive measure of variability. The range is exactly the distance between the smallest data point (min) and the largest one (Max).
 
@@ -454,9 +558,12 @@ $$
 
 ---
 
-Q. What is IQR? How can we calculate it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is IQR? How can we calculate it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 IQR measures the variability of a distribution by giving us the range covered by the middle $50%$ of the data.
 
@@ -499,9 +606,12 @@ $$
 
 ---
 
-Q. Can we use IQR to detect outliers?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can we use IQR to detect outliers?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, we can use IQR as basis for a rule of thumb for identifying outliers. 
 
@@ -525,9 +635,12 @@ It is $1.5(IQR)$ criteria for outliers. An observation is considered a suspected
 
 ---
 
-Q. How to deal with outliers in the data?
 
-<details><summary><b>Answer</b></summary>
+### Q: How to deal with outliers in the data?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can handle outliers with following approach:
 - Identifying the outlier
@@ -538,9 +651,12 @@ We can handle outliers with following approach:
 
 ---
 
-Q. What are the five-number summary statistics of a distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the five-number summary statistics of a distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The five-number summary of a distribution consists of the median (M), the two quartiles (Q1, Q3) and the extremes (min, Max).
 
@@ -548,9 +664,12 @@ The five-number summary of a distribution consists of the median (M), the two qu
 
 ---
 
-Q. What is a box-plot?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is a box-plot?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The boxplot graphically represents the distribution of a quantitative variable by visually displaying the five-number summary and any observation that was classified as a suspected outlier using the *1.5(IQR)* criterion.
 
@@ -569,9 +688,12 @@ The boxplot graphically represents the distribution of a quantitative variable b
 
 ---
 
-Q. State one benefit of using box-plot?
 
-<details><summary><b>Answer</b></summary>
+### Q: State one benefit of using box-plot?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Boxplots are most useful when presented side-by-side to compare and contrast distributions from two or more groups.
 
@@ -579,9 +701,12 @@ Boxplots are most useful when presented side-by-side to compare and contrast dis
 
 ---
 
-Q. What does the standard deviation represent in a distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: What does the standard deviation represent in a distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 standard deviation quantifies the spread of a distribution by measuring how far the observations are from their mean $\bar{x}$. The standard deviation gives the average (or typical distance) between a data point and the mean $\bar{x}$.
 
@@ -596,9 +721,12 @@ where:
 
 ---
 
-Q. What is the benefit of using IQR over SD for measure of spread?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using IQR over SD for measure of spread?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The SD is strongly influenced by outliers in the data.
 
@@ -606,9 +734,12 @@ The SD is strongly influenced by outliers in the data.
 
 ---
 
-Q. Given the array $[1,5,3,2,4,4]$, find its mean, median, variance, and standard deviation.
 
-<details><summary><b>Answer</b></summary>
+### Q: Given the array $[1,5,3,2,4,4]$, find its mean, median, variance, and standard deviation.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Given:
 
@@ -649,9 +780,12 @@ $$\text{\sigma} = 1.2124$$
 
 ---
 
-Q. How do we determine which numerical summaries to use for describing a distribution?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do we determine which numerical summaries to use for describing a distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Use $\bar{x}$ (the mean) and the standard deviation $\sigma$ as measures of center and spread only for reasonably symmetric distributions with no outliers.
 
@@ -661,9 +795,12 @@ Q. How do we determine which numerical summaries to use for describing a distrib
 
 ---
 
-Q. State standard deviation rule?
 
-<details><summary><b>Answer</b></summary>
+### Q: State standard deviation rule?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 For distributions having bell shaped (also known as the normal shape), the following rule applies:
 - Approximately $68%$ of the observations fall within 1 standard deviation of the mean.
@@ -687,9 +824,12 @@ For distributions having bell shaped (also known as the normal shape), the follo
 
 ## Examining Relationships - Multivariate
 
-Q. Define explanatory and response variable?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define explanatory and response variable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - The explanatory variable (also commonly referred to as the independent variable) — the variable that claims to explain, predict, or affect the response
 - The response variable (also commonly referred to as the dependent variable) — the outcome of the study.
@@ -698,9 +838,12 @@ Q. Define explanatory and response variable?
 
 --- 
 
-Q. How can we examine the relationship between a categorical explanatory variable and quantitative response variable?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we examine the relationship between a categorical explanatory variable and quantitative response variable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use following techniques:
 - Side by side boxplots
@@ -711,9 +854,12 @@ We can use following techniques:
 
 ---
 
-Q. How can we examine the relationship between a categorical explanatory variable and categorical response variable?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we examine the relationship between a categorical explanatory variable and categorical response variable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The relationship between two categorical variables is summarized using
 - Data display: Two-way table, supplemented by
@@ -723,9 +869,12 @@ The relationship between two categorical variables is summarized using
 
 ---
 
-Q. How can we examine the relationship between a numerical explanatory variable and numerical response variable?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we examine the relationship between a numerical explanatory variable and numerical response variable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The relationship between two quantitative variables is visually displayed using the scatterplot, where each point represents an individual. We always plot the explanatory variable on the horizontal X axis, and the response variable on the vertical Y axis.
 
@@ -744,20 +893,25 @@ The relationship between two quantitative variables is visually displayed using 
 
 ---
 
-Q. What is Simpsons Paradox?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Simpsons Paradox?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Simpsons Paradox is a statistical phenomenon that occurs when you combine subgroups into one group. The process of aggregating data can cause the apparent direction and strength of the relationship between two variables to change.
-
 
 </details>
 
 ---
 
-Q. Why Does Simpson’s Paradox Occur?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why Does Simpson’s Paradox Occur?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Simpson’s Paradox occurs because a third variable can affect the relationship between a pair of variables.
 
@@ -770,3 +924,7 @@ Simpson’s Paradox occurs because a third variable can affect the relationship 
 ## Sampling
 
 ## Design Studies
+
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

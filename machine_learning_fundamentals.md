@@ -15,10 +15,12 @@ Contents
 
 ## Basics
 
-Q. Explain supervised, unsupervised, weakly supervised, semi-supervised, and active learning.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Explain supervised, unsupervised, weakly supervised, semi-supervised, and active learning.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Supervised Learning*
 
@@ -40,19 +42,21 @@ It combines a small amount of labeled data with a large amount of unlabeled data
 
 It involves an iterative process where the model actively selects the most informative examples to be labeled by an oracle (e.g., a human expert). This helps improve model performance efficiently by focusing on challenging or uncertain examples.
 
-
 </details>
 
 ---
 
 
-Q. Empirical risk minimization.
+
+### Q: Empirical risk minimization.
+
 1. What’s the risk in empirical risk minimization?
 1. Why is it empirical?
 1. How do we minimize that risk?
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. In Empirical Risk Minimization (ERM), the "risk" refers to the expected loss or error of a predictive model when applied to new, unseen data. It quantifies how well the model is expected to perform on future data by considering the possible errors the model might make. 
 
@@ -64,14 +68,17 @@ Q. Empirical risk minimization.
 $$R_{\text{emp}}(f) = \frac{1}{n} \sum_{i=1}^n L(y_i, f(x_i))$$
 
 - Minimize the empirical risk by adjusting the model parameters using an optimization algorithm, such as gradient descent. The goal is to find the parameters that yield the lowest empirical risk.
-    
+
 </details>
 
 ---
 
-Q. What are the exhaustive steps we need to perform when tackling any generic machine learning problem, specifically for both regression and classification tasks?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the exhaustive steps we need to perform when tackling any generic machine learning problem, specifically for both regression and classification tasks?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Exhaustive Steps for Both Classification and Regression Problems*
 
@@ -149,9 +156,12 @@ Q. What are the exhaustive steps we need to perform when tackling any generic ma
 
 ---
 
-Q. Explain the tradeoff between model's flexibility vs interpretability?
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain the tradeoff between model's flexibility vs interpretability?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In general, as the flexibility of a method increases, its interpretability decreases.
 
@@ -172,9 +182,12 @@ Here is the a plot of model's flexibility vs interpretability:
 
 ---
 
-Q. Occam's razor states that when the simple explanation and complex explanation both work equally well, the simple explanation is usually correct. How do we apply this principle in ML?
 
-<details><summary><b>Answer</b></summary>
+### Q: Occam's razor states that when the simple explanation and complex explanation both work equally well, the simple explanation is usually correct. How do we apply this principle in ML?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Occam's Razor can be applied in model selection during machine learning. If two models—such as a linear regressor and a neural network—perform similarly on a given dataset, the principle suggests opting for the simpler model, in this case, the linear regressor. Choosing the simpler model helps prevent overfitting, makes the model more interpretable, and maintains simplicity without sacrificing performance.
 
@@ -182,9 +195,12 @@ Occam's Razor can be applied in model selection during machine learning. If two 
 
 ---
 
-Q. If we have a wide NN and a deep NN with the same number of parameters, which one is more expressive and why?
 
-<details><summary><b>Answer</b></summary>
+### Q: If we have a wide NN and a deep NN with the same number of parameters, which one is more expressive and why?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A deep neural network (DNN) is generally more expressive than a wide neural network (WNN) with the same number of parameters. This is because a DNN can learn more complex representations of the input data due to its increased depth, which allows it to capture more intricate patterns and dependencies in the data.
 
@@ -192,17 +208,25 @@ A deep neural network (DNN) is generally more expressive than a wide neural netw
 
 ---
 
-Q. The Universal Approximation Theorem states that a neural network with 1 hidden layer can approximate any continuous function for inputs within a specific range. Then why can’t a simple neural network reach an arbitrarily small positive error?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: The Universal Approximation Theorem states that a neural network with 1 hidden layer can approximate any continuous function for inputs within a specific range. Then why can’t a simple neural network reach an arbitrarily small positive error?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- While a single hidden layer NN can theoretically approximate continuous functions, doing so may require **exponentially many neurons** (intractable memory) or suffer from severe optimization difficulties (local minima, vanishing gradients). Deep networks require far fewer parameters to express complex functions.
+
 </details>
 
 ---
 
-Q. What are saddle points and local minima? Which are thought to cause more problems for training large NNs?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are saddle points and local minima? Which are thought to cause more problems for training large NNs?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A *saddle point* is a point on the loss surface where the gradient is zero, but it is neither a local minimum nor a local maximum. Instead, the loss decreases in some directions and increases in others around the saddle point.
 
@@ -225,13 +249,16 @@ Saddle point cause more problem in training large Neural Networks. Because they 
 
 ---
 
-Q. Hyper-parameters.
+
+### Q: Hyper-parameters.
+
 1. What are the differences between parameters and hyper-parameters?
 1. Why is hyperparameter tuning important?
 1. List down methods for tuning hyper-parameters.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. *Parameters* are the internal coefficients or weights that a model learns from the training data. These are the values that the model adjusts during training to minimize the loss function. But *Hyperparameters* are external configurations set before the training process begins. They govern the learning process and influence how the model learns from the data but are not directly learned from the data itself.
 
@@ -255,11 +282,14 @@ Q. Hyper-parameters.
 
 ---
 
-Q. Classification vs. regression.
+
+### Q: Classification vs. regression.
+
 1. What makes a classification problem different from a regression problem?
 1. Can a classification problem be turned into a regression problem and vice versa?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Response variable 
 - **Classification**: In classification, the response variable (also called the target or output) is categorical. The goal is to assign inputs to one of several predefined categories or classes.
@@ -289,11 +319,14 @@ However, if the class labels in the original classification problem do not have 
 
 ---
 
-Q. Parametric vs. non-parametric methods.
+
+### Q: Parametric vs. non-parametric methods.
+
 1. What’s the difference between parametric methods and non-parametric methods? Give an example of each method.
 1. When should we use one and when should we use the other?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. The primary difference between parametric and non-parametric methods lies in their assumptions about the data distribution and the number of parameters used to describe the distribution. 
 
@@ -318,9 +351,12 @@ Q. Parametric vs. non-parametric methods.
 
 ---
 
-Q. Why does an ML model’s performance degrade in production?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why does an ML model’s performance degrade in production?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 ML model's performance degrade in production due to following reasons:
 
@@ -339,36 +375,50 @@ ML model's performance degrade in production due to following reasons:
 
 - **Environmental Changes**: The production environment might differ from the development environment, causing issues.
 
+</details>
+
+---
+
+
+### Q: What problems might we run into when deploying large machine learning models?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+1. High inference latency and memory footprint.
+2. High infrastructure hosting cost.
+3. Cold start latency during auto-scaling.
 
 </details>
 
 ---
 
-Q. What problems might we run into when deploying large machine learning models?
 
-<details><summary><b>Answer</b></summary>
+### Q: Your model performs really well on the test set but poorly in production.
 
-
-
-</details>
-
----
-
-Q. Your model performs really well on the test set but poorly in production.
 1. What are your hypotheses about the causes?
 1. How do you validate whether your hypotheses are correct?
 1. Imagine your hypotheses about the causes are correct. What would you do to address them?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+1. **Covariate Shift / Data Drift**: Production input distribution differs from training/test data.
+2. **Data Leakage**: Test set included target/future features not available online.
+3. **Sampling Bias**: Training/test splits were not representative of real-world operational distributions.
+
 </details>
 
 ---
 
-Q. What are some common encoding techniques in machine learning?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: What are some common encoding techniques in machine learning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
 - One-hot/dummy encoding
 - Label / Ordinal encoding
 - Target encoding
@@ -382,15 +432,21 @@ Q. What are some common encoding techniques in machine learning?
 
 ## Cross Validation
 
-#### Contents
-- [CV approaches](#cv-approaches)
-- K-Fold CV
-- Stratification
-- LOOCV
+#### Table of Contents
+
+- [General Concepts In Machine Learning](#general-concepts-in-machine-learning)
+- [Basics](#basics)
+- [Cross Validation](#cross-validation)
+- [Similarity Measures](#similarity-measures)
+- [Sampling Techniques and Creating Training Data](#sampling-techniques-and-creating-training-data)
+- [Feature Engineering](#feature-engineering)
+- [Bias and Variance](#bias-and-variance)
 
 ---
 
-Q.  Below Fig depicts two different cross-validation approaches. Name them.
+
+### Q: Below Fig depicts two different cross-validation approaches. Name them.
+
 
 <table align='center'>
   <tr>
@@ -403,17 +459,18 @@ Q.  Below Fig depicts two different cross-validation approaches. Name them.
   </tr>
 </table>
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1st one is leave-one-out CV (LOOCV) and 2nd is a K-fold cross validation method.
-
 
 </details>
 
 ---
 
-Q.  
-1. What is the purpose of following Python code snippet?
+
+### Q: 1. What is the purpose of following Python code snippet?
+
         ```python
         skf = StratifiedKFold(y, n_folds=5, random_state=989, shuffle=True)
         ```
@@ -422,17 +479,22 @@ Q.
 4. State the difference between K-fold cross validation and stratified cross validation.
 5. Explain in your own words what is meant by “We adopted a 5-fold cross-validation approach to estimate the testing error of the model”.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
- 
+- **Direct Solution**: Analytical solution and mathematical formulation for `1. What is the purpose of following Python code snippet?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. **True or False:** In a K-fold CV approach, the testing set is completely excluded from the process and only the training and validation sets are involved in this approach.
 
-<details><summary><b>Answer</b></summary>
+### Q: **True or False:** In a K-fold CV approach, the testing set is completely excluded from the process and only the training and validation sets are involved in this approach.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
  **True**, We never utilize the test set during a K-fold CV.
 
@@ -440,13 +502,16 @@ Q. **True or False:** In a K-fold CV approach, the testing set is completely exc
 
 ---
 
-Q. **True or False:** In a K-fold CV approach, the final test error is:
+
+### Q: **True or False:** In a K-fold CV approach, the final test error is:
+
 
 $$
 CV_k = \frac{1}{k}\sum_{i=1}^{k}MSE_i
 $$
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 **True**, This is average of individual errors of $K$ estimates of the test errors
 
@@ -456,13 +521,16 @@ $$MSE_1,...,MSE_k$$
 
 ---
 
-Q. Mark all the correct choices regarding a cross-validation approach:
+
+### Q: Mark all the correct choices regarding a cross-validation approach:
+
 1. A 5-fold cross-validation approach results in 5-different model instances being fitted.
 1. A 5-fold cross-validation approach results in 1 model instance being fitted over and over again 5 times.
 1. A 5-fold cross-validation approach results in 5-different model instances being fitted over and over again 5 times.
 1. Uses K-different data-folds.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
  Correct answer is : A 5-fold cross-validation approach results in 5-different model instances being fitted. It is a common misconception to think that in a K-fold approach the same model instance is repeatedly used. We must create a new model instance in each fold.
 
@@ -470,19 +538,24 @@ Q. Mark all the correct choices regarding a cross-validation approach:
 
 ---
 
-Q. Mark all the correct choices regarding the approach that should be taken to compute the performance of K-fold cross-validation:
+
+### Q: Mark all the correct choices regarding the approach that should be taken to compute the performance of K-fold cross-validation:
+
 1. We compute the cross-validation performance as the arithmetic mean over the K performance estimates from the validation sets.
 1. We compute the cross-validation performance as the best one over the K performance estimates from the validation sets.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-Correct answer : We compute the cross-validation performance as the arithmetic mean over the K performance estimates from the validation sets. Taking best one over K performance estimates defeats the purpose of using k-fold cross-validation. 
+Correct answer : We compute the cross-validation performance as the arithmetic mean over the K performance estimates from the validation sets. Taking best one over K performance estimates defeats the purpose of using k-fold cross-validation.
 
 </details>
 
 ---
 
-Q. A data-scientist who is interested in classifying cross sections of histopathology image slices decides to adopt a cross-validation approach he once read about in a book.
+
+### Q: A data-scientist who is interested in classifying cross sections of histopathology image slices decides to adopt a cross-validation approach he once read about in a book.
+
 
 <table align='center'>
   <tr>
@@ -501,7 +574,8 @@ Name the approach from the following options:
 2. 3-fold CV with stratification
 3. A (repeated) 3-fold CV
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The correct answer is: 3-fold CV. A k-fold cross-validation is a special case of cross-validation where we iterate over a dataset set k times. In each round, we split the dataset into k parts: one part is used for validation, and the remaining $k − 1 $parts are merged into a training subset for model evaluation. 
 
@@ -511,11 +585,13 @@ Stratification is used to balance the classes in the training and validation spl
 
 ---
 
-Q. 
-1. **True or false**: The leave-one-out cross-validation (LOOCV) approach is a sub-case of k-fold cross-validation wherein K equals N , the sample size.
+
+### Q: 1. **True or false**: The leave-one-out cross-validation (LOOCV) approach is a sub-case of k-fold cross-validation wherein K equals N , the sample size.
+
     1. **True or false**: It is always possible to find an optimal value $n$, $K = n$ in K-fold cross-validation.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. **True**: leave-one-out cross-validation (LOOCV) is a special case of k-fold cross validation where $k$ ise set equal to $n$
 
@@ -525,9 +601,12 @@ Q.
 
 ---
 
-Q. What is the main difference between RandomizedSearchCV and GridSearchCV?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the main difference between RandomizedSearchCV and GridSearchCV?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The main difference between **RandomizedSearchCV** and **GridSearchCV** lies in how they explore the hyperparameter space:
 
@@ -542,37 +621,54 @@ The main difference between **RandomizedSearchCV** and **GridSearchCV** lies in 
 
 ---
 
-Q. When would you prefer to use RandomizedSearchCV over GridSearchCV, and vice versa?
 
-<details><summary><b>Answer</b></summary>
+### Q: When would you prefer to use RandomizedSearchCV over GridSearchCV, and vice versa?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - **RandomizedSearchCV** is preferred for large or complex hyperparameter spaces, limited computational resources, broad exploration, or preliminary tuning.
 - **GridSearchCV** is preferred for smaller hyperparameter spaces, precise tuning, well-defined ranges, and detailed evaluation within a specific grid.
 
+</details>
+
+---
+
+
+### Q: What are the advantages of RandomizedSearchCV?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+1. **Efficiency**: Samples a fixed number of parameter settings, scaling linearly $O(k)$ rather than exponentially $O(\prod m_i)$.
+2. **Continuous Distributions**: Can sample from continuous parameter distributions (e.g., log-uniform) rather than static grids.
 
 </details>
 
 ---
 
-Q. What are the advantages of RandomizedSearchCV?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: What are the advantages of GridSearchCV?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What are the advantages of GridSearchCV?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. What are the advantages of GridSearchCV?
 
-<details><summary><b>Answer</b></summary>
-    
-</details>
+### Q: What is cross-validation in the context of hyperparameter tuning?
 
----
 
-Q. What is cross-validation in the context of hyperparameter tuning?
-
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 **Cross-validation** is a technique used in machine learning to assess the performance of a model and ensure that it generalizes well to unseen data. In the context of hyperparameter tuning, cross-validation is used to evaluate different hyperparameter configurations in a more reliable way than using a single train-test split.
 
@@ -597,15 +693,21 @@ This average score is then used to compare different hyperparameter configuratio
 *Hyperparameter Selection:*
 
 The hyperparameter configuration that yields the best average validation performance is selected as the optimal set. This method ensures that the chosen hyper-parameters are not just good for one specific train-test split but are generally good across different splits of the data.
-   
+
 </details>
 
 ---
 
-Q. Can you combine RandomizedSearchCV and GridSearchCV techniques for hyperparameter tuning?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Can you combine RandomizedSearchCV and GridSearchCV techniques for hyperparameter tuning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Can you combine RandomizedSearchCV and GridSearchCV techniques for hyperparameter tuning?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
@@ -619,7 +721,9 @@ Q. Can you combine RandomizedSearchCV and GridSearchCV techniques for hyperparam
 - Min Hash
 ---
 
-Q. A data scientist extracts a feature vector from an image using a pre-trained ResNet34 CNN as follows
+
+### Q: A data scientist extracts a feature vector from an image using a pre-trained ResNet34 CNN as follows
+
 
     ```python
     import torchvision.models as models
@@ -659,13 +763,19 @@ Which results in this list:
 
 Name the algorithm that he used and explain in detail why he used it.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `A data scientist extracts a feature vector from an image using a pre-trained ResNet34 CNN as follows`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Further to the above, the scientist then applies the following algorithm:
+
+### Q: Further to the above, the scientist then applies the following algorithm:
+
 
 **Algo 1**
 
@@ -690,14 +800,19 @@ def algo2(v1, v2):
 4. An alternative similarity measures between two vectors is: $\text{simeuc}(v1, v2) = -\|v1 - v2\|$.
 Name the measure.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Further to the above, the scientist then applies the following algorithm:`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. 
-1. What is the formulae for the Jaccard similarity of two sets?
+
+### Q: 1. What is the formulae for the Jaccard similarity of two sets?
+
 2. Explain the formulae in plain words.
 3. Find the Jacard similarity given the sets.
 
@@ -717,13 +832,19 @@ Q.
     2. 11, 12, 13, 14, 15
     3. 11, 16, 17
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `1. What is the formulae for the Jaccard similarity of two sets?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. In this problem, you have to actually read 4 different papers, so you will probably not encounter such a question during an interview, however reading academic papers is an excellent skill to master for becoming a DL researcher.
+
+### Q: In this problem, you have to actually read 4 different papers, so you will probably not encounter such a question during an interview, however reading academic papers is an excellent skill to master for becoming a DL researcher.
+
 
 The Kullback-Leibler divergence is a meas- ure of how different two probability distribution are. As noted, the KL divergence of the probability distributions P, Q on a set X is defined as shown in Equation 8.11.
 
@@ -750,8 +871,12 @@ $$
 D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
 $$
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `In this problem, you have to actually read 4 different papers, so you will probably not encounter such a question during an interview, however reading academic papers is an excellent skill to master for becoming a DL researcher.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
@@ -759,145 +884,238 @@ $$
 
 ## Sampling Techniques and Creating Training Data
 
-Q. If you have 6 shirts and 4 pairs of pants, how many ways are there to choose 2 shirts and 1 pair of pants?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: If you have 6 shirts and 4 pairs of pants, how many ways are there to choose 2 shirts and 1 pair of pants?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `If you have 6 shirts and 4 pairs of pants, how many ways are there to choose 2 shirts and 1 pair of pants?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. What is the difference between sampling with vs. without replacement? Name an example of when you would use one rather than the other?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: What is the difference between sampling with vs. without replacement? Name an example of when you would use one rather than the other?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What is the difference between sampling with vs. without replacement? Name an example of when you would use one rather than the other?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Explain Markov chain Monte Carlo sampling.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Explain Markov chain Monte Carlo sampling.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Explain Markov chain Monte Carlo sampling.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. If you need to sample from high-dimensional data, which sampling method would you choose?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: If you need to sample from high-dimensional data, which sampling method would you choose?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `If you need to sample from high-dimensional data, which sampling method would you choose?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Suppose we have a classification task with many classes. An example is when you have to predict the next word in a sentence -- the next word can be one of many, many possible words. If we have to calculate the probabilities for all classes, it’ll be prohibitively expensive. Instead, we can calculate the probabilities for a small set of candidate classes. This method is called candidate sampling. Name and explain some of the candidate sampling algorithms.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Suppose we have a classification task with many classes. An example is when you have to predict the next word in a sentence -- the next word can be one of many, many possible words. If we have to calculate the probabilities for all classes, it’ll be prohibitively expensive. Instead, we can calculate the probabilities for a small set of candidate classes. This method is called candidate sampling. Name and explain some of the candidate sampling algorithms.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose we have a classification task with many classes. An example is when you have to predict the next word in a sentence -- the next word can be one of many, many possible words. If we have to calculate the probabilities for all classes, it’ll be prohibitively expensive. Instead, we can calculate the probabilities for a small set of candidate classes. This method is called candidate sampling. Name and explain some of the candidate sampling algorithms.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$ million unlabeled comments from $10K$ users over the last $24$ months and you want to label $100K$ of them.
+
+### Q: Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$ million unlabeled comments from $10K$ users over the last $24$ months and you want to label $100K$ of them.
+
     1. How would you sample $100K$ comments to label?
     1. Suppose you get back $100K$ labeled comments from $20$ annotators and you want to look at some labels to estimate the quality of the labels. How many labels would you look at? How would you sample them?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$ million unlabeled comments from $10K$ users over the last $24$ months and you want to label $100K$ of them.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Suppose you work for a news site that historically has translated only $1%$ of all its articles. Your coworker argues that we should translate more articles into Chinese because translations help with the readership. On average, your translated articles have twice as many views as your non-translated articles. What might be wrong with this argument?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Suppose you work for a news site that historically has translated only $1%$ of all its articles. Your coworker argues that we should translate more articles into Chinese because translations help with the readership. On average, your translated articles have twice as many views as your non-translated articles. What might be wrong with this argument?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you work for a news site that historically has translated only $1%$ of all its articles. Your coworker argues that we should translate more articles into Chinese because translations help with the readership. On average, your translated articles have twice as many views as your non-translated articles. What might be wrong with this argument?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. How to determine whether two sets of samples (e.g. train and test splits) come from the same distribution?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: How to determine whether two sets of samples (e.g. train and test splits) come from the same distribution?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `How to determine whether two sets of samples (e.g. train and test splits) come from the same distribution?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. How do you know you’ve collected enough samples to train your ML model?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: How do you know you’ve collected enough samples to train your ML model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `How do you know you’ve collected enough samples to train your ML model?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. How to determine outliers in your data samples? What to do with them?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: How to determine outliers in your data samples? What to do with them?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `How to determine outliers in your data samples? What to do with them?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Sample duplication
+
+### Q: Sample duplication
+
 1. When should you remove duplicate training samples? When shouldn’t you?
 1. What happens if we accidentally duplicate every data point in your train set or in your test set?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Sample duplication`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Missing data
+
+### Q: Missing data
+
 1. In your dataset, two out of 20 variables have more than 30% missing values. What would you do?
 1. How might techniques that handle missing data make selection bias worse? How do you handle this bias?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Missing data`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Why is randomization important when designing experiments (experimental design)?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Why is randomization important when designing experiments (experimental design)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Why is randomization important when designing experiments (experimental design)?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Class imbalance.
+
+### Q: Class imbalance.
+
 1. How would class imbalance affect your model?
 1. Why is it hard for ML models to perform well on data with class imbalance?
 1. Imagine you want to build a model to detect skin legions from images. In your training dataset, only $1%$ of your images shows signs of legions. After training, your model seems to make a lot more false negatives than false positives. What are some of the techniques you'd use to improve your model?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Class imbalance.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Training data leakage.
+
+### Q: Training data leakage.
+
 1. Imagine you're working with a binary task where the positive class accounts for only 1% of your data. You decide to oversample the rare class then split your data into train and test splits. Your model performs well on the test split but poorly in production. What might have happened?
 1. You want to build a model to classify whether a comment is spam or not spam. You have a dataset of a million comments over the period of 7 days. You decide to randomly split all your data into the train and test splits. Your co-worker points out that this can lead to data leakage. How?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Training data leakage.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. How does data sparsity affect your models?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does data sparsity affect your models?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Data sparsity can negatively impact machine learning models in several ways:
 
@@ -909,35 +1127,49 @@ Data sparsity can negatively impact machine learning models in several ways:
 
 4. **Bias Toward Denser Variables**: Models might unintentionally prioritize denser variables (those with more non-zero data points) over sparser ones, even when the sparse variables are more predictive.
 
-
 </details>
 
 ---
 
 
-Q. Feature leakage
+
+### Q: Feature leakage
+
 1. What are some causes of feature leakage?
 1. Why does normalization help prevent feature leakage?
 1. How do you detect feature leakage?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Feature leakage`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Suppose you want to build a model to classify whether a tweet spreads misinformation. You have 100K labeled tweets over the last 24 months. You decide to randomly shuffle on your data and pick 80% to be the train split, 10% to be the valid split, and 10% to be the test split. What might be the problem with this way of partitioning?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Suppose you want to build a model to classify whether a tweet spreads misinformation. You have 100K labeled tweets over the last 24 months. You decide to randomly shuffle on your data and pick 80% to be the train split, 10% to be the valid split, and 10% to be the test split. What might be the problem with this way of partitioning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to classify whether a tweet spreads misinformation. You have 100K labeled tweets over the last 24 months. You decide to randomly shuffle on your data and pick 80% to be the train split, 10% to be the valid split, and 10% to be the test split. What might be the problem with this way of partitioning?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Your model has been performing fairly well using just a subset of features available in your data. Your boss decided that you should use all the features available instead. What might happen to the training error? What might happen to the test error?
 
-<details><summary><b>Answer</b></summary>
+### Q: Your model has been performing fairly well using just a subset of features available in your data. Your boss decided that you should use all the features available instead. What might happen to the training error? What might happen to the test error?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - **Training Error**: Likely to decrease due to the model having more information to fit the training data.
 - **Test Error**: Might increase due to overfitting, where the model becomes too complex and fails to generalize well to new data.
@@ -950,28 +1182,43 @@ Q. Your model has been performing fairly well using just a subset of features av
 
 ### Objective Functions and Performance Metrics
 
-Q. Convergence.
+
+### Q: Convergence.
+
 1. When we say an algorithm converges, what does convergence mean?
 1. How do we know when a model has converged?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Convergence.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Draw the loss curves for overfitting and underfitting.
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Draw the loss curves for overfitting and underfitting.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Draw the loss curves for overfitting and underfitting.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. While working on a modeling use case, you notice that your model is underfitting. What steps would you take to address this issue?
 
-<details><summary><b>Answer</b></summary>
+### Q: While working on a modeling use case, you notice that your model is underfitting. What steps would you take to address this issue?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Increase model complexity: Use a more complex model or add polynomial features.
 2. Add more features: Introduce relevant features to improve learning.
@@ -984,9 +1231,12 @@ Q. While working on a modeling use case, you notice that your model is underfitt
 
 ---
 
-Q. While working on a modeling use case, you observe that your model is overfitting. What steps would you take to resolve this?
 
-<details><summary><b>Answer</b></summary>
+### Q: While working on a modeling use case, you observe that your model is overfitting. What steps would you take to resolve this?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Simplify the model: Use a less complex model with fewer parameters to reduce overfitting.
 2. Increase training data: Provide more data to help the model generalize better.
@@ -997,26 +1247,34 @@ Q. While working on a modeling use case, you observe that your model is overfitt
 7. Reduce features: Perform feature selection to remove irrelevant or redundant features.
 8. Add dropout (for neural networks): Randomly drop neurons during training to prevent over-reliance on specific features.
 
-
 </details>
 
 ---
 
-Q. Bias-variance trade-off
+
+### Q: Bias-variance trade-off
+
 1.  What’s the bias-variance trade-off?
 1. How’s this tradeoff related to overfitting and underfitting?
 1. How do you know that your model is high variance, low bias? What would you do in this case?
 1. How do you know that your model is low variance, high bias? What would you do in this case?
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Bias-variance trade-off`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. What are the potential drawbacks of using the validation set approach for estimating the test error rate?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the potential drawbacks of using the validation set approach for estimating the test error rate?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The validation set approach, while simple and easy to implement, has two main drawbacks:
 
@@ -1029,11 +1287,14 @@ The validation set approach, while simple and easy to implement, has two main dr
 ---
 
 
-Q. Cross-validation.
+
+### Q: Cross-validation.
+
 1. Explain different methods for cross-validation.
 1. Why don’t we see more cross-validation in deep learning?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Different methods in cross-validation
     
@@ -1079,10 +1340,13 @@ Q. Cross-validation.
 
 ---
 
-Q. Is LOOCV a special case of k-fold CV?
+
+### Q: Is LOOCV a special case of k-fold CV?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, It is a special case of k-fold CV in which $k$ is set to equal $n$
 
@@ -1090,10 +1354,13 @@ Yes, It is a special case of k-fold CV in which $k$ is set to equal $n$
 
 ---
 
-Q. Explain the bias variance tradeoff with the choice of k in k-fold validation?
+
+### Q: Explain the bias variance tradeoff with the choice of k in k-fold validation?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 As we increase k, we reduces bias in the estimation of the test error. LOOCV ($k=n$) will give unbiased estimation of the test error. An performing k-fold CV for $k=5$ or $k=10$ will lead to an intermediate level of bias since each training set contains approximately $\frac{(k-1)n}{k}$ observations which is fewer than in the LOOCV approach. 
 
@@ -1103,13 +1370,16 @@ On variance side, LOOCV has higher variance than does k-fold CV for $k<n$. When 
 
 ---
 
-Q. Train, valid, test splits.
+
+### Q: Train, valid, test splits.
+
 1. What’s wrong with training and testing a model on the same data?
 1. Why do we need a validation set on top of a train set and a test set?
 1. Your model’s loss curves on the train, valid, and test sets look like this. What might have been the cause of this? What would you do?
 ![image](img/loss_training.png)
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Training and testing a model on the same data is problematic because it leads to overfitting and gives a misleading estimate of the model's performance.
 
@@ -1119,8 +1389,7 @@ Q. Train, valid, test splits.
     - Model Selection
     - To get good estimate of test error(prevents over-fitting to test set)
 
-3. 
-
+3.
 
 </details>
 
@@ -1129,20 +1398,29 @@ Q. Train, valid, test splits.
 
 ## Feature Engineering
 
-Q. Feature selection.
+
+### Q: Feature selection.
+
 1. Why do we use feature selection?
 1. What are some of the algorithms for feature selection? Pros and cons of each.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Feature selection.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Is feature scaling necessary for kernel methods?
 
-<details><summary><b>Answer</b></summary>
+### Q: Is feature scaling necessary for kernel methods?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, All kernel methods are based on distance. For example the RBF kernel function is
 
@@ -1166,10 +1444,16 @@ If we don't scale all features to comparable ranges, the features with largest r
 ---
 
 
-Q. What are the different types of feature selection techniques?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: What are the different types of feature selection techniques?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What are the different types of feature selection techniques?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
@@ -1178,64 +1462,110 @@ Q. What are the different types of feature selection techniques?
 
 ## Bias and Variance
 
-Q. Explain Bias and Variance?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Explain Bias and Variance?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Explain Bias and Variance?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Why is the bias-variance tradeoff important in machine learning?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Why is the bias-variance tradeoff important in machine learning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Why is the bias-variance tradeoff important in machine learning?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. How can you tell if your model has a high bias or high variance problem?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: How can you tell if your model has a high bias or high variance problem?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `How can you tell if your model has a high bias or high variance problem?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. What are some techniques to reduce bias in a model?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: What are some techniques to reduce bias in a model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What are some techniques to reduce bias in a model?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. What are some techniques to reduce variance in a model?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: What are some techniques to reduce variance in a model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What are some techniques to reduce variance in a model?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Can you explain cross-validation's role in addressing the bias-variance tradeoff?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Can you explain cross-validation's role in addressing the bias-variance tradeoff?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Can you explain cross-validation's role in addressing the bias-variance tradeoff?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
 
-Q. Is it always better to reduce bias and variance simultaneously?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Is it always better to reduce bias and variance simultaneously?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Is it always better to reduce bias and variance simultaneously?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
+
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

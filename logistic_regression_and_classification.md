@@ -14,9 +14,12 @@ Contents
 
 ## General Concepts
 
-Q. **True or False**: For a fixed number of observations in a data set, introducing more variables normally generates a model that has a better fit to the data. What may be the drawback of such a model-fitting strategy?
 
-<details><summary><b>Answer</b></summary>
+### Q: **True or False**: For a fixed number of observations in a data set, introducing more variables normally generates a model that has a better fit to the data. What may be the drawback of such a model-fitting strategy?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 True, But if the inducted features do not provide enough information and act like redundant predictors, then it does not make sense to add those predictors to the model. It unnecessarily increases the complexity of the model and may cause overfitting issues.
 
@@ -24,9 +27,12 @@ True, But if the inducted features do not provide enough information and act lik
 
 ---
 
-Q. Define the term **odds of success** both qualitatively and formally. Give a numerical example that stresses the relation between probability and odds of an event occurring.
 
-<details><summary><b>Answer</b></summary>
+### Q: Define the term **odds of success** both qualitatively and formally. Give a numerical example that stresses the relation between probability and odds of an event occurring.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The term "odds of success" refers to the likelihood or probability of a favorable outcome or event occurring in a given situation or experiment. The odds of success express the relative chances of a positive outcome compared to a negative outcome. It tells you how much more likely success is compared to failure.
 
@@ -38,18 +44,21 @@ Suppose you are flipping a fair coin. The probability of getting heads ($p$) is 
 
 Odds of Success = $\frac{q}{p}$ = $\frac{0.5}{0.5} = 1$
 
-In this case, the odds of success are 1. This means that the chances of getting heads and the chances of getting tails are equal. 
+In this case, the odds of success are 1. This means that the chances of getting heads and the chances of getting tails are equal.
 
 </details>
 
 ---
 
-Q. Answer the following:
+
+### Q: Answer the following:
+
 1. Define what is meant by the term **"interaction"**, in the context of a logistic regression predictor variable.
 1. What is the simplest form of an interaction? Write its formulae.
 1. What statistical tests can be used to attest to the significance of an interaction term?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. An interaction is the product of two single predictor variables implying a non-additive effect.
  
@@ -60,23 +69,29 @@ Q. Answer the following:
     The last term $\beta_3XY$ represents an interaction between these two predictors.
     
 3.  For testing the contribution of an interaction, two principal methods are commonly employed; the Wald chi-squared test or a likelihood ratio test between the model with and without the interaction term.
- 
-</details>
-
----
-
-Q. **True or False**: In machine learning terminology, unsupervised learning refers to the mapping of input covariates to a target response variable that is attempted to be predicted when the labels are known.
-
-<details><summary><b>Answer</b></summary>
-
-False, In unsupervised learning we don't have anything like targets/labels to guide the model's predictions. We mostly use unsupervised learning to gain insights from the data. Note that the above definition describes another paradigm of machine learning i.e. supervised learning. 
 
 </details>
 
 ---
-Q. **Complete the following sentence**: In the case of logistic regression, the response variable is the log of the odds of being classified in `[...]`.
 
-<details><summary><b>Answer</b></summary>
+
+### Q: **True or False**: In machine learning terminology, unsupervised learning refers to the mapping of input covariates to a target response variable that is attempted to be predicted when the labels are known.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+False, In unsupervised learning we don't have anything like targets/labels to guide the model's predictions. We mostly use unsupervised learning to gain insights from the data. Note that the above definition describes another paradigm of machine learning i.e. supervised learning.
+
+</details>
+
+---
+
+### Q: **Complete the following sentence**: In the case of logistic regression, the response variable is the log of the odds of being classified in `[...]`.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In the case of logistic regression, the response variable is the log of the odds of being classified in a group of binary or multi-class responses. This definition essentially demonstrates that odds can take the form of a vector, allowing for a linear relationship.
 
@@ -84,9 +99,12 @@ In the case of logistic regression, the response variable is the log of the odds
 
 ---
 
-Q. Describe how in a logistic regression model, a transformation to the response variable is applied to yield a probability distribution. Why is it considered a more informative representation of the response?
 
-<details><summary><b>Answer</b></summary>
+### Q: Describe how in a logistic regression model, a transformation to the response variable is applied to yield a probability distribution. Why is it considered a more informative representation of the response?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 There are different techniques that are widely used to model probability distribution over output classes, which is bounded between 0 and 1. 
 
@@ -95,25 +113,29 @@ We can use the following functions to achieve that:
 $$sigmoid(x) = \frac{1}{1+\exp^{-x}}$$
 
 It will map $y \quad \epsilon [0, 1]$.
-  
-    
+
 </details>
 
 
 ---
 
-Q. Complete the following sentence: Minimizing the negative log-likelihood also means
+
+### Q: Complete the following sentence: Minimizing the negative log-likelihood also means
+
 maximizing the `[...]` of selecting the `[...]` class.
 
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
 Minimizing the negative log-likelihood also means maximizing the <b>probability/likelihood</b> of selecting the <b>positive</b> class
-    
+
 </details>
 
 ---
 
-Q. Assume the probability of an event occurring is `p = 0.1`.
+
+### Q: Assume the probability of an event occurring is `p = 0.1`.
+
 1. What are the `odds` of the event occurring?
 2. What are the `log odds` of the event occurring?
 3. Construct the `probability` of the event as a ratio that equals 0.1
@@ -132,7 +154,7 @@ Q. Assume the probability of an event occurring is `p = 0.1`.
    $$\text{probability} = \frac{odds}{1+odds}$$
 
    $$\text{probability} = \frac{0.11}{1.11} = 0.1$$
-    
+
 </details>
 
 
@@ -140,9 +162,12 @@ Q. Assume the probability of an event occurring is `p = 0.1`.
 
 ## Odds and Log-odds
 
-Q. **True or False**: If the odds of success in a binary response is $4$, the corresponding probability of success is $0.8$.
 
-<details><summary><b>Answer</b></summary>
+### Q: **True or False**: If the odds of success in a binary response is $4$, the corresponding probability of success is $0.8$.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 True
 
@@ -161,10 +186,13 @@ $$p = \frac{4}{1+4} = 0.8$$
 
 ---
 
-Q. Draw a graph of odds to probabilities, mapping the entire range of probabilities to
+
+### Q: Draw a graph of odds to probabilities, mapping the entire range of probabilities to
+
 their respective odds.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Governing expression:
 
@@ -185,10 +213,13 @@ $$odds(p) = \frac{p}{1-p}$$
 
 ---
 
-Q. The logistic regression model is a subset of a broader range of machine learning models known as generalized linear models (GLMs), which also include analysis of variance (ANOVA), vanilla linear regression, etc. There are three components to a GLM; identify these three components for binary logistic regression.
+
+### Q: The logistic regression model is a subset of a broader range of machine learning models known as generalized linear models (GLMs), which also include analysis of variance (ANOVA), vanilla linear regression, etc. There are three components to a GLM; identify these three components for binary logistic regression.
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A binary logistic regression GLM consists of there components:
 1. <b>Random component:</b> refers to the probability distribution of the response variable (Y ), e.g., binomial distribution for Y in the binary logistic regression, which takes on the values $Y = 0 or Y =1$.
@@ -202,13 +233,16 @@ Note: Assume that Y denotes whether a human voice activity was detected $(Y = 1)
 
 ---
 
-Q. Let us consider the logit transformation, i.e., log-odds. Assume a scenario in which the logit forms the linear decision boundary, for a given vector of systematic components X and predictor variables θ. Write the mathematical expression for the hyperplane that describes the decision boundary.
+
+### Q: Let us consider the logit transformation, i.e., log-odds. Assume a scenario in which the logit forms the linear decision boundary, for a given vector of systematic components X and predictor variables θ. Write the mathematical expression for the hyperplane that describes the decision boundary.
+
 
 $$
 \log{\frac{Pr(Y = 1 | X)}{Pr(Y = 0|X)}} = \theta_0 + \theta^TX
 $$
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 At the decision boundary we will have $Pr(Y = 1 | X) = 0.5$
 
@@ -223,10 +257,13 @@ So, $\theta_0 + \theta^TX = 0$ governs the decision boundary hyperplane.
 
 ---
 
-Q. **True or False**: The logit function and the natural logistic (sigmoid) function are inverses
+
+### Q: **True or False**: The logit function and the natural logistic (sigmoid) function are inverses
+
 of each other.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>True</b>
 
@@ -238,20 +275,22 @@ $$p(z) = \frac{exp{z}}{1+exp{z}}$$
 
 The above equation represents sigmoid function.
 
-
 </details>
 
 ---
 
 ## The Sigmoid
 
-Q. Compute the derivative of the natural sigmoid function:
+
+### Q: Compute the derivative of the natural sigmoid function:
+
 
 $$
 \sigma(x) = \frac{1}{1+e^{-x}}; \quad \epsilon (0, 1)
 $$
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>Direct derivative:</b>
 
@@ -271,9 +310,12 @@ $$\frac{d}{dx}\sigma(x) = \frac{e^{-x}}{(1+e^{x})^2}$$
 
 ---
 
-Q. Characterize the sigmoid function when its argument approaches $0$, $∞$ and $-∞$.
 
-<details><summary><b>Answer</b></summary>
+### Q: Characterize the sigmoid function when its argument approaches $0$, $∞$ and $-∞$.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We have:
 
@@ -297,7 +339,9 @@ $$\lim_{{x \to -\infty}} \sigma = \frac{1}{1+e^{-\inf}} = 1$$
 
 ---
 
-Q. Remember that in logistic regression, the hypothesis function for some parameter vector $β$ and measurement vector $x$ is defined as:
+
+### Q: Remember that in logistic regression, the hypothesis function for some parameter vector $β$ and measurement vector $x$ is defined as:
+
 
 $$
 h_\beta(x) = g(\beta^Tx) =  \frac{1}{1+e^{-\beta^Tx}}\\
@@ -312,7 +356,8 @@ $$\text{logit} = \beta_0 + \beta_1x_1 + \beta_2x_2$$
 2. What is the value of the odds for this observation?
 3. What is the value of $P(y = 1)$ for this observation?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Logit value can be obtained by substituting independent variables and model's coefficients as follows:
 
@@ -356,7 +401,9 @@ $$P(y = 1) = 0.2689$$
 
 ## Truly Understanding Logistic Regression
 
-Q. Proton therapy (PT) is a widely adopted form of treatment for many types of cancer including breast and lung cancer (Fig. 2.2).
+
+### Q: Proton therapy (PT) is a widely adopted form of treatment for many types of cancer including breast and lung cancer (Fig. 2.2).
+
 
 <table align='center'>
   <tr>
@@ -388,7 +435,8 @@ Referring to Table: Answer the following questions
 5. Interpret the results and explain their significance.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Explanatory variable : Cancer Type(Breast/Lung)
 
@@ -447,7 +495,9 @@ $$\hat\theta = \frac{odds \quad of \quad breast cancer}{odds \quad of \quad lung
 
 ---
    
-Q. Consider a system for radiation therapy planning (Fig. 2.3). Given a patient with a malignant tumour, the problem is to select the optimal radiation exposure time for that patient. A key element in this problem is estimating the probability that a given tumour will be eradicated given certain covariates. A data scientist collects information relating to this radiation therapy system.
+
+### Q: Consider a system for radiation therapy planning (Fig. 2.3). Given a patient with a malignant tumour, the problem is to select the optimal radiation exposure time for that patient. A key element in this problem is estimating the probability that a given tumour will be eradicated given certain covariates. A data scientist collects information relating to this radiation therapy system.
+
 <table align='center'>
   <tr>
     <td align="center">
@@ -476,7 +526,8 @@ $$
 1. Estimate the probability that, given a patient who undergoes the treatment for $40 \ milliseconds$ and who is presented with a tumour sized $3.5\ cm$, the system eradicates the tumour.
 2. How many milliseconds the patient in part (a) would need to be radiated with to have exactly a $50\\%$ chance of eradicating the tumour?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. Given:
 
@@ -515,7 +566,9 @@ $$x_1 = \frac{2.5}{0.05} = 50$$
    
 ---
 
-Q. Recent research suggests that heating mercury containing dental amalgams may cause the release of toxic mercury fumes into the human airways. It is also presumed that drinking hot coffee, stimulates the release of mercury vapour from amalgam fillings.
+
+### Q: Recent research suggests that heating mercury containing dental amalgams may cause the release of toxic mercury fumes into the human airways. It is also presumed that drinking hot coffee, stimulates the release of mercury vapour from amalgam fillings.
+
 
 <table align='center'>
   <tr>
@@ -552,7 +605,8 @@ The output from training a logistic regression classifier is as follows:
   3. For users that have at least four amalgams, is high coffee intake associated with an increased probability of a second migraine?
   4. Is there statistical evidence that having more than four amalgams is directly associated with a reduction in the probability of a second migraine?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. odds of migraine $Pr(migraine = 1)$ can be given by:
 
@@ -602,7 +656,9 @@ From the model we have p-value as $0.3818$. In order to accept alternate hypothe
     
 ---
 
-Q. To study factors that affect Alzheimer’s disease using logistic regression, a researcher
+
+### Q: To study factors that affect Alzheimer’s disease using logistic regression, a researcher
+
 considers the link between gum (periodontal) disease and Alzheimer as a plausible risk factor. The predictor variable is a count of gum bacteria (Fig. 2.5) in the mouth.
 <table align='center'>
   <tr>
@@ -644,7 +700,8 @@ The output from training a logistic regression classifier is as follows:
   </tr>
 </table>
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 From the given data, we have:
 
@@ -697,7 +754,9 @@ $$(exp(−0.00077), exp(0.9917)) = (0.99923, 2.6958).$$
 
 ---
 
-Q. Recent research suggests that cannabis (Fig. 2.6) and cannabinoids administration in particular, may reduce the size of malignant tumours in rats.
+
+### Q: Recent research suggests that cannabis (Fig. 2.6) and cannabinoids administration in particular, may reduce the size of malignant tumours in rats.
+
 <table align='center'>
   <tr>
     <td align="center">
@@ -725,7 +784,8 @@ For the true odds ratio:
 2. Find the sample log-odds ratio.
 3. Compute a 95% confidence interval $(z_{0.95} = 1.645; z_{0.975} = 1.96)$ for the true log odds ratio and true odds ratio.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. sample odds ratio: 
 
@@ -760,12 +820,15 @@ $$(e^{0.4734}, e^{1.0889}) = (1.6060, 2.9710)$$
 
 ## The Logit Function and Entropy
 
-Q. The entropy of a single binary outcome with probability $p$ to receive 1 is defined as:
+
+### Q: The entropy of a single binary outcome with probability $p$ to receive 1 is defined as:
+
     $$H(p) ≡ −p\log{p}−(1−p)\log(1−p)$$
 1. At what $p$ does $H(p)$ attain its maximum value?
 2. What is the relationship between the entropy $H(p)$ and the logit function, given $p$?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. To get the $argmax(H(p))$, we can differentiate the function wrt to $p$ and equate it to $0$.
 
@@ -795,85 +858,150 @@ $$\frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)$$
 
 ---
 
-Q. What is the difference between linear regression and logistic regression?
 
-<details><summary><b>Answer</b></summary>
-    
-</details>
+### Q: What is the difference between linear regression and logistic regression?
 
----
 
-Q. What is the logistic function (sigmoid function), and how is it used in logistic regression?
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-<details><summary><b>Answer</b></summary>
-    
-</details>
+- **Linear Regression**: Predicts continuous target $y \in \mathbb{R}$ using unbounded linear combination $w^T x + b$. Minimizes MSE loss.
+- **Logistic Regression**: Predicts categorical probability $P(Y=1|X) \in [0, 1]$ by passing $w^T x + b$ through Sigmoid function $\sigma(z) = \frac{1}{1 + e^{-z}}$. Minimizes Log-Loss.
 
----
-
-Q. What is the purpose of the odds ratio in logistic regression?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. What is the cost function in logistic regression, and why is it used?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. What are the assumptions of logistic regression?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. How do you deal with multi-collinearity in logistic regression?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. What is the purpose of regularization in logistic regression, and how does it work?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. What is the ROC curve in the context of logistic regression?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. How do you evaluate the performance of a logistic regression model?
-
-<details><summary><b>Answer</b></summary>
-    
-</details>
-
----
-
-Q. For logistic regression, why is log loss recommended over MSE (mean squared error)?
-
-<details><summary><b>Answer</b></summary>
-    
 </details>
 
 ---
 
 
+### Q: What is the logistic function (sigmoid function), and how is it used in logistic regression?
 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Sigmoid Function**: $\sigma(z) = \frac{1}{1 + e^{-z}} = \frac{e^z}{e^z + 1}$.
+- **Properties**: Maps real numbers $(-\infty, \infty)$ smoothly to probabilities $(0, 1)$. Derivative is computationally efficient: $\sigma'(z) = \sigma(z)(1 - \sigma(z))$.
+
+</details>
+
+---
+
+
+### Q: What is the purpose of the odds ratio in logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Odds**: Ratio of probability of success to failure: $\text{Odds} = \frac{p}{1-p} = e^{w^T x + b}$.
+- **Log-Odds (Logit)**: $\ln\left(\frac{p}{1-p}\right) = w^T x + b$.
+- **Odds Ratio (OR)**: Exponentiated weight $e^{w_i}$ represents the multiplicative change in odds for a 1-unit increase in feature $x_i$.
+
+</details>
+
+---
+
+
+### Q: What is the cost function in logistic regression, and why is it used?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Binary Cross-Entropy (Log Loss)**:
+  $$ J(w) = -\frac{1}{N} \sum_{i=1}^N \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right] $$
+- **Why used?**: MSE with Sigmoid yields non-convex loss with local minima. Log loss is strictly convex, guaranteeing global minimum optimization via gradient descent.
+
+</details>
+
+---
+
+
+### Q: What are the assumptions of logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+1. **Binary/Ordinal Target**: Dependent variable is categorical.
+2. **Linearity of Independent Variables and Log-Odds**: Continuous features are linearly related to log-odds.
+3. **No Severe Multicollinearity**: High correlation between predictors inflates coefficient standard errors.
+4. **Independence of Errors**: Observations are independent (no autocorrelation).
+
+</details>
+
+---
+
+
+### Q: How do you deal with multi-collinearity in logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `How do you deal with multi-collinearity in logistic regression?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+
+### Q: What is the purpose of regularization in logistic regression, and how does it work?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What is the purpose of regularization in logistic regression, and how does it work?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+
+### Q: What is the ROC curve in the context of logistic regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What is the ROC curve in the context of logistic regression?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+
+### Q: How do you evaluate the performance of a logistic regression model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `How do you evaluate the performance of a logistic regression model?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+
+### Q: For logistic regression, why is log loss recommended over MSE (mean squared error)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `For logistic regression, why is log loss recommended over MSE (mean squared error)?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

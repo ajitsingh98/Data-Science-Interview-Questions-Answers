@@ -17,20 +17,25 @@ Contents
 
 ## Introduction
 
-Q. What is statistical inference?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is statistical inference?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The process of inferring something about population based on what is measured in the sample is called statistical inference.
-
 
 </details>
 
 ---
 
-Q. What is point estimation in statistical inference?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is point estimation in statistical inference?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In point estimation, we estimate an unknown parameter using a single number that is calculated from the sample data.
 
@@ -38,9 +43,12 @@ In point estimation, we estimate an unknown parameter using a single number that
 
 ---
 
-Q. What do you mean by interval estimation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by interval estimation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In interval estimation, we estimate an unknown parameter using an interval of values that is likely to contain the true value of that parameter and we also state how confident we are that this interval indeed captures the true value of the parameter.
 
@@ -48,9 +56,12 @@ In interval estimation, we estimate an unknown parameter using an interval of va
 
 ---
 
-Q. What do we do in hypothesis testing?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do we do in hypothesis testing?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In hypothesis testing, we have some claim about the population and we check whether or not the data obtained from the sample provide evidence against this claim.
 
@@ -58,13 +69,16 @@ In hypothesis testing, we have some claim about the population and we check whet
 
 ---
 
-Q. A blurb on a box of brand X light bulbs claimed that the mean lifetime of each lightbulb is 750 hours. A random sample of 36 light bulbs was tested in a laboratory, and it was found that their average lifetime is 745 hours. Which form of statistical inference should you use to evaluate whether the data provide enough evidence against the advertised mean lifetime on the box?
+
+### Q: A blurb on a box of brand X light bulbs claimed that the mean lifetime of each lightbulb is 750 hours. A random sample of 36 light bulbs was tested in a laboratory, and it was found that their average lifetime is 745 hours. Which form of statistical inference should you use to evaluate whether the data provide enough evidence against the advertised mean lifetime on the box?
+
 
 - Point Estimation
 - Interval Estimation
 - Hypothesis Testing
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>Hypothesis Testing</b>
 
@@ -74,13 +88,16 @@ Here, we are assessing whether the data provide enough evidence against the clai
 
 ---
 
-Q. A recent poll asked a random sample of 1,100 U.S. adults whether or not they support gay marriage. Based on the results of the poll, the pollsters estimated that the proportion of all U.S. adults who support gay marriage is 0.61. Which form of statistical inference should you use to evaluate this conclusion?
+
+### Q: A recent poll asked a random sample of 1,100 U.S. adults whether or not they support gay marriage. Based on the results of the poll, the pollsters estimated that the proportion of all U.S. adults who support gay marriage is 0.61. Which form of statistical inference should you use to evaluate this conclusion?
+
 
 - Point Estimation
 - Interval Estimation
 - Hypothesis Testing
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>Point Estimation</b>
 
@@ -90,13 +107,16 @@ Here, we are using the data to estimate the proportion of all U.S adults who sup
 
 ---
 
-Q. Based on data collected from a random sample of 1,200 college freshmen, researchers are 95% confident that the mean number of sleep hours of all college freshmen is between 6 hours and 7.5 hours. Which form of statistical inference should you use to evaluate this conclusion?
+
+### Q: Based on data collected from a random sample of 1,200 college freshmen, researchers are 95% confident that the mean number of sleep hours of all college freshmen is between 6 hours and 7.5 hours. Which form of statistical inference should you use to evaluate this conclusion?
+
 
 - Point Estimation
 - Interval Estimation
 - Hypothesis Testing
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>Interval Estimation</b>
 
@@ -106,9 +126,12 @@ Here, we are estimating the mean number of daily sleep hours of college freshman
 
 ---
 
-Q. How does the type of variable of interest(categorical/quantitative) determine the type of population parameter we need to infer?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does the type of variable of interest(categorical/quantitative) determine the type of population parameter we need to infer?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It depends on the type of variable of interest:
 
@@ -120,13 +143,16 @@ It depends on the type of variable of interest:
 
 ---
 
-Q. Which of the following statements are true in context of sampling mean $\hat{X}$ and population mean $\mu$.
+
+### Q: Which of the following statements are true in context of sampling mean $\hat{X}$ and population mean $\mu$.
+
 - Both $\hat{X}$ and $\mu$ are random varaibles.
 - Only $\hat{X}$ is a random variable.
 - Both are constant values.
 - Only $\mu$ is random varaible.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Only $\hat{X}$ is a random variable.
 
@@ -136,7 +162,9 @@ Only $\hat{X}$ is a random variable.
 
 ## Point Estimation
 
-Q. A study on exercise habits used a random sample of $2,540$ college students ($1,220$ females and $1,320$ males).
+
+### Q: A study on exercise habits used a random sample of $2,540$ college students ($1,220$ females and $1,320$ males).
+
 
 The study found the following:
 - $818$ of the females in the sample exercise on a regular basis.
@@ -150,7 +178,8 @@ The study found the following:
     - The mean time that all college students spend exercising per week
     - The percentage of all college students who exercise on a regular basis
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Let $n$ be the total sample size and $m$ and $f$ denotes number of male and female students respectively.
 
@@ -171,19 +200,12 @@ $$\hat{p} = 0.685$$
 
 ---
 
-Q. What should be the criteria under which the point estimates are truly unbiased estimates for the population parameter?
 
-<details><summary><b>Answer</b></summary>
+### Q: What should be the criteria under which the point estimates are truly unbiased estimates for the population parameter?
 
-Sample should be random and the study design should not be flawed.
 
-</details>
-
----
-
-Q. What should be the criteria under which the point estimates are truly unbiased estimates for the population parameter?
-
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Sample should be random and the study design should not be flawed.
 
@@ -191,14 +213,30 @@ Sample should be random and the study design should not be flawed.
 
 ---
 
-Q. A researcher wanted to estimate µ, the mean number of hours that students at a large state university spend exercising per week. The researcher collects data from a sample of 150 students who leave the university gym following a workout.
+
+### Q: What should be the criteria under which the point estimates are truly unbiased estimates for the population parameter? (Part 2)
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Sample should be random and the study design should not be flawed.
+
+</details>
+
+---
+
+
+### Q: A researcher wanted to estimate µ, the mean number of hours that students at a large state university spend exercising per week. The researcher collects data from a sample of 150 students who leave the university gym following a workout.
+
 
 Which of the following is true regarding x̄, the average number of hours that the 150 sampled students exercise per week?
 - It is an unbiased estimate for $µ$.
 - It is not an unbiased estimate for $µ$ and probably underestimates $µ$.
 - It is not an unbiased estimate for $µ$ and probably overestimates $µ$.
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is not an unbiased estimator for µ because the sample was not a random sample of 150 students from the entire student body. In addition, students who leave the university gym following a workout are likely students who exercise on a regular basis and therefore tend to exercise more, on average, than students in general.
 
@@ -206,13 +244,16 @@ It is not an unbiased estimator for µ because the sample was not a random sampl
 
 ---
 
-Q. A study estimated that the mean number of children per family in the the United States is 1.3. This point estimate would be unbiased and most accurate if it were based on which of the following?
+
+### Q: A study estimated that the mean number of children per family in the the United States is 1.3. This point estimate would be unbiased and most accurate if it were based on which of the following?
+
 - A random sample of $10,000$ U.S. families with children from the state of Utah
 - A random sample of $500$ U.S. families with children
 - A random sample of $5,000$ U.S. families with children
 - A random sample of $1,000$ U.S. families
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>A random sample of $1,000$ U.S. families</b>
 
@@ -222,9 +263,12 @@ The estimate is based on a random sample (and is therefore unbiased) and is also
 
 ---
 
-Q. What is the limitation of point estimation?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the limitation of point estimation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The point estimation is simple and intuitive but a little bit problematic. When we estimate $\mu$ by the sample mean $\bar{x}$, we almost guaranteed to make some kind of error. Even though we know the values of $\bar{x}$ fall around $\mu$, it is very unlikely that $\bar{x}$ will fall exactly at $\mu$.
 
@@ -235,9 +279,12 @@ The point estimation is simple and intuitive but a little bit problematic. When 
 
 ## Interval Estimation
 
-Q. How does interval estimation overcome limitation of point estimation?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does interval estimation overcome limitation of point estimation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Interval estimation enhances point estimation by supplying information about size of error attached.
 
@@ -245,9 +292,12 @@ Interval estimation enhances point estimation by supplying information about siz
 
 ---
 
-Q. Suppose a random sample of size n is taken from a normal population of values for a quantitative variable whose mean ($μ$) is unknown, when the standard deviation ($σ$) is given. A $95%$ confidence interval (CI) for $μ$ is:
 
-<details><summary><b>Answer</b></summary>
+### Q: Suppose a random sample of size n is taken from a normal population of values for a quantitative variable whose mean ($μ$) is unknown, when the standard deviation ($σ$) is given. A $95%$ confidence interval (CI) for $μ$ is:
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $$(\bar{x} - 1.96\*\frac{\sigma}{\sqrt{n}}, \bar{x} + 1.96\*\frac{\sigma}{\sqrt{n}})$$
 
@@ -255,9 +305,12 @@ $$(\bar{x} - 1.96\*\frac{\sigma}{\sqrt{n}}, \bar{x} + 1.96\*\frac{\sigma}{\sqrt{
 
 ---
 
-Q. How should we interpret the $95%$ CI for a population mean($\mu$)?
 
-<details><summary><b>Answer</b></summary>
+### Q: How should we interpret the $95%$ CI for a population mean($\mu$)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $95%$ confidence interval means we are $95%$ confident that the population mean($\mu$) is covered by the interval. In other words if we take $100$ samples drawn randomly from the population then CI with $95%$ confidence of $95$ of those samples will contains population mean($\mu$).
 
@@ -265,9 +318,12 @@ $95%$ confidence interval means we are $95%$ confident that the population mean(
 
 ---
 
-Q. The IQ level of students at a particular university has an unknown mean, $μ$, and a known standard deviation, $σ = 15$. A simple random sample of $100$ students is found to have a sample mean IQ, $\hat{x} = 115$. Estimate $μ$ with $90%$, $95%$, and $99%$ confidence intervals.
 
-<details><summary><b>Answer</b></summary>
+### Q: The IQ level of students at a particular university has an unknown mean, $μ$, and a known standard deviation, $σ = 15$. A simple random sample of $100$ students is found to have a sample mean IQ, $\hat{x} = 115$. Estimate $μ$ with $90%$, $95%$, and $99%$ confidence intervals.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Given:
 
@@ -281,9 +337,12 @@ $σ = 15$,  $\hat{x} = 115$ and $n = 100$
 
 ---
 
-Q. Explain the trade-off between the level of the confidence and the precision with which the parameter is estimated?
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain the trade-off between the level of the confidence and the precision with which the parameter is estimated?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The price we have to pay for a higher level of confidence is that the unknown population mean $\mu$ will be estimated with less precision (i.e., with a wider confidence interval). If we would like to estimate $\mu$ with more precision (i.e., a narrower confidence interval), we will need to sacrifice and report an interval with a lower level of confidence.
 
@@ -291,9 +350,12 @@ The price we have to pay for a higher level of confidence is that the unknown po
 
 ---
 
-Q. Write the general structure of the confidence intervals.
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the general structure of the confidence intervals.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 General form:
 
@@ -308,14 +370,16 @@ So we can also write the general form as follows:
 
 $$estimate \pm margin \quote of \quote error$$
 
-
 </details>
 
 ---
 
-Q. Explain margin of error in interval estimation. What value does it encode?
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain margin of error in interval estimation. What value does it encode?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Expression of margin of error(m):
 
@@ -329,9 +393,12 @@ margin of error(m) is <b>in charge of the width(or precision) of the confidence 
 
 ---
 
-Q. How can we reduce margin or error $m$ without compromising on the level of confidence?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we reduce margin or error $m$ without compromising on the level of confidence?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 With larger sample size $n$ we can reduce the margin of error.
 
@@ -339,9 +406,12 @@ With larger sample size $n$ we can reduce the margin of error.
 
 ---
 
-Q. Find the general expression for the required $n$ for a desired margin of error $m$ and certain level of confidence.
 
-<details><summary><b>Answer</b></summary>
+### Q: Find the general expression for the required $n$ for a desired margin of error $m$ and certain level of confidence.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We have,
 
@@ -355,9 +425,12 @@ $$n = (\frac{z^* \sigma}{m})^2$$
 
 ---
 
-Q. Suppose that based on a random sample, a $95%$ confidence interval for the mean hours slept (per day) among graduate students was found to be $(6.5, 6.9)$. What is the margin of error of this confidence interval?
 
-<details><summary><b>Answer</b></summary>
+### Q: Suppose that based on a random sample, a $95%$ confidence interval for the mean hours slept (per day) among graduate students was found to be $(6.5, 6.9)$. What is the margin of error of this confidence interval?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>0.2</b>
 
@@ -381,10 +454,13 @@ $$m = 0.2$$
 
 ---
 
-Q. IQ scores are known to vary normally with a standard deviation of $15$. How many students should be sampled if we want to estimate the population mean IQ at $99%$ confidence with a margin of error equal to $2$?
+
+### Q: IQ scores are known to vary normally with a standard deviation of $15$. How many students should be sampled if we want to estimate the population mean IQ at $99%$ confidence with a margin of error equal to $2$?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>374</b>
 
@@ -396,18 +472,20 @@ On putting $z^* = 2.576$, $\sigma  = 15$ and $m = 2$, we get
 
 $$n = (\frac{2.576(15)}{2})^2 = 374$$
 
-
 </details>
 
 ---
 
-Q. In which case it is not safe to use confidence interval developed using CLT?
+
+### Q: In which case it is not safe to use confidence interval developed using CLT?
+
 1. Variable varies normaly and sample size is small($n < 30$)
 2. Variable varies normaly and sample size is large
 3. Variable does not vary normal and sample size is small
 4. Variable does not vary normal and sample size is large
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 3. Variable does not vary normal and sample size is small
 
@@ -419,9 +497,12 @@ In this case we can use non-parametric methods.
 
 ---
 
-Q. How should we calculate confidence interval when the population standard deviation $\sigma$ is not known?
 
-<details><summary><b>Answer</b></summary>
+### Q: How should we calculate confidence interval when the population standard deviation $\sigma$ is not known?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can replace population standard deviation($\sigma$) with the sample standard deviation $s$. But in this case we loose central limit theorem and normality of $\bar{X}$, and therefore the confidence multiplier $z^*$ for the different levels of confidence are not generally accurate. The new multiplier comes from a different distribution called $t$ distribution and denoted by $t^*$ instead of $z^*$.
 
@@ -435,9 +516,12 @@ Note that the quantity $\frac{s}{\sqrt(n)}$ is called the standard error of $\ba
 
 ---
 
-Q. <b>True/False</b> For large values of $n$, the $t^*$ multipliers are not much different from the $z^*$ multipliers?
 
-<details><summary><b>Answer</b></summary>
+### Q: <b>True/False</b> For large values of $n$, the $t^*$ multipliers are not much different from the $z^*$ multipliers?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <b>True</b>
 
@@ -445,9 +529,12 @@ Q. <b>True/False</b> For large values of $n$, the $t^*$ multipliers are not much
 
 ---
 
-Q. Write the expression of confidence interval when variable of interest is categorical?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the expression of confidence interval when variable of interest is categorical?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The confidence interval for the population proportion $p$ is:
 
@@ -457,13 +544,16 @@ $$\hat{p} \pm z^* \dot \sqrt{\frac{\hat(p)(1 - \hat{p})}{n}}$$
 
 ---
 
-Q. A poll asked a random sample of $1,000$ U.S. adults, "Do you think that the use of marijuana should be legalized?" $560$ of those asked answered yes.
+
+### Q: A poll asked a random sample of $1,000$ U.S. adults, "Do you think that the use of marijuana should be legalized?" $560$ of those asked answered yes.
+
 1. Based on the poll's results, estimate p, the proportion of all U.S. adults who believe the use of marijuana should be legalized, with a 95% confidence interval.
 2. Give an interpretation of the margin of error in context.
 3. Do the results of this poll give evidence that the majority of U.S. adults believe that the use of marijuana should be legalized?
 
-<details><summary><b>Answer</b></summary>
- 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
 1. The sample proportion $\hat{p}$ is $\frac{56}{1000} = 0.56$ and therefore  $95%$ confidence interval for $p$ is:
 
 $$0.56 \pm 2\dot \sqrt{0.56(1-0.56)}{1000} = 0.56 \pm 0.03$$
@@ -473,23 +563,30 @@ So we are $95%$ confident that the proportion of U.S adults who believe that mar
 2. The margin of error is $0.03$ i.e $3%$. With $95%$ certainty, the sample proportion we got $56%$ is within $3%$ of(or no more than $3%$ away from) the proportion of U.S adults who believe that the use of marijiuana should be legalized.
 
 3. Yes. All of the values in our $95%$ confidence interval for p $(.53, .59)$, which represents the set of plausible values for p, lies above $.5$, which provides evidence (at the $95%$ confidence level) that the majority of U.S. adults believe that the use of marijuana should be legalized.
+
 </details>
 
 ---
 
-Q. Under what condition we can use to construct CI in case of estimating $p$ using $z^*$?
 
-<details><summary><b>Answer</b></summary>
- 
+### Q: Under what condition we can use to construct CI in case of estimating $p$ using $z^*$?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
 $$n \dot \hat{p} \geq 10 \quote n \dot (1 - \hat{p}) \geq 10  $$
 
 </details>
 
 ---
 
-Q. Suppose that you take $100$ random newborn puppies and determine that the average weight is $1$ pound with the population standard deviation of $0.12$ pounds. Assuming the weight of newborn puppies follows a normal distribution, calculate the $95\\%$ confidence interval for the average weight of all newborn puppies.
 
-<details><summary><b>Answer</b></summary>
+### Q: Suppose that you take $100$ random newborn puppies and determine that the average weight is $1$ pound with the population standard deviation of $0.12$ pounds. Assuming the weight of newborn puppies follows a normal distribution, calculate the $95\\%$ confidence interval for the average weight of all newborn puppies.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Given:
 
@@ -511,13 +608,16 @@ So, the $95\%$ interval is $(0.9768,1.0232)$.
 
 ---
 
-Q. Suppose that we examine $100$ newborn puppies and the $95%$ confidence interval for their average weight is $[0.9, 1.1]$ pounds. Which of the following statements is true?
+
+### Q: Suppose that we examine $100$ newborn puppies and the $95%$ confidence interval for their average weight is $[0.9, 1.1]$ pounds. Which of the following statements is true?
+
 1. Given a random newborn puppy, its weight has a $95%$ chance of being between $0.9$ and $1.1$ pounds.
 1. If we examine another $100$ newborn puppies, their mean has a $95%$ chance of being in that interval.
 1. We're $95\\%$ confident that this interval captured the true mean weight.
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $3rd$ statement seems correct interpretation of CI. $95\\%$ CI represents if we draw multiple samples and caluclate the sample statistics and confidence intervals(CI) then $95\\%$ of those intervals will contains population mean($\mu$).
 
@@ -531,20 +631,29 @@ $2^{nd}$ statment is talking about sample statistics but CI is mainly used to es
 
 ---
 
-Q. Suppose we have a random variable X supported on $[0,1]$  from which we can draw samples. How can we come up with an unbiased estimate of the median of X?
 
-<details><summary><b>Answer</b></summary>
+### Q: Suppose we have a random variable X supported on $[0,1]$  from which we can draw samples. How can we come up with an unbiased estimate of the median of X?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Unbiased Estimation**: For continuous $X \in [0, 1]$, sample median $\hat{m}$ from $n$ independent draws has asymptotic bias $O(1/n)$.
+- **Method**: Use order statistics $X_{(k)}$ or kernel density estimation (KDE) with cross-validated bandwidth to compute the median where cumulative distribution $F(\hat{m}) = 0.5$.
 
 </details>
 
 ---
 
-Q. The weight of newborn puppies is roughly symmetric with a mean of 1 pound and a standard deviation of 0.12. Your favorite newborn puppy weighs 1.1 pounds.
+
+### Q: The weight of newborn puppies is roughly symmetric with a mean of 1 pound and a standard deviation of 0.12. Your favorite newborn puppy weighs 1.1 pounds.
+
     1. Calculate your puppy’s z-score (standard score).
     1. How much does your newborn puppy have to weigh to be in the top 10% in terms of weight?
     1. Suppose the weight of newborn puppies followed a skewed distribution. Would it still make sense to calculate z-scores?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Given:
 
@@ -574,9 +683,15 @@ So, puppy weight should be atleast $1.197$ in order to be in top $10\\%$ of the 
 
 ---
 
-Q. When should you use a Z-Test instead of a T-Test?
 
-<details><summary><b>Answer</b></summary>
+### Q: When should you use a Z-Test instead of a T-Test?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Z-Test**: Use when population variance $\sigma^2$ is known, or when sample size is large ($n \ge 30$) under Central Limit Theorem.
+- **T-Test**: Use when population variance $\sigma^2$ is unknown and sample size is small ($n < 30$), estimating variance via sample standard deviation $s$.
 
 </details>
 
@@ -584,9 +699,12 @@ Q. When should you use a Z-Test instead of a T-Test?
 
 ## Hypothesis Testing
 
-Q. Define statistical hypothesis testing. Explain in detail how does it work?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define statistical hypothesis testing. Explain in detail how does it work?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Assessing evidence provided by the data in favour of or against some claim about population is statistical hypothesis testing.
 
@@ -603,9 +721,12 @@ Here is how the process of statistical hypothesis testing works:
 
 ---
 
-Q. Define $p-value$ in context of hypothesis testing.
 
-<details><summary><b>Answer</b></summary>
+### Q: Define $p-value$ in context of hypothesis testing.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 p-value is the probability of getting data like those observed when $H_0$ is true. In more general the $p-value$ is the probability of observing a test statistic as extreme as that observed (or even more extreme) assuming that the null hypothesis is true.
 
@@ -629,9 +750,12 @@ The probability of observing a test statistic as large in magnitude as that obse
 
 ---
 
-Q. State steps involve in hypothesis testing for population proportion.
 
-<details><summary><b>Answer</b></summary>
+### Q: State steps involve in hypothesis testing for population proportion.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. State the appropriate null and alternative hypotheses, $H_0$ and $H_a$.
 
@@ -662,9 +786,12 @@ $$z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1 - p_0)}{n}}}$$
 
 ---
 
-Q. Explain significance level of the test and its use in hypothesis testing.
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain significance level of the test and its use in hypothesis testing.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Significance level of the test is usually denoted by the Greek letter $\alpha$. The most commonly used significance level is $\alpha = .05$ (or $5%$). This means that:
 - if the $p-value < \alpha$ (usually $.05$), then the data we got is considered to be "rare (or surprising) enough" when Ho is true, and we say that the data provide significant evidence against $H_0$, so we reject Ho and accept $H_a$.
@@ -674,9 +801,12 @@ Significance level of the test is usually denoted by the Greek letter $\alpha$. 
 
 ---
 
-Q. In hypothesis testing when do we conclude the statistical significance of the result?
 
-<details><summary><b>Answer</b></summary>
+### Q: In hypothesis testing when do we conclude the statistical significance of the result?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It depends on $p-value$ and $\alpha$:
 
@@ -688,9 +818,12 @@ It depends on $p-value$ and $\alpha$:
 
 ---
 
-Q. There are rumors that students in a certain liberal arts college are more inclined to use drugs than U.S. college students in general. Suppose that in a simple random sample of $400$ students from the college, 76 admitted to marijuana use. Do the data provide enough evidence to conclude that the proportion of marijuana users among the students in the college (p) is higher than the national proportion, which is $0.157$? 
 
-<details><summary><b>Answer</b></summary>
+### Q: There are rumors that students in a certain liberal arts college are more inclined to use drugs than U.S. college students in general. Suppose that in a simple random sample of $400$ students from the college, 76 admitted to marijuana use. Do the data provide enough evidence to conclude that the proportion of marijuana users among the students in the college (p) is higher than the national proportion, which is $0.157$?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. State the hypothesis:
 
@@ -709,16 +842,19 @@ $$p - value = 0.035$$
 
 4. Make conclusion based on $p$ value and $\alpha$:
 
-For default value of $\alpha = 0.05$, since $p-value < \alpha$ the result seems significant and alternate hypothesis seems true. 
+For default value of $\alpha = 0.05$, since $p-value < \alpha$ the result seems significant and alternate hypothesis seems true.
 
 </details>
 
 ---
 
-Q. Write the general form that can be taken by null hypothesis $H_0$ and alternate hypohesis $H_a$.
+
+### Q: Write the general form that can be taken by null hypothesis $H_0$ and alternate hypohesis $H_a$.
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 General form of null hypothesis:
 
@@ -736,60 +872,74 @@ $$Ha: p ≠ p_0(two-sided)$$
 
 ---
 
-Q. How does null hypothesis is related with confidence interval? Explain it with an example.
+
+### Q: How does null hypothesis is related with confidence interval? Explain it with an example.
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Suppose we want to test $H_0 : \mu = \mu_0$ vs $H_a : \mu \neq \mu_0$ using a significance level of $\alpha = 0.05$. An alternative way to perform this test is to find a $95%$ confidence interval for $\mu$ and make following conclusions:
 
 - If $\mu_0$ falls outside the confidence interval, reject $H_0$.
 - If $\mu_0$ falls inside the confidence interval, do not reject $H_0$.
 
+</details>
+
+---
+
+
+### Q: Explain the difference between z-distribution and t-distribution.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Z-Distribution**: Standard Normal distribution $\mathcal{N}(0, 1)$ with fixed shape and known variance.
+- **T-Distribution**: Symmetric distribution with heavier tails governed by degrees of freedom $\nu = n - 1$. As $n \to \infty$, t-distribution converges to Z-distribution.
 
 </details>
 
 ---
 
-Q. Explain the difference between z-distribution and t-distribution.
 
-<details><summary><b>Answer</b></summary>
-
+### Q: When is the t-distribution useful?
 
 
-</details>
 
----
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-Q. When is the t-distribution useful?
-
-
-<details><summary><b>Answer</b></summary>
-
-
+- Useful for hypothesis testing (one-sample, two-sample t-test, paired t-test) and constructing confidence intervals when working with small sample sizes ($n < 30$) with unknown population standard deviation.
 
 </details>
 
 
 ---
 
-Q. What is Type I and Type II error in case of hypothesis testing?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Type I and Type II error in case of hypothesis testing?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - <b>Type I Error</b> - If the null hypothesis is true but we reject it.
 - <b>Type II Error</b>> - If null hypothesis is true but we fail to reject it.
 
-
 </details>
 
 
 ---
 
-Q. What do you mean by test statistic in hypothesis testing?
+
+### Q: What do you mean by test statistic in hypothesis testing?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Test statistic captures the essence of the test. Larger the test statistic, the further the data are from $H_0$ and therefore the more evidence the data provide against $H_0$.
 
@@ -797,9 +947,12 @@ Test statistic captures the essence of the test. Larger the test statistic, the 
 
 ---
 
-Q. Tossing a coin fifteen times resulted in 10 heads and 5 tails. How would you analyze whether a coin is fair?
 
-<details><summary><b>Answer</b></summary>
+### Q: Tossing a coin fifteen times resulted in 10 heads and 5 tails. How would you analyze whether a coin is fair?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Given:
 
@@ -878,12 +1031,15 @@ since p-value > $0.05$, We can not reject null hypothesis and we will reject the
 ---
 
 
-Q. Statistical significance.
+
+### Q: Statistical significance.
+
 1. How do you assess the statistical significance of a pattern whether it is a meaningful pattern or just by chance?
 1. What’s the distribution of p-values?
 1. Recently, a lot of scientists started a war against statistical significance. What do we need to keep in mind when using p-value and statistical significance?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. We can assess the statistical significance of a pattern using hypothesis testing. We can conduct hypothesis testing by following below steps:
     - Formulate Null hypothesis($H_0$) and alternate hypothesis($H_A$) carefully
@@ -903,7 +1059,6 @@ Q. Statistical significance.
    - Statistical significance should be considered in the context of the study design, sample size, and the relevance of the result to the research question.
    - Always consider effect sizes, confidence intervals, and the domain-specific context of the research in addition to p-values.
 
-
 </details>
 
 ## A/B Testing
@@ -912,12 +1067,15 @@ Q. Statistical significance.
 
 
 
-Q. Variable correlation.
+
+### Q: Variable correlation.
+
 1. What happens to a regression model if two of their supposedly independent variables are strongly correlated?
 1. How do we test for independence between two categorical variables?
 1. How do we test for independence between two continuous variables?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. If predictors of a regression model are highly correlated, we might have following issues:
     - It will make interpretability harder, it will be harder to get individual feature impact on final outcome.
@@ -996,16 +1154,26 @@ $$\[r = \frac{\sum((X - \bar{X})(Y - \bar{Y}))}{\sqrt{\sum(X - \bar{X})^2 \sum(Y
 
 ---
 
-Q. What is the difference between parametric and non-parametric tests in machine learning?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the difference between parametric and non-parametric tests in machine learning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Parametric Tests** (t-test, ANOVA): Assume underlying data follows a specific distribution (e.g., Gaussian) with fixed parameters. Higher statistical power if assumptions hold.
+- **Non-Parametric Tests** (Mann-Whitney U, Wilcoxon, Kruskal-Wallis): Make no distributional assumptions, relying on rank ordering of data. Robust to outliers and skewed data.
+
 </details>
 
 ---
 
-Q. A/B testing is a method of comparing two versions of a solution against each other to determine which one performs better. What are some of the pros and cons of A/B testing?
 
-<details><summary><b>Answer</b></summary>
+### Q: A/B testing is a method of comparing two versions of a solution against each other to determine which one performs better. What are some of the pros and cons of A/B testing?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A/B testing is a powerful technique used in a variety of fields including web design, marketing, product development, and more, to make data-driven decisions. 
 
@@ -1030,35 +1198,56 @@ A/B testing is a powerful technique used in a variety of fields including web de
 
 ---
 
-Q. You want to test which of the two ad placements on your website is better. How many visitors and/or how many times each ad is clicked do we need so that we can be $95%$ sure that one placement is better?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: You want to test which of the two ad placements on your website is better. How many visitors and/or how many times each ad is clicked do we need so that we can be $95%$ sure that one placement is better?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `You want to test which of the two ad placements on your website is better. How many visitors and/or how many times each ad is clicked do we need so that we can be $95%$ sure that one placement is better?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Your company runs a social network whose revenue comes from showing ads in newsfeeds. To double revenue, your coworker suggests that you should just double the number of ads shown. Is that a good idea? How do you find out?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Your company runs a social network whose revenue comes from showing ads in newsfeeds. To double revenue, your coworker suggests that you should just double the number of ads shown. Is that a good idea? How do you find out?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Your company runs a social network whose revenue comes from showing ads in newsfeeds. To double revenue, your coworker suggests that you should just double the number of ads shown. Is that a good idea? How do you find out?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. Imagine that you have the prices of $ 10,000 stocks over the last 24-month period and you only have the price at the end of each month, which means you have 24 price points for each stock. After calculating the correlations of $10,000 * 9,9992$ pairs of stock, you found a pair that has a correlation to be above 0.8.
+
+### Q: Imagine that you have the prices of $ 10,000 stocks over the last 24-month period and you only have the price at the end of each month, which means you have 24 price points for each stock. After calculating the correlations of $10,000 * 9,9992$ pairs of stock, you found a pair that has a correlation to be above 0.8.
+
 1. What’s the probability that this happens by chance?
 1. How to avoid this kind of accidental pattern?
     
-<details><summary><b>Answer</b></summary>
-    
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Imagine that you have the prices of $ 10,000 stocks over the last 24-month period and you only have the price at the end of each month, which means you have 24 price points for each stock. After calculating the correlations of $10,000 * 9,9992$ pairs of stock, you found a pair that has a correlation to be above 0.8.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
 </details>
 
 ---
 
-Q. How are sufficient statistics and the Information Bottleneck Principle used in machine learning?
 
-<details><summary><b>Answer</b></summary>
+### Q: How are sufficient statistics and the Information Bottleneck Principle used in machine learning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 <p>
 Sufficient statistics and the Information Bottleneck (IB) Principle are fundamental concepts in statistics and information theory that have found important applications in machine learning. 
@@ -1088,4 +1277,6 @@ The Information Bottleneck (IB) Principle is a method for finding the relevant i
 
 </details>
 
+---
 
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

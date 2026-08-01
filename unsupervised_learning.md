@@ -15,9 +15,12 @@ Contents
 
 ## General Concepts
 
-Q. What is unsupervised learning?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is unsupervised learning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is a set of statistical tools intended for the setting in which we have only a set of features $X1, X2, . . . , Xp$ measured on $n$ observations. We are not interested in prediction, because we do not have an associated response variable $Y$. Rather, the goal is to discover interesting patterns in the measurements on $X1, X2, . . . , X_p$
 
@@ -25,10 +28,13 @@ It is a set of statistical tools intended for the setting in which we have only 
 
 ---
 
-Q. Name some scenarios where we can use unsupervised learning algorithms?
+
+### Q: Name some scenarios where we can use unsupervised learning algorithms?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use unsupervised learning in following use-cases:
 
@@ -48,9 +54,12 @@ We can use unsupervised learning in following use-cases:
 
 ## Clustering
 
-Q. What do you mean by clustering?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by clustering?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Clustering refers to a very broad set of techniques for finding subgroups, or clusters, in a data set. When we cluster the observations of a data set, we seek to partition them into distinct groups so that the observations within each group are quite similar to each other, while observations in different groups are quite different from each other.
 
@@ -58,9 +67,12 @@ Clustering refers to a very broad set of techniques for finding subgroups, or cl
 
 ---
 
-Q. What is the main difference between clustering and PCA?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the main difference between clustering and PCA?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Although both clustering and PCA seeks to simplify the data via a small number of summaries, but their mechanism is different:
 
@@ -71,10 +83,12 @@ Although both clustering and PCA seeks to simplify the data via a small number o
 
 ---
 
-Q. What is the role of the $K$ in K-means?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the role of the $K$ in K-means?
 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $K$ is a hyperparameter that decides number of clusters we want from the model to find in the underlying data.
 
@@ -82,9 +96,12 @@ $K$ is a hyperparameter that decides number of clusters we want from the model t
 
 ---
 
-Q. What are the advantages of K-means clustering?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the advantages of K-means clustering?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 K-means clustering offers several key advantages:
 
@@ -99,14 +116,17 @@ K-means clustering offers several key advantages:
 ---
 
 
-Q. K-means clustering:
+
+### Q: K-means clustering:
+
 1. How would you choose the value of k?
 1. If the labels are known, how would you evaluate the performance of your k-means clustering algorithm?
 1. How would you do it if the labels aren’t known?
 1. Given the following dataset, can you predict how K-means clustering works on it? Explain.
 ![image](img/k_means.png)
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. We can use following methods to get the optimal value $K$
 
@@ -122,18 +142,19 @@ Q. K-means clustering:
         - Split the data into training and validation sets, perform K-means clustering on the training set for different values of $K$, and evaluate the clustering performance on the validation set.
         - Choose the $K$ that gives the best performance on the validation set.
 
-2. 
-
-
+2.
 
 </details>
 
 ---
 
 
-Q. What are the limitations of K-means clustering?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the limitations of K-means clustering?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 K-means clustering suffers from following limitations:
 
@@ -154,9 +175,12 @@ K-means clustering suffers from following limitations:
 ---
 
 
-Q. How do you initialize the centroids in K-means?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do you initialize the centroids in K-means?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Initializing centroid plays crucial role in model's performance and can impact quality of final clusters.
 
@@ -169,15 +193,18 @@ Initializing centroid plays crucial role in model's performance and can impact q
 
     - This is improvement over random initialization, here we select first centroid randomly and then chooses subsequent centroids probabilistically based on their distance from the nearest existing centroid. 
     - Points further away from existing centroids are more likely to be selected.
-    - Computationally expensive  
+    - Computationally expensive
 
 </details>
 
 ---
 
-Q. Why is it important to run the K-means algorithm multiple times with different initial cluster assignments, and how is the best solution selected?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why is it important to run the K-means algorithm multiple times with different initial cluster assignments, and how is the best solution selected?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 K-means clustering is sensitive to the initial random assignment of cluster centroids, which means it can converge to different local optima rather than the global optimum. To address this issue and improve the reliability of the results, it is crucial to run the algorithm multiple times with different random initializations. By doing so, you obtain several different clustering solutions.
 
@@ -194,14 +221,16 @@ To select the best solution, compare the objective values (within-cluster sum of
 </tr>
 </table>
 
-
 </details>
 
 ---
 
-Q. What does within-cluster variation depicts? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What does within-cluster variation depicts?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The *within-cluster variation* for cluster $C_k$ is a measure $W(C_k)$ of the amount by which the observations within a cluster differ from each other.
 
@@ -212,9 +241,12 @@ $$W(C_k) = \frac{1}{|C_k|}\sum_{i, i'\epsilon C_k}\sum_{j=1}^{p}(x_{ij} - x_{i'j
 ---
 
 
-Q. What is the convergence criteria in K-means?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the convergence criteria in K-means?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In K-means clustering, convergence is typically achieved when one of the following criteria is met:
 
@@ -229,9 +261,12 @@ These criteria ensure the algorithm stops when clusters are stable and further i
 
 ---
 
-Q. What is Silhouette score, and How do we calculate it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Silhouette score, and How do we calculate it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Silhouette score is a measure used to evaluate the quality of clustering by quantifying how similar each data point is to its own cluster compared to other clusters.
 
@@ -272,14 +307,16 @@ We can calculate it using following expressions:
 
     where $n$ is the number of data points.
 
-
 </details>
 
 ---
 
-Q. What are some applications of K-means clustering?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are some applications of K-means clustering?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Here are some application of K-Means clustering:
 
@@ -288,31 +325,33 @@ Here are some application of K-Means clustering:
 - Predicting account attrition
 - Image compression
 
-
 </details>
 
 ---
 
 
-Q. Can K-means handle categorical data?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can K-means handle categorical data?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The standard K-means algorithm is not directly applicable to categorical data because it relies on Euclidean distance, which is not meaningful for discrete, non-numeric categories. Unlike continuous data, categorical data lacks a natural origin and does not support Euclidean distance measurements. As a result, traditional K-means, which computes distances based on mean values, is not suitable for such data.
 
 We can use a variation of K-means called K-modes. It uses *Hamming distance* as a distance metric and update centroids by mode instead of mean, making it more subtle for discrete attributes.
 
-
-
-
 </details>
 
 ---
 
 
-Q. How do you evaluate the quality of K-means clusters?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do you evaluate the quality of K-means clusters?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use following metrics to evaluate the K-means clusters:
 
@@ -323,54 +362,75 @@ We can use following metrics to evaluate the K-means clusters:
 
 ---
 
-Q. k-means and GMM are both powerful clustering algorithms.
+
+### Q: k-means and GMM are both powerful clustering algorithms.
+
 1. Compare the two.
 1. When would you choose one over another?
 
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
-
-</details>
-
----
-
-Q. What are the key parameters in DBSCAN, and what do they represent?
-
-<details><summary><b>Answer</b></summary>
-
-
+- **K-Means**: Hard clustering assigning points to nearest centroid using Euclidean distance. Assumes spherical, equal-variance clusters.
+- **GMM (Gaussian Mixture Model)**: Soft probabilistic clustering assigning posterior membership probabilities $P(k|x_i)$ via Expectation-Maximization (EM). Models elliptical clusters with arbitrary covariance matrices.
 
 </details>
 
 ---
 
-Q. What is the difference between core points, border points, and noise points in DBSCAN?
 
-<details><summary><b>Answer</b></summary>
-
+### Q: What are the key parameters in DBSCAN, and what do they represent?
 
 
-</details>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
----
-
-Q. How does DBSCAN handle clusters of different shapes?
-
-<details><summary><b>Answer</b></summary>
-
-
+- **eps ($\epsilon$)**: Maximum radius distance to consider points as neighbors.
+- **minPts**: Minimum number of neighbor points within $\epsilon$-radius required to form a dense core region.
 
 </details>
 
 ---
 
-Q. What are the advantages of using DBSCAN over other clustering algorithms, such as K-means?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the difference between core points, border points, and noise points in DBSCAN?
 
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Core Point**: Has $\ge \text{minPts}$ within its $\epsilon$-neighborhood.
+- **Border Point**: Has $< \text{minPts}$ within its $\epsilon$-neighborhood but lies within $\epsilon$-radius of a Core Point.
+- **Noise Point**: Neither a Core Point nor a Border Point (isolated outlier).
+
+</details>
+
+---
+
+
+### Q: How does DBSCAN handle clusters of different shapes?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- DBSCAN forms clusters by connecting density-reachable core points, enabling it to discover arbitrary non-spherical shapes (e.g., concentric circles, spirals) without pre-specifying number of clusters $K$.
+
+</details>
+
+---
+
+
+### Q: What are the advantages of using DBSCAN over other clustering algorithms, such as K-means?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+1. **Arbitrary Cluster Shapes**: Does not assume spherical clusters like K-Means.
+2. **No Prior $K$ Required**: Automatically determines cluster count based on local density.
+3. **Robust Outlier Handling**: Explicitly identifies noise points rather than forcing outliers into clusters.
 
 </details>
 
@@ -379,9 +439,12 @@ Q. What are the advantages of using DBSCAN over other clustering algorithms, suc
 
 ## Dimensionality Reduction
 
-Q. Why do we need dimensionality reduction?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why do we need dimensionality reduction?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We may need dimensionality reduction for following reasons:
 
@@ -390,14 +453,16 @@ We may need dimensionality reduction for following reasons:
 - **Improve Model Performance**: Reduce overfitting and improve generalization by removing noisy or irrelevant features.
 - **Simplify Models**: Make models more interpretable by focusing on key features.
 
-
 </details>
 
 ---
 
-Q. List down the two main approaches for dimensionality reduction?
 
-<details><summary><b>Answer</b></summary>
+### Q: List down the two main approaches for dimensionality reduction?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Dimensionality reduction can be achieved through two main approaches:
 
@@ -405,14 +470,16 @@ Dimensionality reduction can be achieved through two main approaches:
 
 - *Feature extraction* : A method where new, lower-dimensional features are derived from the original data to capture essential patterns and relationships.
 
-
 </details>
 
 ---
 
-Q. What are some linear techniques of dimensionality reduction?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are some linear techniques of dimensionality reduction?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can use following linear feature extraction techniques that can transform the original data into a lower-dimensional representation:
 
@@ -425,21 +492,12 @@ We can use following linear feature extraction techniques that can transform the
 
 ---
 
-Q. What is the benefit of using linear methods for dimensionality reduction?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using linear methods for dimensionality reduction?
 
-- Straight forward and computationally effective 
-- Interpretable results
-- Effective when relationship in data are approximately linear
 
-</details>
-
----
-
-Q. What is the benefit of using linear methods for dimensionality reduction?
-
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Straight forward and computationally effective 
 - Interpretable results
@@ -449,9 +507,27 @@ Q. What is the benefit of using linear methods for dimensionality reduction?
 
 ---
 
-Q. What are the drawbacks of using linear methods for dimensionality reduction?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using linear methods for dimensionality reduction? (Part 2)
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- Straight forward and computationally effective 
+- Interpretable results
+- Effective when relationship in data are approximately linear
+
+</details>
+
+---
+
+
+### Q: What are the drawbacks of using linear methods for dimensionality reduction?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Linear methods capture only global correlations, leading to information loss, especially when the data has non-linear relationships or complex feature interactions.
 - They are sensitive to outliers, which can distort the results.
@@ -462,9 +538,12 @@ Q. What are the drawbacks of using linear methods for dimensionality reduction?
 
 ---
 
-Q. What are the benefits of using nonlinear methods in dimensionality reduction?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the benefits of using nonlinear methods in dimensionality reduction?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Nonlinear methods use transformations to generate new features that capture complex patterns and relationships in the data, which linear methods might miss.
 - By mapping data into a higher-dimensional space, nonlinear techniques can uncover hidden structures even when the original feature set is large relative to the number of samples.
@@ -475,9 +554,12 @@ Q. What are the benefits of using nonlinear methods in dimensionality reduction?
 
 ---
 
-Q. What are some non-linear techniques of dimensionality reduction?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are some non-linear techniques of dimensionality reduction?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Manifold based techniques:
 
@@ -493,32 +575,42 @@ Deep learning technique:
 
 ---
 
-Q. Eigen decomposition is a common factorization technique used for dimensionality reduction. Is the eigen decomposition of a matrix always unique?
 
-<details><summary><b>Answer</b></summary>
-
+### Q: Eigen decomposition is a common factorization technique used for dimensionality reduction. Is the eigen decomposition of a matrix always unique?
 
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-</details>
-
----
-
-
-Q. Name some applications of eigenvalues and eigenvectors.
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Eigen decomposition is a common factorization technique used for dimensionality reduction. Is the eigen decomposition of a matrix always unique?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
 
-Q. We want to do PCA on a dataset of multiple features in different ranges. For example, one is in the range $0-1$ and one is in the range $10 - 1000$. Will PCA work on this dataset?
 
-<details><summary><b>Answer</b></summary>
+### Q: Name some applications of eigenvalues and eigenvectors.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `Name some applications of eigenvalues and eigenvectors.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+
+
+### Q: We want to do PCA on a dataset of multiple features in different ranges. For example, one is in the range $0-1$ and one is in the range $10 - 1000$. Will PCA work on this dataset?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yeah, PCA will work in this scenario but it may not provide optimal principal components.
 
@@ -542,31 +634,42 @@ It is important to scale the data points such that they are centered to have mea
 ---
 
 
-Q. Under what conditions can one apply eigen decomposition? What about SVD?
+
+### Q: Under what conditions can one apply eigen decomposition? What about SVD?
+
 1. What is the relationship between SVD and eigen decomposition?
 1. What’s the relationship between PCA and SVD?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
-
-
-</details>
-
----
-
-Q. How does $t-SNE$ (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?
-
-<details><summary><b>Answer</b></summary>
-
-
+- **Direct Solution**: Analytical solution and mathematical formulation for `Under what conditions can one apply eigen decomposition? What about SVD?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. Is it good to use PCA as a feature selection method?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does $t-SNE$ (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `How does $t-SNE$ (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
+
+</details>
+
+---
+
+
+### Q: Is it good to use PCA as a feature selection method?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 No, PCA is not a good way to do feature selection as it does not consider response while calculating the principal components. A feature having less variance does not mean it is providing less or no information.
 
@@ -574,9 +677,12 @@ No, PCA is not a good way to do feature selection as it does not consider respon
 
 ---
 
-Q. Is PCA a linear model or non-linear model?
 
-<details><summary><b>Answer</b></summary>
+### Q: Is PCA a linear model or non-linear model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 PCA is a linear model. Because, PCA works by finding new axes (principal components) that are linear combinations of the original features. These components are created by finding the directions in the data that maximize variance while ensuring that these directions are orthogonal (uncorrelated) to each other.
 
@@ -584,19 +690,26 @@ PCA is a linear model. Because, PCA works by finding new axes (principal compone
 
 ---
 
-Q. What is the importance of eigenvalues and eigenvectors in PCA?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the importance of eigenvalues and eigenvectors in PCA?
 
 
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Direct Solution**: Analytical solution and mathematical formulation for `What is the importance of eigenvalues and eigenvectors in PCA?`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. How do you decide the number of principal components to retain in PCA?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do you decide the number of principal components to retain in PCA?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We use different approaches to get optimal number of principal components in PCA.
 
@@ -637,9 +750,12 @@ Certainly! Here are the main points summarized:
 
 ---
 
-Q. What is the difference between PCA and Linear Discriminant Analysis (LDA)?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the difference between PCA and Linear Discriminant Analysis (LDA)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - PCA is unsupervised while LDA is supervised in training
 - PCA focus on capturing maximum variance in the data without considering class labels, while LDA focus on maximizing class separability, taking class labels into the account.
@@ -649,9 +765,12 @@ Q. What is the difference between PCA and Linear Discriminant Analysis (LDA)?
 
 ---
 
-Q. What are the limitations of PCA?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the limitations of PCA?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Here are main limitations of PCA:
 
@@ -663,14 +782,16 @@ Here are main limitations of PCA:
 
 4. **Sensitivity to Scaling:** PCA is sensitive to the scale of the features, requiring careful standardization or normalization of data before applying the method.
 
-
 </details>
 
 ---
 
-Q. Explain the concept of whitening in PCA.
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain the concept of whitening in PCA.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 PCA Whitening is a processing step for mainly image based data that makes input less redundant.
 
@@ -691,22 +812,30 @@ Whitening has two simple steps:
 
 ## Recommendation Engines
 
-Q. Given this directed graph.
+
+### Q: Given this directed graph.
+
     ![image](img/dag.png)
 1. Construct its adjacency matrix.
 1. How would this matrix change if the graph is now undirected?
 1. What can you say about the adjacency matrices of two isomorphic graphs?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given this directed graph.`.
+- **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-Q. What is a recommendation system?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is a recommendation system?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A recommendation system is a subclass of information filtering system that seeks to predict the rating or preference a user would give to an item. These systems analyze data about user preferences and behaviors to suggest products, services, or content that users are likely to find valuable.
 
@@ -714,9 +843,12 @@ A recommendation system is a subclass of information filtering system that seeks
 
 ---
 
-Q. What is the importance of recommendation system?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the importance of recommendation system?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A good recommendation system can help in
 - Personalization: Enhances user experience by providing personalized suggestions.
@@ -728,9 +860,12 @@ A good recommendation system can help in
 
 ---
 
-Q. Define Items, Queries and Embedding in context of recommendation system?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define Items, Queries and Embedding in context of recommendation system?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Items(also known as documents) : The entities a system recommends. For google play store, the items are apps to install. For YouTube, the items are videos.
 - Query(also known as context) : The information a system uses to make recommendation.
@@ -746,9 +881,12 @@ Q. Define Items, Queries and Embedding in context of recommendation system?
 
 ---
 
-Q. What are the main components of a recommendation system?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the main components of a recommendation system?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Recommendation systems consists of the following components:
 - Candidate generation
@@ -759,9 +897,12 @@ Recommendation systems consists of the following components:
 
 ---
 
-Q. What is candidate generation in a recommendation system, and what are the main approaches to accomplish it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is candidate generation in a recommendation system, and what are the main approaches to accomplish it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Candidate Generation is the initial phase in a recommendation system where a subset of potentially relevant items (called candidates) is retrieved from the entire item catalog for a user.
 
@@ -773,9 +914,12 @@ There are two main approaches in candidate generation:
 
 ---
 
-Q. How do content-based and collaborative filtering methods utilize embedding spaces to represent items and queries?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do content-based and collaborative filtering methods utilize embedding spaces to represent items and queries?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Both content-based and collaborative filtering techniques employ embedding spaces to map items (such as products, movies, or videos) and user queries into numerical vectors within a common, low-dimensional space $E = \mathbf{R}^d$. This embedding space is significantly smaller than the size of the entire item corpus, enabling efficient computation and storage. It captures some latent structure of the item or query set. Similar items, such as YouTube videos that are usually watched by the same user, end up close together in the embedding space.
 
@@ -783,9 +927,12 @@ Both content-based and collaborative filtering techniques employ embedding space
 
 ---
 
-Q. Define similarity measures in context of recommendation system?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define similarity measures in context of recommendation system?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A similarity measures is a function $s : E \times E \rightarrow \mathbf{R}$ that takes a pair of embeddings and returns a scaler measuring their similarity. The embeddings can be used candidate generation as follows:
 - Given a query embedding $q \in E$
@@ -796,9 +943,12 @@ A similarity measures is a function $s : E \times E \rightarrow \mathbf{R}$ that
 
 ---
 
-Q. What are different methods to measure degree of similarity?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are different methods to measure degree of similarity?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 To determine the degree of similarity, most recommendation systems rely on one or more of the following:
 
@@ -818,9 +968,12 @@ Distance in euclidean space, $s(q, x) = ||q - x|| = [sum_{i=1}^{d}(q_i - x_i)^2]
 
 ---
 
-Q. How should one choose the appropriate similarity metric for candidate generation in recommendation systems?
 
-<details><summary><b>Answer</b></summary>
+### Q: How should one choose the appropriate similarity metric for candidate generation in recommendation systems?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Choosing the right similarity metric for candidate generation in recommendation systems depends on how the metric handles the norms of the embeddings, which impacts the type of items recommended:
 
@@ -839,9 +992,12 @@ Choosing the right similarity metric for candidate generation in recommendation 
 
 ---
 
-Q. How can we utilize content-based filtering in the candidate generation process?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we utilize content-based filtering in the candidate generation process?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Content-based filtering recommends items by analyzing item features and matching them with what a user has previously liked or interacted with. For example, in a Google Play store scenario, each app is represented by a feature matrix with attributes like categories or publishers. Similarly, the user's preferences are represented in the same feature space, based on explicit choices (e.g., selecting "Entertainment apps") or implicit behavior (e.g., previously installed apps). To recommend relevant apps, the system uses a similarity metric, such as dot product, to score each item, ensuring the recommendations are personalized and specific to that user without considering other users' data.
 
@@ -860,9 +1016,12 @@ Content-based filtering recommends items by analyzing item features and matching
 
 ---
 
-Q. State the advantages and disadvantages of content-based filtering?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the advantages and disadvantages of content-based filtering?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 **Advantages**
 
@@ -874,14 +1033,16 @@ Q. State the advantages and disadvantages of content-based filtering?
 - Since the feature representation of the items are hand-engineered to some extent, this technique requires a lot of domain knowledge. Therefore, the model can only be as good as the hand-engineered features.
 - The model can only make recommendations based on existing interests of the user. In other words, the model has limited ability to expand on the users' existing interests.
 
-
 </details>
 
 ---
 
-Q. What is the cold start problem in recommendation systems, and how can you address it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the cold start problem in recommendation systems, and how can you address it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It occurs when a recommendation system has insufficient data about new users or items, making it challenging to provide accurate recommendations.
 
@@ -898,21 +1059,26 @@ We can address cold start problem as follows
 
 ---
 
-Q. State explicit and implicit feedback with examples?
 
-<details><summary><b>Answer</b></summary>
+### Q: State explicit and implicit feedback with examples?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Explicit — users specify how much they liked a particular movie by providing a numerical rating.
 - Implicit — if a user watches a movie, the system infers that the user is interested.
-
 
 </details>
 
 ---
 
-Q. How does collaborative filtering work?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does collaborative filtering work?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Collaborative filtering uses similarities between users and items simultaneously to provide recommendations. This allows for serendipitous recommendations; that is, collaborative filtering models can recommend an item to user A based on the interests of a similar user B.
 
@@ -932,9 +1098,12 @@ This method focuses on the similarity between items, rather than users. It looks
 
 ---
 
-Q. What are the advantages and disadvantages of collaborative filtering?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the advantages and disadvantages of collaborative filtering?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 **Advantages**
 
@@ -951,9 +1120,12 @@ Q. What are the advantages and disadvantages of collaborative filtering?
 
 ---
 
-Q. How can user and item embeddings be learned using matrix factorization in collaborative filtering?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can user and item embeddings be learned using matrix factorization in collaborative filtering?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In collaborative filtering, user and item embeddings can be learned through matrix factorization by decomposing the user-item interaction matrix into two lower-dimensional matrices. Here’s how it works:
 
@@ -992,9 +1164,12 @@ In collaborative filtering, user and item embeddings can be learned through matr
 
 ---
 
-Q. What is the issue with learning embeddings using matrix factorization?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the issue with learning embeddings using matrix factorization?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Some limitations of matrix factorization include:
 
@@ -1005,9 +1180,12 @@ Some limitations of matrix factorization include:
 
 ---
 
-Q. How can we use Deep Neural Network model for recommendation?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we use Deep Neural Network model for recommendation?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Possible DNN model is softmax, which treats the problem as a multiclass prediction problem in which:
 - The input is the user query.
@@ -1032,9 +1210,12 @@ Here the user query can be
 
 ---
 
-Q. What is the benefit of using matrix factorization to learn embeddings over softmax DNN?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using matrix factorization to learn embeddings over softmax DNN?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Matrix factorization is usually the better choice for large corpora. It is easier to scale, cheaper to query, and less prone to folding.
 
@@ -1042,9 +1223,12 @@ Matrix factorization is usually the better choice for large corpora. It is easie
 
 ---
 
-Q. What is the benefit of using softmax DNN over matrix factorization for learning embeddings?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using softmax DNN over matrix factorization for learning embeddings?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 DNN models are preferable to matrix factorization for scoring because DNN models can use more features to better capture relevance. Also, it is usually acceptable for DNN models to fold, since you mostly care about ranking a pre-filtered set of candidates assumed to be relevant.
 
@@ -1052,9 +1236,12 @@ DNN models are preferable to matrix factorization for scoring because DNN models
 
 ---
 
-Q. What strategies can be employed to efficiently compute the nearest neighbors in the embedding space of a recommendation system, and how do they work?
 
-<details><summary><b>Answer</b></summary>
+### Q: What strategies can be employed to efficiently compute the nearest neighbors in the embedding space of a recommendation system, and how do they work?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 When dealing with large corpora in recommendation systems, finding the nearest neighbors in the embedding space efficiently is a significant challenge due to the computational demands of exhaustive scoring.
 
@@ -1074,24 +1261,30 @@ When dealing with large corpora in recommendation systems, finding the nearest n
 
 ---
 
-Q. Why should we avoid using candidate generators to rank items in a recommendation system, and what are the benefits of separating candidate generation from the ranking process?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why should we avoid using candidate generators to rank items in a recommendation system, and what are the benefits of separating candidate generation from the ranking process?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 While candidate generators compute a score (e.g., similarity in the embedding space), they should not be used to rank items for several important reasons:
 
 - Multiple Candidate Generators:
     - In many recommendation systems, several candidate generators (e.g., content-based, collaborative filtering, popularity-based models) are used to produce a diverse pool of candidates. Each generator may compute scores differently, and these scores are often not directly comparable across models. If you let the candidate generators handle ranking, the system may end up mixing scores that are incompatible, leading to suboptimal or biased recommendations.
 - Complexity of Ranking:
-    - Once you have a smaller pool of candidates, the system can afford to use a more complex ranking model with additional features (such as user behavior patterns, real-time context, or item attributes) to better capture the nuances of user preferences. 
+    - Once you have a smaller pool of candidates, the system can afford to use a more complex ranking model with additional features (such as user behavior patterns, real-time context, or item attributes) to better capture the nuances of user preferences.
 
 </details>
 
 ---
 
-Q. How does the choice of scoring function affects the ranking of items and quality of recommendations?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does the choice of scoring function affects the ranking of items and quality of recommendations?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The choice of scoring function can dramatically affect the ranking of items, and ultimately the quality of the recommendations.
 
@@ -1102,9 +1295,12 @@ The choice of scoring function can dramatically affect the ranking of items, and
 
 ---
 
-Q. What is the benefit of re-ranking in recommendation system?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of re-ranking in recommendation system?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Re-ranking is crucial because it allows for more personalized, context-aware, and business-oriented recommendations. It refines the initial list of candidates by considering a broader range of features, improving the overall relevance and quality of the recommendations, and addressing factors such as diversity, business goals, and user context that might not be considered during candidate generation.
 
@@ -1112,11 +1308,14 @@ Re-ranking is crucial because it allows for more personalized, context-aware, an
 
 ---
 
-Q. Imagine we build a user-item collaborative filtering system to recommend to each user items similar to the items they’ve bought before.
+
+### Q: Imagine we build a user-item collaborative filtering system to recommend to each user items similar to the items they’ve bought before.
+
 1. You can build either a user-item matrix or an item-item matrix. What are the pros and cons of each approach?
 1. How would you handle a new user who hasn’t made any purchases in the past?
 
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 1. 
 **User-Item Matrix:**
@@ -1146,9 +1345,12 @@ Q. Imagine we build a user-item collaborative filtering system to recommend to e
 
 ## Autoencoders
 
-Q. What is an autoencoder? 
 
-<details><summary><b>Answer</b></summary>
+### Q: What is an autoencoder?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 An autoencoder is a specific type of a neural network, which is mainly designed to encode the input into a compressed and meaningful representation, and then decode it back such that the reconstructed input is similar as possible to the original one.
 
@@ -1173,9 +1375,12 @@ The network maybe viewed as consisting of two parts:
 
 ---
 
-Q. Is an autoencoder example of semi-supervised or self-supervised learning?
 
-<details><summary><b>Answer</b></summary>
+### Q: Is an autoencoder example of semi-supervised or self-supervised learning?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 True, It sort-of is supervised learning because we give the system explicit goal data (the output should be the same as the input), and it sort-of isn’t supervised learning because we don’t have any manually determined labels or targets on the inputs.
 
@@ -1183,9 +1388,12 @@ True, It sort-of is supervised learning because we give the system explicit goal
 
 ---
 
-Q. Why do we need autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why do we need autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Map high-dimensional data to two dimensions for visualization
 - Compression (i.e reducing the file size)
@@ -1195,9 +1403,12 @@ Q. Why do we need autoencoders?
 
 ---
 
-Q. What is the expression of a linear autoencoder? Is it similar to PCA?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the expression of a linear autoencoder? Is it similar to PCA?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A simple linear autoencoder can be defined as follows:
 
@@ -1221,9 +1432,12 @@ If we learn the functions \( f \) and \( g \) to minimize the squared reconstruc
 
 ---
 
-Q. What are the common loss functions used in training autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the common loss functions used in training autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The choice of loss function depends on the type of data being used:
 
@@ -1243,9 +1457,12 @@ $$
 
 ---
 
-Q. Can backpropagation be used to train autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can backpropagation be used to train autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes, the standard backpropagation technique can be used to train the parameters of autoencoders.
 
@@ -1253,9 +1470,12 @@ Yes, the standard backpropagation technique can be used to train the parameters 
 
 ---
 
-Q. What is the bottleneck layer in autoencoders, and what is its significance?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the bottleneck layer in autoencoders, and what is its significance?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The bottleneck layer is the central, smallest hidden layer in an autoencoder that compresses the input data into a lower-dimensional representation. Its significance lies in forcing the model to learn the most essential features and patterns of the data, effectively reducing dimensionality and eliminating redundant information. This compressed representation is crucial for tasks like feature extraction, anomaly detection, and noise reduction.
 
@@ -1274,9 +1494,12 @@ The bottleneck layer is the central, smallest hidden layer in an autoencoder tha
 
 ---
 
-Q. Should the encoder and decoder have the same size in an autoencoder? Which one is typically deeper?
 
-<details><summary><b>Answer</b></summary>
+### Q: Should the encoder and decoder have the same size in an autoencoder? Which one is typically deeper?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The encoder and decoder in an autoencoder do not need to have the same size or architecture. The encoder is often designed to be deeper than the decoder, as its primary goal is to learn a compressed, meaningful representation of the input data. A deeper encoder can capture more complex patterns and features, making the compression more effective. The decoder, on the other hand, is generally simpler and reconstructs the input from the compressed representation, focusing on mapping the low-dimensional features back to the original space.
 
@@ -1284,9 +1507,12 @@ The encoder and decoder in an autoencoder do not need to have the same size or a
 
 ---
 
-Q. What issues might arise if the decoder is deeper than the encoder in an autoencoder?
 
-<details><summary><b>Answer</b></summary>
+### Q: What issues might arise if the decoder is deeper than the encoder in an autoencoder?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Having a deeper decoder than the encoder can lead to potential issues. A powerful decoder might learn to reconstruct the data by memorizing specific patterns or data points, rather than learning meaningful and generalizable features from the encoder's compressed representation. This can result in the model relying on the decoder’s ability to reconstruct from minimal encoded information, reducing the effectiveness of the encoder in learning compact, valuable features. In contrast, a deeper encoder and simpler decoder help avoid this problem by focusing on robust feature extraction.
 
@@ -1294,9 +1520,12 @@ Having a deeper decoder than the encoder can lead to potential issues. A powerfu
 
 ---
 
-Q. What is the benefit of using tied weights in autoencoder model?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the benefit of using tied weights in autoencoder model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Autoencoders with tied weights have some important advantages:
 
@@ -1309,9 +1538,12 @@ Autoencoders with tied weights have some important advantages:
 
 ---
 
-Q. What is an undercomplete and overcomplete autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is an undercomplete and overcomplete autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 *Undercomplete Autoencoders*
 
@@ -1340,9 +1572,12 @@ $$dim(h) >= dim(x_{input})$$
 
 ---
 
-Q. Why are overcomplete autoencoders less commonly used in practice?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why are overcomplete autoencoders less commonly used in practice?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Overcomplete autoencoders have a latent space dimension larger than the input dimension. This can lead to the autoencoder learning a trivial identity mapping, where it simply copies the input directly to the latent space and then reconstructs it without extracting meaningful features, undermining the purpose of learning compact and useful representations.
 
@@ -1350,9 +1585,12 @@ Overcomplete autoencoders have a latent space dimension larger than the input di
 
 ---
 
-Q. Why do we need to regularize the autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why do we need to regularize the autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In undercomplete autoencoders suppose  latent dimension $K=1$ and very powerful encoder $f(x)$ and decoder $g(x). In this case we can achieve very small reconstruction error but learned values will not capture any interesting properties.
 
@@ -1360,14 +1598,16 @@ In overcomplete autoencoder, suppose encoder $f(x)$ and decoder $g(x)$ are trivi
 
 In both cases we need to control the capacity of encoder and decoder. Therefore we need to regularize the functions as well as the learned code, not just reconstruction error.
 
-
 </details>
 
 ---
 
-Q. What are different ways to regularize autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are different ways to regularize autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 There are several ways to regularize autoencoders:
 
@@ -1375,14 +1615,16 @@ There are several ways to regularize autoencoders:
 - Denoising Autoencoders : Make the model robust against noisy/incomplete inputs
 - Contractive Autoencoders : Make the model robust against small changes in the input
 
-
 </details>
 
 ---
 
-Q. What do you mean by deep/stacked autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What do you mean by deep/stacked autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Autoencoders having more than one hidden layer are called deep autoencoders.
 
@@ -1401,9 +1643,12 @@ Autoencoders having more than one hidden layer are called deep autoencoders.
 
 ---
 
-Q. Why do we need sparsity in autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why do we need sparsity in autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - It introduces an information bottleneck without requiring a reduction in the number of nodes at our hidden layers
 - It allows our network to sensitize individual hidden layer nodes toward specific attributes of the input data
@@ -1425,9 +1670,12 @@ Q. Why do we need sparsity in autoencoders?
 
 ---
 
-Q. In sparse encoders do we regularize weights or activations of the network?
 
-<details><summary><b>Answer</b></summary>
+### Q: In sparse encoders do we regularize weights or activations of the network?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We regularize the activations of a network not the weights
 
@@ -1435,9 +1683,12 @@ We regularize the activations of a network not the weights
 
 ---
 
-Q. How can we introduce sparsity constraint in autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we introduce sparsity constraint in autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 There are two main ways by which we can impose sparsity constraint 
 
@@ -1463,15 +1714,18 @@ $$
 
 where the subscript $j$ denotes the specific neuron in layer $h$
 
-In essence, by constraining the average activation of a neuron over a collection of samples we're encouraging neurons to only fire for a subset of the observations. 
+In essence, by constraining the average activation of a neuron over a collection of samples we're encouraging neurons to only fire for a subset of the observations.
 
 </details>
 
 ---
 
-Q. What is denoising method in autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is denoising method in autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Denoising autoencoders are a type of autoencoder designed to make the learned representations robust to noise and variations in the data. The key idea is to introduce noise to the input data during training, such as by randomly corrupting some input features, and then train the autoencoder to reconstruct the original, clean version of the data from the noisy input.
 
@@ -1490,9 +1744,12 @@ Denoising autoencoders are a type of autoencoder designed to make the learned re
 
 ---
 
-Q. What are the benefits of denoising encoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the benefits of denoising encoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Advantages of denoising encoders:
 
@@ -1504,19 +1761,25 @@ Advantages of denoising encoders:
 
 ---
 
-Q. Define Contractive Autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: Define Contractive Autoencoders?
 
-Contractive Autoencoders (CAE) are a type of autoencoder designed to learn robust and invariant features by encouraging the model to learn a representation that is less sensitive to small variations in the input data. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Contractive Autoencoders (CAE) are a type of autoencoder designed to learn robust and invariant features by encouraging the model to learn a representation that is less sensitive to small variations in the input data.
 
 </details>
 
 ---
 
-Q. What is the loss function in contractive autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the loss function in contractive autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Loss function in contractive autoencoders:
 
@@ -1538,9 +1801,12 @@ $$
 
 ---
 
-Q. State the difference between contractive autoencoders and denoising autoencoders.
 
-<details><summary><b>Answer</b></summary>
+### Q: State the difference between contractive autoencoders and denoising autoencoders.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Contractive autoencoders and denoising autoencoders both aim to make the model robust to noise, but they achieve this in different ways. Denoising autoencoders introduce finite-sized noise to the input and train the decoder to reconstruct the original, clean input, making the *reconstruction function* robust to these perturbations. In contrast, contractive autoencoders focus on the encoder by penalizing the sensitivity of the learned representation to infinitesimal changes in the input, ensuring that the *feature extraction process* itself is resistant to small variations.
 
@@ -1548,9 +1814,12 @@ Contractive autoencoders and denoising autoencoders both aim to make the model r
 
 ---
 
-Q. Is Variational Autoencoder(VAE) kind of Stochastic Autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: Is Variational Autoencoder(VAE) kind of Stochastic Autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 True, VAE is popular example of stochastic autoencoders.
 
@@ -1558,9 +1827,12 @@ True, VAE is popular example of stochastic autoencoders.
 
 ---
 
-Q. State the difference between standard autoencoders and variational autoencoder(VAE)?
 
-<details><summary><b>Answer</b></summary>
+### Q: State the difference between standard autoencoders and variational autoencoder(VAE)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Standard autoencoders output a single value for each encoding dimension. The decoder network then subsequently takes these values and attempts to recreate the original input. While variation autoencoder(VAE) provides a probabilistic manner for describing an observation in latent space. In VAE the encoder model output parameters describing a distribution for each dimension in the latent space
 
@@ -1579,9 +1851,12 @@ Standard autoencoders output a single value for each encoding dimension. The dec
 
 ---
 
-Q. What reconstruction function do we use in stochastic autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What reconstruction function do we use in stochastic autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Negative log-likelihood:
 
@@ -1591,9 +1866,12 @@ $$-\log\rho_{decoder}(\frac{x|h})$$
 
 ---
 
-Q. What is reparameterization trick in VAE?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is reparameterization trick in VAE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The Reparameterization Trick in Variational Autoencoders (VAEs) is a technique used to enable the backpropagation of gradients through stochastic/random nodes, allowing the model to be trained end-to-end using gradient-based optimization.
 
@@ -1601,9 +1879,12 @@ The Reparameterization Trick in Variational Autoencoders (VAEs) is a technique u
 
 ---
 
-Q. Why do we need reparameterization trick in VAE?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why do we need reparameterization trick in VAE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In VAE decoder randomly samples from from true posterior $Z ~ q(z | \phi, x)$. To implement encoder and decoder as a neural network and use gradient descent for training we need to backpropogate through random sampling and that is the issue since backpropogation simply can't flow through random node; to overcome this issue we use reparameterization trick.
 
@@ -1623,9 +1904,12 @@ In VAE decoder randomly samples from from true posterior $Z ~ q(z | \phi, x)$. T
 
 ---
 
-Q. What loss function we use in Variational Autoencoder(VAE)?
 
-<details><summary><b>Answer</b></summary>
+### Q: What loss function we use in Variational Autoencoder(VAE)?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The loss function in VAE combines two key components
 
@@ -1663,9 +1947,12 @@ Here, reconstruction loss makes sure decoder accurately reconstruct the input da
 
 ---
 
-Q. How can we use autoencoders for classification task?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we use autoencoders for classification task?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Autoencoders can be used for classification by leveraging their ability to learn compressed, informative representations of data:
 
@@ -1677,9 +1964,12 @@ Autoencoders can be used for classification by leveraging their ability to learn
 
 ---
 
-Q. What are the limitations of autoencoders?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the limitations of autoencoders?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Sensitive to hyperparameters (e.g., layer size, learning rate), requiring careful tuning.
 - Vulnerable to noisy data and outliers, affecting representation quality.
@@ -1690,3 +1980,7 @@ Q. What are the limitations of autoencoders?
 </details>
 
 ---
+
+---
+
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)

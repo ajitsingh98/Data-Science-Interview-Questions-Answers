@@ -14,9 +14,12 @@ Contents
 
 ## Linear Regression
 
-Q. What is linear regression, and how does it work?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is linear regression, and how does it work?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Linear regression is a statistical model that assumes the regression function $E(Y|X)$ is linear or nearly linear. 
 
@@ -36,9 +39,12 @@ It uses **least squares** as a estimation method to calculate the values of coef
 
 ---
 
-Q. How to determine the coefficients of a simple linear regression model?
 
-<details><summary><b>Answer</b></summary>
+### Q: How to determine the coefficients of a simple linear regression model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Suppose we have a set of training data $(x_1, y_1),...,(x_n, y_n)$ from which we need to estimate the parameters $\beta$. Linear regression uses least squares estimation method to get values of the parameters. We pick the coefficients $\beta = (\beta_{0}, \beta_{1},....,\beta_{p}^{T})$ to minimize the residual sum of squares(RSS):
 
@@ -66,9 +72,12 @@ $$\hat{\beta} = (X^{T}X)^{-1}X^{T}y$$
 
 ---
 
-Q. In which scenarios linear model can outperforms fancier non linear models?
 
-<details><summary><b>Answer</b></summary>
+### Q: In which scenarios linear model can outperforms fancier non linear models?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In following cases in may happen:
 - Low signal to noise ratio
@@ -80,9 +89,12 @@ In following cases in may happen:
 
 ---
 
-Q. Suppose a model takes form of $f(X) = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{1}^{2}....$, Is it a linear model?
 
-<details><summary><b>Answer</b></summary>
+### Q: Suppose a model takes form of $f(X) = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{1}^{2}....$, Is it a linear model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yes model is still linear in nature. This is polynomial representation of a linear model.
 
@@ -98,9 +110,13 @@ No matter the source of the $X$, the model is linear in its parameter.
 
 ---
 
-Q. What are the assumptions of linear regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the assumptions of linear regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
 The main assumptions of linear models are following:
 - Linear relationship between predictors and response
     - If not then model may underfit and give bias predictions
@@ -117,9 +133,12 @@ The main assumptions of linear models are following:
 
 ---
 
-Q. Explain the difference between simple linear regression and multiple linear regression.
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain the difference between simple linear regression and multiple linear regression.
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The key difference between simple linear regression and multiple linear regression lies in the number of independent variables used to predict the dependent variable.
 
@@ -141,9 +160,12 @@ The key difference between simple linear regression and multiple linear regressi
 
 ---
 
-Q. What is Residual Standard Error(RSE) and how to interpret it?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is Residual Standard Error(RSE) and how to interpret it?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The RSE is an estimate of the standard deviation of residuals($\epsilon$). It is the average amount by which the response will deviate from the true regression line.
 
@@ -158,9 +180,12 @@ It is considered as the lack of the fit of the data. Lower values indicates mode
 ---
 
 
-Q. What is the purpose of the coefficient of determination (R-squared) in linear regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the purpose of the coefficient of determination (R-squared) in linear regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $R^2$ statistic provides goodness of fit and it is a unit less quantity so its better than the residual standard error.
 
@@ -178,15 +203,18 @@ And,
 
 $$RSS(Residual Sum of Squares) = \sum{(y_i - \cap{y})^2}$$
 
-Statistically, it measures the proportion of variability in $Y$ that can be explained using $X$. 
+Statistically, it measures the proportion of variability in $Y$ that can be explained using $X$.
 
 </details>
 
 ---
 
-Q. How to interpret the values of $R^2$ statistic?
+
+### Q: How to interpret the values of $R^2$ statistic?
+
    
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A number near 0 indicates the regression does not explain the variability in the response, whereas 1 indicates a large proportion of the variability in the response is explained by the regression.
 
@@ -194,9 +222,12 @@ A number near 0 indicates the regression does not explain the variability in the
 
 ---
 
-Q. How do you interpret the coefficients in a linear regression model?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do you interpret the coefficients in a linear regression model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Suppose we have a model of form:
 
@@ -217,9 +248,12 @@ Here's how to interpret them:
 
 ---
 
-Q. What is the difference between correlation and regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the difference between correlation and regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Correlation quantifies the degree to which two variables are related, without distinguishing between dependent and independent variables.
 - Regression models the dependence of a variable on one or more other variables, providing a predictive equation and allowing for an analysis of the effect of each predictor.
@@ -228,9 +262,12 @@ Q. What is the difference between correlation and regression?
 
 ---
 
-Q. What are the methods to assess the goodness of fit of a linear regression model?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the methods to assess the goodness of fit of a linear regression model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 There are several methods to measure goodness of fit with some pros and cons:
 
@@ -246,9 +283,12 @@ We can use combinations of above statistic to evaluate the model performance.
 
 ---
 
-Q. What is the purpose of the F-statistic in linear regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the purpose of the F-statistic in linear regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 F-statistic is mainly used for hypothesis testing where we want to assess whether at least one of the predictors $X_1, X_2, ..., X_p$ is useful in predicting the response.
 
@@ -278,9 +318,12 @@ So, when there is no relationship between predictors and the response then F-sta
 
 ---
 
-Q. What are the potential problems in linear regression analysis, and how can you address them?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the potential problems in linear regression analysis, and how can you address them?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Linear regression model may suffer from following issues mainly:
 
@@ -295,18 +338,32 @@ Linear regression model may suffer from following issues mainly:
 
 ---
 
-Q. What are some regularization techniques used in linear regression, and when are they applicable?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: What are some regularization techniques used in linear regression, and when are they applicable?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **L2 Regularization (Ridge)**: Adds $\|w\|_2^2$ penalty. Shrinks coefficients towards zero, handling multicollinearity smoothly.
+- **L1 Regularization (Lasso)**: Adds $\|w\|_1$ penalty. Performs feature selection by driving irrelevant feature weights to exactly zero.
+- **ElasticNet**: Combines L1 and L2 penalties ($\gamma L_1 + (1-\gamma) L_2$), ideal when handling correlated feature groups.
+
 </details>
 
 ---
 
-Q. Can you explain the concept of bias-variance trade-off in the context of linear regression?
 
-<details><summary><b>Answer</b></summary>
-    
+### Q: Can you explain the concept of bias-variance trade-off in the context of linear regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **Bias**: Error introduced by simplifying assumptions (underfitting). Linear regression has high bias if non-linear patterns exist.
+- **Variance**: Error introduced by sensitivity to small fluctuations in training data (overfitting). Unregularized linear regression with high dimensions has high variance.
+- **Trade-off**: Regularization ($L_1/L_2$) increases bias slightly while significantly decreasing variance, minimizing Total Expected MSE = $\text{Bias}^2 + \text{Variance} + \sigma^2$.
+
 </details>
 
 ---
@@ -314,7 +371,9 @@ Q. Can you explain the concept of bias-variance trade-off in the context of line
 ## Subset Selection
 
 
-Q. What do you mean by subset selection and how it is useful in linear regression models?
+
+### Q: What do you mean by subset selection and how it is useful in linear regression models?
+
 
 <details>
   <summary><b>Answer</b></summary>
@@ -334,9 +393,12 @@ Q. What do you mean by subset selection and how it is useful in linear regressio
 
 ---
 
-Q. What are some methods for selecting a subset of predictors?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are some methods for selecting a subset of predictors?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 There are mainly two methods for subset selection:
 
@@ -349,9 +411,12 @@ There are mainly two methods for subset selection:
 
 ---
 
-Q. Explain Best Subset Selection method?
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain Best Subset Selection method?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Suppose we have $p$ predictors, we then fit a separate model to each possible combinations of $p$ predictors. That is we fit all the $p$ models that contains exactly one predictor, all $\binom{p}{2}
  = p(p-1)/2$ models that contains exactly two predictors and so on. We then look at the resulting models to identify the best one on the basis of objective metrics.
@@ -367,9 +432,12 @@ Here is the stepwise algorithm:
 
 ---
 
-Q. What is the drawback of selecting the best subset of features on the basis of Residual Square Error(RSS) or $R^2$ score in the above method?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the drawback of selecting the best subset of features on the basis of Residual Square Error(RSS) or $R^2$ score in the above method?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 As we induct more features in the model RSS monotonically decreases and $R^2$ increases monotonically. Therefore, if we use these statistics to select the best model, then we will always end up with the model involving all of the variables. The problem is that a low RSS or a high $R^2$ indicates low training error, whereas we want to have low test error.
 
@@ -388,10 +456,13 @@ As we induct more features in the model RSS monotonically decreases and $R^2$ in
 
 ---
 
-Q. What are the limitations of Best Subset Selection method?
+
+### Q: What are the limitations of Best Subset Selection method?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 This method is simple and easy to understand but it suffers from the computational limitations. As we increase the number of predictors $p$, the number of possible models that we must consider increases exponentially. 
 
@@ -401,10 +472,13 @@ In general, there are $2^p$ models that involve subsets of $p$ predictors. So if
 
 ---
 
-Q. Given a use case that necessitates building a predictive model with a large number of features/predictors, which feature selection method would be most appropriate?
+
+### Q: Given a use case that necessitates building a predictive model with a large number of features/predictors, which feature selection method would be most appropriate?
 
 
-<details><summary><b>Answer</b></summary>
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Stepwise Selection
 
@@ -412,19 +486,25 @@ Stepwise Selection
 
 ---
 
-Q. Why Forward Stepwise Selection method is better than the Best Subset Selection?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why Forward Stepwise Selection method is better than the Best Subset Selection?
 
-Forward stepwise selection is a computationally efficient alternative to the best subset selection. While the best subset selection procedure considers all $2^p$ possible models containing subsets of $p$ predictors, forward stepwise consider a much smaller set of $1 + p(p+1)/2$ models 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Forward stepwise selection is a computationally efficient alternative to the best subset selection. While the best subset selection procedure considers all $2^p$ possible models containing subsets of $p$ predictors, forward stepwise consider a much smaller set of $1 + p(p+1)/2$ models
 
 </details>
 
 ---
 
-Q. How does the forward stepwise selection method works?
 
-<details><summary><b>Answer</b></summary>
+### Q: How does the forward stepwise selection method works?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Forward stepwise selection steps:
 
@@ -477,9 +557,12 @@ Steps:
 
 </details>
 
-Q. What is the major issue with stepwise selection?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the major issue with stepwise selection?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 stepwise selection  methods like forward/backward stepwise methods are basically a greedy algorithm and hence can produce sub-optimal subset of features as the best combinations. It is not guaranteed to yield the best model containing a subset of the $p$ predictions.
 
@@ -487,9 +570,12 @@ stepwise selection  methods like forward/backward stepwise methods are basically
 
 ---
 
-Q. Imagine you have a dataset with $100$ observations $(n=100)$ and $1000$ predictors $(p=1000)$. Which feature selection method you can use?
 
-<details><summary><b>Answer</b></summary>
+### Q: Imagine you have a dataset with $100$ observations $(n=100)$ and $1000$ predictors $(p=1000)$. Which feature selection method you can use?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 For cases $p >> n$, Forward-stepwise subset selection method is only feasible and appropriate solution for feature selection.
 
@@ -497,9 +583,12 @@ For cases $p >> n$, Forward-stepwise subset selection method is only feasible an
 
 ---
 
-Q. Explain Backward stepwise selection method?
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain Backward stepwise selection method?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Backward stepwise selection steps:
 
@@ -513,9 +602,12 @@ Backward stepwise selection steps:
 
 ---
 
-Q. One issue with Backward stepwise selection method?
 
-<details><summary><b>Answer</b></summary>
+### Q: One issue with Backward stepwise selection method?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It is not suitable for the cases having $p >> n$.
 
@@ -523,9 +615,12 @@ It is not suitable for the cases having $p >> n$.
 
 ---
 
-Q. Is it good idea to combine forward and backward stepwise subset selection technique as a single method?
 
-<details><summary><b>Answer</b></summary>
+### Q: Is it good idea to combine forward and backward stepwise subset selection technique as a single method?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yeah we can adopt a hybrid approach where we can add predictors sequentially as like we do in forward selection. However after adding any predictors we can also remove any predictor which is not adding any improvement in the model fit. It mimics the best subset selection while retaining the computational advantages of forward and backward stepwise selection.
 
@@ -535,10 +630,12 @@ Yeah we can adopt a hybrid approach where we can add predictors sequentially as 
 
 ## Shrinkage Methods
 
-Q. What is shrinkage methods?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is shrinkage methods?
 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Shrinkage methods are statistical techniques used to improve the accuracy and interpretability of regression models, especially when dealing with high-dimensional data. These methods work by introducing a penalty on the size of the regression coefficients, effectively *shrinking* them towards zero. This can help to reduce overfitting and improve the generalizability of the model.
 
@@ -546,9 +643,12 @@ Shrinkage methods are statistical techniques used to improve the accuracy and in
 
 ---
 
-Q. What are the benefits of using shrinkage methods over subset selection methods?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the benefits of using shrinkage methods over subset selection methods?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Subset selection method produces a model that is interpretable and has possibly less prediction error than the full model. However because it is a discrete process variables are either retained or discarded so it does not reduce the prediction error of the full model. Shrinkage methods are more continuous and don't suffer much from high variability. Also in shrinkage method we can fit model with all $p$ predictors.
 
@@ -558,21 +658,27 @@ Subset selection method produces a model that is interpretable and has possibly 
 
 
 
-Q. Name some shrinkage methods?
 
-<details><summary><b>Answer</b></summary>
+### Q: Name some shrinkage methods?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - Ridge Regression(L2 Regularization)
 - Lasso Regression(L1 Regularization)
-- Elastic Net 
+- Elastic Net
 
 </details>
 
 ---
 
-Q. What's the main purpose of L1 and L2 regularization in linear regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: What's the main purpose of L1 and L2 regularization in linear regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Ordinary least square method suffers from the following issues:
 - Poor prediction accuracy(Overfitting)
@@ -587,9 +693,12 @@ L1(Lasso) and L2(Ridge) regularization techniques help in addressing the above s
 
 ---
 
-Q. How do we estimate coefficients in Ridge regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do we estimate coefficients in Ridge regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The ridge regression coefficients estimates $\hat{\beta}^{R}$ are values that minimizes:
 
@@ -603,22 +712,27 @@ where $\lambda >= 0$ is a tuning parameter, to be determined separately. The abo
 
 ---
 
-Q. Explain the effect of tuning parameter $\lambda$ in ridge regression cost function?
 
-<details><summary><b>Answer</b></summary>
+### Q: Explain the effect of tuning parameter $\lambda$ in ridge regression cost function?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 It essentially balances the trade-off between fitting the data well (minimizing RSS) and keeping the model coefficients small (minimizing the penalty term). 
 
 When $\lambda = 0$, the penalty term has no effect, and ridge regression will produce the least squares estimates. However, as $\lambda -> \inf$, the impact of shrinkage penalty grows, and the ridge regression coefficient estimates will approach zero.
 
-
 </details>
 
 ---
 
-Q. How can we determine optimal value of $\lambda$ ?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we determine optimal value of $\lambda$ ?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Using cross validation technique
 
@@ -626,9 +740,12 @@ Using cross validation technique
 
 ---
 
-Q. Suppose you fit a ordinary linear regression model over your data and you find it is under-fitting. Is it good idea to use Ridge or Lasso regression here?
 
-<details><summary><b>Answer</b></summary>
+### Q: Suppose you fit a ordinary linear regression model over your data and you find it is under-fitting. Is it good idea to use Ridge or Lasso regression here?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 No, Ridge or Lasso regression addresses the variance issue in ols technique, here the model is suffering from the biasness and hence they can provide any help here. We can use polynomial regression or some other more complex model.
 
@@ -636,19 +753,25 @@ No, Ridge or Lasso regression addresses the variance issue in ols technique, her
 
 ---
 
-Q. How do L1 and L2 regularization affect the model's coefficients?
 
-<details><summary><b>Answer</b></summary>
+### Q: How do L1 and L2 regularization affect the model's coefficients?
 
-L1 or L2 regularization are shrinkage methods which helps in reducing the coefficient of the estimate to zero or nearly zero. 
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+L1 or L2 regularization are shrinkage methods which helps in reducing the coefficient of the estimate to zero or nearly zero.
 
 </details>
 
 ---
 
-Q. Can we use ridge regression for variable selection purpose?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can we use ridge regression for variable selection purpose?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 No we can't use it as feature selection technique. The penalty term $\lambda \sum\beta_j^{2}$ in ridge regression will shrink all the coefficients towards zero, but will not set any of them exactly zero (unless $\lambda = \infin$).
 
@@ -656,9 +779,12 @@ No we can't use it as feature selection technique. The penalty term $\lambda \su
 
 ---
 
-Q. Write the loss function involve in lasso regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: Write the loss function involve in lasso regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The loss function expression in lasso regression:
 
@@ -670,9 +796,12 @@ $$ = RSS + \lambda\sum_{j=1}^p|\beta_{j}|$$
 
 ---
 
-Q. Which regression technique leads to sparse models? Lasso or ridge regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: Which regression technique leads to sparse models? Lasso or ridge regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Lasso regression method
 
@@ -680,9 +809,12 @@ Lasso regression method
 
 ---
 
-Q. Why is it that the lasso, unlike ridge regression, results in coefficient estimates that are exactly equal to zero?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why is it that the lasso, unlike ridge regression, results in coefficient estimates that are exactly equal to zero?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The loss function involve in lasso and ridge regression can be re-written as follows:
 
@@ -717,22 +849,27 @@ Since ridge regression has a circular constraint with no sharp points, this inte
 
 ---
 
-Q. List some advantages of using lasso regression over ridge regression?
 
-<details><summary><b>Answer</b></summary>
+### Q: List some advantages of using lasso regression over ridge regression?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 - It produces simpler and more interpretable model
-- Can perform feature selection 
-
+- Can perform feature selection
 
 </details>
 
 ---
 
 
-Q. What are the hyper-parameters associated with L1 and L2 regularization?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the hyper-parameters associated with L1 and L2 regularization?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 $\alpha$, It controls the relative impact of Residual Square Sum and Shrinkage penalty $\sum_{j}{\beta_{j}^{2}} on regression coefficients estimates.
 
@@ -740,56 +877,74 @@ $\alpha$, It controls the relative impact of Residual Square Sum and Shrinkage p
 
 ---
 
-Q. When would you choose L1 regularization over L2, and vice versa?
 
-<details><summary><b>Answer</b></summary>
- 
+### Q: When would you choose L1 regularization over L2, and vice versa?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
 L1 regularization performs better in a setting where a relatively small number of predictors have substantial coefficients and remaining predictors have coefficients that are very small or near to zero. Also L1 performs variable selection be forcing some coefficients of the estimates to zero and hence easier to interpret.
 
 L2 regularization is effective when the response is a function of many predictors, all with the coefficients roughly equal in size. Also L1 technique may lead to sparse model.
 
+</details>
+
+---
+
+
+### Q: What is Elastic Net regularization, and how does it relate to L1 and L2 regularization?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+- **ElasticNet Objective**:
+  $$ \min_w \frac{1}{2N} \|y - Xw\|_2^2 + \lambda \left[ \alpha \|w\|_1 + \frac{1 - \alpha}{2} \|w\|_2^2 \right] $$
+- **Why use it over Lasso?**: Lasso selects at most $n$ features when $p > n$ and picks one arbitrary feature among correlated features. ElasticNet retains group effects of correlated features while maintaining sparsity.
 
 </details>
 
 ---
 
-Q. What is Elastic Net regularization, and how does it relate to L1 and L2 regularization?
 
-<details><summary><b>Answer</b></summary>
-    
-</details>
+### Q: How do you choose the optimal regularization strength (alpha) for L1 and L2 regularization?
 
----
 
-Q. How do you choose the optimal regularization strength (alpha) for L1 and L2 regularization?
-
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Cross validation can be used to tune the *alpha*. 
 - Choose a grid of $\alpha$ values and compute cross validation error for each value of $\alpha$
 - Select the $\alpha$ which is yielding smallest cross validation error
 - Refit the model with all the available variables and the selected $\alpha$ value.
-  
+
 </details>
 
 ---
 
-Q. What are the consequences of multi-collinearity?
 
-<details><summary><b>Answer</b></summary>
+### Q: What are the consequences of multi-collinearity?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Multi collinearity can pose problems in regression context:
 - It can be difficult to separate out the individual effects of collinear variables on the response.
 - It reduces the accuracy of the estimate of the regression coefficients
-- It reduces the power of the hypothesis testing - like *probability of correctly detecting a non zero coefficient* 
+- It reduces the power of the hypothesis testing - like *probability of correctly detecting a non zero coefficient*
 
 </details>
 
 ---
 
-Q. How can you detect collinearity in a regression model?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can you detect collinearity in a regression model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 A simple way to detect collinearity is to look at the correlation matrix of the predictors. A large absolute value in that matrix indicates a pair of highly correlated variables.
 
@@ -797,9 +952,12 @@ A simple way to detect collinearity is to look at the correlation matrix of the 
 
 ---
 
-Q. How can you detect multi-collinearity in a regression model?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can you detect multi-collinearity in a regression model?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can detect multi-collinearity using *variance inflation factor(VIF)*. VIF measures how much the variance of a regression coefficient is inflated due to multi-collinearity.
 
@@ -816,9 +974,12 @@ The smallest possible value of VIF is 1, which indicates complete absence of col
 ---
 
 
-Q. How can you address multi-collinearity?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can you address multi-collinearity?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 There are several methods to address multi-collinearity:
 - Remove Highly Correlated Predictors
@@ -830,9 +991,12 @@ There are several methods to address multi-collinearity:
 
 ---
 
-Q. Can you have perfect multi-collinearity?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can you have perfect multi-collinearity?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yeah, It may occur when one predictor variable in a regression model is an exact linear combination of one or more other predictor variables. In other words, the correlation between the variables is exactly 1 (or -1).
 
@@ -843,9 +1007,12 @@ Yeah, It may occur when one predictor variable in a regression model is an exact
 
 ### Curse Of Dimensionality
 
-Q. How can we determine whether a dataset is high-dimensional or low-dimensional?
 
-<details><summary><b>Answer</b></summary>
+### Q: How can we determine whether a dataset is high-dimensional or low-dimensional?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 We can determine whether a dataset is high-dimensional or low-dimensional by comparing the number of features($p$) to the number of observations($n$). 
 
@@ -861,9 +1028,12 @@ We can determine whether a dataset is high-dimensional or low-dimensional by com
 
 ---
 
-Q. What is the issue of using least squares regression in high dimensional setting?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is the issue of using least squares regression in high dimensional setting?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 When $p > n$, where $p$ is the number of features and $n$ is the number of observations, the least squares method will produce coefficient estimates that perfectly fit the data, resulting in zero residuals. This occurs regardless of whether there is a true relationship between the features and the response. Such a perfect fit is problematic because it leads to overfitting, capturing noise rather than the underlying pattern. The issue is that when $p > n$ or $p \approx n$, least squares regression is too flexible, making the model prone to overfitting the data.
 
@@ -871,9 +1041,12 @@ When $p > n$, where $p$ is the number of features and $n$ is the number of obser
 
 ---
 
-Q. What happens to the Train MSE and Test MSE in a linear regression model if we add features that are completely unrelated to the response?
 
-<details><summary><b>Answer</b></summary>
+### Q: What happens to the Train MSE and Test MSE in a linear regression model if we add features that are completely unrelated to the response?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 As we induct more redundant features in a linear regression model, the Train MSE will typically decrease because the model can fit the training data better due to the additional features. However, the Test MSE is likely to increase because including the additional predictors leads to a vast increase in the variance of the coefficient estimates(overfitting).
 
@@ -881,9 +1054,12 @@ As we induct more redundant features in a linear regression model, the Train MSE
 
 ---
 
-Q. What is curse of dimensionality?
 
-<details><summary><b>Answer</b></summary>
+### Q: What is curse of dimensionality?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 The curse of dimensionality refers to the phenomenon where the test error typically increases as the number of features or predictors in a dataset grows, unless these additional features have a genuine relationship with the response variable. This occurs because as dimensionality rises, the data becomes sparser, making it harder for models to generalize well and increasing the risk of overfitting.
 
@@ -891,9 +1067,12 @@ The curse of dimensionality refers to the phenomenon where the test error typica
 
 ---
 
-Q. If I add a feature to my linear regression model, how will it affect the Train MSE and Test MSE?
 
-<details><summary><b>Answer</b></summary>
+### Q: If I add a feature to my linear regression model, how will it affect the Train MSE and Test MSE?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 When you add a feature to your linear regression model, the Train MSE will generally decrease because the model becomes better at fitting the training data. However, the Test MSE may increase if the new feature does not contribute meaningful information and instead leads to overfitting. This happens because the additional feature can cause the model to capture noise rather than the underlying pattern, which harms its performance on new, unseen data.
 
@@ -901,19 +1080,12 @@ When you add a feature to your linear regression model, the Train MSE will gener
 
 ---
 
-Q. Can we use lasso or ridge regression in high dimensional setup?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can we use lasso or ridge regression in high dimensional setup?
 
-Yeah, They will make the linear regression less flexible in higher dimensional and prevent to overfit the train data.
 
-</details>
-
----
-
-Q. Can we use lasso or ridge regression in high dimensional setup?
-
-<details><summary><b>Answer</b></summary>
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 Yeah, They will make the linear regression less flexible in higher dimensional and prevent to overfit the train data.
 
@@ -921,9 +1093,25 @@ Yeah, They will make the linear regression less flexible in higher dimensional a
 
 ---
 
-Q. [True/False] In the high-dimensional setting, the multicollinearity problem is extreme?
 
-<details><summary><b>Answer</b></summary>
+### Q: Can we use lasso or ridge regression in high dimensional setup? (Part 2)
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
+
+Yeah, They will make the linear regression less flexible in higher dimensional and prevent to overfit the train data.
+
+</details>
+
+---
+
+
+### Q: [True/False] In the high-dimensional setting, the multicollinearity problem is extreme?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 True
 
@@ -931,9 +1119,12 @@ True
 
 ---
 
-Q. [True/False] In the high-dimensional setting, the multicollinearity problem is extreme?
 
-<details><summary><b>Answer</b></summary>
+### Q: [True/False] In the high-dimensional setting, the multicollinearity problem is extreme? (Part 2)
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 True
 
@@ -941,9 +1132,12 @@ True
 
 ---
 
-Q. Why should one be cautious when reporting errors and measures of model fit in high-dimensional settings?
 
-<details><summary><b>Answer</b></summary>
+### Q: Why should one be cautious when reporting errors and measures of model fit in high-dimensional settings?
+
+
+<details>
+<summary><b>💡 Show Answer</b></summary>
 
 In high-dimensional settings (where $p > n$), traditional measures like sum of squared errors, p-values, and $R^2$ can be misleading. A model might show zero residuals or an $R^2$ of 1 simply due to overfitting, not because it is genuinely good. To avoid misinterpretation, rely on performance metrics from an independent test set or cross-validation, as these provide a more accurate assessment of the model's true effectiveness.
 
@@ -951,4 +1145,6 @@ In high-dimensional settings (where $p > n$), traditional measures like sum of s
 
 ---
 
+---
 
+[⬆️ Back to Top](#table-of-contents) | [🏠 Back to Main Index](./README.md)
