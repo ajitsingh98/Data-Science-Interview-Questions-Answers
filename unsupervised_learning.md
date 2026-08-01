@@ -207,11 +207,9 @@ To select the best solution, compare the objective values (within-cluster sum of
 
 The *within-cluster variation* for cluster $C_k$ is a measure $W(C_k)$  of the amount by which the observations within a cluster differ from each other.
 
-$$
-
+```math
 W(C_k) = \frac{1}{|C_k|}\sum_{i, i'\epsilon C_k}\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2
-
-$$
+```
 
 </details>
 
@@ -248,22 +246,18 @@ We can calculate it using following expressions:
 
     - For a given data point $i$, compute the average distance of all other points within the same cluster.
 
-$$
-
+```math
 a(i) = \frac{1}{|C_i| - 1}\sum_{j\epsilon C,j!=i}d(i, j)
-
-$$
+```
 
 where, $C_i$ is the cluster to which point $i$ belongs, and $d(i, j)$ is the distance between $i$ and $j$.
 
 2. Find average nearest cluster distance 
     - For the same data point $i$, compute the average distance to all points in the nearest neighboring cluster.
 
-$$
-
+```math
 b(i) = \min_{C \ne C_i}(\frac{1}{|C|}\sum_{j \epsilon C}d(i, j))
-
-$$
+```
 
 where, $C$ is a cluster different from $C_i$ and $d(i, j)$ is the distance between points $i$ and $j$  in the nearest cluster.
 
@@ -271,11 +265,9 @@ where, $C$ is a cluster different from $C_i$ and $d(i, j)$ is the distance betwe
 
     - Calculate the Silhouette score for each data point $i$ using values of $a(i)$ and $b(i)$
 
-$$
-
+```math
 s(i) = \frac{b(i) - a(i)}{max(a(i),b(i))}
-
-$$
+```
 
     - Note the score ranges from -1 to 1
 
@@ -287,11 +279,9 @@ $$
 
     - Calculate average silhouette score across all data points to get measure of overall cluster quality
 
-$$
-
+```math
 \text{Average Silhouette Score} = \frac{1}{n} \sum_{i=1}^{n}s(i)
-
-$$
+```
 
 where $n$  is the number of data points.
 
@@ -1279,19 +1269,15 @@ A simple linear autoencoder can be defined as follows:
 
 **Encoder:**
 
-$$
-
+```math
 h = f(x) = Wx + b
-
-$$
+```
 
 **Decoder:**
 
-$$
-
+```math
 \hat{x} = g(h) = W^{*}h + c
-
-$$
+```
 
 where \( W \in \mathbb{R}^{K \times D} \), \( b \in \mathbb{R}^{K \times 1} \), \( W^* \in \mathbb{R}^{D \times K} \), and \( c \in \mathbb{R}^{D \times 1} \). 
 
@@ -1310,19 +1296,15 @@ The choice of loss function depends on the type of data being used:
 
 - **Continuous Input Data**: Mean Squared Error (MSE) is typically used to measure the reconstruction error.
 
-$$
-
+```math
 L_{AE}(X, X') = \min(||X - X'||_{F}^2)
-
-$$
+```
 
 - **Binary Input Data**: Binary Cross-Entropy (BCE) is used when the input data is binary (values of 0 or 1).
 
-$$
-
+```math
 L_{AE}(X, X') = -\sum_{i=1}^n (x_i \log(x_i^') + (1 - x_i) \log(1 - x_i^'))
-
-$$
+```
 
 </details>
 
@@ -1408,21 +1390,17 @@ Autoencoders with tied weights have some important advantages:
 
 An undercomplete autoencoder has a bottleneck layer (latent space) with fewer neurons than the input layer. 
 
-$$
-
+```math
 dim(h) < dim(x_{input})
-
-$$
+```
 
 *Overcomplete Autoencoders*
 
 An overcomplete autoencoder has a bottleneck layer with more neurons than the input layer, creating a latent representation that is higher-dimensional than the input.
 
-$$
-
+```math
 dim(h) >= dim(x_{input})
-
-$$
+```
 
 <table align='center'>
 <tr>
@@ -1547,19 +1525,15 @@ There are two main ways by which we can impose sparsity constraint
 
 - L1 Regularization: We can add a term to our loss function that penalizes the absolute value of the vector of the activations $a$ in layer $h$ for observation $i$, scaled by a tuning parameter $\lambda$.
 
-$$
-
+```math
 L(x, \hat{x}) + \lambda \sum_{i}|a_i^{(h)}|
-
-$$
+```
 
 - KL-Divergence: KL-divergence is a measure of the difference between two probability distributions.$$L(x, \hat{x}) + \sum_{j}KL(\rho || \hat{\rho_j})$$Where $\rho$ is sparsity parameter and $\hat{\rho}$  is mean activation of a neuron over a collection of samples.
 
-$$
-
+```math
 \hat{\rho_j} = \frac{1}{m}\sum_{i}[a_i^{(h)}(x)]
-
-$$
+```
 
 where the subscript $j$ denotes the specific neuron in layer $h$ 
 
@@ -1624,21 +1598,17 @@ Contractive Autoencoders (CAE) are a type of autoencoder designed to learn robus
 
 Loss function in contractive autoencoders:
 
-$$
-
+```math
 \text{Loss} = \text{Reconstruction Loss} + \lambda \sum_{i=1}^{n}\|\frac{\partial h}{\partial x_i}\|^2
-
-$$
+```
 
 The penalty is Contractive penalty and, it is penalizes the Ferbenius norm (squared sum of all elements) of the Jacobian matrix of the encoder’s activations with respect to the input. 
 
 This forces the encoder to produce stable representations that are less sensitive to small changes in the input.
 
-$$
-
+```math
 \sum_{i=1}^{n} \left\| \frac{\partial h}{\partial x_i} \right\|^2
-
-$$
+```
 
 - Here, \( h \) represents the hidden layer activations (latent representation), \( x_i \) is the input, and \( \lambda \) is a regularization parameter controlling the importance of the contractive term.
 
@@ -1697,11 +1667,9 @@ Standard autoencoders output a single value for each encoding dimension. The dec
 
 Negative log-likelihood:
 
-$$
-
+```math
 -\log\rho_{decoder}(\frac{x|h})
-
-$$
+```
 
 </details>
 
@@ -1751,11 +1719,9 @@ The loss function in VAE combines two key components
 
 Measures how well the VAE can reconstruct the input data from the latent representation
 
-$$
-
+```math
 L_{\text{reconstruction_loss}} = \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \hat{x}_i)^2
-
-$$
+```
 
 *KL Divergence loss*
 
@@ -1763,19 +1729,15 @@ Measures the difference between the learned latent distribution $q(z|x)$ and a p
 
 It encourages the latent space to be well-structured and similar to the prior, enabling smooth interpolation and generation of new data.
 
-$$
-
+```math
 \text{KL Divergence} = D_{KL}(q(z|x) \| p(z))
-
-$$
+```
 
 *Loss Function*
 
-$$
-
+```math
 \text{Loss} = \text{Reconstruction Loss} + \beta \dot \text{KL Divergence}
-
-$$
+```
 
 Balancing Parameter $\beta$ The parameter $\beta$ controls the trade-off between reconstruction accuracy and the regularization effect on the latent space. Setting $\beta = 1$ is typical, but variations (like $\beta$-VAE) allow tuning this balance.
 

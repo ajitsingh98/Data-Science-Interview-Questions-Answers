@@ -30,11 +30,9 @@ It is a mathematical framework for representing uncertain statements. It provide
 
 The probability of an event $A$ is given by the ratio of the number of favorable outcomes to the total number of possible outcomes, expressed as:
 
-$$
-
+```math
 P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}
-
-$$
+```
 
 </details>
 
@@ -47,11 +45,9 @@ $$
 
 Disjoint sets are sets that have no elements in common. In other words, the intersection of disjoint sets is the empty set. If $A$ and $B$ are two sets, they are disjoint if:
 
-$$
-
+```math
 A \cap B = \emptyset
-
-$$
+```
 
 </details>
 
@@ -66,11 +62,9 @@ $$
 
 The conditional probability of $A $, given that event$ B$has already happened, is denoted by:
 
-$$
-
+```math
 P(A | B) = \frac{P(A \cap B)}{P(B)}
-
-$$
+```
 
 where:
 - $P(A \cap B)$ is the probability that both events $A$ and $B$  occur.
@@ -87,11 +81,9 @@ where:
 
 The law of total probability is a fundamental rule that provides a way to compute the probability of an event by considering all possible scenarios or conditions. If $B_1, B_2, \ldots, B_n$ are mutually exclusive and exhaustive events (i.e., they cover the entire sample space), and $A$ is any event, then the probability of $A$ can be expressed as:
 
-$$
-
+```math
 P(A) = \sum_{i=1}^{n} P(A | B_i) \cdot P(B_i)
-
-$$
+```
 
 where:
 - $P(A | B_i)$ is the conditional probability of $A$ given $B_i$.
@@ -108,11 +100,9 @@ where:
 
 Two random variables $x$ and $y$ are independent if their probabilities distribution can be expressed as a product of two factors, one involving only $x$ and one involving only $y$:
 
-$$
-
+```math
 \forall x \epsilon x, y \epsilon y, p(x=x, y=y) = p(x=x) \cdot p(y=y)
-
-$$
+```
 
 This means that knowing whether $x$ has occurred does not change the probability of $y$, and vice versa.
 
@@ -127,11 +117,9 @@ This means that knowing whether $x$ has occurred does not change the probability
 
 To calculate $P(X)$ given $P(X | Y)$ and $P(Y)$, we can use the law of total probability. The probability$ P(X)$is obtained by summing over all possible values of$ Y$:
 
-$$
-
+```math
 P(X) = \sum_{Y} P(X | Y) \cdot P(Y)
-
-$$
+```
 
 This expression accounts for the contribution of each conditional probability $P(X | Y)$ weighted by the probability $P(Y)$.
 
@@ -204,11 +192,9 @@ This expression accounts for the contribution of each conditional probability $P
 - **Accuracy**: $p = 1 - \frac{10}{100} = 0.90$.
 - **Probability of 20 consecutive correct predictions**:
 
-$$
-
+```math
 P = p^{20} = (0.90)^{20} \approx 0.1215 \text{ (or } 12.15\% \text{)}
-
-$$
+```
 
 </details>
 
@@ -225,11 +211,9 @@ Bayes' Theorem provides a way to update the probability of a hypothesis based on
 
 Mathematically, Bayes' Theorem is stated as:
 
-$$
-
+```math
 P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
-
-$$
+```
 
 where:
 - $P(A | B)$ is the probability of event $A$ given that $B$  has occurred (posterior probability).
@@ -250,19 +234,15 @@ It is named after *Reverend Thomas Bayes*
 
 Standard bayes theorem:
 
-$$
-
+```math
 P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
-
-$$
+```
 
 We can use bayes' theorem with law of total probability:$$P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B|A) \cdot P(A) + P(B|A^C) \cdot P(A^C)}$$Here, we can also make it more general expression:
 
-$$
-
+```math
 P(A_i | B) = \frac{P(B | A_i) \cdot P(A_i)}{\sum_{j=1}^{n} P(B | A_j) \cdot P(B_j)}
-
-$$
+```
 
 </details>
 
@@ -275,21 +255,17 @@ $$
 
 The denominator in standard bayes theorem is called normalization constant.
 
-$$
-
+```math
 P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
-
-$$
+```
 
 It is called normalization constant since it is the same regardless of whether or not the event $A$  happens.
 
 In case it is unknown, we can use following expressions:
 
-$$
-
+```math
 P(B) = P(B|A)P(A) + P(B|A^C)P(A^C)
-
-$$
+```
 
 </details>
 
@@ -302,11 +278,9 @@ $$
 
 The relationship between the prior, posterior, and likelihood probabilities is given by Bayes' Theorem, which can be expressed as:
 
-$$
-
+```math
 \text{Posterior} = \frac{\text{Likelihood} \times \text{Prior}}{\text{Evidence}}
-
-$$
+```
 
 </details>
 
@@ -672,29 +646,23 @@ The expectation of a random variable $X $, written$ E[X]$  is the average of all
 
 For discrete variables:
 
-$$
-
+```math
 E_{X~P}[f(x)] = \sum_{x}P(x)f(x)
-
-$$
+```
 
 For continuous variables:
 
-$$
-
+```math
 E_{X~P}[f(x)] = \int p(x)f(x)dx
-
-$$
+```
 
 *Variance*
 
 The variance gives a measure of how much the values of a function of a random variable $x$ vary as we sample different values of $x$ from its probability distributions. Variance quantifies how much the values of the variable differ from the expected value (mean).
 
-$$
-
+```math
 \text{Var}(f(x)) = E\left[(f(x) - E[f(x)])^2\right]
-
-$$
+```
 
 Low variance means the values of $f(x)$  cluster near their expected value.
 
@@ -704,11 +672,9 @@ Low variance means the values of $f(x)$  cluster near their expected value.
 
 - Cumulative Distribution Function (CDF): A CDF describes the probability that a random variable will take a value less than or equal to a certain threshold. For a random variable $X $, the CDF$ F(x)$is defined as:
 
-$$
-
+```math
 F(x) = P(X \leq x)
-
-$$
+```
 
 *Support*
 
@@ -738,47 +704,37 @@ To be a pdf a function $p$  must have following properties:
 
 - Linearity of expectation
 
-$$
-
+```math
 E[aX + b] = aE[X] + b
-
-$$
+```
 
 Where $a$ and $b$  are constants and not random variables.
 
 -  Expectation of the Sum of Random Variables
 
-$$
-
+```math
 E[X+Y] = E[X] + E[Y]
-
-$$
+```
 
 Note that this is true irrespective of relationship between $X$ and $Y$.
 
 - Law of Unconcious Statistician(LOTUS)
 
-$$
-
+```math
 E[g(X)] = \sum_{x}g(x)P(X = x)
-
-$$
+```
 
 We can use this to calculate $E[X^2]$,
 
-$$
-
+```math
 E[X^2] = \sum_{x}x^{2}P(X=x)
-
-$$
+```
 
 - Expectation of constants
 
-$$
-
+```math
 E[a] = a
-
-$$
+```
 
 </details>
 
@@ -817,19 +773,15 @@ A PDF is unbounded if it can reach arbitrarily large values, especially over nar
 
 Suppose $X$ is a random variable with $E[X] = \mu$,
 
-$$
-
+```math
 \text{Var}(X) = E[(X - \mu)^2]
-
-$$
+```
 
 This is the average distance of a sample from the distribution to the mean. We can further simplify the above expressions with some workaround,
 
-$$
-
+```math
 \text{Var}(X) = E[X^2] - E[X]^2
-
-$$
+```
 
 </details>
 
@@ -887,11 +839,9 @@ Statistical moments are additional descriptors of a curve/distribution. Moments 
 
 The $k$ th moment of a function $f(x)$ about a non-random value $c$  is:
 
-$$
-
+```math
 E[(X - c)^k] = \int_{-\infty}^{\infty} (x - c)^k f(x) dx
-
-$$
+```
 
 This generalization allows us to make an important distinction: 
 - a raw moment is a moment about the origin $(c=0)$- a central moment is a moment about the distribution’s mean $(c=E[X])$ First five moments in order from $0$ th to $4$  th moments: `total mass`, `mean`, `variance`, `skewness`, and `kurtosis`. 
@@ -900,47 +850,39 @@ This generalization allows us to make an important distinction:
 
 - <b>1st Moment(mean)</b> - The first moment is also known as the mean or expected value. It represents the center of the distribution and is a measure of the average or central location of the data points. 
 
-$$
+```math
 $\mu = \frac{1}{n} \sum_{i=1}^{n} x_i
-
-$$
+```
 $ 
 
 Where:
 -
 
-$$
-
+```math
 \mu
-
-$$
+```
 
   (mu) is the mean.
 -
 
-$$
-
+```math
 n
-
-$$
+```
 
   is the number of data points.
 -
 
-$$
-
+```math
 x_i
-
-$$
+```
 
   represents individual data points.
 
 - <b>2nd Moment(Variance)</b> - The second moment is the variance. It measures the spread or dispersion of the data points around the mean. It is calculated as the average of the squared differences between each data point and the mean. 
 
-$$
+```math
 $\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2
-
-$$
+```
 $ 
 
 Where:
@@ -948,19 +890,15 @@ Where:
 
 - <b>3rd Moment(Skewness)</b> - The third moment is a measure of the skewness of the distribution. It indicates whether the distribution is skewed to the left (negatively skewed) or to the right (positively skewed). 
 
-$$
-
+```math
 \[Skewness = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^3\]
-
-$$
+```
 
 - <b>4th Moment(Kurtosis)</b> - The fourth moment measures the kurtosis of the distribution. Kurtosis indicates whether the distribution is more or less peaked (leptokurtic or platykurtic) compared to a normal distribution.
 
-$$
-
+```math
 \[Kurtosis = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^4\]
-
-$$
+```
 
 </details>
 
@@ -1012,19 +950,15 @@ p & \text{if } x = 1, \\
 1 - p & \text{if } x = 0,
 \end{cases}
 
-$$
-
+```math
 - Smooth PMF
-
-$$
+```
 
 P(X = x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}.$$- Expectation$$E[X] = p$$- Variance
 
-$$
-
+```math
 \text{Var}(X) = p(1-p)
-
-$$
+```
 
 </details>
 
@@ -1042,11 +976,9 @@ $$
 
 - Support : $x \in {0,1,...,n}$- PMF Equation$$P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k = 0, 1, 2, \ldots, n.$$- Expectation$$E[X] = n.p$$- Variance
 
-$$
-
+```math
 \text{Var}(X) = n.p.(1-p)
-
-$$
+```
 
 </details>
 
@@ -1105,11 +1037,9 @@ $$
 
 The probability mass function (PMF) of the binomial distribution is given by:
 
-$$
-
+```math
 P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}
-
-$$
+```
 
 where:
 - $n$  is the number of trials,
@@ -1177,57 +1107,43 @@ The PMF gives the probability of having exactly $k$ successes in $n$ independent
 
 Here we can use the fact that binomial is the sum of bernoulli indicator random variables $X = \sum_{i=1}^{n}Y_i $- Expectation of$ X ∼ Binomial(n, p)$:$ X $is the sum of$ n $independent Bernoulli trials, each with a probability of success$ p $. We can write$ X$as:$$X = X_1 + X_2 + \ldots + X_n,$$where each $X_i$ is a Bernoulli random variable with:$$P(X_i = 1) = p \quad \text{and} \quad P(X_i = 0) = 1 - p.$$The expectation of a Bernoulli random variable $X_i$ is:$$E[X_i] = 1 \cdot p + 0 \cdot (1 - p) = p.$$Using the linearity of expectation:
 
-$$
-
+```math
 E[X] = E[X_1 + X_2 + \ldots + X_n] = E[X_1] + E[X_2] + \ldots + E[X_n] = n \cdot p.
+```
 
-$$
-
-$$
-
+```math
 \boxed{E[X] = n \cdot p.}
-
-$$
+```
 
 - Variance of $X ∼ Binomial(n, p)$  :
 
 The variance of a Bernoulli random variable $X_i$ is:
 
-$$
-
+```math
 \text{Var}(X_i) = E[X_i^2] - (E[X_i])^2.
-
-$$
+```
 
 Since $X_i$ can only be 0 or 1, $X_i^2 = X_i$, so:
 
-$$
-
+```math
 E[X_i^2] = E[X_i] = p.
-
-$$
+```
 
 Thus, the variance of $X_i$ is:
 
-$$
-
+```math
 \text{Var}(X_i) = p - p^2 = p(1 - p).
-
-$$
+```
 
 Since the $X_i$'s are independent, the variance of their sum is the sum of their variances:
 
-$$
-
+```math
 \text{Var}(X) = \text{Var}(X_1 + X_2 + \ldots + X_n) = \text{Var}(X_1) + \text{Var}(X_2) + \ldots + \text{Var}(X_n) = n \cdot p(1 - p).
+```
 
-$$
-
-$$
-
+```math
 \boxed{\text{Var}(X) = n \cdot p(1 - p).}
-
-$$
+```
 
 </details>
 
@@ -1249,29 +1165,23 @@ Poisson distribution gives the probability of a given number of events in a fixe
 
 *Notations*
 
-$$
-
+```math
 X ~ Poi(\lambda)
-
-$$
+```
 
 *Parameters*
 
 It is constant average rate.
 
-$$
-
+```math
 \lambda \in {0, 1, ...}
-
-$$
+```
 
 *Support*$$x \in {0,1,...}$$*PMF Expression*$$P(X = x) = \frac{\lambda^{x}e^{-\lambda}}{x!}$$*Expectation*$$E[X] = \lambda$$*Variance*
 
-$$
-
+```math
 \text{Var}(X) = \lambda
-
-$$
+```
 
 </details>
 
@@ -1607,11 +1517,9 @@ A random variable can be said to be drawn from a uniform distribution if it exhi
 
 - Support : $x \in [\alpha, \beta]$- PDF expression$$P(X = x_i) = \frac{1}{n} \text{ for each } x_i$$- Expectations$$E[X] = \frac{1}{2}(\alpha + \beta)$$- Variance
 
-$$
-
+```math
 Var(X) = \frac{1}{12}(\beta - \alpha)^2
-
-$$
+```
 
 </details>
 
@@ -1624,11 +1532,9 @@ $$
 
 Zero, For a continuous random variable, such as a uniform random variable $X$ that is uniformly distributed over the interval $[0,1]$ the probability of $X$  taking any specific single value is technically zero.
 
-$$
-
+```math
 P(X = x) = 0
-
-$$
+```
 
 </details>
 
@@ -1649,19 +1555,15 @@ $$
 
 *Notation*
 
-$$
-
+```math
 X ~ Exp(\lambda)
-
-$$
+```
 
 *Parameters*$$\lambda \in {0,1,..}$$*Support*$$x \in R^{+}$$*PDF Expression*$$f(x) = \lambda e^{-\lambda x}$$*CDF Equation*$$F(x) = 1 - e^{-\lambda x}$$*Expectation*$$E[X] = \frac{1}{\lambda}$$*Variance*
 
-$$
-
+```math
 Var[X] = \frac{1}{\lambda^2}
-
-$$
+```
 
 </details>
 
@@ -1674,17 +1576,13 @@ $$
 
 Let $Y$ be the years until the next major earthquake. Because $Y$ measures time until the next event it fits the description of an exponential random variable: $Y ~ Exp(\lambda = 0.002)$ 
 
-$$
-
+```math
 P(Y < 4) = F_{Y}(4) = 1 - e^{-lambda.y}
+```
 
-$$
-
-$$
-
+```math
 P(Y < 4) = 1 - e^{-0.002*4} = 0.008
-
-$$
+```
 
 So the probability of major earthquake in next 4 years is $0.008$ 
 
@@ -1707,11 +1605,9 @@ For continuous random variables, the probability of the variable taking any exac
 
 To find the probability of a random variable falling within a certain range, we need to integrate the PDF over that range.
 
-$$
-
+```math
 P(a \leq X \leq b) = \int_{a}^{b} f(x) \, dx
-
-$$
+```
 
 Here, $P(a \leq X \leq b)$ is always between $0$ and $1$ 
 
@@ -1719,11 +1615,9 @@ Here, $P(a \leq X \leq b)$ is always between $0$ and $1$
 
 Consider a PDF defined as $f(x) = 5$ for $x \in [0, 1/5]$ and 0 otherwise. Here, $f(x) \geq 0$, and the integral over its support is:
 
-$$
-
+```math
 \int_{0}^{1/5} 5 \, dx = 5 \times \frac{1}{5} = 1
-
-$$
+```
 
 This is a valid PDF even though $f(x) = 5$  within the interval.
 
@@ -1738,11 +1632,9 @@ This is a valid PDF even though $f(x) = 5$  within the interval.
 
 The probability density function (PDF) of a normal distribution with mean $\mu$ and variance $\sigma^2$  is given by:
 
-$$
-
+```math
 f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2 \sigma^2}\right)
-
-$$
+```
 
 - Expectation (Mean): $\mu $- Variance:$\sigma^2$ 
 
@@ -1757,11 +1649,9 @@ $$
 
 $Y$ will have also a normal pdf with $\mu = a\mu_X$ and $Var(Y) = a^2\sigma^2$ 
 
-$$
-
+```math
 Y ~ N(a\mu+b, a^2\sigma^2)
-
-$$
+```
 
 </details>
 
@@ -1908,11 +1798,9 @@ Find the Fisher Information $I(γ)$  for the following distributions:
 
 Covariance is a quantitative measure of the extent to which the deviation of one variable from its mean matches the deviation of the other from its mean.
 
-$$
-
+```math
 \text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])]
-
-$$
+```
 
 </details>
 
@@ -1925,11 +1813,9 @@ $$
 
 If two random variables $X$ and $Y$ are independent, than their covariance must be 0.$$Cov(X, Y) = E[XY] - E[Y]E[X]$$Using product of expectations for independent RV
 
-$$
-
+```math
 E[X]E[Y] - E[Y]E[X] = 0
-
-$$
+```
 
 </details>
 
@@ -1953,23 +1839,17 @@ Consider two random variables $X$ and $Y$  defined as follows:
 
 Now it is clear the $X$ and $Y$ are dependent, now lets look the covariance of both
 
-$$
-
+```math
 𝐶𝑜𝑣(𝑋,𝑌) = 𝐸[𝑋𝑌]−𝐸[𝑋]⋅𝐸[𝑌]
+```
 
-$$
-
-$$
-
+```math
 𝐶𝑜𝑣(𝑋,𝑌) = 𝐸[𝑋.X^2]−𝐸[𝑋]⋅𝐸[X^2]
+```
 
-$$
-
-$$
-
+```math
 𝐶𝑜𝑣(𝑋,𝑌) = 0
-
-$$
+```
 
 Now $Cov(X, Y)$ coming as zero and hence depicting the $X$ and $Y$  are independent which is not the case.
 
@@ -2037,19 +1917,15 @@ Covariance is scale variant. It means its value is sensitive to scale of the mea
 
 We know that:
 
-$$
-
+```math
 Var(X) = (E(X - E(X))^2)
-
-$$
+```
 
 Also$$Cov(X, X) = E((X-E(X))(X - E(X)))$$on further simplifications, we get:
 
-$$
-
+```math
 Cov(X, X) = E((X-E(X))^2) = Var(X)
-
-$$
+```
 
 </details>
 
@@ -2062,19 +1938,15 @@ $$
 
 From definition of Covariance:
 
-$$
-
+```math
 Cov(X, Y) = E((X - E(X))(Y - E(Y)))
-
-$$
+```
 
 on simplification,$$Cov(X, Y) = E(XY - YE(X) - E(Y)X + E(X)E(Y))$$after taking outer expectations:$$Cov(X, Y) = E(XY) - E(YE(X)) - E(E(Y)X) + E(E(X)E(Y))$$Since E(X) is a constant since we are taking the average and expectation of a constant is just the same constant.$$E(c) = c$$Using the above expression:$$Cov(X, Y) = E(XY) - E(X)E(Y) - E(X)E(Y) + E(X)E(Y)$$after canceling out terms:
 
-$$
-
+```math
 Cov(X, Y) = E(XY) - E(X)E(Y)
-
-$$
+```
 
 </details>
 
@@ -2114,11 +1986,9 @@ Properties of Covariance:
 
 Correlation between two random variables, $\rho(X, Y)$  is the covariance of the two variables normalized by the standard deviation of each variable.
 
-$$
-
+```math
 \rho(X, Y) = \frac{Cov(X, Y)}{\sqrt{Var(X)Var(Y)}}
-
-$$
+```
 
 </details>
 
@@ -2159,47 +2029,35 @@ Lets look at the expression of correlation(r) to establish the above statement.
 
 Suppose we have two variables X and Y and we want to investigate the relationship between them.
 
-$$
-
+```math
 correlation(r_{XY}) = \frac{covariance(X, Y)}{{\sigma_X}{\sigma_Y}}
-
-$$
+```
 
 Now let's define two vectors $\arrow{u}$ and $\arrow{v}$ where $\arrow{u} = [u_1, u_2, ..., u_n]$ and $\arrow{v} = [v_1, v_2, ..., v_n]$ where elements are the deviation from the mean.$$\u_i = x_i - \hat{x} \quad \v_i = y_i - \hat{y}$$We can now write the sample covariance and the sample variances in vector notation as:$$Covariance(u, v) = \frac{1}{n-1}\sum_{i=1}^n u_i v_i = \frac{1}{n-1}u \cdot v$$similarly variance in X and Y can be expressed in vectorized form:
 
-$$
-
+```math
 Var(X) = \frac{1}{n-1}\sum_{i=1}^n {u_i}^{2} = \frac{1}{n-1} \| \mathbf{u} \|^2
+```
 
-$$
-
-$$
-
+```math
 Var(Y) = \frac{1}{n-1}\sum_{i=1}^n {v_i}^{2} = \frac{1}{n-1} \| \mathbf{v} \|^2
-
-$$
+```
 
 Now we can write correlation expression using vectors $u$ and $v$,
 
-$$
-
+```math
 r_{XY} = \frac{Covariance(u, v)}{\sqrt{Var(X)}{Var(Y)}}
+```
 
-$$
-
-$$
-
+```math
 r_{XY} = \frac{\mathbf{u} \cdot \mathbf{v}}{\| \mathbf{u} \| \| \mathbf{v} \|}
-
-$$
+```
 
 From cosine rule, we get
 
-$$
-
+```math
 r_{XY} = \cos\theta
-
-$$
+```
 
 Since $-1 <= \cos\theta <= 1 $,$ r_{XY} is always between -1 and 1 $For give$ r = 0.3$, we can deduce following conclusions:
 
@@ -2221,45 +2079,35 @@ Correlation measures the degree to which there is a linear relationship between 
 
 *Mathematical expression:*
 
-$$
-
+```math
 \rho(X, Y) = \frac{Con(X, Y)}{\sigma_{X} \sigma_{Y}}
-
-$$
+```
 
 *Step-by-step calculation:*
 
 - Compute the mean of $X$ and $Y$:
 
-$$
-
+```math
 \bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i, \quad \bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i
-
-$$
+```
 
 - Calculate the Covariance
 
-$$
-
+```math
 \text{Cov}(X, Y) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})
-
-$$
+```
 
 - Calculate the standard deviation of $X$ and $Y$ 
 
-$$
-
+```math
 \sigma_X = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2}, \quad \sigma_Y = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (Y_i - \bar{Y})^2}
-
-$$
+```
 
 - Substitute into the Pearson Correlation Formula
 
-$$
-
+```math
 r = \frac{\sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum_{i=1}^{n} (X_i - \bar{X})^2} \sqrt{\sum_{i=1}^{n} (Y_i - \bar{Y})^2}}
-
-$$
+```
 
 </details>
 

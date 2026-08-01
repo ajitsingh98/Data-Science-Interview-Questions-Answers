@@ -38,11 +38,9 @@
 
 - A function $f: \mathbb{R} \to \mathbb{R}$ is **differentiable** at point $x = c$  if the limit of the difference quotient exists:
 
-$$
-
+```math
 f'(c) = \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}
-
-$$
+```
 
 - **Property**: Differentiability implies continuity, but continuity does not guarantee differentiability (e.g., $|x|$ at $x=0$).
 
@@ -61,11 +59,9 @@ $$
 
 - A function $f: \mathbb{R}^n \to \mathbb{R}$ is **convex** if for all $x, y$ and $\lambda \in [0, 1]$:
 
-$$
-
+```math
 f(\lambda x + (1-\lambda)y) \le \lambda f(x) + (1-\lambda)f(y)
-
-$$
+```
 
 - **Second-Order Condition**: Hessian matrix $\nabla^2 f(x) \succeq 0$  (positive semi-definite) everywhere. Every local minimum is a global minimum.
 
@@ -96,11 +92,9 @@ $$
 
 - The instantaneous rate of change of $f(x)$ at $x = a$  is the limit of average rate of change as interval length approaches zero:
 
-$$
-
+```math
 \text{Rate} = f'(a) = \lim_{\Delta x \to 0} \frac{f(a + \Delta x) - f(a)}{\Delta x}
-
-$$
+```
 
 </details>
 
@@ -128,11 +122,9 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$
-
+```math
 f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c}
-
-$$
+```
 
 </details>
 

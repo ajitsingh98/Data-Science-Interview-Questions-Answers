@@ -59,11 +59,9 @@ In this case, the odds of success are 1. This means that the chances of getting 
 
 2. Suppose in your model you have two predictors $X$ and $Y$, a model having interaction term can be expressed as:
 
-$$
-
+```math
 \beta_0 + \beta_1X + \beta_2Y + \beta_3XY
-
-$$
+```
 
 The last term $\beta_3XY$  represents an interaction between these two predictors.
 
@@ -104,11 +102,9 @@ There are different techniques that are widely used to model probability distrib
 
 We can use the following functions to achieve that:
 
-$$
-
+```math
 sigmoid(x) = \frac{1}{1+\exp^{-x}}
-
-$$
+```
 
 It will map $y \quad \epsilon [0, 1]$.
 
@@ -140,11 +136,9 @@ Minimizing the negative log-likelihood also means maximizing the <b>probability/
 
   1. odds of an event with probability <i>p</i> = $\frac{p}{1-p}$ For given $p=0.1$ odds of the event =$\frac{0.1}{1-0.1} = \frac{1}{9} = 0.11 $2. log odds of the event =$\log(odds \quad of \quad the \quad event) = \log_e\frac{1}{9} = -2.20$3. probability of the event in terms of the odds can be written as follows:$$\text{probability} = \frac{odds}{1+odds}$$
 
-$$
-
+```math
 \text{probability} = \frac{0.11}{1.11} = 0.1
-
-$$
+```
 
 </details>
 
@@ -161,19 +155,15 @@ True
 
 Let's calculate the probability of the success(p). We can define the probability(p) in terms of odds of the success as follows:
 
-$$
-
+```math
 p = \frac{odds}{1+odds}
-
-$$
+```
 
 Since odds of the success = 4.
 
-$$
-
+```math
 p = \frac{4}{1+4} = 0.8
-
-$$
+```
 
 </details>
 
@@ -188,11 +178,9 @@ their respective odds.
 
 Governing expression:
 
-$$
-
+```math
 odds(p) = \frac{p}{1-p}
-
-$$
+```
 
 <table align='center'>
   <tr>
@@ -238,11 +226,9 @@ $$
 
 At the decision boundary we will have $Pr(Y = 1 | X) = 0.5$  If we put the 0.5 in log-odds expression we get,
 
-$$
-
+```math
 \theta_0 + \theta^TX = \log{\frac{0.5}{1 - 0.5}} = \log{1} = 0
-
-$$
+```
 
 So, $\theta_0 + \theta^TX = 0$  governs the decision boundary hyperplane.
 
@@ -263,11 +249,9 @@ Logit expression :  $z(p) = \log\frac{p}{1-p}$ for any $p ∈ [0, 1]$.
 
 A simple set of algebraic equations yields the inverse relation:
 
-$$
-
+```math
 p(z) = \frac{exp{z}}{1+exp{z}}
-
-$$
+```
 
 The above equation represents sigmoid function.
 
@@ -292,31 +276,23 @@ $$
 
 We have,
 
-$$
-
+```math
 \sigma(x) = \frac{1}{1+e^{-x}}
-
-$$
+```
 
 We can apply formula for $\frac{d}{dx}\frac{1}{x}$  here as well.
 
-$$
-
+```math
 \frac{d}{dx}\sigma(x) = \frac{d}{dx}((1+e^{-x})^{-1})
+```
 
-$$
-
-$$
-
+```math
 \frac{d}{dx}\sigma(x) = -((1+e^{-x})^{-2})\frac{d}{dx}(1+e^{-x})
+```
 
-$$
-
-$$
-
+```math
 \frac{d}{dx}\sigma(x) = \frac{e^{-x}}{(1+e^{x})^2}
-
-$$
+```
 
 </details>
 
@@ -329,35 +305,27 @@ $$
 
 We have:
 
-$$
-
+```math
 \sigma(x) = \frac{1}{1+e^{-x}}
-
-$$
+```
 
 For $x = 0$:
 
-$$
-
+```math
 \sigma(0) = \frac{1}{1+e^{0}} = \frac{1}{2}
-
-$$
+```
 
 For $x -> -∞$:
 
-$$
-
+```math
 \lim_{{x \to -\infty}} \sigma = \frac{1}{1+e^{\inf}} = 0
-
-$$
+```
 
 For $x -> ∞$:
 
-$$
-
+```math
 \lim_{{x \to -\infty}} \sigma = \frac{1}{1+e^{-\inf}} = 1
-
-$$
+```
 
 </details>
 
@@ -385,63 +353,47 @@ $$
 
 1. Logit value can be obtained by substituting independent variables and model's coefficients as follows:
 
-$$
-
+```math
 logit = \beta_0 + \beta_1x_1 + \beta_2x_2
-
-$$
+```
 
 Substitute the given values:
 
-$$
-
+```math
 logit =  -1.5 + 3\*1 + -0.5\*5
+```
 
-$$
-
-$$
-
+```math
 logit =  -1.5 + 3 - 2.5 = -1
-
-$$
+```
 
 2. We know the log-odds can be written in terms of logit as follows:$$logit =  \log\frac{p}{1-p}$$We know the logit value for given parameters and observations.$$\log\frac{p}{1-p} = -1$$On taking $\exp$  on both sides:
 
-$$
-
+```math
 \frac{p}{1-p} = e^{-1}
+```
 
-$$
-
-$$
-
+```math
 \frac{p}{1-p} = 0.3678
-
-$$
+```
 
 3. We can write odds of getting $y=1$ in terms of $P(y = 1)$ as follows:
 
-$$
-
+```math
 odds = \frac{P(y = 1)}{1-P(y = 1)}
-
-$$
+```
 
 We know the odds i.e $e^{-1}$, so
 
-$$
-
+```math
 P(y = 1) = \frac{e^{-1}}{1+e^{-1}}
-
-$$
+```
 
 On simplifying above expression, we get
 
-$$
-
+```math
 P(y = 1) = 0.2689
-
-$$
+```
 
 </details>
 
@@ -497,11 +449,9 @@ Referring to Table: Answer the following questions
 
     $$odds(cancer \quad type = lungs) = \frac{number \quad of \quad yes}{number \quad of \quad no}$$$$odds(cancer \quad type = lungs) = \frac{69}{36} = 1.91$$For Cancer Type = Breast:$$odds(cancer \quad type = breast) = \frac{560}{260} = 2.15$$odds ratio $\hat\theta$  as measure of association
 
-$$
-
+```math
 \hat\theta = \frac{odds \quad of \quad breast cancer}{odds \quad of \quad lung cancer} = 2.15/1.91 = 1.23
-
-$$
+```
 
 since, odds ratio is greater than $1$, so the odds of the breast cancer is more than that of the lung cancer.
 
@@ -511,11 +461,9 @@ since, odds ratio is greater than $1$, so the odds of the breast cancer is more 
 
   $$RR = \frac{Pr(Y=True| X = Breast)}{Pr(Y=True| X = Lung)}$$$$RR = \frac{\frac{560}{560+260}}{\frac{69}{69+36}}$$4. The $95\\%$ confidence interval for the odds-ratio, θ is computed from the sample confidence interval for log odds ratio:$$\hat\sigma = \sqrt{\frac{1}{560}+\frac{1}{260}+\frac{1}{69}+\frac{1}{36}}$$Also from above calculations:$$\hat\theta = 1.23$$$$\log{\hat\theta} = \log{1.23} = 0.21$$Therefore, the $95\\%$ confidence interval for $\log{\theta}$ is:$$0.21 +- 1.95 \* 0.21 = (0.63, -0.21)$$Using the above logits, $95\\%$ CI for $\theta$  is :
 
-$$
-
+```math
 (e^{-0.21}, e^{0.647}) = (0.81, 1.90)
-
-$$
+```
 
 5. Since we have $(0.81, 1.9)$ defines the measure of association with $95\\%$ confidence and it also contains $1$. $1$  depicts there no relationship between tumor eradication vs cancer type.
 
@@ -564,25 +512,19 @@ $$
 
   $$X_1 = 40mm \quad and \quad X_2 = 3.5cm$$$$\hat{\beta_{0}} = -6 \\ \hat{\beta_{1}}= 0.05 \\ \hat{\beta_{2}} = 1$$Also,$$p_i = \frac{e^{\beta_0+\beta_1x_1+\beta_2x_2}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2}}$$On imputing model's parameters and observations values:$$p_i = \frac{e^{-6+0.05\*40+1\*3.5}}{1+e^{-6+0.05\*40+1\*3.5}}$$$$p_i = \frac{e^{-0.5}}{1+e^{-0.5}} = 0.377$$2. For $50\\%$ chance of eradicating the tumor.$$p_i = 0.5$$From 1st part, we have expression of $p_i$ as follows:$$p_i = \frac{e^{\beta_0+\beta_1x_1+\beta_2x_2}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2}}$$We need to find $x_1$ assuming $x_2$ same as 1st part.
 
-$$
-
+```math
 0.5 =  \frac{e^{-6+0.05\*x_1+1\*3.5}}{1+e^{-6+0.05\*x_1+1\*3.5}}
+```
 
-$$
-
-$$
-
+```math
 e^{-6+0.05x_1+3.5} = 1
-
-$$
+```
 
 By taking logarithm of both side, we can solve of $x_1$:
 
-$$
-
+```math
 x_1 = \frac{2.5}{0.05} = 50
-
-$$
+```
 
 </details>
 
@@ -630,40 +572,32 @@ The output from training a logistic regression classifier is as follows:
 
 1. odds of migraine $Pr(migraine = 1)$ can be given by:$$\frac{Pr(migraine = 1 | X_1, X_2)}{1 - Pr(migraine = 1 | X_1, X_2)} = e^{\beta_0 + \beta_1X_1 + \beta_2X_2}$$
 
-$$
-
+```math
 \frac{Pr(migraine = 1 | X_1, X_2)}{1 - Pr(migraine = 1 | X_1, X_2)} =  e^{(-6.36347 - 1.02411X_1 + 0.11904X_2)}
-
-$$
+```
 
 2. Given observation has following values
   - drank 100 cups per month i.e $X_2 = 100 $- patient that has at least four amalgams i.e$ X_1 = 1 $Using above values, Expression for$ Pr(migraine=1 | X_1, X_2)$can be given by:
 
-$$
-
+```math
 Pr(migraine=1 | X_1, X_2) = \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}
-
-$$
+```
 
 On putting $X_1 = 1$ and $X_2 = 100$, we get
 
   $$Pr(migraine=1 | X_1, X_2) = \frac{1}{1+e^{-(-6.36374 - 1.02411 + 11.904)}}$$
 
-$$
-
+```math
 Pr(migraine=1 | X_1, X_2) = \frac{1}{1+e^{-(4.516)}} = 0.989
-
-$$
+```
 
 3. For user that have at-least 4 amalgams $(X_1 = 1)$,
 
   $$Pr(migraine=1 | X_1, X_2) =  \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}$$$$Pr(migraine=1 | 1, X_2) =  \frac{1}{1+e^{-(-6.36347 - 1.02411 + 0.11904X_2)}}$$
 
-$$
-
+```math
 Pr(migraine=1 | 1, X_2) =  \frac{1}{1+e^{7.38758 - 0.11904X_2}}
-
-$$
+```
 
 If we increase $X_2$, denominator in above expression will decrease and hence probability will increase.
 
@@ -740,45 +674,33 @@ Model's parameters:
 
 $\beta_0 = -4.8792 $,$\beta_1 = 0.0258 $1. Given$ X_1 = 33$, with models parametrs we can estimate the probability:
 
-$$
-
+```math
 Pr(remission =1 | X_1 = 33) = \frac{1}{1 + e^{-(\beta_0 + \beta_1X_1)}}
+```
 
-$$
-
-$$
-
+```math
 Pr(remission =1 | X_1 = 33) = \frac{1}{1 + e^{-(-4.8792 + 0.0258 \* 33)}}
+```
 
-$$
-
-$$
-
+```math
 Pr(remission =1 | X_1 = 33) = \frac{1}{1 + 56.137} = 0.01750
-
-$$
+```
 
 2. Let $X$ be the count of the gum bacteria for which probability of the improvement is $0.5$.
 
-$$
-
+```math
 Pr(gum bacteria) = \frac{e^{\theta_0 + \theta_1X}}{1 + e^{\theta_0 + \theta_1X}} = \frac{1}{2}
-
-$$
+```
 
 taking logs on both side and solving for $X$ 
 
-$$
-
+```math
 X = - \frac{\theta_0}{\theta_1} = \frac{4.8792}{0.0258}
+```
 
-$$
-
-$$
-
+```math
 X = 189.116
-
-$$
+```
 
 So for $189$ gum bacteria we will have estimated probability of improvement is $0.5$.
 
@@ -786,25 +708,19 @@ So for $189$ gum bacteria we will have estimated probability of improvement is $
 
   $$\exp{\beta_1} = \exp{0.0258}$$$$\exp{\beta_1} = 189.116$$4. A $99\\%$ confidence interval for $β$  is calculated as follows:
 
-$$
-
+```math
 \hat\beta ± z_{0.005} × ASE(\hat\beta) = 0.0258 ± 2.576 × 0.0194
+```
 
-$$
-
-$$
-
+```math
 \hat\beta ± z_{0.005} × ASE(\hat\beta) = (−0.00077, 0.9917)
-
-$$
+```
 
 Therefore, a $99\\%$ confidence interval for the true odds ratio $exp(β)$  is given by:
 
-$$
-
+```math
 (exp(−0.00077), exp(0.9917)) = (0.99923, 2.6958).
-
-$$
+```
 
 </details>
 
@@ -844,45 +760,33 @@ For the true odds ratio:
 
 1. sample odds ratio: 
 
-$$
-
+```math
 ratio \quad odds = sample \quad odds \quad ratio = \frac{odds \quad of \quad succeess \quad for \quad Placebo}{odds \quad of \quad succeess \quad for \quad Cannabinoids}
+```
 
-$$
-
-$$
-
+```math
 ratio \quad odds =  \frac{130\*6833}{60\*6778}
+```
 
-$$
-
-$$
-
+```math
 ratio \quad odds =  2.1842
-
-$$
+```
 
 2. sample log-odd:$$log(odds) = \log{2.1842} = 0.7812$$The estimated standard error for $\log(\hat\theta)$ is:$$\hat\sigma(\log\theta_{cap}) = \sqrt{\frac{1}{60}+\frac{1}{6833}+\frac{1}{130}+\frac{1}{6778}}$$3. The $95\\%$  CI for the true log odds ratio is:
 
-$$
-
+```math
 (log-odds) ± Z_{0.95} \* sd_{error}
+```
 
-$$
-
-$$
-
+```math
 0.7812 ± 1.96 × 0.1570 = (0.4734, 1.0889)
-
-$$
+```
 
 Correspondingly, the $95\\%$  CI for the true odds ratio is:
 
-$$
-
+```math
 (e^{0.4734}, e^{1.0889}) = (1.6060, 2.9710)
-
-$$
+```
 
 </details>
 
@@ -908,51 +812,37 @@ $$
 
 Using derivative rule for logs and products:
 
-$$
-
+```math
 \frac{d}{dx}H(p) = -\log(p) -1 - \frac{(1-p)}{1-p}\*-1 -\log(1-p)\*-1 = 0
+```
 
-$$
-
-$$
-
+```math
 \frac{d}{dx}H(p) = -\log(p) -1 + 1 + \log(1-p) = 0
+```
 
-$$
-
-$$
-
+```math
 \frac{d}{dx}H(p) = -\log(p) + \log(1-p) = 0
+```
 
-$$
-
-$$
-
+```math
 \log(p)  = \log(1-p)
-
-$$
+```
 
 On simplifying the above expression:
 
-$$
-
+```math
 p = 0.5
-
-$$
+```
 
 So, $H(p)$ is maximum at $p = 0.5$2. If we look at derivative of entropy$ H(p)$wrt$ p$, we have 
 
-$$
-
+```math
 \frac{d}{dx}H(p) = -\log(p) + \log(1-p)
+```
 
-$$
-
-$$
-
+```math
 \frac{d}{dx}H(p) = -\log\frac{p}{1-p} = -logit(p)
-
-$$
+```
 
 </details>
 
@@ -1002,11 +892,9 @@ $$
 
 - **Binary Cross-Entropy (Log Loss)**:
 
-$$
-
+```math
 J(w) = -\frac{1}{N} \sum_{i=1}^N \left[ y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right]
-
-$$
+```
 
 - **Why used?**: MSE with Sigmoid yields non-convex loss with local minima. Log loss is strictly convex, guaranteeing global minimum optimization via gradient descent.
 

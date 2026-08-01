@@ -84,11 +84,9 @@ $$
 
 - **Shannon Entropy Formula**:
 
-$$
-
+```math
 H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
-
-$$
+```
 
 where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
@@ -239,11 +237,9 @@ $$
 
 - **Shannon Entropy Formula**:
 
-$$
-
+```math
 H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
-
-$$
+```
 
 where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
@@ -270,11 +266,9 @@ Given the above formulation, describe a helpful property of the entropy that fol
 
 - **Shannon Entropy Formula**:
 
-$$
-
+```math
 H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
-
-$$
+```
 
 where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 

@@ -31,11 +31,9 @@
 
 LoRA freezes pre-trained weight matrices $W_0 \in \mathbb{R}^{d \times k}$ and injects trainable rank decomposition matrices $A \in \mathbb{R}^{r \times k}$ and $B \in \mathbb{R}^{d \times r}$ with rank $r \ll \min(d, k)$:
 
-$$
-
+```math
 W = W_0 + \Delta W = W_0 + \frac{\alpha}{r} (B \cdot A)
-
-$$
+```
 
 This reduces trainable parameters by >99%  while maintaining model accuracy.
 

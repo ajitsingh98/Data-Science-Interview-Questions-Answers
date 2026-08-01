@@ -20,11 +20,9 @@ Feedforward Neural Networks (FNNs) assume all inputs and outputs are independent
 
 RNNs address this by maintaining an internal **hidden state** $h_t$ that acts as a memory of past inputs:
 
-$$
-
+```math
 h_t = \tanh(W_{hh} h_{t-1} + W_{xh} x_t + b_h)
-
-$$
+```
 
 This allows parameter sharing across time steps, enabling the network to process sequences of arbitrary length while capturing temporal context.
 
@@ -56,29 +54,23 @@ LSTMs introduce a **Cell State** ($C_t$), which acts as an information highway w
 
 1. **Forget Gate ($f_t$)**: Decides what information to discard from the previous cell state.
 
-$$
-
+```math
 f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-
-$$
+```
 
 2. **Input Gate ($i_t $) & Candidate State ($\tilde{C}_t$)**: Decides what new information to store in the cell state.
    $$i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)$$$$\tilde{C}_t = \tanh(W_c \cdot [h_{t-1}, x_t] + b_c)$$3. **Cell State Update**:
 
-$$
-
+```math
 C_t = f_t * C_{t-1} + i_t * \tilde{C}_t
-
-$$
+```
 
 4. **Output Gate ($o_t $)**: Controls what part of the cell state is emitted as the hidden state$ h_t$.
    $$o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$$
 
-$$
-
+```math
 h_t = o_t * \tanh(C_t)
-
-$$
+```
 
 Because the cell state update uses additive gradients ($\frac{\partial C_t}{\partial C_{t-1}} \approx f_t$), gradients can flow back uninterrupted over long sequences without exponentially decaying.
 
@@ -129,27 +121,21 @@ Instead of relying on a single static context vector $c $, Attention allows the 
 
 1. Compute alignment scores $e_{ij}$ between decoder state $s_{i-1}$ and encoder state $h_j$:
 
-$$
-
+```math
 e_{ij} = v_a^T \tanh(W_a s_{i-1} + U_a h_j)
-
-$$
+```
 
 2. Normalize with Softmax to get attention weights $\alpha_{ij}$:
 
-$$
-
+```math
 \alpha_{ij} = \frac{\exp(e_{ij})}{\sum_{k=1}^T \exp(e_{ik})}
-
-$$
+```
 
 3. Compute dynamic context vector $c_i$:
 
-$$
-
+```math
 c_i = \sum_{j=1}^T \alpha_{ij} h_j
-
-$$
+```
 
 </details>
 
@@ -164,11 +150,9 @@ $$
 
 Self-attention computes representations by comparing Queries ($Q $), Keys ($ K $), and Values ($ V$):
 
-$$
-
+```math
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right) V
-
-$$
+```
 
 **Why scale by $\sqrt{d_k}$?**
 For large dimensionality $d_k $, dot products$ Q K^T $grow large in magnitude. Large values push the softmax function into regions with extremely small gradients (vanishing gradient problem during backpropagation). Dividing by$\sqrt{d_k}$  normalizes the variance to 1.
@@ -186,17 +170,13 @@ Unlike RNNs which process tokens sequentially, Self-Attention is permutation inv
 
 To inject word order, Transformers add **Positional Encodings** $PE_{(pos, 2i)}$  to input embeddings using sinusoidal functions:
 
-$$
-
+```math
 PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
+```
 
-$$
-
-$$
-
+```math
 PE_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
-
-$$
+```
 
 This allows the model to easily learn relative positions because $PE_{pos + k}$ can be expressed as a linear function of $PE_{pos}$.
 

@@ -90,11 +90,9 @@ Then the new perceptron can process inputs ranging between 0 and 1 and emit outp
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$
-
+```math
 y = f(z) = \begin{cases} 1 & \text{if } w^T x + b \ge 0 \\ 0 & \text{if } w^T x + b < 0 \end{cases}
-
-$$
+```
 
 </details>
 
@@ -107,11 +105,9 @@ $$
 
 - **Mean Squared Error (MSE)** or **Binary Cross-Entropy (BCE)**:
 
-$$
-
+```math
 L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]
-
-$$
+```
 
 </details>
 
@@ -124,11 +120,9 @@ $$
 
 - **Mean Squared Error (MSE)** or **Binary Cross-Entropy (BCE)**:
 
-$$
-
+```math
 L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]
-
-$$
+```
 
 </details>
 
@@ -2076,11 +2070,9 @@ We can use following techniques to regularize DNNs:
 
 In case of parameter norm penalities we denote the regularized objective function by $J$:
 
-$$
-
+```math
 \tilde{J}(\theta; X, y) =  J(\theta; X, y) + \alpha \Omega(\theta)
-
-$$
+```
 
 Where
 - $\alpha$ is hyperparameter range $[0, \infty]$-$ J(\theta; X, y)$  is standard objective function
@@ -2129,11 +2121,9 @@ We can use different $\alpha$ for each layer but it can be expensive to search f
 
 $L^2$ regularization technique drives the weight closer to origin by adding a regularization term $\Omega(\theta) = \frac{1}{2}||w||^{2}_{2}$  It has following total objective function:
 
-$$
-
+```math
 \tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)
-
-$$
+```
 
 </details>
 
@@ -2146,19 +2136,15 @@ $$
 
 The \(L^2\) parameter norm penalty is called weight decay because it effectively "decays" or shrinks the weights during the training process.
 
-$$
-
+```math
 \tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)
-
-$$
+```
 
 with corresponding parameter gradient$$\nabla \tilde{J}(w; X, y) = \alpha w + \nabla_{w} J(w; X, y)$$To take single gradient step to update the weights, we perform this update:$$w \leftarrow w - \eta \left( \alpha w + \nabla_{w} J(w; X, y) \right)$$We can further expand it
 
-$$
-
+```math
 w \leftarrow (1 - \eta \alpha) w -  \eta \nabla_{w} J(w; X, y)
-
-$$
+```
 
 As we can see the addition of $L^2$  parameter norm penalty has modified the learning rule to multiplicatively shrink the weight vector by a constant factor on each step. The term "decay" reflects this gradual reduction in weight magnitude over time.
 
@@ -2175,11 +2161,9 @@ Actually we can regularize the parameters to any specific point in space and sti
 
 For regularizing the weights towards a point $w_0$, we can use following penalty term
 
-$$
-
+```math
 \frac{\alpha}{2} (w - w_0)^{T}(w - w_0)
-
-$$
+```
 
 </details>
 
@@ -2192,19 +2176,15 @@ $$
 
 Adding \(L^2\) regularization to the objective function of linear regression modifies it to:
 
-$$
-
+```math
 \tilde{J}(w; X, y) = (Xw - y)^T(Xw - y) + \frac{1}{2}\alpha w^{T}w
-
-$$
+```
 
 This means the weights \(w\) can be calculated as:
 
-$$
-
+```math
 w = (X^{T}X + \alpha I)^{-1}X^{T}y
-
-$$
+```
 
 The diagonal entries of the matrix \((X^{T}X + \alpha I)^{-1}\) represent the variance of each input feature. \(L^2\) regularization makes the model view the input \(X\) as having higher variance, which leads to smaller weights for features that have low covariance with the output target.
 
@@ -2219,11 +2199,9 @@ The diagonal entries of the matrix \((X^{T}X + \alpha I)^{-1}\) represent the va
 
 It can be defined as
 
-$$
-
+```math
 \Omega{\theta} = ||w||_{1} = \sum_{i}|w_i|
-
-$$
+```
 
 </details>
 
@@ -2236,11 +2214,9 @@ $$
 
 The regularized objective function $\tilde{J}(w; X, y)$ is given by$$\tilde{J}(w; X, y) = \alpha ||w||_1 + J(w; X, y)$$On taking gradient both side
 
-$$
-
+```math
 \nabla_{w}\tilde{J}(w; X, y) = \alpha \text{sign}(w) + \nabla_{w}J(X, y; w)
-
-$$
+```
 
 Where sign($w $) is simply the sign of$ w$  applied element wise.
 
@@ -2257,30 +2233,24 @@ Not that here the gradient no longer scales linearly with each $w_i $, instead i
 
 In linear regression, the objective function with L1 regularization can be expressed as:
 
-$$
-
+```math
 \tilde{J}(w; X, y) = \frac{1}{2} \sum_{i=1}^{n} (y_i - X_i^T w)^2 + \alpha \sum_{j=1}^{p} |w_j|
-
-$$
+```
 
 When we optimize this objective function, we take the gradient and set it to zero:$$\nabla \tilde{J}(w; X, y) = -X^T(y - Xw) + \alpha \text{sign}(w) = 0$$This gives us:
 
-$$
-
+```math
 X^T(y - Xw) = \alpha \text{sign}(w)
-
-$$
+```
 
 1. Impact on Weights: The \(\text{sign}(w)\) term introduces a non-smooth point at \(w_j = 0\). This means that during optimization, if a feature's contribution is minimal, the corresponding weight \(w_j\) may be driven to zero. 
 2. Zeroing Out Weights:
   - If the contribution of a feature \(X_j\) to reducing the error is low (meaning \(X^T(y - Xw)\) for that feature is relatively small), the penalty term becomes large enough that:
     $$|X^T(y - Xw)| < \alpha$$- This condition leads to:
 
-$$
-
+```math
 w_j = 0
-
-$$
+```
 
   - Thus, when \(\alpha\) is sufficiently large, features that do not significantly help in predicting the output will have their weights reduced to zero.
 
@@ -2512,17 +2482,13 @@ The reason that model averaging works is that different models will usually not 
 
 Consider for example a set of $k$ regression models. Suppose that each model makes an error $\eta_i$ on each example, with errors drawn from a zero-mean multivariate normal distribution with variances $\mathbf{E}[\eta_{i}^2] = v$ and covariances $\mathbf{E}[\eta_{i} \eta_{j}] = c$. Then the error made by the average prediction of all the ensemble models is $\frac{1}{k}\sum_{i} \eta_{i}$  The expected squared error of the ensemble predictor is
 
-$$
-
+```math
 \mathbf{E}\left[\left(\frac{1}{k}\sum_{i=1}^k \eta_i\right)^2\right] = \frac{1}{k^2} \mathbf{E}\left[\sum_{i=1}^k \eta_i^2 + \sum_{i \neq j} \eta_i \eta_j\right]
+```
 
-$$
-
-$$
-
+```math
 = \frac{1}{k}v + \frac{k-1}{k}c
-
-$$
+```
 
 In the case where the errors are perfectly correlated and $c=v $, the mean squared error reduces to$ v $, so the model averaging does not help at all. In case where we have perfectly uncorrelated errors and$ c=0 $, the expected squared error of the ensemble is only$\frac{1}{k}v$. This means that the expected squared error of the ensemble decreases linearly with the ensemble size. 
 

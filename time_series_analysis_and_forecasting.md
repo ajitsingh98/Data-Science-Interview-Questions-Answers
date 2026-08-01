@@ -314,11 +314,9 @@ The ACF is a plot of autocorrelation between a variable and itself separated by 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$
-
+```math
 r_k = \frac{\sum_{t=k+1}^{T}(y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^{T}(y_t - \bar{y})^2}
-
-$$
+```
 
 Where $T$  is the length of the time series.
 
@@ -596,11 +594,9 @@ Log transformations reduce right-skewness and stabilizes variance, especially in
 
 It uses mapping as:
 
-$$
-
+```math
 y' = y^p
-
-$$
+```
 
 It Increases or decreases the rate of change for different data values. Depending on the power \( p \) (for example, \( p = 2 \) for a square transformation or \( p = -1 \) for a reciprocal transformation), this transformation can reduce skewness or stabilize variance.
 
@@ -685,11 +681,9 @@ In an multiplicative model, the time series value at any given time \( Y_t \) is
 - Seasonal (\( S_t \)) – the repeating short-term cycle in the data (such as monthly or yearly seasonality).
 - Residual (\( R_t \)) – the remaining random variation or noise.
 
-$$
-
+```math
 Y_t = T_t \times S_t \times R_t
-
-$$
+```
 
 </details>
 
@@ -725,19 +719,15 @@ A multiplicative model is appropriate when the seasonal variations change propor
 
 An alternative to using a multiplicative decomposition is to first transform the data until the variation in the series appears to be stable over time, then use an additive decomposition. When a log transformation has been used, this is equivalent to using a multiplicative decomposition on the original data because
 
-$$
-
+```math
 y_t = S_t \times T_t \times R_t
-
-$$
+```
 
 On taking $\log$  both side:
 
-$$
-
+```math
 \log{y_t} = \log{S_t} + \log{T_t} + \log{R_t}
-
-$$
+```
 
 </details>
 
@@ -761,11 +751,9 @@ If the seasonal component is removed from the original data, the resulting value
 
 A moving average of order $m$ can be written as
 
-$$
-
+```math
 \hat{T}_{t} = \frac{1}{m}\sum_{j=-k}{k}y_{t+j}
-
-$$
+```
 
 where $m = 2k+1 $. That is, the estimate of the trend-cycle at time$ t $is obtained by averaging values of the time series within$ k $periods of$ t$. Observations that are nearby in time are also likely to be close in value. Therefore, the average eliminates some of the randomness in the data, leaving a smooth trend-cycle component.
 
@@ -802,11 +790,9 @@ In an m-order moving average, symmetry is important because it ensures that each
 
 Combinations of moving averages result in weighted moving averages. In general, a weighted m-MA can be written as:
 
-$$
-
+```math
 \hat{T}_t = \sum^{k}_{j=-k}a_j y_{t+j}
-
-$$
+```
 
 where $k = (m-1)/2 $, and weights are given by$[a_{-k},..,a_k]$. It is important that the weights all sum to one and that they are symmetric so that$ a_j = a_{-j}$.
 
@@ -926,21 +912,17 @@ STL (Seasonal-Trend Decomposition using Loess) is a powerful decomposition metho
 
 A time series decomposition can be used to measure the strength of trend and seasonality in a time series:
 
-$$
-
+```math
 y_t = T_t + S_t + R_t
-
-$$
+```
 
 *Strength of Trend*
 
 For strongly trended data, the seasonally adjusted data should have much more variation than the remainder component.
 
-$$
-
+```math
 F_T = max(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(T_t + R_t)})
-
-$$
+```
 
 This will give a measure of the strength of the trend between 0 and 1.
 
@@ -948,11 +930,9 @@ This will give a measure of the strength of the trend between 0 and 1.
 
 The strength of seasonality is defined similarly, but with respect to the detrended data rather than the seasonally adjusted data:
 
-$$
-
+```math
 F_S = max(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(S_t + R_t)})
-
-$$
+```
 
 A series with seasonal strength $F_S$  close to 0 exhibits almost no seasonality.
 
@@ -983,11 +963,9 @@ A series with seasonal strength $F_S$  close to 0 exhibits almost no seasonality
 
 Mean method assumes that forecasts of all future values are equal to average of historical data. If we let the historical data denoted by $y_1,..,y_T$, then we can write forecasts as
 
-$$
-
+```math
 \hat{y}_{T+h|T} = \bar{y} = (y_1 + ... + y_T)/T
-
-$$
+```
 
 <table align='center'>
   <tr>
@@ -1011,11 +989,9 @@ $$
 
 For naïve forecasts, we simply set all forecasts to be the value of the last observation. That is,
 
-$$
-
+```math
 \hat{y}_{T+h|T} = y_T
-
-$$
+```
 
 Note that naive method is also called random walk forecasts.
 
@@ -1041,11 +1017,9 @@ Note that naive method is also called random walk forecasts.
 
 We  set each forecast to be equal to the last observed value from the same season (e.g., the same month of the previous year).
 
-$$
-
+```math
 \hat{y}_{T+h|T} = y_{T+h - m(k+1)}
-
-$$
+```
 
 Where m = the seasonal period, and $k$ is the integer part of $(h-1)/m$(i.e., the number of complete years in the forecast period prior to time$ T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
 
@@ -1073,11 +1047,9 @@ A variation on the naïve method is to allow the forecasts to increase or decrea
 
 Forecast for time $T+h$ is given by
 
-$$
-
+```math
 \hat{y}_{T+h|T} = y_T + \frac{h}{T-1} \sum_{t=2}^{T}(y_t - y_{t-1}) = Y_T + h(\frac{y_t - y_1}{T - 1})
-
-$$
+```
 
 Where m = the seasonal period, and $k$ is the integer part of $(h-1)/m$(i.e., the number of complete years in the forecast period prior to time$ T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
 
@@ -1103,11 +1075,9 @@ Where m = the seasonal period, and $k$ is the integer part of $(h-1)/m$(i.e., th
 
 The "residuals" in a time series model are what is left over after fitting a model. The residuals are equal to the difference between the observations and the corresponding fitted values:
 
-$$
-
+```math
 e_t = y_t - \hat{y}_t
-
-$$
+```
 
 Residuals are useful in checking whether a model has adequately captured the information in the data.
 
@@ -1158,21 +1128,17 @@ Good to have:
 
 Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t$ to lie with a specified probability. For example, assuming that distribution of future observations is normal, a $95\%$  prediction interval for the h-step forecast is:
 
-$$
-
+```math
 \hat{y}_{T+h|T} \pm 1.96\hat{\sigma}_h
-
-$$
+```
 
 where $\hat{\sigma}_h$  is an estimate of the standard deviation of the  h-step forecast distribution.
 
 More generally, a prediction interval can be written as
 
-$$
-
+```math
 \hat{y}_{T+h|T} \pm c\hat{\sigma}_h
-
-$$
+```
 
 where the multiplier $c$  depends on the coverage probability.
 
@@ -1187,21 +1153,17 @@ where the multiplier $c$  depends on the coverage probability.
 
 Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t$ to lie with a specified probability. For example, assuming that distribution of future observations is normal, a $95\%$  prediction interval for the h-step forecast is:
 
-$$
-
+```math
 \hat{y}_{T+h|T} \pm 1.96\hat{\sigma}_h
-
-$$
+```
 
 where $\hat{\sigma}_h$  is an estimate of the standard deviation of the  h-step forecast distribution.
 
 More generally, a prediction interval can be written as
 
-$$
-
+```math
 \hat{y}_{T+h|T} \pm c\hat{\sigma}_h
-
-$$
+```
 
 where the multiplier $c$  depends on the coverage probability.
 
@@ -1216,11 +1178,9 @@ where the multiplier $c$  depends on the coverage probability.
 
 When forecasting one step ahead, the standard deviation of the forecast distribution can be estimated using the standard deviation of the residuals given by
 
-$$
-
+```math
 \hat{\sigma} = \sqrt{\frac{1}{T - K - M}\sum_{t=1}^{T}e_{t}^2}
-
-$$
+```
 
 where $K$ is the number of parameters estimated in the forecasting method, and $M$  is the number of missing values in the residuals.
 
@@ -1246,8 +1206,7 @@ Prediction intervals usually increase in length as the forecast horizon increase
 
 For the four benchmark methods, it is possible to mathematically derive the forecast standard deviation under the assumption of uncorrelated residuals.
 
-$$
-
+```math
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
@@ -1261,8 +1220,7 @@ Drift                       & $\hat{\sigma}_h = \hat{\sigma} \sqrt{h \left(1 + \
 \caption{Standard Deviation Equations for Different Forecasting Methods}
 \label{tab:forecast_sd}
 \end{table}
-
-$$
+```
 
 </details>
 
@@ -1286,11 +1244,9 @@ When assuming a normal distribution for residuals is not suitable, an alternativ
 
 Yes, Time series decomposition can be a useful step in producing forecasts. Assuming an additive decomposition, the decomposed time series can be written as
 
-$$
-
+```math
 y_t = \hat{S}_t + \hat{A}_t
-
-$$
+```
 
 Where $\hat{A}_t = \hat{T}_t + \hat{R}_t$  is the seasonally adjusted component. 
 
@@ -1398,11 +1354,9 @@ When using a linear regression model, we assume:
 
 The least squares principle provides a way of choosing the coefficients effectively by minimising the sum of the squared errors. That is, we choose the values of $\beta_0,\beta_1,..,\beta_k$ that minimise
 
-$$
-
+```math
 \sum_{t=1}^T \eta_{t}^2 = \sum_{t=1}^T(y_t - \beta_0 - \beta_1x_{1, t} - ... - \beta_k x_{k, t})^2
-
-$$
+```
 
 This is called least squares estimation because it gives the least value for the sum of squared errors.
 
@@ -1418,11 +1372,9 @@ This is called least squares estimation because it gives the least value for the
 There are several useful predictors that occur frequently when using regression for time series data.
 - Trend: It is common for time series data to be trending. A linear trend can be modelled by simply using $x_{1, t}=t$ as predictor,
 
-$$
-
+```math
 y_t = \beta_0 + \beta_1t + \eta_t
-
-$$
+```
 
 - Dummy variables
     - Public holiday 
@@ -1452,17 +1404,13 @@ $$
 
 AIC is defined as:
 
-$$
-
+```math
 \text{AIC} = T\log(\frac{SSE}{T}) + 2(k+2)
+```
 
-$$
-
-$$
-
+```math
 \text{SSE} = \sum_{t=1}^T \eta_{t}^2
-
-$$
+```
 
 where $T$ is the number of observations used for estimation and $k$  is the number of predictors in the model.
 
@@ -1490,11 +1438,9 @@ The model with the minimum value of the AIC is often the best model for forecast
 
 For small values of $T$, the AIC tends to select too many predictors, and so a bias-corrected version of the AIC has been developed.
 
-$$
-
+```math
 \text{AIC}_c = \text{AIC} + \frac{2(k+2)(k+3)}{(T-k-3)}
-
-$$
+```
 
 </details>
 
@@ -1507,11 +1453,9 @@ $$
 
 Schwarz’s Bayesian Information Criterion (usually abbreviated to BIC, SBIC or SC):
 
-$$
-
+```math
 \text{BIC} = T\log{\frac{SSE}{T}} + (k+2)\log(T)
-
-$$
+```
 
 </details>
 
@@ -1548,11 +1492,9 @@ Exponential smoothing methods are weighted averages of past observations, with t
 
 Simple Exponential Weighted Average, or simple exponential smoothing, is a forecasting method that assigns larger weights to more recent observations and gradually decreases the weights for older observations.
 
-$$
-
+```math
 \hat{y}_{T+1 | T} = \alpha y_T + \alpha(1-\alpha)y_{T-1}+\alpha(1-\alpha)^2y_{T-2}+...
-
-$$
+```
 
 Where $0 \le \alpha \le 1$ is the smoothing parameter. The rate at which the weights decrease is controlled by the parameter $α$.
 
@@ -1580,13 +1522,11 @@ For simple exponential smoothing, the only component included is the level, $l_t
 
 The component form of simple exponential smoothing is given by:
 
-$$
-
+```math
 \text{Forecast equation} \hat{y}_{t+h | t} = l_t  \\
 
 \text{Smoothing equation} l_t = \alpha y_t + (1-\alpha)l_{t-1}
-
-$$
+```
 
 where $l_t$ is the level (or the smoothed value) of the series at time $t$.
 
@@ -1601,11 +1541,9 @@ where $l_t$ is the level (or the smoothed value) of the series at time $t$.
 
 Simple exponential smoothing has a "flat" forecast function:
 
-$$
-
+```math
 \hat{y}_{T+h | T} = \hat{y}_{T+1 | T} = l_T, h = 2, 3, ..
-
-$$
+```
 
 That is, all forecasts take the same value, equal to the last level component.
 
@@ -1620,15 +1558,13 @@ That is, all forecasts take the same value, equal to the last level component.
 
 Holt extended simple exponential smoothing to allow the forecasting of data with a trend. This method involves a forecast equation and two smoothing equations (one for the level and one for the trend):
 
-$$
-
+```math
 \text{Forecast equation}  \hat{y}_{t+h | t} = l_t + hb_t \\
 
 \text{Level equation}  l_t = \alpha y_t + (1-\alpha)(l_{t-1} + b_{t-1}) \\
 
 \text{Trend equation}  b_t = \beta^* (l_t - l_{t-1}) + (1-\beta^*)b_{t-1}
-
-$$
+```
 
 where $l_t$ denotes an estimate of the level of the series at time $t$,$ b_t $denotes an estimate of the trend (slope) of the series at time$ t $,$\alpha$ is the smoothing parameter for the level and $\beta^*$  is the smoothing parameter for the trend.
 
@@ -1654,15 +1590,13 @@ The forecasts generated by Holt’s linear method display a constant trend (incr
 
 In conjunction with the smoothing parameters $\alpha$ and $\beta^*$(with values between 0 and 1 as in Holt’s method), damped trend method also includes a damping parameter $0 < \phi < 1$:
 
-$$
-
+```math
 \text{Forecast equation}  \hat{y}_{t+h | t} = l_t + (\phi + \phi^2 + ... + \phi^h)b_t \\
 
 \text{Level equation}  l_t = \alpha y_t + (1-\alpha)(l_{t-1} + \phi b_{t-1}) \\
 
 \text{Trend equation}  b_t = \beta^* (l_t - l_{t-1}) + (1-\beta^*)\phi b_{t-1}
-
-$$
+```
 
 If $\phi = 1 $,  the method is identical to Holt’s linear method. For values between$0$ and $1$, $\phi$  dampens the trend so that it approaches a constant some time in the future.
 
@@ -1678,29 +1612,21 @@ If $\phi = 1 $,  the method is identical to Holt’s linear method. For values b
 Holt and Winters extended Holt’s method to capture seasonality. The Holt-Winters seasonal method comprises the forecast equation and three smoothing equations:
 - Level $l_t $- Trend$ b_t $- Seasonal Component$ s_t$*Holt-Winters’ additive method*
 
-$$
-
+```math
 \hat{y}_{t+h|t} = \ell_t + h b_t + s_{t + h - m(k+1)}
+```
 
-$$
-
-$$
-
+```math
 \ell_t = \alpha (y_t - s_{t-m}) + (1 - \alpha)(\ell_{t-1} + b_{t-1})
+```
 
-$$
-
-$$
-
+```math
 b_t = \beta^* (\ell_t - \ell_{t-1}) + (1 - \beta^*) b_{t-1}
+```
 
-$$
-
-$$
-
+```math
 s_t = \gamma (y_t - \ell_{t-1} - b_{t-1}) + (1 - \gamma) s_{t-m}
-
-$$
+```
 
 Where $k$ is the integer part of $(h-1)/m$. $\alpha$, $\ell_t$ and $\gamma$  are the smoothing parameter of level, trend and seasonality.
 
@@ -1751,17 +1677,13 @@ State space models in time series analysis consist of two main components: a mea
 
 Forecast error is given by:
 
-$$
-
+```math
 e_t = y_t - \hat{y}_{t | t-1}
+```
 
-$$
-
-$$
-
+```math
 e_t = y_t - l_{t-1}
-
-$$
+```
 
 </details>
 
@@ -1774,17 +1696,13 @@ $$
 
 Forecast error is given by:
 
-$$
-
+```math
 e_t = y_t - \hat{y}_{t | t-1}
+```
 
-$$
-
-$$
-
+```math
 e_t = y_t - l_{t-1}
-
-$$
+```
 
 </details>
 
@@ -1799,19 +1717,15 @@ Forecast error is given by:
 
 - Measurement equation: It captures relationship between observations and states
 
-$$
-
+```math
 y_t = l_{t-1} + \eta_t
-
-$$
+```
 
 - State equation: Evolution of states through time
 
-$$
-
+```math
 l_t = l_{t-1} + \alpha \eta_t
-
-$$
+```
 
 </details>
 
@@ -1846,29 +1760,23 @@ False
 
 For ETS models, Akaike’s Information Criterion (AIC) is defined as
 
-$$
-
+```math
 AIC = -2\log{(L)} + 2k
-
-$$
+```
 
 where L is the likelihood of the model and k is the total number of parameters and initial states that have been estimated (including the residual variance).
 
 The AIC corrected for small sample bias ($AIC_c$) is defined as:
 
-$$
-
+```math
 AIC_c = AIC + \frac{2k(k+1)}{T - k -1}
-
-$$
+```
 
 and the Bayesian Information Criterion (BIC) is
 
-$$
-
+```math
 BIC = AIC + k[\log{(T)} - 2]
-
-$$
+```
 
 </details>
 
@@ -1994,19 +1902,15 @@ An ACF (Autocorrelation Function) plot can help identify whether a time series i
 Second-order differencing is a technique used in time series analysis to make a non-stationary series stationary. It involves applying differencing twice to the original time series data.
 - The first-order difference of a time series is calculated by subtracting the previous observation from the current observation:
 
-$$
-
+```math
 Y'_{t} = Y_t - Y_{t-1}
-
-$$
+```
 
 - The second-order difference is calculated as:
 
-$$
-
+```math
 Y''_{t} = Y'_{t} - Y'_{t-1} = Y_t - 2Y_{t-1} + Y_{t-2}
-
-$$
+```
 
 </details>
 
@@ -2030,11 +1934,9 @@ Second-order differencing is useful when the data has a second-degree trend or w
 
 A seasonal difference is the difference between an observation and the previous observation from the same season. So
 
-$$
-
+```math
 y'_{t} = y_t - y_{t-m}
-
-$$
+```
 
 where m = the number of seasons.
 
@@ -2075,11 +1977,9 @@ We can conduct some statistical tests to determine the required order of differe
 
 In general, a $d$  th-order difference can be written as:
 
-$$
-
+```math
 (1-B)^d y_t
-
-$$
+```
 
 </details>
 
@@ -2125,11 +2025,9 @@ In a linear regression model, the variable of interest is forecasted using a lin
 
 An autoregressive model of order $p$**AR(p) model** can be written as:
 
-$$
-
+```math
 y_t = c + \phi_1 y_{t-1} + \phi_2 y_{t-2} + ... + \phi_p y_{t-p} + \eta_t
-
-$$
+```
 
 where $\eta_t$  is white noise.
 
@@ -2169,11 +2067,9 @@ For the model to remain stationary, certain constraints are placed on the parame
 
 A moving average model uses past forecast errors in a regression-like model:
 
-$$
-
+```math
 y_t = c + \eta_t + \theta_1 \eta_{t-1} + \theta_2 \eta_{t-2} + ... + \theta_q \eta_{t-q}
-
-$$
+```
 
 where $\eta_t$ is white noise. It is called as a moving average model of order $q$.
 
@@ -2223,11 +2119,9 @@ Non seasonal ARIMA model combines differencing with autoregression and a moving 
 
 The full model **ARIMA(p, d, q)** can be written as:
 
-$$
-
+```math
 y'_t = c + \phi_1 y'_{t-1} + ... + \phi_p y'_{t-p} + \theta_1 \eta_{t-1} + ... + \theta_q \eta_{t-q} + \eta_t
-
-$$
+```
 
 where $y'_t$ is the differenced series (it may have been differenced more than once). The “predictors” on the right hand side include both lagged values of $y_t$  and lagged errors. 
 
@@ -2363,11 +2257,9 @@ To overcome these limitations, dynamic regression models merge the strengths of 
 
 Traditional regression model takes the form of
 
-$$
-
+```math
 y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \epsilon_t
-
-$$
+```
 
 where $y_t$ is a linear function of the $k$ predictor variables $(x_{1, t},...,x_{k, t})$ and $\eta_t$  is usually assumed to be an uncorrelated error term (i.e it is white noise).
 
@@ -2375,17 +2267,13 @@ Dynamic regression allows the errors from a regression to contain autocorrelatio
 
 If $\eta_t$ follows an ARIMA(1, 1, 1) model, we can write
 
-$$
-
+```math
 y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \eta_t
+```
 
-$$
-
-$$
-
+```math
 (1 - \phi_1 B)(1 - B)\eta_t = (1 + \theta_1 B)\epsilon_t
-
-$$
+```
 
 Where $\epsilon_t$  is a white noise series.
 
@@ -2540,17 +2428,13 @@ If the series are stationary, we forecast them by fitting a VAR to the data dire
 
 2-dimensional VAR(1) model as:
 
-$$
-
+```math
 y_{1, t} = c_1 + \phi_{11,1}y_{1,t-1} + \phi_{12,1}y_{2,t-1} + \epsilon_{1, t}
+```
 
-$$
-
-$$
-
+```math
 y_{2, t} = c_2 + \phi_{21,1}y_{1,t-1} + \phi_{22,1}y_{2,t-1} + \epsilon_{2, t}
-
-$$
+```
 
 </details>
 

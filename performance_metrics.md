@@ -37,11 +37,9 @@ We can use following regression metrics for evaluation
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$
-
+```math
 \text{MSE} = \frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2
-
-$$
+```
 
 Where
 
@@ -71,11 +69,9 @@ Where
 
 Bounds of mean-squared error(mse)
 
-$$
-
+```math
 [0, \inf)
-
-$$
+```
 
 with $0$  the best mse
 
@@ -170,11 +166,9 @@ Minimizing MSE involves a combination of techniques:
 
 RMSE is basically root of mean-squared error
 
-$$
-
+```math
 \text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2}
-
-$$
+```
 
 </details>
 
@@ -215,11 +209,9 @@ $$
 
 MAE is average of absolute difference of predicted and actual values.
 
-$$
-
+```math
 \text{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_{true, i} - y_{pred, i}|
-
-$$
+```
 
 </details>
 
@@ -267,11 +259,9 @@ MAE uses `|.|` function which is not differential at zero
 
 MAPE is a metric used to evaluate the accuracy of a forecasting or regression model. It measures the average absolute percentage error between predicted and actual values. It is calculated as:
 
-$$
-
+```math
 \text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100
-
-$$
+```
 
 where $y_i$ is the actual value, $\hat{y}_i$ is the predicted value, and $n$  is the number of observations.
 
@@ -404,11 +394,9 @@ An R-squared value of $0.75$ means that 75% of the variance in the dependent var
 
 Mathematically, It can be expressed as:
 
-$$
-
+```math
 \text{R-squared} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{N}(y_i - \hta{y}_{i})^2}{\sum_{i}^{N}(y_i - \bar{y}_{i})^2}
-
-$$
+```
 
 Where:
 
@@ -426,11 +414,9 @@ Where:
 
 Yeah, `R-squared` value can be negative due to outliers i.e when `MSE(model) > MSE(Baseline)`. It is the case when we have heavy outliers in predictions.
 
-$$
-
+```math
 \text{SSR} > \text{SST}
-
-$$
+```
 
 </details>
 
@@ -507,11 +493,9 @@ R-squared suffers from problem that the scores keep improving on addition of pre
 
 Mathematically It can be expressed as:
 
-$$
-
+```math
 \text{Adjusted R-squared} = 1 - (\frac{(1-R^2).(n-1)}{n - k -1})
-
-$$
+```
 
 Where:
 
@@ -552,11 +536,9 @@ Pearson Correlation is a statistical method that measures the similarity or corr
 
 The Pearson correlation coefficient between two vectors $y$ and $\cap{y}$  of dimension is:
 
-$$
-
+```math
 \rho(y, \hat(y)) = \frac{\text{Cov}(y, \hat{y})}{\sigma_{y} \sigma_{\hat{y}}}
-
-$$
+```
 
 </details>
 
@@ -618,11 +600,9 @@ Spearman's rank correlation coefficient, often denoted as $\rho_s$ or $r_s$, is 
 
 The formula for Spearman’s rank correlation is:
 
-$$
-
+```math
 \rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}
-
-$$
+```
 
 Where $d_i$ is the difference between the ranks of each pair of values, and $n$  is the number of observations.
 
@@ -645,11 +625,9 @@ Where $d_i$ is the difference between the ranks of each pair of values, and $n$ 
 
 3. Apply the expression of spearman correlation
 
-$$
-
+```math
 \rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}
-
-$$
+```
 
 </details>
 
@@ -822,11 +800,9 @@ Accuracy scores signifies the portion of true predictions among total cases exam
 
 It is mathematically expressed as:
 
-$$
-
+```math
 \text{accuracy score} = \frac{TP + TN}{TP + FP + FN + TN}
-
-$$
+```
 
 Where:
 
@@ -894,11 +870,9 @@ Precision is the portion of true positive class among predicted positive classes
 
 It can be expressed as:
 
-$$
-
+```math
 \text{Precision Score} = \frac{TP}{TP+FP}
-
-$$
+```
 
 Note that precision is per-class notion.
 
@@ -983,11 +957,9 @@ Recall measures the proportion of actual positives cases that are correctly pred
 
 It is calculated as:
 
-$$
-
+```math
 \text{recall score} = \frac{TP}{TP+FN}
-
-$$
+```
 
 </details>
 
@@ -1068,11 +1040,9 @@ F scores combine precision and recall via their harmonic mean, with a value  tha
 
 It captures the tradeoff between precision and recall:
 
-$$
-
+```math
 \text{F Score} = (\beta^2 + 1)\frac{\text{precision} \cdot \text{recall}}{\beta^{2} \cdot \text{precision} + \text{recall}}
-
-$$
+```
 
 </details>
 
@@ -1085,11 +1055,9 @@ $$
 
 F-1 Score is a special case of F scores when we give equal weighage to precision and recall. In this setup $\beta  = 1$ 
 
-$$
-
+```math
 \text{F-1 Score} = \frac{2 * \text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
-
-$$
+```
 
 The F1 score is a suitable choice when both precision and recall are equally important, and we want to balance between the two.
 
@@ -1129,11 +1097,9 @@ Bounds of F scores: $[0, 1]$, with $0$ the worst and $1$  the best, and guarante
 - **Type II Error ($\beta $, False Negative)**: Failing to reject the null hypothesis$ H_0$  when it is false (e.g., missing a fraudulent transaction).
 - **Confusion Matrix Relationship**:
 
-$$
-
+```math
 \text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \quad (\text{penalizes Type I}), \quad \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \quad (\text{penalizes Type II})
-
-$$
+```
 
 </details>
 
@@ -1237,11 +1203,9 @@ With precision–recall curves, we get a generalized perspective on F1 scores (a
 
 The Receiver Operating Characteristic (ROC) curve for a class $k$ depicts recall the false positive rate (FPR) for $k$ as a function of the recall for $k$.
 
-$$
-
+```math
 \text{False Positive Rate} = \frac{FP}{FP + TN}
-
-$$
+```
 
 ROC curve indicates how well probabilities from positive class are separated from negative class.
 
@@ -1382,19 +1346,15 @@ $$
 
 - **Negative Log-Likelihood (NLL)** for Bernoulli distribution with targets $y_i \in \{0, 1\}$ and predicted probabilities $\hat{y}_i$:
 
-$$
-
+```math
 \mathcal{L}_{\text{NLL}}(\theta) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]
-
-$$
+```
 
 - **Cross-Entropy** between empirical data distribution $p(y_i)$ and model distribution $q(y_i) = \hat{y}_i$:
 
-$$
-
+```math
 H(p, q) = -\sum_{x} p(x) \log q(x) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]
-
-$$
+```
 
 - **Conclusion**: Minimizing Negative Log-Likelihood of Bernoulli targets is mathematically identical to minimizing Cross-Entropy.
 
@@ -1471,11 +1431,9 @@ It measures how similar an object is to its own cluster compared to other cluste
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$
-
+```math
 S(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
-
-$$
+```
 
 Where,
 
@@ -1528,11 +1486,9 @@ It quantifies the average similarity ratio of each cluster to its most similar c
 
 The Davies-Bouldin Index is calculated as:
 
-$$
-
+```math
 DBI = \frac{1}{n} \sum_{i=1}^{n} \max_{j \neq i} \left( \frac{\sigma_i + \sigma_j}{d(c_i, c_j)} \right)
-
-$$
+```
 
 Where:
 
@@ -1563,11 +1519,9 @@ WER is a measure of the accuracy of sequence predictions at the word level. It i
 
 Mathematically, WER can be expressed as:
 
-$$
-
+```math
 \text{WER} = \frac{\text{Edit Distance}}{\text{Length of True Sequence}}
-
-$$
+```
 
 Where the Edit Distance is the number of insertions, deletions, and substitutions needed to transform the predicted sequence into the true sequence.
 
@@ -1582,11 +1536,9 @@ Where the Edit Distance is the number of insertions, deletions, and substitution
 
 To compute WER over a dataset, calculate the edit distances for each pair of true and predicted sequences, and then normalize these distances by the total length of all true sequences:
 
-$$
-
+```math
 \text{Corpus WER} = \frac{\sum \text{Edit Distances}}{\sum \text{Length of True Sequences}}
-
-$$
+```
 
 </details>
 
@@ -1647,11 +1599,9 @@ Key components include:
 
 The BLEU score combines the modified n-gram precision for various n-gram levels (usually up to 4) and includes a brevity penalty. The formula is:
 
-$$
-
+```math
 \text{BLEU} = BP \times \exp \left( \sum_{n=1}^{N} w_n \log p_n \right)
-
-$$
+```
 
 Where $p_n$ is the modified precision for n-grams, $w_n$  is the weight for each n-gram level, and BP is the brevity penalty.
 
@@ -1689,11 +1639,9 @@ ROUGE focuses on recall and is often used for summarization tasks, while METEOR 
 
 Perplexity measures how well a probability model predicts a sample. For a sequence, it is calculated as the inverse probability of the sequence normalized by the number of words:
 
-$$
-
+```math
 \text{Perplexity} = \exp \left( - \frac{1}{N} \sum_{i=1}^{N} \log P(w_i) \right)
-
-$$
+```
 
 Where $P(w_i)$ is the probability assigned to the $i$-th word by the model.
 

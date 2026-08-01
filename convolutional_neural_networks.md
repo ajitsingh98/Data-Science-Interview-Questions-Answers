@@ -91,11 +91,9 @@ Using above, write the equivalent 2D correlation operation.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$
-
+```math
 (I * K)(i, j) = \sum_{m} \sum_{n} I(i - m, j - n) K(m, n)
-
-$$
+```
 
 Where $I$ is input image matrix, $K$  is convolution kernel.
 
