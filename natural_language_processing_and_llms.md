@@ -33,9 +33,8 @@
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Density Estimation**: The task of estimating the probability distribution $P(X)$ from observed sample data $X$.
-- **LM as Density Estimator**: A language model models the joint probability distribution of sequences of words $W = (w_1, w_2, \dots, w_T)$ using the chain rule of probability:
-  $$ P(W) = \prod_{t=1}^{T} P(w_t \mid w_1, w_2, \dots, w_{t-1}) $$
+- **Density Estimation**: The task of estimating the probability distribution $P(X)$from observed sample data$X$.
+- **LM as Density Estimator**: A language model models the joint probability distribution of sequences of words $W = (w_1, w_2, \dots, w_T)$using the chain rule of probability:$$P(W) = \prod_{t=1}^{T} P(w_t \mid w_1, w_2, \dots, w_{t-1})$$
   It assigns probabilities to token sequences, identifying fluent vs ungrammatical sequences.
 
 </details>
@@ -50,7 +49,7 @@
 
 Language modeling is best described as **Self-Supervised Learning**:
 - **Data Source**: It uses raw, unlabeled text without human manual annotations (which resembles unsupervised learning).
-- **Learning Objective**: It formulates a supervised predictive objective (e.g., predicting next token $w_t$ given context $w_{<t}$) using standard cross-entropy loss.
+- **Learning Objective**: It formulates a supervised predictive objective (e.g., predicting next token $w_t$given context$w_{<t}$) using standard cross-entropy loss.
 - Thus, supervision signals are automatically derived from the data itself.
 
 </details>
@@ -82,11 +81,10 @@ Language modeling is best described as **Self-Supervised Learning**:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Term Frequency ($\text{TF}_{t,d}$)**: Number of occurrences of term $t$ in document $d$.
+1. **Term Frequency ($\text{TF}_{t,d}$)**: Number of occurrences of term $t$in document$d$.
 2. **Inverse Document Frequency ($\text{IDF}_t$)**: Downweights terms that appear frequently across all documents:
-   $$ \text{IDF}_t = \log\left(\frac{N}{\text{DF}_t}\right) $$
-3. **Cosine Similarity**: Measures directional alignment between query vector $\vec{q}$ and document vector $\vec{d}$:
-   $$ \text{Sim}(\vec{q}, \vec{d}) = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|} $$
+   $$\text{IDF}_t = \log\left(\frac{N}{\text{DF}_t}\right)$$3. **Cosine Similarity**: Measures directional alignment between query vector$\vec{q}$and document vector$\vec{d}$:
+   $$\text{Sim}(\vec{q}, \vec{d}) = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|}$$
 
 Rare, informative words (e.g., "worm", "early") contribute heavily to TF-IDF score, while common stop words ("the") are penalized by low IDF.
 
@@ -117,8 +115,8 @@ For a tiny dataset of 10,000 tokens:
 <summary><b>💡 Show Answer</b></summary>
 
 No:
-1. **Data Sparsity**: As $N$ increases, the probability of seeing specific $N$-gram sequences in training data drops sharply (zero-frequency problem).
-2. **Memory Overhead**: Storage grows exponentially $O(|V|^N)$ with vocabulary size $|V|$.
+1. **Data Sparsity**: As $N$increases, the probability of seeing specific$N$-gram sequences in training data drops sharply (zero-frequency problem).
+2. **Memory Overhead**: Storage grows exponentially $O(|V|^N)$with vocabulary size$|V|$.
 3. **Diminishing Returns**: Without backoff/smoothing, long contexts cause high variance and poor generalization.
 
 </details>

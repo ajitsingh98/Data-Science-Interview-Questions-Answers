@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ajitsingh98/Data-Science-Interview-Questions/pulls)
-[![Questions Count](https://img.shields.io/badge/Questions-1300%2B-blue.svg)](#-curriculum--topic-modules)
+[![Questions Count](https://img.shields.io/badge/Questions-1300%2B-blue.svg)](#curriculum)
 
 Welcome to the ultimate, comprehensive **Data Science & AI Interview Preparation Repository**! 🎯
 
@@ -12,6 +12,7 @@ This repository is designed as a **one-stop hub** for data science, machine lear
 
 ---
 
+<a name="curriculum"></a>
 ## 📚 Curriculum & Topic Modules
 
 All topics are organized into 4 core pillars. Click any module below to dive straight into the questions:

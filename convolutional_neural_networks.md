@@ -26,10 +26,7 @@ Contents
 
 ### Q: This Equation is commonly used in image processing:
 
-
-$$
-(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau 
-$$
+$$(f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau$$
 
 1. What does the above equation represent?
 2. What does $g(t)$ represent?
@@ -37,7 +34,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Operation**: Continuous 1D Convolution of signals $f$ and $g$.
+1. **Operation**: Continuous 1D Convolution of signals $f$and$g$.
 2. **$g(t)$**: The filter kernel/impulse response applied to input signal $f(t)$.
 
 </details>
@@ -84,18 +81,14 @@ Is he right in assuming so? Explain in detail the meaning of these statements.
 
 ### Q: A data-scientist provides you with a formulae for a discrete 2D convolution operation
 
-
-$$
-f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
-$$
+$$f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)$$
 
 Using above, write the equivalent 2D correlation operation.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$ (I * K)(i, j) = \sum_{m} \sum_{n} I(i - m, j - n) K(m, n) $$
-Where $I$ is input image matrix, $K$ is convolution kernel.
+$$(I * K)(i, j) = \sum_{m} \sum_{n} I(i - m, j - n) K(m, n)$$Where$I$is input image matrix,$K$ is convolution kernel.
 
 </details>
 
@@ -132,10 +125,8 @@ Where $I$ is input image matrix, $K$ is convolution kernel.
 ---
 
 
-### Q: You are provided with a $K × K$ input signal and a $θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?
+### Q: You are provided with a $K × K$input signal and a$θ × θ$filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?$$
 
-
-$$
 \begin{equation}
 A =
 \begin{bmatrix}
@@ -145,12 +136,13 @@ A =
 \end{bmatrix}
 \tag{8.4}
 \end{equation}
+
 $$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `You are provided with a $K × K$ input signal and a $θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `You are provided with a $K × K$input signal and a$θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -240,6 +232,7 @@ $$ arr001 =
 0 & 0 & 0 & 0 & 0 & 0 \\\\
 0 & 0 & 0 & 0 & 0 & 0 \\\\
 \end{bmatrix}
+
 $$
 
 1. Without actually executing the code, determine what would be the resulting shape of the convolve2d() operation.
@@ -259,21 +252,20 @@ $$
 
 ### Q: Equation 8.6 is the discrete equivalent of equation 8.2 which is frequently used in image processing:
 
-
 $$
+
 \begin{equation}
 f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
 \tag{8.6}
 \end{equation}
-$$
 
-1. Given the following discrete kernel in the X direction, what would be the equivalent Y direction?
+$$1. Given the following discrete kernel in the X direction, what would be the equivalent Y direction?$$
 
-$$
 K = \frac{1}{2} \begin{bmatrix}
 -1 & 1 \\\\
 -1 & 1
 \end{bmatrix}
+
 $$
 
 2. Identify the discrete convolution kernel presented in (8.6).*Kernels and Filters
@@ -338,12 +330,13 @@ np.correlate(A,B,"full") # for cross correlation
 
 ### Q: The Gaussian distribution in the 1D and 2D is shown in Equations 8.8 and 8.9.
 
-
 $$
+
 \begin{equation}
 G(x) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2}{2\sigma^2}}
 \tag{8.8}
 \end{equation}
+
 $$
 
 $$
@@ -351,6 +344,7 @@ $$
 G(x, y) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}}
 \tag{8.9}
 \end{equation}
+
 $$
 
 The Gaussian filter, is an operator that is used to blur images and remove detail and noise while acting like a low-pass filter. This is similar to the way a mean filter works, but the Gaussian filter uses a different kernel. This kernel is represented with a Gaussian bell shaped bump.
@@ -993,13 +987,7 @@ feature vector from an image using a pre-trained `ResNet34 CNN`.
 He then defines the cosine similarity between two vectors:
 
 $u = {u_1,u_2,....,u_N}$
-$v = {v_1,v_2,....,v_N}$
-
-as:
-
-$$
-sim(u, v) = \frac{u.v}{|u||v|} = \frac{\sum_{i=1}^Nu_iv_i}{\sqrt{(\sum_{i=1}^Nu_i^2)(\sum_{i=1}^Nv_i^2)}}
-$$
+$v = {v_1,v_2,....,v_N}$as:$$sim(u, v) = \frac{u.v}{|u||v|} = \frac{\sum_{i=1}^Nu_iv_i}{\sqrt{(\sum_{i=1}^Nu_i^2)(\sum_{i=1}^Nv_i^2)}}$$
 
 Thus, the cosine similarity between two vectors measures the cosine of the angle between the vectors irrespective of their magnitude. It is calculated as the dot product of two numeric vectors, and is normalized by the product of the length of the vectors.
 

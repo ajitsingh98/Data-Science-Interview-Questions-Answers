@@ -39,9 +39,7 @@ Contents
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- A function $f: \mathbb{R} \to \mathbb{R}$ is **differentiable** at point $x = c$ if the limit of the difference quotient exists:
-  $$ f'(c) = \lim_{h \to 0} \frac{f(c + h) - f(c)}{h} $$
-- **Property**: Differentiability implies continuity, but continuity does not guarantee differentiability (e.g., $|x|$ at $x=0$).
+- A function $f: \mathbb{R} \to \mathbb{R}$is **differentiable** at point$x = c$if the limit of the difference quotient exists:$$f'(c) = \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}$$- **Property**: Differentiability implies continuity, but continuity does not guarantee differentiability (e.g.,$|x|$at$x=0$).
 
 </details>
 
@@ -57,9 +55,8 @@ Contents
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- A function $f: \mathbb{R}^n \to \mathbb{R}$ is **convex** if for all $x, y$ and $\lambda \in [0, 1]$:
-  $$ f(\lambda x + (1-\lambda)y) \le \lambda f(x) + (1-\lambda)f(y) $$
-- **Second-Order Condition**: Hessian matrix $\nabla^2 f(x) \succeq 0$ (positive semi-definite) everywhere. Every local minimum is a global minimum.
+- A function $f: \mathbb{R}^n \to \mathbb{R}$is **convex** if for all$x, y$and$\lambda \in [0, 1]$:
+  $$f(\lambda x + (1-\lambda)y) \le \lambda f(x) + (1-\lambda)f(y)$$- **Second-Order Condition**: Hessian matrix$\nabla^2 f(x) \succeq 0$ (positive semi-definite) everywhere. Every local minimum is a global minimum.
 
 </details>
 
@@ -74,33 +71,28 @@ Contents
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Forward Difference**: $f'(x) \approx \frac{f(x + h) - f(x)}{h} \quad [O(h)]$
-2. **Backward Difference**: $f'(x) \approx \frac{f(x) - f(x - h)}{h} \quad [O(h)]$
-3. **Central Difference**: $f'(x) \approx \frac{f(x + h) - f(x - h)}{2h} \quad [O(h^2)]$
+1. **Forward Difference**: $f'(x) \approx \frac{f(x + h) - f(x)}{h} \quad [O(h)]$2. **Backward Difference**:$f'(x) \approx \frac{f(x) - f(x - h)}{h} \quad [O(h)]$3. **Central Difference**:$f'(x) \approx \frac{f(x + h) - f(x - h)}{2h} \quad [O(h^2)]$
 
 </details>
 
 ---
 
 
-### Q: 1. Given a function $f(x)$ and a point a, define the instantaneous rate of change of
-
-$f(x)$ at $a$.
+### Q: 1. Given a function $f(x)$and a point a, define the instantaneous rate of change of$f(x)$at$a$.
 2. What other commonly used alternative name does the instantaneous rate of change have?
-3. Given a function $f (x)$ and a point a, define the tangent line of $f (x)$ at a.
+3. Given a function $f (x)$and a point a, define the tangent line of$f (x)$ at a.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- The instantaneous rate of change of $f(x)$ at $x = a$ is the limit of average rate of change as interval length approaches zero:
-  $$ \text{Rate} = f'(a) = \lim_{\Delta x \to 0} \frac{f(a + \Delta x) - f(a)}{\Delta x} $$
+- The instantaneous rate of change of $f(x)$at$x = a$is the limit of average rate of change as interval length approaches zero:$$\text{Rate} = f'(a) = \lim_{\Delta x \to 0} \frac{f(a + \Delta x) - f(a)}{\Delta x}$$
 
 </details>
 
 ---
 
 
-### Q: 1. State the definition of the derivative $f(c)$ of a function $f(x)$ at $x = c$.
+### Q: 1. State the definition of the derivative $f(c)$of a function$f(x)$at$x = c$.
 
 2.  With respect to the DAG depicted in 5.3:
    
@@ -122,7 +114,7 @@ $f(x)$ at $a$.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$$ f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c} $$
+$$f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c}$$
 
 </details>
 
@@ -173,10 +165,7 @@ $$ f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c} $$
 
 ### Q: Find the Taylor series expansion for:
 
-1. $\frac{1}{1-x}$
-2. $e^x$
-3. $sin(x)$
-4. $cos(x)$
+1. $\frac{1}{1-x}$2.$e^x$3.$sin(x)$4.$cos(x)$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -191,10 +180,7 @@ $$ f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c} $$
 
 ### Q: Find the Taylor series expansion for: (Part 2)
 
-
-$$
-\log(x)
-$$
+$$\log(x)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -207,12 +193,7 @@ $$
 ---
 
 
-### Q: Find the Taylor series expansion centered at $x = −3$ for:
-
-
-$$
-f(x) = 5x^2 − 11x + 1
-$$
+### Q: Find the Taylor series expansion centered at $x = −3$for:$$f(x) = 5x^2 − 11x + 1$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -223,17 +204,12 @@ $$
 </details>
 
 
-### Q: Find the $101th$ degree Taylor polynomial centered at $x = 0$ for:
-
-
-$$
-f(x) = cos(x)
-$$
+### Q: Find the $101th$degree Taylor polynomial centered at$x = 0$for:$$f(x) = cos(x)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Find the $101th$ degree Taylor polynomial centered at $x = 0$ for:`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Find the $101th$degree Taylor polynomial centered at$x = 0$ for:`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -241,12 +217,7 @@ $$
 ---
 
 
-### Q: At $x = 1$, compute the first $7$ terms of the Taylor series expansion of:
-
-
-$$
-f (x) = ln 3x.
-$$
+### Q: At $x = 1$, compute the first $7$terms of the Taylor series expansion of:$$f (x) = ln 3x.$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -261,9 +232,7 @@ $$
 
 ### Q: Find the following limits:
 
-1. $\lim_{{x \to 3}}\frac{e^{x^3} - e^{27}}{3x - 9}$
-2. $\lim_{{x \to 0}}\frac{e^{x^2} - x - 1}{3\cos x-x - 3}$
-3. $\lim_{{x \to \inf}}\frac{x - ln x}{x^{1/100} + 4}$
+1. $\lim_{{x \to 3}}\frac{e^{x^3} - e^{27}}{3x - 9}$2.$\lim_{{x \to 0}}\frac{e^{x^2} - x - 1}{3\cos x-x - 3}$3.$\lim_{{x \to \inf}}\frac{x - ln x}{x^{1/100} + 4}$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -280,9 +249,7 @@ $$
 
 2. Given $g(x, y)$, find its partial derivative with respect to x:
 
-$$
-g(x,y) = x^2y + yx + 8y
-$$
+$$g(x,y) = x^2y + yx + 8y$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -311,24 +278,7 @@ $$
 
 ### Q: The gradient of a two-dimensional function is given by
 
-
-$$
-∇f (x, y) = \frac{∂f}{∂x} i + \frac{∂f}{∂y}j
-$$
-
-1. Find the gradient of the function:
-
-$$
-f(x, y) = xy^2 - y^2 + x^3
-$$
-
-2. Given the function:
-
-$$ 
-g(x, y) = xy^2 − y − 1
-$$
-
-evaluate it at $(−1, 0)$, directed at $(1, 1)$.
+$$∇f (x, y) = \frac{∂f}{∂x} i + \frac{∂f}{∂y}j$$1. Find the gradient of the function:$$f(x, y) = xy^2 - y^2 + x^3$$2. Given the function:$$g(x, y) = xy^2 − y − 1$$evaluate it at$(−1, 0)$, directed at $(1, 1)$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -343,10 +293,7 @@ evaluate it at $(−1, 0)$, directed at $(1, 1)$.
 
 ### Q: Find the partial derivatives of:
 
-
-$$
-f(x, y) = 3 sin^2(x − y)
-$$
+$$f(x, y) = 3 sin^2(x − y)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -361,10 +308,7 @@ $$
 
 ### Q: Find the partial derivatives of: (Part 2)
 
-
-$$
-z = 2 sin(x) sin(y)
-$$
+$$z = 2 sin(x) sin(y)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -377,9 +321,7 @@ $$
 ---
 
 
-### Q: Consider $f(x) = \frac{x^2 + 1}{(x+2)^2}$
-
-    1. Where is $f(x)$ well defined?
+### Q: Consider $f(x) = \frac{x^2 + 1}{(x+2)^2}$1. Where is$f(x)$ well defined?
     2. Where is $f(x)$ increasing and decreasing?
     3. Where is $f(x)$ reaching minimum and maximum values.
 
@@ -394,9 +336,7 @@ $$
 ---
 
 
-### Q: Consider $f(x) = 2x^3 − x$
-
-1. Derive $f (x)$ and conclude on its behavior.
+### Q: Consider $f(x) = 2x^3 − x$1. Derive$f (x)$ and conclude on its behavior.
 2. Derive once again and discuss the concavity of the function $f (x)$.
 
 <details>
@@ -412,10 +352,7 @@ $$
 
 ### Q: Consider the function
 
-
-$$
-f(x,y)=2x^2 −xy + y^2
-$$ 
+$$f(x,y)=2x^2 −xy + y^2$$ 
 
 and find maximum, minimum, and saddle points.
 
@@ -435,7 +372,7 @@ and find maximum, minimum, and saddle points.
 Stationary points are required in order to minimize a convex function. A very simple approach for finding stationary points is to start at an arbitrary point, and move along the gradient at that point towards the next point, and repeat until converging to a stationary point.
 1. What is the term used to describe the vector of all partial derivatives for a function $f(x)$?
 2. Complete the sentence: when searching for a minima, if the derivative is positive, the function is **increasing/decreasing.**
-3. The function $x^2$ as depicted in 5.5, has a derivative of $f′(x) = 2x$. Evaluated at $x = −1$, the derivative equals $f′(x = −1) = −2$. $At x = −1$, the function is decreasing as $x$ gets larger. We will happen if we wish to find a minima using gradient descent, and increase (decrease) $x$ by the size of the gradient, and then again repeatedly keep jumping?
+3. The function $x^2$as depicted in 5.5, has a derivative of$f′(x) = 2x$. Evaluated at $x = −1$, the derivative equals $f′(x = −1) = −2$. $At x = −1$, the function is decreasing as $x$gets larger. We will happen if we wish to find a minima using gradient descent, and increase (decrease)$x$ by the size of the gradient, and then again repeatedly keep jumping?
 <table align='center'>
 <tr>
 <td align="center">
@@ -506,13 +443,13 @@ Stationary points are required in order to minimize a convex function. A very si
 ---
 
 
-### Q: Let $x∈R_n$ , $L=cross entropy(softmax(x),y)$ in which $y$  is a one-hot vector. Take the derivative of $L$  with respect to $x$.
+### Q: Let $x∈R_n$,$L=cross entropy(softmax(x),y)$in which$y$is a one-hot vector. Take the derivative of$L$with respect to$x$.
 
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Let $x∈R_n$ , $L=cross entropy(softmax(x),y)$ in which $y$  is a one-hot vector. Take the derivative of $L$  with respect to $x$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Let $x∈R_n$,$L=cross entropy(softmax(x),y)$in which$y$is a one-hot vector. Take the derivative of$L$with respect to$x$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -520,13 +457,13 @@ Stationary points are required in order to minimize a convex function. A very si
 ---
 
 
-### Q: Given the function $f(x,y)=4x^2−y$  with the constraint $x^2+y^2=1$. Find the function’s maximum and minimum values.
+### Q: Given the function $f(x,y)=4x^2−y$with the constraint$x^2+y^2=1$. Find the function’s maximum and minimum values.
 
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given the function $f(x,y)=4x^2−y$  with the constraint $x^2+y^2=1$. Find the function’s maximum and minimum values.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given the function $f(x,y)=4x^2−y$with the constraint$x^2+y^2=1$. Find the function’s maximum and minimum values.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -536,20 +473,7 @@ Stationary points are required in order to minimize a convex function. A very si
 
 ### Q: Given a logistic discriminant classifier:
 
-
-$$
-p(y=1|x)=σ(w^Tx)
-$$
-
-where the sigmoid function is given by:
-
-$$
-σ(z)=(1+exp(−z))^{−1}
-$$
-
-The logistic loss for a training sample $x_i$  with class label $y_i$  is given by $L(yi,xi;w)=−logp(y_i|x_i)$
-
-1. Show that  $p(y=−1|x)=σ(−w^Tx)$.
+$$p(y=1|x)=σ(w^Tx)$$where the sigmoid function is given by:$$σ(z)=(1+exp(−z))^{−1}$$The logistic loss for a training sample$x_i$with class label$y_i$is given by$L(yi,xi;w)=−logp(y_i|x_i)$1. Show that$p(y=−1|x)=σ(−w^Tx)$.
 1. Show that  $Δ_wL(y_i,x_i;w)=−y_i(1−p(y_i|x_i))x_i$.
 1. Show that  $Δ_wL(y_i,x_i;w)$  is convex.
 
@@ -581,12 +505,7 @@ The logistic loss for a training sample $x_i$  with class label $y_i$  is given 
 ---
 
 
-### Q: 1. During the training of an ANN, a sigmoid layer applies the sigmoid function to every element in the forward pass, while in the backward pass the chain rule is being utilized as part of the backpropagation algorithm. With respect to the backpropagation algorithm, given a sigmoid $σ(x) = \frac{e^x}{1+e^x}$ activation function, and a J as the cost function, annotate each part of equation (5.21):
-
-
-$$
-dZ = \frac{dJ}{dσ(x)}\frac{dσ(x)}{dx} = dA·σ(x).(1−σ(x))
-$$
+### Q: 1. During the training of an ANN, a sigmoid layer applies the sigmoid function to every element in the forward pass, while in the backward pass the chain rule is being utilized as part of the backpropagation algorithm. With respect to the backpropagation algorithm, given a sigmoid $σ(x) = \frac{e^x}{1+e^x}$activation function, and a J as the cost function, annotate each part of equation (5.21):$$dZ = \frac{dJ}{dσ(x)}\frac{dσ(x)}{dx} = dA·σ(x).(1−σ(x))$$
 
 2. Code snippet 5.6 provides a pure Python-based (e.g. not using Autograd) implementation of the forward pass for the sigmoid function. Complete the backward pass that directly computes the analytical gradients.
 
@@ -614,13 +533,13 @@ $$
 ---
 
 
-### Q: This question deals with the effect of customized transfer functions. Consider a neural network with hidden units that use $x^3$ and output units that use $sin(2x)$ as transfer functions. Using the chain rule, starting from $∂E/∂yk$, derive the formulas for the weight updates $∆w_{jk}$ and $∆w_{ij}$. Notice - do not include partial derivatives in your final answer.
+### Q: This question deals with the effect of customized transfer functions. Consider a neural network with hidden units that use $x^3$and output units that use$sin(2x)$as transfer functions. Using the chain rule, starting from$∂E/∂yk$, derive the formulas for the weight updates $∆w_{jk}$and$∆w_{ij}$. Notice - do not include partial derivatives in your final answer.
 
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `This question deals with the effect of customized transfer functions. Consider a neural network with hidden units that use $x^3$ and output units that use $sin(2x)$ as transfer functions. Using the chain rule, starting from $∂E/∂yk$, derive the formulas for the weight updates $∆w_{jk}$ and $∆w_{ij}$. Notice - do not include partial derivatives in your final answer.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `This question deals with the effect of customized transfer functions. Consider a neural network with hidden units that use $x^3$and output units that use$sin(2x)$as transfer functions. Using the chain rule, starting from$∂E/∂yk$, derive the formulas for the weight updates $∆w_{jk}$and$∆w_{ij}$. Notice - do not include partial derivatives in your final answer.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -673,21 +592,10 @@ $$
 ---
 
 
-### Q: For real values, $−1 < x < 1$ the hyperbolic tangent function is defined as:
-
-
-$$
-\tanh^{-1}(x) = \frac{1}{2}[\ln(1+x) - ln(1-x)]
-$$
-
-On the other hand, the $artanh$ function, which returns the inverse hyperbolic tangent of its argument x, is implemented in numpy as $arctanh()$.
+### Q: For real values, $−1 < x < 1$the hyperbolic tangent function is defined as:$$\tanh^{-1}(x) = \frac{1}{2}[\ln(1+x) - ln(1-x)]$$On the other hand, the$artanh$function, which returns the inverse hyperbolic tangent of its argument x, is implemented in numpy as$arctanh()$.
 Its derivative is given by:
 
-$$
-(arctanh(x))′ =  \frac{1}{1 − x^2}
-$$
-
-Your friend, a veteran of the DL community wants to implement a custom activation function for the $arctanh$ function using Autograd. Help him in realize the method.
+$$(arctanh(x))′ =  \frac{1}{1 − x^2}$$Your friend, a veteran of the DL community wants to implement a custom activation function for the$arctanh$ function using Autograd. Help him in realize the method.
 
 1. Use this numpy array as an input $[[0.37, 0.192, 0.571]]$ and evaluate the result using pure Python.
 2. Use the PyTorch based $torch.autograd.Function$ class to implement a custom Function that implements the forward pass for the arctanh function in Python.
@@ -724,10 +632,7 @@ Your friend, a veteran of the DL community wants to implement a custom activatio
 
 ### Q: 1. Expand the following function using DN:
 
-
-$$
-\sin(x + \dot{x}d)
-$$
+$$\sin(x + \dot{x}d)$$
 
 2. With respect to the expression graph depicted in 5.9:
 <table align='center'>
@@ -747,13 +652,11 @@ $$
 
 3. Show that the general identity :
 
-    $$
-    g(x + \dot{x }d) = g(x) + g′(x)\dot{x}d
-    $$ 
+    $$g(x + \dot{x }d) = g(x) + g′(x)\dot{x}d$$ 
 
     holds in this particular case too.
 
-4. Using the derived DN, evaluate the function $g(x)$ at $x = 2$.
+4. Using the derived DN, evaluate the function $g(x)$at$x = 2$.
 5. Using an Autograd based Python program implement the function and evaluate it’s derivative at $x = 2$.
 
 <details>
@@ -782,7 +685,7 @@ $$
 
 1. Traverse the graph 5.10 and find the function $g(x)$ it represents.
 2. Expand the function $g(x)$ using DN.
-3. Using the derived DN, evaluate the function $g(x)$ at $x = 5$.
+3. Using the derived DN, evaluate the function $g(x)$at$x = 5$.
 4. Using an AutoGrad based Python program implement the function and evaluate it’s derivative at $x = 5$.
 
 <details>
@@ -852,10 +755,10 @@ M outputs.
 
 $f (x1, x2) = x1x2 + ln (x1)$  and the graph 5.1, annotate each vertex (edge) of the graph with the partial derivatives that would be propagated in forward mode AD.
 2. Transform the graph into a table that computes the function:
-$g(x1, x2)$ evaluated at $(x1; x2) = (e^2; π)$ using forward-mode AD.
+$g(x1, x2)$evaluated at$(x1; x2) = (e^2; π)$ using forward-mode AD.
 3. Write and run a Python code snippet to prove your results are correct. 
 4. Describe the role of seed values in forward-mode AD.
-5. Transform the graph into a table that computes the derivative of $g(x1,x2)$ evaluated at $(x1; x2) = (e^2; π)$ using forward-mode AD for $x1$ as the chosen independent variable.
+5. Transform the graph into a table that computes the derivative of $g(x1,x2)$evaluated at$(x1; x2) = (e^2; π)$using forward-mode AD for$x1$ as the chosen independent variable.
 6. Write and run a Python code snippet to prove your results are correct.
 
 <details>

@@ -16,8 +16,9 @@
 <summary><b>💡 Show Answer</b></summary>
 
 - **One-Hot Encoding**: Creates binary columns per category. High memory overhead for high-cardinality features.
-- **Target Encoding**: Replaces category $c$ with mean target value $\mathbb{E}[y \mid category = c]$.
+- **Target Encoding**: Replaces category $c$with mean target value$\mathbb{E}[y \mid category = c]$.
 - **Leakage Prevention**: Compute target statistics strictly out-of-fold using K-Fold cross-validation with smoothing/additive noise.
+
 </details>
 
 ---

@@ -17,6 +17,7 @@
 
 - **MDE**: The smallest relative or absolute lift in a key metric that an experiment is powered to detect with statistical significance (power $1-\beta = 0.80$).
 - **Sample Size Relation**: Sample size $N \propto \frac{1}{\text{MDE}^2}$. Detecting smaller MDEs requires quadratically larger sample sizes.
+
 </details>
 
 ---
@@ -28,9 +29,10 @@
 <summary><b>💡 Show Answer</b></summary>
 
 CUPED reduces metric variance by removing predictable variation using pre-experiment feature $X$:
-$$ Y_{\text{CUPED}} = Y - \theta (X - \mathbb{E}[X]), \quad \text{where } \theta = \frac{\text{Cov}(Y, X)}{\text{Var}(X)} $$
+$$Y_{\text{CUPED}} = Y - \theta (X - \mathbb{E}[X]), \quad \text{where } \theta = \frac{\text{Cov}(Y, X)}{\text{Var}(X)}$$
 
 This increases statistical power and decreases required sample size without bias.
+
 </details>
 
 ---
