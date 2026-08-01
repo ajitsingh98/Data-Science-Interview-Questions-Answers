@@ -45,7 +45,7 @@ $$
 
 Where
 
-- $y_{pred, i}$: Predicted value by model for input vector $ x_i$-$ y_{true, i}$: Ground truth value/label by model for input vector $ x_i$ 
+- $y_{pred, i}$: Predicted value by model for input vector$ x_i $-$ y_{true, i}$: Ground truth value/label by model for input vector$ x_i$ 
 
 </details>
 
@@ -273,7 +273,7 @@ $$
 
 $$
 
-where $y_i $ is the actual value,$\hat{y}_i $ is the predicted value, and$ n$  is the number of observations.
+where $y_i$ is the actual value, $\hat{y}_i$ is the predicted value, and $n$  is the number of observations.
 
 </details>
 
@@ -380,7 +380,7 @@ R-squared is more useful when we have linear relationship between dependent and 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-R-squared ranges from $0 $ to$ 1 $, with$1 $ indicating a perfect fit and$0$  indicating no fit at all.
+R-squared ranges from $0$ to $1$, with $1$ indicating a perfect fit and $0$  indicating no fit at all.
 
 </details>
 
@@ -391,7 +391,7 @@ R-squared ranges from $0 $ to$ 1 $, with$1 $ indicating a perfect fit and$0$  in
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-An R-squared value of $0.75 $ means that 75% of the variance in the dependent variable (target) can be explained by the independent variables (predictors) in the model. In other words, the model accounts for$ 75%$  of the variability in the data, indicating a relatively good fit.
+An R-squared value of $0.75$ means that 75% of the variance in the dependent variable (target) can be explained by the independent variables (predictors) in the model. In other words, the model accounts for $75%$  of the variability in the data, indicating a relatively good fit.
 
 </details>
 
@@ -539,7 +539,7 @@ Adjusted R-squared value is sensitive to sample size. It means the value may dec
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Pearson Correlation is a statistical method that measures the similarity or correlation between two data objects by comparing their attributes and calculating a score ranging from $-1 $ to$+1$.
+Pearson Correlation is a statistical method that measures the similarity or correlation between two data objects by comparing their attributes and calculating a score ranging from $-1$ to $+1$.
 
 </details>
 
@@ -550,7 +550,7 @@ Pearson Correlation is a statistical method that measures the similarity or corr
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The Pearson correlation coefficient between two vectors $y $ and$\cap{y}$  of dimension is:
+The Pearson correlation coefficient between two vectors $y$ and $\cap{y}$  of dimension is:
 
 $$
 
@@ -567,7 +567,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Bound of $\rhi $ is$[0, 1]$, $+1$ is complete positive linear correlation, and $ 0$  is no linear correlation at all.
+Bound of $\rhi$ is $[0, 1]$, $+1$ is complete positive linear correlation, and $0$  is no linear correlation at all.
 
 </details>
 
@@ -590,7 +590,7 @@ Bound of $\rhi $ is$[0, 1]$, $+1$ is complete positive linear correlation, and $
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Spearman's rank correlation coefficient, often denoted as $\rho_s $ or$r_s$, is a non-parametric measure of correlation that assesses the strength and direction of the monotonic relationship between two variables. Unlike Pearson’s correlation, which measures linear relationships, Spearman’s correlation evaluates how well the relationship between two variables can be described by a monotonic function.
+Spearman's rank correlation coefficient, often denoted as $\rho_s$ or $r_s$, is a non-parametric measure of correlation that assesses the strength and direction of the monotonic relationship between two variables. Unlike Pearson’s correlation, which measures linear relationships, Spearman’s correlation evaluates how well the relationship between two variables can be described by a monotonic function.
 
 </details>
 
@@ -624,13 +624,13 @@ $$
 
 $$
 
-Where $d_i $ is the difference between the ranks of each pair of values, and$n$  is the number of observations.
+Where $d_i$ is the difference between the ranks of each pair of values, and $n$  is the number of observations.
 
 </details>
 
 ---
 
-### Q: How can you compute the spearman correlation between two variable $X $ and$Y$?
+### Q: How can you compute the spearman correlation between two variable $X$ and $Y$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1125,8 +1125,8 @@ Bounds of F scores: $[0, 1]$, with $0$ the worst and $1$  the best, and guarante
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Type I Error ($\alpha $, False Positive)**: Rejecting the null hypothesis $ H_0$  when it is actually true (e.g., classifying a healthy patient as sick).
-- **Type II Error ($\beta $, False Negative)**: Failing to reject the null hypothesis $ H_0$  when it is false (e.g., missing a fraudulent transaction).
+- **Type I Error ($\alpha $, False Positive)**: Rejecting the null hypothesis$ H_0$  when it is actually true (e.g., classifying a healthy patient as sick).
+- **Type II Error ($\beta $, False Negative)**: Failing to reject the null hypothesis$ H_0$  when it is false (e.g., missing a fraudulent transaction).
 - **Confusion Matrix Relationship**:
 
 $$
@@ -1235,7 +1235,7 @@ With precision–recall curves, we get a generalized perspective on F1 scores (a
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The Receiver Operating Characteristic (ROC) curve for a class $k $ depicts recall the false positive rate (FPR) for$k $ as a function of the recall for$k$.
+The Receiver Operating Characteristic (ROC) curve for a class $k$ depicts recall the false positive rate (FPR) for $k$ as a function of the recall for $k$.
 
 $$
 
@@ -1276,7 +1276,7 @@ The ROC curve is a probability curve, and for an ideal model, the area under the
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-AUC of $0.2 $ indicates there are$ 20%$  chance of fair classification.
+AUC of $0.2$ indicates there are $20%$  chance of fair classification.
 
 </details>
 
@@ -1360,7 +1360,7 @@ $$
 
 ---
 
-### Q: Consider a classification where $99%$ of data belongs to class A and $ 1%$  of data belongs to class B.
+### Q: Consider a classification where $99%$ of data belongs to class A and $1%$  of data belongs to class B.
 
 1. If your model predicts A 100% of the time, what would the F1 score be? Hint: The F1 score when A is mapped to 0 and B to 1 is different from the F1 score when A is mapped to 1 and B to 0.
 1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$  be?
@@ -1368,7 +1368,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a classification where $99%$ of data belongs to class A and $ 1%$  of data belongs to class B.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a classification where $99%$ of data belongs to class A and $1%$  of data belongs to class B.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -1479,8 +1479,8 @@ $$
 
 Where,
 
-- $a(i)$ is the average distance between the sample $ i$  and all other points in the same cluster.
-- $b(i)$ is the minimum average distance between the sample $ i$ and all points in the nearest cluster (not including $ i$'s cluster).
+- $a(i)$ is the average distance between the sample $i$  and all other points in the same cluster.
+- $b(i)$ is the minimum average distance between the sample $i$ and all points in the nearest cluster (not including $i$'s cluster).
 
 </details>
 
@@ -1536,8 +1536,8 @@ $$
 
 Where:
 
-- $\sigma_i $ is the average distance between each point in cluster$i$  and its centroid.
-- $d(c_i, c_j)$ is the distance between the centroids of clusters $ i$ and $ j$.
+- $\sigma_i$ is the average distance between each point in cluster $i$  and its centroid.
+- $d(c_i, c_j)$ is the distance between the centroids of clusters $i$ and $j$.
 
 </details>
 
@@ -1653,7 +1653,7 @@ $$
 
 $$
 
-Where $p_n $ is the modified precision for n-grams,$w_n$  is the weight for each n-gram level, and BP is the brevity penalty.
+Where $p_n$ is the modified precision for n-grams, $w_n$  is the weight for each n-gram level, and BP is the brevity penalty.
 
 </details>
 

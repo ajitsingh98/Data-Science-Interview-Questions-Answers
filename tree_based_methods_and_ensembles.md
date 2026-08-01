@@ -242,7 +242,7 @@ IG(S, A) = Entropy(S) - \sum{((|S_v|/|S|)*Entropy(S_v))}
 
 $$
 
-where $S_v $ is the set of rows in$S $ for which the feature column$A $ has value$v $, $|Sᵥ|$ is the number of rows in $ S_v$ and likewise $|S|$ is the number of rows in $ S$.
+where $S_v$ is the set of rows in $S$ for which the feature column $A$ has value $v$, $|Sᵥ|$ is the number of rows in $S_v$ and likewise $|S|$ is the number of rows in $S$.
 
 </details>
 
@@ -824,7 +824,7 @@ the number of adjustable parameters is large compared to cardinality (i.e., size
 
 ---
 
-### Q: **True or false**: If we have a committee of $K $ trained models and the errors are uncorrelated, then by averaging them the average error of a model is reduced by a factor of$K$.
+### Q: **True or false**: If we have a committee of $K$ trained models and the errors are uncorrelated, then by averaging them the average error of a model is reduced by a factor of $K$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1161,7 +1161,7 @@ There are primarily two ways to compute feature importance in Random Forests:
 
 1. Mean decrease impurity
 
-We can obtain overall summary of the importance of each predictor using the RSS(for bagging regression trees) or Gini index(for bagging classification trees). In case of bagging regression trees, we can record total amount that the RSS is decreased due to splits over a given predictor, averaged over all $B $ trees. A large value indicates an important predictor. Similarly, in the context of bagging classification trees, we can add up the total amount that the Gini index is decreased by splits over a given predictor, averaged over all$B$  trees.
+We can obtain overall summary of the importance of each predictor using the RSS(for bagging regression trees) or Gini index(for bagging classification trees). In case of bagging regression trees, we can record total amount that the RSS is decreased due to splits over a given predictor, averaged over all $B$ trees. A large value indicates an important predictor. Similarly, in the context of bagging classification trees, we can add up the total amount that the Gini index is decreased by splits over a given predictor, averaged over all $B$  trees.
 
 2. Mean Decrease in Accuracy(Permutation Importance)
 

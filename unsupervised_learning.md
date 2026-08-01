@@ -20,7 +20,7 @@
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-It is a set of statistical tools intended for the setting in which we have only a set of features $X1, X2, . . . , Xp $ measured on$n $ observations. We are not interested in prediction, because we do not have an associated response variable$Y $. Rather, the goal is to discover interesting patterns in the measurements on $ X1, X2, . . . , X_p$ 
+It is a set of statistical tools intended for the setting in which we have only a set of features $X1, X2, . . . , Xp$ measured on $n$ observations. We are not interested in prediction, because we do not have an associated response variable $Y$. Rather, the goal is to discover interesting patterns in the measurements on$ X1, X2, . . . , X_p$ 
 
 </details>
 
@@ -115,7 +115,7 @@ K-means clustering offers several key advantages:
 
     - **Elbow Method**:
         - Plot the sum of squared distances from each point to its assigned cluster centroid (known as the Within-Cluster Sum of Squares or WCSS) against the number of clusters $K$.
-        - As $K $ increases, WCSS decreases. The idea is to choose the value of$K $ at the "elbow" point where the rate of decrease sharply slows down. This indicates diminishing returns and is a good trade-off between reducing WCSS and keeping$K$  manageable.
+        - As $K$ increases, WCSS decreases. The idea is to choose the value of $K$ at the "elbow" point where the rate of decrease sharply slows down. This indicates diminishing returns and is a good trade-off between reducing WCSS and keeping $K$  manageable.
 
     - **Silhouette Score**:
         - Calculate the silhouette score for different values of $K$. The silhouette score measures how similar a data point is to its own cluster compared to other clusters.
@@ -205,7 +205,7 @@ To select the best solution, compare the objective values (within-cluster sum of
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The *within-cluster variation* for cluster $C_k $ is a measure$W(C_k)$  of the amount by which the observations within a cluster differ from each other.
+The *within-cluster variation* for cluster $C_k$ is a measure $W(C_k)$  of the amount by which the observations within a cluster differ from each other.
 
 $$
 
@@ -254,7 +254,7 @@ a(i) = \frac{1}{|C_i| - 1}\sum_{j\epsilon C,j!=i}d(i, j)
 
 $$
 
-where, $C_i $ is the cluster to which point$i $ belongs, and$d(i, j)$ is the distance between $i$ and $j$.
+where, $C_i$ is the cluster to which point $i$ belongs, and $d(i, j)$ is the distance between $i$ and $j$.
 
 2. Find average nearest cluster distance 
     - For the same data point $i$, compute the average distance to all points in the nearest neighboring cluster.
@@ -265,11 +265,11 @@ b(i) = \min_{C \ne C_i}(\frac{1}{|C|}\sum_{j \epsilon C}d(i, j))
 
 $$
 
-where, $C $ is a cluster different from$C_i $ and$d(i, j)$ is the distance between points $i$ and $j$  in the nearest cluster.
+where, $C$ is a cluster different from $C_i$ and $d(i, j)$ is the distance between points $i$ and $j$  in the nearest cluster.
 
 3. Compute Silhouette score for each data point
 
-    - Calculate the Silhouette score for each data point $i $ using values of$a(i)$ and $ b(i)$
+    - Calculate the Silhouette score for each data point $i$ using values of $a(i)$ and $b(i)$
 
 $$
 
@@ -552,7 +552,7 @@ Deep learning technique:
 
 ---
 
-### Q: We want to do PCA on a dataset of multiple features in different ranges. For example, one is in the range $0-1 $ and one is in the range$ 10 - 1000$. Will PCA work on this dataset?
+### Q: We want to do PCA on a dataset of multiple features in different ranges. For example, one is in the range $0-1$ and one is in the range $10 - 1000$. Will PCA work on this dataset?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -846,7 +846,7 @@ Both content-based and collaborative filtering techniques employ embedding space
 <summary><b>💡 Show Answer</b></summary>
 
 A similarity measures is a function $s : E \times E \rightarrow \mathbf{R}$  that takes a pair of embeddings and returns a scaler measuring their similarity. The embeddings can be used candidate generation as follows:
-- Given a query embedding $q \in E $- System looks for item embeddings$ x \in E $ that are close to$ q $- Get the embeddings with high similarity$ s(q, x)$ 
+- Given a query embedding $q \in E $- System looks for item embeddings$ x \in E $that are close to$ q $- Get the embeddings with high similarity$ s(q, x)$ 
 
 </details>
 
@@ -865,7 +865,7 @@ This is simply the cosine angle between two vectors, $s(q, x) = cos(q, x)$
 
 *Dot product*
 
-The dot product of two vectors is $s(q, x) = <q, x> = \sum_{i=1}^{d}q_{i}x_{i}$. It is also given by $ s(q, x) = ||x|||q||cos(q, x)$. Thus, if the embeddings are normalized, then dot-product and cosine coincide.
+The dot product of two vectors is $s(q, x) = <q, x> = \sum_{i=1}^{d}q_{i}x_{i}$. It is also given by$ s(q, x) = ||x|||q||cos(q, x)$. Thus, if the embeddings are normalized, then dot-product and cosine coincide.
 
 *Euclidean distance*
 
@@ -1455,9 +1455,9 @@ Overcomplete autoencoders have a latent space dimension larger than the input di
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-In undercomplete autoencoders suppose  latent dimension $K=1 $ and very powerful encoder$ f(x)$ and decoder$ g(x). In this case we can achieve very small reconstruction error but learned values will not capture any interesting properties.
+In undercomplete autoencoders suppose  latent dimension $K=1$ and very powerful encoder $f(x)$ and decoder$ g(x). In this case we can achieve very small reconstruction error but learned values will not capture any interesting properties.
 
-In overcomplete autoencoder, suppose encoder $f(x)$ and decoder $ g(x)$  are trivial(identity) functions. In this case also we can achieve even zero construction error but learned values will not capture any interesting properties.
+In overcomplete autoencoder, suppose encoder $f(x)$ and decoder $g(x)$  are trivial(identity) functions. In this case also we can achieve even zero construction error but learned values will not capture any interesting properties.
 
 In both cases we need to control the capacity of encoder and decoder. Therefore we need to regularize the functions as well as the learned code, not just reconstruction error.
 
@@ -1545,7 +1545,7 @@ We regularize the activations of a network not the weights
 
 There are two main ways by which we can impose sparsity constraint 
 
-- L1 Regularization: We can add a term to our loss function that penalizes the absolute value of the vector of the activations $a $ in layer$h $ for observation$i $, scaled by a tuning parameter $\lambda$.
+- L1 Regularization: We can add a term to our loss function that penalizes the absolute value of the vector of the activations $a$ in layer $h$ for observation $i$, scaled by a tuning parameter $\lambda$.
 
 $$
 
@@ -1553,7 +1553,7 @@ L(x, \hat{x}) + \lambda \sum_{i}|a_i^{(h)}|
 
 $$
 
-- KL-Divergence: KL-divergence is a measure of the difference between two probability distributions.$$L(x, \hat{x}) + \sum_{j}KL(\rho || \hat{\rho_j})$$Where $\rho $ is sparsity parameter and$\hat{\rho}$  is mean activation of a neuron over a collection of samples.
+- KL-Divergence: KL-divergence is a measure of the difference between two probability distributions.$$L(x, \hat{x}) + \sum_{j}KL(\rho || \hat{\rho_j})$$Where $\rho$ is sparsity parameter and $\hat{\rho}$  is mean activation of a neuron over a collection of samples.
 
 $$
 
@@ -1561,7 +1561,7 @@ $$
 
 $$
 
-where the subscript $j $ denotes the specific neuron in layer$h$ 
+where the subscript $j$ denotes the specific neuron in layer $h$ 
 
 In essence, by constraining the average activation of a neuron over a collection of samples we're encouraging neurons to only fire for a subset of the observations.
 
@@ -1759,7 +1759,7 @@ $$
 
 *KL Divergence loss*
 
-Measures the difference between the learned latent distribution $q(z|x)$ and a prior distribution $ p(z)$, typically a standard normal distribution $\mathcal{N}(0, 1)$.
+Measures the difference between the learned latent distribution $q(z|x)$ and a prior distribution $p(z)$, typically a standard normal distribution $\mathcal{N}(0, 1)$.
 
 It encourages the latent space to be well-structured and similar to the prior, enabling smooth interpolation and generation of new data.
 
@@ -1777,7 +1777,7 @@ $$
 
 $$
 
-Balancing Parameter $\beta $ The parameter$\beta $ controls the trade-off between reconstruction accuracy and the regularization effect on the latent space. Setting$\beta = 1 $ is typical, but variations (like$\beta$-VAE) allow tuning this balance.
+Balancing Parameter $\beta$ The parameter $\beta$ controls the trade-off between reconstruction accuracy and the regularization effect on the latent space. Setting $\beta = 1$ is typical, but variations (like $\beta$-VAE) allow tuning this balance.
 
 Here, reconstruction loss makes sure decoder accurately reconstruct the input data and, KL divergence loss encourages the latent space to be well-structured and similar to the prior, enabling smooth interpolation and generation of new data.
 

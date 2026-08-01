@@ -58,7 +58,7 @@ $$
 
 $$
 
-Therefore, subtracting $\log B $ from  in$\log A $ in$\log \frac{A}{B}$  .
+Therefore, subtracting $\log B$ from  in $\log A$ in $\log \frac{A}{B}$  .
 
 Compute the following expression:
 
@@ -90,7 +90,7 @@ H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
 
 $$
 
-where $b=2 $ measures uncertainty in bits,$b=e$  in nats.
+where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
 </details>
 
@@ -143,8 +143,8 @@ Enumerate these properties.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Continuity**: $H(p_1, \dots, p_n)$ is continuous in $ p_i$.
-2. **Monotonicity**: If all outcomes are equiprobable ($p_i = 1/n $), $ H $is a monotonic increasing function of$ n$.
+1. **Continuity**: $H(p_1, \dots, p_n)$ is continuous in $p_i$.
+2. **Monotonicity**: If all outcomes are equiprobable ($p_i = 1/n $),$ H $is a monotonic increasing function of$ n$.
 3. **Additivity**: If a choice is broken down into successive choices, original $H$  is the weighted sum of individual entropy values.
 
 </details>
@@ -245,13 +245,13 @@ H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
 
 $$
 
-where $b=2 $ measures uncertainty in bits,$b=e$  in nats.
+where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
 </details>
 
 ---
 
-12. Assume we are provided with biased coin for which the event ‘heads’ is assigned probability $p $, and ‘tails’ - a probability of $1 − p$. 
+12. Assume we are provided with biased coin for which the event ‘heads’ is assigned probability $p $, and ‘tails’ - a probability of$1 − p$. 
 
 the respective entropy is:
 
@@ -261,7 +261,7 @@ H(p) = −p\log p − (1 − p)\log (1 − p)
 
 $$
 
-Therefore, $H ≥ 0 $ and the maximum possible uncertainty is attained when$p = 1/2 $, is$ H_max = \log_22$.
+Therefore, $H ≥ 0$ and the maximum possible uncertainty is attained when $p = 1/2$, is$ H_max = \log_22$.
 
 Given the above formulation, describe a helpful property of the entropy that follows from the concavity of the logarithmic function.
 
@@ -276,7 +276,7 @@ H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
 
 $$
 
-where $b=2 $ measures uncertainty in bits,$b=e$  in nats.
+where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
 </details>
 
@@ -306,7 +306,7 @@ $$
 2. Complete the sentence : If the result of the coin toss is ‘heads’,the amount of Shannon information gained is [___] bits.
 3. Complete the sentence: If the result of the coin toss is ‘tails’, the amount of Shannon information gained is [___] bits.
 4. Complete the sentence : It is always true that the more information is associated with an outcome, the [more/less] surprising it is.
-5. Provided that the ratio of tosses resulting in ‘heads’ is $p(x_h)$, and the ratio of tosses resulting in ‘tails’ is $ p(x_t)$, and also provided that $ p(x_h)+p(x_t) = 1$, what is formulae for the average surprise?
+5. Provided that the ratio of tosses resulting in ‘heads’ is $p(x_h)$, and the ratio of tosses resulting in ‘tails’ is$ p(x_t)$, and also provided that$ p(x_h)+p(x_t) = 1$, what is formulae for the average surprise?
 6. What is the value of the average surprise in bits?
 
 <details>
@@ -377,12 +377,12 @@ $$
 
 ---
 
-### Q: Given two distributions $f1 $ and$ f2 $ and their respective joint distribution$ f $, write the formulae for the mutual information of$ f1 $and$ f2$.
+### Q: Given two distributions $f1$ and $f2$ and their respective joint distribution $f$, write the formulae for the mutual information of$ f1 $and$ f2$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given two distributions $f1 $ and$ f2 $ and their respective joint distribution$ f $, write the formulae for the mutual information of$ f1 $and$ f2$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given two distributions $f1$ and $f2$ and their respective joint distribution $f$, write the formulae for the mutual information of$ f1 $and$ f2$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -508,9 +508,9 @@ $\text{expansion}=+, \text{no expansion}=-$ Referring to table (4.3), each row i
 </tr>
 </table>
 
-1. Using $\log_2 $ and the provided dataset, calculate the sample entropy$ H(γ)$  (expansion) before splitting.
-2. Using $\log_2 $ and the provided dataset, calculate the information gain of$ H(γ|θ1)$.
-3. Using $log_2 $ and the provided dataset, calculate the information gain of$ H(γ|θ2)$.
+1. Using $\log_2$ and the provided dataset, calculate the sample entropy $H(γ)$  (expansion) before splitting.
+2. Using $\log_2$ and the provided dataset, calculate the information gain of $H(γ|θ1)$.
+3. Using $log_2$ and the provided dataset, calculate the information gain of $H(γ|θ2)$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -536,9 +536,9 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 </tr>
 </table>
 
-1. Using $\log_2 $ and the provided dataset, calculate the sample entropy$ H(γ)$  (shrinkage). 
-2. Using $\log_2 $ and the provided dataset, calculate the entropy of$ H(γ|θ1)$.
-3. Using $\log_2 $ and the provided dataset, calculate the entropy of$ H(γ|θ2)$.
+1. Using $\log_2$ and the provided dataset, calculate the sample entropy $H(γ)$  (shrinkage). 
+2. Using $\log_2$ and the provided dataset, calculate the entropy of $H(γ|θ1)$.
+3. Using $\log_2$ and the provided dataset, calculate the entropy of $H(γ|θ2)$.
 4. **True or false**: We should split on a specific variable that minimizes the information gain, therefore we should split on $θ_2$  (radiation therapy).
 
 <details>

@@ -322,7 +322,7 @@ $$
 
 Where $T$  is the length of the time series.
 
-Note that $r_1 $ measures the relationship between$ y_t $ and$ y_{t-1}$, $ r_2$measures the relationship between $ y_t$and $ y_{t-2}$  and so on.
+Note that $r_1$ measures the relationship between $y_t$ and $y_{t-1}$,$ r_2 $measures the relationship between$ y_t $and$ y_{t-2}$  and so on.
 
 </details>
 
@@ -447,7 +447,7 @@ Time series that show no autocorrelation are called white noise.
 <summary><b>💡 Show Answer</b></summary>
 
 - For white noise series, autocorrelation to be close to zero.
-- For a white noise series, we expect $95%$ of the spikes in the ACF to lie within $±1.96/\sqrt{T}$ where $ T$  is the length of the time series.
+- For a white noise series, we expect $95%$ of the spikes in the ACF to lie within $±1.96/\sqrt{T}$ where $T$  is the length of the time series.
 
 </details>
 
@@ -458,7 +458,7 @@ Time series that show no autocorrelation are called white noise.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can use the fact that for a white noise series, we expect $95%$ of the spikes in the ACF to lie within $±1.96/\sqrt{T}$ where $ T$  is the length of the time series.
+We can use the fact that for a white noise series, we expect $95%$ of the spikes in the ACF to lie within $±1.96/\sqrt{T}$ where $T$  is the length of the time series.
 
 It is common to plot these bounds on a graph of the ACF (the blue dashed lines above). If one or more large spikes are outside these bounds, or if substantially more than 5% of spikes are outside these bounds, then the series is probably not white noise.
 
@@ -572,7 +572,7 @@ Mathematical transformations are techniques used to modify data in ways that mak
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-If we denote the original observations as $y_1,...,y_T $ and the transformed observations as$w_1,w_2,...,w_T $, then $ w_t = \log{y_t}$.
+If we denote the original observations as $y_1,...,y_T$ and the transformed observations as $w_1,w_2,...,w_T$, then$ w_t = \log{y_t}$.
 
 </details>
 
@@ -748,7 +748,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-If the seasonal component is removed from the original data, the resulting values are the "seasonally adjusted" data. For an additive decomposition, the seasonally adjusted data are given by $y_t - S_t $ and for multiplicative data, the seasonally adjusted values are obtained using$\frac{y_t}{S_t}$ 
+If the seasonal component is removed from the original data, the resulting values are the "seasonally adjusted" data. For an additive decomposition, the seasonally adjusted data are given by $y_t - S_t$ and for multiplicative data, the seasonally adjusted values are obtained using $\frac{y_t}{S_t}$ 
 
 </details>
 
@@ -767,7 +767,7 @@ $$
 
 $$
 
-where $m = 2k+1 $. That is, the estimate of the trend-cycle at time$ t $is obtained by averaging values of the time series within$ k $ periods of$ t$. Observations that are nearby in time are also likely to be close in value. Therefore, the average eliminates some of the randomness in the data, leaving a smooth trend-cycle component.
+where $m = 2k+1 $. That is, the estimate of the trend-cycle at time$ t $is obtained by averaging values of the time series within$ k $periods of$ t$. Observations that are nearby in time are also likely to be close in value. Therefore, the average eliminates some of the randomness in the data, leaving a smooth trend-cycle component.
 
 </details>
 
@@ -808,7 +808,7 @@ $$
 
 $$
 
-where $k = (m-1)/2 $, and weights are given by$[a_{-k},..,a_k]$. It is important that the weights all sum to one and that they are symmetric so that $ a_j = a_{-j}$.
+where $k = (m-1)/2 $, and weights are given by$[a_{-k},..,a_k]$. It is important that the weights all sum to one and that they are symmetric so that$ a_j = a_{-j}$.
 
 </details>
 
@@ -1047,7 +1047,7 @@ $$
 
 $$
 
-Where m = the seasonal period, and $k $ is the integer part of$(h-1)/m $(i.e., the number of complete years in the forecast period prior to time $ T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
+Where m = the seasonal period, and $k$ is the integer part of $(h-1)/m$(i.e., the number of complete years in the forecast period prior to time$ T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
 
 <table align='center'>
   <tr>
@@ -1079,7 +1079,7 @@ $$
 
 $$
 
-Where m = the seasonal period, and $k $ is the integer part of$(h-1)/m $(i.e., the number of complete years in the forecast period prior to time $ T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
+Where m = the seasonal period, and $k$ is the integer part of $(h-1)/m$(i.e., the number of complete years in the forecast period prior to time$ T+h$). For example, with monthly data, the forecast for all future February values is equal to the last observed February value.
 
 <table align='center'>
   <tr>
@@ -1156,7 +1156,7 @@ Good to have:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t $ to lie with a specified probability. For example, assuming that distribution of future observations is normal, a$95\%$  prediction interval for the h-step forecast is:
+Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t$ to lie with a specified probability. For example, assuming that distribution of future observations is normal, a $95\%$  prediction interval for the h-step forecast is:
 
 $$
 
@@ -1185,7 +1185,7 @@ where the multiplier $c$  depends on the coverage probability.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t $ to lie with a specified probability. For example, assuming that distribution of future observations is normal, a$95\%$  prediction interval for the h-step forecast is:
+Most time series models produce normally distributed forecasts — that is, we assume that the distribution of possible future values follows a normal distribution. A prediction interval gives an interval within which we expect $y_t$ to lie with a specified probability. For example, assuming that distribution of future observations is normal, a $95\%$  prediction interval for the h-step forecast is:
 
 $$
 
@@ -1222,7 +1222,7 @@ $$
 
 $$
 
-where $K $ is the number of parameters estimated in the forecasting method, and$M$  is the number of missing values in the residuals.
+where $K$ is the number of parameters estimated in the forecasting method, and $M$  is the number of missing values in the residuals.
 
 </details>
 
@@ -1294,7 +1294,7 @@ $$
 
 Where $\hat{A}_t = \hat{T}_t + \hat{R}_t$  is the seasonally adjusted component. 
 
-To forecast a decomposed time series, we forecast the seasonal component, $\hat{S}_t $, and the seasonally adjusted component $\hat{A}_t$, separately. It is usually assumed that the seasonal component is unchanging, or changing extremely slowly, so it is forecast by simply taking the last year of the estimated component. In other words, a seasonal naïve method is used for the seasonal component.
+To forecast a decomposed time series, we forecast the seasonal component, $\hat{S}_t $, and the seasonally adjusted component$\hat{A}_t$, separately. It is usually assumed that the seasonal component is unchanging, or changing extremely slowly, so it is forecast by simply taking the last year of the estimated component. In other words, a seasonal naïve method is used for the seasonal component.
 
 To forecast the seasonally adjusted component, any non-seasonal forecasting method may be used. For example, the drift method, or Holt’s method, or a non-seasonal ARIMA model may be used.
 
@@ -1464,9 +1464,9 @@ $$
 
 $$
 
-where $T $ is the number of observations used for estimation and$k$  is the number of predictors in the model.
+where $T$ is the number of observations used for estimation and $k$  is the number of predictors in the model.
 
-The $k+2 $ part of the equation occurs because there are$ k+2 $ parameters in the model: the$ k$  coefficients for the predictors, the intercept and the variance of the residuals.
+The $k+2$ part of the equation occurs because there are $k+2$ parameters in the model: the $k$  coefficients for the predictors, the intercept and the variance of the residuals.
 
 </details>
 
@@ -1554,7 +1554,7 @@ $$
 
 $$
 
-Where $0 \le \alpha \le 1 $ is the smoothing parameter. The rate at which the weights decrease is controlled by the parameter$α$.
+Where $0 \le \alpha \le 1$ is the smoothing parameter. The rate at which the weights decrease is controlled by the parameter $α$.
 
 </details>
 
@@ -1588,7 +1588,7 @@ $$
 
 $$
 
-where $l_t $ is the level (or the smoothed value) of the series at time$t$.
+where $l_t$ is the level (or the smoothed value) of the series at time $t$.
 
 </details>
 
@@ -1630,7 +1630,7 @@ $$
 
 $$
 
-where $l_t $ denotes an estimate of the level of the series at time$t $, $ b_t $denotes an estimate of the trend (slope) of the series at time$ t $,$\alpha $ is the smoothing parameter for the level and$\beta^*$  is the smoothing parameter for the trend.
+where $l_t$ denotes an estimate of the level of the series at time $t$,$ b_t $denotes an estimate of the trend (slope) of the series at time$ t $,$\alpha$ is the smoothing parameter for the level and $\beta^*$  is the smoothing parameter for the trend.
 
 </details>
 
@@ -1652,7 +1652,7 @@ The forecasts generated by Holt’s linear method display a constant trend (incr
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-In conjunction with the smoothing parameters $\alpha $ and$\beta^*$(with values between 0 and 1 as in Holt’s method), damped trend method also includes a damping parameter $0 < \phi < 1 $:
+In conjunction with the smoothing parameters $\alpha$ and $\beta^*$(with values between 0 and 1 as in Holt’s method), damped trend method also includes a damping parameter $0 < \phi < 1$:
 
 $$
 
@@ -1664,7 +1664,7 @@ $$
 
 $$
 
-If $\phi = 1 $,  the method is identical to Holt’s linear method. For values between$0 $ and$1 $, $\phi$  dampens the trend so that it approaches a constant some time in the future.
+If $\phi = 1 $,  the method is identical to Holt’s linear method. For values between$0$ and $1$, $\phi$  dampens the trend so that it approaches a constant some time in the future.
 
 </details>
 
@@ -1702,7 +1702,7 @@ s_t = \gamma (y_t - \ell_{t-1} - b_{t-1}) + (1 - \gamma) s_{t-m}
 
 $$
 
-Where $k $ is the integer part of$(h-1)/m $. $\alpha $, $\ell_t $ and$\gamma$  are the smoothing parameter of level, trend and seasonality.
+Where $k$ is the integer part of $(h-1)/m$. $\alpha$, $\ell_t$ and $\gamma$  are the smoothing parameter of level, trend and seasonality.
 
 </details>
 
@@ -1839,7 +1839,7 @@ False
 
 ---
 
-### Q: Write the expression of $AIC $, $ AIC_{c}$and $ BIC$  for ETS models?
+### Q: Write the expression of $AIC $,$ AIC_{c}$and$ BIC$  for ETS models?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2175,7 +2175,7 @@ y_t = c + \eta_t + \theta_1 \eta_{t-1} + \theta_2 \eta_{t-2} + ... + \theta_q \e
 
 $$
 
-where $\eta_t $ is white noise. It is called as a moving average model of order$ q$.
+where $\eta_t$ is white noise. It is called as a moving average model of order $q$.
 
 </details>
 
@@ -2229,9 +2229,9 @@ y'_t = c + \phi_1 y'_{t-1} + ... + \phi_p y'_{t-p} + \theta_1 \eta_{t-1} + ... +
 
 $$
 
-where $y'_t $ is the differenced series (it may have been differenced more than once). The “predictors” on the right hand side include both lagged values of$y_t$  and lagged errors. 
+where $y'_t$ is the differenced series (it may have been differenced more than once). The “predictors” on the right hand side include both lagged values of $y_t$  and lagged errors. 
 
-Here, $p $ is order of the autoregressive part,$d $ is degree of first differencing involved and$q$  is order of the moving average part.
+Here, $p$ is order of the autoregressive part, $d$ is degree of first differencing involved and $q$  is order of the moving average part.
 
 </details>
 
@@ -2242,7 +2242,7 @@ Here, $p $ is order of the autoregressive part,$d $ is degree of first differenc
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Partial autocorrelation measures the relationship between $y_t $ and$y_{t-k}$ after removing effects of lags $ 1, ,2 , 3,.., k-1$.
+Partial autocorrelation measures the relationship between $y_t$ and $y_{t-k}$ after removing effects of lags $1, ,2 , 3,.., k-1$.
 
 </details>
 
@@ -2369,9 +2369,9 @@ y_t = \beta_0 + \beta_1 x_{1, t} + .. + \beta_k x_{k, t} + \epsilon_t
 
 $$
 
-where $y_t $ is a linear function of the$k $ predictor variables$(x_{1, t},...,x_{k, t})$ and $\eta_t$  is usually assumed to be an uncorrelated error term (i.e it is white noise).
+where $y_t$ is a linear function of the $k$ predictor variables $(x_{1, t},...,x_{k, t})$ and $\eta_t$  is usually assumed to be an uncorrelated error term (i.e it is white noise).
 
-Dynamic regression allows the errors from a regression to contain autocorrelation. To emphasise this change in perspective, we will replace $\epsilon_t $ with$\eta_t $ in the equation. The error series$\eta_t$  is assumed to follow an ARIMA model. 
+Dynamic regression allows the errors from a regression to contain autocorrelation. To emphasise this change in perspective, we will replace $\epsilon_t$ with $\eta_t$ in the equation. The error series $\eta_t$  is assumed to follow an ARIMA model. 
 
 If $\eta_t$ follows an ARIMA(1, 1, 1) model, we can write
 
@@ -2454,7 +2454,7 @@ where \(f\) is the frequency of the cycles.
 
 - It allows any length seasonality;
 - for data with more than one seasonal period, Fourier terms of different frequencies can be included;
-- the smoothness of the seasonal pattern can be controlled by $K $, the number of Fourier sin and cos pairs – the seasonal pattern is smoother for smaller values of $ K$ 
+- the smoothness of the seasonal pattern can be controlled by $K $, the number of Fourier sin and cos pairs – the seasonal pattern is smoother for smaller values of$ K$ 
 - the short-term dynamics are easily handled with a simple ARMA error.
 
 </details>

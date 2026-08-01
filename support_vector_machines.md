@@ -70,9 +70,9 @@ Maximal margin classifier is a linear classifier that attempts to separate two c
 
 It works as follows:
 
-Suppose we are working on a binary classification problem with $n $ training examples$\{(x_i, y_i)\}^n_{i=1}$  where
+Suppose we are working on a binary classification problem with $n$ training examples $\{(x_i, y_i)\}^n_{i=1}$  where
 
-- $x_i \in \mathbb{R}^n $ is a$p$-dimensional feature vector
+- $x_i \in \mathbb{R}^n$ is a $p$-dimensional feature vector
 - $y_i \in \{-1, +1\}$  With the above setup, maximal margin classifier tries to find a hyperplane which can be represented as:
 
 $$
@@ -102,7 +102,7 @@ $$
 
 Now, we want to maximize the margin which is basically the distance between the decision boundary(hyperplane) and the closest points in the dataset(support vectors).  
 
-Assume $x_i $ is a support vector, the distance(d) from the hyperplane can be expressed as $$d = \frac{|w^Tx_i + b|}{||w||}$$If we assume data is perfectly separable:$$y_i(w^Tx_i + b) \ge 1$$Using above two equations, margin can be derived as
+Assume $x_i$ is a support vector, the distance(d) from the hyperplane can be expressed as$$d = \frac{|w^Tx_i + b|}{||w||}$$If we assume data is perfectly separable:$$y_i(w^Tx_i + b) \ge 1$$Using above two equations, margin can be derived as
 
 $$
 
@@ -110,7 +110,7 @@ $$
 
 $$
 
-Note that here $2 $ comes from the distance between the two support vectors(one from each class), each being at the distance of$\frac{1}{||w||}$  from the hyperplane.
+Note that here $2$ comes from the distance between the two support vectors(one from each class), each being at the distance of $\frac{1}{||w||}$  from the hyperplane.
 
 So, maximal margin classifier tends to optimize the margin subject to the constraints that all points are classified correctly:
 
@@ -128,7 +128,7 @@ y_i(w^Tx_i + b) \ge 1 \forall i
 
 $$
 
-- Here we have used $||w||^2 $ instead of$||w||$  to make the objective function convex and differential
+- Here we have used $||w||^2$ instead of $||w||$  to make the objective function convex and differential
 - The constraints ensures that all points are on the correct side of the margin
 
 </details>
@@ -220,7 +220,7 @@ $$
 
 $$
 
-Where $C $ is a nonnegative tuning parameter.$M $ is the width of the margin and$\epsilon_1,....\epsilon_n$  are slack variables that allows individual observations on the wrong side of the margin or the hyperplane.
+Where $C$ is a nonnegative tuning parameter. $M$ is the width of the margin and $\epsilon_1,....\epsilon_n$  are slack variables that allows individual observations on the wrong side of the margin or the hyperplane.
 
 Once we have hyperplane after solving above set of equations, we classify a test observations $x^*$, by simply determining on which side of hyperplane it lies.
 
@@ -239,7 +239,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The slack variable $\epsilon_i $ tells us where the$i$  th observations is located, relative to the hyperplane and relative to the margin.
+The slack variable $\epsilon_i$ tells us where the $i$  th observations is located, relative to the hyperplane and relative to the margin.
 
 - If $\epsilon_i > 0 $:$ i$th observation is on the wrong side of the margin
 - If $\epsilon_i = 0 $:$ i$th observation is on the correct side of the margin
@@ -254,7 +254,7 @@ The slack variable $\epsilon_i $ tells us where the$i$  th observations is locat
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can think of $C $ as a budget for the amount that margin can be violated by$n $ observations. If$C=0 $ then there is no budget for violations to the margin i.e maximal margin classifier. As the budget$ C$  increases, the model becomes more tolerant of violations to the margin, and so the margin will widen. Conversely, as C decreases, we become less tolerant of violations to the margin and so the margin narrows.
+We can think of $C$ as a budget for the amount that margin can be violated by $n$ observations. If $C=0$ then there is no budget for violations to the margin i.e maximal margin classifier. As the budget $C$  increases, the model becomes more tolerant of violations to the margin, and so the margin will widen. Conversely, as C decreases, we become less tolerant of violations to the margin and so the margin narrows.
 
 </details>
 
@@ -338,7 +338,7 @@ Kernel function quantifies the similarity of two observations.
 
 - Linear kernel
 
-    $$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$- Polynomial kernel$$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$where, $ d > 1$- Radial kernel
+    $$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$- Polynomial kernel$$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$where, $d > 1$- Radial kernel
 
 $$
 
@@ -357,7 +357,7 @@ where, $\gamma$  is positive constant.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Kernel trick is more computationally effective technique. We only need to compute $K(x_i, x'{_{i}})$ for all $\binom{n}{2}$ distinct pairs of $ i, i'$. This can be done without explicitly working in the enlarged feature space. This is important because in many applications of SVMs, the enlarged feature space is so large that computations are intractable.
+Kernel trick is more computationally effective technique. We only need to compute $K(x_i, x'{_{i}})$ for all $\binom{n}{2}$ distinct pairs of $i, i'$. This can be done without explicitly working in the enlarged feature space. This is important because in many applications of SVMs, the enlarged feature space is so large that computations are intractable.
 
 </details>
 
@@ -439,13 +439,13 @@ We can use following approaches to accomplish it:
 
 *One-versus-one classification*
 
-To classify data with SVMs when there are $( K > 2 )$ classes, the *one-versus-one* (or *all-pairs*) approach is used. This method involves constructing $\binom{K}{2}$ SVM classifiers, each trained to distinguish between a pair of classes. For example, one SVM might compare the $ k$ th class with the $ k'$  th class. To classify a new observation, each of these classifiers is used to predict the class, and the observation is assigned to the class that receives the most votes from the pairwise classifiers.
+To classify data with SVMs when there are $( K > 2 )$ classes, the *one-versus-one* (or *all-pairs*) approach is used. This method involves constructing $\binom{K}{2}$ SVM classifiers, each trained to distinguish between a pair of classes. For example, one SVM might compare the $k$ th class with the $k'$  th class. To classify a new observation, each of these classifiers is used to predict the class, and the observation is assigned to the class that receives the most votes from the pairwise classifiers.
 
 *One-Versus-All classification*
 
-In the one-versus-all (or one-versus-rest) approach for classifying with SVMs when there are $K > 2 $ classes,$ K $ separate SVMs are trained. Each SVM is designed to distinguish one class from the rest. For each SVM, the class of interest is coded as$+1 $, while the remaining classes are coded as$-1$. 
+In the one-versus-all (or one-versus-rest) approach for classifying with SVMs when there are $K > 2$ classes, $K$ separate SVMs are trained. Each SVM is designed to distinguish one class from the rest. For each SVM, the class of interest is coded as $+1$, while the remaining classes are coded as $-1$. 
 
-To classify a new observation $x^*$, we compute the decision function values for all $ K$  SVMs. The observation is assigned to the class for which this decision function value is the highest, indicating the strongest confidence that the observation belongs to that class.
+To classify a new observation $x^*$, we compute the decision function values for all$ K$  SVMs. The observation is assigned to the class for which this decision function value is the highest, indicating the strongest confidence that the observation belongs to that class.
 
 </details>
 
@@ -484,7 +484,7 @@ SVM does not provide probabilities like logistic regression output. It only outp
 
 ---
 
-### Q: Given a true label $y = +1 $ and a predicted score$\hat{y} = 0.5$, calculate the hinge loss for this classification example?
+### Q: Given a true label $y = +1$ and a predicted score $\hat{y} = 0.5$, calculate the hinge loss for this classification example?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -532,7 +532,7 @@ $$
 
 $$
 
-- **Kernel Trick**: Replaces inner products $x_i^T x_j $ with kernel functions$K(x_i, x_j) = \phi(x_i)^T \phi(x_j)$  (e.g., RBF kernel) to project data into high-dimensional feature spaces implicitly.
+- **Kernel Trick**: Replaces inner products $x_i^T x_j$ with kernel functions $K(x_i, x_j) = \phi(x_i)^T \phi(x_j)$  (e.g., RBF kernel) to project data into high-dimensional feature spaces implicitly.
 
 </details>
 

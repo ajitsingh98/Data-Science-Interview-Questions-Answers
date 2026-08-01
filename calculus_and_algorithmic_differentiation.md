@@ -36,7 +36,7 @@
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- A function $f: \mathbb{R} \to \mathbb{R}$ is **differentiable** at point $ x = c$  if the limit of the difference quotient exists:
+- A function $f: \mathbb{R} \to \mathbb{R}$ is **differentiable** at point $x = c$  if the limit of the difference quotient exists:
 
 $$
 
@@ -44,7 +44,7 @@ f'(c) = \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}
 
 $$
 
-- **Property**: Differentiability implies continuity, but continuity does not guarantee differentiability (e.g., $|x|$ at $ x=0$).
+- **Property**: Differentiability implies continuity, but continuity does not guarantee differentiability (e.g., $|x|$ at $x=0$).
 
 </details>
 
@@ -59,7 +59,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- A function $f: \mathbb{R}^n \to \mathbb{R}$ is **convex** if for all $ x, y$ and $\lambda \in [0, 1]$:
+- A function $f: \mathbb{R}^n \to \mathbb{R}$ is **convex** if for all $x, y$ and $\lambda \in [0, 1]$:
 
 $$
 
@@ -81,20 +81,20 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Forward Difference**: $f'(x) \approx \frac{f(x + h) - f(x)}{h} \quad [O(h)]$2. **Backward Difference**: $ f'(x) \approx \frac{f(x) - f(x - h)}{h} \quad [O(h)]$3. **Central Difference**: $ f'(x) \approx \frac{f(x + h) - f(x - h)}{2h} \quad [O(h^2)]$ 
+1. **Forward Difference**: $f'(x) \approx \frac{f(x + h) - f(x)}{h} \quad [O(h)]$2. **Backward Difference**:$ f'(x) \approx \frac{f(x) - f(x - h)}{h} \quad [O(h)]$3. **Central Difference**:$ f'(x) \approx \frac{f(x + h) - f(x - h)}{2h} \quad [O(h^2)]$ 
 
 </details>
 
 ---
 
-### Q: 1. Given a function $f(x)$ and a point a, define the instantaneous rate of change of $ f(x)$ at $ a$.
+### Q: 1. Given a function $f(x)$ and a point a, define the instantaneous rate of change of $f(x)$ at $a$.
 2. What other commonly used alternative name does the instantaneous rate of change have?
-3. Given a function $f (x)$ and a point a, define the tangent line of $ f (x)$  at a.
+3. Given a function $f (x)$ and a point a, define the tangent line of $f (x)$  at a.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- The instantaneous rate of change of $f(x)$ at $ x = a$  is the limit of average rate of change as interval length approaches zero:
+- The instantaneous rate of change of $f(x)$ at $x = a$  is the limit of average rate of change as interval length approaches zero:
 
 $$
 
@@ -106,7 +106,7 @@ $$
 
 ---
 
-### Q: 1. State the definition of the derivative $f(c)$ of a function $ f(x)$ at $ x = c$.
+### Q: 1. State the definition of the derivative $f(c)$ of a function $f(x)$ at $x = c$.
 
 2.  With respect to the DAG depicted in 5.3:
 
@@ -179,7 +179,7 @@ $$
 
 ### Q: Find the Taylor series expansion for:
 
-1. $\frac{1}{1-x}$2. $ e^x$3. $ sin(x)$4. $ cos(x)$ 
+1. $\frac{1}{1-x}$2.$ e^x $3.$ sin(x)$4.$ cos(x)$ 
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -225,7 +225,7 @@ $$
 
 </details>
 
-### Q: Find the $101th $ degree Taylor polynomial centered at$x = 0$  for:
+### Q: Find the $101th$ degree Taylor polynomial centered at $x = 0$  for:
 
 $$
 
@@ -236,7 +236,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Find the $101th $ degree Taylor polynomial centered at$x = 0$  for:`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Find the $101th$ degree Taylor polynomial centered at $x = 0$  for:`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -371,7 +371,7 @@ $$
 
 ---
 
-### Q: Consider $f(x) = \frac{x^2 + 1}{(x+2)^2}$1. Where is $ f(x)$  well defined?
+### Q: Consider $f(x) = \frac{x^2 + 1}{(x+2)^2}$1. Where is$ f(x)$  well defined?
     2. Where is $f(x)$  increasing and decreasing?
     3. Where is $f(x)$  reaching minimum and maximum values.
 
@@ -423,7 +423,7 @@ and find maximum, minimum, and saddle points.
 Stationary points are required in order to minimize a convex function. A very simple approach for finding stationary points is to start at an arbitrary point, and move along the gradient at that point towards the next point, and repeat until converging to a stationary point.
 1. What is the term used to describe the vector of all partial derivatives for a function $f(x)$?
 2. Complete the sentence: when searching for a minima, if the derivative is positive, the function is **increasing/decreasing.**
-3. The function $x^2 $ as depicted in 5.5, has a derivative of$ f′(x) = 2x $. Evaluated at$ x = −1 $, the derivative equals$ f′(x = −1) = −2 $.$ At x = −1 $, the function is decreasing as$ x $gets larger. We will happen if we wish to find a minima using gradient descent, and increase (decrease)$ x$  by the size of the gradient, and then again repeatedly keep jumping?
+3. The function $x^2$ as depicted in 5.5, has a derivative of $f′(x) = 2x$. Evaluated at$ x = −1 $, the derivative equals$ f′(x = −1) = −2 $.$ At x = −1 $, the function is decreasing as$ x $gets larger. We will happen if we wish to find a minima using gradient descent, and increase (decrease)$ x$  by the size of the gradient, and then again repeatedly keep jumping?
 <table align='center'>
 <tr>
 <td align="center">
@@ -491,24 +491,24 @@ Stationary points are required in order to minimize a convex function. A very si
 
 ---
 
-### Q: Let $x∈R_n $,$ L=cross entropy(softmax(x),y)$ in which $ y$is a one-hot vector. Take the derivative of $ L$with respect to $ x$.
+### Q: Let $x∈R_n $,$ L=cross entropy(softmax(x),y)$in which$ y $is a one-hot vector. Take the derivative of$ L $with respect to$ x$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Let $x∈R_n $,$ L=cross entropy(softmax(x),y)$ in which $ y$is a one-hot vector. Take the derivative of $ L$with respect to $ x$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Let $x∈R_n $,$ L=cross entropy(softmax(x),y)$in which$ y $is a one-hot vector. Take the derivative of$ L $with respect to$ x$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-### Q: Given the function $f(x,y)=4x^2−y $ with the constraint$x^2+y^2=1$. Find the function’s maximum and minimum values.
+### Q: Given the function $f(x,y)=4x^2−y$ with the constraint $x^2+y^2=1$. Find the function’s maximum and minimum values.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given the function $f(x,y)=4x^2−y $ with the constraint$x^2+y^2=1$. Find the function’s maximum and minimum values.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given the function $f(x,y)=4x^2−y$ with the constraint $x^2+y^2=1$. Find the function’s maximum and minimum values.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -531,7 +531,7 @@ $$
 
 $$
 
-The logistic loss for a training sample $x_i $ with class label$y_i $ is given by$L(yi,xi;w)=−logp(y_i|x_i)$1. Show that $ p(y=−1|x)=σ(−w^Tx)$.
+The logistic loss for a training sample $x_i$ with class label $y_i$ is given by $L(yi,xi;w)=−logp(y_i|x_i)$1. Show that$ p(y=−1|x)=σ(−w^Tx)$.
 1. Show that  $Δ_wL(y_i,x_i;w)=−y_i(1−p(y_i|x_i))x_i$.
 1. Show that  $Δ_wL(y_i,x_i;w)$   is convex.
 
@@ -593,12 +593,12 @@ $$
 
 ---
 
-### Q: This question deals with the effect of customized transfer functions. Consider a neural network with hidden units that use $x^3 $ and output units that use$ sin(2x)$ as transfer functions. Using the chain rule, starting from $∂E/∂yk$, derive the formulas for the weight updates $∆w_{jk}$ and $∆w_{ij}$. Notice - do not include partial derivatives in your final answer.
+### Q: This question deals with the effect of customized transfer functions. Consider a neural network with hidden units that use $x^3$ and output units that use $sin(2x)$ as transfer functions. Using the chain rule, starting from $∂E/∂yk$, derive the formulas for the weight updates $∆w_{jk}$ and $∆w_{ij}$. Notice - do not include partial derivatives in your final answer.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `This question deals with the effect of customized transfer functions. Consider a neural network with hidden units that use $x^3 $ and output units that use$ sin(2x)$ as transfer functions. Using the chain rule, starting from $∂E/∂yk$, derive the formulas for the weight updates $∆w_{jk}$ and $∆w_{ij}$. Notice - do not include partial derivatives in your final answer.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `This question deals with the effect of customized transfer functions. Consider a neural network with hidden units that use $x^3$ and output units that use $sin(2x)$ as transfer functions. Using the chain rule, starting from $∂E/∂yk$, derive the formulas for the weight updates $∆w_{jk}$ and $∆w_{ij}$. Notice - do not include partial derivatives in your final answer.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -656,7 +656,7 @@ $$
 
 $$
 
-On the other hand, the $artanh $ function, which returns the inverse hyperbolic tangent of its argument x, is implemented in numpy as$arctanh()$.
+On the other hand, the $artanh$ function, which returns the inverse hyperbolic tangent of its argument x, is implemented in numpy as $arctanh()$.
 Its derivative is given by:
 
 $$
@@ -670,7 +670,7 @@ Your friend, a veteran of the DL community wants to implement a custom activatio
 1. Use this numpy array as an input $[[0.37, 0.192, 0.571]]$  and evaluate the result using pure Python.
 2. Use the PyTorch based $torch.autograd.Function$  class to implement a custom Function that implements the forward pass for the arctanh function in Python.
 3. Use the PyTorch based $torch.autograd.Function$  class to implement a custom Function that implements the backward pass for the arctanh function in Python.
-4. Name the class ArtanhFunction,and using the grad check method from $torch.autograd $, verify that your numerical values equate the analytical values calculated by gradcheck. Remember you must implement a method entitled $.apply(x)$  so that the function can be invoked by Autograd.
+4. Name the class ArtanhFunction,and using the grad check method from $torch.autograd $, verify that your numerical values equate the analytical values calculated by gradcheck. Remember you must implement a method entitled$.apply(x)$  so that the function can be invoked by Autograd.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -732,7 +732,7 @@ $$
 
     holds in this particular case too.
 
-4. Using the derived DN, evaluate the function $g(x)$ at $ x = 2$.
+4. Using the derived DN, evaluate the function $g(x)$ at $x = 2$.
 5. Using an Autograd based Python program implement the function and evaluate it’s derivative at $x = 2$.
 
 <details>
@@ -760,7 +760,7 @@ $$
 
 1. Traverse the graph 5.10 and find the function $g(x)$  it represents.
 2. Expand the function $g(x)$  using DN.
-3. Using the derived DN, evaluate the function $g(x)$ at $ x = 5$.
+3. Using the derived DN, evaluate the function $g(x)$ at $x = 5$.
 4. Using an AutoGrad based Python program implement the function and evaluate it’s derivative at $x = 5$.
 
 <details>
@@ -829,7 +829,7 @@ $f (x1, x2) = x1x2 + ln (x1)$   and the graph 5.1, annotate each vertex (edge) o
 $g(x1, x2)$ evaluated at $(x1; x2) = (e^2; π)$  using forward-mode AD.
 3. Write and run a Python code snippet to prove your results are correct. 
 4. Describe the role of seed values in forward-mode AD.
-5. Transform the graph into a table that computes the derivative of $g(x1,x2)$ evaluated at $(x1; x2) = (e^2; π)$ using forward-mode AD for $ x1$  as the chosen independent variable.
+5. Transform the graph into a table that computes the derivative of $g(x1,x2)$ evaluated at $(x1; x2) = (e^2; π)$ using forward-mode AD for $x1$  as the chosen independent variable.
 6. Write and run a Python code snippet to prove your results are correct.
 
 <details>

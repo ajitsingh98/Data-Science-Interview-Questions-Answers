@@ -36,8 +36,8 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Operation**: Continuous 1D Convolution of signals $f $ and$g$.
-2. **$g(t)$**: The filter kernel/impulse response applied to input signal $ f(t)$.
+1. **Operation**: Continuous 1D Convolution of signals $f$ and $g$.
+2. **$g(t)$**: The filter kernel/impulse response applied to input signal$ f(t)$.
 
 </details>
 
@@ -97,7 +97,7 @@ $$
 
 $$
 
-Where $I $ is input image matrix,$K$  is convolution kernel.
+Where $I$ is input image matrix, $K$  is convolution kernel.
 
 </details>
 
@@ -130,7 +130,7 @@ Where $I $ is input image matrix,$K$  is convolution kernel.
 
 ---
 
-### Q: You are provided with a $K × K $ input signal and a$θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?$$ 
+### Q: You are provided with a $K × K$ input signal and a $θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?$$ 
 
 \begin{equation}
 A =
@@ -147,7 +147,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `You are provided with a $K × K $ input signal and a$θ × θ$  filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `You are provided with a $K × K$ input signal and a $θ × θ$  filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -295,12 +295,12 @@ $$
 
 ---
 
-### Q: Given an image of size $w × h $, and a kernel with width $ K$  , how many multiplications and additions are required to convolve the image?
+### Q: Given an image of size $w × h $, and a kernel with width$ K$  , how many multiplications and additions are required to convolve the image?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given an image of size $w × h $, and a kernel with width $ K$  , how many multiplications and additions are required to convolve the image?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given an image of size $w × h $, and a kernel with width$ K$  , how many multiplications and additions are required to convolve the image?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -936,7 +936,7 @@ feature vector from an image using a pre-trained `ResNet34 CNN`.
 
 He then defines the cosine similarity between two vectors:
 
-$u = {u_1,u_2,....,u_N}$ $ v = {v_1,v_2,....,v_N}$  as:
+$u = {u_1,u_2,....,u_N}$ $v = {v_1,v_2,....,v_N}$  as:
 
 $$
 

@@ -149,7 +149,7 @@ def post_order(root):
 
 ---
 
-### Q: Given an array of integers and an integer $k $, find the total number of continuous subarrays whose sum equals $ k $in$ O(N)$  runtime.
+### Q: Given an array of integers and an integer $k $, find the total number of continuous subarrays whose sum equals$ k $in$ O(N)$  runtime.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>

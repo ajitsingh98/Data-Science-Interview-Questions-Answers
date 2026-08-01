@@ -29,7 +29,7 @@
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-LoRA freezes pre-trained weight matrices $W_0 \in \mathbb{R}^{d \times k}$ and injects trainable rank decomposition matrices $ A \in \mathbb{R}^{r \times k}$ and $ B \in \mathbb{R}^{d \times r}$ with rank $ r \ll \min(d, k)$:
+LoRA freezes pre-trained weight matrices $W_0 \in \mathbb{R}^{d \times k}$ and injects trainable rank decomposition matrices $A \in \mathbb{R}^{r \times k}$ and $B \in \mathbb{R}^{d \times r}$ with rank $r \ll \min(d, k)$:
 
 $$
 

@@ -60,7 +60,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-In deep learning we allow the addition of vector and matrix, yielding another matrix: $C = A+b $, where $ C_{i, j} = A_{i, j}+b_j $. The vector$ b $is being added to each row of the matrix. The implicit copying of$ b$  to many location is called broadcasting.
+In deep learning we allow the addition of vector and matrix, yielding another matrix: $C = A+b $, where$ C_{i, j} = A_{i, j}+b_j $. The vector$ b $is being added to each row of the matrix. The implicit copying of$ b$  to many location is called broadcasting.
 
 </details>
 
@@ -69,7 +69,7 @@ In deep learning we allow the addition of vector and matrix, yielding another ma
 ### Q: Dot product
 
   1. What’s the geometric interpretation of the dot product of two vectors?
-  1. Given a vector $u $, find vector$ v $ of unit length such that the dot product of$ u $ and$ v$   is maximum.
+  1. Given a vector $u $, find vector$ v $of unit length such that the dot product of$ u $and$ v$   is maximum.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -82,11 +82,11 @@ $$
 
 $$
 
-The dot product has the following geometric interpretation: Let $\alpha $ be the angle between$\vec{A}$ and $\vec{B}$. Then
+The dot product has the following geometric interpretation: Let $\alpha$ be the angle between $\vec{A}$ and $\vec{B}$. Then
 
 $$
 
-\vec{A} \cdot \vec{B} = |\vec{A}| \cdot |\vec{B}| \cdot \cos(\alpha)$$2. To find a vector $ v $ of unit length such that the dot product of$ u $ and$ v $ is maximum, we want to maximize the expression for the dot product$ u \cdot v$ According to the formula for the dot product:
+\vec{A} \cdot \vec{B} = |\vec{A}| \cdot |\vec{B}| \cdot \cos(\alpha)$$2. To find a vector $v$ of unit length such that the dot product of $u$ and $v$ is maximum, we want to maximize the expression for the dot product $u \cdot v$ According to the formula for the dot product:
 
 $$
 
@@ -95,13 +95,13 @@ u \cdot v = |u| |v| \cos(\theta)
 $$
 
 where:
-- $|u|$ is the magnitude of $ u$,
-- $|v|$ is the magnitude of $ v$(which is 1 in this case because $ v$  is a unit vector),
-- $\theta $ is the angle between$  u $ and$ v$.
+- $|u|$ is the magnitude of $u$,
+- $|v|$ is the magnitude of $v$(which is 1 in this case because$ v$  is a unit vector),
+- $\theta$ is the angle between $u$ and $v$.
 
-To maximize $u \cdot v $, the $\cos(\theta)$ part must be maximized. The cosine of an angle reaches its maximum value of 1 when the angle $\theta$ is 0 degrees, meaning that the vectors $ u$ and $ v$ must be pointing in the same direction.
+To maximize $u \cdot v $, the$\cos(\theta)$ part must be maximized. The cosine of an angle reaches its maximum value of 1 when the angle $\theta$ is 0 degrees, meaning that the vectors $u$ and $v$ must be pointing in the same direction.
 
-Thus, vector $v $ should be a unit vector in the direction of$ u $. This can be achieved by normalizing $ u $. The normalization of$ u $ is done by dividing$ u $ by its magnitude. If$ u $ is represented as$ u = (u_1, u_2, \ldots, u_n)$and its magnitude $|u| $ is given by:$$|u| = \sqrt{u_1^2 + u_2^2 + \ldots + u_n^2}$$Then, the unit vector $ v $ in the direction of$ u$ is:
+Thus, vector $v$ should be a unit vector in the direction of $u$. This can be achieved by normalizing$ u $. The normalization of$ u $is done by dividing$ u $by its magnitude. If$ u $is represented as$ u = (u_1, u_2, \ldots, u_n)$and its magnitude $|u|$ is given by:$$|u| = \sqrt{u_1^2 + u_2^2 + \ldots + u_n^2}$$Then, the unit vector $v$ in the direction of $u$ is:
 
 $$
 
@@ -109,7 +109,7 @@ v = \frac{u}{|u|} = \left(\frac{u_1}{|u|}, \frac{u_2}{|u|}, \ldots, \frac{u_n}{|
 
 $$
 
-This vector $v $ will have a unit length and the dot product$ u \cdot v $ will be maximum, equal to the magnitude of$ u $(since $ u \cdot v = |u| \cdot 1 \cdot \cos(0^\circ) = |u|$).
+This vector $v$ will have a unit length and the dot product $u \cdot v$ will be maximum, equal to the magnitude of $u$(since$ u \cdot v = |u| \cdot 1 \cdot \cos(0^\circ) = |u|$).
 
 </details>
 
@@ -117,13 +117,13 @@ This vector $v $ will have a unit length and the dot product$ u \cdot v $ will b
 
 ### Q: Outer product
 
-  1. Given two vectors $a=[3,2,1]$ and $ b=[−1,0,1]$. Calculate the outer product $ a^Tb$  ?
+  1. Given two vectors $a=[3,2,1]$ and $b=[−1,0,1]$. Calculate the outer product$ a^Tb$  ?
   1. Give an example of how the outer product can be useful in ML.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. resultant product will be a $3 \times 3 $ matrix, which can be given as follows:$$ 
+1. resultant product will be a $3 \times 3$ matrix, which can be given as follows:$$ 
 
 \left[\begin{matrix}
     -3 & 0 & 3 \\\\
@@ -150,19 +150,19 @@ For two vectors $\vec{a}$ and $\vec{b}$, they are linearly independent if the on
 
 $$
 
-c_1 \vec{a} + c_2 \vec{b} = \vec{0}$$is $ c_1 = 0 $and$ c_2 = 0 $, where$ c_1 $and$ c_2 $are scalars and$\vec{0}$  is the zero vector.
+c_1 \vec{a} + c_2 \vec{b} = \vec{0}$$is $c_1 = 0$ and $c_2 = 0$, where$ c_1 $and$ c_2 $are scalars and$\vec{0}$  is the zero vector.
 
 </details>
 
 ---
 
-### Q: Given two sets of vectors $A=a_1,a_2,a_3,...,a_n $ and$B=b_1,b_2,b_3,...,b_m$. How do you check that they share the same basis?
+### Q: Given two sets of vectors $A=a_1,a_2,a_3,...,a_n$ and $B=b_1,b_2,b_3,...,b_m$. How do you check that they share the same basis?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Basis Check**: Two sets of linearly independent vectors $A = \{a_1, \dots, a_n\}$ and $ B = \{b_1, \dots, b_m\}$ span the same subspace if and only if $ n = m$ and every vector $ a_i \in A$ can be expressed as a linear combination of vectors in $ B$  (and vice versa).
-- **Matrix Rank Method**: Form matrices $M_A \in \mathbb{R}^{d \times n}$ and $ M_B \in \mathbb{R}^{d \times m}$. The vector sets share the same basis if $\text{rank}(M_A) = \text{rank}(M_B) = \text{rank}([M_A \mid M_B]) = n = m $.
+- **Basis Check**: Two sets of linearly independent vectors $A = \{a_1, \dots, a_n\}$ and $B = \{b_1, \dots, b_m\}$ span the same subspace if and only if $n = m$ and every vector $a_i \in A$ can be expressed as a linear combination of vectors in $B$  (and vice versa).
+- **Matrix Rank Method**: Form matrices $M_A \in \mathbb{R}^{d \times n}$ and $M_B \in \mathbb{R}^{d \times m}$. The vector sets share the same basis if $\text{rank}(M_A) = \text{rank}(M_B) = \text{rank}([M_A \mid M_B]) = n = m$.
 
 </details>
 
@@ -190,7 +190,7 @@ Two vectors are orthonormal to each other if they are orthogonal and both have u
 
 ---
 
-### Q: Given $n $ vectors, each of$d$   dimensions. What is the dimension of their span?
+### Q: Given $n$ vectors, each of $d$   dimensions. What is the dimension of their span?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -213,36 +213,36 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. A **norm** on a vector space is a function that assigns a non-negative length or size to vectors, except for the zero vector, which is assigned a length of zero. Norms are denoted by $\|\cdot\|$ and must satisfy the following properties for any vectors $ x, y$ and any scalar $ a$:
-  - **Non-negativity**: $\|x\| \geq 0 $ and$\|x\| = 0 $ if and only if$ x = 0$.
+1. A **norm** on a vector space is a function that assigns a non-negative length or size to vectors, except for the zero vector, which is assigned a length of zero. Norms are denoted by $\|\cdot\|$ and must satisfy the following properties for any vectors $x, y$ and any scalar $a$:
+  - **Non-negativity**: $\|x\| \geq 0$ and $\|x\| = 0$ if and only if $x = 0$.
   - **Scalar multiplication**: $\|a \cdot x\| = |a| \cdot \|x\|$.
   - **Triangle inequality**: $\|x + y\| \leq \|x\| + \|y\|$.
 
   Different types of norms can be defined on vector spaces:
 
 - **$L_0$  norm** (not a true norm): It counts the number of non-zero entries in a vector. It does not satisfy the triangle inequality or the homogeneity property (scalar multiplication), which is why it's technically not a norm.
-- **$L_1 $ norm**: It is defined as$\|x\|_1 = \sum |x_i|$, summing the absolute values of the entries of the vector.
-- **$L_2 $ norm** (Euclidean norm): It is defined as$\|x\|_2 = \sqrt{\sum x_i^2}$, which corresponds to the usual geometric length of a vector.
-- **$L_p $ norm**: It generalizes the$L_1 $ and$ L_2 $ norms and is defined as$\|x\|_p = (\sum |x_i|^p)^{1/p}$ for $ 1 \leq p < \infty$.
+- **$L_1$ norm**: It is defined as $\|x\|_1 = \sum |x_i|$, summing the absolute values of the entries of the vector.
+- **$L_2$ norm** (Euclidean norm): It is defined as $\|x\|_2 = \sqrt{\sum x_i^2}$, which corresponds to the usual geometric length of a vector.
+- **$L_p$ norm**: It generalizes the $L_1$ and $L_2$ norms and is defined as $\|x\|_p = (\sum |x_i|^p)^{1/p}$ for $1 \leq p < \infty$.
 
 2. Norm vs Metric
 - A **norm** provides a way to measure the length of vectors in vector spaces.
 - A **metric** is a more general function that defines a distance between any two elements in a set, satisfying:
-  1. **Non-negativity**: $d(x, y) \geq 0 $ and$ d(x, y) = 0 $ if and only if$ x = y$.
+  1. **Non-negativity**: $d(x, y) \geq 0$ and $d(x, y) = 0$ if and only if $x = y$.
   2. **Symmetry**: $d(x, y) = d(y, x)$.
   3. **Triangle inequality**: $d(x, z) \leq d(x, y) + d(y, z)$.
 
 **Given a norm, make a metric**
 
-If you have a norm $\|\cdot\|$ on a vector space, you can define a metric $ d$ by $ d(x, y) = \|x - y\|$. This metric satisfies all the metric properties, derived from the properties of the norm.
+If you have a norm $\|\cdot\|$ on a vector space, you can define a metric $d$ by $d(x, y) = \|x - y\|$. This metric satisfies all the metric properties, derived from the properties of the norm.
 
 **Given a metric, can we make a norm?**
 
 Not all metrics come from norms. To derive a norm from a metric $d$, the metric must satisfy additional properties:
-1. **Translation invariance**: $d(x+z, y+z) = d(x, y)$ for all $ x, y, z$.
+1. **Translation invariance**: $d(x+z, y+z) = d(x, y)$ for all $x, y, z$.
 2. **Homogeneity**: $d(\alpha x, \alpha y) = |\alpha| d(x, y)$ for all scalars $\alpha$.
 
-If a metric satisfies these conditions, it can be associated with a norm, where the norm $\|x\|$ can be defined as $ d(x, 0)$. However, many metrics (like the discrete metric) do not satisfy these properties and thus cannot be associated with a norm.
+If a metric satisfies these conditions, it can be associated with a norm, where the norm $\|x\|$ can be defined as $d(x, 0)$. However, many metrics (like the discrete metric) do not satisfy these properties and thus cannot be associated with a norm.
 
 </details>
 
@@ -276,7 +276,7 @@ $$
 
 Suppose we have two matrices $\mathbf{A}$ and $\mathbf{B}$, In order to define the product of $\mathbf{A}$ and $\mathbf{B}$, $\mathbf{A}$ must have same number of columns as $\mathbf{B}$  has rows. 
 
-If shape of $\mathbf{A}$ is $ m x n$ and shape of $\mathbf{B}$ is $ n x p$, then the resultant matrix will have shape of $ m x p$.
+If shape of $\mathbf{A}$ is $m x n$ and shape of $\mathbf{B}$ is $n x p$, then the resultant matrix will have shape of$ m x p$.
 
 $$
 
@@ -341,7 +341,7 @@ The Hadamard product and dot product are distinct operations:
 
 2. **Output Dimensions**:
    - **Hadamard Product**: Output has the same dimensions as the input matrices.
-   - **Dot Product**: The output matrix dimensions depend on the inner dimensions of the inputs (e.g., multiplying an $m \times n $ matrix by an$n \times p $ matrix results in an$m \times p$  matrix).
+   - **Dot Product**: The output matrix dimensions depend on the inner dimensions of the inputs (e.g., multiplying an $m \times n$ matrix by an $n \times p$ matrix results in an $m \times p$  matrix).
 
 3. **Applications**:
    - **Hadamard Product**: Used in element-wise operations in deep learning and image processing.
@@ -458,7 +458,7 @@ Key characteristics of a singular matrix:
 -  $\mathbf{A}$  should be a square matrix
 - **Determinant**: $\det(\mathbf{A}) = 0$.
 - **Linear Dependence**: At least one row or column is redundant.
-- **Non-Invertibility**: The matrix cannot be inverted, meaning there is no matrix $\mathbf{A}^{-1}$ such that $\mathbf{A} \mathbf{A}^{-1} = I$, where $ I$  is the identity matrix.
+- **Non-Invertibility**: The matrix cannot be inverted, meaning there is no matrix $\mathbf{A}^{-1}$ such that $\mathbf{A} \mathbf{A}^{-1} = I$, where$ I$  is the identity matrix.
 
 </details>
 
@@ -472,7 +472,7 @@ Key characteristics of a singular matrix:
 The inverse of a matrix $\mathbf{A}$  exists if:
 
 - **$\det(\mathbf{A}) \neq 0$**: The determinant is non-zero.
-- **Square Matrix**: $\mathbf{A}$ is $ n \times n$.
+- **Square Matrix**: $\mathbf{A}$ is $n \times n$.
 - **Full Rank**: All rows/columns are linearly independent.
 - **No Zero Eigenvalues**: No eigenvalues are zero.
 
@@ -511,7 +511,7 @@ If the rank is equal to the smallest dimension of the matrix (i.e., the number o
 
 For square matrices, compute the determinant. If that is non-zero, the matrix is of full rank. 
 
-If the matrix $\mathbf{A}$ is $ n$ by $ m$, assume that $ m≤n $and compute all determinants of$ m $ by$ m$  sub-matrices. If one of them is non-zero, the matrix has full rank.
+If the matrix $\mathbf{A}$ is $n$ by $m$, assume that$ m≤n $and compute all determinants of$ m $by$ m$  sub-matrices. If one of them is non-zero, the matrix has full rank.
 
 </details>
 
@@ -528,7 +528,7 @@ Matrices are considered linear transformations because they map vectors from one
 
 Every matrix transformation is a linear transformation
 
-Suppose that $\mathbf{T}$ is a matrix transformation such that $𝑇(𝑥⃗)=𝐴𝑥⃗$ for some matrix $𝐴$ and that the vectors $𝑢⃗$ and $𝑣⃗$ are in the domain. Then for arbitrary scalars $ c$ and $ d$:
+Suppose that $\mathbf{T}$ is a matrix transformation such that $𝑇(𝑥⃗)=𝐴𝑥⃗$ for some matrix $𝐴$ and that the vectors $𝑢⃗$ and $𝑣⃗$ are in the domain. Then for arbitrary scalars $c$ and $d$:
 
 $$
 
@@ -592,7 +592,7 @@ Thus, the inverse is unique.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The norm of a vector $x $ measures the distance from the origin to the point$x$.
+The norm of a vector $x$ measures the distance from the origin to the point $x$.
 
 </details>
 
@@ -603,9 +603,9 @@ The norm of a vector $x $ measures the distance from the origin to the point$x$.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-It is the $L^2 $ norm, with$ p=2 $, which is simply the euclidean distance from the origin to the$ x $. It is denoted by$||x||_2 $ or just$||x||$.
+It is the $L^2$ norm, with $p=2$, which is simply the euclidean distance from the origin to the$ x $. It is denoted by$||x||_2$ or just $||x||$.
 
-It is also a common to measure the size of a vector using the squared $L^2 $ norm, which is equal to$ x^{T}x$ 
+It is also a common to measure the size of a vector using the squared $L^2$ norm, which is equal to $x^{T}x$ 
 
 $$
 
@@ -617,7 +617,7 @@ $$
 
 ---
 
-### Q: When we should use $L^1 $ norm instead of$ L^2$  norm?
+### Q: When we should use $L^1$ norm instead of $L^2$  norm?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -689,7 +689,7 @@ $$
 
 $$
 
-where $\|\mathbf{x}\|_2 $ and$\|\mathbf{y}\|_2 $ are the Euclidean norms (or magnitudes) of$\mathbf{x}$ and $\mathbf{y}$, and $\theta$  is the angle between the two vectors.
+where $\|\mathbf{x}\|_2$ and $\|\mathbf{y}\|_2$ are the Euclidean norms (or magnitudes) of $\mathbf{x}$ and $\mathbf{y}$, and $\theta$  is the angle between the two vectors.
 
 </details>
 
@@ -706,7 +706,7 @@ where $\|\mathbf{x}\|_2 $ and$\|\mathbf{y}\|_2 $ are the Euclidean norms (or mag
 
 *Diagonal Matrix*
 
-A matrix $\mathbf{D}$ is a diagonal if and only if $\mathbf{D}_{i, j} = 0$ for all $ i \neq j$. 
+A matrix $\mathbf{D}$ is a diagonal if and only if $\mathbf{D}_{i, j} = 0$ for all $i \neq j$. 
 
 *Symmetric Matrix*
 
@@ -764,7 +764,7 @@ $$
 
 $$
 
-In this equation, $\lambda $ is the eigenvalue associated with the eigenvector$\mathbf{v}$. The eigenvalue represents the scale factor by which the eigenvector is stretched or compressed. Thus, eigenvectors are the directions that remain unchanged by the transformation, and eigenvalues measure the extent of this scaling.
+In this equation, $\lambda$ is the eigenvalue associated with the eigenvector $\mathbf{v}$. The eigenvalue represents the scale factor by which the eigenvector is stretched or compressed. Thus, eigenvectors are the directions that remain unchanged by the transformation, and eigenvalues measure the extent of this scaling.
 
 </details>
 
@@ -775,7 +775,7 @@ In this equation, $\lambda $ is the eigenvalue associated with the eigenvector$\
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Suppose the matrix $\mathbf{A}$ has $ n$ linearly independent eigenvectors ${v^{(1)},..,v^{(n)}}$ with corresponding eigenvalues ${\lambda_1,..,\lambda_n}$ Lets define a matrix $\mathbf{V}$ and a vector $\mathbf{\lambda}$ 
+Suppose the matrix $\mathbf{A}$ has $n$ linearly independent eigenvectors ${v^{(1)},..,v^{(n)}}$ with corresponding eigenvalues ${\lambda_1,..,\lambda_n}$ Lets define a matrix $\mathbf{V}$ and a vector $\mathbf{\lambda}$ 
 
 $$
 
@@ -823,7 +823,7 @@ Eigendecomposition of a matrix tells use many useful facts about the matrix.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Eigenvalues and eigenvectors of a matrix $\mathbf{A}$ help identify subspaces that remain invariant under the linear transformation represented by $\mathbf{A}$. However, if $\mathbf{A}$ is non-square, meaning $\mathbf{A} : \mathbb{R}^m \to \mathbb{R}^n$ with $ m \neq n$, the equation $\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$ is not applicable because $\mathbf{A}\mathbf{v}$ will not necessarily lie in $\mathbb{R}^m$.
+Eigenvalues and eigenvectors of a matrix $\mathbf{A}$ help identify subspaces that remain invariant under the linear transformation represented by $\mathbf{A}$. However, if $\mathbf{A}$ is non-square, meaning $\mathbf{A} : \mathbb{R}^m \to \mathbb{R}^n$ with $m \neq n$, the equation $\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$ is not applicable because $\mathbf{A}\mathbf{v}$ will not necessarily lie in $\mathbb{R}^m$.
 
 </details>
 
@@ -848,7 +848,7 @@ Eigenvalues and eigenvectors of a matrix $\mathbf{A}$ help identify subspaces th
 
 Singular Value Decomposition (SVD) is a technique used to factorize a matrix into its constituent singular vectors and singular values.
 
-For a given real matrix $\mathbf{A}$ of dimensions $ m \times n$, the decomposition is expressed as:
+For a given real matrix $\mathbf{A}$ of dimensions $m \times n$, the decomposition is expressed as:
 
 $$
 
@@ -858,9 +858,9 @@ $$
 
 where:
 
-- $\mathbf{U}$ is an $ m \times m$  orthogonal matrix whose columns are the left singular vectors.
-- $\mathbf{D}$ is an $ m \times n$  diagonal matrix containing the singular values on its diagonal. It may not be square.
-- $\mathbf{V}$ is an $ n \times n$  orthogonal matrix whose columns are the right singular vectors.
+- $\mathbf{U}$ is an $m \times m$  orthogonal matrix whose columns are the left singular vectors.
+- $\mathbf{D}$ is an $m \times n$  diagonal matrix containing the singular values on its diagonal. It may not be square.
+- $\mathbf{V}$ is an $n \times n$  orthogonal matrix whose columns are the right singular vectors.
 
 SVD provides a way to decompose a matrix into components that reveal important properties and facilitate various applications in data analysis, signal processing, and more.
 
@@ -953,10 +953,10 @@ The absolute value of the determinant of a matrix provides a measure of the scal
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-If you multiply one of the rows of a matrix $\mathbf{A}$ by a scalar $ t$, the determinant of the matrix is scaled by the same factor $ t$. Specifically:
+If you multiply one of the rows of a matrix $\mathbf{A}$ by a scalar $t$, the determinant of the matrix is scaled by the same factor$ t$. Specifically:
 
-- Let $\mathbf{A}$ be an $ n \times n$  matrix.
-- If you multiply one row of $\mathbf{A}$ by a scalar $ t$, the new matrix $\mathbf{A'}$  will have a determinant given by:
+- Let $\mathbf{A}$ be an $n \times n$  matrix.
+- If you multiply one row of $\mathbf{A}$ by a scalar $t$, the new matrix $\mathbf{A'}$  will have a determinant given by:
 
 $$
 
@@ -970,7 +970,7 @@ This property reflects that the determinant is a multilinear function of the row
 
 ---
 
-### Q: A $4×4 $ matrix has four eigenvalues$ 3, 3, 2, −1$. What can we say about the trace and the determinant of this matrix?
+### Q: A $4×4$ matrix has four eigenvalues $3, 3, 2, −1$. What can we say about the trace and the determinant of this matrix?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1110,14 +1110,14 @@ The presence of a row of zeros in the row echelon form indicates that the matrix
 
 ---
 
-### Q: What’s the difference between the covariance matrix $A^TA $ and the Gram matrix$AA^T$?
+### Q: What’s the difference between the covariance matrix $A^TA$ and the Gram matrix $AA^T$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 - **Dimensions**:
-  -  $A^T A $ is$n \times n $(columns of$ A$).
-  - $A A^T $ is$m \times m $(rows of$ A$).
+  -  $A^T A$ is $n \times n$(columns of$ A$).
+  - $A A^T$ is $m \times m$(rows of$ A$).
 
 - **Focus**:
   - $A^T A$  focuses on the relationships between columns.
@@ -1131,17 +1131,17 @@ The presence of a row of zeros in the row echelon form indicates that the matrix
 
 ---
 
-### Q: Given $A∈R^{n×m}$ and $ b∈R^n$1. Find $ x $such that:$ Ax=b$.
+### Q: Given $A∈R^{n×m}$ and $b∈R^n$1. Find$ x $such that:$ Ax=b$.
 1. When does this have a unique solution?
-1. Why is it when $A $ has more columns than rows,$Ax=b$  has multiple solutions?
-1. Given a matrix $A $ with no inverse. How would you solve the equation$Ax=b$? What is the pseudo inverse and how to calculate it?
+1. Why is it when $A$ has more columns than rows, $Ax=b$  has multiple solutions?
+1. Given a matrix $A$ with no inverse. How would you solve the equation $Ax=b$? What is the pseudo inverse and how to calculate it?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. To find $x $ such that$A x = b $ where$A \in \mathbb{R}^{n \times m}$ and $ b \in \mathbb{R}^n$, you generally need to solve a linear system. The method used depends on the properties of $ A$:
+1. To find $x$ such that $A x = b$ where $A \in \mathbb{R}^{n \times m}$ and $b \in \mathbb{R}^n$, you generally need to solve a linear system. The method used depends on the properties of$ A$:
 
-- **If $A $ is square (i.e.,$n = m $) and invertible**, you can find $ x$directly using:
+- **If $A$ is square (i.e., $n = m$) and invertible**, you can find$ x$directly using:
 
 $$
 
@@ -1151,18 +1151,18 @@ $$
 
 - **If $A$  is not square or not invertible**, we may use other methods such as:
   - **Gaussian Elimination**: Useful for finding solutions and performing row reductions.
-  - **Least Squares Solution**: If $A $ has more rows than columns ($  n > m$) and does not have an exact solution, find the least squares solution.
+  - **Least Squares Solution**: If $A$ has more rows than columns ($n > m$) and does not have an exact solution, find the least squares solution.
   - **Pseudo-Inverse**: When $A$  is not invertible or not square, the Moore-Penrose pseudo-inverse is used.
 
 2. The linear system $A x = b$  has a unique solution if:
 
-- **The matrix $A $ is square ($  n = m $) and invertible**, meaning $\text{det}(A) \neq 0 $. In this case, the matrix$ A $has full rank, and the solution is given by$ x = A^{-1} b$.
+- **The matrix $A$ is square ($n = m $) and invertible**, meaning$\text{det}(A) \neq 0 $. In this case, the matrix$ A $has full rank, and the solution is given by$ x = A^{-1} b$.
 
 - **For non-square matrices**, a unique solution occurs when the system is consistent and has a unique solution if:
-  - The matrix $A $ has full column rank (if$m \leq n $) and $ b $is in the column space of$ A$.
+  - The matrix $A$ has full column rank (if $m \leq n$) and$ b $is in the column space of$ A$.
   - In the case of an over-determined system (more rows than columns), $A$  should have full column rank.
 
-3. The system $A x = b $ has infinitely many solutions because there are free variables associated with the null space. This leads to a solution space that forms an affine subspace in \(\mathbb{R}^m\), where each solution can be expressed as$x = x_0 + \text{null}(A)$, where $ x_0$is a particular solution and \(\text{null}(A)\) represents the null space of $ A$.
+3. The system $A x = b$ has infinitely many solutions because there are free variables associated with the null space. This leads to a solution space that forms an affine subspace in \(\mathbb{R}^m\), where each solution can be expressed as $x = x_0 + \text{null}(A)$, where$ x_0 $is a particular solution and \(\text{null}(A)\) represents the null space of$ A$.
 
 4.
 
@@ -1170,13 +1170,13 @@ $$
 
 ---
 
-### Q: Given a very large symmetric matrix $A $ that doesn’t fit in memory, say$A∈R^{1M×1M}$ and a function $ f$ that can quickly compute $ f(x)=Ax$ for $ x∈R1M$. Find the unit vector $ x $so that$ x^TAx$   is minimal.
+### Q: Given a very large symmetric matrix $A$ that doesn’t fit in memory, say $A∈R^{1M×1M}$ and a function $f$ that can quickly compute $f(x)=Ax$ for $x∈R1M$. Find the unit vector$ x $so that$ x^TAx$   is minimal.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Power Iteration / Lanczos Algorithm**: To find the unit vector $x \in \mathbb{R}^{1\text{M}}$ minimizing Rayleigh quotient $ x^T A x$, we want the eigenvector corresponding to the smallest (most negative) eigenvalue $\lambda_{\min}$.
-- **Method**: Shift matrix $B = \lambda_{\max} I - A $ using Power Iteration with matrix-vector product oracle$f(x) = Ax $ to compute$\lambda_{\max}$ and $\lambda_{\min}$ via Lanczos algorithm without storing matrix $ A$  in memory.
+- **Power Iteration / Lanczos Algorithm**: To find the unit vector $x \in \mathbb{R}^{1\text{M}}$ minimizing Rayleigh quotient $x^T A x$, we want the eigenvector corresponding to the smallest (most negative) eigenvalue $\lambda_{\min}$.
+- **Method**: Shift matrix $B = \lambda_{\max} I - A$ using Power Iteration with matrix-vector product oracle $f(x) = Ax$ to compute $\lambda_{\max}$ and $\lambda_{\min}$ via Lanczos algorithm without storing matrix $A$  in memory.
 
 </details>
 

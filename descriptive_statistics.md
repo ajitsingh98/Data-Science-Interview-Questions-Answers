@@ -395,7 +395,7 @@ Mode is the most commonly occurring value in a distribution.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The mean is the average of a set of observations (i.e., the sum of the observations divided by the number of observations). If the n observations are $x_1, x_2,..,x_n $ their mean, which we denote by$\bar{x}$ 
+The mean is the average of a set of observations (i.e., the sum of the observations divided by the number of observations). If the n observations are $x_1, x_2,..,x_n$ their mean, which we denote by $\bar{x}$ 
 
 $$
 
@@ -427,8 +427,8 @@ To find the median:
 
 - Order the data from smallest to largest.
 - Consider whether $n$, the number of observations, is even or odd.
-   - If $n $ is odd, the median$M $ is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$  spot in the ordered list.
-   - If $n $ is even, the median$M $ is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2 $ and$ n/2 + 1$  spots in the ordered list.
+   - If $n$ is odd, the median $M$ is the center observation in the ordered list. This observation is the one "sitting" in the $(n + 1)/2$  spot in the ordered list.
+   - If $n$ is even, the median $M$ is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the $n/2$ and $n/2 + 1$  spots in the ordered list.
 
 </details>
 
@@ -443,8 +443,8 @@ To find the median:
 
 - Order the data from smallest to largest.
 - Consider whether $n$, the number of observations, is even or odd.
-   - If $n $ is odd, the median$M $ is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$  spot in the ordered list.
-   - If $n $ is even, the median$M $ is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2 $ and$ n/2 + 1$  spots in the ordered list.
+   - If $n$ is odd, the median $M$ is the center observation in the ordered list. This observation is the one "sitting" in the $(n + 1)/2$  spot in the ordered list.
+   - If $n$ is even, the median $M$ is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the $n/2$ and $n/2 + 1$  spots in the ordered list.
 
 </details>
 
@@ -526,7 +526,7 @@ IQR calculations:
 
 - Find the median of the lower 50% of the data($Q1 $) and upper 50% of the data$ Q3$.
 
-- The middle 50% of the data falls between $Q1 $ and$ Q3$, and therefore:
+- The middle 50% of the data falls between $Q1$ and $Q3$, and therefore:
 
 $$
 

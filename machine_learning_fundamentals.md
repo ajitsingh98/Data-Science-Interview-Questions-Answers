@@ -560,12 +560,12 @@ Stratification is used to balance the classes in the training and validation spl
 
 ### Q: 1. **True or false**: The leave-one-out cross-validation (LOOCV) approach is a sub-case of k-fold cross-validation wherein K equals N , the sample size.
 
-    1. **True or false**: It is always possible to find an optimal value $n $, $ K = n$  in K-fold cross-validation.
+    1. **True or false**: It is always possible to find an optimal value $n $,$ K = n$  in K-fold cross-validation.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **True**: leave-one-out cross-validation (LOOCV) is a special case of k-fold cross validation where $k $ ise set equal to$n$ 
+1. **True**: leave-one-out cross-validation (LOOCV) is a special case of k-fold cross validation where $k$ ise set equal to $n$ 
 
 2. **False**: There is no way of a-priori finding an optimal value for K, and the relationship between the actual sample size and the resulting accuracy is unknown.
 
@@ -608,7 +608,7 @@ The main difference between **RandomizedSearchCV** and **GridSearchCV** lies in 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Efficiency**: Samples a fixed number of parameter settings, scaling linearly $O(k)$ rather than exponentially $ O(\prod m_i)$.
+1. **Efficiency**: Samples a fixed number of parameter settings, scaling linearly $O(k)$ rather than exponentially $O(\prod m_i)$.
 2. **Continuous Distributions**: Can sample from continuous parameter distributions (e.g., log-uniform) rather than static grids.
 
 </details>
@@ -905,15 +905,15 @@ $$
 
 ---
 
-### Q: Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10 $ million unlabeled comments from$ 10K $ users over the last$ 24 $ months and you want to label$ 100K$  of them.
+### Q: Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$ million unlabeled comments from $10K$ users over the last $24$ months and you want to label $100K$  of them.
 
     1. How would you sample $100K$  comments to label?
-    1. Suppose you get back $100K $ labeled comments from$20$  annotators and you want to look at some labels to estimate the quality of the labels. How many labels would you look at? How would you sample them?
+    1. Suppose you get back $100K$ labeled comments from $20$  annotators and you want to look at some labels to estimate the quality of the labels. How many labels would you look at? How would you sample them?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10 $ million unlabeled comments from$ 10K $ users over the last$ 24 $ months and you want to label$ 100K$  of them.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Suppose you want to build a model to classify whether a Reddit comment violates the website’s rule. You have $10$ million unlabeled comments from $10K$ users over the last $24$ months and you want to label $100K$  of them.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -1207,7 +1207,7 @@ The validation set approach, while simple and easy to implement, has two main dr
 
     *Leave-One-Out Cross-Validation(LOOCV)*
 
-    In this method a single observation $(x_1, y_1)$ is used for the validation set, and the remaining observations ${(x_2, y_2),...,(x_n, y_n)}$ make up the training set. We then fit the model on the training set and calculate the error on validation set. Repeating this approach iteratively with different set of predictors $ n$ times and corresponding response yields $ n$ squared errors, $ MSE_1,..,MSE_n$. The LOOCV estimate for the test MSE is the average of these $ n$test error estimates:
+    In this method a single observation $(x_1, y_1)$ is used for the validation set, and the remaining observations ${(x_2, y_2),...,(x_n, y_n)}$ make up the training set. We then fit the model on the training set and calculate the error on validation set. Repeating this approach iteratively with different set of predictors $n$ times and corresponding response yields $n$ squared errors, $MSE_1,..,MSE_n$. The LOOCV estimate for the test MSE is the average of these$ n$test error estimates:
 
 $$
 
@@ -1228,7 +1228,7 @@ $$
 
     *k-Fold Cross-Validation*
 
-    This approach involves randomly dividing the set of observations into $k $ groups, or folds, of approximately equal size. The first fold is treated as a validation set, and the method is fit on the remaining$k − 1 $ folds. The mean squared error,$ MSE_1 $, is then computed on the observations in the held-out fold. This procedure is repeated k times; each time, a different group of observations is treated as a validation set. This process results in$ k $estimates of the test error,$ MSE_1, MSE_2, . . . , MSE_k$. The k-fold CV estimate is computed by averaging these values.
+    This approach involves randomly dividing the set of observations into $k$ groups, or folds, of approximately equal size. The first fold is treated as a validation set, and the method is fit on the remaining $k − 1$ folds. The mean squared error, $MSE_1$, is then computed on the observations in the held-out fold. This procedure is repeated k times; each time, a different group of observations is treated as a validation set. This process results in$ k $estimates of the test error,$ MSE_1, MSE_2, . . . , MSE_k$. The k-fold CV estimate is computed by averaging these values.
 
 $$
 
@@ -1261,7 +1261,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Yes, It is a special case of k-fold CV in which $k $ is set to equal$n$ 
+Yes, It is a special case of k-fold CV in which $k$ is set to equal $n$ 
 
 </details>
 
@@ -1272,9 +1272,9 @@ Yes, It is a special case of k-fold CV in which $k $ is set to equal$n$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-As we increase k, we reduces bias in the estimation of the test error. LOOCV ($k=n $) will give unbiased estimation of the test error. An performing k-fold CV for $ k=5 $or$ k=10 $will lead to an intermediate level of bias since each training set contains approximately$\frac{(k-1)n}{k}$  observations which is fewer than in the LOOCV approach. 
+As we increase k, we reduces bias in the estimation of the test error. LOOCV ($k=n $) will give unbiased estimation of the test error. An performing k-fold CV for$ k=5 $or$ k=10 $will lead to an intermediate level of bias since each training set contains approximately$\frac{(k-1)n}{k}$  observations which is fewer than in the LOOCV approach. 
 
-On variance side, LOOCV has higher variance than does k-fold CV for $k<n $. When we perform LOOCV, we are in effect averaging the outputs of $ n $fitted models, each of which is trained on an almost identical set of observations; therefore, these outputs are highly (positively) correlated with each other. In contrast, when we perform k-fold CV with$ k < n$, we are averaging the outputs of k fitted models that are somewhat less correlated with each other, since the overlap between the training sets in each model is smaller. Since the mean of many highly correlated quantities has higher variance than does the mean of many quantities that are not as highly correlated, the test error estimate resulting from LOOCV tends to have higher variance than does the test error estimate resulting from k-fold CV.
+On variance side, LOOCV has higher variance than does k-fold CV for $k<n $. When we perform LOOCV, we are in effect averaging the outputs of$ n $fitted models, each of which is trained on an almost identical set of observations; therefore, these outputs are highly (positively) correlated with each other. In contrast, when we perform k-fold CV with$ k < n$, we are averaging the outputs of k fitted models that are somewhat less correlated with each other, since the overlap between the training sets in each model is smaller. Since the mean of many highly correlated quantities has higher variance than does the mean of many quantities that are not as highly correlated, the test error estimate resulting from LOOCV tends to have higher variance than does the test error estimate resulting from k-fold CV.
 
 </details>
 
@@ -1342,7 +1342,7 @@ x_1 = [1000, 1, 2], \hspace{1em} x_2 = [900, 1, 2], \hspace{1em} x_3 = [1050, -1
 
 $$
 
-then for $\gamma = 1 $,$\hspace{0.5em}$$K(x_1, x_2) = \exp(-10000) \ll K(x_1, x_3) = \exp(-2095)$, that is $ x_1 $ is supposedly more similar to $ x_3 $ than to $ x_2 $.
+then for $\gamma = 1 $,$\hspace{0.5em}$$K(x_1, x_2) = \exp(-10000) \ll K(x_1, x_3) = \exp(-2095)$, that is$x_1 $ is supposedly more similar to$x_3 $ than to$x_2 $.
 
 The relative distance between $x_1$  and:
 
@@ -1350,7 +1350,7 @@ $$
 
 x_2 \rightarrow [0.1, 0, 0], \hspace{0.5em} x_3 \rightarrow [0.05, -10, 10]
 
-$$So without scaling, we conclude that $ x_1$s more similar to $ x_3$than to $ x_2$, even though the relative differences per feature between $ x_1$and $ x_3$are much larger than those of $ x_1$and $ x_2$.
+$$So without scaling, we conclude that$ x_1 $s more similar to$ x_3 $than to$ x_2 $, even though the relative differences per feature between$ x_1 $and$ x_3 $are much larger than those of$ x_1 $and$ x_2$.
 
 If we don't scale all features to comparable ranges, the features with largest range will completely dominate the computation of kernel matrix.
 

@@ -36,7 +36,7 @@ Odds of Success = $\frac{q}{p}$
 
 Let's consider a simple numerical example to illustrate the relationship between probability and the odds of an event occurring:
 
-Suppose you are flipping a fair coin. The probability of getting heads ($p $) is $0.5 $, and the probability of getting tails ($ q $) is also$0.5$. To calculate the odds of success (getting heads):
+Suppose you are flipping a fair coin. The probability of getting heads ($p $) is$0.5 $, and the probability of getting tails ($ q $) is also$0.5$. To calculate the odds of success (getting heads):
 
 Odds of Success = $\frac{q}{p}$=$\frac{0.5}{0.5} = 1$ 
 
@@ -57,7 +57,7 @@ In this case, the odds of success are 1. This means that the chances of getting 
 
 1. An interaction is the product of two single predictor variables implying a non-additive effect.
 
-2. Suppose in your model you have two predictors $X $ and$Y$, a model having interaction term can be expressed as:
+2. Suppose in your model you have two predictors $X$ and $Y$, a model having interaction term can be expressed as:
 
 $$
 
@@ -138,7 +138,7 @@ Minimizing the negative log-likelihood also means maximizing the <b>probability/
 <details>
     <summary><b>Answer</b></summary>
 
-  1. odds of an event with probability <i>p</i> = $\frac{p}{1-p}$ For given $ p=0.1$ odds of the event =$\frac{0.1}{1-0.1} = \frac{1}{9} = 0.11 $2. log odds of the event =$\log(odds \quad of \quad the \quad event) = \log_e\frac{1}{9} = -2.20 $3. probability of the event in terms of the odds can be written as follows:$$\text{probability} = \frac{odds}{1+odds}$$
+  1. odds of an event with probability <i>p</i> = $\frac{p}{1-p}$ For given $p=0.1$ odds of the event =$\frac{0.1}{1-0.1} = \frac{1}{9} = 0.11 $2. log odds of the event =$\log(odds \quad of \quad the \quad event) = \log_e\frac{1}{9} = -2.20$3. probability of the event in terms of the odds can be written as follows:$$\text{probability} = \frac{odds}{1+odds}$$
 
 $$
 
@@ -259,7 +259,7 @@ of each other.
 
 <b>True</b>
 
-Logit expression :  $z(p) = \log\frac{p}{1-p}$ for any $ p ∈ [0, 1]$. 
+Logit expression :  $z(p) = \log\frac{p}{1-p}$ for any $p ∈ [0, 1]$. 
 
 A simple set of algebraic equations yields the inverse relation:
 
@@ -363,7 +363,7 @@ $$
 
 ---
 
-### Q: Remember that in logistic regression, the hypothesis function for some parameter vector $β$ and measurement vector $ x$ is defined as:$$ 
+### Q: Remember that in logistic regression, the hypothesis function for some parameter vector $β$ and measurement vector $x$ is defined as:$$ 
 
 h_\beta(x) = g(\beta^Tx) =  \frac{1}{1+e^{-\beta^Tx}}\\
 = P(y = 1|x;\beta)
@@ -419,7 +419,7 @@ $$
 
 $$
 
-3. We can write odds of getting $y=1 $ in terms of$P(y = 1)$ as follows:
+3. We can write odds of getting $y=1$ in terms of $P(y = 1)$ as follows:
 
 $$
 
@@ -517,7 +517,7 @@ $$
 
 $$
 
-5. Since we have $(0.81, 1.9)$ defines the measure of association with $ 95\\%$ confidence and it also contains $ 1$. $1$  depicts there no relationship between tumor eradication vs cancer type.
+5. Since we have $(0.81, 1.9)$ defines the measure of association with $95\\%$ confidence and it also contains $1$. $1$  depicts there no relationship between tumor eradication vs cancer type.
 
 </details>
 
@@ -536,7 +536,7 @@ $$
   </tr>
 </table>
 
-The following covariates are collected; $X_1 $ denotes time in milliseconds that a patient is irradiated with,$ X_2 $= holds the size of the tumour in centimeters, and$ Y $notates a binary response variable indicating if the tumour was eradicated. Assume that each response’ variable$ Y_i $is a Bernoulli random variable with success parameter$ p_i$, which holds:
+The following covariates are collected; $X_1$ denotes time in milliseconds that a patient is irradiated with, $X_2$= holds the size of the tumour in centimeters, and$ Y $notates a binary response variable indicating if the tumour was eradicated. Assume that each response’ variable$ Y_i $is a Bernoulli random variable with success parameter$ p_i$, which holds:
 
 $$
 
@@ -554,7 +554,7 @@ $$
 
 $$
 
-1. Estimate the probability that, given a patient who undergoes the treatment for $40 \ milliseconds $ and who is presented with a tumour sized$3.5\ cm$, the system eradicates the tumour.
+1. Estimate the probability that, given a patient who undergoes the treatment for $40 \ milliseconds$ and who is presented with a tumour sized $3.5\ cm$, the system eradicates the tumour.
 2. How many milliseconds the patient in part (a) would need to be radiated with to have exactly a $50\\%$  chance of eradicating the tumour?
 
 <details>
@@ -562,7 +562,7 @@ $$
 
 1. Given:
 
-  $$X_1 = 40mm \quad and \quad X_2 = 3.5cm$$$$\hat{\beta_{0}} = -6 \\ \hat{\beta_{1}}= 0.05 \\ \hat{\beta_{2}} = 1$$Also,$$p_i = \frac{e^{\beta_0+\beta_1x_1+\beta_2x_2}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2}}$$On imputing model's parameters and observations values:$$p_i = \frac{e^{-6+0.05\*40+1\*3.5}}{1+e^{-6+0.05\*40+1\*3.5}}$$$$p_i = \frac{e^{-0.5}}{1+e^{-0.5}} = 0.377$$2. For $50\\%$ chance of eradicating the tumor.$$p_i = 0.5$$From 1st part, we have expression of $ p_i $as follows:$$p_i = \frac{e^{\beta_0+\beta_1x_1+\beta_2x_2}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2}}$$We need to find $ x_1 $assuming$ x_2$same as 1st part.
+  $$X_1 = 40mm \quad and \quad X_2 = 3.5cm$$$$\hat{\beta_{0}} = -6 \\ \hat{\beta_{1}}= 0.05 \\ \hat{\beta_{2}} = 1$$Also,$$p_i = \frac{e^{\beta_0+\beta_1x_1+\beta_2x_2}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2}}$$On imputing model's parameters and observations values:$$p_i = \frac{e^{-6+0.05\*40+1\*3.5}}{1+e^{-6+0.05\*40+1\*3.5}}$$$$p_i = \frac{e^{-0.5}}{1+e^{-0.5}} = 0.377$$2. For $50\\%$ chance of eradicating the tumor.$$p_i = 0.5$$From 1st part, we have expression of $p_i$ as follows:$$p_i = \frac{e^{\beta_0+\beta_1x_1+\beta_2x_2}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2}}$$We need to find $x_1$ assuming $x_2$ same as 1st part.
 
 $$
 
@@ -604,7 +604,7 @@ $$
 To study factors that affect migraines, and in particular, patients who have at least four dental amalgams in their mouth, a data scientist collects data from $200K$  users with and without dental amalgams. The data scientist then fits a logistic regression model with an indicator of a second migraine within a time frame of one hour after the onset of the first migraine, as the binary response variable (e.g., migraine=1, no migraine=0). The data scientist believes that the frequency of migraines may be related to the release of toxic mercury fumes.
 There are two independent variables:
 
-  1. $X_1 = 1 $ if the patient has at least four amalgams;$ 0$  otherwise.
+  1. $X_1 = 1$ if the patient has at least four amalgams; $0$  otherwise.
   2. $X_2$  = coffee consumption (0 to 100 hot cups per month).
 
 The output from training a logistic regression classifier is as follows:
@@ -620,7 +620,7 @@ The output from training a logistic regression classifier is as follows:
   </tr>
 </table>
 
-  1. Using $X_1 $ and$ X_2$, express the odds of a patient having a migraine for a second time. 
+  1. Using $X_1$ and $X_2$, express the odds of a patient having a migraine for a second time. 
   2. Calculate the probability of a second migraine for a patient that has at least four amalgams and drank 100 cups per month?
   3. For users that have at least four amalgams, is high coffee intake associated with an increased probability of a second migraine?
   4. Is there statistical evidence that having more than four amalgams is directly associated with a reduction in the probability of a second migraine?
@@ -645,7 +645,7 @@ Pr(migraine=1 | X_1, X_2) = \frac{1}{1+e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2)}}
 
 $$
 
-On putting $X_1 = 1 $ and$X_2 = 100$, we get
+On putting $X_1 = 1$ and $X_2 = 100$, we get
 
   $$Pr(migraine=1 | X_1, X_2) = \frac{1}{1+e^{-(-6.36374 - 1.02411 + 11.904)}}$$
 
@@ -758,7 +758,7 @@ Pr(remission =1 | X_1 = 33) = \frac{1}{1 + 56.137} = 0.01750
 
 $$
 
-2. Let $X $ be the count of the gum bacteria for which probability of the improvement is$0.5$.
+2. Let $X$ be the count of the gum bacteria for which probability of the improvement is $0.5$.
 
 $$
 
@@ -780,7 +780,7 @@ X = 189.116
 
 $$
 
-So for $189 $ gum bacteria we will have estimated probability of improvement is$0.5$.
+So for $189$ gum bacteria we will have estimated probability of improvement is $0.5$.
 
 3. Unit increase in bacteria count will affect the odd ratio by 
 
@@ -798,7 +798,7 @@ $$
 
 $$
 
-Therefore, a $99\\%$ confidence interval for the true odds ratio $ exp(β)$  is given by:
+Therefore, a $99\\%$ confidence interval for the true odds ratio $exp(β)$  is given by:
 
 $$
 
@@ -898,13 +898,13 @@ H(p) ≡ −p\log{p}−(1−p)\log(1−p)
 
 $$
 
-1. At what $p $ does$H(p)$  attain its maximum value?
-2. What is the relationship between the entropy $H(p)$ and the logit function, given $ p$?
+1. At what $p$ does $H(p)$  attain its maximum value?
+2. What is the relationship between the entropy $H(p)$ and the logit function, given $p$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. To get the $argmax(H(p))$, we can differentiate the function wrt to $ p$and equate it to $0$.
+1. To get the $argmax(H(p))$, we can differentiate the function wrt to$ p $and equate it to$0$.
 
 Using derivative rule for logs and products:
 
@@ -940,7 +940,7 @@ p = 0.5
 
 $$
 
-So, $H(p)$ is maximum at $p = 0.5$2. If we look at derivative of entropy $ H(p)$wrt $ p$, we have 
+So, $H(p)$ is maximum at $p = 0.5$2. If we look at derivative of entropy$ H(p)$wrt$ p$, we have 
 
 $$
 
@@ -963,8 +963,8 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Linear Regression**: Predicts continuous target $y \in \mathbb{R}$ using unbounded linear combination $ w^T x + b$. Minimizes MSE loss.
-- **Logistic Regression**: Predicts categorical probability $P(Y=1|X) \in [0, 1]$ by passing $ w^T x + b$ through Sigmoid function $\sigma(z) = \frac{1}{1 + e^{-z}}$. Minimizes Log-Loss.
+- **Linear Regression**: Predicts continuous target $y \in \mathbb{R}$ using unbounded linear combination $w^T x + b$. Minimizes MSE loss.
+- **Logistic Regression**: Predicts categorical probability $P(Y=1|X) \in [0, 1]$ by passing $w^T x + b$ through Sigmoid function $\sigma(z) = \frac{1}{1 + e^{-z}}$. Minimizes Log-Loss.
 
 </details>
 
@@ -989,7 +989,7 @@ $$
 
 - **Odds**: Ratio of probability of success to failure: $\text{Odds} = \frac{p}{1-p} = e^{w^T x + b}$.
 - **Log-Odds (Logit)**: $\ln\left(\frac{p}{1-p}\right) = w^T x + b$.
-- **Odds Ratio (OR)**: Exponentiated weight $e^{w_i}$ represents the multiplicative change in odds for a 1-unit increase in feature $ x_i$.
+- **Odds Ratio (OR)**: Exponentiated weight $e^{w_i}$ represents the multiplicative change in odds for a 1-unit increase in feature $x_i$.
 
 </details>
 

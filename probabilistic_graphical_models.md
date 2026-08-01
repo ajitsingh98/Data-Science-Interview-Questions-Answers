@@ -111,7 +111,7 @@ In the case of discrete distributions, likelihood is a synonym for the probabili
 
 It represents the probability of observing the given data as a function of the parameters of the statistical model.
 
-For a random variable $X $ with probability density function (PDF)$f(X; \theta)$ or probability mass function (PMF) in the discrete case, where $\theta$ represents the parameters of the model, the likelihood of observing a specific dataset $\{x_1, x_2, \ldots, x_n\}$  is given by:
+For a random variable $X$ with probability density function (PDF)$f(X; \theta)$ or probability mass function (PMF) in the discrete case, where $\theta$ represents the parameters of the model, the likelihood of observing a specific dataset $\{x_1, x_2, \ldots, x_n\}$  is given by:
 
 $$
 
@@ -156,7 +156,7 @@ To analytically find the Maximum Likelihood Estimator (MLE) of a likelihood func
 
 *Define the likelihood function*
 
-Suppose we have a set of independent and identical distributed observations $X_1, X_2, ...,X_n $ from a probability distribution with a parameter$\theta$.
+Suppose we have a set of independent and identical distributed observations $X_1, X_2, ...,X_n$ from a probability distribution with a parameter $\theta$.
 
 $$
 
@@ -244,7 +244,7 @@ $$
 
 ### Q: What is likelihood function of the independent identically distributed (i.i.d) random variables:
 
-$X_1,··· ,X_n $ where$X_i ∼ binomial(n, p)$, $∀i ∈ [1,n]$, and where p is the parameter of interest?
+$X_1,··· ,X_n$ where $X_i ∼ binomial(n, p)$, $∀i ∈ [1,n]$, and where p is the parameter of interest?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -339,7 +339,7 @@ $$
 
 *Likelihood Function:*
 
-For $n $ i.i.d. observations$  X_1, X_2, \ldots, X_n$, the likelihood function is the product of the individual densities:
+For $n$ i.i.d. observations $X_1, X_2, \ldots, X_n$, the likelihood function is the product of the individual densities:
 
 $$
 
@@ -420,7 +420,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can use KL Divergence formula which is a measure of how one probability distribution $Q $ diverges from a second, expected probability distribution$P$.
+We can use KL Divergence formula which is a measure of how one probability distribution $Q$ diverges from a second, expected probability distribution $P$.
 
 $$
 
@@ -527,7 +527,7 @@ The prior $p(\theta)$ is conjugate to the posterior $p(\theta | x)$  if both are
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **MAP (Maximum A Posteriori)**: Finds the most likely assignment for a subset of query variables $Y $ given evidence$E=e $, marginalizing over unobserved variables $ Z$:
+- **MAP (Maximum A Posteriori)**: Finds the most likely assignment for a subset of query variables $Y$ given evidence $E=e$, marginalizing over unobserved variables$ Z$:
   $$y^* = \arg\max_y \sum_z P(Y=y, Z=z \mid E=e)$$- **MPE (Most Probable Explanation)**: Special case of MAP where all unobserved variables are assigned a joint instantiation (no marginalization):
 
 $$
@@ -592,7 +592,7 @@ The Naive Bayes algorithm is generative. It models $P(x|y)$  and makes explicit 
 
 *Naive Bayes Assumption*
 
-It assumes that each feature $x $ is independent of one another give$y$ 
+It assumes that each feature $x$ is independent of one another give $y$ 
 
 *Training Phase*
 
@@ -689,8 +689,8 @@ Naive Bayes does not directly handle missing data, but several practical strateg
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Generative vs Discriminative**: Naive Bayes is a generative model estimating joint distribution $P(X, Y) = P(X|Y)P(Y)$, whereas Logistic Regression is discriminative modeling conditional distribution $ P(Y|X)$.
-- **Feature Independence Assumption**: Naive Bayes assumes features $X_i $ are conditionally independent given class$Y $, allowing linear scaling $ O(d)$  during training.
+- **Generative vs Discriminative**: Naive Bayes is a generative model estimating joint distribution $P(X, Y) = P(X|Y)P(Y)$, whereas Logistic Regression is discriminative modeling conditional distribution$ P(Y|X)$.
+- **Feature Independence Assumption**: Naive Bayes assumes features $X_i$ are conditionally independent given class $Y$, allowing linear scaling$ O(d)$  during training.
 
 </details>
 
@@ -828,9 +828,9 @@ $(0, 1)$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Conditional Maximum Likelihood Estimation (Conditional MLE) refers to MLE applied within a conditional model, where the parameters only influence the conditional probability $P(Y|X)$ and not the marginal probability $ P(X)$. In contrast, standard MLE applies when the parameters affect both $ P(Y|X)$and $ P(X)$.
+Conditional Maximum Likelihood Estimation (Conditional MLE) refers to MLE applied within a conditional model, where the parameters only influence the conditional probability $P(Y|X)$ and not the marginal probability $P(X)$. In contrast, standard MLE applies when the parameters affect both$ P(Y|X)$and$ P(X)$.
 
-Logistic regression is an example of a conditional model because the parameters $\theta $ only control$P(Y|X)$, not $ P(X)$. As a result, the MLE used in logistic regression is considered a Conditional MLE.
+Logistic regression is an example of a conditional model because the parameters $\theta$ only control $P(Y|X)$, not$ P(X)$. As a result, the MLE used in logistic regression is considered a Conditional MLE.
 
 </details>
 
@@ -867,7 +867,7 @@ Yes, logistic regression can be extended to handle multiclass classification pro
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-For a set of scores/logits $\mathbf{z} = [z_1, z_2, \ldots, z_K]$, the probability of class $ j$is given by:
+For a set of scores/logits $\mathbf{z} = [z_1, z_2, \ldots, z_K]$, the probability of class$ j$is given by:
 
 $$
 
@@ -897,7 +897,7 @@ Computationally more intensive compared to binary logistic regression, especiall
 
 *Logistic Regression Model*
 
-Logistic regression models the probability that a binary outcome $y $ is 1 given an input vector$\mathbf{x}$. The model is defined as:
+Logistic regression models the probability that a binary outcome $y$ is 1 given an input vector $\mathbf{x}$. The model is defined as:
 
 $$
 
@@ -907,7 +907,7 @@ $$
 
 *Likelihood Function*
 
-For a dataset with $n $ observations, the likelihood of the observed data given the parameters$\mathbf{w}$ and $ b$ is:$$L(\mathbf{w}, b) = \prod_{i=1}^{n} P(y_i | \mathbf{x}_i)$$Since logistic regression deals with binary outcomes, this can be rewritten as:$$L(\mathbf{w}, b) = \prod_{i=1}^{n} \left(\frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{y_i} \left(\frac{e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{1 - y_i}$$*Log-Likelihood Function*
+For a dataset with $n$ observations, the likelihood of the observed data given the parameters $\mathbf{w}$ and $b$ is:$$L(\mathbf{w}, b) = \prod_{i=1}^{n} P(y_i | \mathbf{x}_i)$$Since logistic regression deals with binary outcomes, this can be rewritten as:$$L(\mathbf{w}, b) = \prod_{i=1}^{n} \left(\frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{y_i} \left(\frac{e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{1 - y_i}$$*Log-Likelihood Function*
 
 $$
 
@@ -917,7 +917,7 @@ $$
 
 *Maximizing the Log-Likelihood*
 
-MLE estimates the parameters $w $ and$b$  by finding values that maximize the log-likelihood function. This is typically done using numerical optimization techniques like gradient descent or Newton-Raphson methods.
+MLE estimates the parameters $w$ and $b$  by finding values that maximize the log-likelihood function. This is typically done using numerical optimization techniques like gradient descent or Newton-Raphson methods.
 
 MLE is Preferred Over Least Squares in Logistic Regression?
 

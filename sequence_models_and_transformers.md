@@ -39,7 +39,7 @@ This allows parameter sharing across time steps, enabling the network to process
 
 1. **Vanishing and Exploding Gradients**: During Backpropagation Through Time (BPTT), gradients multiplied repeatedly across many time steps exponentially decay to zero or explode to infinity.
 2. **Short-Term Memory**: Due to vanishing gradients, vanilla RNNs struggle to retain context over long-range dependencies (> 10-20 steps).
-3. **Sequential Computation**: Processing step $t $ requires step$t-1$, preventing parallelization across time during training.
+3. **Sequential Computation**: Processing step $t$ requires step $t-1$, preventing parallelization across time during training.
 
 </details>
 
@@ -71,7 +71,7 @@ C_t = f_t * C_{t-1} + i_t * \tilde{C}_t
 
 $$
 
-4. **Output Gate ($o_t $)**: Controls what part of the cell state is emitted as the hidden state $ h_t$.
+4. **Output Gate ($o_t $)**: Controls what part of the cell state is emitted as the hidden state$ h_t$.
    $$o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$$
 
 $$
@@ -95,7 +95,7 @@ Because the cell state update uses additive gradients ($\frac{\partial C_t}{\par
 | :--- | :--- | :--- |
 | **Gates** | 3 (Forget, Input, Output) | 2 (Reset, Update) |
 | **States** | Separate Cell State ($C_t $) & Hidden State ($ h_t $) | Single Hidden State ($ h_t$) |
-| **Parameters** | More ($4 \times $ weight matrices) | Fewer ($3 \times$  weight matrices) |
+| **Parameters** | More ($4 \times$ weight matrices) | Fewer ($3 \times$  weight matrices) |
 | **Training Speed** | Slower | Faster |
 | **Data Efficiency** | Performs better on very large datasets | Often matches LSTM performance on smaller datasets |
 
@@ -111,8 +111,8 @@ Because the cell state update uses additive gradients ($\frac{\partial C_t}{\par
 <summary><b>💡 Show Answer</b></summary>
 
 The Encoder-Decoder architecture consists of:
-1. **Encoder**: An RNN/LSTM that reads the input sequence $X = (x_1, \dots, x_T)$ step-by-step and compresses it into a single fixed-length context vector $ c = h_T$.
-2. **Decoder**: An RNN/LSTM initialized with context vector $c $ that generates the target sequence$Y = (y_1, \dots, y_{T'})$  auto-regressively.
+1. **Encoder**: An RNN/LSTM that reads the input sequence $X = (x_1, \dots, x_T)$ step-by-step and compresses it into a single fixed-length context vector $c = h_T$.
+2. **Decoder**: An RNN/LSTM initialized with context vector $c$ that generates the target sequence $Y = (y_1, \dots, y_{T'})$  auto-regressively.
 
 **Bottleneck**: Compressing a long input sentence (e.g., 50+ words) into a single fixed-size vector $c$  creates an information bottleneck, severely degrading performance for long sentences.
 
@@ -125,9 +125,9 @@ The Encoder-Decoder architecture consists of:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Instead of relying on a single static context vector $c $, Attention allows the decoder to dynamically dynamically look back at all encoder hidden states $(h_1, \dots, h_T)$ at each decoding step $ i$:
+Instead of relying on a single static context vector $c $, Attention allows the decoder to dynamically dynamically look back at all encoder hidden states$(h_1, \dots, h_T)$ at each decoding step $i$:
 
-1. Compute alignment scores $e_{ij}$ between decoder state $ s_{i-1}$ and encoder state $ h_j$:
+1. Compute alignment scores $e_{ij}$ between decoder state $s_{i-1}$ and encoder state $h_j$:
 
 $$
 
@@ -171,7 +171,7 @@ $$
 $$
 
 **Why scale by $\sqrt{d_k}$?**
-For large dimensionality $d_k $, dot products $ Q K^T $grow large in magnitude. Large values push the softmax function into regions with extremely small gradients (vanishing gradient problem during backpropagation). Dividing by$\sqrt{d_k}$  normalizes the variance to 1.
+For large dimensionality $d_k $, dot products$ Q K^T $grow large in magnitude. Large values push the softmax function into regions with extremely small gradients (vanishing gradient problem during backpropagation). Dividing by$\sqrt{d_k}$  normalizes the variance to 1.
 
 </details>
 

@@ -67,7 +67,7 @@ $$
 
 Where weights are denoted by wj and biases are denoted by b. Answer the following questions:
 
-1. **True or False:** If such a perceptron is trained using a labelled corpus, for each participating neuron the values $w_j $ and$b$  are learned automatically.
+1. **True or False:** If such a perceptron is trained using a labelled corpus, for each participating neuron the values $w_j$ and $b$  are learned automatically.
 
 2. **True or False:** If we instead use a new perceptron (sigmoidal) defined as follows:
 
@@ -184,7 +184,7 @@ $$
 
 ---
 
-### Q: The following questions refer to the MLP depicted in (9.1).The inputs to the MLP are $x1 = 0.9 $ and$ x2 = 0.7 $ respectively, and the weights$ w1 = −0.3 $ and$ w2 = 0.15 $ respectively. There is a single hidden node,$ H1 $. The bias term,$ B1 $equals$0.001$.
+### Q: The following questions refer to the MLP depicted in (9.1).The inputs to the MLP are $x1 = 0.9$ and $x2 = 0.7$ respectively, and the weights $w1 = −0.3$ and $w2 = 0.15$ respectively. There is a single hidden node, $H1$. The bias term,$ B1 $equals$0.001$.
 
 <table align='center'>
   <tr>
@@ -204,7 +204,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `The following questions refer to the MLP depicted in (9.1).The inputs to the MLP are $x1 = 0.9 $ and$ x2 = 0.7 $ respectively, and the weights$ w1 = −0.3 $ and$ w2 = 0.15 $ respectively. There is a single hidden node,$ H1 $. The bias term,$ B1 $equals$0.001$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `The following questions refer to the MLP depicted in (9.1).The inputs to the MLP are $x1 = 0.9$ and $x2 = 0.7$ respectively, and the weights $w1 = −0.3$ and $w2 = 0.15$ respectively. There is a single hidden node, $H1$. The bias term,$ B1 $equals$0.001$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -283,7 +283,7 @@ $$
 
 tion functions in a MLP. Which ones can never be back-propagated and why?
 
-1. $f(x) = |x|$2. $ f(x) = f(x)$3.$  f(x)= \begin{cases}
+1. $f(x) = |x|$2.$ f(x) = f(x)$3.$  f(x)= \begin{cases}
            0, & \text{if } x = 0, \\
            x \sin\left(\frac{1}{x}\right), & \text{if } x \neq 0.
        \end{cases}$4.$  f(x)= \begin{cases}
@@ -315,7 +315,7 @@ tion functions in a MLP. Which ones can never be back-propagated and why?
   </tr>
 </table>
 
-The ReLU non-linear activation function $g(z) = max{0,z}$ is applied to the hidden layers $ H1...H3$ and the bias term equals $ 0.001$.
+The ReLU non-linear activation function $g(z) = max{0,z}$ is applied to the hidden layers $H1...H3$ and the bias term equals $0.001$.
 At a certain point in time it has the following values $8.17$  all of which are belong to the type `torch.F loatTensor`:
 
 ```python
@@ -405,7 +405,7 @@ classified samples divided by the total number of incorrectly classified samples
 
 ---
 
-### Q: The following questions refer to the SLP depicted in (8.18). The weights in the SLP are $w1 = 1 $ and$ w2 = 1 $ respectively. There is a single hidden node, H1. The bias term, B1 equals$−2.5$.
+### Q: The following questions refer to the SLP depicted in (8.18). The weights in the SLP are $w1 = 1$ and $w2 = 1$ respectively. There is a single hidden node, H1. The bias term, B1 equals $−2.5$.
 
 <table align='center'>
   <tr>
@@ -429,7 +429,7 @@ What is the value resulting from the application the sum operator?
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `The following questions refer to the SLP depicted in (8.18). The weights in the SLP are $w1 = 1 $ and$ w2 = 1 $ respectively. There is a single hidden node, H1. The bias term, B1 equals$−2.5$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `The following questions refer to the SLP depicted in (8.18). The weights in the SLP are $w1 = 1$ and $w2 = 1$ respectively. There is a single hidden node, H1. The bias term, B1 equals $−2.5$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -777,12 +777,12 @@ $$
 
 ### NNLayers, Topologists and Blocks
 
-### Q: Given an input of size of $n×n $, filters of size $ f×f $and a stride of$ s $ with padding of$ p$, what is the output dimension?
+### Q: Given an input of size of $n×n $, filters of size$ f×f $and a stride of$ s $with padding of$ p$, what is the output dimension?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given an input of size of $n×n $, filters of size $ f×f $and a stride of$ s $ with padding of$ p$, what is the output dimension?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given an input of size of $n×n $, filters of size$ f×f $and a stride of$ s $with padding of$ p$, what is the output dimension?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -2083,7 +2083,7 @@ $$
 $$
 
 Where
-- $\alpha $ is hyperparameter range$[0, \infty]$-$ J(\theta; X, y)$  is standard objective function
+- $\alpha$ is hyperparameter range $[0, \infty]$-$ J(\theta; X, y)$  is standard objective function
 
 </details>
 
@@ -2094,7 +2094,7 @@ Where
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$\alpha $ weighs the relative contribution of the norm penalty term$\Omega $, relative to the standard objective function $ J $. Setting$\alpha $ to $0$ results in no regularization. Larger values of $\alpha$  corresponds to more regularization.
+$\alpha$ weighs the relative contribution of the norm penalty term $\Omega$, relative to the standard objective function$ J $. Setting$\alpha$ to $0$ results in no regularization. Larger values of $\alpha$  corresponds to more regularization.
 
 </details>
 
@@ -2116,18 +2116,18 @@ The biases typically require less data than the weights to fit accurately. While
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can use different $\alpha $ for each layer but it can be expensive to search for correct value of multiple hyperparameters. It is reasonable to use the same weight decay($\alpha$) for all the layers just to reduce the size of search space.
+We can use different $\alpha$ for each layer but it can be expensive to search for correct value of multiple hyperparameters. It is reasonable to use the same weight decay($\alpha$) for all the layers just to reduce the size of search space.
 
 </details>
 
 ---
 
-### Q: Write the expression of objective function $J $ in case of$L^2$  regularization?
+### Q: Write the expression of objective function $J$ in case of $L^2$  regularization?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$L^2 $ regularization technique drives the weight closer to origin by adding a regularization term$\Omega(\theta) = \frac{1}{2}||w||^{2}_{2}$  It has following total objective function:
+$L^2$ regularization technique drives the weight closer to origin by adding a regularization term $\Omega(\theta) = \frac{1}{2}||w||^{2}_{2}$  It has following total objective function:
 
 $$
 
@@ -2212,7 +2212,7 @@ The diagonal entries of the matrix \((X^{T}X + \alpha I)^{-1}\) represent the va
 
 ---
 
-### Q: Write the expression for $L^1 $ regularization on the model parameters$ w$?
+### Q: Write the expression for $L^1$ regularization on the model parameters $w$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2242,7 +2242,7 @@ $$
 
 $$
 
-Where sign($w $) is simply the sign of $ w$  applied element wise.
+Where sign($w $) is simply the sign of$ w$  applied element wise.
 
 Not that here the gradient no longer scales linearly with each $w_i $, instead it is a constant factor with the sign equal to sign($ w_i$).
 
@@ -2293,7 +2293,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$L^2 $ regularization is MAP bayesian inference with a Gaussian Prior on weights. For$ L^1 $ regularization the penalty term is equivalent to MAP bayesian inference with isotropic laplace distribution prior over weights$ w$.
+$L^2$ regularization is MAP bayesian inference with a Gaussian Prior on weights. For $L^1$ regularization the penalty term is equivalent to MAP bayesian inference with isotropic laplace distribution prior over weights $w$.
 
 </details>
 
@@ -2378,7 +2378,7 @@ Whenever a classification neural network suffers from overfitting and/or overcon
 
 ---
 
-### Q: How do we choose $\alpha $ or$\eta$?
+### Q: How do we choose $\alpha$ or $\eta$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -2510,7 +2510,7 @@ Early stopping is a form of regularization used to avoid overfitting when traini
 Bagging(short for bootstrap aggregating) employs a general strategy in machine learning called model averaging.
 The reason that model averaging works is that different models will usually not make all the same errors on the test set. 
 
-Consider for example a set of $k $ regression models. Suppose that each model makes an error$\eta_i $ on each example, with errors drawn from a zero-mean multivariate normal distribution with variances$\mathbf{E}[\eta_{i}^2] = v $ and covariances$\mathbf{E}[\eta_{i} \eta_{j}] = c $. Then the error made by the average prediction of all the ensemble models is $\frac{1}{k}\sum_{i} \eta_{i}$  The expected squared error of the ensemble predictor is
+Consider for example a set of $k$ regression models. Suppose that each model makes an error $\eta_i$ on each example, with errors drawn from a zero-mean multivariate normal distribution with variances $\mathbf{E}[\eta_{i}^2] = v$ and covariances $\mathbf{E}[\eta_{i} \eta_{j}] = c$. Then the error made by the average prediction of all the ensemble models is $\frac{1}{k}\sum_{i} \eta_{i}$  The expected squared error of the ensemble predictor is
 
 $$
 
@@ -2524,7 +2524,7 @@ $$
 
 $$
 
-In the case where the errors are perfectly correlated and $c=v $, the mean squared error reduces to $ v $, so the model averaging does not help at all. In case where we have perfectly uncorrelated errors and$ c=0 $, the expected squared error of the ensemble is only$\frac{1}{k}v$. This means that the expected squared error of the ensemble decreases linearly with the ensemble size. 
+In the case where the errors are perfectly correlated and $c=v $, the mean squared error reduces to$ v $, so the model averaging does not help at all. In case where we have perfectly uncorrelated errors and$ c=0 $, the expected squared error of the ensemble is only$\frac{1}{k}v$. This means that the expected squared error of the ensemble decreases linearly with the ensemble size. 
 
 In other words, on average, the model will perform at least as well as any of its members, and if memebers make independent errors, the ensemble will perform significantly better than its member.
 
@@ -2640,7 +2640,7 @@ For example:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-When dropout is applied during training, each unit in a layer is kept with a probability $p $ i.e keep probability. The units that are kept are expected to compensate not only for their own output but also for the absent units. As a result during training, the output from active neurons are scaled up by a factor of$\frac{1}{p}$  so that expected sum of the outputs remains constant whether dropout is used or not.
+When dropout is applied during training, each unit in a layer is kept with a probability $p$ i.e keep probability. The units that are kept are expected to compensate not only for their own output but also for the absent units. As a result during training, the output from active neurons are scaled up by a factor of $\frac{1}{p}$  so that expected sum of the outputs remains constant whether dropout is used or not.
 
 However, at test time, all neurons are active (no dropout is applied). Without adjustment, this would result in a larger output from the network than what it was trained to produce, potentially leading to poor performance during inference. The weight scaling inference rule addresses this discrepancy.
 
