@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [SQL operations](#)

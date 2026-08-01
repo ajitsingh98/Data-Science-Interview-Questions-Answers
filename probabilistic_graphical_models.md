@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [Maximum Likelihood Estimation(MLE)](#maximum-likelihood-estimation)
@@ -112,10 +111,12 @@ In the case of discrete distributions, likelihood is a synonym for the probabili
 
 It represents the probability of observing the given data as a function of the parameters of the statistical model.
 
-For a random variable $X$with probability density function (PDF)$f(X; \theta)$or probability mass function (PMF) in the discrete case, where$\theta$represents the parameters of the model, the likelihood of observing a specific dataset$\{x_1, x_2, \ldots, x_n\}$  is given by:
+For a random variable $X $ with probability density function (PDF)$f(X; \theta)$ or probability mass function (PMF) in the discrete case, where $\theta$ represents the parameters of the model, the likelihood of observing a specific dataset $\{x_1, x_2, \ldots, x_n\}$  is given by:
 
 $$
+
 L(\theta; x_1, x_2, \ldots, x_n) = \prod_{i=1}^{n} f(x_i; \theta)
+
 $$
 
 Since we assumed that each data point is independent, the likelihood of all of our data is the product of the likelihood of each data point.
@@ -155,24 +156,32 @@ To analytically find the Maximum Likelihood Estimator (MLE) of a likelihood func
 
 *Define the likelihood function*
 
-Suppose we have a set of independent and identical distributed observations $X_1, X_2, ...,X_n$from a probability distribution with a parameter$\theta$.
+Suppose we have a set of independent and identical distributed observations $X_1, X_2, ...,X_n $ from a probability distribution with a parameter$\theta$.
 
 $$
+
 L(\theta) = \prod_{i=1}^{n} f(X_i \mid \theta)
+
 $$
-- Here $f(X_i \mid \theta)$is the pdf or pmf of the data given the parameter$\theta$ 
+
+- Here $f(X_i \mid \theta)$ is the pdf or pmf of the data given the parameter $\theta$ 
 
 *Take the log likelihood*
 
 To simplify the $L(\theta)$, take natural log on boh side:
 
 $$
+
 l(\theta) = log(L(\theta)) = \sum_{i=1}^{n}\log f(X_i \mid \theta)
+
 $$
+
 *Take the derivative wrt $\theta$*
 
 $$
+
 \frac{d\ell(\theta)}{d\theta}
+
 $$
 
 *Set the Derivative Equal to Zero*
@@ -180,8 +189,11 @@ $$
 To find the critical points set:
 
 $$
+
 \frac{d\ell(\theta)}{d\theta} = 0
+
 $$
+
 *Solve $\theta$*
 
 Find the values of $\theta$  that maximize likelihood function. These values are potential MLEs, representing the parameter estimates that maximize the likelihood of observing the given data.
@@ -189,7 +201,9 @@ Find the values of $\theta$  that maximize likelihood function. These values are
 *Verify the Maximum (Second Derivative Test)*
 
 $$
+
 \frac{d^2\ell(\theta)}{d\theta^2}
+
 $$
 
 - If the second derivative is negative at the critical point, it confirms a local maximum.
@@ -217,9 +231,12 @@ Score function : The score function measures the sensitivity of the log-likeliho
 The log-likelihood function is derived by taking the natural logarithm of the likelihood function.
 
 $$
+
 l(\theta) = \log{L(\theta)}
+
 $$
-- Likelihood: $L(\theta)$- Log-Likelihood:$\ell(\theta)$ 
+
+- Likelihood: $L(\theta)$- Log-Likelihood: $\ell(\theta)$ 
 
 </details>
 
@@ -227,7 +244,7 @@ $$
 
 ### Q: What is likelihood function of the independent identically distributed (i.i.d) random variables:
 
-$X_1,··· ,X_n$where$X_i ∼ binomial(n, p)$,$∀i ∈ [1,n]$, and where p is the parameter of interest?
+$X_1,··· ,X_n $ where$X_i ∼ binomial(n, p)$, $∀i ∈ [1,n]$, and where p is the parameter of interest?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -237,12 +254,17 @@ Likelihood function in case of discrete random variables is jus the PMF.
 For Binomial distribution:
 
 $$
+
 P(X_i = x_i) = \binom{n}{x_i} p^{x_i} (1 - p)^{n - x_i} \quad \text{PMF}
+
 $$
+
 Since the observations are i.i.d., the likelihood function is the product of the individual PMFs:
 
 $$
+
 L(p) = \prod_{i=1}^{n} P(X_i = x_i) = \prod_{i=1}^{n} \binom{n}{x_i} p^{x_i} (1 - p)^{n - x_i}.
+
 $$
 
 </details>
@@ -257,31 +279,45 @@ $$
 Likelihood function in case of binomial distribution:
 
 $$
+
 L(p) = \prod_{i=1}^{n} P(X_i = x_i) = \prod_{i=1}^{n} \binom{n}{x_i} p^{x_i} (1 - p)^{n - x_i}.
+
 $$
+
 Log likelihood:
 
 $$
+
 LL(p) = \log{\binom{n}{x}} + x \log{p} + (n-x) \log{1-p} \quad text{(Log Likelihood)}
+
 $$
 
 On taking derivative wrt $p$ 
 
 $$
+
 \frac{dL(p)}{dp} = 0 + \frac{x}{p} - \frac{(n-x)}{1-p}
+
 $$
 
 $$
+
 \frac{dL(p)}{dp} = \frac{x-pn}{p(1-p)}
+
 $$
+
 For maximizing the likelihood:
 
 $$
+
 \frac{dL(p)}{dp} = 0
+
 $$
 
 $$
+
 p = \frac{x}{n}
+
 $$
 
 </details>
@@ -296,20 +332,27 @@ $$
 *PDF of exponential distribution:*
 
 $$
+
 f(x \mid \lambda) = \lambda e^{-\lambda x}, \quad x \geq 0.
+
 $$
 
 *Likelihood Function:*
 
-For $n$i.i.d. observations$  X_1, X_2, \ldots, X_n$, the likelihood function is the product of the individual densities:
+For $n $ i.i.d. observations$  X_1, X_2, \ldots, X_n$, the likelihood function is the product of the individual densities:
 
 $$
+
 L(\lambda) = \prod_{i=1}^{n} f(X_i \mid \lambda) = \prod_{i=1}^{n} \lambda e^{-\lambda X_i}.
+
 $$
+
 Simplifying this expression:
 
 $$
+
 L(\lambda) = \lambda^n e^{-\lambda \sum_{i=1}^{n} X_i}.
+
 $$
 
 *Log-Likelihood Function:*
@@ -317,20 +360,27 @@ $$
 To make the maximization easier, take the natural logarithm of the likelihood function to get the log-likelihood function:
 
 $$
+
 \ell(\lambda) = \log L(\lambda) = \log(\lambda^n) + \log\left(e^{-\lambda \sum_{i=1}^{n} X_i}\right).
+
 $$
+
 Simplify:
 
 $$
+
 \ell(\lambda) = n \log(\lambda) - \lambda \sum_{i=1}^{n} X_i.
+
 $$
 
 *Differentiate the Log-Likelihood Function:*
 
-Differentiate $\ell(\lambda)$with respect to$\lambda$:
+Differentiate $\ell(\lambda)$ with respect to $\lambda$:
 
 $$
+
 \frac{d\ell(\lambda)}{d\lambda} = \frac{n}{\lambda} - \sum_{i=1}^{n} X_i.
+
 $$
 
 *Set the Derivative Equal to Zero:*
@@ -338,19 +388,27 @@ $$
 Set the first derivative to zero to find the critical points:
 
 $$
+
 \frac{n}{\lambda} - \sum_{i=1}^{n} X_i = 0.
+
 $$
+
 *Solve for $\lambda$:*
 
 Rearrange the equation to solve for $\lambda$:
 
 $$
+
 \frac{n}{\lambda} = \sum_{i=1}^{n} X_i.
+
 $$
+
 Therefore, the MLE of $\lambda$  is:
 
 $$
+
 \hat{\lambda} = \frac{n}{\sum_{i=1}^{n} X_i} = \frac{1}{\bar{X}},
+
 $$
 
 </details>
@@ -362,14 +420,18 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can use KL Divergence formula which is a measure of how one probability distribution $Q$diverges from a second, expected probability distribution$P$.
+We can use KL Divergence formula which is a measure of how one probability distribution $Q $ diverges from a second, expected probability distribution$P$.
 
 $$
+
 D_{KL}(P \| Q) = \sum_{x} P(x) \log \frac{P(x)}{Q(x)} \quad \text{(for discrete distributions)}
+
 $$
 
 $$
+
 D_{KL}(P \| Q) = \int P(x) \log \frac{P(x)}{Q(x)} \, dx \quad \text{(for continuous distributions)}
+
 $$
 
 </details>
@@ -386,12 +448,17 @@ $$
 MAP estimation finds the parameter values that maximize the posterior distribution of the parameters given the data, inducing prior beliefs about the parameters.
 
 $$
+
 \hat{\theta}_{\text{MAP}} = \arg\max_{\theta} P(\theta | X) = \arg\max_{\theta} \frac{P(X | \theta) P(\theta)}{P(X)}.
-$$
-Since $P(X)$is constant with respect to$\theta$, it simplifies to:
 
 $$
+
+Since $P(X)$ is constant with respect to $\theta$, it simplifies to:
+
+$$
+
 \hat{\theta}_{\text{MAP}} = \arg\max_{\theta} P(X | \theta) P(\theta)
+
 $$
 
 - MAP induces priori knowledge about the parameters through a prior distribution where as MLE does not consider any prior information.
@@ -439,9 +506,12 @@ MAP and MLE will yield similar parameter estimates in following situations:
 A conjugate prior is a probability distribution that, when combined with the likelihood and normalized, results in a posterior distribution that belongs to the same family as the prior.
 
 $$
+
 p(\theta | x) = \frac{p(x|\theta)p(\theta)}{p(x)}
+
 $$
-The prior $p(\theta)$is conjugate to the posterior$p(\theta | x)$  if both are in same family of distributions.
+
+The prior $p(\theta)$ is conjugate to the posterior $p(\theta | x)$  if both are in same family of distributions.
 
 *Non-Informative Prior*
 
@@ -457,11 +527,13 @@ The prior $p(\theta)$is conjugate to the posterior$p(\theta | x)$  if both are i
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **MAP (Maximum A Posteriori)**: Finds the most likely assignment for a subset of query variables $Y$given evidence$E=e$, marginalizing over unobserved variables $Z$:
+- **MAP (Maximum A Posteriori)**: Finds the most likely assignment for a subset of query variables $Y $ given evidence$E=e $, marginalizing over unobserved variables $ Z$:
   $$y^* = \arg\max_y \sum_z P(Y=y, Z=z \mid E=e)$$- **MPE (Most Probable Explanation)**: Special case of MAP where all unobserved variables are assigned a joint instantiation (no marginalization):
 
 $$
+
 (y^*, z^*) = \arg\max_{y, z} P(Y=y, Z=z \mid E=e)
+
 $$
 
 </details>
@@ -476,6 +548,7 @@ $$
 1. Let’s try to construct a Naive Bayes classifier to classify whether a tweet has a positive or negative sentiment. We have four training samples:
 
 $$
+
 \begin{bmatrix} 
     \text{Tweet} &  \text{Label} \\\\
     \text{This makes me so upset} & \text{Negative}\\\\
@@ -483,6 +556,7 @@ $$
     \text{Look at this happy hamster} & \text{Positive} \\\\
     \text{No hamsters allowed in my house} & \text{Negative}
 \end{bmatrix}
+
 $$
 
 According to your classifier, what's sentiment of the sentence The hamster is upset with the puppy?
@@ -518,15 +592,18 @@ The Naive Bayes algorithm is generative. It models $P(x|y)$  and makes explicit 
 
 *Naive Bayes Assumption*
 
-It assumes that each feature $x$is independent of one another give$y$ 
+It assumes that each feature $x $ is independent of one another give$y$ 
 
 *Training Phase*
 
 In this phase we do parameter estimations. In core Naive Bayes uses Bayes theorem.
 
 $$
+
 P(\text{Class} | \text{Features}) = \frac{P(\text{Features} | \text{Class}) \cdot P(\text{Class})}{P(\text{Features})}
+
 $$
+
 -$P(\text{Features} | \text{Class})$: Likelihood of the features given the class.
 - $P(\text{Class})$: Prior probability of the class.
 - $P(\text{Features})$: Evidence, the overall probability of the features.
@@ -534,7 +611,9 @@ $$
 Using Naive Bayes Assumption
 
 $$
+
 P(\text{Features} | \text{Class}) = P(\text{Feature}_1 | \text{Class}) \times P(\text{Feature}_2 | \text{Class}) \times \ldots \times P(\text{Feature}_n | \text{Class})
+
 $$
 
 Here we can calculate all the terms of Bayes theorem:
@@ -610,8 +689,8 @@ Naive Bayes does not directly handle missing data, but several practical strateg
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Generative vs Discriminative**: Naive Bayes is a generative model estimating joint distribution $P(X, Y) = P(X|Y)P(Y)$, whereas Logistic Regression is discriminative modeling conditional distribution$P(Y|X)$.
-- **Feature Independence Assumption**: Naive Bayes assumes features $X_i$are conditionally independent given class$Y$, allowing linear scaling $O(d)$  during training.
+- **Generative vs Discriminative**: Naive Bayes is a generative model estimating joint distribution $P(X, Y) = P(X|Y)P(Y)$, whereas Logistic Regression is discriminative modeling conditional distribution $ P(Y|X)$.
+- **Feature Independence Assumption**: Naive Bayes assumes features $X_i $ are conditionally independent given class$Y $, allowing linear scaling $ O(d)$  during training.
 
 </details>
 
@@ -638,7 +717,9 @@ Logistic Regression is a discriminative classifier that works by trying to learn
 The central assumption that $P(y|x)$  can be approximated as a sigmoid function function applied to a linear combination of input features.
 
 $$
+
 P(Y=1 | X) = \frac{1}{1+\exp(-w_0 - \sum_i w^i X^i)}
+
 $$
 
 - Logistic function applied to a linear function of the data.
@@ -653,7 +734,9 @@ $$
 <summary><b>💡 Show Answer</b></summary>
 
 $$
+
 \sigma(z) = \frac{1}{1+\exp(-z)}
+
 $$
 
 </details>
@@ -668,12 +751,17 @@ $$
 At the decision boundary:
 
 $$
+
 P(Y=1|X) = \frac{1}{2}
+
 $$
+
 We can express this as:$$P(Y=1|X) = \frac{1}{1 + \exp(-w_0 - \sum_i w_i X_i)} = \frac{1}{2}$$Solving this equation gives:$$\exp(-w_0 - \sum_i w_i X_i) = 1$$This occurs only if:
 
 $$
+
 -w_0 - \sum_i w_i X_i = 0
+
 $$
 
 This equation defines the decision boundary of logistic regression. Since it represents a straight line, logistic regression is classified as a linear classifier.
@@ -701,7 +789,9 @@ No closed-form solution exist. That's why we use gradient descent to estimate th
 - **Maximum Likelihood Estimation (MLE)**: Minimize Negative Log-Likelihood (Binary Cross-Entropy):
 
 $$
+
 L(w) = -\sum_{i=1}^N \left[ y_i \log(\sigma(w^T x_i)) + (1-y_i) \log(1 - \sigma(w^T x_i)) \right]
+
 $$
 
 - **Optimization**: Loss is strictly convex, optimized via Gradient Descent, L-BFGS, or Newton-Raphson (Iteratively Reweighted Least Squares - IRLS).
@@ -738,9 +828,9 @@ $(0, 1)$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Conditional Maximum Likelihood Estimation (Conditional MLE) refers to MLE applied within a conditional model, where the parameters only influence the conditional probability $P(Y|X)$and not the marginal probability$ P(X)$. In contrast, standard MLE applies when the parameters affect both$P(Y|X)$and$P(X)$.
+Conditional Maximum Likelihood Estimation (Conditional MLE) refers to MLE applied within a conditional model, where the parameters only influence the conditional probability $P(Y|X)$ and not the marginal probability $ P(X)$. In contrast, standard MLE applies when the parameters affect both $ P(Y|X)$and $ P(X)$.
 
-Logistic regression is an example of a conditional model because the parameters $\theta$only control$P(Y|X)$, not$P(X)$. As a result, the MLE used in logistic regression is considered a Conditional MLE.
+Logistic regression is an example of a conditional model because the parameters $\theta $ only control$P(Y|X)$, not $ P(X)$. As a result, the MLE used in logistic regression is considered a Conditional MLE.
 
 </details>
 
@@ -754,7 +844,7 @@ Logistic regression is an example of a conditional model because the parameters 
 Squared and absolute losses are not typically used in logistic regression because they are not well-suited to the characteristics of the logistic function and can lead to significant issues during optimization.
 
 - Non-Convexity Issues: This non-convexity introduces multiple local minima, complicating optimization and often leading to suboptimal solutions.
-- Gradient Behavior: Squared loss flattens gradients, especially when predictions are close to 0 or 1, which is common in logistic regression. The derivative of the squared loss is proportional to the error $(y_i - \hat{y}_i)$. In logistic regression, where$\hat{y}_i$  is bounded between 0 and 1, the gradients can become very small, slowing down convergence. 
+- Gradient Behavior: Squared loss flattens gradients, especially when predictions are close to 0 or 1, which is common in logistic regression. The derivative of the squared loss is proportional to the error $(y_i - \hat{y}_i)$. In logistic regression, where $\hat{y}_i$  is bounded between 0 and 1, the gradients can become very small, slowing down convergence. 
 - Poor Fit for Probabilistic Outputs : More fitted for regression task
 
 </details>
@@ -777,10 +867,12 @@ Yes, logistic regression can be extended to handle multiclass classification pro
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-For a set of scores/logits $\mathbf{z} = [z_1, z_2, \ldots, z_K]$, the probability of class$j$is given by:
+For a set of scores/logits $\mathbf{z} = [z_1, z_2, \ldots, z_K]$, the probability of class $ j$is given by:
 
 $$
+
 P(y = j | \mathbf{x}) = \frac{\exp(z_j)}{\sum_{k=1}^{K} \exp(z_k)}
+
 $$
 
 </details>
@@ -805,23 +897,27 @@ Computationally more intensive compared to binary logistic regression, especiall
 
 *Logistic Regression Model*
 
-Logistic regression models the probability that a binary outcome $y$is 1 given an input vector$\mathbf{x}$. The model is defined as:
+Logistic regression models the probability that a binary outcome $y $ is 1 given an input vector$\mathbf{x}$. The model is defined as:
 
 $$
+
 P(y = 1 | \mathbf{x}) = \frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x} + b)}}
+
 $$
 
 *Likelihood Function*
 
-For a dataset with $n$observations, the likelihood of the observed data given the parameters$\mathbf{w}$and$ b$ is:$$L(\mathbf{w}, b) = \prod_{i=1}^{n} P(y_i | \mathbf{x}_i)$$Since logistic regression deals with binary outcomes, this can be rewritten as:$$L(\mathbf{w}, b) = \prod_{i=1}^{n} \left(\frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{y_i} \left(\frac{e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{1 - y_i}$$*Log-Likelihood Function*
+For a dataset with $n $ observations, the likelihood of the observed data given the parameters$\mathbf{w}$ and $ b$ is:$$L(\mathbf{w}, b) = \prod_{i=1}^{n} P(y_i | \mathbf{x}_i)$$Since logistic regression deals with binary outcomes, this can be rewritten as:$$L(\mathbf{w}, b) = \prod_{i=1}^{n} \left(\frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{y_i} \left(\frac{e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}{1 + e^{-(\mathbf{w}^T \mathbf{x}_i + b)}}\right)^{1 - y_i}$$*Log-Likelihood Function*
 
 $$
+
 \text{Log-Likelihood} = \sum_{i=1}^{n} \left( y_i \log P(y_i | \mathbf{x}_i) + (1 - y_i) \log (1 - P(y_i | \mathbf{x}_i)) \right)
+
 $$
 
 *Maximizing the Log-Likelihood*
 
-MLE estimates the parameters $w$and$b$  by finding values that maximize the log-likelihood function. This is typically done using numerical optimization techniques like gradient descent or Newton-Raphson methods.
+MLE estimates the parameters $w $ and$b$  by finding values that maximize the log-likelihood function. This is typically done using numerical optimization techniques like gradient descent or Newton-Raphson methods.
 
 MLE is Preferred Over Least Squares in Logistic Regression?
 
@@ -840,12 +936,17 @@ MLE is Preferred Over Least Squares in Logistic Regression?
 MAP estimation in logistic regression is a Bayesian approach that estimates model parameters by maximizing the posterior probability, which combines the likelihood of the observed data with a prior distribution over the parameters.
 
 $$
+
 \hat{\mathbf{w}}_{\text{MAP}} = \arg\max_{\mathbf{w}} \, P(\mathbf{w} | \text{data}) = \arg\max_{\mathbf{w}} \, P(\text{data} | \mathbf{w}) \, P(\mathbf{w})
+
 $$
+
 Using Bayes' theorem, this becomes:
 
 $$
+
 \hat{\mathbf{w}}_{\text{MAP}} = \arg\max_{\mathbf{w}} \, \left(\prod_{i=1}^{n} P(y_i | \mathbf{x}_i; \mathbf{w})\right) P(\mathbf{w})
+
 $$
 
 </details>

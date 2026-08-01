@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [Basics](#basics)
@@ -243,7 +242,9 @@ It indicates that the bulk of the data values are clustered towards the lower en
 For a right-skewed distribution, the general order is:
 
 $$
+
 \text{Mode} < \text{Median} < \text{Mean}
+
 $$
 
 </details>
@@ -311,7 +312,9 @@ It indicates that the bulk of the data values are clustered towards the higher e
 For a left-skewed distribution, the general order is:
 
 $$
+
 \text{Mode} > \text{Median} > \text{Mean}
+
 $$
 
 </details>
@@ -326,7 +329,9 @@ $$
 For a left-skewed distribution, the general order is:
 
 $$
+
 \text{Mode} ~ \text{Median} ~ \text{Mean}
+
 $$
 
 </details>
@@ -390,10 +395,12 @@ Mode is the most commonly occurring value in a distribution.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The mean is the average of a set of observations (i.e., the sum of the observations divided by the number of observations). If the n observations are $x_1, x_2,..,x_n$their mean, which we denote by$\bar{x}$ 
+The mean is the average of a set of observations (i.e., the sum of the observations divided by the number of observations). If the n observations are $x_1, x_2,..,x_n $ their mean, which we denote by$\bar{x}$ 
 
 $$
+
 \bar{x} = \frac{x_1 + x_2 + ... + x_n}{n}
+
 $$
 
 </details>
@@ -420,8 +427,8 @@ To find the median:
 
 - Order the data from smallest to largest.
 - Consider whether $n$, the number of observations, is even or odd.
-   - If $n$is odd, the median$M$is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$  spot in the ordered list.
-   - If $n$is even, the median$M$is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2$and$ n/2 + 1$  spots in the ordered list.
+   - If $n $ is odd, the median$M $ is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$  spot in the ordered list.
+   - If $n $ is even, the median$M $ is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2 $ and$ n/2 + 1$  spots in the ordered list.
 
 </details>
 
@@ -436,8 +443,8 @@ To find the median:
 
 - Order the data from smallest to largest.
 - Consider whether $n$, the number of observations, is even or odd.
-   - If $n$is odd, the median$M$is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$  spot in the ordered list.
-   - If $n$is even, the median$M$is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2$and$ n/2 + 1$  spots in the ordered list.
+   - If $n $ is odd, the median$M $ is the center observation in the ordered list. This observation is the one "sitting" in the$(n + 1)/2$  spot in the ordered list.
+   - If $n $ is even, the median$M $ is the mean of the two center observations in the ordered list. These two observations are the ones "sitting" in the$n/2 $ and$ n/2 + 1$  spots in the ordered list.
 
 </details>
 
@@ -486,7 +493,9 @@ The mean is an appropriate measure of center only for symmetric distributions wi
 The range covered by the data is the most intuitive measure of variability. The range is exactly the distance between the smallest data point (min) and the largest one (Max).
 
 $$
+
 \text{Range} = \text{Max} - \text{Min}
+
 $$
 
 </details>
@@ -515,12 +524,14 @@ IQR calculations:
 
 - Arrange the data in increasing order, and find the median M. Recall that the median divides the data, so that 50% of the data points are below the median, and 50% of the data points are above the median.
 
-- Find the median of the lower 50% of the data($Q1$) and upper 50% of the data$Q3$.
+- Find the median of the lower 50% of the data($Q1 $) and upper 50% of the data$ Q3$.
 
-- The middle 50% of the data falls between $Q1$and$ Q3$, and therefore:
+- The middle 50% of the data falls between $Q1 $ and$ Q3$, and therefore:
 
 $$
+
 \text{IQR} = Q3 - Q1
+
 $$
 
 <table align='center'>
@@ -628,10 +639,12 @@ Boxplots are most useful when presented side-by-side to compare and contrast dis
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-standard deviation quantifies the spread of a distribution by measuring how far the observations are from their mean $\bar{x}$. The standard deviation gives the average (or typical distance) between a data point and the mean$\bar{x}$.
+standard deviation quantifies the spread of a distribution by measuring how far the observations are from their mean $\bar{x}$. The standard deviation gives the average (or typical distance) between a data point and the mean $\bar{x}$.
 
 $$
+
 \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}
+
 $$
 
 where:
@@ -662,23 +675,33 @@ The SD is strongly influenced by outliers in the data.
 Given:
 
 $$
+
 arr = [1, 5, 3, 2, 4, 4]
+
 $$
+
 Sort the above series in ascending order:
 
 $$
+
 arr = [1, 2, 3, 4, 4, 5]
+
 $$
 
 <b>Mean($\bar{x}$)</b>
 
 $$
+
 \bar{x}= \frac{\sum_{i=1}^{n}arr}{n}
+
 $$
+
 Here number of elements(n) = 6
 
 $$
+
 \bar{x} = \frac{\sum_{i=1}^{6}arr}{6} = \frac{1+2+3+4+4+5}{6} = 3.166
+
 $$
 
 <b>Median($M$)</b>
@@ -686,35 +709,49 @@ $$
 Since $n$ is even, we can use following expression:
 
 $$
+
 \text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
+
 $$
 
 $$
+
 \text{M} = \frac{3+4}{2} = 3.5
+
 $$
 
 <b>Variance($\sigma^2$)</b>
 
 $$
+
 \text{\sigma^2} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+
 $$
 
 $$
+
 \text{\sigma^2} = \frac{1}{6} \sum_{i=1}^{n} (x_i - 3.166)^2
+
 $$
 
 $$
+
 \text{\sigma^2} ≈ 1.47
+
 $$
 
 <b>Standard deviation($\sigma$)</b>
 
 $$
+
 \text{\sigma} = \sqrt{variance} = \sqrt{1.47}
+
 $$
 
 $$
+
 \text{\sigma} = 1.2124
+
 $$
 
 </details>
@@ -726,7 +763,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- Use $\bar{x}$(the mean) and the standard deviation$\sigma$  as measures of center and spread only for reasonably symmetric distributions with no outliers.
+- Use $\bar{x}$(the mean) and the standard deviation $\sigma$  as measures of center and spread only for reasonably symmetric distributions with no outliers.
 
 - Use the five-number summary (which gives the median, IQR and range) for all other cases.
 
@@ -742,7 +779,7 @@ $$
 For distributions having bell shaped (also known as the normal shape), the following rule applies:
 - Approximately $68%$  of the observations fall within 1 standard deviation of the mean.
 - Approximately $95%$  of the observations fall within 2 standard deviations of the mean.
-- Approximately $99.7%$(or virtually all) of the observations fall within$3$  standard deviations of the mean.
+- Approximately $99.7%$(or virtually all) of the observations fall within $3$  standard deviations of the mean.
 
 <table align='center'>
 <tr>

@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [Linear Regression and Least Squares](#linear-regression)
@@ -24,11 +23,14 @@ Linear regression is a statistical model that assumes the regression function $E
 It takes the following form:
 
 $$
+
 f(X) = \beta_{0} + \sum_{j=1}^{p}X_{j}\beta_{j}
+
 $$
-Note that here $\beta_{j}$'s are unknown parameter or coefficients and the variables$X_{j}$  can come from different sources like
+
+Note that here $\beta_{j}$'s are unknown parameter or coefficients and the variables $ X_{j}$  can come from different sources like
 - Quantitative inputs or its transformations
-- Basis expansion, such as $X_{2} = X_{1}^2$,$X_{3} = X_{1}^3$  leading to a polynomial representation
+- Basis expansion, such as $X_{2} = X_{1}^2 $,$ X_{3} = X_{1}^3$  leading to a polynomial representation
 - Encoded categorical values
 - Interaction between variables like $X_{3} = X_{1} \dot X_{2}$ 
 
@@ -43,19 +45,26 @@ It uses **least squares** as a estimation method to calculate the values of coef
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Suppose we have a set of training data $(x_1, y_1),...,(x_n, y_n)$from which we need to estimate the parameters$\beta$. Linear regression uses least squares estimation method to get values of the parameters. We pick the coefficients $\beta = (\beta_{0}, \beta_{1},....,\beta_{p}^{T})$ to minimize the residual sum of squares(RSS):$$RSS(\beta) = \sum_{i=1}^{N}(y_{i} - f(x_{i}))^2 = \sum_{i=1}^{N}(y_{i} - \beta_{0} - \sum_{j=1}^{p}x_{ij}\beta_{j})^2$$Alternatively we can rewrite the above equations as:$$RSS(\beta) = (y - X\beta)^{T}(y - X\beta)$$In order to minimize the above expression, differentiating with respect to $\beta$  we get,
+Suppose we have a set of training data $(x_1, y_1),...,(x_n, y_n)$ from which we need to estimate the parameters $\beta$. Linear regression uses least squares estimation method to get values of the parameters. We pick the coefficients $\beta = (\beta_{0}, \beta_{1},....,\beta_{p}^{T})$ to minimize the residual sum of squares(RSS):$$RSS(\beta) = \sum_{i=1}^{N}(y_{i} - f(x_{i}))^2 = \sum_{i=1}^{N}(y_{i} - \beta_{0} - \sum_{j=1}^{p}x_{ij}\beta_{j})^2$$Alternatively we can rewrite the above equations as:$$RSS(\beta) = (y - X\beta)^{T}(y - X\beta)$$In order to minimize the above expression, differentiating with respect to $\beta$  we get,
 
 $$
+
 \frac{\partial{RSS}}{\partial{\beta}} = -2X^{T}(y - X\beta)
+
 $$
 
 $$
+
 \frac{\partial^{2}{RSS}}{\partial{\beta}\partial{\beta^{T}}} = 2X^{T}X
-$$
-Assuming that $X$has full column rank, hence$X^{T}X$ is positive definite so minima exists, we set first derivative to zero$$X^{T}(y - X\beta) = 0$$To obtain the unique solution
 
 $$
+
+Assuming that $X $ has full column rank, hence$X^{T}X $ is positive definite so minima exists, we set first derivative to zero$$X^{T}(y - X\beta) = 0$$To obtain the unique solution
+
+$$
+
 \hat{\beta} = (X^{T}X)^{-1}X^{T}y
+
 $$
 
 </details>
@@ -87,9 +96,12 @@ Yes model is still linear in nature. This is polynomial representation of a line
 We can write the given form in its linear mode:
 
 $$
+
 f(X) = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2}....
+
 $$
-Where $X_{2} = X_{1}^{2}$No matter the source of the$X$, the model is linear in its parameter.
+
+Where $X_{2} = X_{1}^{2}$ No matter the source of the $X$, the model is linear in its parameter.
 
 </details>
 
@@ -134,7 +146,7 @@ The key difference between simple linear regression and multiple linear regressi
    - Multiple Linear Regression: More complex due to the involvement of multiple predictors, and it requires more sophisticated techniques for interpretation and model validation.
 
 3. Equation Form**:
-   - Simple Linear Regression: $Y = \beta_0 + \beta_1 X + \epsilon$- Multiple Linear Regression:$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_k X_k + \epsilon$ 
+   - Simple Linear Regression: $Y = \beta_0 + \beta_1 X + \epsilon $- Multiple Linear Regression:$ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_k X_k + \epsilon$ 
 
 </details>
 
@@ -150,7 +162,9 @@ The RSE is an estimate of the standard deviation of residuals($\epsilon$). It is
 It is computed using the formula:
 
 $$
+
 RSE = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}{y_i - \hat{y}_i}}
+
 $$
 
 It is considered as the lack of the fit of the data. Lower values indicates model fits the data very well.
@@ -171,15 +185,20 @@ It takes the form of a proportion *proportion of the variance explained* it alwa
 To calculate the $R^2$, we have following expressions:
 
 $$
+
 R^2 = \frac{TSS - RSS}{TSS} = 1 - frac{RSS}{TSS}
+
 $$
+
 Here,$$TSS(Total Sum of Squares) = \sum{(y_i - \hat{y})^2}$$And,
 
 $$
+
 RSS(Residual Sum of Squares) = \sum{(y_i - \cap{y})^2}
+
 $$
 
-Statistically, it measures the proportion of variability in $Y$that can be explained using$X$.
+Statistically, it measures the proportion of variability in $Y $ that can be explained using$X$.
 
 </details>
 
@@ -204,7 +223,9 @@ A number near 0 indicates the regression does not explain the variability in the
 Suppose we have a model of form:
 
 $$
+
 Y = \beta_0 + \beta_{1}X_1 + \beta_{2}X_2 + \epsilon
+
 $$
 
 Here's how to interpret them:
@@ -263,12 +284,17 @@ F-statistic is mainly used for hypothesis testing where we want to assess whethe
 For example null hypothesis:
 
 $$
+
 H_0 = \beta_1 = \beta_2 = ... = \beta_p = 0
-$$
-alternate hypothesis:$$H_a = at least one \beta_j is non-zero$$here hypothesis test is performed by computing the F-statistic,$$F = \frac{(TSS - RSS)/p}{(RSS/(n-p-1))}$$If the linear model assumptions are true:$$E{(TSS-RSS)/p} = \sigma^2$$and provided $H_0$is true,
 
 $$
+
+alternate hypothesis:$$H_a = at least one \beta_j is non-zero$$here hypothesis test is performed by computing the F-statistic,$$F = \frac{(TSS - RSS)/p}{(RSS/(n-p-1))}$$If the linear model assumptions are true:$$E{(TSS-RSS)/p} = \sigma^2$$and provided $ H_0$is true,
+
+$$
+
 E{(TSS-RSS)/p} = \sigma^2
+
 $$
 
 So, when there is no relationship between predictors and the response then F-statistic is near to 1 and if $H_a$  is true the  F-statistic will be greater than 1.
@@ -315,7 +341,7 @@ Linear regression model may suffer from following issues mainly:
 
 - **Bias**: Error introduced by simplifying assumptions (underfitting). Linear regression has high bias if non-linear patterns exist.
 - **Variance**: Error introduced by sensitivity to small fluctuations in training data (overfitting). Unregularized linear regression with high dimensions has high variance.
-- **Trade-off**: Regularization ($L_1/L_2$) increases bias slightly while significantly decreasing variance, minimizing Total Expected MSE =$\text{Bias}^2 + \text{Variance} + \sigma^2$.
+- **Trade-off**: Regularization ($L_1/L_2 $) increases bias slightly while significantly decreasing variance, minimizing Total Expected MSE =$\text{Bias}^2 + \text{Variance} + \sigma^2$.
 
 </details>
 
@@ -363,15 +389,15 @@ There are mainly two methods for subset selection:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Suppose we have $p$predictors, we then fit a separate model to each possible combinations of$p$predictors. That is we fit all the$p$models that contains exactly one predictor, all$\binom{p}{2}
+Suppose we have $p $ predictors, we then fit a separate model to each possible combinations of$p $ predictors. That is we fit all the$p $ models that contains exactly one predictor, all$\binom{p}{2}
  = p(p-1)/2$  models that contains exactly two predictors and so on. We then look at the resulting models to identify the best one on the basis of objective metrics.
 
 Here is the stepwise algorithm:
 1. Let $M_0$  denote the null model, which contains no predictors. This model simply predicts the sample mean of each observations
 2. For $k = 1, 2,...,p$:
-    1. Fit all $\binom{p}{k}$models that contains exactly$ k$  predictors.
-    2. Pick the best among these $\binom{p}{k}$models and call it$ M_k$, on the basis of RSS or $R^2$  score.
-3. Select a single best model from among $M_0,....,M_p$using cross validation prediction error like adjusted$R^2$or$ BIC$  etc.
+    1. Fit all $\binom{p}{k}$ models that contains exactly $ k$  predictors.
+    2. Pick the best among these $\binom{p}{k}$ models and call it $ M_k$, on the basis of RSS or $ R^2$  score.
+3. Select a single best model from among $M_0,....,M_p $ using cross validation prediction error like adjusted$R^2 $ or$ BIC$  etc.
 
 </details>
 
@@ -382,7 +408,7 @@ Here is the stepwise algorithm:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-As we induct more features in the model RSS monotonically decreases and $R^2$increases monotonically. Therefore, if we use these statistics to select the best model, then we will always end up with the model involving all of the variables. The problem is that a low RSS or a high$ R^2$  indicates low training error, whereas we want to have low test error.
+As we induct more features in the model RSS monotonically decreases and $R^2 $ increases monotonically. Therefore, if we use these statistics to select the best model, then we will always end up with the model involving all of the variables. The problem is that a low RSS or a high$ R^2$  indicates low training error, whereas we want to have low test error.
 
 <table align='center'>
   <tr>
@@ -406,7 +432,7 @@ As we induct more features in the model RSS monotonically decreases and $R^2$inc
 
 This method is simple and easy to understand but it suffers from the computational limitations. As we increase the number of predictors $p$, the number of possible models that we must consider increases exponentially. 
 
-In general, there are $2^p$models that involve subsets of$p$predictors. So if$p=10$then there will be$ 2^10$possible models and if$ p=20$  then here will be over one million possibilities.
+In general, there are $2^p $ models that involve subsets of$p $ predictors. So if$p=10 $ then there will be$ 2^10 $ possible models and if$ p=20$  then here will be over one million possibilities.
 
 </details>
 
@@ -428,7 +454,7 @@ Stepwise Selection
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Forward stepwise selection is a computationally efficient alternative to the best subset selection. While the best subset selection procedure considers all $2^p$possible models containing subsets of$p$predictors, forward stepwise consider a much smaller set of$1 + p(p+1)/2$  models
+Forward stepwise selection is a computationally efficient alternative to the best subset selection. While the best subset selection procedure considers all $2^p $ possible models containing subsets of$p $ predictors, forward stepwise consider a much smaller set of$1 + p(p+1)/2$  models
 
 </details>
 
@@ -442,13 +468,13 @@ Forward stepwise selection is a computationally efficient alternative to the bes
 Forward stepwise selection steps:
 
 1. Let $M_0$  denote the null model, which contains no predictors.
-2. For $k=0,...,p-1$1. Consider all$p-k$models that augment the predictors in$M_k$  with one additional predictor.
-    2. Choose the best among these $p-k$models and call it$M_{k+1}$on the basis$ R^2$or$ RSS$  basis.
-3. Select a single best model from among $M_0,...,M_p$using cross validate prediction error,$C_p$, $BIC$and adjusted$R^2$.
+2. For $k=0,...,p-1 $1. Consider all$ p-k $models that augment the predictors in$ M_k$  with one additional predictor.
+    2. Choose the best among these $p-k $ models and call it$M_{k+1}$ on the basis $ R^2$ or $ RSS$  basis.
+3. Select a single best model from among $M_0,...,M_p $ using cross validate prediction error,$C_p $, $ BIC $and adjusted$ R^2$.
 
 **Example:**
 
-Suppose you have a dataset with five predictors: $X_1, X_2, X_3, X_4$and$ X_5$, and a response variable$Y$. You want to build a linear regression model to predict$Y$.
+Suppose you have a dataset with five predictors: $X_1, X_2, X_3, X_4 $ and$ X_5 $, and a response variable$ Y $. You want to build a linear regression model to predict$ Y$.
 
 Steps:
 
@@ -459,16 +485,16 @@ Steps:
 
    **Iteration 1**:
    - Fit five simple linear regression models, each with one predictor:
-     - Model 1: $Y \sim X_1$- Model 2:$Y \sim X_2$- Model 3:$Y \sim X_3$- Model 4:$Y \sim X_4$- Model 5:$Y \sim X_5$- Choose the model that has the best performance according to a criterion (e.g., lowest AIC). Suppose$X_3$  provides the best improvement.
+     - Model 1: $Y \sim X_1 $- Model 2:$ Y \sim X_2 $- Model 3:$ Y \sim X_3 $- Model 4:$ Y \sim X_4 $- Model 5:$ Y \sim X_5 $- Choose the model that has the best performance according to a criterion (e.g., lowest AIC). Suppose$ X_3$  provides the best improvement.
    - Add $X_3$  to the model.
 
    **Iteration 2**:
    - Fit four models, each adding one more predictor to the model with $X_3$:
-     - Model 1: $Y \sim X_3 + X_1$- Model 2:$Y \sim X_3 + X_2$- Model 3:$Y \sim X_3 + X_4$- Model 4:$Y \sim X_3 + X_5$- Choose the model that has the best performance. Suppose$X_2$  provides the best improvement.
+     - Model 1: $Y \sim X_3 + X_1 $- Model 2:$ Y \sim X_3 + X_2 $- Model 3:$ Y \sim X_3 + X_4 $- Model 4:$ Y \sim X_3 + X_5 $- Choose the model that has the best performance. Suppose$ X_2$  provides the best improvement.
    - Add $X_2$  to the model.
 
    **Iteration 3**:
-   - Fit three models, each adding one more predictor to the model with $X_3$and$ X_2$- Model 1:$Y \sim X_3 + X_2 + X_1$- Model 2:$Y \sim X_3 + X_2 + X_4$- Model 3:$Y \sim X_3 + X_2 + X_5$- Choose the model that has the best performance. Suppose$X_1$  provides the best improvement.
+   - Fit three models, each adding one more predictor to the model with $X_3 $ and$ X_2 $- Model 1:$ Y \sim X_3 + X_2 + X_1 $- Model 2:$ Y \sim X_3 + X_2 + X_4 $- Model 3:$ Y \sim X_3 + X_2 + X_5 $- Choose the model that has the best performance. Suppose$ X_1$  provides the best improvement.
    - Add $X_1$  to the model.
 
 3. **Stopping Criterion**:
@@ -487,7 +513,7 @@ stepwise selection  methods like forward/backward stepwise methods are basically
 
 ---
 
-### Q: Imagine you have a dataset with $100$observations$(n=100)$and$ 1000$predictors$(p=1000)$. Which feature selection method you can use?
+### Q: Imagine you have a dataset with $100 $ observations$(n=100)$ and $ 1000$ predictors $(p=1000)$. Which feature selection method you can use?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -506,9 +532,9 @@ For cases $p >> n$, Forward-stepwise subset selection method is only feasible an
 Backward stepwise selection steps:
 
 1. Let $M_p$  denote the full model, which contains all the predictors.
-2. For $k=p,...,0$1. Consider all$k$models contain all but one of the predictors in$M_k$, for total of$k-1$  predictors.
-    2. Choose the best among these $k$models and call it$M_{k-1}$on the basis$ R^2$or$ RSS$  basis.
-3. Select a single best model from among $M_0,...,M_p$using cross validate prediction error,$C_p$, $BIC$and adjusted$R^2$.
+2. For $k=p,...,0 $1. Consider all$ k $models contain all but one of the predictors in$ M_k $, for total of$ k-1$  predictors.
+    2. Choose the best among these $k $ models and call it$M_{k-1}$ on the basis $ R^2$ or $ RSS$  basis.
+3. Select a single best model from among $M_0,...,M_p $ using cross validate prediction error,$C_p $, $ BIC $and adjusted$ R^2$.
 
 </details>
 
@@ -580,7 +606,7 @@ Subset selection method produces a model that is interpretable and has possibly 
 
 Ordinary least square method suffers from the following issues:
 - Poor prediction accuracy(Overfitting)
-    - If $n ~ p$i.e number of observations($  n$) is not much larger than the number of predictors ($p$) then  there can be a lot of variability in the least square fit, resulting in overfitting and consequently poor prediction on test set.
+    - If $n ~ p $ i.e number of observations($  n $) is not much larger than the number of predictors ($ p$) then  there can be a lot of variability in the least square fit, resulting in overfitting and consequently poor prediction on test set.
     - If $p > n$, then there is no longer a unique least square coefficient estimation and variance is infinite so method an not be used at all
 - Lack of model interpretability
     - It is often the case that some of many of the variables used in ols might not be associated with the response. They unnecessary complicate the model and makes hard to interpret the model output.
@@ -599,13 +625,18 @@ L1(Lasso) and L2(Ridge) regularization techniques help in addressing the above s
 The ridge regression coefficients estimates $\hat{\beta}^{R}$  are values that minimizes:
 
 $$
+
 \sum_{i=1}^n(y_i - \beta_0 - \sum_{j=1}^p\beta_jx_{ij})^2 + \lambda\sum_{j=1}^p\beta_{j}^2
+
 $$
 
 $$
+
 = RSS + \lambda\sum_{j=1}^p\beta_{j}^2
+
 $$
-where $\lambda >= 0$is a tuning parameter, to be determined separately. The above equation tradeoff two criteria. As with least square error(RSS), ridge regression seeks coefficients estimates that fit the data well, by making the RSS smaller. The second term$\lambda\sum_{j=1}^p\beta_{j}^2$, called a shrinkage penalty is small when $\beta_1,...,\beta_p$are close to zero, so it has the effect of shrinking the estimates of$\beta_j$  towards zero.
+
+where $\lambda >= 0 $ is a tuning parameter, to be determined separately. The above equation tradeoff two criteria. As with least square error(RSS), ridge regression seeks coefficients estimates that fit the data well, by making the RSS smaller. The second term$\lambda\sum_{j=1}^p\beta_{j}^2 $, called a shrinkage penalty is small when $\beta_1,...,\beta_p $ are close to zero, so it has the effect of shrinking the estimates of$\beta_j$  towards zero.
 
 </details>
 
@@ -618,7 +649,7 @@ where $\lambda >= 0$is a tuning parameter, to be determined separately. The abov
 
 It essentially balances the trade-off between fitting the data well (minimizing RSS) and keeping the model coefficients small (minimizing the penalty term). 
 
-When $\lambda = 0$, the penalty term has no effect, and ridge regression will produce the least squares estimates. However, as$\lambda -> \inf$, the impact of shrinkage penalty grows, and the ridge regression coefficient estimates will approach zero.
+When $\lambda = 0 $, the penalty term has no effect, and ridge regression will produce the least squares estimates. However, as$\lambda -> \inf$, the impact of shrinkage penalty grows, and the ridge regression coefficient estimates will approach zero.
 
 </details>
 
@@ -662,7 +693,7 @@ L1 or L2 regularization are shrinkage methods which helps in reducing the coeffi
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-No we can't use it as feature selection technique. The penalty term $\lambda \sum\beta_j^{2}$in ridge regression will shrink all the coefficients towards zero, but will not set any of them exactly zero (unless$\lambda = \infin$).
+No we can't use it as feature selection technique. The penalty term $\lambda \sum\beta_j^{2}$ in ridge regression will shrink all the coefficients towards zero, but will not set any of them exactly zero (unless $\lambda = \infin$).
 
 </details>
 
@@ -676,11 +707,15 @@ No we can't use it as feature selection technique. The penalty term $\lambda \su
 The loss function expression in lasso regression:
 
 $$
+
 \sum_{i=1}^n(y_i - \beta_0 - \sum_{j=1}^p\beta_jx_{ij})^2 + \lambda\sum_{j=1}^p|{\beta_{j}}|
+
 $$
 
 $$
+
 = RSS + \lambda\sum_{j=1}^p|\beta_{j}|
+
 $$
 
 </details>
@@ -708,12 +743,17 @@ The loss function involve in lasso and ridge regression can be re-written as fol
 **Lasso loss function:**
 
 $$
+
 minimize_\beta\{{\sum_{i=1}^{n}(y_i - \beta_0 - \sum_{j=1}^{p}\beta_{j}x_{ij})^2}\}
+
 $$
+
 subjected to$$\sum_{j=1}^{p}|\beta_{j}| \leq s$$**Ridge loss function:**$$minimize_\beta\{{\sum_{i=1}^{n}(y_i - \beta_0 - \sum_{j=1}^{p}\beta_{j}x_{ij})^2}\}$$subjected to
 
 $$
+
 \sum_{j=1}^{p}\beta_{j}^2 \leq s
+
 $$
 
 For $p=2$, we can plot the error and constraints functions for the lasso and ridge regression as follows:
@@ -754,7 +794,7 @@ Since ridge regression has a circular constraint with no sharp points, this inte
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$\alpha$, It controls the relative impact of Residual Square Sum and Shrinkage penalty $\sum_{j}{\beta_{j}^{2}} on regression coefficients estimates.
+$\alpha $, It controls the relative impact of Residual Square Sum and Shrinkage penalty $\sum_{j}{\beta_{j}^{2}} on regression coefficients estimates.
 
 </details>
 
@@ -781,10 +821,12 @@ L2 regularization is effective when the response is a function of many predictor
 - **ElasticNet Objective**:
 
 $$
+
 \min_w \frac{1}{2N} \|y - Xw\|_2^2 + \lambda \left[ \alpha \|w\|_1 + \frac{1 - \alpha}{2} \|w\|_2^2 \right]
+
 $$
 
-- **Why use it over Lasso?**: Lasso selects at most $n$features when$p > n$  and picks one arbitrary feature among correlated features. ElasticNet retains group effects of correlated features while maintaining sparsity.
+- **Why use it over Lasso?**: Lasso selects at most $n $ features when$p > n$  and picks one arbitrary feature among correlated features. ElasticNet retains group effects of correlated features while maintaining sparsity.
 
 </details>
 
@@ -796,7 +838,7 @@ $$
 <summary><b>💡 Show Answer</b></summary>
 
 Cross validation can be used to tune the *alpha*. 
-- Choose a grid of $\alpha$values and compute cross validation error for each value of$\alpha$- Select the $\alpha$  which is yielding smallest cross validation error
+- Choose a grid of $\alpha $ values and compute cross validation error for each value of$\alpha $- Select the $\alpha$  which is yielding smallest cross validation error
 - Refit the model with all the available variables and the selected $\alpha$  value.
 
 </details>
@@ -835,13 +877,15 @@ A simple way to detect collinearity is to look at the correlation matrix of the 
 
 We can detect multi-collinearity using *variance inflation factor(VIF)*. VIF measures how much the variance of a regression coefficient is inflated due to multi-collinearity.
 
-The VIF is the ratio of the variance of $\beta_j$when fitting the full model divided by the variance of$\beta_j$ if fit on its own.
+The VIF is the ratio of the variance of $\beta_j $ when fitting the full model divided by the variance of$\beta_j$ if fit on its own.
 
 $$
+
 VIF(\beta_j) = \frac{1}{1-R^{2}_{X_{j}|X_{-j}}}
+
 $$
 
-where $R^{2}_{X_{j}|X_{-j}}$is the$R^2$from a regression of$X_j$  onto all the other predictors.
+where $R^{2}_{X_{j}|X_{-j}}$ is the $R^2$ from a regression of $X_j$  onto all the other predictors.
 
 The smallest possible value of VIF is 1, which indicates complete absence of collinearity. In practice we have small collinearity among the predictors so VIF greater tha 5 or 10 depicts problematic amount of collinearity.
 
@@ -882,7 +926,7 @@ Yeah, It may occur when one predictor variable in a regression model is an exact
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can determine whether a dataset is high-dimensional or low-dimensional by comparing the number of features($p$) to the number of observations($n$). 
+We can determine whether a dataset is high-dimensional or low-dimensional by comparing the number of features($p $) to the number of observations($ n$). 
 
 - High dimensional
 
@@ -901,7 +945,7 @@ We can determine whether a dataset is high-dimensional or low-dimensional by com
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-When $p > n$, where $p$is the number of features and$n$ is the number of observations, the least squares method will produce coefficient estimates that perfectly fit the data, resulting in zero residuals. This occurs regardless of whether there is a true relationship between the features and the response. Such a perfect fit is problematic because it leads to overfitting, capturing noise rather than the underlying pattern. The issue is that when$p > n$ or$p \approx n$, least squares regression is too flexible, making the model prone to overfitting the data.
+When $p > n $, where $ p $is the number of features and$ n $ is the number of observations, the least squares method will produce coefficient estimates that perfectly fit the data, resulting in zero residuals. This occurs regardless of whether there is a true relationship between the features and the response. Such a perfect fit is problematic because it leads to overfitting, capturing noise rather than the underlying pattern. The issue is that when$ p > n $ or$ p \approx n$, least squares regression is too flexible, making the model prone to overfitting the data.
 
 </details>
 
@@ -989,7 +1033,7 @@ True
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-In high-dimensional settings (where $p > n$), traditional measures like sum of squared errors, p-values, and $R^2$can be misleading. A model might show zero residuals or an$R^2$  of 1 simply due to overfitting, not because it is genuinely good. To avoid misinterpretation, rely on performance metrics from an independent test set or cross-validation, as these provide a more accurate assessment of the model's true effectiveness.
+In high-dimensional settings (where $p > n $), traditional measures like sum of squared errors, p-values, and $ R^2 $can be misleading. A model might show zero residuals or an$ R^2$  of 1 simply due to overfitting, not because it is genuinely good. To avoid misinterpretation, rely on performance metrics from an independent test set or cross-validation, as these provide a more accurate assessment of the model's true effectiveness.
 
 </details>
 

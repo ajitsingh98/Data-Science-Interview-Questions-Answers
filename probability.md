@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [Probability](#probability)
@@ -32,7 +31,9 @@ It is a mathematical framework for representing uncertain statements. It provide
 The probability of an event $A$ is given by the ratio of the number of favorable outcomes to the total number of possible outcomes, expressed as:
 
 $$
+
 P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}
+
 $$
 
 </details>
@@ -44,10 +45,12 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Disjoint sets are sets that have no elements in common. In other words, the intersection of disjoint sets is the empty set. If $A$and$B$ are two sets, they are disjoint if:
+Disjoint sets are sets that have no elements in common. In other words, the intersection of disjoint sets is the empty set. If $A $ and$B$ are two sets, they are disjoint if:
 
 $$
+
 A \cap B = \emptyset
+
 $$
 
 </details>
@@ -56,20 +59,22 @@ $$
 
 ### Conditional Probability
 
-### Q: Write the expression of probability of $A$given that$B$  has already occurred.
+### Q: Write the expression of probability of $A $ given that$B$  has already occurred.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The conditional probability of $A$, given that event $B$has already happened, is denoted by:
+The conditional probability of $A $, given that event $ B$has already happened, is denoted by:
 
 $$
+
 P(A | B) = \frac{P(A \cap B)}{P(B)}
+
 $$
 
 where:
-- $P(A \cap B)$is the probability that both events$ A$and$ B$  occur.
-- $P(B)$is the probability that event$ B$  occurs, and it must be greater than zero.
+- $P(A \cap B)$ is the probability that both events $ A$ and $ B$  occur.
+- $P(B)$ is the probability that event $ B$  occurs, and it must be greater than zero.
 
 </details>
 
@@ -80,15 +85,17 @@ where:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The law of total probability is a fundamental rule that provides a way to compute the probability of an event by considering all possible scenarios or conditions. If $B_1, B_2, \ldots, B_n$are mutually exclusive and exhaustive events (i.e., they cover the entire sample space), and$A$is any event, then the probability of$A$ can be expressed as:
+The law of total probability is a fundamental rule that provides a way to compute the probability of an event by considering all possible scenarios or conditions. If $B_1, B_2, \ldots, B_n $ are mutually exclusive and exhaustive events (i.e., they cover the entire sample space), and$A $ is any event, then the probability of$A$ can be expressed as:
 
 $$
+
 P(A) = \sum_{i=1}^{n} P(A | B_i) \cdot P(B_i)
+
 $$
 
 where:
-- $P(A | B_i)$is the conditional probability of$ A$given$ B_i$.
-- $P(B_i)$is the probability of$ B_i$.
+- $P(A | B_i)$ is the conditional probability of $ A$ given $ B_i$.
+- $P(B_i)$ is the probability of $ B_i$.
 
 </details>
 
@@ -99,28 +106,34 @@ where:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Two random variables $x$and$y$are independent if their probabilities distribution can be expressed as a product of two factors, one involving only$x$and one involving only$y$:
+Two random variables $x $ and$y $ are independent if their probabilities distribution can be expressed as a product of two factors, one involving only$x $ and one involving only$y$:
 
 $$
+
 \forall x \epsilon x, y \epsilon y, p(x=x, y=y) = p(x=x) \cdot p(y=y)
+
 $$
-This means that knowing whether $x$has occurred does not change the probability of$y$, and vice versa.
+
+This means that knowing whether $x $ has occurred does not change the probability of$y$, and vice versa.
 
 </details>
 
 ---
 
-### Q: Given two random variables $X$and$Y$. We have the values $P(X|Y)$and$P(Y)$for all values of$X$and$Y$. How would you calculate$P(X)$?
+### Q: Given two random variables $X $ and$Y $. We have the values $ P(X|Y)$and $ P(Y)$for all values of $ X$and $ Y$. How would you calculate $ P(X)$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-To calculate $P(X)$given$ P(X | Y)$and$ P(Y)$, we can use the law of total probability. The probability$P(X)$is obtained by summing over all possible values of$Y$:
+To calculate $P(X)$ given $ P(X | Y)$ and $ P(Y)$, we can use the law of total probability. The probability $ P(X)$is obtained by summing over all possible values of $ Y$:
 
 $$
+
 P(X) = \sum_{Y} P(X | Y) \cdot P(Y)
+
 $$
-This expression accounts for the contribution of each conditional probability $P(X | Y)$weighted by the probability$P(Y)$.
+
+This expression accounts for the contribution of each conditional probability $P(X | Y)$ weighted by the probability $P(Y)$.
 
 </details>
 
@@ -139,28 +152,28 @@ This expression accounts for the contribution of each conditional probability $P
 
 ---
 
-### Q: Consider a room of $n$people. Suppose that their birthdays are randomly distributed among$365$days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs$ n$. Find the probability when$n=2$.
+### Q: Consider a room of $n $ people. Suppose that their birthdays are randomly distributed among$365 $ days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs$ n $. Find the probability when$ n=2$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a room of $n$people. Suppose that their birthdays are randomly distributed among$365$days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs$ n$. Find the probability when$n=2$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a room of $n $ people. Suppose that their birthdays are randomly distributed among$365 $ days of the year. Find the expression for the probability of  at-least two people have birthday on same day vs$ n $. Find the probability when$ n=2$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-### Q: Given two events $A$and$B$in probability space$H$, which occur with probabilities $P(A)$and$P(B)$, respectively:
+### Q: Given two events $A $ and$B $ in probability space$H $, which occur with probabilities $ P(A)$and $ P(B)$, respectively:
 
-1. Define the conditional probability of $A$given$B$. Mind singular cases. 
+1. Define the conditional probability of $A $ given$B$. Mind singular cases. 
 2. Annotate each part of the conditional probability formulae.
-3. Draw an instance of Venn diagram, depicting the intersection of the events $A$and$B$. Assume that $A  \cup B = H$.
+3. Draw an instance of Venn diagram, depicting the intersection of the events $A $ and$B $. Assume that $ A  \cup B = H$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given two events $A$and$B$in probability space$H$, which occur with probabilities $P(A)$and$P(B)$, respectively:`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given two events $A $ and$B $ in probability space$H $, which occur with probabilities $ P(A)$and $ P(B)$, respectively:`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -176,7 +189,7 @@ This expression accounts for the contribution of each conditional probability $P
 <summary><b>💡 Show Answer</b></summary>
 
 - **Poisson Distribution model**: Rate $\lambda = 5$  crashes/year.
-- **Probability of $k$crashes**:$P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$.
+- **Probability of $k $ crashes**:$P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$.
 - Independent Poisson process assumption.
 
 </details>
@@ -192,7 +205,9 @@ This expression accounts for the contribution of each conditional probability $P
 - **Probability of 20 consecutive correct predictions**:
 
 $$
+
 P = p^{20} = (0.90)^{20} \approx 0.1215 \text{ (or } 12.15\% \text{)}
+
 $$
 
 </details>
@@ -211,14 +226,16 @@ Bayes' Theorem provides a way to update the probability of a hypothesis based on
 Mathematically, Bayes' Theorem is stated as:
 
 $$
+
 P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
+
 $$
 
 where:
-- $P(A | B)$is the probability of event$ A$given that$ B$  has occurred (posterior probability).
-- $P(B | A)$is the probability of event$ B$given that$ A$  has occurred (likelihood).
-- $P(A)$is the probability of event$ A$  (prior probability).
-- $P(B)$is the probability of event$ B$  (marginal likelihood).
+- $P(A | B)$ is the probability of event $ A$ given that $ B$  has occurred (posterior probability).
+- $P(B | A)$ is the probability of event $ B$ given that $ A$  has occurred (likelihood).
+- $P(A)$ is the probability of event $ A$  (prior probability).
+- $P(B)$ is the probability of event $ B$  (marginal likelihood).
 
 It is named after *Reverend Thomas Bayes*
 
@@ -234,12 +251,17 @@ It is named after *Reverend Thomas Bayes*
 Standard bayes theorem:
 
 $$
+
 P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
+
 $$
+
 We can use bayes' theorem with law of total probability:$$P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B|A) \cdot P(A) + P(B|A^C) \cdot P(A^C)}$$Here, we can also make it more general expression:
 
 $$
+
 P(A_i | B) = \frac{P(B | A_i) \cdot P(A_i)}{\sum_{j=1}^{n} P(B | A_j) \cdot P(B_j)}
+
 $$
 
 </details>
@@ -254,14 +276,19 @@ $$
 The denominator in standard bayes theorem is called normalization constant.
 
 $$
+
 P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
+
 $$
+
 It is called normalization constant since it is the same regardless of whether or not the event $A$  happens.
 
 In case it is unknown, we can use following expressions:
 
 $$
+
 P(B) = P(B|A)P(A) + P(B|A^C)P(A^C)
+
 $$
 
 </details>
@@ -276,7 +303,9 @@ $$
 The relationship between the prior, posterior, and likelihood probabilities is given by Bayes' Theorem, which can be expressed as:
 
 $$
+
 \text{Posterior} = \frac{\text{Likelihood} \times \text{Prior}}{\text{Evidence}}
+
 $$
 
 </details>
@@ -307,7 +336,7 @@ $$
 
 ---
 
-### Q: There are only two electronic chip manufacturers: $A$and$B$, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of$70%$.
+### Q: There are only two electronic chip manufacturers: $A $ and$B $, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of $70%$.
 
 1. If you randomly pick a chip from the store, what is the probability that it is defective?
 1. Suppose you now get two chips coming from the same company, but you don’t know which one. When you test the first chip, it appears to be functioning. What is the probability that the second electronic chip is also good?
@@ -315,7 +344,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `There are only two electronic chip manufacturers: $A$and$B$, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of$70%$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `There are only two electronic chip manufacturers: $A $ and$B $, both manufacture the same amount of chips. A makes defective chips with a probability of $30%$, while B makes defective chips with a probability of $70%$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -337,48 +366,48 @@ $$
 
 ---
 
-### Q: A dating site allows users to select $10$out of$ 50$adjectives to describe themselves. Two users are said to match if they share at least$ 5$  adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?
+### Q: A dating site allows users to select $10 $ out of$ 50 $ adjectives to describe themselves. Two users are said to match if they share at least$ 5$  adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `A dating site allows users to select $10$out of$ 50$adjectives to describe themselves. Two users are said to match if they share at least$ 5$  adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `A dating site allows users to select $10 $ out of$ 50 $ adjectives to describe themselves. Two users are said to match if they share at least$ 5$  adjectives. If Jack and Jin randomly pick adjectives, what is the probability that they match?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-### Q: Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$and the height of females follows$ h_j=N(μ_j,σ^{2}_j)$  . Derive a probability density function to describe A’s height.
+### Q: Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$ and the height of females follows $ h_j=N(μ_j,σ^{2}_j)$  . Derive a probability density function to describe A’s height.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$and the height of females follows$ h_j=N(μ_j,σ^{2}_j)$  . Derive a probability density function to describe A’s height.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a person A whose sex we don’t know. We know that for the general human height, there are two distributions: the height of males follows $h_m=N(μ_m,σ^{2}_m)$ and the height of females follows $ h_j=N(μ_j,σ^{2}_j)$  . Derive a probability density function to describe A’s height.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-### Q: There are three weather apps, each the probability of being wrong $\frac{1}{3}$of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy$ 50%$  of the time?
+### Q: There are three weather apps, each the probability of being wrong $\frac{1}{3}$ of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy $ 50%$  of the time?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `There are three weather apps, each the probability of being wrong $\frac{1}{3}$of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy$ 50%$  of the time?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `There are three weather apps, each the probability of being wrong $\frac{1}{3}$ of the time. What’s the probability that it will be foggy in San Francisco tomorrow if all the apps predict that it’s going to be foggy in San Francisco tomorrow and during this time of the year, San Francisco is foggy $ 50%$  of the time?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-### Q: Given n  samples from a uniform distribution $[0,d]$. How do you estimate$d$? (Also known as the German tank problem)
+### Q: Given n  samples from a uniform distribution $[0,d]$. How do you estimate $ d$? (Also known as the German tank problem)
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given n  samples from a uniform distribution $[0,d]$. How do you estimate$d$? (Also known as the German tank problem)`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given n  samples from a uniform distribution $[0,d]$. How do you estimate $ d$? (Also known as the German tank problem)`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -397,12 +426,12 @@ $$
 
 ---
 
-### Q: You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p$of winning, which doubles your bet, and$1−p$of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of$p$?
+### Q: You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p $ of winning, which doubles your bet, and$1−p $ of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of$p$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p$of winning, which doubles your bet, and$1−p$of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of$p$?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `You decide to fly to Vegas for a weekend. You pick a table that doesn’t have a bet limit, and for each game, you have the probability $p $ of winning, which doubles your bet, and$1−p $ of losing your bet. Assume that you have unlimited money (e.g. you bought Bitcoin when it was 10 cents), is there a betting strategy that has a guaranteed positive payout, regardless of the value of$p$?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -421,12 +450,12 @@ $$
 
 ---
 
-### Q: Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H$, which occur with probabilities $P(A)$and$P(B)$, respectively. Given that$A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.
+### Q: Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H $, which occur with probabilities $ P(A)$and $ P(B)$, respectively. Given that $ A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H$, which occur with probabilities $P(A)$and$P(B)$, respectively. Given that$A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Bayesian inference amalgamates data information in the likelihood function with known prior information. This is done by conditioning the prior on the likelihood using the Bayes formulae. Assume two events A and B in probability space $H $, which occur with probabilities $ P(A)$and $ P(B)$, respectively. Given that $ A \cup B = H$, state the Bayes formulae for this case, interpret its components and annotate them.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -523,7 +552,7 @@ A person is chosen at random and that person has the Dercum disease. Calculate t
 </tr>
 </table>
 
-A financial engineer has created a portfolio consisting twice as many $state-1$options then$ state-0$options. A stock option is selected at random and is determined by said algorithm to be in the state of$ 1$. What is the probability that the prediction made by the AI is correct?
+A financial engineer has created a portfolio consisting twice as many $state-1 $ options then$ state-0 $ options. A stock option is selected at random and is determined by said algorithm to be in the state of$ 1$. What is the probability that the prediction made by the AI is correct?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -590,9 +619,11 @@ The Algorithm relied on the acoustic properties of Russian pronunciation of the 
 ### Q: During World War II, forces on both sides of the war relied on encrypted communications. The main encryption scheme used by the German military was an Enigma machine, which was employed extensively by Nazi Germany. Statistically, the Enigma machine sent the symbols X and Z Fig. (3.8) according to the following probabilities:
 
 $$
+
 P(X) = \frac{2}{9} \\ 
 \\ 
 P(Z) = \frac{7}{9}
+
 $$
 
 <table align='center'>
@@ -637,37 +668,46 @@ A distribution describes how the values of a random variable are spread or distr
 
 *Expectations*
 
-The expectation of a random variable $X$, written $E[X]$  is the average of all the values the random variable can take on, each weighted by the probability that the random variable will take on that value.
+The expectation of a random variable $X $, written $ E[X]$  is the average of all the values the random variable can take on, each weighted by the probability that the random variable will take on that value.
 
 For discrete variables:
 
 $$
+
 E_{X~P}[f(x)] = \sum_{x}P(x)f(x)
+
 $$
+
 For continuous variables:
 
 $$
+
 E_{X~P}[f(x)] = \int p(x)f(x)dx
+
 $$
 
 *Variance*
 
-The variance gives a measure of how much the values of a function of a random variable $x$vary as we sample different values of$x$ from its probability distributions. Variance quantifies how much the values of the variable differ from the expected value (mean).
+The variance gives a measure of how much the values of a function of a random variable $x $ vary as we sample different values of$x$ from its probability distributions. Variance quantifies how much the values of the variable differ from the expected value (mean).
 
 $$
+
 \text{Var}(f(x)) = E\left[(f(x) - E[f(x)])^2\right]
+
 $$
 
 Low variance means the values of $f(x)$  cluster near their expected value.
 
 *PMFs and CDFs*
 
-- Probability Mass Function (PMF): A PMF is used to describe the distribution of a discrete random variable. It specifies the probability of each possible value of the random variable. For a discrete random variable $X$, the PMF $P(X = x)$gives the probability that$X$takes the value$x$.
+- Probability Mass Function (PMF): A PMF is used to describe the distribution of a discrete random variable. It specifies the probability of each possible value of the random variable. For a discrete random variable $X $, the PMF $ P(X = x)$gives the probability that $ X$takes the value $ x$.
 
-- Cumulative Distribution Function (CDF): A CDF describes the probability that a random variable will take a value less than or equal to a certain threshold. For a random variable $X$, the CDF $F(x)$is defined as:
+- Cumulative Distribution Function (CDF): A CDF describes the probability that a random variable will take a value less than or equal to a certain threshold. For a random variable $X $, the CDF $ F(x)$is defined as:
 
 $$
+
 F(x) = P(X \leq x)
+
 $$
 
 *Support*
@@ -685,7 +725,7 @@ The support of a random variable is the set of values that the variable can take
 
 To be a pdf a function $p$  must have following properties:
 
-- The domain of $p$must be the set of all possible states of$x$-$\forall x \in x, p(x) \ge 0$, Note here we don't require$p(x) \le 1$-$\int p(x)dx = 1$ 
+- The domain of $p $ must be the set of all possible states of$x $-$\forall x \in x, p(x) \ge 0 $, Note here we don't require$ p(x) \le 1 $-$\int p(x)dx = 1$ 
 
 </details>
 
@@ -699,31 +739,45 @@ To be a pdf a function $p$  must have following properties:
 - Linearity of expectation
 
 $$
+
 E[aX + b] = aE[X] + b
+
 $$
-Where $a$and$b$  are constants and not random variables.
+
+Where $a $ and$b$  are constants and not random variables.
 
 -  Expectation of the Sum of Random Variables
 
 $$
+
 E[X+Y] = E[X] + E[Y]
+
 $$
-Note that this is true irrespective of relationship between $X$and$Y$.
+
+Note that this is true irrespective of relationship between $X $ and$Y$.
 
 - Law of Unconcious Statistician(LOTUS)
 
 $$
+
 E[g(X)] = \sum_{x}g(x)P(X = x)
+
 $$
+
 We can use this to calculate $E[X^2]$,
 
 $$
+
 E[X^2] = \sum_{x}x^{2}P(X=x)
+
 $$
+
 - Expectation of constants
 
 $$
+
 E[a] = a
+
 $$
 
 </details>
@@ -750,7 +804,7 @@ Yes, a Probability Density Function (PDF) can be either bounded or unbounded.
 
 *Example*
 
-A PDF is unbounded if it can reach arbitrarily large values, especially over narrow intervals. For example, the PDF $f(x) = \frac{2}{3}x^{-1/3}$for$ 0 < x < 1$is unbounded as$ x$  approaches zero, yet it still integrates to 1 over its domain, making it a valid PDF.
+A PDF is unbounded if it can reach arbitrarily large values, especially over narrow intervals. For example, the PDF $f(x) = \frac{2}{3}x^{-1/3}$ for $ 0 < x < 1$ is unbounded as $ x$  approaches zero, yet it still integrates to 1 over its domain, making it a valid PDF.
 
 </details>
 
@@ -761,15 +815,20 @@ A PDF is unbounded if it can reach arbitrarily large values, especially over nar
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Suppose $X$is a random variable with$E[X] = \mu$,
+Suppose $X $ is a random variable with$E[X] = \mu$,
 
 $$
+
 \text{Var}(X) = E[(X - \mu)^2]
+
 $$
+
 This is the average distance of a sample from the distribution to the mean. We can further simplify the above expressions with some workaround,
 
 $$
+
 \text{Var}(X) = E[X^2] - E[X]^2
+
 $$
 
 </details>
@@ -792,7 +851,7 @@ Multi-model refers to a dataset (variable) in which there is more than one mode,
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-A log probability $\log{P(E)}$is simply the log function applied to a probability$ P(E)$.
+A log probability $\log{P(E)}$ is simply the log function applied to a probability $ P(E)$.
 
 Benefits of using log probability:
 
@@ -826,14 +885,16 @@ Statistical moments are additional descriptors of a curve/distribution. Moments 
 - `Scale` -  The scale refers to how spread out a distribution is. Scale stretches or compresses a distribution along the x-axis.
 - `Shape` - The shape of a distribution refers to its overall geometry: is the distribution bimodal, asymmetric, heavy-tailed?
 
-The $k$th moment of a function$f(x)$about a non-random value$ c$  is:
+The $k $ th moment of a function$f(x)$ about a non-random value $ c$  is:
 
 $$
+
 E[(X - c)^k] = \int_{-\infty}^{\infty} (x - c)^k f(x) dx
+
 $$
 
 This generalization allows us to make an important distinction: 
-- a raw moment is a moment about the origin $(c=0)$- a central moment is a moment about the distribution’s mean$(c=E[X])$First five moments in order from$ 0$th to$ 4$  th moments: `total mass`, `mean`, `variance`, `skewness`, and `kurtosis`. 
+- a raw moment is a moment about the origin $(c=0)$- a central moment is a moment about the distribution’s mean $(c=E[X])$ First five moments in order from $ 0$ th to $ 4$  th moments: `total mass`, `mean`, `variance`, `skewness`, and `kurtosis`. 
 
 - <b>Zeroth Moment(total mass)</b>: The zeroth moment is simply the constant value of 1. It doesn't provide much information about the distribution itself but is often used in mathematical contexts.
 
@@ -841,6 +902,7 @@ This generalization allows us to make an important distinction:
 
 $$
 $\mu = \frac{1}{n} \sum_{i=1}^{n} x_i
+
 $$
 $ 
 
@@ -848,21 +910,27 @@ Where:
 -
 
 $$
+
 \mu
+
 $$
 
   (mu) is the mean.
 -
 
 $$
+
 n
+
 $$
 
   is the number of data points.
 -
 
 $$
+
 x_i
+
 $$
 
   represents individual data points.
@@ -871,6 +939,7 @@ $$
 
 $$
 $\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2
+
 $$
 $ 
 
@@ -880,12 +949,17 @@ Where:
 - <b>3rd Moment(Skewness)</b> - The third moment is a measure of the skewness of the distribution. It indicates whether the distribution is skewed to the left (negatively skewed) or to the right (positively skewed). 
 
 $$
+
 \[Skewness = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^3\]
+
 $$
+
 - <b>4th Moment(Kurtosis)</b> - The fourth moment measures the kurtosis of the distribution. Kurtosis indicates whether the distribution is more or less peaked (leptokurtic or platykurtic) compared to a normal distribution.
 
 $$
+
 \[Kurtosis = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \mu}{\sigma}\right)^4\]
+
 $$
 
 </details>
@@ -919,7 +993,7 @@ Independent repeated trials of an experiment with exactly two possible outcomes 
 
 ---
 
-### Q: Suppose $X$is a random variable following bernoulli distribution. Express the following for$X$.
+### Q: Suppose $X $ is a random variable following bernoulli distribution. Express the following for$X$.
 
 - Support 
 - PMF Equation
@@ -930,7 +1004,7 @@ Independent repeated trials of an experiment with exactly two possible outcomes 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- Support : $x$is either$0$and$ 1$- PMF Equation$$ 
+- Support : $x $ is either$0 $ and$ 1 $- PMF Equation$$ 
 
 P(X = x) = 
 \begin{cases}
@@ -939,19 +1013,24 @@ p & \text{if } x = 1, \\
 \end{cases}
 
 $$
+
 - Smooth PMF
+
 $$
+
 P(X = x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}.$$- Expectation$$E[X] = p$$- Variance
 
 $$
+
 \text{Var}(X) = p(1-p)
+
 $$
 
 </details>
 
 ---
 
-### Q: Suppose $X$is a random variable following binomial distribution. Express the following for$X$.
+### Q: Suppose $X $ is a random variable following binomial distribution. Express the following for$X$.
 
 - Support 
 - PMF Equation
@@ -964,19 +1043,21 @@ $$
 - Support : $x \in {0,1,...,n}$- PMF Equation$$P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k = 0, 1, 2, \ldots, n.$$- Expectation$$E[X] = n.p$$- Variance
 
 $$
+
 \text{Var}(X) = n.p.(1-p)
+
 $$
 
 </details>
 
 ---
 
-### Q: The binomial distribution is often used to model the probability that $k$out of a group of$n$objects bare a specific characteristic. Define what is meant by a binomial random variable$X$.
+### Q: The binomial distribution is often used to model the probability that $k $ out of a group of$n $ objects bare a specific characteristic. Define what is meant by a binomial random variable$X$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `The binomial distribution is often used to model the probability that $k$out of a group of$n$`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `The binomial distribution is often used to model the probability that $k $ out of a group of$n$`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -986,13 +1067,15 @@ $$
 ### Q: What does the following shorthand stand for?
 
 $$
+
 X ∼ \text{Binomial}(n, p)
+
 $$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-It means $X$follows the binomial distribution with$n$trials, each of which have a probability$p$  of success.
+It means $X $ follows the binomial distribution with$n $ trials, each of which have a probability$p$  of success.
 
 <table align='center'>
 <tr>
@@ -1012,7 +1095,9 @@ It means $X$follows the binomial distribution with$n$trials, each of which have 
 ### Q: Find the probability mass function (PMF) of the following random variable:
 
 $$
+
 X ∼ Binomial(n, p)
+
 $$
 
 <details>
@@ -1021,14 +1106,16 @@ $$
 The probability mass function (PMF) of the binomial distribution is given by:
 
 $$
+
 P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}
+
 $$
 
 where:
 - $n$  is the number of trials,
 - $k$  is the number of successes,
 - $p$  is the probability of success on each trial,
-- $\binom{n}{k}$is the binomial coefficient, calculated as$\frac{n!}{k!(n - k)!}$.
+- $\binom{n}{k}$ is the binomial coefficient, calculated as $\frac{n!}{k!(n - k)!}$.
 
 <table align='center'>
 <tr>
@@ -1041,7 +1128,7 @@ where:
 </tr>
 </table>
 
-The PMF gives the probability of having exactly $k$successes in$n$independent Bernoulli trials with success probability$p$.
+The PMF gives the probability of having exactly $k $ successes in$n $ independent Bernoulli trials with success probability$p$.
 
 </details>
 
@@ -1083,47 +1170,63 @@ The PMF gives the probability of having exactly $k$successes in$n$independent Be
 
 ---
 
-### Q: Derive the expectation and variance of a the binomial random variable $X ∼ Binomial(n, p)$in terms of$ p$and$ n$.
+### Q: Derive the expectation and variance of a the binomial random variable $X ∼ Binomial(n, p)$ in terms of $ p$ and $ n$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Here we can use the fact that binomial is the sum of bernoulli indicator random variables $X = \sum_{i=1}^{n}Y_i$- Expectation of$X ∼ Binomial(n, p)$:$X$is the sum of$n$independent Bernoulli trials, each with a probability of success$p$. We can write$X$as:$$X = X_1 + X_2 + \ldots + X_n,$$where each $X_i$is a Bernoulli random variable with:$$P(X_i = 1) = p \quad \text{and} \quad P(X_i = 0) = 1 - p.$$The expectation of a Bernoulli random variable $X_i$is:$$E[X_i] = 1 \cdot p + 0 \cdot (1 - p) = p.$$Using the linearity of expectation:
+Here we can use the fact that binomial is the sum of bernoulli indicator random variables $X = \sum_{i=1}^{n}Y_i $- Expectation of$ X ∼ Binomial(n, p)$: $ X$is the sum of $ n$independent Bernoulli trials, each with a probability of success $ p$. We can write $ X$as:$$X = X_1 + X_2 + \ldots + X_n,$$where each $ X_i $is a Bernoulli random variable with:$$P(X_i = 1) = p \quad \text{and} \quad P(X_i = 0) = 1 - p.$$The expectation of a Bernoulli random variable $ X_i $is:$$E[X_i] = 1 \cdot p + 0 \cdot (1 - p) = p.$$Using the linearity of expectation:
 
 $$
+
 E[X] = E[X_1 + X_2 + \ldots + X_n] = E[X_1] + E[X_2] + \ldots + E[X_n] = n \cdot p.
+
 $$
 
 $$
+
 \boxed{E[X] = n \cdot p.}
+
 $$
+
 - Variance of $X ∼ Binomial(n, p)$  :
 
 The variance of a Bernoulli random variable $X_i$ is:
 
 $$
+
 \text{Var}(X_i) = E[X_i^2] - (E[X_i])^2.
-$$
-
-Since $X_i$can only be 0 or 1,$X_i^2 = X_i$, so:
 
 $$
+
+Since $X_i $ can only be 0 or 1,$X_i^2 = X_i$, so:
+
+$$
+
 E[X_i^2] = E[X_i] = p.
+
 $$
+
 Thus, the variance of $X_i$ is:
 
 $$
+
 \text{Var}(X_i) = p - p^2 = p(1 - p).
+
 $$
 
 Since the $X_i$'s are independent, the variance of their sum is the sum of their variances:
 
 $$
+
 \text{Var}(X) = \text{Var}(X_1 + X_2 + \ldots + X_n) = \text{Var}(X_1) + \text{Var}(X_2) + \ldots + \text{Var}(X_n) = n \cdot p(1 - p).
+
 $$
 
 $$
+
 \boxed{\text{Var}(X) = n \cdot p(1 - p).}
+
 $$
 
 </details>
@@ -1147,7 +1250,9 @@ Poisson distribution gives the probability of a given number of events in a fixe
 *Notations*
 
 $$
+
 X ~ Poi(\lambda)
+
 $$
 
 *Parameters*
@@ -1155,12 +1260,17 @@ $$
 It is constant average rate.
 
 $$
+
 \lambda \in {0, 1, ...}
+
 $$
+
 *Support*$$x \in {0,1,...}$$*PMF Expression*$$P(X = x) = \frac{\lambda^{x}e^{-\lambda}}{x!}$$*Expectation*$$E[X] = \lambda$$*Variance*
 
 $$
+
 \text{Var}(X) = \lambda
+
 $$
 
 </details>
@@ -1192,7 +1302,7 @@ The Categorical Distribution is a fancy name for random variables which takes on
 
 ### Q: Proton therapy (PT) is a widely adopted form of treatment for many types of cancer.
 
-A PT device which was not properly calibrated is used to treat a patient with pancreatic cancer (Fig. 3.1). As a result, a PT beam randomly shoots $200$particles independently and correctly hits cancerous cells with a probability of$ 0.1$.
+A PT device which was not properly calibrated is used to treat a patient with pancreatic cancer (Fig. 3.1). As a result, a PT beam randomly shoots $200 $ particles independently and correctly hits cancerous cells with a probability of$ 0.1$.
 
 <table align='center'>
 <tr>
@@ -1234,19 +1344,25 @@ A PT device which was not properly calibrated is used to treat a patient with pa
 This rare outbreak, underlined the challenge medical teams are facing in containing epidemics. A junior data scientist at the center for disease control (CDC) models the possible spread and containment of the Ebola virus using a numerical simulation. He knows that out of a population of k humans (the number of trials), x are carriers of the virus (success in statistical jargon). He believes the sample likelihood of the virus in the population, follows a Binomial distribution:
 
 $$
+
 L(\gamma | y) = (n, y)\gamma^y(1-\gamma)^{n-y}, \ \gamma \epsilon [0, 1], \  y = 1,2,...n
+
 $$
+
 As the senior researcher in the team, you guide him that his parameter of interest is $γ$, the proportion of infected humans in the entire population. The expectation and variance of the binomial distribution are:
 
 $$
+
 E(y|γ, n) = nγ, V (y|γ, n) = nγ(1 − γ)
+
 $$
+
 Answer the following; for the likelihood function of the form $L_x(γ)$:
 1. Find the log-likelihood function $l_x(γ) = ln L_x(γ)$.
 2. Find the gradient of $l_x(γ)$.
 3. Find the Hessian matrix $H(γ)$.
 4. Find the Fisher information $I(γ)$.
-5. In a population spanning $10,000$individuals,$ 300$  were infected by Ebola. Find the MLE for γ and the standard error associated with it.
+5. In a population spanning $10,000 $ individuals,$ 300$  were infected by Ebola. Find the MLE for γ and the standard error associated with it.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1276,12 +1392,17 @@ Answer the following; for the likelihood function of the form $L_x(γ)$:
 ### Q: Prove that the family of beta distributions is conjugate to a binomial likelihood, so that if a prior is in that family then so is the posterior. That is, show that:
 
 $$
+
 x ∼ Ber(γ), γ ∼ B(α,β) ⇒ γ|x ∼ B(α′,β′)
+
 $$
+
 For instance, for h heads and t tails, the posterior is:
 
 $$
+
 B(h + α,t + β)
+
 $$
 
 <details>
@@ -1308,8 +1429,8 @@ $$
 </table>
 
 The chance of firing, γ, is the same for each hidden neuron. Using the formal definition, calculate the likelihood function of each of the following cases:
-1. The hidden neuron is distributed according to $X ∼ binomial(n, γ)$random variable and fires with a probability of$γ$. There are 100 neurons and only 20 are fired.
-2. The hidden neuron is distributed according to $X ∼ Uniform(0,γ)$random variable and fires with a probability of$γ$.
+1. The hidden neuron is distributed according to $X ∼ binomial(n, γ)$ random variable and fires with a probability of $γ$. There are 100 neurons and only 20 are fired.
+2. The hidden neuron is distributed according to $X ∼ Uniform(0,γ)$ random variable and fires with a probability of $γ$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1321,7 +1442,7 @@ The chance of firing, γ, is the same for each hidden neuron. Using the formal d
 
 ---
 
-### Q: Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$.$X$  indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.
+### Q: Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$. $ X$  indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.
 
 <table align='center'>
 <tr>
@@ -1337,7 +1458,7 @@ The chance of firing, γ, is the same for each hidden neuron. Using the formal d
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$.$X$  indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Your colleague, a veteran of the Deep Learning industry, comes up with an idea for for a BNN layer entitled OnOffLayer. He suggests that each neuron will stay on (the other state is off) following the distribution $f(x) = e^{−x} \ for \ x > 0 \ and \ f(x) = 0 \ otherwise (Fig. 3.11)$. $ X$  indicates the time in seconds the neuron stays on. In a BNN, 200 such neurons are activated independently in said OnOffLayer. The OnOffLayer is set to off (e.g. not active) only if at least 150 of the neurons are shut down. Find the probability that the OnOffLayer will be active for at least 20 seconds without being shut down.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -1382,7 +1503,7 @@ A new data scientist in your team suggests the following procedure for a Dropout
 
 During the training of a neural network, the Dropout layer randomly drops out outputs of the previous layer, as indicated in (Fig. 3.12). Here, for illustration purposes, all two neurons are dropped as depicted by the crossed-out hidden nodes $H_n$.
 
-You are interested in the proportion θ of dropped-out neurons. Assume that the chance of drop-out, $θ$, is the same for each neuron (e.g. a uniform prior for$θ$). Compute the posterior of$θ$.
+You are interested in the proportion θ of dropped-out neurons. Assume that the chance of drop-out, $θ$, is the same for each neuron (e.g. a uniform prior for $θ$). Compute the posterior of $θ$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1397,7 +1518,9 @@ You are interested in the proportion θ of dropped-out neurons. Assume that the 
 ### Q: A new data scientist in your team, who was formerly a Quantum Physicist, suggests the following procedure for a Dropout layer entitled Quantum Drop which is based on Quantum principles and the Maxwell Boltzmann distribution. In the Maxwell-Boltzmann distribution, the likelihood of finding a particle with a particular velocity v is provided by:
 
 $$
+
 n(v)dv = \frac{4\pi N}{V}(\frac{m}{2\pi kT})^{\frac{3}{2}}v^2e^{-\frac{mv^2}{2kT}}dv
+
 $$
 
 <table align='center'>
@@ -1485,7 +1608,9 @@ A random variable can be said to be drawn from a uniform distribution if it exhi
 - Support : $x \in [\alpha, \beta]$- PDF expression$$P(X = x_i) = \frac{1}{n} \text{ for each } x_i$$- Expectations$$E[X] = \frac{1}{2}(\alpha + \beta)$$- Variance
 
 $$
+
 Var(X) = \frac{1}{12}(\beta - \alpha)^2
+
 $$
 
 </details>
@@ -1497,10 +1622,12 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Zero, For a continuous random variable, such as a uniform random variable $X$that is uniformly distributed over the interval$[0,1]$the probability of$ X$  taking any specific single value is technically zero.
+Zero, For a continuous random variable, such as a uniform random variable $X $ that is uniformly distributed over the interval$[0,1]$ the probability of $ X$  taking any specific single value is technically zero.
 
 $$
+
 P(X = x) = 0
+
 $$
 
 </details>
@@ -1523,12 +1650,17 @@ $$
 *Notation*
 
 $$
+
 X ~ Exp(\lambda)
+
 $$
+
 *Parameters*$$\lambda \in {0,1,..}$$*Support*$$x \in R^{+}$$*PDF Expression*$$f(x) = \lambda e^{-\lambda x}$$*CDF Equation*$$F(x) = 1 - e^{-\lambda x}$$*Expectation*$$E[X] = \frac{1}{\lambda}$$*Variance*
 
 $$
+
 Var[X] = \frac{1}{\lambda^2}
+
 $$
 
 </details>
@@ -1540,15 +1672,20 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Let $Y$be the years until the next major earthquake. Because$Y$measures time until the next event it fits the description of an exponential random variable:$Y ~ Exp(\lambda = 0.002)$ 
+Let $Y $ be the years until the next major earthquake. Because$Y $ measures time until the next event it fits the description of an exponential random variable:$Y ~ Exp(\lambda = 0.002)$ 
 
 $$
+
 P(Y < 4) = F_{Y}(4) = 1 - e^{-lambda.y}
+
 $$
 
 $$
+
 P(Y < 4) = 1 - e^{-0.002*4} = 0.008
+
 $$
+
 So the probability of major earthquake in next 4 years is $0.008$ 
 
 </details>
@@ -1564,24 +1701,30 @@ Yes, the values of a Probability Density Function (PDF) can be greater than 1.
 
 *PDF Values Are Not Probabilities*
 
-For continuous random variables, the probability of the variable taking any exact value, $P(X = x)$, is always 0. Instead, the PDF, denoted as$f(x)$, represents the density of probability around that point, not the probability itself.
+For continuous random variables, the probability of the variable taking any exact value, $P(X = x)$, is always 0. Instead, the PDF, denoted as $ f(x)$, represents the density of probability around that point, not the probability itself.
 
 *Probability from a PDF*
 
 To find the probability of a random variable falling within a certain range, we need to integrate the PDF over that range.
 
 $$
+
 P(a \leq X \leq b) = \int_{a}^{b} f(x) \, dx
+
 $$
-Here, $P(a \leq X \leq b)$is always between$0$and$1$ 
+
+Here, $P(a \leq X \leq b)$ is always between $0$ and $1$ 
 
 *Example*
 
-Consider a PDF defined as $f(x) = 5$for$ x \in [0, 1/5]$and 0 otherwise. Here,$ f(x) \geq 0$, and the integral over its support is:
+Consider a PDF defined as $f(x) = 5 $ for$ x \in [0, 1/5]$ and 0 otherwise. Here, $ f(x) \geq 0$, and the integral over its support is:
 
 $$
+
 \int_{0}^{1/5} 5 \, dx = 5 \times \frac{1}{5} = 1
+
 $$
+
 This is a valid PDF even though $f(x) = 5$  within the interval.
 
 </details>
@@ -1593,27 +1736,31 @@ This is a valid PDF even though $f(x) = 5$  within the interval.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The probability density function (PDF) of a normal distribution with mean $\mu$and variance$\sigma^2$  is given by:
+The probability density function (PDF) of a normal distribution with mean $\mu $ and variance$\sigma^2$  is given by:
 
 $$
+
 f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2 \sigma^2}\right)
+
 $$
 
-- Expectation (Mean): $\mu$- Variance: $\sigma^2$ 
+- Expectation (Mean): $\mu $- Variance: $\sigma^2$ 
 
 </details>
 
 ---
 
-### Q: If $X$is a normal such that$X ~ N(\mu, \sigma^2)$and$ Y$is a linear transform of$ X$such that$ Y = aX + b$, what will be pdf of $Y$?
+### Q: If $X $ is a normal such that$X ~ N(\mu, \sigma^2)$ and $ Y$ is a linear transform of $ X$ such that $ Y = aX + b$, what will be pdf of $ Y$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$Y$will have also a normal pdf with$\mu = a\mu_X$and$Var(Y) = a^2\sigma^2$ 
+$Y $ will have also a normal pdf with$\mu = a\mu_X $ and$Var(Y) = a^2\sigma^2$ 
 
 $$
+
 Y ~ N(a\mu+b, a^2\sigma^2)
+
 $$
 
 </details>
@@ -1625,9 +1772,9 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The cumulative distribution function (CDF) of a normal distribution gives the probability that a random variable $X$takes on a value less than or equal to$x$. 
+The cumulative distribution function (CDF) of a normal distribution gives the probability that a random variable $X $ takes on a value less than or equal to$x$. 
 
-- CDF of Normal Distribution: $F_X(x) = \Phi\left(\frac{x - \mu}{\sigma}\right)$- CDF of Standard Normal Distribution:$\Phi(z) = \frac{1}{2} \left[1 + \text{erf}\left(\frac{z}{\sqrt{2}}\right)\right]$ 
+- CDF of Normal Distribution: $F_X(x) = \Phi\left(\frac{x - \mu}{\sigma}\right)$- CDF of Standard Normal Distribution: $\Phi(z) = \frac{1}{2} \left[1 + \text{erf}\left(\frac{z}{\sqrt{2}}\right)\right]$ 
 
 </details>
 
@@ -1640,18 +1787,18 @@ The cumulative distribution function (CDF) of a normal distribution gives the pr
 
 The standard normal distribution is a special case of the normal distribution. It has the following characteristics:
 
-- $\mu = 0$-$\sigma^2 = 1$ 
+- $\mu = 0 $-$\sigma^2 = 1$ 
 
 </details>
 
 ---
 
-### Q: You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than$0.5 $?
+### Q: You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than $0.5 $?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than$0.5 $?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `You’re drawing from a random variable that is normally distributed, $X∼N(0,1)$, once per day. What is the expected number of days that it takes to draw a value that’s higher than $0.5 $?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -1663,8 +1810,8 @@ The standard normal distribution is a special case of the normal distribution. I
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- Use the Poisson approximation when $n$is large (>20) and$p$  is small (<0.05).
-- Use the Normal approximation when $n$is large (>20), and$p$  is mid-ranged.
+- Use the Poisson approximation when $n $ is large (>20) and$p$  is small (<0.05).
+- Use the Normal approximation when $n $ is large (>20), and$p$  is mid-ranged.
     - $np(1-p) > 10$ 
 
 </details>
@@ -1719,8 +1866,11 @@ We can try following methods to accomplished that:
 4. The Fisher Information for a continuous random variable:
 
 $$
+
 I(γ) = −Eγ[Φ′(X|γ)]
+
 $$
+
 Find the Fisher Information $I(γ)$  for the following distributions:
 1. The Bernoulli Distribution $X ∼ B(1, γ)$.
 2. The Poisson Distribution $X ∼ Poiss(θ)$.
@@ -1759,7 +1909,9 @@ Find the Fisher Information $I(γ)$  for the following distributions:
 Covariance is a quantitative measure of the extent to which the deviation of one variable from its mean matches the deviation of the other from its mean.
 
 $$
+
 \text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])]
+
 $$
 
 </details>
@@ -1771,10 +1923,12 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-If two random variables $X$and$Y$ are independent, than their covariance must be 0.$$Cov(X, Y) = E[XY] - E[Y]E[X]$$Using product of expectations for independent RV
+If two random variables $X $ and$Y $ are independent, than their covariance must be 0.$$Cov(X, Y) = E[XY] - E[Y]E[X]$$Using product of expectations for independent RV
 
 $$
+
 E[X]E[Y] - E[Y]E[X] = 0
+
 $$
 
 </details>
@@ -1792,25 +1946,32 @@ Independence and zero covariance are related but not the same. Independence impl
 
 Lets explain this with an example:
 
-Consider two random variables $X$and$Y$  defined as follows:
+Consider two random variables $X $ and$Y$  defined as follows:
 
-- A random variable $𝑋$with$𝐸[𝑋]=0$and$𝐸[𝑋^3]=0$, e.g. normal random variable with zero mean. 
+- A random variable $𝑋$ with $𝐸[𝑋]=0$ and $𝐸[𝑋^3]=0$, e.g. normal random variable with zero mean. 
 - Take $𝑌=𝑋^2$.
 
-Now it is clear the $X$and$Y$ are dependent, now lets look the covariance of both
+Now it is clear the $X $ and$Y$ are dependent, now lets look the covariance of both
 
 $$
+
 𝐶𝑜𝑣(𝑋,𝑌) = 𝐸[𝑋𝑌]−𝐸[𝑋]⋅𝐸[𝑌]
+
 $$
 
 $$
+
 𝐶𝑜𝑣(𝑋,𝑌) = 𝐸[𝑋.X^2]−𝐸[𝑋]⋅𝐸[X^2]
+
 $$
 
 $$
+
 𝐶𝑜𝑣(𝑋,𝑌) = 0
+
 $$
-Now $Cov(X, Y)$coming as zero and hence depicting the$X$and$Y$  are independent which is not the case.
+
+Now $Cov(X, Y)$ coming as zero and hence depicting the $X$ and $Y$  are independent which is not the case.
 
 </details>
 
@@ -1856,7 +2017,7 @@ The sign of co-variance decides how two random variables vary together
 
 ---
 
-### Q: Suppose you are conducting an experiment for studying behavior of two random variables $X$and$Y$and you found out$Cov(X, Y) = 100$. Does it mean they are strongly correlated?
+### Q: Suppose you are conducting an experiment for studying behavior of two random variables $X $ and$Y $ and you found out$Cov(X, Y) = 100$. Does it mean they are strongly correlated?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1877,12 +2038,17 @@ Covariance is scale variant. It means its value is sensitive to scale of the mea
 We know that:
 
 $$
+
 Var(X) = (E(X - E(X))^2)
+
 $$
+
 Also$$Cov(X, X) = E((X-E(X))(X - E(X)))$$on further simplifications, we get:
 
 $$
+
 Cov(X, X) = E((X-E(X))^2) = Var(X)
+
 $$
 
 </details>
@@ -1897,26 +2063,31 @@ $$
 From definition of Covariance:
 
 $$
+
 Cov(X, Y) = E((X - E(X))(Y - E(Y)))
+
 $$
+
 on simplification,$$Cov(X, Y) = E(XY - YE(X) - E(Y)X + E(X)E(Y))$$after taking outer expectations:$$Cov(X, Y) = E(XY) - E(YE(X)) - E(E(Y)X) + E(E(X)E(Y))$$Since E(X) is a constant since we are taking the average and expectation of a constant is just the same constant.$$E(c) = c$$Using the above expression:$$Cov(X, Y) = E(XY) - E(X)E(Y) - E(X)E(Y) + E(X)E(Y)$$after canceling out terms:
 
 $$
+
 Cov(X, Y) = E(XY) - E(X)E(Y)
+
 $$
 
 </details>
 
 ---
 
-### Q: What will be the value of $Cov(X, c) where$X$is a random variable and$c$  is a constant value?
+### Q: What will be the value of $Cov(X, c) where $ X$is a random variable and $ c$  is a constant value?
 
-1. $Cov(X)$2.$cCov(X)$3.$c^2Cov(X)$4.$0$ 
+1. $Cov(X)$2. $ cCov(X)$3. $ c^2Cov(X)$4. $0$ 
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$0$is the right answer.$ Cov(X, c)$encodes the information of how X and Y varies together. Since$ c$is a constant value so whatever value$ X$takes the value of$ c$  will remain unchanged.
+$0 $ is the right answer.$ Cov(X, c)$ encodes the information of how X and Y varies together. Since $ c$ is a constant value so whatever value $ X$ takes the value of $ c$  will remain unchanged.
 
 </details>
 
@@ -1929,8 +2100,8 @@ $0$is the right answer.$ Cov(X, c)$encodes the information of how X and Y varies
 
 Properties of Covariance:
 
-- $Cov(X, Y) = Cov(Y, X)$-$Cov(X, X) = Var(X)$-$Cov(X, c) = 0$-$Cov(X, Y+Z) = Cov(X, Y) + Cov(X, Z)$-$Cov(X, Y) = 0$  if X and Y are independent.
-- $Cov(c) = c$Here$X$, $Y$and$Z$ are random variables and$c$  is a constant.
+- $Cov(X, Y) = Cov(Y, X)$-$ Cov(X, X) = Var(X)$-$ Cov(X, c) = 0 $-$ Cov(X, Y+Z) = Cov(X, Y) + Cov(X, Z)$-$ Cov(X, Y) = 0$  if X and Y are independent.
+- $Cov(c) = c $ Here$X $, $ Y $and$ Z $ are random variables and$ c$  is a constant.
 
 </details>
 
@@ -1944,7 +2115,9 @@ Properties of Covariance:
 Correlation between two random variables, $\rho(X, Y)$  is the covariance of the two variables normalized by the standard deviation of each variable.
 
 $$
+
 \rho(X, Y) = \frac{Cov(X, Y)}{\sqrt{Var(X)Var(Y)}}
+
 $$
 
 </details>
@@ -1957,19 +2130,19 @@ $$
 <summary><b>💡 Show Answer</b></summary>
 
 - Correlation is scale independent while covariance is scale dependent and hence harder to interpret and compare
-- Correlation is bounded i.e it is always between $-1$and$ 1$ 
+- Correlation is bounded i.e it is always between $-1 $ and$ 1$ 
 - Covariance only measure directional relationship between two variables but correlation also measures strength and the direction both
 
 </details>
 
 ---
 
-### Q: If you are analyzing two random variables $X$and$Y$and find that the correlation$\rho(X, Y) = 0$, what does this indicate?
+### Q: If you are analyzing two random variables $X $ and$Y $ and find that the correlation$\rho(X, Y) = 0$, what does this indicate?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Absence of linear relationship between $X$and$Y$ 
+Absence of linear relationship between $X $ and$Y$ 
 
 </details>
 
@@ -1987,33 +2160,48 @@ Lets look at the expression of correlation(r) to establish the above statement.
 Suppose we have two variables X and Y and we want to investigate the relationship between them.
 
 $$
+
 correlation(r_{XY}) = \frac{covariance(X, Y)}{{\sigma_X}{\sigma_Y}}
-$$
-Now let's define two vectors $\arrow{u}$and$\arrow{v}$where$\arrow{u} = [u_1, u_2, ..., u_n]$and$\arrow{v} = [v_1, v_2, ..., v_n]$ where elements are the deviation from the mean.$$\u_i = x_i - \hat{x} \quad \v_i = y_i - \hat{y}$$We can now write the sample covariance and the sample variances in vector notation as:$$Covariance(u, v) = \frac{1}{n-1}\sum_{i=1}^n u_i v_i = \frac{1}{n-1}u \cdot v$$similarly variance in X and Y can be expressed in vectorized form:
 
 $$
+
+Now let's define two vectors $\arrow{u}$ and $\arrow{v}$ where $\arrow{u} = [u_1, u_2, ..., u_n]$ and $\arrow{v} = [v_1, v_2, ..., v_n]$ where elements are the deviation from the mean.$$\u_i = x_i - \hat{x} \quad \v_i = y_i - \hat{y}$$We can now write the sample covariance and the sample variances in vector notation as:$$Covariance(u, v) = \frac{1}{n-1}\sum_{i=1}^n u_i v_i = \frac{1}{n-1}u \cdot v$$similarly variance in X and Y can be expressed in vectorized form:
+
+$$
+
 Var(X) = \frac{1}{n-1}\sum_{i=1}^n {u_i}^{2} = \frac{1}{n-1} \| \mathbf{u} \|^2
+
 $$
 
 $$
+
 Var(Y) = \frac{1}{n-1}\sum_{i=1}^n {v_i}^{2} = \frac{1}{n-1} \| \mathbf{v} \|^2
-$$
-Now we can write correlation expression using vectors $u$and$v$,
 
 $$
+
+Now we can write correlation expression using vectors $u $ and$v$,
+
+$$
+
 r_{XY} = \frac{Covariance(u, v)}{\sqrt{Var(X)}{Var(Y)}}
+
 $$
 
 $$
+
 r_{XY} = \frac{\mathbf{u} \cdot \mathbf{v}}{\| \mathbf{u} \| \| \mathbf{v} \|}
+
 $$
+
 From cosine rule, we get
 
 $$
+
 r_{XY} = \cos\theta
+
 $$
 
-Since $-1 <= \cos\theta <= 1$,$r_{XY} is always between -1 and 1$For give$r = 0.3$, we can deduce following conclusions:
+Since $-1 <= \cos\theta <= 1 $,$ r_{XY} is always between -1 and 1 $For give$ r = 0.3$, we can deduce following conclusions:
 
 - Relationship is positive but week.
 - Increasing one variable is resulting in increase in another variable too.
@@ -2034,31 +2222,43 @@ Correlation measures the degree to which there is a linear relationship between 
 *Mathematical expression:*
 
 $$
+
 \rho(X, Y) = \frac{Con(X, Y)}{\sigma_{X} \sigma_{Y}}
+
 $$
 
 *Step-by-step calculation:*
 
-- Compute the mean of $X$and$Y$:
+- Compute the mean of $X $ and$Y$:
 
 $$
+
 \bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i, \quad \bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i
+
 $$
+
 - Calculate the Covariance
 
 $$
+
 \text{Cov}(X, Y) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})
-$$
-
-- Calculate the standard deviation of $X$and$Y$ 
 
 $$
+
+- Calculate the standard deviation of $X $ and$Y$ 
+
+$$
+
 \sigma_X = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2}, \quad \sigma_Y = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (Y_i - \bar{Y})^2}
+
 $$
+
 - Substitute into the Pearson Correlation Formula
 
 $$
+
 r = \frac{\sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum_{i=1}^{n} (X_i - \bar{X})^2} \sqrt{\sum_{i=1}^{n} (Y_i - \bar{Y})^2}}
+
 $$
 
 </details>

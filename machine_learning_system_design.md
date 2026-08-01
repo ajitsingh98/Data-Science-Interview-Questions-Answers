@@ -65,7 +65,7 @@
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Point-in-Time Correct Joins (Time-Travel)**: When constructing training sets from historical events, ensure features for event time $t$only include data recorded strictly before$t$.
+1. **Point-in-Time Correct Joins (Time-Travel)**: When constructing training sets from historical events, ensure features for event time $t $ only include data recorded strictly before$t$.
 2. **Centralized Feature Store**: Use a Feature Store (e.g., Feast, Tecton) that guarantees feature definition parity between offline training and online serving key-value stores.
 3. **Strict Pipeline Isolation**: Fit all transformations (scalers, encoders, target imputation) strictly on training split folds before applying to validation/test splits.
 
@@ -99,7 +99,7 @@ In systems with millions of items (e.g., YouTube, E-commerce):
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Quantization**: Convert FP32 model weights to INT8 precision (up to $4\times$footprint reduction,$2-3\times$  speedup with minimal accuracy loss).
+1. **Quantization**: Convert FP32 model weights to INT8 precision (up to $4\times $ footprint reduction,$2-3\times$  speedup with minimal accuracy loss).
 2. **Knowledge Distillation**: Train a compact "Student" network to mimic outputs of an ensemble "Teacher".
 3. **Graph Optimizations & Engines**: Use ONNX Runtime or TensorRT to fuse operations (e.g., Conv + ReLU fusion).
 4. **Multi-Tier Caching**: Cache top query results in Redis/Memcached.
@@ -115,7 +115,7 @@ In systems with millions of items (e.g., YouTube, E-commerce):
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Covariate Shift**: $P(X)$changes while$ P(Y|X)$  remains constant.
+- **Covariate Shift**: $P(X)$ changes while $ P(Y|X)$  remains constant.
   - *Detection*: Compare input feature distributions over time using Kolmogorov-Smirnov (KS) test or Population Stability Index (PSI).
 - **Concept Drift**: $P(Y|X)$  changes (e.g., user preferences shift post-pandemic).
   - *Detection*: Monitor online metrics (CTR, conversion rate, precision@k) and compare prediction probability distributions vs true feedback.

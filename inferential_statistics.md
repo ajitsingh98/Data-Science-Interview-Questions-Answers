@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -105,7 +104,7 @@ Here, we are using the data to estimate the proportion of all U.S adults who sup
 
 <b>Interval Estimation</b>
 
-Here, we are estimating the mean number of daily sleep hours of college freshman by an interval of values ($6$to$ 7.5$  hours).
+Here, we are estimating the mean number of daily sleep hours of college freshman by an interval of values ($6 $ to$ 7.5$  hours).
 
 </details>
 
@@ -126,9 +125,9 @@ It depends on the type of variable of interest:
 
 ---
 
-### Q: Which of the following statements are true in context of sampling mean $\hat{X}$and population mean$\mu$.
+### Q: Which of the following statements are true in context of sampling mean $\hat{X}$ and population mean $\mu$.
 
-- Both $\hat{X}$and$\mu$  are random varaibles.
+- Both $\hat{X}$ and $\mu$  are random varaibles.
 - Only $\hat{X}$  is a random variable.
 - Both are constant values.
 - Only $\mu$  is random varaible.
@@ -144,12 +143,12 @@ Only $\hat{X}$  is a random variable.
 
 ## Point Estimation
 
-### Q: A study on exercise habits used a random sample of $2,540$college students ($ 1,220$females and$ 1,320$  males).
+### Q: A study on exercise habits used a random sample of $2,540 $ college students ($ 1,220 $ females and$ 1,320$  males).
 
 The study found the following:
 - $818$  of the females in the sample exercise on a regular basis.
 - $924$  of the males in the sample exercise on a regular basis.
-- The average time that the $1742$students who exercise on a regular basis ($ 818 + 924$) spend exercising per week is$4.2$  hours.
+- The average time that the $1742 $ students who exercise on a regular basis ($ 818 + 924 $) spend exercising per week is$4.2$  hours.
 
 1. What is the point estimate for the proportion of all female college students who exercise on a regular basis?
 2. What is the point estimate for the proportion of all college students who exercise on a regular basis?
@@ -161,26 +160,34 @@ The study found the following:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Let $n$be the total sample size and$m$and$f$  denotes number of male and female students respectively.
+Let $n $ be the total sample size and$m $ and$f$  denotes number of male and female students respectively.
 
-1. Since $f = 1220$and number of feamles that do excercise are$ 818$ 
+1. Since $f = 1220 $ and number of feamles that do excercise are$ 818$ 
 
 $$
+
 \hat{p} = \frac{818}{1220}
+
 $$
 
 $$
+
 \hat{p} = 0.67
+
 $$
 
 2. point estimate for the proportion of all college students who exercise on a regular basis($\hat{p}$):
 
 $$
+
 \hat{p} = \frac{818+924}{2540}
+
 $$
 
 $$
+
 \hat{p} = 0.685
+
 $$
 
 3. The mean time that all college students who exercise on a regular basis spend exercising per week
@@ -215,8 +222,8 @@ Sample should be random and the study design should not be flawed.
 
 Which of the following is true regarding x̄, the average number of hours that the 150 sampled students exercise per week?
 - It is an unbiased estimate for $µ$.
-- It is not an unbiased estimate for $µ$and probably underestimates$µ$.
-- It is not an unbiased estimate for $µ$and probably overestimates$µ$.
+- It is not an unbiased estimate for $µ$ and probably underestimates $µ$.
+- It is not an unbiased estimate for $µ$ and probably overestimates $µ$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -250,7 +257,7 @@ The estimate is based on a random sample (and is therefore unbiased) and is also
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The point estimation is simple and intuitive but a little bit problematic. When we estimate $\mu$by the sample mean$\bar{x}$, we almost guaranteed to make some kind of error. Even though we know the values of$\bar{x}$fall around$\mu$, it is very unlikely that $\bar{x}$will fall exactly at$\mu$.
+The point estimation is simple and intuitive but a little bit problematic. When we estimate $\mu $ by the sample mean$\bar{x}$, we almost guaranteed to make some kind of error. Even though we know the values of $\bar{x}$ fall around $\mu$, it is very unlikely that $\bar{x}$ will fall exactly at $\mu$.
 
 </details>
 
@@ -269,38 +276,40 @@ Interval estimation enhances point estimation by supplying information about siz
 
 ---
 
-### Q: Suppose a random sample of size n is taken from a normal population of values for a quantitative variable whose mean ($μ$) is unknown, when the standard deviation ($σ$) is given. A$95%$confidence interval (CI) for$μ$  is:
+### Q: Suppose a random sample of size n is taken from a normal population of values for a quantitative variable whose mean ($μ$) is unknown, when the standard deviation ($σ$) is given. A $95%$ confidence interval (CI) for $μ$  is:
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 $$
+
 (\bar{x} - 1.96\*\frac{\sigma}{\sqrt{n}}, \bar{x} + 1.96\*\frac{\sigma}{\sqrt{n}})
+
 $$
 
 </details>
 
 ---
 
-### Q: How should we interpret the $95%$CI for a population mean($\mu$)?
+### Q: How should we interpret the $95%$ CI for a population mean($\mu$)?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$95%$confidence interval means we are$ 95%$confident that the population mean($\mu$) is covered by the interval. In other words if we take $100$samples drawn randomly from the population then CI with$95%$confidence of$95$of those samples will contains population mean($\mu$).
+$95%$ confidence interval means we are $ 95%$ confident that the population mean($\mu $) is covered by the interval. In other words if we take $100 $ samples drawn randomly from the population then CI with$95%$ confidence of $95$ of those samples will contains population mean($\mu$).
 
 </details>
 
 ---
 
-### Q: The IQ level of students at a particular university has an unknown mean, $μ$, and a known standard deviation,$σ = 15 $. A simple random sample of$100 $students is found to have a sample mean IQ,$\hat{x} = 115$. Estimate$μ$with$ 90%$,$95%$, and$99%$  confidence intervals.
+### Q: The IQ level of students at a particular university has an unknown mean, $μ$, and a known standard deviation, $σ = 15 $. A simple random sample of $100 $ students is found to have a sample mean IQ, $\hat{x} = 115$. Estimate $μ$ with $ 90%$, $95%$, and $99%$  confidence intervals.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 Given:
 
-$σ = 15$,$\hat{x} = 115$and$ n = 100$- A$90%$confidence interval for$\mu$is$\hat{x} \pm 1.645\frac{\sigma}{sqrt{n}} = (112.5, 117.5)$- A$95%$confidence interval for$\mu$is$\hat{x} \pm 2\frac{\sigma}{sqrt{n}} = (112, 118)$- A$99%$confidence interval for$\mu$is$\hat{x} \pm 2.576\frac{\sigma}{sqrt{n}} = (111, 119)$ 
+$σ = 15 $,$\hat{x} = 115 $ and$ n = 100 $- A$90%$ confidence interval for $\mu$ is $\hat{x} \pm 1.645\frac{\sigma}{sqrt{n}} = (112.5, 117.5)$- A $95%$ confidence interval for $\mu$ is $\hat{x} \pm 2\frac{\sigma}{sqrt{n}} = (112, 118)$- A $99%$ confidence interval for $\mu$ is $\hat{x} \pm 2.576\frac{\sigma}{sqrt{n}} = (111, 119)$ 
 
 </details>
 
@@ -311,7 +320,7 @@ $σ = 15$,$\hat{x} = 115$and$ n = 100$- A$90%$confidence interval for$\mu$is$\ha
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The price we have to pay for a higher level of confidence is that the unknown population mean $\mu$will be estimated with less precision (i.e., with a wider confidence interval). If we would like to estimate$\mu$  with more precision (i.e., a narrower confidence interval), we will need to sacrifice and report an interval with a lower level of confidence.
+The price we have to pay for a higher level of confidence is that the unknown population mean $\mu $ will be estimated with less precision (i.e., with a wider confidence interval). If we would like to estimate$\mu$  with more precision (i.e., a narrower confidence interval), we will need to sacrifice and report an interval with a lower level of confidence.
 
 </details>
 
@@ -325,8 +334,11 @@ The price we have to pay for a higher level of confidence is that the unknown po
 General form:
 
 $$
+
 \bar{x} \pm z^* \dot \frac{\sigma}{\sqrt{n}}
+
 $$
+
 Where $z^*$  is a general notation for the multiplier that depends on the level of the confidence. We can split the above expression into two parts.
 
 - sample mean $\bar{x}$, the point estimator for the unknown population mean($\mu$)
@@ -335,7 +347,9 @@ Where $z^*$  is a general notation for the multiplier that depends on the level 
 So we can also write the general form as follows:
 
 $$
+
 estimate \pm margin \quote of \quote error
+
 $$
 
 </details>
@@ -350,9 +364,12 @@ $$
 Expression of margin of error(m):
 
 $$
+
 m = z^* \dot \frac{\sigma}{\sqrt{n}}
+
 $$
-Where $z^*$represents confidence multiplier and$\frac{\sigma}{sqrt{n}} depicts standard deviation of point estimator$.
+
+Where $z^*$ represents confidence multiplier and $\frac{\sigma}{sqrt{n}} depicts standard deviation of point estimator$.
 
 margin of error(m) is <b>in charge of the width(or precision) of the confidence interval</b>.
 
@@ -371,7 +388,7 @@ With larger sample size $n$  we can reduce the margin of error.
 
 ---
 
-### Q: Find the general expression for the required $n$for a desired margin of error$m$  and certain level of confidence.
+### Q: Find the general expression for the required $n $ for a desired margin of error$m$  and certain level of confidence.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -379,51 +396,63 @@ With larger sample size $n$  we can reduce the margin of error.
 We have,
 
 $$
+
 m = z^* \dot \frac{\sigma}{\sqrt{n}}
+
 $$
+
 On solving for $n$,
 
 $$
+
 n = (\frac{z^* \sigma}{m})^2
+
 $$
 
 </details>
 
 ---
 
-### Q: Suppose that based on a random sample, a $95%$confidence interval for the mean hours slept (per day) among graduate students was found to be$(6.5, 6.9)$. What is the margin of error of this confidence interval?
+### Q: Suppose that based on a random sample, a $95%$ confidence interval for the mean hours slept (per day) among graduate students was found to be $(6.5, 6.9)$. What is the margin of error of this confidence interval?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 <b>0.2</b>
 
-Let $m$be the margin of the error for$95%$CI and$\bar{x}$  be the mean of hours slept. 
+Let $m $ be the margin of the error for$95%$ CI and $\bar{x}$  be the mean of hours slept. 
 
 Confidence interval can be given by $(\bar{x} - m, \bar{x} + m)$.
 
-On comparing the actaul interval $(6.5, 6.9)$and parameterized interval$(\bar{x} - m, \bar{x} + m)$, we have
+On comparing the actaul interval $(6.5, 6.9)$ and parameterized interval $(\bar{x} - m, \bar{x} + m)$, we have
 
 $$
+
 \bar{x} - m = 6.5
+
 $$
+
 and,
 
 $$
+
 \bar{x} + m = 6.9
+
 $$
 
 On solving for $m$,
 
 $$
+
 m = 0.2
+
 $$
 
 </details>
 
 ---
 
-### Q: IQ scores are known to vary normally with a standard deviation of $15$. How many students should be sampled if we want to estimate the population mean IQ at$99%$confidence with a margin of error equal to$2$?
+### Q: IQ scores are known to vary normally with a standard deviation of $15 $. How many students should be sampled if we want to estimate the population mean IQ at$99%$ confidence with a margin of error equal to $2$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -433,12 +462,17 @@ $$
 We have, 
 
 $$
+
 n = (\frac{z^* \sigma}{m})^2
-$$
-On putting $z^* = 2.576$,$\sigma  = 15$and$ m = 2$, we get
 
 $$
+
+On putting $z^* = 2.576 $,$\sigma  = 15 $ and$ m = 2$, we get
+
+$$
+
 n = (\frac{2.576(15)}{2})^2 = 374
+
 $$
 
 </details>
@@ -470,20 +504,23 @@ In this case we can use non-parametric methods.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can replace population standard deviation($\sigma$) with the sample standard deviation $s$. But in this case we loose central limit theorem and normality of$\bar{X}$, and therefore the confidence multiplier$z^*$for the different levels of confidence are not generally accurate. The new multiplier comes from a different distribution called$t$distribution and denoted by$t^*$instead of$z^*$.
+We can replace population standard deviation($\sigma $) with the sample standard deviation $ s $. But in this case we loose central limit theorem and normality of$\bar{X}$, and therefore the confidence multiplier $ z^*$for the different levels of confidence are not generally accurate. The new multiplier comes from a different distribution called $ t$distribution and denoted by $ t^*$instead of $ z^*$.
 
-The confidence interval for the population mean ($\mu$) when ($\sigma$) is unknown is therefore:
+The confidence interval for the population mean ($\mu $) when ($\sigma$) is unknown is therefore:
 
 $$
+
 \bar{x} \pm t^* \dot \frac{s}{\sqrt(n)}
+
 $$
-Note that the quantity $\frac{s}{\sqrt(n)}$is called the standard error of$\bar(X)$.
+
+Note that the quantity $\frac{s}{\sqrt(n)}$ is called the standard error of $\bar(X)$.
 
 </details>
 
 ---
 
-### Q: <b>True/False</b> For large values of $n$, the $t^*$multipliers are not much different from the$z^*$  multipliers?
+### Q: <b>True/False</b> For large values of $n $, the $ t^*$multipliers are not much different from the $ z^*$  multipliers?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -502,14 +539,16 @@ Note that the quantity $\frac{s}{\sqrt(n)}$is called the standard error of$\bar(
 The confidence interval for the population proportion $p$ is:
 
 $$
+
 \hat{p} \pm z^* \dot \sqrt{\frac{\hat(p)(1 - \hat{p})}{n}}
+
 $$
 
 </details>
 
 ---
 
-### Q: A poll asked a random sample of $1,000$U.S. adults, "Do you think that the use of marijuana should be legalized?"$ 560$  of those asked answered yes.
+### Q: A poll asked a random sample of $1,000 $ U.S. adults, "Do you think that the use of marijuana should be legalized?"$ 560$  of those asked answered yes.
 
 1. Based on the poll's results, estimate p, the proportion of all U.S. adults who believe the use of marijuana should be legalized, with a 95% confidence interval.
 2. Give an interpretation of the margin of error in context.
@@ -518,36 +557,40 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. The sample proportion $\hat{p}$is$\frac{56}{1000} = 0.56$and therefore$ 95%$confidence interval for$ p$  is:
+1. The sample proportion $\hat{p}$ is $\frac{56}{1000} = 0.56$ and therefore $ 95%$ confidence interval for $ p$  is:
 
 $$
+
 0.56 \pm 2\dot \sqrt{0.56(1-0.56)}{1000} = 0.56 \pm 0.03
+
 $$
 
-So we are $95%$confident that the proportion of U.S adults who believe that marijuana should be legalized is between$ 0.53$and$ 0.59$.
+So we are $95%$ confident that the proportion of U.S adults who believe that marijuana should be legalized is between $ 0.53$ and $ 0.59$.
 
-2. The margin of error is $0.03$i.e$ 3%$. With$95%$certainty, the sample proportion we got$56%$is within$3%$of(or no more than$3%$  away from) the proportion of U.S adults who believe that the use of marijiuana should be legalized.
+2. The margin of error is $0.03 $ i.e$ 3%$. With $95%$ certainty, the sample proportion we got $56%$ is within $3%$ of(or no more than $3%$  away from) the proportion of U.S adults who believe that the use of marijiuana should be legalized.
 
-3. Yes. All of the values in our $95%$confidence interval for p$(.53, .59)$, which represents the set of plausible values for p, lies above$.5 $, which provides evidence (at the$95%$  confidence level) that the majority of U.S. adults believe that the use of marijuana should be legalized.
+3. Yes. All of the values in our $95%$ confidence interval for p $(.53, .59)$, which represents the set of plausible values for p, lies above $.5 $, which provides evidence (at the $95%$  confidence level) that the majority of U.S. adults believe that the use of marijuana should be legalized.
 
 </details>
 
 ---
 
-### Q: Under what condition we can use to construct CI in case of estimating $p$using$z^*$?
+### Q: Under what condition we can use to construct CI in case of estimating $p $ using$z^*$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 $$
+
 n \dot \hat{p} \geq 10 \quote n \dot (1 - \hat{p}) \geq 10
+
 $$
 
 </details>
 
 ---
 
-### Q: Suppose that you take $100$random newborn puppies and determine that the average weight is$ 1$pound with the population standard deviation of$ 0.12$pounds. Assuming the weight of newborn puppies follows a normal distribution, calculate the$ 95\\%$  confidence interval for the average weight of all newborn puppies.
+### Q: Suppose that you take $100 $ random newborn puppies and determine that the average weight is$ 1 $ pound with the population standard deviation of$ 0.12 $ pounds. Assuming the weight of newborn puppies follows a normal distribution, calculate the$ 95\\%$  confidence interval for the average weight of all newborn puppies.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -555,37 +598,43 @@ $$
 Given:
 
 $$
+
 n = 100
+
 $$
 
 $$
+
 \hat{x} = 1
+
 $$
 
 $$
+
 \sigma = 0.12
+
 $$
 
-$95\\%$Confidence interval for$\mu_population$can be given by following expression:$\hat{x} \pm z_{0.95} \cdot \frac{\sigma}{\sqrt{n}}$On substituting all the values, we get:$ 1 \pm 1.96 \cdot \frac{0.12}{\sqrt{100}}$=$(0.9768,1.0232)$So, the$ 95\%$interval is$(0.9768,1.0232)$.
+$95\\%$ Confidence interval for $\mu_population$ can be given by following expression: $\hat{x} \pm z_{0.95} \cdot \frac{\sigma}{\sqrt{n}}$ On substituting all the values, we get: $ 1 \pm 1.96 \cdot \frac{0.12}{\sqrt{100}}$=$(0.9768,1.0232)$ So, the $ 95\%$ interval is $(0.9768,1.0232)$.
 
 </details>
 
 ---
 
-### Q: Suppose that we examine $100$newborn puppies and the$ 95%$confidence interval for their average weight is$[0.9, 1.1]$  pounds. Which of the following statements is true?
+### Q: Suppose that we examine $100 $ newborn puppies and the$ 95%$ confidence interval for their average weight is $[0.9, 1.1]$  pounds. Which of the following statements is true?
 
-1. Given a random newborn puppy, its weight has a $95%$chance of being between$ 0.9$and$ 1.1$  pounds.
-1. If we examine another $100$newborn puppies, their mean has a$ 95%$  chance of being in that interval.
+1. Given a random newborn puppy, its weight has a $95%$ chance of being between $ 0.9$ and $ 1.1$  pounds.
+1. If we examine another $100 $ newborn puppies, their mean has a$ 95%$  chance of being in that interval.
 1. We're $95\\%$  confident that this interval captured the true mean weight.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$3rd$statement seems correct interpretation of CI.$95\\%$CI represents if we draw multiple samples and caluclate the sample statistics and confidence intervals(CI) then$ 95\\%$of those intervals will contains population mean($\mu$).
+$3rd $ statement seems correct interpretation of CI.$95\\%$ CI represents if we draw multiple samples and caluclate the sample statistics and confidence intervals(CI) then $ 95\\%$ of those intervals will contains population mean($\mu$).
 
 Lets look at other statements:
 
-$1^{st}$statement is incorrect because we don't use CI for estimating individual sample weight range.$ 2^{nd}$  statment is talking about sample statistics but CI is mainly used to estimate the population parameter not sample statistics.
+$1^{st}$ statement is incorrect because we don't use CI for estimating individual sample weight range. $ 2^{nd}$  statment is talking about sample statistics but CI is mainly used to estimate the population parameter not sample statistics.
 
 </details>
 
@@ -596,8 +645,8 @@ $1^{st}$statement is incorrect because we don't use CI for estimating individual
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Unbiased Estimation**: For continuous $X \in [0, 1]$, sample median$\hat{m}$from$ n$independent draws has asymptotic bias$ O(1/n)$.
-- **Method**: Use order statistics $X_{(k)}$or kernel density estimation (KDE) with cross-validated bandwidth to compute the median where cumulative distribution$ F(\hat{m}) = 0.5$.
+- **Unbiased Estimation**: For continuous $X \in [0, 1]$, sample median $\hat{m}$ from $ n$ independent draws has asymptotic bias $ O(1/n)$.
+- **Method**: Use order statistics $X_{(k)}$ or kernel density estimation (KDE) with cross-validated bandwidth to compute the median where cumulative distribution $ F(\hat{m}) = 0.5$.
 
 </details>
 
@@ -615,27 +664,40 @@ $1^{st}$statement is incorrect because we don't use CI for estimating individual
 Given:
 
 $$
+
 \mu = 1
+
 $$
 
 $$
+
 \sigma = 0.12
-$$
-1.$$z-score = \frac{x_i - \mu}{\sigma} = \frac{1.1 - 1}{0.12} = 0.83$$2. Let x be the weight that needed to be in top $10\\%$. For this condtion$z_score >= z_{0.9}$Using lookup table we get$z_score >= 1.645$We can write expression for z-score:
 
 $$
+
+1.$$z-score = \frac{x_i - \mu}{\sigma} = \frac{1.1 - 1}{0.12} = 0.83$$2. Let x be the weight that needed to be in top $10\\%$. For this condtion $ z_score >= z_{0.9}$Using lookup table we get $ z_score >= 1.645$We can write expression for z-score:
+
+$$
+
 z-score = \frac{x - \mu}{\sigma}
+
 $$
 
 $$
+
 \frac{x - 1}{0.12} >= 1.645
+
 $$
+
 On solving for $x$,
 
 $$
+
 x >= 1.197
+
 $$
-So, puppy weight should be atleast $1.197$in order to be in top$10\\%$  of the weight.
+
+So, puppy weight should be atleast $1.197 $ in order to be in top$10\\%$  of the weight.
 
 3. If weight of newborn puppies distribution is not normal and is skewed then it does not make any sense to use z-scores for any decision making process.
 
@@ -648,8 +710,8 @@ So, puppy weight should be atleast $1.197$in order to be in top$10\\%$  of the w
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Z-Test**: Use when population variance $\sigma^2$is known, or when sample size is large ($  n \ge 30$) under Central Limit Theorem.
-- **T-Test**: Use when population variance $\sigma^2$is unknown and sample size is small ($  n < 30$), estimating variance via sample standard deviation$s$.
+- **Z-Test**: Use when population variance $\sigma^2 $ is known, or when sample size is large ($  n \ge 30$) under Central Limit Theorem.
+- **T-Test**: Use when population variance $\sigma^2 $ is unknown and sample size is small ($  n < 30 $), estimating variance via sample standard deviation$ s$.
 
 </details>
 
@@ -682,7 +744,7 @@ Here is how the process of statistical hypothesis testing works:
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-p-value is the probability of getting data like those observed when $H_0$is true. In more general the$ p-value$  is the probability of observing a test statistic as extreme as that observed (or even more extreme) assuming that the null hypothesis is true.
+p-value is the probability of getting data like those observed when $H_0 $ is true. In more general the$ p-value$  is the probability of observing a test statistic as extreme as that observed (or even more extreme) assuming that the null hypothesis is true.
 
 By "extreme" we mean extreme in the direction of the alternative hypothesis.
 
@@ -709,14 +771,18 @@ The probability of observing a test statistic as large in magnitude as that obse
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. State the appropriate null and alternative hypotheses, $H_0$and$ H_a$.
+1. State the appropriate null and alternative hypotheses, $H_0 $ and$ H_a$.
 
 $$
+
 H_0 : p = p_0
+
 $$
 
 $$
+
 H_a: p \neq p_0 \cup p > p_0 \cup p < p_0
+
 $$
 
 2. Obtain the data from a sample and:
@@ -724,15 +790,17 @@ $$
 Check whether the data satisfy the following condition:
 
 - Random sample
-- $n \dot p_0 \geq 10$,$n \dot (1 - p_0) \geq 10$Calculate the sample proportion$\hat{p}$  and summarize the data using test statistic:
+- $n \dot p_0 \geq 10 $,$ n \dot (1 - p_0) \geq 10 $Calculate the sample proportion$\hat{p}$  and summarize the data using test statistic:
 
 $$
+
 z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1 - p_0)}{n}}}
+
 $$
 
 3. Find the p-value of the test:
 
-- for $H_a : p < p_0$:$P(Z \leq z)$- for$H_a : p > p_0$:$P(Z \geq z)$- for$H_a : p \neq p_0$:$P(Z \geq |z|)$ 
+- for $H_a : p < p_0 $:$ P(Z \leq z)$- for $ H_a : p > p_0$: $ P(Z \geq z)$- for $ H_a : p \neq p_0$: $ P(Z \geq |z|)$ 
 
 4. Based on the p-value, decide whether or not the results are significant, and draw your conclusions in context.
 
@@ -745,9 +813,9 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Significance level of the test is usually denoted by the Greek letter $\alpha$. The most commonly used significance level is $\alpha = .05$(or$5%$). This means that:
-- if the $p-value < \alpha$(usually $.05$), then the data we got is considered to be "rare (or surprising) enough" when Ho is true, and we say that the data provide significant evidence against$H_0$, so we reject Ho and accept$H_a$.
-- if the $p-value > \alpha$(usually $.05$), then our data are not considered to be "surprising enough" when Ho is true, and we say that our data do not provide enough evidence to reject$H_0$(or, equivalently, that the data do not provide enough evidence to accept$H_a$).
+Significance level of the test is usually denoted by the Greek letter $\alpha $. The most commonly used significance level is $\alpha = .05 $(or$5%$). This means that:
+- if the $p-value < \alpha $(usually $.05 $), then the data we got is considered to be "rare (or surprising) enough" when Ho is true, and we say that the data provide significant evidence against$ H_0 $, so we reject Ho and accept$ H_a$.
+- if the $p-value > \alpha $(usually $.05 $), then our data are not considered to be "surprising enough" when Ho is true, and we say that our data do not provide enough evidence to reject$ H_0 $(or, equivalently, that the data do not provide enough evidence to accept$ H_a$).
 
 </details>
 
@@ -758,7 +826,7 @@ Significance level of the test is usually denoted by the Greek letter $\alpha$. 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-It depends on $p-value$and$\alpha$:
+It depends on $p-value $ and$\alpha$:
 
 - The results are statistically significant - when the $p-value < \alpha$.
 
@@ -768,7 +836,7 @@ It depends on $p-value$and$\alpha$:
 
 ---
 
-### Q: There are rumors that students in a certain liberal arts college are more inclined to use drugs than U.S. college students in general. Suppose that in a simple random sample of $400$students from the college, 76 admitted to marijuana use. Do the data provide enough evidence to conclude that the proportion of marijuana users among the students in the college (p) is higher than the national proportion, which is$ 0.157$?
+### Q: There are rumors that students in a certain liberal arts college are more inclined to use drugs than U.S. college students in general. Suppose that in a simple random sample of $400 $ students from the college, 76 admitted to marijuana use. Do the data provide enough evidence to conclude that the proportion of marijuana users among the students in the college (p) is higher than the national proportion, which is$ 0.157$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -776,36 +844,48 @@ It depends on $p-value$and$\alpha$:
 1. State the hypothesis:
 
 $$
+
 H_0: p = 0.157
+
 $$
 
 $$
+
 H_0: p > 0.157
+
 $$
+
 2. Calculate test-statistic $z$:
 
 $$
+
 \hat{p} = \frac{76}{400} = 0.19
+
 $$
 
 $$
+
 z = \frac{0.19 - 0.157}{\sqrt{\frac{0.157(1 - 0.157)}{400}}} = 1.81
+
 $$
+
 3. Calculate p-value using software we can get:
 
 $$
+
 p - value = 0.035
+
 $$
 
-4. Make conclusion based on $p$value and$\alpha$:
+4. Make conclusion based on $p $ value and$\alpha$:
 
-For default value of $\alpha = 0.05$, since$p-value < \alpha$  the result seems significant and alternate hypothesis seems true.
+For default value of $\alpha = 0.05 $, since$ p-value < \alpha$  the result seems significant and alternate hypothesis seems true.
 
 </details>
 
 ---
 
-### Q: Write the general form that can be taken by null hypothesis $H_0$and alternate hypohesis$ H_a$.
+### Q: Write the general form that can be taken by null hypothesis $H_0 $ and alternate hypohesis$ H_a$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -813,20 +893,29 @@ For default value of $\alpha = 0.05$, since$p-value < \alpha$  the result seems 
 General form of null hypothesis:
 
 $$
+
 H_0 : p = p_0
+
 $$
+
 The alternative hypothesis takes one of the following three forms (depending on the context):
 
 $$
+
 Ha: p < p_0(one-sided)
+
 $$
 
 $$
+
 Ha: p > p_0(one-sided)
+
 $$
 
 $$
+
 Ha: p ≠ p_0(two-sided)
+
 $$
 
 </details>
@@ -838,10 +927,10 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Suppose we want to test $H_0 : \mu = \mu_0$vs$ H_a : \mu \neq \mu_0$using a significance level of$\alpha = 0.05$. An alternative way to perform this test is to find a$95%$confidence interval for$\mu$  and make following conclusions:
+Suppose we want to test $H_0 : \mu = \mu_0 $ vs$ H_a : \mu \neq \mu_0 $ using a significance level of$\alpha = 0.05 $. An alternative way to perform this test is to find a$95%$ confidence interval for $\mu$  and make following conclusions:
 
-- If $\mu_0$falls outside the confidence interval, reject$ H_0$.
-- If $\mu_0$falls inside the confidence interval, do not reject$ H_0$.
+- If $\mu_0 $ falls outside the confidence interval, reject$ H_0$.
+- If $\mu_0 $ falls inside the confidence interval, do not reject$ H_0$.
 
 </details>
 
@@ -853,7 +942,7 @@ Suppose we want to test $H_0 : \mu = \mu_0$vs$ H_a : \mu \neq \mu_0$using a sign
 <summary><b>💡 Show Answer</b></summary>
 
 - **Z-Distribution**: Standard Normal distribution $\mathcal{N}(0, 1)$  with fixed shape and known variance.
-- **T-Distribution**: Symmetric distribution with heavier tails governed by degrees of freedom $\nu = n - 1$. As$n \to \infty$, t-distribution converges to Z-distribution.
+- **T-Distribution**: Symmetric distribution with heavier tails governed by degrees of freedom $\nu = n - 1 $. As$ n \to \infty$, t-distribution converges to Z-distribution.
 
 </details>
 
@@ -887,7 +976,7 @@ Suppose we want to test $H_0 : \mu = \mu_0$vs$ H_a : \mu \neq \mu_0$using a sign
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Test statistic captures the essence of the test. Larger the test statistic, the further the data are from $H_0$and therefore the more evidence the data provide against$ H_0$.
+Test statistic captures the essence of the test. Larger the test statistic, the further the data are from $H_0 $ and therefore the more evidence the data provide against$ H_0$.
 
 </details>
 
@@ -901,21 +990,27 @@ Test statistic captures the essence of the test. Larger the test statistic, the 
 Given:
 
 $$
+
 n = 15
+
 $$
 
 $$
+
 p(head) = 10/15
+
 $$
 
 $$
+
 p(tail) = 5/15
+
 $$
 
 Lets state the hypothesis and then based on the evidence we have from the observations we can access them using some statistic.
 
-- Null Hypothesis($H_0$) - Coin is fair i.e$p(head) = p(tail) = \frac{1}{2}$ 
-- Alternate Hypothesis($H_A$) - Coin is not fair i.e $p(head) ≠ \frac{1}{2}$Since the distribution is binomial in this case with$X ~ Binomail(n=10, p = 1/2)$ 
+- Null Hypothesis($H_0 $) - Coin is fair i.e$ p(head) = p(tail) = \frac{1}{2}$ 
+- Alternate Hypothesis($H_A $) - Coin is not fair i.e $ p(head) ≠ \frac{1}{2}$Since the distribution is binomial in this case with $ X ~ Binomail(n=10, p = 1/2)$ 
 
 We can find test statistic(z-score) using following approaches:
 
@@ -926,49 +1021,64 @@ We can find test statistic(z-score) using following approaches:
 
 Binomial distribution can be approximated as normal distribution if the following condition satisfies:
 
-- $np > 5$and$ nq > 5$In this case we have$ np = 7.5$if$ H_0$  is true so we can use normal distribution approximation with some error.
+- $np > 5 $ and$ nq > 5 $ In this case we have$ np = 7.5 $ if$ H_0$  is true so we can use normal distribution approximation with some error.
 
 test statistics under $H_0$:
 
 - Mean($\mu$)
 
 $$
+
 \mu = E(x) = np = \frac{15}{2} = 7.5
+
 $$
 
 - Standard deviation($\sigma$)
 
 $$
+
 \sigma = \sqrt{np(1-p)} = \sqrt{3.75} = 1.936
+
 $$
+
 -$Z_score = \frac{x - \mu}{\sigma}$ 
 
 $$
+
 Z_score = \frac{10-7.5}{1.936} = 1.291
-$$
-
-Now with significance level($\alpha$) = $5\\%$, We can find out$Z_critical$ 
 
 $$
+
+Now with significance level($\alpha $) = $5\\%$, We can find out $ Z_critical$ 
+
+$$
+
 Z_critical = Z_{0.95} = 1.96
+
 $$
-Since $Z_score$that we got from the experiment is less than$Z_critical$, we can not reject the $H_0$.
+
+Since $Z_score $ that we got from the experiment is less than$Z_critical $, we can not reject the $ H_0$.
 
 So, the coin seems fair from the given observations.
 
 <b>Exact binomial distribution calculation:</b>
 
-We can do two-sided test to rejects $𝐻_0$when$𝑋$is sufficiently far from the expected value$\mu = 7.5$under$𝐻_0$. 
+We can do two-sided test to rejects $𝐻_0 $ when$𝑋$ is sufficiently far from the expected value $\mu = 7.5$ under $𝐻_0$. 
 
-For observed value $x$, the $P-value$is$𝑃(𝑋≤𝑥)+𝑃(𝑋≥𝑛−𝑥)$.
+For observed value $x $, the $ P-value $is$𝑃(𝑋≤𝑥)+𝑃(𝑋≥𝑛−𝑥)$.
 
 $$
+
 p-value = P(X ≤ 10) + P(X ≥ 5)
+
 $$
+
 We have,$$\[P(X \leq 10) = \sum_{x=0}^{10} \binom{15}{x} (0.5)^x (0.5)^{15-x}\]$$and$$\[P(X \geq 5) = 1 - P(X < 5) = 1 - \sum_{x=0}^{4} \binom{15}{x} (0.5)^x (0.5)^{15-x}\]$$putting these values to get p-value.
 
 $$
+
 p-value = 0.99 + 0.99 = 1.98
+
 $$
 
 since p-value >$0.05$, We can not reject null hypothesis and we will reject the alternate hypothesis i.e coin is not fair because of not having enough evidence in the given data.
@@ -987,7 +1097,7 @@ since p-value >$0.05$, We can not reject null hypothesis and we will reject the 
 <summary><b>💡 Show Answer</b></summary>
 
 1. We can assess the statistical significance of a pattern using hypothesis testing. We can conduct hypothesis testing by following below steps:
-    - Formulate Null hypothesis($H_0$) and alternate hypothesis($H_A$) carefully
+    - Formulate Null hypothesis($H_0 $) and alternate hypothesis($ H_A$) carefully
     - Collect data to calculate test statistics that measures the strength of the observed pattern.
     - Use this test statistic to calculate a p-value, which represents the probability of obtaining such results (or more extreme) if the null hypothesis were true.
     - If the p-value is very small (typically less than a chosen significance level, often 0.05), you reject the null hypothesis and conclude that the pattern is statistically significant. 
@@ -1052,14 +1162,16 @@ Total    |    n.1     |    n.2     |   N
 Compute the expected frequencies for each cell in the contingency table under the assumption of independence. The formula for the expected frequency in a cell (e.g., n11) is:
 
 $$
+
 \[E = \frac{n1. \cdot n.1}{N}\]
+
 $$
 
 Repeat this calculation for all cells in the table.
 
 <b>Step 4: Calculate the Chi-squared Statistic:</b>
 
-Calculate the Chi-squared $(\(\chi^2\))$statistic using the formula:$\[\chi^2 = \sum \frac{(O - E)^2}{E}\]$ 
+Calculate the Chi-squared $(\(\chi^2\))$ statistic using the formula: $\[\chi^2 = \sum \frac{(O - E)^2}{E}\]$ 
 
 Where:
 - $\(\chi^2\)$  is the Chi-squared statistic.
@@ -1069,7 +1181,7 @@ Where:
 
 <b>Step 5: Determine Degrees of Freedom:</b>
 
-Determine the degrees of freedom $(\(df\))$for the Chi-squared test. For a contingency table,$\(df = (r - 1)(c - 1)\)$, where$\(r\)$is the number of rows and$\(c\)$  is the number of columns.
+Determine the degrees of freedom $(\(df\))$ for the Chi-squared test. For a contingency table, $\(df = (r - 1)(c - 1)\)$, where $\(r\)$ is the number of rows and $\(c\)$  is the number of columns.
 
 <b>Step 6: Calculate the p-value:</b>
 
@@ -1082,14 +1194,16 @@ Compare the calculated p-value to a significance level (e.g., $\(\alpha = 0.05\)
 - If the p-value is less than $\(\alpha\)$, we can reject the null hypothesis and conclude that there is a statistically significant association between the two categorical variables.
 - If the p-value is greater than or equal to $\(\alpha\)$, we fail to reject the null hypothesis, indicating no significant association.
 
-3. To test for independence between two continuous variables, we can use a correlation coefficient, such as the Pearson correlation coefficient ($r$) or the Spearman rank correlation coefficient ($ρ$). 
+3. To test for independence between two continuous variables, we can use a correlation coefficient, such as the Pearson correlation coefficient ($r $) or the Spearman rank correlation coefficient ($ρ$). 
 
 - <b>Pearson Correlation (r):</b> The Pearson correlation coefficient is used to measure linear relationships. It ranges from -1 (perfect negative linear relationship) to 1 (perfect positive linear relationship), with 0 indicating no linear relationship. 
 
 Expression of $r$:
 
 $$
+
 \[r = \frac{\sum((X - \bar{X})(Y - \bar{Y}))}{\sqrt{\sum(X - \bar{X})^2 \sum(Y - \bar{Y})^2}}\]
+
 $$
 
 - <b>Spearman Rank Correlation (ρ):</b> The Spearman rank correlation coefficient is non parametric test used to measure monotonic (nonlinear) relationships.
@@ -1162,7 +1276,7 @@ A/B testing is a powerful technique used in a variety of fields including web de
 
 ---
 
-### Q: Imagine that you have the prices of $10,000 stocks over the last 24-month period and you only have the price at the end of each month, which means you have 24 price points for each stock. After calculating the correlations of$10,000 * 9,9992$  pairs of stock, you found a pair that has a correlation to be above 0.8.
+### Q: Imagine that you have the prices of $10,000 stocks over the last 24-month period and you only have the price at the end of each month, which means you have 24 price points for each stock. After calculating the correlations of $10,000 * 9,9992$  pairs of stock, you found a pair that has a correlation to be above 0.8.
 
 1. What’s the probability that this happens by chance?
 1. How to avoid this kind of accidental pattern?
@@ -1170,7 +1284,7 @@ A/B testing is a powerful technique used in a variety of fields including web de
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Imagine that you have the prices of $10,000 stocks over the last 24-month period and you only have the price at the end of each month, which means you have 24 price points for each stock. After calculating the correlations of$10,000 * 9,9992$  pairs of stock, you found a pair that has a correlation to be above 0.8.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Imagine that you have the prices of $10,000 stocks over the last 24-month period and you only have the price at the end of each month, which means you have 24 price points for each stock. After calculating the correlations of $10,000 * 9,9992$  pairs of stock, you found a pair that has a correlation to be above 0.8.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>

@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 1. [Convolution and Correlation](#convolution-and-correlation)
@@ -26,7 +25,9 @@
 ### Q: This Equation is commonly used in image processing:
 
 $$
+
 (f * g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t - \tau)d\tau
+
 $$
 
 1. What does the above equation represent?
@@ -35,8 +36,8 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Operation**: Continuous 1D Convolution of signals $f$and$g$.
-2. **$g(t)$**: The filter kernel/impulse response applied to input signal$f(t)$.
+1. **Operation**: Continuous 1D Convolution of signals $f $ and$g$.
+2. **$g(t)$**: The filter kernel/impulse response applied to input signal $ f(t)$.
 
 </details>
 
@@ -80,7 +81,9 @@ Is he right in assuming so? Explain in detail the meaning of these statements.
 ### Q: A data-scientist provides you with a formulae for a discrete 2D convolution operation
 
 $$
+
 f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
+
 $$
 
 Using above, write the equivalent 2D correlation operation.
@@ -89,9 +92,12 @@ Using above, write the equivalent 2D correlation operation.
 <summary><b>💡 Show Answer</b></summary>
 
 $$
+
 (I * K)(i, j) = \sum_{m} \sum_{n} I(i - m, j - n) K(m, n)
+
 $$
-Where $I$is input image matrix,$K$  is convolution kernel.
+
+Where $I $ is input image matrix,$K$  is convolution kernel.
 
 </details>
 
@@ -105,8 +111,8 @@ Where $I$is input image matrix,$K$  is convolution kernel.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **VALID mode**: No padding applied ($P=0$). Output spatial size shrinks:$O = \lfloor \frac{W - K}{S} \rfloor + 1$.
-- **SAME mode**: Zero padding applied such that output spatial dimensions equal input dimensions when stride $S=1$:$P = \lfloor \frac{K - 1}{2} \rfloor$.
+- **VALID mode**: No padding applied ($P=0 $). Output spatial size shrinks:$ O = \lfloor \frac{W - K}{S} \rfloor + 1$.
+- **SAME mode**: Zero padding applied such that output spatial dimensions equal input dimensions when stride $S=1 $:$ P = \lfloor \frac{K - 1}{2} \rfloor$.
 
 </details>
 
@@ -124,7 +130,7 @@ Where $I$is input image matrix,$K$  is convolution kernel.
 
 ---
 
-### Q: You are provided with a $K × K$input signal and a$θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?$$ 
+### Q: You are provided with a $K × K $ input signal and a$θ × θ$ filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?$$ 
 
 \begin{equation}
 A =
@@ -137,10 +143,11 @@ A =
 \end{equation}
 
 $$
+
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `You are provided with a $K × K$input signal and a$θ × θ$  filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `You are provided with a $K × K $ input signal and a$θ × θ$  filter. The signal is subjected to the valid padding mode convolution. What are the resulting dimensions?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -215,6 +222,7 @@ $$
 
   ```
 The input signal, arr001 is first initialized to all zeros as follows:
+
 $$
   arr001 = 
 \begin{bmatrix}
@@ -227,6 +235,7 @@ $$
 \end{bmatrix}
 
 $$
+
 1. Without actually executing the code, determine what would be the resulting shape of the convolve2d() operation.
 2. Manually compute the result of convolving the input signal with the provided filter.
 3. Elaborate why the size of the resulting convolutions is smaller than the size of the input signal.
@@ -242,6 +251,7 @@ $$
 ---
 
 ### Q: Equation 8.6 is the discrete equivalent of equation 8.2 which is frequently used in image processing:
+
 $$
 
 \begin{equation}
@@ -250,7 +260,9 @@ f(x,y) * h(x,y) = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x - m, y - n)
 \end{equation}
 
 $$
+
 1. Given the following discrete kernel in the X direction, what would be the equivalent Y direction?
+
 $$
 
 K = \frac{1}{2} \begin{bmatrix}
@@ -259,6 +271,7 @@ K = \frac{1}{2} \begin{bmatrix}
 \end{bmatrix}
 
 $$
+
 2. Identify the discrete convolution kernel presented in (8.6).*Kernels and Filters
 
 <table align='center'>
@@ -282,12 +295,12 @@ $$
 
 ---
 
-### Q: Given an image of size $w × h$, and a kernel with width $K$  , how many multiplications and additions are required to convolve the image?
+### Q: Given an image of size $w × h $, and a kernel with width $ K$  , how many multiplications and additions are required to convolve the image?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given an image of size $w × h$, and a kernel with width $K$  , how many multiplications and additions are required to convolve the image?`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given an image of size $w × h $, and a kernel with width $ K$  , how many multiplications and additions are required to convolve the image?`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -315,6 +328,7 @@ np.correlate(A,B,"full") # for cross correlation
 ---
 
 ### Q: The Gaussian distribution in the 1D and 2D is shown in Equations 8.8 and 8.9.
+
 $$
 
 \begin{equation}
@@ -332,6 +346,7 @@ G(x, y) = \sqrt\frac{1}{2\pi\sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}}
 \end{equation}
 
 $$
+
 The Gaussian filter, is an operator that is used to blur images and remove detail and noise while acting like a low-pass filter. This is similar to the way a mean filter works, but the Gaussian filter uses a different kernel. This kernel is represented with a Gaussian bell shaped bump.
 
 Answer the following questions:
@@ -921,7 +936,8 @@ feature vector from an image using a pre-trained `ResNet34 CNN`.
 
 He then defines the cosine similarity between two vectors:
 
-$u = {u_1,u_2,....,u_N}$ $v = {v_1,v_2,....,v_N}$  as:
+$u = {u_1,u_2,....,u_N}$ $ v = {v_1,v_2,....,v_N}$  as:
+
 $$
 
 sim(u, v) = \frac{u.v}{|u||v|} = \frac{\sum_{i=1}^Nu_iv_i}{\sqrt{(\sum_{i=1}^Nu_i^2)(\sum_{i=1}^Nv_i^2)}}

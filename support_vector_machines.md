@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [Maximal Margin Classifier](#maximal-margin-classifier)
@@ -42,7 +41,9 @@ In a p-dimensional space, a hyperplane is a flat affine subspace of dimension $p
 <summary><b>💡 Show Answer</b></summary>
 
 $$
+
 \beta_0 + \beta_1X_1 + \beta_2X_2 + .... + \beta_pX_p  = 0
+
 $$
 
 </details>
@@ -69,13 +70,15 @@ Maximal margin classifier is a linear classifier that attempts to separate two c
 
 It works as follows:
 
-Suppose we are working on a binary classification problem with $n$training examples$\{(x_i, y_i)\}^n_{i=1}$  where
+Suppose we are working on a binary classification problem with $n $ training examples$\{(x_i, y_i)\}^n_{i=1}$  where
 
-- $x_i \in \mathbb{R}^n$is a$p$-dimensional feature vector
+- $x_i \in \mathbb{R}^n $ is a$p$-dimensional feature vector
 - $y_i \in \{-1, +1\}$  With the above setup, maximal margin classifier tries to find a hyperplane which can be represented as:
 
 $$
+
 f(x) = w^Tx + b
+
 $$
 
 where:
@@ -86,35 +89,46 @@ where:
 Decision boundary can be defined by:
 
 $$
+
 f(x) = 0
+
 $$
 
 $$
+
 w^Tx + b  = 0
+
 $$
 
 Now, we want to maximize the margin which is basically the distance between the decision boundary(hyperplane) and the closest points in the dataset(support vectors).  
 
-Assume $x_i$ is a support vector, the distance(d) from the hyperplane can be expressed as $$d = \frac{|w^Tx_i + b|}{||w||}$$If we assume data is perfectly separable:$$y_i(w^Tx_i + b) \ge 1$$Using above two equations, margin can be derived as
+Assume $x_i $ is a support vector, the distance(d) from the hyperplane can be expressed as $$d = \frac{|w^Tx_i + b|}{||w||}$$If we assume data is perfectly separable:$$y_i(w^Tx_i + b) \ge 1$$Using above two equations, margin can be derived as
 
 $$
+
 \text{Margin} = \frac{2}{||w||}
+
 $$
 
-Note that here $2$comes from the distance between the two support vectors(one from each class), each being at the distance of$\frac{1}{||w||}$  from the hyperplane.
+Note that here $2 $ comes from the distance between the two support vectors(one from each class), each being at the distance of$\frac{1}{||w||}$  from the hyperplane.
 
 So, maximal margin classifier tends to optimize the margin subject to the constraints that all points are classified correctly:
 
 $$
+
 \min_{\mathbf{w}, b}\frac{1}{2}||w||^2
+
 $$
+
 subject to:
 
 $$
+
 y_i(w^Tx_i + b) \ge 1 \forall i
+
 $$
 
-- Here we have used $||w||^2$instead of$||w||$  to make the objective function convex and differential
+- Here we have used $||w||^2 $ instead of$||w||$  to make the objective function convex and differential
 - The constraints ensures that all points are on the correct side of the margin
 
 </details>
@@ -181,27 +195,39 @@ The support vector classifier classifies a test observations depending on which 
 It is the solution to the optimization problem:
 
 $$
+
 \max_{\mathbf{\beta_0,..,\beta_p}, \epsilon_1,..,\epsilon_n, M} M
+
 $$
+
 subjected to
 
 $$
+
 \sum_{j=1}^p\beta_j^2 = 1
+
 $$
 
 $$
+
 y_i(\beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + ... + \beta_px_{ip}) \ge M(1-\epsilon_i)
+
 $$
 
 $$
+
 \epsilon_i \ge 0, \sum_{i=1}^{n}\epsilon_i \le C
+
 $$
-Where $C$is a nonnegative tuning parameter.$M$is the width of the margin and$\epsilon_1,....\epsilon_n$  are slack variables that allows individual observations on the wrong side of the margin or the hyperplane.
+
+Where $C $ is a nonnegative tuning parameter.$M $ is the width of the margin and$\epsilon_1,....\epsilon_n$  are slack variables that allows individual observations on the wrong side of the margin or the hyperplane.
 
 Once we have hyperplane after solving above set of equations, we classify a test observations $x^*$, by simply determining on which side of hyperplane it lies.
 
 $$
+
 Sign(f(x^*) = \beta_0 + \beta_1x_1^{*}+...+\beta_Px_p^*)
+
 $$
 
 </details>
@@ -213,11 +239,11 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The slack variable $\epsilon_i$tells us where the$i$  th observations is located, relative to the hyperplane and relative to the margin.
+The slack variable $\epsilon_i $ tells us where the$i$  th observations is located, relative to the hyperplane and relative to the margin.
 
-- If $\epsilon_i > 0$:$i$th observation is on the wrong side of the margin
-- If $\epsilon_i = 0$:$i$th observation is on the correct side of the margin
-- If $\epsilon_i > 1$:$i$th observation is on the wrong side of the hyperplane
+- If $\epsilon_i > 0 $:$ i$th observation is on the wrong side of the margin
+- If $\epsilon_i = 0 $:$ i$th observation is on the correct side of the margin
+- If $\epsilon_i > 1 $:$ i$th observation is on the wrong side of the hyperplane
 
 </details>
 
@@ -228,7 +254,7 @@ The slack variable $\epsilon_i$tells us where the$i$  th observations is located
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-We can think of $C$as a budget for the amount that margin can be violated by$n$observations. If$C=0$then there is no budget for violations to the margin i.e maximal margin classifier. As the budget$ C$  increases, the model becomes more tolerant of violations to the margin, and so the margin will widen. Conversely, as C decreases, we become less tolerant of violations to the margin and so the margin narrows.
+We can think of $C $ as a budget for the amount that margin can be violated by$n $ observations. If$C=0 $ then there is no budget for violations to the margin i.e maximal margin classifier. As the budget$ C$  increases, the model becomes more tolerant of violations to the margin, and so the margin will widen. Conversely, as C decreases, we become less tolerant of violations to the margin and so the margin narrows.
 
 </details>
 
@@ -312,10 +338,12 @@ Kernel function quantifies the similarity of two observations.
 
 - Linear kernel
 
-    $$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$- Polynomial kernel$$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$where, $d > 1$- Radial kernel
+    $$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$- Polynomial kernel$$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$where, $ d > 1$- Radial kernel
 
 $$
+
 K(x_i,x_{i'}) = exp(-\gamma\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2)
+
 $$
 
 where, $\gamma$  is positive constant.
@@ -329,7 +357,7 @@ where, $\gamma$  is positive constant.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Kernel trick is more computationally effective technique. We only need to compute $K(x_i, x'{_{i}})$for all$\binom{n}{2}$distinct pairs of$ i, i'$. This can be done without explicitly working in the enlarged feature space. This is important because in many applications of SVMs, the enlarged feature space is so large that computations are intractable.
+Kernel trick is more computationally effective technique. We only need to compute $K(x_i, x'{_{i}})$ for all $\binom{n}{2}$ distinct pairs of $ i, i'$. This can be done without explicitly working in the enlarged feature space. This is important because in many applications of SVMs, the enlarged feature space is so large that computations are intractable.
 
 </details>
 
@@ -355,7 +383,9 @@ Kernel trick is more computationally effective technique. We only need to comput
 Although kernel machines are computationally expensive, SVMs are inherently efficient because they rely only on a subset of the training data, called support vectors, to define the decision boundary. The number of support vectors is typically much smaller than the total number of data points, which significantly reduces both training and prediction time, making the kernel trick particularly popular in SVM.
 
 $$
+
 f(x) = b + \sum_i \alpha_i k(x, x^{(i)})
+
 $$
 
 In SVMs, the vector of coefficients, \(\alpha\), is sparse, with non-zero values only for the support vectors and zero for the rest of the training points.
@@ -391,7 +421,9 @@ Instead of transforming the data explicitly:
 The linear function used by SVM can be rewritten as follows:
 
 $$
+
 f(x) = w^{T}x + b = b + \sum_{i}\alpha_{i}k(x, x^{(i)})
+
 $$
 
 </details>
@@ -407,13 +439,13 @@ We can use following approaches to accomplish it:
 
 *One-versus-one classification*
 
-To classify data with SVMs when there are $( K > 2 )$classes, the *one-versus-one* (or *all-pairs*) approach is used. This method involves constructing$\binom{K}{2}$SVM classifiers, each trained to distinguish between a pair of classes. For example, one SVM might compare the$ k$th class with the$ k'$  th class. To classify a new observation, each of these classifiers is used to predict the class, and the observation is assigned to the class that receives the most votes from the pairwise classifiers.
+To classify data with SVMs when there are $( K > 2 )$ classes, the *one-versus-one* (or *all-pairs*) approach is used. This method involves constructing $\binom{K}{2}$ SVM classifiers, each trained to distinguish between a pair of classes. For example, one SVM might compare the $ k$ th class with the $ k'$  th class. To classify a new observation, each of these classifiers is used to predict the class, and the observation is assigned to the class that receives the most votes from the pairwise classifiers.
 
 *One-Versus-All classification*
 
-In the one-versus-all (or one-versus-rest) approach for classifying with SVMs when there are $K > 2$classes,$ K$separate SVMs are trained. Each SVM is designed to distinguish one class from the rest. For each SVM, the class of interest is coded as$+1$, while the remaining classes are coded as$-1$. 
+In the one-versus-all (or one-versus-rest) approach for classifying with SVMs when there are $K > 2 $ classes,$ K $ separate SVMs are trained. Each SVM is designed to distinguish one class from the rest. For each SVM, the class of interest is coded as$+1 $, while the remaining classes are coded as$-1$. 
 
-To classify a new observation $x^*$, we compute the decision function values for all$K$  SVMs. The observation is assigned to the class for which this decision function value is the highest, indicating the strongest confidence that the observation belongs to that class.
+To classify a new observation $x^*$, we compute the decision function values for all $ K$  SVMs. The observation is assigned to the class for which this decision function value is the highest, indicating the strongest confidence that the observation belongs to that class.
 
 </details>
 
@@ -452,7 +484,7 @@ SVM does not provide probabilities like logistic regression output. It only outp
 
 ---
 
-### Q: Given a true label $y = +1$and a predicted score$\hat{y} = 0.5$, calculate the hinge loss for this classification example?
+### Q: Given a true label $y = +1 $ and a predicted score$\hat{y} = 0.5$, calculate the hinge loss for this classification example?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -460,12 +492,17 @@ SVM does not provide probabilities like logistic regression output. It only outp
 To calculate the hinge loss for the given true label and predicted score, use the hinge loss formula:
 
 $$
+
 L(X, y, \beta) = \sum_{i=1}^{n}max[0, 1 - y_i(\beta_0 + \beta_1x_{i1} + ... + \beta_{p}x_{ip})]
+
 $$
+
 On putting the given values:
 
 $$
+
 Loss = max[0, 1 - 0.5] = 0.5
+
 $$
 
 </details>
@@ -490,10 +527,12 @@ $$
 - **Formulation**:
 
 $$
+
 \min_{w, b, \xi} \frac{1}{2} \|w\|^2 + C \sum_{i=1}^N \xi_i \quad \text{s.t. } y_i(w^T x_i + b) \ge 1 - \xi_i, \, \xi_i \ge 0
+
 $$
 
-- **Kernel Trick**: Replaces inner products $x_i^T x_j$with kernel functions$K(x_i, x_j) = \phi(x_i)^T \phi(x_j)$  (e.g., RBF kernel) to project data into high-dimensional feature spaces implicitly.
+- **Kernel Trick**: Replaces inner products $x_i^T x_j $ with kernel functions$K(x_i, x_j) = \phi(x_i)^T \phi(x_j)$  (e.g., RBF kernel) to project data into high-dimensional feature spaces implicitly.
 
 </details>
 
@@ -513,17 +552,21 @@ SVM and SVR also differ in the loss function they want to minimize:
 - SVM Loss Function (Hinge Loss)
 
 $$
+
 \text{Loss} = \max(0, 1 - y_i \cdot (\mathbf{w} \cdot \mathbf{x}_i + b))
+
 $$
 
 -  SVR Loss Function (Epsilon-Insensitive Loss)
 
 $$
+
 \text{Loss} = 
 \begin{cases}
 0 & \text{if } |y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| \leq \epsilon \\
 |y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| - \epsilon & \text{otherwise}
 \end{cases}
+
 $$
 
 </details>

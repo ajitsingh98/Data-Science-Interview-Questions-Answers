@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [Logarithms in Information Theory]()
@@ -46,26 +45,33 @@ print (numpy.log2(1.0/0.02)) # Binary log (base 2)
 1. First law
 
 $$
+
 \log A + \log B = \log AB
+
 $$
+
 Compute the following expression:$$\log_{10}3 + \log_{10}4$$2. Second law$$\log A^n = n\log A$$Compute the following expression:$$\log_24^6$$3. Third law
 
 $$
+
 \log A − \log B = \log \frac{A}{B} .
+
 $$
 
-Therefore, subtracting $\log B$from  in$\log A$in$\log \frac{A}{B}$  .
+Therefore, subtracting $\log B $ from  in$\log A $ in$\log \frac{A}{B}$  .
 
 Compute the following expression:
 
 $$
+
 \log_e15 - \log_e3
+
 $$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Product Rule**: $\log_b(xy) = \log_b(x) + \log_b(y)$2. **Quotient Rule**:$\log_b(x/y) = \log_b(x) - \log_b(y)$3. **Power Rule**:$\log_b(x^k) = k \cdot \log_b(x)$ 
+1. **Product Rule**: $\log_b(xy) = \log_b(x) + \log_b(y)$2. **Quotient Rule**: $\log_b(x/y) = \log_b(x) - \log_b(y)$3. **Power Rule**: $\log_b(x^k) = k \cdot \log_b(x)$ 
 
 </details>
 
@@ -79,10 +85,12 @@ $$
 - **Shannon Entropy Formula**:
 
 $$
+
 H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
+
 $$
 
-where $b=2$measures uncertainty in bits,$b=e$  in nats.
+where $b=2 $ measures uncertainty in bits,$b=e$  in nats.
 
 </details>
 
@@ -135,8 +143,8 @@ Enumerate these properties.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-1. **Continuity**: $H(p_1, \dots, p_n)$is continuous in$ p_i$.
-2. **Monotonicity**: If all outcomes are equiprobable ($p_i = 1/n$), $H$is a monotonic increasing function of$n$.
+1. **Continuity**: $H(p_1, \dots, p_n)$ is continuous in $ p_i$.
+2. **Monotonicity**: If all outcomes are equiprobable ($p_i = 1/n $), $ H $is a monotonic increasing function of$ n$.
 3. **Additivity**: If a choice is broken down into successive choices, original $H$  is the weighted sum of individual entropy values.
 
 </details>
@@ -215,7 +223,9 @@ Mark the correct answer: Information is a/an `[decrease/increase]` in uncertaint
 ### Q: Given Shannon's famous general formulae for uncertainty:
 
 $$
+
 H = -\sum_{a=1}^NP_a\log_2P_a \\(bits per symbol)
+
 $$
 
 1. Plot a graph of the curve of probability vs. uncertainty.
@@ -230,23 +240,28 @@ $$
 - **Shannon Entropy Formula**:
 
 $$
+
 H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
+
 $$
 
-where $b=2$measures uncertainty in bits,$b=e$  in nats.
+where $b=2 $ measures uncertainty in bits,$b=e$  in nats.
 
 </details>
 
 ---
 
-12. Assume we are provided with biased coin for which the event ‘heads’ is assigned probability $p$, and ‘tails’ - a probability of $1 − p$. 
+12. Assume we are provided with biased coin for which the event ‘heads’ is assigned probability $p $, and ‘tails’ - a probability of $1 − p$. 
 
 the respective entropy is:
 
 $$
+
 H(p) = −p\log p − (1 − p)\log (1 − p)
+
 $$
-Therefore, $H ≥ 0$and the maximum possible uncertainty is attained when$p = 1/2$, is$H_max = \log_22$.
+
+Therefore, $H ≥ 0 $ and the maximum possible uncertainty is attained when$p = 1/2 $, is$ H_max = \log_22$.
 
 Given the above formulation, describe a helpful property of the entropy that follows from the concavity of the logarithmic function.
 
@@ -256,10 +271,12 @@ Given the above formulation, describe a helpful property of the entropy that fol
 - **Shannon Entropy Formula**:
 
 $$
+
 H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
+
 $$
 
-where $b=2$measures uncertainty in bits,$b=e$  in nats.
+where $b=2 $ measures uncertainty in bits,$b=e$  in nats.
 
 </details>
 
@@ -268,7 +285,9 @@ where $b=2$measures uncertainty in bits,$b=e$  in nats.
 ### Q: **True or False** : Given random variables X, Y and Z where $Y = X + Z$ then:
 
 $$
+
 H(X, Y ) = H(X, Z)
+
 $$
 
 <details>
@@ -287,7 +306,7 @@ $$
 2. Complete the sentence : If the result of the coin toss is ‘heads’,the amount of Shannon information gained is [___] bits.
 3. Complete the sentence: If the result of the coin toss is ‘tails’, the amount of Shannon information gained is [___] bits.
 4. Complete the sentence : It is always true that the more information is associated with an outcome, the [more/less] surprising it is.
-5. Provided that the ratio of tosses resulting in ‘heads’ is $p(x_h)$, and the ratio of tosses resulting in ‘tails’ is$p(x_t)$, and also provided that$p(x_h)+p(x_t) = 1$, what is formulae for the average surprise?
+5. Provided that the ratio of tosses resulting in ‘heads’ is $p(x_h)$, and the ratio of tosses resulting in ‘tails’ is $ p(x_t)$, and also provided that $ p(x_h)+p(x_t) = 1$, what is formulae for the average surprise?
 6. What is the value of the average surprise in bits?
 
 <details>
@@ -329,7 +348,9 @@ density functions P and Q.
 ### Q: 1. True or False: The KL-divergence is not a symmetric measure of similarity, i.e.:
 
 $$
+
 D_{KL}(P||Q) != D_{KL}(Q||P)
+
 $$
 
 2. **True or False**: The KL-divergence satisfies the triangle inequality.
@@ -339,7 +360,9 @@ $$
 6. **True or False**: The KLD is always non-negative, namely:
 
 $$
+
 D_{KL}(P||Q) ≥ 0.
+
 $$
 
 7. **True or False:** In a decision tree, high information gain indicates that adding a split to the decision tree results in a less accurate model.
@@ -354,12 +377,12 @@ $$
 
 ---
 
-### Q: Given two distributions $f1$and$ f2$and their respective joint distribution$ f$, write the formulae for the mutual information of$f1$and$f2$.
+### Q: Given two distributions $f1 $ and$ f2 $ and their respective joint distribution$ f $, write the formulae for the mutual information of$ f1 $and$ f2$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Given two distributions $f1$and$ f2$and their respective joint distribution$ f$, write the formulae for the mutual information of$f1$and$f2$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Given two distributions $f1 $ and$ f2 $ and their respective joint distribution$ f $, write the formulae for the mutual information of$ f1 $and$ f2$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -441,7 +464,7 @@ Without explicitly determining the information gain values for each of the three
 </tr>
 </table>
 
-To study factors affecting tumour shrinkage, the deep learning researcher collects data regrading two independent binary variables; $θ1(T/F)$indicating whether the rodent is a female, and$θ2(T/F)$indicating whether the rodent was administrated with Cannabinoids. The binary response variable,$γ$, indicates whether tumour shrinkage was observed (e.g. shrinkage=+, no shrinkage=-). Referring to Table (9.2), each row indicates the observed values, columns $(θi)$denote features and class label$(γ)$  denotes whether shrinkage was observed.
+To study factors affecting tumour shrinkage, the deep learning researcher collects data regrading two independent binary variables; $θ1(T/F)$ indicating whether the rodent is a female, and $θ2(T/F)$ indicating whether the rodent was administrated with Cannabinoids. The binary response variable, $γ$, indicates whether tumour shrinkage was observed (e.g. shrinkage=+, no shrinkage=-). Referring to Table (9.2), each row indicates the observed values, columns $(θi)$ denote features and class label $(γ)$  denotes whether shrinkage was observed.
 
 <table align='center'>
 <tr>
@@ -456,7 +479,7 @@ To study factors affecting tumour shrinkage, the deep learning researcher collec
 
 1. Describe what is meant by information gain.
 2. Describe in your own words how does a decision tree work.
-3. Using $\log_2$, and the provided dataset, calculate the sample entropy$H(γ)$.
+3. Using $\log_2 $, and the provided dataset, calculate the sample entropy$ H(γ)$.
 4. What is the information gain $IG(X_1) ≡ H(γ) − H(|θ_1)$  for the provided training corpus?
 
 <details>
@@ -469,10 +492,10 @@ To study factors affecting tumour shrinkage, the deep learning researcher collec
 
 ---
 
-### Q: To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$indicating whether a star is dense, and$θ2 (T/F)$indicating whether a star is adjacent to a black-hole. He is told that the binary response variable,$γ$, indicates whether expansion was observed.
+### Q: To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$ indicating whether a star is dense, and $θ2 (T/F)$ indicating whether a star is adjacent to a black-hole. He is told that the binary response variable, $γ$, indicates whether expansion was observed.
 
 e.g.:
-$\text{expansion}=+, \text{no expansion}=-$Referring to table (4.3), each row indicates the observed values, columns$(θi)$denote features and class label$(γ)$  denotes whether expansion was observed.
+$\text{expansion}=+, \text{no expansion}=-$ Referring to table (4.3), each row indicates the observed values, columns $(θi)$ denote features and class label $(γ)$  denotes whether expansion was observed.
 
 <table align='center'>
 <tr>
@@ -485,23 +508,23 @@ $\text{expansion}=+, \text{no expansion}=-$Referring to table (4.3), each row in
 </tr>
 </table>
 
-1. Using $\log_2$and the provided dataset, calculate the sample entropy$ H(γ)$  (expansion) before splitting.
-2. Using $\log_2$and the provided dataset, calculate the information gain of$ H(γ|θ1)$.
-3. Using $log_2$and the provided dataset, calculate the information gain of$ H(γ|θ2)$.
+1. Using $\log_2 $ and the provided dataset, calculate the sample entropy$ H(γ)$  (expansion) before splitting.
+2. Using $\log_2 $ and the provided dataset, calculate the information gain of$ H(γ|θ1)$.
+3. Using $log_2 $ and the provided dataset, calculate the information gain of$ H(γ|θ2)$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$indicating whether a star is dense, and$θ2 (T/F)$indicating whether a star is adjacent to a black-hole. He is told that the binary response variable,$γ$, indicates whether expansion was observed.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `To study factors affecting the expansion of stars, a physicist is provided with data regrading two independent variables; $θ_1 (T/F)$ indicating whether a star is dense, and $θ2 (T/F)$ indicating whether a star is adjacent to a black-hole. He is told that the binary response variable, $γ$, indicates whether expansion was observed.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
 
 ---
 
-### Q: To study factors affecting tumour shrinkage in humans, a deep learning researcher is provided with data regrading two independent variables; $θ1(S/M/L)$indicating whether the tumour is small(S), medium(M) or large(L), and$θ2(T/F)$indicating whether the tumour has undergone radiation therapy. He is told that the binary response variable,$γ$, indicates whether tumour shrinkage was observed $(e.g. shrinkage=+, no shrinkage=-)$.
+### Q: To study factors affecting tumour shrinkage in humans, a deep learning researcher is provided with data regrading two independent variables; $θ1(S/M/L)$ indicating whether the tumour is small(S), medium(M) or large(L), and $θ2(T/F)$ indicating whether the tumour has undergone radiation therapy. He is told that the binary response variable, $γ$, indicates whether tumour shrinkage was observed $(e.g. shrinkage=+, no shrinkage=-)$.
 
-Referring to table (4.4), each row indicates the observed values, columns $(θ_i)$denote features and class label$(γ)$  denotes whether shrinkage was observed.
+Referring to table (4.4), each row indicates the observed values, columns $(θ_i)$ denote features and class label $(γ)$  denotes whether shrinkage was observed.
 <table align='center'>
 <tr>
 <td align="center">
@@ -513,15 +536,15 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 </tr>
 </table>
 
-1. Using $\log_2$and the provided dataset, calculate the sample entropy$ H(γ)$  (shrinkage). 
-2. Using $\log_2$and the provided dataset, calculate the entropy of$ H(γ|θ1)$.
-3. Using $\log_2$and the provided dataset, calculate the entropy of$ H(γ|θ2)$.
+1. Using $\log_2 $ and the provided dataset, calculate the sample entropy$ H(γ)$  (shrinkage). 
+2. Using $\log_2 $ and the provided dataset, calculate the entropy of$ H(γ|θ1)$.
+3. Using $\log_2 $ and the provided dataset, calculate the entropy of$ H(γ|θ2)$.
 4. **True or false**: We should split on a specific variable that minimizes the information gain, therefore we should split on $θ_2$  (radiation therapy).
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `To study factors affecting tumour shrinkage in humans, a deep learning researcher is provided with data regrading two independent variables; $θ1(S/M/L)$indicating whether the tumour is small(S), medium(M) or large(L), and$θ2(T/F)$indicating whether the tumour has undergone radiation therapy. He is told that the binary response variable,$γ$, indicates whether tumour shrinkage was observed $(e.g. shrinkage=+, no shrinkage=-)$.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `To study factors affecting tumour shrinkage in humans, a deep learning researcher is provided with data regrading two independent variables; $θ1(S/M/L)$ indicating whether the tumour is small(S), medium(M) or large(L), and $θ2(T/F)$ indicating whether the tumour has undergone radiation therapy. He is told that the binary response variable, $γ$, indicates whether tumour shrinkage was observed $(e.g. shrinkage=+, no shrinkage=-)$.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -572,9 +595,12 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 ### Q: Complete the sentence: Mutual information is a Shannon entropy-based measure of dependence between random variables. The mutual information between X and Z can be understood as the (a) [...] of the (b) [...] in X given Z:
 
 $$
+
 I(X; Z) := H(X) − H(X | Z)
+
 $$
-where H is the Shannon entropy, and $H (X | Z )$is the conditional entropy of$Z$given$X$.
+
+where H is the Shannon entropy, and $H (X | Z )$ is the conditional entropy of $Z$ given $X$.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>

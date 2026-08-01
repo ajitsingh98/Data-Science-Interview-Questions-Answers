@@ -2,7 +2,6 @@
 
 > 🎯 **Data Science Interview Questions & Answers** — Part of the [complete interview prep series](./README.md)
 
-
 ## Table of Contents
 
 - [Regression Metrics](#regression-metrics)
@@ -39,12 +38,14 @@ We can use following regression metrics for evaluation
 <summary><b>💡 Show Answer</b></summary>
 
 $$
+
 \text{MSE} = \frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2
+
 $$
 
 Where
 
-- $y_{pred, i}$: Predicted value by model for input vector$x_i$-$y_{true, i}$: Ground truth value/label by model for input vector$x_i$ 
+- $y_{pred, i}$: Predicted value by model for input vector $ x_i$-$ y_{true, i}$: Ground truth value/label by model for input vector $ x_i$ 
 
 </details>
 
@@ -71,8 +72,11 @@ Where
 Bounds of mean-squared error(mse)
 
 $$
+
 [0, \inf)
+
 $$
+
 with $0$  the best mse
 
 </details>
@@ -167,7 +171,9 @@ Minimizing MSE involves a combination of techniques:
 RMSE is basically root of mean-squared error
 
 $$
+
 \text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=i}^{n}(y_{pred, i} - y_{true,i})^2}
+
 $$
 
 </details>
@@ -210,7 +216,9 @@ $$
 MAE is average of absolute difference of predicted and actual values.
 
 $$
+
 \text{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_{true, i} - y_{pred, i}|
+
 $$
 
 </details>
@@ -260,9 +268,12 @@ MAE uses `|.|` function which is not differential at zero
 MAPE is a metric used to evaluate the accuracy of a forecasting or regression model. It measures the average absolute percentage error between predicted and actual values. It is calculated as:
 
 $$
+
 \text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100
+
 $$
-where $y_i$is the actual value,$\hat{y}_i$is the predicted value, and$ n$  is the number of observations.
+
+where $y_i $ is the actual value,$\hat{y}_i $ is the predicted value, and$ n$  is the number of observations.
 
 </details>
 
@@ -369,7 +380,7 @@ R-squared is more useful when we have linear relationship between dependent and 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-R-squared ranges from $0$to$ 1$, with$1$indicating a perfect fit and$0$  indicating no fit at all.
+R-squared ranges from $0 $ to$ 1 $, with$1 $ indicating a perfect fit and$0$  indicating no fit at all.
 
 </details>
 
@@ -380,7 +391,7 @@ R-squared ranges from $0$to$ 1$, with$1$indicating a perfect fit and$0$  indicat
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-An R-squared value of $0.75$means that 75% of the variance in the dependent variable (target) can be explained by the independent variables (predictors) in the model. In other words, the model accounts for$ 75%$  of the variability in the data, indicating a relatively good fit.
+An R-squared value of $0.75 $ means that 75% of the variance in the dependent variable (target) can be explained by the independent variables (predictors) in the model. In other words, the model accounts for$ 75%$  of the variability in the data, indicating a relatively good fit.
 
 </details>
 
@@ -394,7 +405,9 @@ An R-squared value of $0.75$means that 75% of the variance in the dependent vari
 Mathematically, It can be expressed as:
 
 $$
+
 \text{R-squared} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{N}(y_i - \hta{y}_{i})^2}{\sum_{i}^{N}(y_i - \bar{y}_{i})^2}
+
 $$
 
 Where:
@@ -414,7 +427,9 @@ Where:
 Yeah, `R-squared` value can be negative due to outliers i.e when `MSE(model) > MSE(Baseline)`. It is the case when we have heavy outliers in predictions.
 
 $$
+
 \text{SSR} > \text{SST}
+
 $$
 
 </details>
@@ -493,7 +508,9 @@ R-squared suffers from problem that the scores keep improving on addition of pre
 Mathematically It can be expressed as:
 
 $$
+
 \text{Adjusted R-squared} = 1 - (\frac{(1-R^2).(n-1)}{n - k -1})
+
 $$
 
 Where:
@@ -522,7 +539,7 @@ Adjusted R-squared value is sensitive to sample size. It means the value may dec
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Pearson Correlation is a statistical method that measures the similarity or correlation between two data objects by comparing their attributes and calculating a score ranging from $-1$to$+1$.
+Pearson Correlation is a statistical method that measures the similarity or correlation between two data objects by comparing their attributes and calculating a score ranging from $-1 $ to$+1$.
 
 </details>
 
@@ -533,10 +550,12 @@ Pearson Correlation is a statistical method that measures the similarity or corr
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The Pearson correlation coefficient between two vectors $y$and$\cap{y}$  of dimension is:
+The Pearson correlation coefficient between two vectors $y $ and$\cap{y}$  of dimension is:
 
 $$
+
 \rho(y, \hat(y)) = \frac{\text{Cov}(y, \hat{y})}{\sigma_{y} \sigma_{\hat{y}}}
+
 $$
 
 </details>
@@ -548,7 +567,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Bound of $\rhi$is$[0, 1]$,$+1$is complete positive linear correlation, and$ 0$  is no linear correlation at all.
+Bound of $\rhi $ is$[0, 1]$, $+1$ is complete positive linear correlation, and $ 0$  is no linear correlation at all.
 
 </details>
 
@@ -571,7 +590,7 @@ Bound of $\rhi$is$[0, 1]$,$+1$is complete positive linear correlation, and$ 0$  
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Spearman's rank correlation coefficient, often denoted as $\rho_s$or$r_s$, is a non-parametric measure of correlation that assesses the strength and direction of the monotonic relationship between two variables. Unlike Pearson’s correlation, which measures linear relationships, Spearman’s correlation evaluates how well the relationship between two variables can be described by a monotonic function.
+Spearman's rank correlation coefficient, often denoted as $\rho_s $ or$r_s$, is a non-parametric measure of correlation that assesses the strength and direction of the monotonic relationship between two variables. Unlike Pearson’s correlation, which measures linear relationships, Spearman’s correlation evaluates how well the relationship between two variables can be described by a monotonic function.
 
 </details>
 
@@ -600,15 +619,18 @@ Spearman's rank correlation coefficient, often denoted as $\rho_s$or$r_s$, is a 
 The formula for Spearman’s rank correlation is:
 
 $$
+
 \rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}
+
 $$
-Where $d_i$is the difference between the ranks of each pair of values, and$n$  is the number of observations.
+
+Where $d_i $ is the difference between the ranks of each pair of values, and$n$  is the number of observations.
 
 </details>
 
 ---
 
-### Q: How can you compute the spearman correlation between two variable $X$and$Y$?
+### Q: How can you compute the spearman correlation between two variable $X $ and$Y$?
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -624,7 +646,9 @@ Where $d_i$is the difference between the ranks of each pair of values, and$n$  i
 3. Apply the expression of spearman correlation
 
 $$
+
 \rho_s = 1 - \frac{6\sum d_{i}^2}{n(n^2-1)}
+
 $$
 
 </details>
@@ -799,7 +823,9 @@ Accuracy scores signifies the portion of true predictions among total cases exam
 It is mathematically expressed as:
 
 $$
+
 \text{accuracy score} = \frac{TP + TN}{TP + FP + FN + TN}
+
 $$
 
 Where:
@@ -820,7 +846,7 @@ Where:
 
 *Accuracy bounds*
 
-$[0, 1]$, with$0$the worst and$1$  the best.
+$[0, 1]$, with $0$ the worst and $1$  the best.
 
 </details>
 
@@ -869,7 +895,9 @@ Precision is the portion of true positive class among predicted positive classes
 It can be expressed as:
 
 $$
+
 \text{Precision Score} = \frac{TP}{TP+FP}
+
 $$
 
 Note that precision is per-class notion.
@@ -894,7 +922,7 @@ It is preferable choice when you want to be very sure of your predictions.
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$[0, 1]$, with$0$the worst and$1$  the best.
+$[0, 1]$, with $0$ the worst and $1$  the best.
 
 </details>
 
@@ -956,7 +984,9 @@ Recall measures the proportion of actual positives cases that are correctly pred
 It is calculated as:
 
 $$
+
 \text{recall score} = \frac{TP}{TP+FN}
+
 $$
 
 </details>
@@ -990,7 +1020,7 @@ It is a suitable metric when the goal is to minimize false negatives, i.e., corr
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-$[0, 1]$, with$0$the worst and$1$  the best.
+$[0, 1]$, with $0$ the worst and $1$  the best.
 
 </details>
 
@@ -1039,7 +1069,9 @@ F scores combine precision and recall via their harmonic mean, with a value  tha
 It captures the tradeoff between precision and recall:
 
 $$
+
 \text{F Score} = (\beta^2 + 1)\frac{\text{precision} \cdot \text{recall}}{\beta^{2} \cdot \text{precision} + \text{recall}}
+
 $$
 
 </details>
@@ -1054,7 +1086,9 @@ $$
 F-1 Score is a special case of F scores when we give equal weighage to precision and recall. In this setup $\beta  = 1$ 
 
 $$
+
 \text{F-1 Score} = \frac{2 * \text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
+
 $$
 
 The F1 score is a suitable choice when both precision and recall are equally important, and we want to balance between the two.
@@ -1068,7 +1102,7 @@ The F1 score is a suitable choice when both precision and recall are equally imp
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-Bounds of F scores: $[0, 1]$, with$0$the worst and$1$  the best, and guaranteed to be between precision and recall.
+Bounds of F scores: $[0, 1]$, with $0$ the worst and $1$  the best, and guaranteed to be between precision and recall.
 
 </details>
 
@@ -1091,12 +1125,14 @@ Bounds of F scores: $[0, 1]$, with$0$the worst and$1$  the best, and guaranteed 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Type I Error ($\alpha$, False Positive)**: Rejecting the null hypothesis $H_0$  when it is actually true (e.g., classifying a healthy patient as sick).
-- **Type II Error ($\beta$, False Negative)**: Failing to reject the null hypothesis $H_0$  when it is false (e.g., missing a fraudulent transaction).
+- **Type I Error ($\alpha $, False Positive)**: Rejecting the null hypothesis $ H_0$  when it is actually true (e.g., classifying a healthy patient as sick).
+- **Type II Error ($\beta $, False Negative)**: Failing to reject the null hypothesis $ H_0$  when it is false (e.g., missing a fraudulent transaction).
 - **Confusion Matrix Relationship**:
 
 $$
+
 \text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \quad (\text{penalizes Type I}), \quad \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} \quad (\text{penalizes Type II})
+
 $$
 
 </details>
@@ -1199,10 +1235,12 @@ With precision–recall curves, we get a generalized perspective on F1 scores (a
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-The Receiver Operating Characteristic (ROC) curve for a class $k$depicts recall the false positive rate (FPR) for$k$as a function of the recall for$k$.
+The Receiver Operating Characteristic (ROC) curve for a class $k $ depicts recall the false positive rate (FPR) for$k $ as a function of the recall for$k$.
 
 $$
+
 \text{False Positive Rate} = \frac{FP}{FP + TN}
+
 $$
 
 ROC curve indicates how well probabilities from positive class are separated from negative class.
@@ -1238,7 +1276,7 @@ The ROC curve is a probability curve, and for an ideal model, the area under the
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-AUC of $0.2$indicates there are$ 20%$  chance of fair classification.
+AUC of $0.2 $ indicates there are$ 20%$  chance of fair classification.
 
 </details>
 
@@ -1260,7 +1298,7 @@ It's important to note that the AUROC is commonly used for binary class classifi
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-For ROC AUC: $[0, 1]$, with$1$  the best.
+For ROC AUC: $[0, 1]$, with $1$  the best.
 
 </details>
 
@@ -1295,11 +1333,13 @@ Accuracy is not a reliable metric in this scenario because cancer is rare. A mod
 ### Q: Given a binary classifier that outputs the following confusion matrix.
 
 $$
+
 \begin{bmatrix} 
     \textbf{""} & \textbf{Predicted True} & \textbf{Predicted False} \\\\
     \textbf{Actual True} & 30 & 20 \\\\
     \textbf{Actual False} & 5 & 40 \\\\
 \end{bmatrix}
+
 $$
 
 1. Calculate the model’s precision, recall, and F1.
@@ -1309,7 +1349,7 @@ $$
 <summary><b>💡 Show Answer</b></summary>
 
 1. Precision, Recall, and F1 Score Calculations:
-   -Precision: $\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{30}{30 + 5} = \frac{30}{35} \approx 0.857$-Recall:$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{30}{30 + 20} = \frac{30}{50} = 0.600$-F1 Score:$\text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \times \frac{0.857 \times 0.600}{0.857 + 0.600} \approx 0.714$ 
+   -Precision: $\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{30}{30 + 5} = \frac{30}{35} \approx 0.857 $-Recall:$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{30}{30 + 20} = \frac{30}{50} = 0.600 $-F1 Score:$\text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \times \frac{0.857 \times 0.600}{0.857 + 0.600} \approx 0.714$ 
 
 2. Improving the Model’s Performance:
    - Adjust Threshold: Experiment with different classification thresholds to balance precision and recall.
@@ -1320,7 +1360,7 @@ $$
 
 ---
 
-### Q: Consider a classification where $99%$of data belongs to class A and$ 1%$  of data belongs to class B.
+### Q: Consider a classification where $99%$ of data belongs to class A and $ 1%$  of data belongs to class B.
 
 1. If your model predicts A 100% of the time, what would the F1 score be? Hint: The F1 score when A is mapped to 0 and B to 1 is different from the F1 score when A is mapped to 1 and B to 0.
 1. If we have a model that predicts A and B at a random (uniformly), what would the expected $F_1$  be?
@@ -1328,7 +1368,7 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a classification where $99%$of data belongs to class A and$ 1%$  of data belongs to class B.`.
+- **Direct Solution**: Analytical solution and mathematical formulation for `Consider a classification where $99%$ of data belongs to class A and $ 1%$  of data belongs to class B.`.
 - **Key Takeaway**: Standard interview answer evaluating key properties, edge cases, and statistical assumptions.
 
 </details>
@@ -1340,16 +1380,20 @@ $$
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-- **Negative Log-Likelihood (NLL)** for Bernoulli distribution with targets $y_i \in \{0, 1\}$and predicted probabilities$\hat{y}_i$:
+- **Negative Log-Likelihood (NLL)** for Bernoulli distribution with targets $y_i \in \{0, 1\}$ and predicted probabilities $\hat{y}_i$:
 
 $$
+
 \mathcal{L}_{\text{NLL}}(\theta) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]
-$$
-
-- **Cross-Entropy** between empirical data distribution $p(y_i)$and model distribution$q(y_i) = \hat{y}_i$:
 
 $$
+
+- **Cross-Entropy** between empirical data distribution $p(y_i)$ and model distribution $q(y_i) = \hat{y}_i$:
+
+$$
+
 H(p, q) = -\sum_{x} p(x) \log q(x) = -\sum_{i=1}^N \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]
+
 $$
 
 - **Conclusion**: Minimizing Negative Log-Likelihood of Bernoulli targets is mathematically identical to minimizing Cross-Entropy.
@@ -1428,13 +1472,15 @@ It measures how similar an object is to its own cluster compared to other cluste
 <summary><b>💡 Show Answer</b></summary>
 
 $$
+
 S(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
+
 $$
 
 Where,
 
-- $a(i)$is the average distance between the sample$ i$  and all other points in the same cluster.
-- $b(i)$is the minimum average distance between the sample$ i$and all points in the nearest cluster (not including$ i$'s cluster).
+- $a(i)$ is the average distance between the sample $ i$  and all other points in the same cluster.
+- $b(i)$ is the minimum average distance between the sample $ i$ and all points in the nearest cluster (not including $ i$'s cluster).
 
 </details>
 
@@ -1483,13 +1529,15 @@ It quantifies the average similarity ratio of each cluster to its most similar c
 The Davies-Bouldin Index is calculated as:
 
 $$
+
 DBI = \frac{1}{n} \sum_{i=1}^{n} \max_{j \neq i} \left( \frac{\sigma_i + \sigma_j}{d(c_i, c_j)} \right)
+
 $$
 
 Where:
 
-- $\sigma_i$is the average distance between each point in cluster$i$  and its centroid.
-- $d(c_i, c_j)$is the distance between the centroids of clusters$ i$and$ j$.
+- $\sigma_i $ is the average distance between each point in cluster$i$  and its centroid.
+- $d(c_i, c_j)$ is the distance between the centroids of clusters $ i$ and $ j$.
 
 </details>
 
@@ -1516,7 +1564,9 @@ WER is a measure of the accuracy of sequence predictions at the word level. It i
 Mathematically, WER can be expressed as:
 
 $$
+
 \text{WER} = \frac{\text{Edit Distance}}{\text{Length of True Sequence}}
+
 $$
 
 Where the Edit Distance is the number of insertions, deletions, and substitutions needed to transform the predicted sequence into the true sequence.
@@ -1533,7 +1583,9 @@ Where the Edit Distance is the number of insertions, deletions, and substitution
 To compute WER over a dataset, calculate the edit distances for each pair of true and predicted sequences, and then normalize these distances by the total length of all true sequences:
 
 $$
+
 \text{Corpus WER} = \frac{\sum \text{Edit Distances}}{\sum \text{Length of True Sequences}}
+
 $$
 
 </details>
@@ -1596,9 +1648,12 @@ Key components include:
 The BLEU score combines the modified n-gram precision for various n-gram levels (usually up to 4) and includes a brevity penalty. The formula is:
 
 $$
+
 \text{BLEU} = BP \times \exp \left( \sum_{n=1}^{N} w_n \log p_n \right)
+
 $$
-Where $p_n$is the modified precision for n-grams,$w_n$  is the weight for each n-gram level, and BP is the brevity penalty.
+
+Where $p_n $ is the modified precision for n-grams,$w_n$  is the weight for each n-gram level, and BP is the brevity penalty.
 
 </details>
 
@@ -1635,9 +1690,12 @@ ROUGE focuses on recall and is often used for summarization tasks, while METEOR 
 Perplexity measures how well a probability model predicts a sample. For a sequence, it is calculated as the inverse probability of the sequence normalized by the number of words:
 
 $$
+
 \text{Perplexity} = \exp \left( - \frac{1}{N} \sum_{i=1}^{N} \log P(w_i) \right)
+
 $$
-Where $P(w_i)$is the probability assigned to the$i$-th word by the model.
+
+Where $P(w_i)$ is the probability assigned to the $i$-th word by the model.
 
 </details>
 
