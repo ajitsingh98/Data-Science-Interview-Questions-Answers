@@ -241,9 +241,9 @@ It indicates that the bulk of the data values are clustered towards the lower en
 
 For a right-skewed distribution, the general order is:
 
-```math
-\text{Mode} < \text{Median} < \text{Mean}
-```
+
+$$\text{Mode} < \text{Median} < \text{Mean}$$
+
 
 </details>
 
@@ -309,9 +309,9 @@ It indicates that the bulk of the data values are clustered towards the higher e
 
 For a left-skewed distribution, the general order is:
 
-```math
-\text{Mode} > \text{Median} > \text{Mean}
-```
+
+$$\text{Mode} > \text{Median} > \text{Mean}$$
+
 
 </details>
 
@@ -324,9 +324,9 @@ For a left-skewed distribution, the general order is:
 
 For a left-skewed distribution, the general order is:
 
-```math
-\text{Mode} ~ \text{Median} ~ \text{Mean}
-```
+
+$$\text{Mode} ~ \text{Median} ~ \text{Mean}$$
+
 
 </details>
 
@@ -391,9 +391,9 @@ Mode is the most commonly occurring value in a distribution.
 
 The mean is the average of a set of observations (i.e., the sum of the observations divided by the number of observations). If the n observations are $x_1, x_2,..,x_n$ their mean, which we denote by $\bar{x}$ 
 
-```math
-\bar{x} = \frac{x_1 + x_2 + ... + x_n}{n}
-```
+
+$$\bar{x} = \frac{x_1 + x_2 + ... + x_n}{n}$$
+
 
 </details>
 
@@ -484,9 +484,9 @@ The mean is an appropriate measure of center only for symmetric distributions wi
 
 The range covered by the data is the most intuitive measure of variability. The range is exactly the distance between the smallest data point (min) and the largest one (Max).
 
-```math
-\text{Range} = \text{Max} - \text{Min}
-```
+
+$$\text{Range} = \text{Max} - \text{Min}$$
+
 
 </details>
 
@@ -518,9 +518,9 @@ IQR calculations:
 
 - The middle 50% of the data falls between $Q1$ and $Q3$, and therefore:
 
-```math
-\text{IQR} = Q3 - Q1
-```
+
+$$\text{IQR} = Q3 - Q1$$
+
 
 <table align='center'>
 <tr>
@@ -629,9 +629,9 @@ Boxplots are most useful when presented side-by-side to compare and contrast dis
 
 standard deviation quantifies the spread of a distribution by measuring how far the observations are from their mean $\bar{x}$. The standard deviation gives the average (or typical distance) between a data point and the mean $\bar{x}$.
 
-```math
-\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}
-```
+
+$$\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}$$
+
 
 where:
 - $N$  is the number of observations in the population.
@@ -660,63 +660,63 @@ The SD is strongly influenced by outliers in the data.
 
 Given:
 
-```math
-arr = [1, 5, 3, 2, 4, 4]
-```
+
+$$arr = [1, 5, 3, 2, 4, 4]$$
+
 
 Sort the above series in ascending order:
 
-```math
-arr = [1, 2, 3, 4, 4, 5]
-```
+
+$$arr = [1, 2, 3, 4, 4, 5]$$
+
 
 <b>Mean($\bar{x}$)</b>
 
-```math
-\bar{x}= \frac{\sum_{i=1}^{n}arr}{n}
-```
+
+$$\bar{x}= \frac{\sum_{i=1}^{n}arr}{n}$$
+
 
 Here number of elements(n) = 6
 
-```math
-\bar{x} = \frac{\sum_{i=1}^{6}arr}{6} = \frac{1+2+3+4+4+5}{6} = 3.166
-```
+
+$$\bar{x} = \frac{\sum_{i=1}^{6}arr}{6} = \frac{1+2+3+4+4+5}{6} = 3.166$$
+
 
 <b>Median($M$)</b>
 
 Since $n$ is even, we can use following expression:
 
-```math
-\text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
-```
 
-```math
-\text{M} = \frac{3+4}{2} = 3.5
-```
+$$\text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}$$
+
+
+
+$$\text{M} = \frac{3+4}{2} = 3.5$$
+
 
 <b>Variance($\sigma^2$)</b>
 
-```math
-\text{\sigma^2} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
-```
 
-```math
-\text{\sigma^2} = \frac{1}{6} \sum_{i=1}^{n} (x_i - 3.166)^2
-```
+$$\text{\sigma^2} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2$$
 
-```math
-\text{\sigma^2} ≈ 1.47
-```
+
+
+$$\text{\sigma^2} = \frac{1}{6} \sum_{i=1}^{n} (x_i - 3.166)^2$$
+
+
+
+$$\text{\sigma^2} ≈ 1.47$$
+
 
 <b>Standard deviation($\sigma$)</b>
 
-```math
-\text{\sigma} = \sqrt{variance} = \sqrt{1.47}
-```
 
-```math
-\text{\sigma} = 1.2124
-```
+$$\text{\sigma} = \sqrt{variance} = \sqrt{1.47}$$
+
+
+
+$$\text{\sigma} = 1.2124$$
+
 
 </details>
 

@@ -236,9 +236,9 @@ Information Gain calculates the reduction in the entropy and measures how good a
 
 Information Gain for a feature column A is calculated as:
 
-```math
-IG(S, A) = Entropy(S) - \sum{((|S_v|/|S|)*Entropy(S_v))}
-```
+
+$$IG(S, A) = Entropy(S) - \sum{((|S_v|/|S|)*Entropy(S_v))}$$
+
 
 where $S_v$ is the set of rows in $S$ for which the feature column $A$ has value $v$, $|Sᵥ|$ is the number of rows in $S_v$ and likewise $|S|$ is the number of rows in $S$.
 

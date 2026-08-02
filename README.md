@@ -54,7 +54,7 @@ All topics are organized into 4 core pillars. Click any module below to dive str
 | 🖼️ [Convolutional Neural Networks](./convolutional_neural_networks.md) | Convolutions, Pooling, ResNet, Object Detection, ViT | 46 |
 | 🔄 [Sequence Models & Transformers](./sequence_models_and_transformers.md) | RNNs, LSTMs, GRUs, Seq2Seq, Attention, Transformers | 9 |
 | 🗣️ [Natural Language Processing & LLMs](./natural_language_processing_and_llms.md) | Tokenization, TF-IDF, Word2Vec, BERT, Language Models | 7 |
-| 🤖 [Generative AI & LLMs](./generative_ai_and_large_language_models.md) | LLM Architectures, LoRA/QLoRA, RAG, RLHF, DPO | 2 *(New)* |
+| 🤖 [Generative AI & LLMs](./generative_ai_and_large_language_models.md) | LLM Architectures, LoRA/QLoRA, RAG, RLHF, DPO | 59 |
 
 ---
 

@@ -44,29 +44,17 @@ print (numpy.log2(1.0/0.02)) # Binary log (base 2)
 
 1. First law
 
-$$
-
-\log A + \log B = \log AB
-
-$$
+$$\log A + \log B = \log AB$$
 
 Compute the following expression:$$\log_{10}3 + \log_{10}4$$2. Second law$$\log A^n = n\log A$$Compute the following expression:$$\log_24^6$$3. Third law
 
-$$
-
-\log A − \log B = \log \frac{A}{B} .
-
-$$
+$$\log A − \log B = \log \frac{A}{B} .$$
 
 Therefore, subtracting $\log B$ from  in $\log A$ in $\log \frac{A}{B}$  .
 
 Compute the following expression:
 
-$$
-
-\log_e15 - \log_e3
-
-$$
+$$\log_e15 - \log_e3$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -84,9 +72,9 @@ $$
 
 - **Shannon Entropy Formula**:
 
-```math
-H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
-```
+
+$$H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)$$
+
 
 where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
@@ -220,11 +208,7 @@ Mark the correct answer: Information is a/an `[decrease/increase]` in uncertaint
 
 ### Q: Given Shannon's famous general formulae for uncertainty:
 
-$$
-
-H = -\sum_{a=1}^NP_a\log_2P_a \\(bits per symbol)
-
-$$
+$$H = -\sum_{a=1}^NP_a\log_2P_a \\(bits per symbol)$$
 
 1. Plot a graph of the curve of probability vs. uncertainty.
 
@@ -237,9 +221,9 @@ $$
 
 - **Shannon Entropy Formula**:
 
-```math
-H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
-```
+
+$$H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)$$
+
 
 where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
@@ -251,11 +235,7 @@ where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
 the respective entropy is:
 
-$$
-
-H(p) = −p\log p − (1 − p)\log (1 − p)
-
-$$
+$$H(p) = −p\log p − (1 − p)\log (1 − p)$$
 
 Therefore, $H ≥ 0$ and the maximum possible uncertainty is attained when $p = 1/2$, is$ H_max = \log_22$.
 
@@ -266,9 +246,9 @@ Given the above formulation, describe a helpful property of the entropy that fol
 
 - **Shannon Entropy Formula**:
 
-```math
-H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)
-```
+
+$$H(X) = -\sum_{i=1}^n P(x_i) \log_b P(x_i)$$
+
 
 where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
@@ -278,11 +258,7 @@ where $b=2$ measures uncertainty in bits, $b=e$  in nats.
 
 ### Q: **True or False** : Given random variables X, Y and Z where $Y = X + Z$ then:
 
-$$
-
-H(X, Y ) = H(X, Z)
-
-$$
+$$H(X, Y ) = H(X, Z)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -341,11 +317,7 @@ density functions P and Q.
 
 ### Q: 1. True or False: The KL-divergence is not a symmetric measure of similarity, i.e.:
 
-$$
-
-D_{KL}(P||Q) != D_{KL}(Q||P)
-
-$$
+$$D_{KL}(P||Q) != D_{KL}(Q||P)$$
 
 2. **True or False**: The KL-divergence satisfies the triangle inequality.
 3. **True or False**: The KL-divergence is not a distance metric.
@@ -353,11 +325,7 @@ $$
 5. **True or False**: The units of KL-divergence are units of information.
 6. **True or False**: The KLD is always non-negative, namely:
 
-$$
-
-D_{KL}(P||Q) ≥ 0.
-
-$$
+$$D_{KL}(P||Q) ≥ 0.$$
 
 7. **True or False:** In a decision tree, high information gain indicates that adding a split to the decision tree results in a less accurate model.
 
@@ -588,11 +556,7 @@ Referring to table (4.4), each row indicates the observed values, columns $(θ_i
 
 ### Q: Complete the sentence: Mutual information is a Shannon entropy-based measure of dependence between random variables. The mutual information between X and Z can be understood as the (a) [...] of the (b) [...] in X given Z:
 
-$$
-
-I(X; Z) := H(X) − H(X | Z)
-
-$$
+$$I(X; Z) := H(X) − H(X | Z)$$
 
 where H is the Shannon entropy, and $H (X | Z )$ is the conditional entropy of $Z$ given $X$.
 

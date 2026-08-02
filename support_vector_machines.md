@@ -40,9 +40,9 @@ In a p-dimensional space, a hyperplane is a flat affine subspace of dimension $p
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-```math
-\beta_0 + \beta_1X_1 + \beta_2X_2 + .... + \beta_pX_p  = 0
-```
+
+$$\beta_0 + \beta_1X_1 + \beta_2X_2 + .... + \beta_pX_p = 0$$
+
 
 </details>
 
@@ -73,9 +73,9 @@ Suppose we are working on a binary classification problem with $n$ training exam
 - $x_i \in \mathbb{R}^n$ is a $p$-dimensional feature vector
 - $y_i \in \{-1, +1\}$  With the above setup, maximal margin classifier tries to find a hyperplane which can be represented as:
 
-```math
-f(x) = w^Tx + b
-```
+
+$$f(x) = w^Tx + b$$
+
 
 where:
 
@@ -84,35 +84,35 @@ where:
 
 Decision boundary can be defined by:
 
-```math
-f(x) = 0
-```
 
-```math
-w^Tx + b  = 0
-```
+$$f(x) = 0$$
+
+
+
+$$w^Tx + b = 0$$
+
 
 Now, we want to maximize the margin which is basically the distance between the decision boundary(hyperplane) and the closest points in the dataset(support vectors).  
 
 Assume $x_i$ is a support vector, the distance(d) from the hyperplane can be expressed as$$d = \frac{|w^Tx_i + b|}{||w||}$$If we assume data is perfectly separable:$$y_i(w^Tx_i + b) \ge 1$$Using above two equations, margin can be derived as
 
-```math
-\text{Margin} = \frac{2}{||w||}
-```
+
+$$\text{Margin} = \frac{2}{||w||}$$
+
 
 Note that here $2$ comes from the distance between the two support vectors(one from each class), each being at the distance of $\frac{1}{||w||}$  from the hyperplane.
 
 So, maximal margin classifier tends to optimize the margin subject to the constraints that all points are classified correctly:
 
-```math
-\min_{\mathbf{w}, b}\frac{1}{2}||w||^2
-```
+
+$$\min_{\mathbf{w}, b}\frac{1}{2}||w||^2$$
+
 
 subject to:
 
-```math
-y_i(w^Tx_i + b) \ge 1 \forall i
-```
+
+$$y_i(w^Tx_i + b) \ge 1 \forall i$$
+
 
 - Here we have used $||w||^2$ instead of $||w||$  to make the objective function convex and differential
 - The constraints ensures that all points are on the correct side of the margin
@@ -180,31 +180,31 @@ The support vector classifier classifies a test observations depending on which 
 
 It is the solution to the optimization problem:
 
-```math
-\max_{\mathbf{\beta_0,..,\beta_p}, \epsilon_1,..,\epsilon_n, M} M
-```
+
+$$\max_{\mathbf{\beta_0,..,\beta_p}, \epsilon_1,..,\epsilon_n, M} M$$
+
 
 subjected to
 
-```math
-\sum_{j=1}^p\beta_j^2 = 1
-```
 
-```math
-y_i(\beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + ... + \beta_px_{ip}) \ge M(1-\epsilon_i)
-```
+$$\sum_{j=1}^p\beta_j^2 = 1$$
 
-```math
-\epsilon_i \ge 0, \sum_{i=1}^{n}\epsilon_i \le C
-```
+
+
+$$y_i(\beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + ... + \beta_px_{ip}) \ge M(1-\epsilon_i)$$
+
+
+
+$$\epsilon_i \ge 0, \sum_{i=1}^{n}\epsilon_i \le C$$
+
 
 Where $C$ is a nonnegative tuning parameter. $M$ is the width of the margin and $\epsilon_1,....\epsilon_n$  are slack variables that allows individual observations on the wrong side of the margin or the hyperplane.
 
 Once we have hyperplane after solving above set of equations, we classify a test observations $x^*$, by simply determining on which side of hyperplane it lies.
 
-```math
-Sign(f(x^*) = \beta_0 + \beta_1x_1^{*}+...+\beta_Px_p^*)
-```
+
+$$Sign(f(x^*) = \beta_0 + \beta_1x_1^{*}+...+\beta_Px_p^*)$$
+
 
 </details>
 
@@ -316,9 +316,9 @@ Kernel function quantifies the similarity of two observations.
 
     $$K(x_i, x_{i'}) = \sum_{j-1}^p{x_{ij}{x_{i'j}}}$$- Polynomial kernel$$K(x_i, x_i') = (1 + \sum_{j=1}^p{x_{ij}{x_{i'j}}})^d$$where, $d > 1$- Radial kernel
 
-```math
-K(x_i,x_{i'}) = exp(-\gamma\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2)
-```
+
+$$K(x_i,x_{i'}) = exp(-\gamma\sum_{j=1}^{p}(x_{ij} - x_{i'j})^2)$$
+
 
 where, $\gamma$  is positive constant.
 
@@ -356,9 +356,9 @@ Kernel trick is more computationally effective technique. We only need to comput
 
 Although kernel machines are computationally expensive, SVMs are inherently efficient because they rely only on a subset of the training data, called support vectors, to define the decision boundary. The number of support vectors is typically much smaller than the total number of data points, which significantly reduces both training and prediction time, making the kernel trick particularly popular in SVM.
 
-```math
-f(x) = b + \sum_i \alpha_i k(x, x^{(i)})
-```
+
+$$f(x) = b + \sum_i \alpha_i k(x, x^{(i)})$$
+
 
 In SVMs, the vector of coefficients, \(\alpha\), is sparse, with non-zero values only for the support vectors and zero for the rest of the training points.
 
@@ -392,9 +392,9 @@ Instead of transforming the data explicitly:
 
 The linear function used by SVM can be rewritten as follows:
 
-```math
-f(x) = w^{T}x + b = b + \sum_{i}\alpha_{i}k(x, x^{(i)})
-```
+
+$$f(x) = w^{T}x + b = b + \sum_{i}\alpha_{i}k(x, x^{(i)})$$
+
 
 </details>
 
@@ -461,15 +461,15 @@ SVM does not provide probabilities like logistic regression output. It only outp
 
 To calculate the hinge loss for the given true label and predicted score, use the hinge loss formula:
 
-```math
-L(X, y, \beta) = \sum_{i=1}^{n}max[0, 1 - y_i(\beta_0 + \beta_1x_{i1} + ... + \beta_{p}x_{ip})]
-```
+
+$$L(X, y, \beta) = \sum_{i=1}^{n}max[0, 1 - y_i(\beta_0 + \beta_1x_{i1} + ... + \beta_{p}x_{ip})]$$
+
 
 On putting the given values:
 
-```math
-Loss = max[0, 1 - 0.5] = 0.5
-```
+
+$$Loss = max[0, 1 - 0.5] = 0.5$$
+
 
 </details>
 
@@ -492,9 +492,9 @@ Loss = max[0, 1 - 0.5] = 0.5
 - **Support Vector Machine (SVM)**: A supervised learning algorithm that finds an optimal hyper-plane maximizing the geometric margin $\frac{2}{\|w\|}$  between classes.
 - **Formulation**:
 
-```math
-\min_{w, b, \xi} \frac{1}{2} \|w\|^2 + C \sum_{i=1}^N \xi_i \quad \text{s.t. } y_i(w^T x_i + b) \ge 1 - \xi_i, \, \xi_i \ge 0
-```
+
+$$\min_{w, b, \xi} \frac{1}{2} \|w\|^2 + C \sum_{i=1}^N \xi_i \quad \text{s.t. } y_i(w^T x_i + b) \ge 1 - \xi_i, \, \xi_i \ge 0$$
+
 
 - **Kernel Trick**: Replaces inner products $x_i^T x_j$ with kernel functions $K(x_i, x_j) = \phi(x_i)^T \phi(x_j)$  (e.g., RBF kernel) to project data into high-dimensional feature spaces implicitly.
 
@@ -515,19 +515,15 @@ SVM and SVR also differ in the loss function they want to minimize:
 
 - SVM Loss Function (Hinge Loss)
 
-```math
-\text{Loss} = \max(0, 1 - y_i \cdot (\mathbf{w} \cdot \mathbf{x}_i + b))
-```
+
+$$\text{Loss} = \max(0, 1 - y_i \cdot (\mathbf{w} \cdot \mathbf{x}_i + b))$$
+
 
 -  SVR Loss Function (Epsilon-Insensitive Loss)
 
-```math
-\text{Loss} = 
-\begin{cases}
-0 & \text{if } |y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| \leq \epsilon \\
-|y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| - \epsilon & \text{otherwise}
-\end{cases}
-```
+
+$$\text{Loss} = \begin{cases} 0 & \text{if } |y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| \leq \epsilon \\ |y_i - (\mathbf{w} \cdot \mathbf{x}_i + b)| - \epsilon & \text{otherwise} \end{cases}$$
+
 
 </details>
 

@@ -34,9 +34,9 @@
 - **Density Estimation**: The task of estimating the probability distribution $P(X)$ from observed sample data $X$.
 - **LM as Density Estimator**: A language model models the joint probability distribution of sequences of words $W = (w_1, w_2, \dots, w_T)$  using the chain rule of probability:
 
-```math
-P(W) = \prod_{t=1}^{T} P(w_t \mid w_1, w_2, \dots, w_{t-1})
-```
+
+$$P(W) = \prod_{t=1}^{T} P(w_t \mid w_1, w_2, \dots, w_{t-1})$$
+
 
   It assigns probabilities to token sequences, identifying fluent vs ungrammatical sequences.
 
@@ -84,15 +84,15 @@ Language modeling is best described as **Self-Supervised Learning**:
 1. **Term Frequency ($\text{TF}_{t,d}$)**: Number of occurrences of term$ t $in document$ d$.
 2. **Inverse Document Frequency ($\text{IDF}_t$)**: Downweights terms that appear frequently across all documents:
 
-```math
-\text{IDF}_t = \log\left(\frac{N}{\text{DF}_t}\right)
-```
+
+$$\text{IDF}_t = \log\left(\frac{N}{\text{DF}_t}\right)$$
+
 
 3. **Cosine Similarity**: Measures directional alignment between query vector $\vec{q}$ and document vector $\vec{d}$:
 
-```math
-\text{Sim}(\vec{q}, \vec{d}) = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|}
-```
+
+$$\text{Sim}(\vec{q}, \vec{d}) = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|}$$
+
 
 Rare, informative words (e.g., "worm", "early") contribute heavily to TF-IDF score, while common stop words ("the") are penalized by low IDF.
 

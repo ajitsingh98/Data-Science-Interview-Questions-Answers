@@ -38,9 +38,9 @@
 
 - A function $f: \mathbb{R} \to \mathbb{R}$ is **differentiable** at point $x = c$  if the limit of the difference quotient exists:
 
-```math
-f'(c) = \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}
-```
+
+$$f'(c) = \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}$$
+
 
 - **Property**: Differentiability implies continuity, but continuity does not guarantee differentiability (e.g., $|x|$ at $x=0$).
 
@@ -59,9 +59,9 @@ f'(c) = \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}
 
 - A function $f: \mathbb{R}^n \to \mathbb{R}$ is **convex** if for all $x, y$ and $\lambda \in [0, 1]$:
 
-```math
-f(\lambda x + (1-\lambda)y) \le \lambda f(x) + (1-\lambda)f(y)
-```
+
+$$f(\lambda x + (1-\lambda)y) \le \lambda f(x) + (1-\lambda)f(y)$$
+
 
 - **Second-Order Condition**: Hessian matrix $\nabla^2 f(x) \succeq 0$  (positive semi-definite) everywhere. Every local minimum is a global minimum.
 
@@ -92,9 +92,9 @@ f(\lambda x + (1-\lambda)y) \le \lambda f(x) + (1-\lambda)f(y)
 
 - The instantaneous rate of change of $f(x)$ at $x = a$  is the limit of average rate of change as interval length approaches zero:
 
-```math
-\text{Rate} = f'(a) = \lim_{\Delta x \to 0} \frac{f(a + \Delta x) - f(a)}{\Delta x}
-```
+
+$$\text{Rate} = f'(a) = \lim_{\Delta x \to 0} \frac{f(a + \Delta x) - f(a)}{\Delta x}$$
+
 
 </details>
 
@@ -122,9 +122,9 @@ f(\lambda x + (1-\lambda)y) \le \lambda f(x) + (1-\lambda)f(y)
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-```math
-f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c}
-```
+
+$$f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c}$$
+
 
 </details>
 
@@ -185,11 +185,7 @@ f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c}
 
 ### Q: Find the Taylor series expansion for: (Part 2)
 
-$$
-
-\log(x)
-
-$$
+$$\log(x)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -203,11 +199,7 @@ $$
 
 ### Q: Find the Taylor series expansion centered at $x = −3$  for:
 
-$$
-
-f(x) = 5x^2 − 11x + 1
-
-$$
+$$f(x) = 5x^2 − 11x + 1$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -219,11 +211,7 @@ $$
 
 ### Q: Find the $101th$ degree Taylor polynomial centered at $x = 0$  for:
 
-$$
-
-f(x) = cos(x)
-
-$$
+$$f(x) = cos(x)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -237,11 +225,7 @@ $$
 
 ### Q: At $x = 1 $, compute the first$7$  terms of the Taylor series expansion of:
 
-$$
-
-f (x) = ln 3x.
-
-$$
+$$f (x) = ln 3x.$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -271,11 +255,7 @@ $$
 
 2. Given $g(x, y)$, find its partial derivative with respect to x:
 
-$$
-
-g(x,y) = x^2y + yx + 8y
-
-$$
+$$g(x,y) = x^2y + yx + 8y$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -301,19 +281,11 @@ $$
 
 ### Q: The gradient of a two-dimensional function is given by
 
-$$
-
-∇f (x, y) = \frac{∂f}{∂x} i + \frac{∂f}{∂y}j
-
-$$
+$$∇f (x, y) = \frac{∂f}{∂x} i + \frac{∂f}{∂y}j$$
 
 1. Find the gradient of the function:$$f(x, y) = xy^2 - y^2 + x^3$$2. Given the function:
 
-$$
-
-g(x, y) = xy^2 − y − 1
-
-$$
+$$g(x, y) = xy^2 − y − 1$$
 
 evaluate it at $(−1, 0)$, directed at $(1, 1)$.
 
@@ -329,11 +301,7 @@ evaluate it at $(−1, 0)$, directed at $(1, 1)$.
 
 ### Q: Find the partial derivatives of:
 
-$$
-
-f(x, y) = 3 sin^2(x − y)
-
-$$
+$$f(x, y) = 3 sin^2(x − y)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -347,11 +315,7 @@ $$
 
 ### Q: Find the partial derivatives of: (Part 2)
 
-$$
-
-z = 2 sin(x) sin(y)
-
-$$
+$$z = 2 sin(x) sin(y)$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -392,11 +356,7 @@ $$
 
 ### Q: Consider the function
 
-$$
-
-f(x,y)=2x^2 −xy + y^2
-
-$$
+$$f(x,y)=2x^2 −xy + y^2$$
 
 and find maximum, minimum, and saddle points.
 
@@ -509,19 +469,11 @@ Stationary points are required in order to minimize a convex function. A very si
 
 ### Q: Given a logistic discriminant classifier:
 
-$$
-
-p(y=1|x)=σ(w^Tx)
-
-$$
+$$p(y=1|x)=σ(w^Tx)$$
 
 where the sigmoid function is given by:
 
-$$
-
-σ(z)=(1+exp(−z))^{−1}
-
-$$
+$$σ(z)=(1+exp(−z))^{−1}$$
 
 The logistic loss for a training sample $x_i$ with class label $y_i$ is given by $L(yi,xi;w)=−logp(y_i|x_i)$1. Show that$ p(y=−1|x)=σ(−w^Tx)$.
 1. Show that  $Δ_wL(y_i,x_i;w)=−y_i(1−p(y_i|x_i))x_i$.
@@ -555,11 +507,7 @@ The logistic loss for a training sample $x_i$ with class label $y_i$ is given by
 
 ### Q: 1. During the training of an ANN, a sigmoid layer applies the sigmoid function to every element in the forward pass, while in the backward pass the chain rule is being utilized as part of the backpropagation algorithm. With respect to the backpropagation algorithm, given a sigmoid $σ(x) = \frac{e^x}{1+e^x}$  activation function, and a J as the cost function, annotate each part of equation (5.21):
 
-$$
-
-dZ = \frac{dJ}{dσ(x)}\frac{dσ(x)}{dx} = dA·σ(x).(1−σ(x))
-
-$$
+$$dZ = \frac{dJ}{dσ(x)}\frac{dσ(x)}{dx} = dA·σ(x).(1−σ(x))$$
 
 2. Code snippet 5.6 provides a pure Python-based (e.g. not using Autograd) implementation of the forward pass for the sigmoid function. Complete the backward pass that directly computes the analytical gradients.
 
@@ -642,20 +590,12 @@ $$
 
 ### Q: For real values, $−1 < x < 1$  the hyperbolic tangent function is defined as:
 
-$$
-
-\tanh^{-1}(x) = \frac{1}{2}[\ln(1+x) - ln(1-x)]
-
-$$
+$$\tanh^{-1}(x) = \frac{1}{2}[\ln(1+x) - ln(1-x)]$$
 
 On the other hand, the $artanh$ function, which returns the inverse hyperbolic tangent of its argument x, is implemented in numpy as $arctanh()$.
 Its derivative is given by:
 
-$$
-
-(arctanh(x))′ =  \frac{1}{1 − x^2}
-
-$$
+$$(arctanh(x))′ = \frac{1}{1 − x^2}$$
 
 Your friend, a veteran of the DL community wants to implement a custom activation function for the $arctanh$  function using Autograd. Help him in realize the method.
 
@@ -692,11 +632,7 @@ Your friend, a veteran of the DL community wants to implement a custom activatio
 
 ### Q: 1. Expand the following function using DN:
 
-$$
-
-\sin(x + \dot{x}d)
-
-$$
+$$\sin(x + \dot{x}d)$$
 
 2. With respect to the expression graph depicted in 5.9:
 <table align='center'>
@@ -716,11 +652,7 @@ $$
 
 3. Show that the general identity :
 
-$$
-
-g(x + \dot{x }d) = g(x) + g′(x)\dot{x}d
-
-$$
+$$g(x + \dot{x }d) = g(x) + g′(x)\dot{x}d$$
 
     holds in this particular case too.
 
@@ -853,22 +785,14 @@ $g(x1, x2)$ evaluated at $(x1; x2) = (e^2; π)$  using forward-mode AD.
 
 1. Implement the sigmoid function
 
-$$
-
-σ(x) = 1
-
-$$
+$$σ(x) = 1$$
 
   symbolically using a Python based 1+e−x
 SymPy program.
 2. Differentiate the sigmoid function using SymPy and compare it with the analytical
 derivation
 
-$$
-
-σ′(x) = σ(x)(1 − σ(x))
-
-$$
+$$σ′(x) = σ(x)(1 − σ(x))$$
 
 .
 3. Using SymPy, evaluate the gradient of the sigmoid function at $x = 0$.

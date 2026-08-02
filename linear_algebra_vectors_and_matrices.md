@@ -24,17 +24,17 @@
 1. Scalers : A scaler is just a single number. example - $1, 2, 3$  etc
 2. Vectors : A vector is an array of numbers. It is like identifying points in the space, with each element giving the coordinate along a different axis.
 
-```math
-\mathbf{x} = \begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{bmatrix}
-```
+
+$$\mathbf{x} = \begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{bmatrix}$$
+
 
 3. Matrices : A matrix is 2D array of numbers. 
 
 Let $\mathbf{A}$  be a matrix defined as:
 
-```math
-\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \end{bmatrix}
-```
+
+$$\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \end{bmatrix}$$
+
 
 4. Tensors: An array of numbers arranged on a regular grid with a variable number of axes is known as a tensor.
 
@@ -45,59 +45,13 @@ Let $\mathcal{T}$ be a 3-dimensional tensor defined as:$$
 \begin{bmatrix} t_{211} & t_{212} \\\\ t_{221} & t_{222} \end{bmatrix}
 \end{bmatrix}
 
-$$
-
-</details>
-
----
-
-### Q: What is broadcasting in matrices in context of deep learning?
-
-<details>
-<summary><b>💡 Show Answer</b></summary>
-
-In deep learning we allow the addition of vector and matrix, yielding another matrix: $C = A+b $, where$ C_{i, j} = A_{i, j}+b_j $. The vector$ b $is being added to each row of the matrix. The implicit copying of$ b$  to many location is called broadcasting.
-
-</details>
-
----
-
-### Q: Dot product
-
-  1. What’s the geometric interpretation of the dot product of two vectors?
-  1. Given a vector $u $, find vector$ v $of unit length such that the dot product of$ u $and$ v$   is maximum.
-
-<details>
-<summary><b>💡 Show Answer</b></summary>
-
-1. Let $\vec{A}= ⟨a_1....a_k⟩$ and $\vec{B}= ⟨b_1....b_k⟩$ be k-dimensional vectors. The dot product of $\vec{A}$ and $\vec{B}$, denoted $\vec{A} \cdot \vec{B}$  is a number, defined as follows
-
-```math
+$$</details> --- ### Q: What is broadcasting in matrices in context of deep learning? <details> <summary><b>💡 Show Answer</b></summary> In deep learning we allow the addition of vector and matrix, yielding another matrix: $C = A+b $, where$ C_{i, j} = A_{i, j}+b_j $. The vector$ b $is being added to each row of the matrix. The implicit copying of$ b$ to many location is called broadcasting. </details> --- ### Q: Dot product 1. What’s the geometric interpretation of the dot product of two vectors? 1. Given a vector $u $, find vector$ v $of unit length such that the dot product of$ u $and$ v$ is maximum. <details> <summary><b>💡 Show Answer</b></summary> 1. Let $\vec{A}= ⟨a_1....a_k⟩$ and $\vec{B}= ⟨b_1....b_k⟩$ be k-dimensional vectors. The dot product of $\vec{A}$ and $\vec{B}$, denoted $\vec{A} \cdot \vec{B}$ is a number, defined as follows$$
 \vec{A} \cdot \vec{B} = a_1b_1+a_2b_2+....+a_kb_k
-```
-
-The dot product has the following geometric interpretation: Let $\alpha$ be the angle between $\vec{A}$ and $\vec{B}$. Then
-
-```math
+$$The dot product has the following geometric interpretation: Let $\alpha$ be the angle between $\vec{A}$ and $\vec{B}$. Then$$
 \vec{A} \cdot \vec{B} = |\vec{A}| \cdot |\vec{B}| \cdot \cos(\alpha)$$2. To find a vector $v$ of unit length such that the dot product of $u$ and $v$ is maximum, we want to maximize the expression for the dot product $u \cdot v$ According to the formula for the dot product:
-```
-
-u \cdot v = |u| |v| \cos(\theta)
-
-```math
-where:
-- $|u|$ is the magnitude of $u$,
-- $|v|$ is the magnitude of $v$(which is 1 in this case because$ v$  is a unit vector),
-- $\theta$ is the angle between $u$ and $v$.
-
-To maximize $u \cdot v $, the$\cos(\theta)$ part must be maximized. The cosine of an angle reaches its maximum value of 1 when the angle $\theta$ is 0 degrees, meaning that the vectors $u$ and $v$ must be pointing in the same direction.
-
-Thus, vector $v$ should be a unit vector in the direction of $u$. This can be achieved by normalizing$ u $. The normalization of$ u $is done by dividing$ u $by its magnitude. If$ u $is represented as$ u = (u_1, u_2, \ldots, u_n)$and its magnitude $|u|$ is given by:$$|u| = \sqrt{u_1^2 + u_2^2 + \ldots + u_n^2}$$Then, the unit vector $v$ in the direction of $u$ is:
-```
-
-v = \frac{u}{|u|} = \left(\frac{u_1}{|u|}, \frac{u_2}{|u|}, \ldots, \frac{u_n}{|u|}\right)
-
-$$
+$$u \cdot v = |u| |v| \cos(\theta)$$
+where: - $|u|$ is the magnitude of $u$, - $|v|$ is the magnitude of $v$(which is 1 in this case because$ v$ is a unit vector), - $\theta$ is the angle between $u$ and $v$. To maximize $u \cdot v $, the$\cos(\theta)$ part must be maximized. The cosine of an angle reaches its maximum value of 1 when the angle $\theta$ is 0 degrees, meaning that the vectors $u$ and $v$ must be pointing in the same direction. Thus, vector $v$ should be a unit vector in the direction of $u$. This can be achieved by normalizing$ u $. The normalization of$ u $is done by dividing$ u $by its magnitude. If$ u $is represented as$ u = (u_1, u_2, \ldots, u_n)$and its magnitude $|u|$ is given by:$$|u| = \sqrt{u_1^2 + u_2^2 + \ldots + u_n^2}$$Then, the unit vector $v$ in the direction of $u$ is:
+$$v = \frac{u}{|u|} = \left(\frac{u_1}{|u|}, \frac{u_2}{|u|}, \ldots, \frac{u_n}{|u|}\right)$$
 
 This vector $v$ will have a unit length and the dot product $u \cdot v$ will be maximum, equal to the magnitude of $u$(since$ u \cdot v = |u| \cdot 1 \cdot \cos(0^\circ) = |u|$).
 
@@ -121,24 +75,7 @@ This vector $v$ will have a unit length and the dot product $u \cdot v$ will be 
     -1 & 0 & 1
 \end{matrix}\right]
 
-$$
-
-2. One useful application of the outer product in machine learning is in the computation of covariance matrices, where the outer product is used to calculate the covariance of different feature vectors. For instance, the covariance matrix can be estimated as the average outer product of the centered data vectors (i.e., data vectors from which the mean has been subtracted). This is crucial for algorithms that rely on data distribution, such as Principal Component Analysis (PCA) and many types of clustering algorithms.
-
-</details>
-
----
-
-### Q: What does it mean for two vectors to be linearly independent?
-
-<details>
-<summary><b>💡 Show Answer</b></summary>
-
-Two vectors are said to be **linearly independent** if no vector in the set can be written as a linear combination of the others. In simpler terms, neither of the vectors can be expressed as a scalar multiple or a combination involving scalar multiples of the other vector.
-
-For two vectors $\vec{a}$ and $\vec{b}$, they are linearly independent if the only solution to the equation
-
-$$
+$$2. One useful application of the outer product in machine learning is in the computation of covariance matrices, where the outer product is used to calculate the covariance of different feature vectors. For instance, the covariance matrix can be estimated as the average outer product of the centered data vectors (i.e., data vectors from which the mean has been subtracted). This is crucial for algorithms that rely on data distribution, such as Principal Component Analysis (PCA) and many types of clustering algorithms. </details> --- ### Q: What does it mean for two vectors to be linearly independent? <details> <summary><b>💡 Show Answer</b></summary> Two vectors are said to be **linearly independent** if no vector in the set can be written as a linear combination of the others. In simpler terms, neither of the vectors can be expressed as a scalar multiple or a combination involving scalar multiples of the other vector. For two vectors $\vec{a}$ and $\vec{b}$, they are linearly independent if the only solution to the equation$$
 
 c_1 \vec{a} + c_2 \vec{b} = \vec{0}$$is $c_1 = 0$ and $c_2 = 0$, where$ c_1 $and$ c_2 $are scalars and$\vec{0}$  is the zero vector.
 
@@ -185,9 +122,9 @@ Two vectors are orthonormal to each other if they are orthogonal and both have u
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-```math
-\text{Dimension of the span} = \min(n, d)
-```
+
+$$\text{Dimension of the span} = \min(n, d)$$
+
 
 </details>
 
@@ -247,9 +184,9 @@ The transpose of a matrix is mirror image of the matrix across a diagonal line, 
 
 It is defined as:
 
-```math
-\mathbf{A^T}_{i, j} = \mathbf{A_{j, i}}
-```
+
+$$\mathbf{A^T}_{i, j} = \mathbf{A_{j, i}}$$
+
 
 </details>
 
@@ -264,15 +201,15 @@ Suppose we have two matrices $\mathbf{A}$ and $\mathbf{B}$, In order to define t
 
 If shape of $\mathbf{A}$ is $m x n$ and shape of $\mathbf{B}$ is $n x p$, then the resultant matrix will have shape of$ m x p$.
 
-```math
-\mathbf{C_{m \times p}} = \mathbf{A_{m \times n}}\mathbf{B_{n \times p}}
-```
+
+$$\mathbf{C_{m \times p}} = \mathbf{A_{m \times n}}\mathbf{B_{n \times p}}$$
+
 
 Where,
 
-```math
-C_{i, j} = \sum_k A_{i, k}B_{k, j}
-```
+
+$$C_{i, j} = \sum_k A_{i, k}B_{k, j}$$
+
 
 </details>
 
@@ -287,9 +224,9 @@ The Hadamard product, also known as the element-wise product, is an operation th
 
 Mathematically, if $\mathbf{A} = [a_{ij}]$ and $\mathbf{B} = [b_{ij}]$ are two matrices of the same size, then the Hadamard product $\mathbf{C} = \mathbf{A} \circ \mathbf{B}$  is defined as:
 
-```math
-\mathbf{C} = \begin{bmatrix} a_{11} \cdot b_{11} & a_{12} \cdot b_{12} & \cdots \\\\ a_{21} \cdot b_{21} & a_{22} \cdot b_{22} & \cdots \\\\ \vdots & \vdots & \ddots \end{bmatrix}
-```
+
+$$\mathbf{C} = \begin{bmatrix} a_{11} \cdot b_{11} & a_{12} \cdot b_{12} & \cdots \\\\ a_{21} \cdot b_{21} & a_{22} \cdot b_{22} & \cdots \\\\ \vdots & \vdots & \ddots \end{bmatrix}$$
+
 
 where $c_{ij} = a_{ij} \cdot b_{ij}$.
 
@@ -332,15 +269,15 @@ For matrices $\mathbf{A} = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}$ and $
 
 - **Hadamard Product**:
 
-```math
-\mathbf{A} \circ \mathbf{B} = \begin{bmatrix} 5 & 12 \\\\ 21 & 32 \end{bmatrix}
-```
+
+$$\mathbf{A} \circ \mathbf{B} = \begin{bmatrix} 5 & 12 \\\\ 21 & 32 \end{bmatrix}$$
+
 
 - **Dot Product** (Matrix Multiplication):
 
-```math
-\mathbf{A} \cdot \mathbf{B} = \begin{bmatrix} 19 & 22 \\\\ 43 & 50 \end{bmatrix}
-```
+
+$$\mathbf{A} \cdot \mathbf{B} = \begin{bmatrix} 19 & 22 \\\\ 43 & 50 \end{bmatrix}$$
+
 
 </details>
 
@@ -353,15 +290,15 @@ For matrices $\mathbf{A} = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}$ and $
 
 - Matrix multiplication is distributive
 
-```math
-\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} +  \mathbf{A}\mathbf{C}
-```
+
+$$\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}$$
+
 
 - Matrix multiplication is associative$$\mathbf{A}(\mathbf{B}\mathbf{C}) = (\mathbf{A}\mathbf{B})\mathbf{C}$$- Matrix multiplication is not commutative
 
-```math
-\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}
-```
+
+$$\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$$
+
 
 </details>
 
@@ -374,9 +311,9 @@ For matrices $\mathbf{A} = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}$ and $
 
 Yes
 
-```math
-x^{T}y = y^{T}x
-```
+
+$$x^{T}y = y^{T}x$$
+
 
 </details>
 
@@ -389,9 +326,9 @@ x^{T}y = y^{T}x
 
 An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix.
 
-```math
-\forall \mathbf{x} \in \mathbb{R}^n, \; I_n \mathbf{x} = \mathbf{x}
-```
+
+$$\forall \mathbf{x} \in \mathbb{R}^n, \; I_n \mathbf{x} = \mathbf{x}$$
+
 
 The structure of identity matrix is simple, all the entries along with main diagonal is $1$, while all the other entries are zero.
 
@@ -406,9 +343,9 @@ The structure of identity matrix is simple, all the entries along with main diag
 
 The matrix inverse of $\mathbf{A}$ is denoted as $\mathbf{A^{-1}}$, and is defined as the matrix such that
 
-```math
-\mathbf{A^{-1}}\mathbf{A} = \mathbf{I_n}
-```
+
+$$\mathbf{A^{-1}}\mathbf{A} = \mathbf{I_n}$$
+
 
 </details>
 
@@ -496,21 +433,21 @@ Every matrix transformation is a linear transformation
 
 Suppose that $\mathbf{T}$ is a matrix transformation such that $𝑇(𝑥⃗)=𝐴𝑥⃗$ for some matrix $𝐴$ and that the vectors $𝑢⃗$ and $𝑣⃗$ are in the domain. Then for arbitrary scalars $c$ and $d$:
 
-```math
-T(c \mathbf{u} + d \mathbf{v}) = A(c \mathbf{u} + d \mathbf{v})
-```
 
-```math
-= c A \mathbf{u} + d A \mathbf{v}
-```
+$$T(c \mathbf{u} + d \mathbf{v}) = A(c \mathbf{u} + d \mathbf{v})$$
 
-```math
-= c T
-```
 
-```math
-\text{As } T(c \mathbf{u} + d \mathbf{v}) = c T(\mathbf{u}) + d T(\mathbf{v}), \text{ the transformation } T \text{ must be linear.}
-```
+
+$$= c A \mathbf{u} + d A \mathbf{v}$$
+
+
+
+$$= c T$$
+
+
+
+$$\text{As } T(c \mathbf{u} + d \mathbf{v}) = c T(\mathbf{u}) + d T(\mathbf{v}), \text{ the transformation } T \text{ must be linear.}$$
+
 
 </details>
 
@@ -525,15 +462,15 @@ Not all matrices have an inverse; a matrix must be square and non-singular to ha
 
 If a matrix $\mathbf{A}$ has an inverse, that inverse is always **unique**. If $\mathbf{A}^{-1}$ is an inverse of $\mathbf{A}$, then no other matrix can serve as the inverse. This is because if there were two different inverses, say $\mathbf{B}$ and $\mathbf{C}$, then:
 
-```math
-\mathbf{A} \mathbf{B} = \mathbf{I} \quad \text{and} \quad \mathbf{A} \mathbf{C} = \mathbf{I}
-```
+
+$$\mathbf{A} \mathbf{B} = \mathbf{I} \quad \text{and} \quad \mathbf{A} \mathbf{C} = \mathbf{I}$$
+
 
 Multiplying both sides of the first equation by $\mathbf{C}$  yields:
 
-```math
-\mathbf{B} = \mathbf{C}
-```
+
+$$\mathbf{B} = \mathbf{C}$$
+
 
 Thus, the inverse is unique.
 
@@ -561,9 +498,9 @@ It is the $L^2$ norm, with $p=2$, which is simply the euclidean distance from th
 
 It is also a common to measure the size of a vector using the squared $L^2$ norm, which is equal to $x^{T}x$ 
 
-```math
-||x|| = (\sum_{i} |x_i|^{2})^{\frac{1}{2}}
-```
+
+$$||x|| = (\sum_{i} |x_i|^{2})^{\frac{1}{2}}$$
+
 
 </details>
 
@@ -591,17 +528,17 @@ The max norm simplifies to the absolute value of the element with the largest ma
 
 It is denoted by $L^{\infty}$:
 
-```math
-\| \mathbf{x} \|_{\infty} = \max_i |x_i|
-```
+
+$$\| \mathbf{x} \|_{\infty} = \max_i |x_i|$$
+
 
 *Unit Norm*
 
 A vector with unit norm
 
-```math
-||x||_{2} = 1
-```
+
+$$||x||_{2} = 1$$
+
 
 </details>
 
@@ -614,9 +551,9 @@ A vector with unit norm
 
 We can use Frobenius norm, which is like $L^2$  norm of a vector.
 
-```math
-\| \mathbf{A} \|_{F} = \sqrt{\sum_{i,j} A_{i,j}^2}
-```
+
+$$\| \mathbf{A} \|_{F} = \sqrt{\sum_{i,j} A_{i,j}^2}$$
+
 
 </details>
 
@@ -629,9 +566,9 @@ We can use Frobenius norm, which is like $L^2$  norm of a vector.
 
 Yes, the dot product of two vectors $\mathbf{x}$ and $\mathbf{y}$ can be expressed in terms of their norms. If $\mathbf{x}$ and $\mathbf{y}$ are vectors, their dot product $\mathbf{x} \cdot \mathbf{y}$ is given by:$$\mathbf{x} \cdot \mathbf{y} = \mathbf{x}^T \mathbf{y}$$This can also be expressed as:
 
-```math
-\mathbf{x}^T \mathbf{y} = \|\mathbf{x}\|_2 \|\mathbf{y}\|_2 \cos{\theta}
-```
+
+$$\mathbf{x}^T \mathbf{y} = \|\mathbf{x}\|_2 \|\mathbf{y}\|_2 \cos{\theta}$$
+
 
 where $\|\mathbf{x}\|_2$ and $\|\mathbf{y}\|_2$ are the Euclidean norms (or magnitudes) of $\mathbf{x}$ and $\mathbf{y}$, and $\theta$  is the angle between the two vectors.
 
@@ -656,23 +593,23 @@ A matrix $\mathbf{D}$ is a diagonal if and only if $\mathbf{D}_{i, j} = 0$ for a
 
 A symmetric matrix is any matrix that is equal to its own transpose.
 
-```math
-\mathbf{A} = \mathbf{A^T}
-```
+
+$$\mathbf{A} = \mathbf{A^T}$$
+
 
 *Orthogonal Matrix*
 
 An orthogonal matrix is a square matrix whose rows are mutually orthonormal and whose columns are also mutually orthonormal.
 
-```math
-\mathbf{A^T}\mathbf{A} = \mathbf{A}\mathbf{A^T} = \mathbf{I}
-```
+
+$$\mathbf{A^T}\mathbf{A} = \mathbf{A}\mathbf{A^T} = \mathbf{I}$$
+
 
 Which implies that,
 
-```math
-\mathbf{A^{-1}} = \mathbf{A^T}
-```
+
+$$\mathbf{A^{-1}} = \mathbf{A^T}$$
+
 
 </details>
 
@@ -696,9 +633,9 @@ Eigen decomposition is a matrix factorization method where a matrix is decompose
 
 An eigenvector of a square matrix $\mathbf{A}$ is a nonzero vector $\mathbf{v}$ that remains invariant in direction when transformed by $\mathbf{A}$—only its magnitude changes. This can be mathematically expressed as:
 
-```math
-\mathbf{A}\mathbf{v} = \lambda \mathbf{v}
-```
+
+$$\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$$
+
 
 In this equation, $\lambda$ is the eigenvalue associated with the eigenvector $\mathbf{v}$. The eigenvalue represents the scale factor by which the eigenvector is stretched or compressed. Thus, eigenvectors are the directions that remain unchanged by the transformation, and eigenvalues measure the extent of this scaling.
 
@@ -713,19 +650,19 @@ In this equation, $\lambda$ is the eigenvalue associated with the eigenvector $\
 
 Suppose the matrix $\mathbf{A}$ has $n$ linearly independent eigenvectors ${v^{(1)},..,v^{(n)}}$ with corresponding eigenvalues ${\lambda_1,..,\lambda_n}$ Lets define a matrix $\mathbf{V}$ and a vector $\mathbf{\lambda}$ 
 
-```math
-\mathbf{V} = [v^{(1)},..,v^{(n)}]
-```
 
-```math
-\mathbf{\lambda} = [\lambda_1,..,\lambda_n]^T
-```
+$$\mathbf{V} = [v^{(1)},..,v^{(n)}]$$
+
+
+
+$$\mathbf{\lambda} = [\lambda_1,..,\lambda_n]^T$$
+
 
 Eigen decomposition of $\mathbf{A}$  can be expressed as:
 
-```math
-\mathbf{A} = \mathbf{V}\text{diag}(\mathbf{\lambda})\mathbf{V}^{-1}
-```
+
+$$\mathbf{A} = \mathbf{V}\text{diag}(\mathbf{\lambda})\mathbf{V}^{-1}$$
+
 
 </details>
 
@@ -780,9 +717,9 @@ Singular Value Decomposition (SVD) is a technique used to factorize a matrix int
 
 For a given real matrix $\mathbf{A}$ of dimensions $m \times n$, the decomposition is expressed as:
 
-```math
-\mathbf{A} = \mathbf{U} \mathbf{D} \mathbf{V}^T
-```
+
+$$\mathbf{A} = \mathbf{U} \mathbf{D} \mathbf{V}^T$$
+
 
 where:
 
@@ -814,9 +751,9 @@ We can interpret the SVD of $\mathbf{A}$ in terms of the eigen value decompositi
 
 The trace operator gives the sum of all the diagonal entries of a matrix.
 
-```math
-Tr(A) = \sum_i{A_{i, i}}
-```
+
+$$Tr(A) = \sum_i{A_{i, i}}$$
+
 
 </details>
 
@@ -829,15 +766,15 @@ Tr(A) = \sum_i{A_{i, i}}
 
 - Frobenius norm of a matrix:
 
-```math
-||A||_{F} = \sqrt{Tr(AA^T)}
-```
+
+$$||A||_{F} = \sqrt{Tr(AA^T)}$$
+
 
 - Trace operator is invariant to the transpose operator$$Tr(A) = Tr(A^T)$$- Invariance to cyclic permutations
 
-```math
-Tr(AB) = Tr(BA)
-```
+
+$$Tr(AB) = Tr(BA)$$
+
 
 </details>
 
@@ -880,9 +817,9 @@ If you multiply one of the rows of a matrix $\mathbf{A}$ by a scalar $t$, the de
 - Let $\mathbf{A}$ be an $n \times n$  matrix.
 - If you multiply one row of $\mathbf{A}$ by a scalar $t$, the new matrix $\mathbf{A'}$  will have a determinant given by:
 
-```math
-\text{det}(\mathbf{A}') = t \cdot \text{det}(\mathbf{A})
-```
+
+$$\text{det}(\mathbf{A}') = t \cdot \text{det}(\mathbf{A})$$
+
 
 This property reflects that the determinant is a multilinear function of the rows of the matrix. Hence, multiplying a row by a scalar scales the determinant by that scalar.
 
@@ -897,15 +834,15 @@ This property reflects that the determinant is a multilinear function of the row
 
 1. **Trace**: The trace of a matrix is the sum of its eigenvalues. Therefore, for this matrix:
 
-```math
-\text{Trace} = 3 + 3 + 2 + (-1) = 7
-```
+
+$$\text{Trace} = 3 + 3 + 2 + (-1) = 7$$
+
 
 2. **Determinant**: The determinant of a matrix is the product of its eigenvalues. Thus, for this matrix:
 
-```math
-\text{Determinant} = 3 \times 3 \times 2 \times (-1) = -18
-```
+
+$$\text{Determinant} = 3 \times 3 \times 2 \times (-1) = -18$$
+
 
 </details>
 
@@ -913,15 +850,7 @@ This property reflects that the determinant is a multilinear function of the row
 
 ### Q: Given the following matrix:
 
-$$
-
-\begin{bmatrix}
-1 & 4 & -2 \\\\
--1 & 3 & 2 \\\\
-3 & 5 & -6
-\end{bmatrix}
-
-$$
+$$\begin{bmatrix} 1 & 4 & -2 \\\\ -1 & 3 & 2 \\\\ 3 & 5 & -6 \end{bmatrix}$$
 
 Without explicitly using the equation for calculating determinants, what can we say about this matrix’s determinant?
 
@@ -932,73 +861,53 @@ We can write the above matrix into its row echelon form:
 
 - Add the first row to the second row to make the entry in the second row, first column zero:
 
-```math
-R2 \rightarrow R2 + R1
-```
 
-```math
-\begin{bmatrix}
-1 & 4 & -2 \\\\
-0 & 7 & 0 \\\\
-3 & 5 & -6
-\end{bmatrix}
-```
+$$R2 \rightarrow R2 + R1$$
+
+
+
+$$\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & 7 & 0 \\\\ 3 & 5 & -6 \end{bmatrix}$$
+
 
 - Subtract $3$  times the first row from the third row to make the entry in the third row, first column zero:
 
-```math
-R3 \rightarrow R3 - 3 \times R1
-```
 
-```math
-\begin{bmatrix}
-1 & 4 & -2 \\\\
-0 & 7 & 0 \\\\
-0 & -7 & 0
-\end{bmatrix}
-```
+$$R3 \rightarrow R3 - 3 \times R1$$
+
+
+
+$$\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & 7 & 0 \\\\ 0 & -7 & 0 \end{bmatrix}$$
+
 
 - Divide the second row by $7$  to normalize the leading coefficient:
 
-```math
-R2 \rightarrow \frac{1}{7} \times R2
-```
 
-```math
-\begin{bmatrix}
-1 & 4 & -2 \\\\
-0 & 1 & 0 \\\\
-0 & -7 & 0
-\end{bmatrix}
-```
+$$R2 \rightarrow \frac{1}{7} \times R2$$
+
+
+
+$$\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & 1 & 0 \\\\ 0 & -7 & 0 \end{bmatrix}$$
+
 
 - Add $7$  times the second row to the third row to make the entry in the third row, second column zero:
 
-```math
-R3 \rightarrow R3 + 7 \times R2
-```
 
-```math
-\begin{bmatrix}
-     1 & 4 & -2 \\\\
-     0 & 1 & 0 \\\\
-     0 & 0 & 0
-     \end{bmatrix}
-```
+$$R3 \rightarrow R3 + 7 \times R2$$
+
+
+
+$$\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0 \end{bmatrix}$$
+
 
 - Subtract $4$  times the second row from the first row to make the entry in the first row, second column zero:
 
-```math
-R1 \rightarrow R1 - 4 \times R2
-```
 
-```math
-\begin{bmatrix}
-     1 & 0 & -2 \\\\
-     0 & 1 & 0 \\\\
-     0 & 0 & 0
-     \end{bmatrix}
-```
+$$R1 \rightarrow R1 - 4 \times R2$$
+
+
+
+$$\begin{bmatrix} 1 & 0 & -2 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0 \end{bmatrix}$$
+
 
 The presence of a row of zeros in the row echelon form indicates that the matrix is singular, meaning its determinant is zero.
 
@@ -1039,9 +948,9 @@ The presence of a row of zeros in the row echelon form indicates that the matrix
 
 - **If $A$ is square (i.e., $n = m$) and invertible**, you can find$ x$directly using:
 
-```math
-x = A^{-1} b
-```
+
+$$x = A^{-1} b$$
+
 
 - **If $A$  is not square or not invertible**, we may use other methods such as:
   - **Gaussian Elimination**: Useful for finding solutions and performing row reductions.

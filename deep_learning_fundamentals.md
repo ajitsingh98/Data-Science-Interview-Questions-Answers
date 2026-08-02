@@ -56,14 +56,7 @@ out = sigmoid(np.dot(h1, W2) + b2)
 
 ### Q: In its simplest form, a perceptron (8.16) accepts only a binary input and emits a binary output. The output, can be evaluated as follows:
 
-$$
-
-output = \begin{cases}
-              0, & \text{if } \sum_j(w_jx_j + b) \leq 0, \\
-              1, & \text{if } \sum_j(w_jx_j + b) > 0
-           \end{cases}
-
-$$
+$$output = \begin{cases} 0, & \text{if } \sum_j(w_jx_j + b) \leq 0, \\ 1, & \text{if } \sum_j(w_jx_j + b) > 0 \end{cases}$$
 
 Where weights are denoted by wj and biases are denoted by b. Answer the following questions:
 
@@ -71,28 +64,20 @@ Where weights are denoted by wj and biases are denoted by b. Answer the followin
 
 2. **True or False:** If we instead use a new perceptron (sigmoidal) defined as follows:
 
-$$
-
-\sigma(wx + b)
-
-$$
+$$\sigma(wx + b)$$
 
 where $\sigma$  is the sigmoid function
 
-$$
-
-\sigma(z) = \frac{1}{1+e^{-z}}
-
-$$
+$$\sigma(z) = \frac{1}{1+e^{-z}}$$
 
 Then the new perceptron can process inputs ranging between 0 and 1 and emit output ranging between 0 and 1.
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-```math
-y = f(z) = \begin{cases} 1 & \text{if } w^T x + b \ge 0 \\ 0 & \text{if } w^T x + b < 0 \end{cases}
-```
+
+$$y = f(z) = \begin{cases} 1 & \text{if } w^T x + b \ge 0 \\ 0 & \text{if } w^T x + b < 0 \end{cases}$$
+
 
 </details>
 
@@ -105,9 +90,9 @@ y = f(z) = \begin{cases} 1 & \text{if } w^T x + b \ge 0 \\ 0 & \text{if } w^T x 
 
 - **Mean Squared Error (MSE)** or **Binary Cross-Entropy (BCE)**:
 
-```math
-L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]
-```
+
+$$L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]$$
+
 
 </details>
 
@@ -120,9 +105,9 @@ L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-
 
 - **Mean Squared Error (MSE)** or **Binary Cross-Entropy (BCE)**:
 
-```math
-L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]
-```
+
+$$L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-\sigma(z_i)) \right]$$
+
 
 </details>
 
@@ -142,19 +127,11 @@ L(w, b) = -\frac{1}{N}\sum_{i=1}^N \left[ y_i \log(\sigma(z_i)) + (1-y_i)\log(1-
 
 ### Q: What does the following equation stands for?
 
-$$
-
-\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}
-
-$$
+$$\nabla{C} = \frac{1}{n}\sum_x\nabla{C_x}$$
 
 Where:
 
-$$
-
-C_x = \frac{1}{2}\|y(x) - a(x,w,b)\|^2
-
-$$
+$$C_x = \frac{1}{2}\|y(x) - a(x,w,b)\|^2$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -331,11 +308,7 @@ What is the value observed at the output nodes $γ1..γ2$?
 3. Assume now that a Softmax activation is applied to the output. What are the resulting values?
 4. Assume now that a cross-entropy loss is applied to the output of the Softmax.
 
-$$
-
-L = -\sum_i{y_i\log(y_i)}
-
-$$
+$$L = -\sum_i{y_i\log(y_i)}$$
 
 What are the resulting values?
 
@@ -520,11 +493,7 @@ Can a perceptron with only two inputs and a single output function as an AND log
 
 Digital hardware implementations of the sigmoid function do exist but they are expensive to compute and therefore several approximation methods were introduced by the research community. The method by [10] uses the following formulas to approximate the exponential function:
 
-$$
-
-\exp{x} = Ex(x) = 2^{1.44x}
-
-$$
+$$\exp{x} = Ex(x) = 2^{1.44x}$$
 
 Based on this formulation, one can calculate the sigmoid function as: $Sigmoid(x) = \frac{1}{1+2^{-1.44x}} = \frac{1}{1+2^{-1.5}}$ 
 
@@ -573,11 +542,7 @@ v = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.99]
 
 ### Q: The Hyperbolic tangent nonlinearity, or the tanh function (Fig. 8.23), is a widely used neuron activation function in artificial neural networks:
 
-$$
-
-f_{tanh}(x) = \frac{sinh(x)}{cosh(x)} = \frac{e^x - e^-x}{e^x + e^-x}
-
-$$
+$$f_{tanh}(x) = \frac{sinh(x)}{cosh(x)} = \frac{e^x - e^-x}{e^x + e^-x}$$
 
 <table align='center'>
   <tr>
@@ -688,11 +653,7 @@ He initialized all the weights and biases (biases not shown for brevity) to zero
 
 ### Q: The rectified linear unit, or ReLU $g(z) = max{0, z}$  is the default for many CNN architectures. It is defined by the following function:
 
-$$
-
-f_{ReLU} = max(0, x)
-
-$$
+$$f_{ReLU} = max(0, x)$$
 
 1. In what sense is the ReLU better than traditional sigmoidal activation functions?
 
@@ -733,14 +694,7 @@ What is the shape of the resulting tensor W?
 
 ### Q: Name the following activation function where $a ∈ (0, 1)$:
 
-$$
-
-f(x) = \begin{cases}
-    x & \text{if } x > 0 \\
-    ax & \text{otherwise}
-\end{cases}
-
-$$
+$$f(x) = \begin{cases} x & \text{if } x > 0 \\ ax & \text{otherwise} \end{cases}$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1219,19 +1173,11 @@ class BNl001(nn.Module):
 
 ### Q: The following operator is known as the Hadamard product:
 
-$$
-
-OUT = A⊙B
-
-$$
+$$OUT = A⊙B$$
 
 Where:
 
-$$
-
-(A⊙B)i,j :=(A)i,j(B)i,j
-
-$$
+$$(A⊙B)i,j :=(A)i,j(B)i,j$$
 
 A scientist, constructs a Dropout layer using the following algorithm:
 
@@ -1240,19 +1186,11 @@ A scientist, constructs a Dropout layer using the following algorithm:
 3. Generate a new tensor T ‘ ∈ {0, 1}^S
 4. Assign each element in T‘a randomly and independently sampled value from a Bernoulli distribution:
 
-$$
-
-T‘i ∼  B(1,p)
-
-$$
+$$T‘i ∼ B(1,p)$$
 
 5. Calculate the OUT tensor as follows:$$OUT = T‘⊙T$$You are surprised to find out that his last step is to multiply the output of a dropout layer with:
 
-$$
-
-\frac{1}{1-p}
-
-$$
+$$\frac{1}{1-p}$$
 
 Explain what is the purpose of multiplying by the term $\frac{1}{1-p}$ 
 
@@ -1310,11 +1248,7 @@ Name one disadvantage of this new architecture.
 
 1. Mathematically, the residual block may be represented by:
 
-$$
-
-y = x + F(x)
-
-$$
+$$y = x + F(x)$$
 
 What is the function F?
 2. In one sentence, what was the main idea behind deep residual networks (ResNets) as introduced in the original paper?
@@ -1802,19 +1736,11 @@ known to suffer from the phenomenon of saturated units.
 
 1. Which norm does the following equation represent?
 
-$$
-
-|x1 − x2| + |y1 − y2|
-
-$$
+$$|x1 − x2| + |y1 − y2|$$
 
 2. Which formulae does the following equation represent?
 
-$$
-
-\sqrt{\sum_{i=1}^n(x_i - y_i)^2}
-
-$$
+$$\sqrt{\sum_{i=1}^n(x_i - y_i)^2}$$
 
 3. When your read that someone penalized the L2 norm, was the euclidean or the Manhattan distance involved?
 
@@ -1961,11 +1887,7 @@ In many cases, and for large vectors in particular, it is better to use a GPU fo
 
 2. The normal distribution is defined as follows:
 
-$$
-
-P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}
-
-$$
+$$P(X) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$
 
 Generally i.i.d. $X ∼ N (μ, σ2)$  however BN uses the standard normal distribution. What mean and variance does the standard normal distribution have?
 3. What is the mathematical process of normalization?
@@ -2070,9 +1992,9 @@ We can use following techniques to regularize DNNs:
 
 In case of parameter norm penalities we denote the regularized objective function by $J$:
 
-```math
-\tilde{J}(\theta; X, y) =  J(\theta; X, y) + \alpha \Omega(\theta)
-```
+
+$$\tilde{J}(\theta; X, y) = J(\theta; X, y) + \alpha \Omega(\theta)$$
+
 
 Where
 - $\alpha$ is hyperparameter range $[0, \infty]$-$ J(\theta; X, y)$  is standard objective function
@@ -2121,9 +2043,9 @@ We can use different $\alpha$ for each layer but it can be expensive to search f
 
 $L^2$ regularization technique drives the weight closer to origin by adding a regularization term $\Omega(\theta) = \frac{1}{2}||w||^{2}_{2}$  It has following total objective function:
 
-```math
-\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)
-```
+
+$$\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)$$
+
 
 </details>
 
@@ -2136,15 +2058,15 @@ $L^2$ regularization technique drives the weight closer to origin by adding a re
 
 The \(L^2\) parameter norm penalty is called weight decay because it effectively "decays" or shrinks the weights during the training process.
 
-```math
-\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)
-```
+
+$$\tilde{J}(w; X, y) = \frac{\alpha}{2}w^{T}w + J(w; X, y)$$
+
 
 with corresponding parameter gradient$$\nabla \tilde{J}(w; X, y) = \alpha w + \nabla_{w} J(w; X, y)$$To take single gradient step to update the weights, we perform this update:$$w \leftarrow w - \eta \left( \alpha w + \nabla_{w} J(w; X, y) \right)$$We can further expand it
 
-```math
-w \leftarrow (1 - \eta \alpha) w -  \eta \nabla_{w} J(w; X, y)
-```
+
+$$w \leftarrow (1 - \eta \alpha) w - \eta \nabla_{w} J(w; X, y)$$
+
 
 As we can see the addition of $L^2$  parameter norm penalty has modified the learning rule to multiplicatively shrink the weight vector by a constant factor on each step. The term "decay" reflects this gradual reduction in weight magnitude over time.
 
@@ -2161,9 +2083,9 @@ Actually we can regularize the parameters to any specific point in space and sti
 
 For regularizing the weights towards a point $w_0$, we can use following penalty term
 
-```math
-\frac{\alpha}{2} (w - w_0)^{T}(w - w_0)
-```
+
+$$\frac{\alpha}{2} (w - w_0)^{T}(w - w_0)$$
+
 
 </details>
 
@@ -2176,15 +2098,15 @@ For regularizing the weights towards a point $w_0$, we can use following penalty
 
 Adding \(L^2\) regularization to the objective function of linear regression modifies it to:
 
-```math
-\tilde{J}(w; X, y) = (Xw - y)^T(Xw - y) + \frac{1}{2}\alpha w^{T}w
-```
+
+$$\tilde{J}(w; X, y) = (Xw - y)^T(Xw - y) + \frac{1}{2}\alpha w^{T}w$$
+
 
 This means the weights \(w\) can be calculated as:
 
-```math
-w = (X^{T}X + \alpha I)^{-1}X^{T}y
-```
+
+$$w = (X^{T}X + \alpha I)^{-1}X^{T}y$$
+
 
 The diagonal entries of the matrix \((X^{T}X + \alpha I)^{-1}\) represent the variance of each input feature. \(L^2\) regularization makes the model view the input \(X\) as having higher variance, which leads to smaller weights for features that have low covariance with the output target.
 
@@ -2199,9 +2121,9 @@ The diagonal entries of the matrix \((X^{T}X + \alpha I)^{-1}\) represent the va
 
 It can be defined as
 
-```math
-\Omega{\theta} = ||w||_{1} = \sum_{i}|w_i|
-```
+
+$$\Omega{\theta} = ||w||_{1} = \sum_{i}|w_i|$$
+
 
 </details>
 
@@ -2214,9 +2136,9 @@ It can be defined as
 
 The regularized objective function $\tilde{J}(w; X, y)$ is given by$$\tilde{J}(w; X, y) = \alpha ||w||_1 + J(w; X, y)$$On taking gradient both side
 
-```math
-\nabla_{w}\tilde{J}(w; X, y) = \alpha \text{sign}(w) + \nabla_{w}J(X, y; w)
-```
+
+$$\nabla_{w}\tilde{J}(w; X, y) = \alpha \text{sign}(w) + \nabla_{w}J(X, y; w)$$
+
 
 Where sign($w $) is simply the sign of$ w$  applied element wise.
 
@@ -2233,24 +2155,24 @@ Not that here the gradient no longer scales linearly with each $w_i $, instead i
 
 In linear regression, the objective function with L1 regularization can be expressed as:
 
-```math
-\tilde{J}(w; X, y) = \frac{1}{2} \sum_{i=1}^{n} (y_i - X_i^T w)^2 + \alpha \sum_{j=1}^{p} |w_j|
-```
+
+$$\tilde{J}(w; X, y) = \frac{1}{2} \sum_{i=1}^{n} (y_i - X_i^T w)^2 + \alpha \sum_{j=1}^{p} |w_j|$$
+
 
 When we optimize this objective function, we take the gradient and set it to zero:$$\nabla \tilde{J}(w; X, y) = -X^T(y - Xw) + \alpha \text{sign}(w) = 0$$This gives us:
 
-```math
-X^T(y - Xw) = \alpha \text{sign}(w)
-```
+
+$$X^T(y - Xw) = \alpha \text{sign}(w)$$
+
 
 1. Impact on Weights: The \(\text{sign}(w)\) term introduces a non-smooth point at \(w_j = 0\). This means that during optimization, if a feature's contribution is minimal, the corresponding weight \(w_j\) may be driven to zero. 
 2. Zeroing Out Weights:
   - If the contribution of a feature \(X_j\) to reducing the error is low (meaning \(X^T(y - Xw)\) for that feature is relatively small), the penalty term becomes large enough that:
     $$|X^T(y - Xw)| < \alpha$$- This condition leads to:
 
-```math
-w_j = 0
-```
+
+$$w_j = 0$$
+
 
   - Thus, when \(\alpha\) is sufficiently large, features that do not significantly help in predicting the output will have their weights reduced to zero.
 
@@ -2482,13 +2404,13 @@ The reason that model averaging works is that different models will usually not 
 
 Consider for example a set of $k$ regression models. Suppose that each model makes an error $\eta_i$ on each example, with errors drawn from a zero-mean multivariate normal distribution with variances $\mathbf{E}[\eta_{i}^2] = v$ and covariances $\mathbf{E}[\eta_{i} \eta_{j}] = c$. Then the error made by the average prediction of all the ensemble models is $\frac{1}{k}\sum_{i} \eta_{i}$  The expected squared error of the ensemble predictor is
 
-```math
-\mathbf{E}\left[\left(\frac{1}{k}\sum_{i=1}^k \eta_i\right)^2\right] = \frac{1}{k^2} \mathbf{E}\left[\sum_{i=1}^k \eta_i^2 + \sum_{i \neq j} \eta_i \eta_j\right]
-```
 
-```math
-= \frac{1}{k}v + \frac{k-1}{k}c
-```
+$$\mathbf{E}\left[\left(\frac{1}{k}\sum_{i=1}^k \eta_i\right)^2\right] = \frac{1}{k^2} \mathbf{E}\left[\sum_{i=1}^k \eta_i^2 + \sum_{i \neq j} \eta_i \eta_j\right]$$
+
+
+
+$$= \frac{1}{k}v + \frac{k-1}{k}c$$
+
 
 In the case where the errors are perfectly correlated and $c=v $, the mean squared error reduces to$ v $, so the model averaging does not help at all. In case where we have perfectly uncorrelated errors and$ c=0 $, the expected squared error of the ensemble is only$\frac{1}{k}v$. This means that the expected squared error of the ensemble decreases linearly with the ensemble size. 
 

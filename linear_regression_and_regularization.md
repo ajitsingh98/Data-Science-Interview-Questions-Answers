@@ -22,9 +22,9 @@ Linear regression is a statistical model that assumes the regression function $E
 
 It takes the following form:
 
-```math
-f(X) = \beta_{0} + \sum_{j=1}^{p}X_{j}\beta_{j}
-```
+
+$$f(X) = \beta_{0} + \sum_{j=1}^{p}X_{j}\beta_{j}$$
+
 
 Note that here $\beta_{j}$'s are unknown parameter or coefficients and the variables$ X_{j}$  can come from different sources like
 - Quantitative inputs or its transformations
@@ -45,19 +45,19 @@ It uses **least squares** as a estimation method to calculate the values of coef
 
 Suppose we have a set of training data $(x_1, y_1),...,(x_n, y_n)$ from which we need to estimate the parameters $\beta$. Linear regression uses least squares estimation method to get values of the parameters. We pick the coefficients $\beta = (\beta_{0}, \beta_{1},....,\beta_{p}^{T})$ to minimize the residual sum of squares(RSS):$$RSS(\beta) = \sum_{i=1}^{N}(y_{i} - f(x_{i}))^2 = \sum_{i=1}^{N}(y_{i} - \beta_{0} - \sum_{j=1}^{p}x_{ij}\beta_{j})^2$$Alternatively we can rewrite the above equations as:$$RSS(\beta) = (y - X\beta)^{T}(y - X\beta)$$In order to minimize the above expression, differentiating with respect to $\beta$  we get,
 
-```math
-\frac{\partial{RSS}}{\partial{\beta}} = -2X^{T}(y - X\beta)
-```
 
-```math
-\frac{\partial^{2}{RSS}}{\partial{\beta}\partial{\beta^{T}}} = 2X^{T}X
-```
+$$\frac{\partial{RSS}}{\partial{\beta}} = -2X^{T}(y - X\beta)$$
+
+
+
+$$\frac{\partial^{2}{RSS}}{\partial{\beta}\partial{\beta^{T}}} = 2X^{T}X$$
+
 
 Assuming that $X$ has full column rank, hence $X^{T}X$ is positive definite so minima exists, we set first derivative to zero$$X^{T}(y - X\beta) = 0$$To obtain the unique solution
 
-```math
-\hat{\beta} = (X^{T}X)^{-1}X^{T}y
-```
+
+$$\hat{\beta} = (X^{T}X)^{-1}X^{T}y$$
+
 
 </details>
 
@@ -87,9 +87,9 @@ Yes model is still linear in nature. This is polynomial representation of a line
 
 We can write the given form in its linear mode:
 
-```math
-f(X) = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2}....
-```
+
+$$f(X) = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2}....$$
+
 
 Where $X_{2} = X_{1}^{2}$ No matter the source of the $X$, the model is linear in its parameter.
 
@@ -151,9 +151,9 @@ The RSE is an estimate of the standard deviation of residuals($\epsilon$). It is
 
 It is computed using the formula:
 
-```math
-RSE = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}{y_i - \hat{y}_i}}
-```
+
+$$RSE = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}{y_i - \hat{y}_i}}$$
+
 
 It is considered as the lack of the fit of the data. Lower values indicates model fits the data very well.
 
@@ -172,15 +172,15 @@ It takes the form of a proportion *proportion of the variance explained* it alwa
 
 To calculate the $R^2$, we have following expressions:
 
-```math
-R^2 = \frac{TSS - RSS}{TSS} = 1 - frac{RSS}{TSS}
-```
+
+$$R^2 = \frac{TSS - RSS}{TSS} = 1 - frac{RSS}{TSS}$$
+
 
 Here,$$TSS(Total Sum of Squares) = \sum{(y_i - \hat{y})^2}$$And,
 
-```math
-RSS(Residual Sum of Squares) = \sum{(y_i - \cap{y})^2}
-```
+
+$$RSS(Residual Sum of Squares) = \sum{(y_i - \cap{y})^2}$$
+
 
 Statistically, it measures the proportion of variability in $Y$ that can be explained using $X$.
 
@@ -206,9 +206,9 @@ A number near 0 indicates the regression does not explain the variability in the
 
 Suppose we have a model of form:
 
-```math
-Y = \beta_0 + \beta_{1}X_1 + \beta_{2}X_2 + \epsilon
-```
+
+$$Y = \beta_0 + \beta_{1}X_1 + \beta_{2}X_2 + \epsilon$$
+
 
 Here's how to interpret them:
 1. Intercept($\beta_0$):
@@ -265,15 +265,15 @@ F-statistic is mainly used for hypothesis testing where we want to assess whethe
 
 For example null hypothesis:
 
-```math
-H_0 = \beta_1 = \beta_2 = ... = \beta_p = 0
-```
+
+$$H_0 = \beta_1 = \beta_2 = ... = \beta_p = 0$$
+
 
 alternate hypothesis:$$H_a = at least one \beta_j is non-zero$$here hypothesis test is performed by computing the F-statistic,$$F = \frac{(TSS - RSS)/p}{(RSS/(n-p-1))}$$If the linear model assumptions are true:$$E{(TSS-RSS)/p} = \sigma^2$$and provided $H_0$ is true,
 
-```math
-E{(TSS-RSS)/p} = \sigma^2
-```
+
+$$E{(TSS-RSS)/p} = \sigma^2$$
+
 
 So, when there is no relationship between predictors and the response then F-statistic is near to 1 and if $H_a$  is true the  F-statistic will be greater than 1.
 
@@ -602,13 +602,13 @@ L1(Lasso) and L2(Ridge) regularization techniques help in addressing the above s
 
 The ridge regression coefficients estimates $\hat{\beta}^{R}$  are values that minimizes:
 
-```math
-\sum_{i=1}^n(y_i - \beta_0 - \sum_{j=1}^p\beta_jx_{ij})^2 + \lambda\sum_{j=1}^p\beta_{j}^2
-```
 
-```math
-= RSS + \lambda\sum_{j=1}^p\beta_{j}^2
-```
+$$\sum_{i=1}^n(y_i - \beta_0 - \sum_{j=1}^p\beta_jx_{ij})^2 + \lambda\sum_{j=1}^p\beta_{j}^2$$
+
+
+
+$$= RSS + \lambda\sum_{j=1}^p\beta_{j}^2$$
+
 
 where $\lambda >= 0$ is a tuning parameter, to be determined separately. The above equation tradeoff two criteria. As with least square error(RSS), ridge regression seeks coefficients estimates that fit the data well, by making the RSS smaller. The second term $\lambda\sum_{j=1}^p\beta_{j}^2$, called a shrinkage penalty is small when $\beta_1,...,\beta_p$ are close to zero, so it has the effect of shrinking the estimates of $\beta_j$  towards zero.
 
@@ -680,13 +680,13 @@ No we can't use it as feature selection technique. The penalty term $\lambda \su
 
 The loss function expression in lasso regression:
 
-```math
-\sum_{i=1}^n(y_i - \beta_0 - \sum_{j=1}^p\beta_jx_{ij})^2 + \lambda\sum_{j=1}^p|{\beta_{j}}|
-```
 
-```math
-= RSS + \lambda\sum_{j=1}^p|\beta_{j}|
-```
+$$\sum_{i=1}^n(y_i - \beta_0 - \sum_{j=1}^p\beta_jx_{ij})^2 + \lambda\sum_{j=1}^p|{\beta_{j}}|$$
+
+
+
+$$= RSS + \lambda\sum_{j=1}^p|\beta_{j}|$$
+
 
 </details>
 
@@ -712,15 +712,15 @@ The loss function involve in lasso and ridge regression can be re-written as fol
 
 **Lasso loss function:**
 
-```math
-minimize_\beta\{{\sum_{i=1}^{n}(y_i - \beta_0 - \sum_{j=1}^{p}\beta_{j}x_{ij})^2}\}
-```
+
+$$minimize_\beta\{{\sum_{i=1}^{n}(y_i - \beta_0 - \sum_{j=1}^{p}\beta_{j}x_{ij})^2}\}$$
+
 
 subjected to$$\sum_{j=1}^{p}|\beta_{j}| \leq s$$**Ridge loss function:**$$minimize_\beta\{{\sum_{i=1}^{n}(y_i - \beta_0 - \sum_{j=1}^{p}\beta_{j}x_{ij})^2}\}$$subjected to
 
-```math
-\sum_{j=1}^{p}\beta_{j}^2 \leq s
-```
+
+$$\sum_{j=1}^{p}\beta_{j}^2 \leq s$$
+
 
 For $p=2$, we can plot the error and constraints functions for the lasso and ridge regression as follows:
 
@@ -786,9 +786,9 @@ L2 regularization is effective when the response is a function of many predictor
 
 - **ElasticNet Objective**:
 
-```math
-\min_w \frac{1}{2N} \|y - Xw\|_2^2 + \lambda \left[ \alpha \|w\|_1 + \frac{1 - \alpha}{2} \|w\|_2^2 \right]
-```
+
+$$\min_w \frac{1}{2N} \|y - Xw\|_2^2 + \lambda \left[ \alpha \|w\|_1 + \frac{1 - \alpha}{2} \|w\|_2^2 \right]$$
+
 
 - **Why use it over Lasso?**: Lasso selects at most $n$ features when $p > n$  and picks one arbitrary feature among correlated features. ElasticNet retains group effects of correlated features while maintaining sparsity.
 
@@ -843,9 +843,9 @@ We can detect multi-collinearity using *variance inflation factor(VIF)*. VIF mea
 
 The VIF is the ratio of the variance of $\beta_j$ when fitting the full model divided by the variance of $\beta_j$ if fit on its own.
 
-```math
-VIF(\beta_j) = \frac{1}{1-R^{2}_{X_{j}|X_{-j}}}
-```
+
+$$VIF(\beta_j) = \frac{1}{1-R^{2}_{X_{j}|X_{-j}}}$$
+
 
 where $R^{2}_{X_{j}|X_{-j}}$ is the $R^2$ from a regression of $X_j$  onto all the other predictors.
 

@@ -164,23 +164,23 @@ Let $n$ be the total sample size and $m$ and $f$  denotes number of male and fem
 
 1. Since $f = 1220$ and number of feamles that do excercise are $818$ 
 
-```math
-\hat{p} = \frac{818}{1220}
-```
 
-```math
-\hat{p} = 0.67
-```
+$$\hat{p} = \frac{818}{1220}$$
+
+
+
+$$\hat{p} = 0.67$$
+
 
 2. point estimate for the proportion of all college students who exercise on a regular basis($\hat{p}$):
 
-```math
-\hat{p} = \frac{818+924}{2540}
-```
 
-```math
-\hat{p} = 0.685
-```
+$$\hat{p} = \frac{818+924}{2540}$$
+
+
+
+$$\hat{p} = 0.685$$
+
 
 3. The mean time that all college students who exercise on a regular basis spend exercising per week
 
@@ -273,9 +273,9 @@ Interval estimation enhances point estimation by supplying information about siz
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-```math
-(\bar{x} - 1.96\*\frac{\sigma}{\sqrt{n}}, \bar{x} + 1.96\*\frac{\sigma}{\sqrt{n}})
-```
+
+$$(\bar{x} - 1.96\*\frac{\sigma}{\sqrt{n}}, \bar{x} + 1.96\*\frac{\sigma}{\sqrt{n}})$$
+
 
 </details>
 
@@ -323,9 +323,9 @@ The price we have to pay for a higher level of confidence is that the unknown po
 
 General form:
 
-```math
-\bar{x} \pm z^* \dot \frac{\sigma}{\sqrt{n}}
-```
+
+$$\bar{x} \pm z^* \dot \frac{\sigma}{\sqrt{n}}$$
+
 
 Where $z^*$  is a general notation for the multiplier that depends on the level of the confidence. We can split the above expression into two parts.
 
@@ -334,9 +334,9 @@ Where $z^*$  is a general notation for the multiplier that depends on the level 
 
 So we can also write the general form as follows:
 
-```math
-estimate \pm margin \quote of \quote error
-```
+
+$$estimate \pm margin \quote of \quote error$$
+
 
 </details>
 
@@ -349,9 +349,9 @@ estimate \pm margin \quote of \quote error
 
 Expression of margin of error(m):
 
-```math
-m = z^* \dot \frac{\sigma}{\sqrt{n}}
-```
+
+$$m = z^* \dot \frac{\sigma}{\sqrt{n}}$$
+
 
 Where $z^*$ represents confidence multiplier and $\frac{\sigma}{sqrt{n}} depicts standard deviation of point estimator$.
 
@@ -379,15 +379,15 @@ With larger sample size $n$  we can reduce the margin of error.
 
 We have,
 
-```math
-m = z^* \dot \frac{\sigma}{\sqrt{n}}
-```
+
+$$m = z^* \dot \frac{\sigma}{\sqrt{n}}$$
+
 
 On solving for $n$,
 
-```math
-n = (\frac{z^* \sigma}{m})^2
-```
+
+$$n = (\frac{z^* \sigma}{m})^2$$
+
 
 </details>
 
@@ -406,21 +406,21 @@ Confidence interval can be given by $(\bar{x} - m, \bar{x} + m)$.
 
 On comparing the actaul interval $(6.5, 6.9)$ and parameterized interval $(\bar{x} - m, \bar{x} + m)$, we have
 
-```math
-\bar{x} - m = 6.5
-```
+
+$$\bar{x} - m = 6.5$$
+
 
 and,
 
-```math
-\bar{x} + m = 6.9
-```
+
+$$\bar{x} + m = 6.9$$
+
 
 On solving for $m$,
 
-```math
-m = 0.2
-```
+
+$$m = 0.2$$
+
 
 </details>
 
@@ -435,15 +435,15 @@ m = 0.2
 
 We have, 
 
-```math
-n = (\frac{z^* \sigma}{m})^2
-```
+
+$$n = (\frac{z^* \sigma}{m})^2$$
+
 
 On putting $z^* = 2.576 $,$\sigma  = 15$ and $m = 2$, we get
 
-```math
-n = (\frac{2.576(15)}{2})^2 = 374
-```
+
+$$n = (\frac{2.576(15)}{2})^2 = 374$$
+
 
 </details>
 
@@ -478,9 +478,9 @@ We can replace population standard deviation($\sigma $) with the sample standard
 
 The confidence interval for the population mean ($\mu $) when ($\sigma$) is unknown is therefore:
 
-```math
-\bar{x} \pm t^* \dot \frac{s}{\sqrt(n)}
-```
+
+$$\bar{x} \pm t^* \dot \frac{s}{\sqrt(n)}$$
+
 
 Note that the quantity $\frac{s}{\sqrt(n)}$ is called the standard error of $\bar(X)$.
 
@@ -506,9 +506,9 @@ Note that the quantity $\frac{s}{\sqrt(n)}$ is called the standard error of $\ba
 
 The confidence interval for the population proportion $p$ is:
 
-```math
-\hat{p} \pm z^* \dot \sqrt{\frac{\hat(p)(1 - \hat{p})}{n}}
-```
+
+$$\hat{p} \pm z^* \dot \sqrt{\frac{\hat(p)(1 - \hat{p})}{n}}$$
+
 
 </details>
 
@@ -525,9 +525,9 @@ The confidence interval for the population proportion $p$ is:
 
 1. The sample proportion $\hat{p}$ is $\frac{56}{1000} = 0.56$ and therefore $95%$ confidence interval for $p$  is:
 
-```math
-0.56 \pm 2\dot \sqrt{0.56(1-0.56)}{1000} = 0.56 \pm 0.03
-```
+
+$$0.56 \pm 2\dot \sqrt{0.56(1-0.56)}{1000} = 0.56 \pm 0.03$$
+
 
 So we are $95%$ confident that the proportion of U.S adults who believe that marijuana should be legalized is between $0.53$ and $0.59$.
 
@@ -544,9 +544,9 @@ So we are $95%$ confident that the proportion of U.S adults who believe that mar
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
-```math
-n \dot \hat{p} \geq 10 \quote n \dot (1 - \hat{p}) \geq 10
-```
+
+$$n \dot \hat{p} \geq 10 \quote n \dot (1 - \hat{p}) \geq 10$$
+
 
 </details>
 
@@ -559,17 +559,17 @@ n \dot \hat{p} \geq 10 \quote n \dot (1 - \hat{p}) \geq 10
 
 Given:
 
-```math
-n = 100
-```
 
-```math
-\hat{x} = 1
-```
+$$n = 100$$
 
-```math
-\sigma = 0.12
-```
+
+
+$$\hat{x} = 1$$
+
+
+
+$$\sigma = 0.12$$
+
 
 $95\\%$ Confidence interval for $\mu_population$ can be given by following expression: $\hat{x} \pm z_{0.95} \cdot \frac{\sigma}{\sqrt{n}}$ On substituting all the values, we get: $1 \pm 1.96 \cdot \frac{0.12}{\sqrt{100}}$=$(0.9768,1.0232)$ So, the $95\%$ interval is $(0.9768,1.0232)$.
 
@@ -619,29 +619,29 @@ $1^{st}$ statement is incorrect because we don't use CI for estimating individua
 
 Given:
 
-```math
-\mu = 1
-```
 
-```math
-\sigma = 0.12
-```
+$$\mu = 1$$
+
+
+
+$$\sigma = 0.12$$
+
 
 1.$$z-score = \frac{x_i - \mu}{\sigma} = \frac{1.1 - 1}{0.12} = 0.83$$2. Let x be the weight that needed to be in top $10\\%$. For this condtion$ z_score >= z_{0.9}$Using lookup table we get$ z_score >= 1.645$We can write expression for z-score:
 
-```math
-z-score = \frac{x - \mu}{\sigma}
-```
 
-```math
-\frac{x - 1}{0.12} >= 1.645
-```
+$$z-score = \frac{x - \mu}{\sigma}$$
+
+
+
+$$\frac{x - 1}{0.12} >= 1.645$$
+
 
 On solving for $x$,
 
-```math
-x >= 1.197
-```
+
+$$x >= 1.197$$
+
 
 So, puppy weight should be atleast $1.197$ in order to be in top $10\\%$  of the weight.
 
@@ -719,13 +719,13 @@ The probability of observing a test statistic as large in magnitude as that obse
 
 1. State the appropriate null and alternative hypotheses, $H_0$ and $H_a$.
 
-```math
-H_0 : p = p_0
-```
 
-```math
-H_a: p \neq p_0 \cup p > p_0 \cup p < p_0
-```
+$$H_0 : p = p_0$$
+
+
+
+$$H_a: p \neq p_0 \cup p > p_0 \cup p < p_0$$
+
 
 2. Obtain the data from a sample and:
 
@@ -734,9 +734,9 @@ Check whether the data satisfy the following condition:
 - Random sample
 - $n \dot p_0 \geq 10 $,$ n \dot (1 - p_0) \geq 10 $Calculate the sample proportion$\hat{p}$  and summarize the data using test statistic:
 
-```math
-z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1 - p_0)}{n}}}
-```
+
+$$z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1 - p_0)}{n}}}$$
+
 
 3. Find the p-value of the test:
 
@@ -783,29 +783,29 @@ It depends on $p-value$ and $\alpha$:
 
 1. State the hypothesis:
 
-```math
-H_0: p = 0.157
-```
 
-```math
-H_0: p > 0.157
-```
+$$H_0: p = 0.157$$
+
+
+
+$$H_0: p > 0.157$$
+
 
 2. Calculate test-statistic $z$:
 
-```math
-\hat{p} = \frac{76}{400} = 0.19
-```
 
-```math
-z = \frac{0.19 - 0.157}{\sqrt{\frac{0.157(1 - 0.157)}{400}}} = 1.81
-```
+$$\hat{p} = \frac{76}{400} = 0.19$$
+
+
+
+$$z = \frac{0.19 - 0.157}{\sqrt{\frac{0.157(1 - 0.157)}{400}}} = 1.81$$
+
 
 3. Calculate p-value using software we can get:
 
-```math
-p - value = 0.035
-```
+
+$$p - value = 0.035$$
+
 
 4. Make conclusion based on $p$ value and $\alpha$:
 
@@ -822,23 +822,23 @@ For default value of $\alpha = 0.05 $, since$ p-value < \alpha$  the result seem
 
 General form of null hypothesis:
 
-```math
-H_0 : p = p_0
-```
+
+$$H_0 : p = p_0$$
+
 
 The alternative hypothesis takes one of the following three forms (depending on the context):
 
-```math
-Ha: p < p_0(one-sided)
-```
 
-```math
-Ha: p > p_0(one-sided)
-```
+$$Ha: p < p_0(one-sided)$$
 
-```math
-Ha: p ≠ p_0(two-sided)
-```
+
+
+$$Ha: p > p_0(one-sided)$$
+
+
+
+$$Ha: p ≠ p_0(two-sided)$$
+
 
 </details>
 
@@ -911,17 +911,17 @@ Test statistic captures the essence of the test. Larger the test statistic, the 
 
 Given:
 
-```math
-n = 15
-```
 
-```math
-p(head) = 10/15
-```
+$$n = 15$$
 
-```math
-p(tail) = 5/15
-```
+
+
+$$p(head) = 10/15$$
+
+
+
+$$p(tail) = 5/15$$
+
 
 Lets state the hypothesis and then based on the evidence we have from the observations we can access them using some statistic.
 
@@ -943,27 +943,27 @@ test statistics under $H_0$:
 
 - Mean($\mu$)
 
-```math
-\mu = E(x) = np = \frac{15}{2} = 7.5
-```
+
+$$\mu = E(x) = np = \frac{15}{2} = 7.5$$
+
 
 - Standard deviation($\sigma$)
 
-```math
-\sigma = \sqrt{np(1-p)} = \sqrt{3.75} = 1.936
-```
+
+$$\sigma = \sqrt{np(1-p)} = \sqrt{3.75} = 1.936$$
+
 
 -$Z_score = \frac{x - \mu}{\sigma}$ 
 
-```math
-Z_score = \frac{10-7.5}{1.936} = 1.291
-```
+
+$$Z_score = \frac{10-7.5}{1.936} = 1.291$$
+
 
 Now with significance level($\alpha $) =$5\\%$, We can find out$ Z_critical$ 
 
-```math
-Z_critical = Z_{0.95} = 1.96
-```
+
+$$Z_critical = Z_{0.95} = 1.96$$
+
 
 Since $Z_score$ that we got from the experiment is less than $Z_critical$, we can not reject the$ H_0$.
 
@@ -975,15 +975,15 @@ We can do two-sided test to rejects $𝐻_0$ when $𝑋$ is sufficiently far fro
 
 For observed value $x $, the$ P-value $is$𝑃(𝑋≤𝑥)+𝑃(𝑋≥𝑛−𝑥)$.
 
-```math
-p-value = P(X ≤ 10) + P(X ≥ 5)
-```
+
+$$p-value = P(X ≤ 10) + P(X ≥ 5)$$
+
 
 We have,$$\[P(X \leq 10) = \sum_{x=0}^{10} \binom{15}{x} (0.5)^x (0.5)^{15-x}\]$$and$$\[P(X \geq 5) = 1 - P(X < 5) = 1 - \sum_{x=0}^{4} \binom{15}{x} (0.5)^x (0.5)^{15-x}\]$$putting these values to get p-value.
 
-```math
-p-value = 0.99 + 0.99 = 1.98
-```
+
+$$p-value = 0.99 + 0.99 = 1.98$$
+
 
 since p-value >$0.05$, We can not reject null hypothesis and we will reject the alternate hypothesis i.e coin is not fair because of not having enough evidence in the given data.
 
@@ -1065,9 +1065,9 @@ Total    |    n.1     |    n.2     |   N
 
 Compute the expected frequencies for each cell in the contingency table under the assumption of independence. The formula for the expected frequency in a cell (e.g., n11) is:
 
-```math
-\[E = \frac{n1. \cdot n.1}{N}\]
-```
+
+$$\[E = \frac{n1. \cdot n.1}{N}\]$$
+
 
 Repeat this calculation for all cells in the table.
 
@@ -1102,9 +1102,9 @@ Compare the calculated p-value to a significance level (e.g., $\(\alpha = 0.05\)
 
 Expression of $r$:
 
-```math
-\[r = \frac{\sum((X - \bar{X})(Y - \bar{Y}))}{\sqrt{\sum(X - \bar{X})^2 \sum(Y - \bar{Y})^2}}\]
-```
+
+$$\[r = \frac{\sum((X - \bar{X})(Y - \bar{Y}))}{\sqrt{\sum(X - \bar{X})^2 \sum(Y - \bar{Y})^2}}\]$$
+
 
 - <b>Spearman Rank Correlation (ρ):</b> The Spearman rank correlation coefficient is non parametric test used to measure monotonic (nonlinear) relationships.
 

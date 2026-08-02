@@ -61,9 +61,9 @@ It involves an iterative process where the model actively selects the most infor
 
 - Define the Loss Function: Choose an appropriate loss function $L(y,f(x))$  that quantifies the error for each prediction.
 
-```math
-R_{\text{emp}}(f) = \frac{1}{n} \sum_{i=1}^n L(y_i, f(x_i))
-```
+
+$$R_{\text{emp}}(f) = \frac{1}{n} \sum_{i=1}^n L(y_i, f(x_i))$$
+
 
 - Minimize the empirical risk by adjusting the model parameters using an optimization algorithm, such as gradient descent. The goal is to find the parameters that yield the lowest empirical risk.
 
@@ -292,9 +292,9 @@ Saddle point cause more problem in training large Neural Networks. Because they 
 
     Alternatively, if the classification algorithm predicts probabilities for each class, these probabilities could be scaled to a continuous range using a formula like:
 
-```math
-\text{quantity} = \text{min} + \text{probability} \times \text{range}
-```
+
+$$\text{quantity} = \text{min} + \text{probability} \times \text{range}$$
+
 
 However, if the class labels in the original classification problem do not have a natural ordinal relationship, converting it to a regression problem might lead to poor performance. The model could mistakenly infer a relationship between the input features and the continuous output that doesn’t actually exist, leading to inaccurate predictions.
 
@@ -473,20 +473,16 @@ ML model's performance degrade in production due to following reasons:
 
 ### Q: **True or False:** In a K-fold CV approach, the final test error is:
 
-$$
-
-CV_k = \frac{1}{k}\sum_{i=1}^{k}MSE_i
-
-$$
+$$CV_k = \frac{1}{k}\sum_{i=1}^{k}MSE_i$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
 
 **True**, This is average of individual errors of $K$ estimates of the test errors
 
-```math
-MSE_1,...,MSE_k
-```
+
+$$MSE_1,...,MSE_k$$
+
 
 </details>
 
@@ -794,38 +790,18 @@ Name the measure.
 
 The Kullback-Leibler divergence is a meas- ure of how different two probability distribution are. As noted, the KL divergence of the probability distributions P, Q on a set X is defined as shown in Equation 8.11.
 
-$$
-
-D_{KL}(P \| Q) = \sum_{x \in X} P(x) \log\left(\frac{P(x)}{Q(x)}\right)
-
-$$
+$$D_{KL}(P \| Q) = \sum_{x \in X} P(x) \log\left(\frac{P(x)}{Q(x)}\right)$$
 
 Note however that since KL divergence is a non-symmetric information theoretical meas- ure of distance of P from Q, then it is not strictly a distance metric. During the past years, various KL based distance measures (rather than divergence based) have been introduced in the literature generalizing this measure.
 Name each of the following KL based distances:
 
-$$
+$$D_{KLD1}(P \| Q) = D_{KL}(P \| Q) + D_{KL}(Q \| P)$$
 
-D_{KLD1}(P \| Q) = D_{KL}(P \| Q) + D_{KL}(Q \| P)
+$$D_{KLD2}(P \| Q) = \sum_{x \in X} (P(x) - Q(x)) \log(P(x))$$
 
-$$
+$$D_{KLD3}(P \| Q) = \frac{1}{2} [D_{KL}\left(Q\|\right(\frac{P+Q}{2})) + D_{KL}\left(P\|\right(\frac{P+Q}{2})) ]$$
 
-$$
-
-D_{KLD2}(P \| Q) = \sum_{x \in X} (P(x) - Q(x)) \log(P(x))
-
-$$
-
-$$
-
-D_{KLD3}(P \| Q) = \frac{1}{2} [D_{KL}\left(Q\|\right(\frac{P+Q}{2})) +  D_{KL}\left(P\|\right(\frac{P+Q}{2})) ]
-
-$$
-
-$$
-
-D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) +  D_{KL}\left(P\|\right(Q)))
-
-$$
+$$D_{KLD4}(P \| Q) = max(D_{KL}\left(Q\|\right(P)) + D_{KL}\left(P\|\right(Q)))$$
 
 <details>
 <summary><b>💡 Show Answer</b></summary>
@@ -1203,9 +1179,9 @@ The validation set approach, while simple and easy to implement, has two main dr
 
     In this method a single observation $(x_1, y_1)$ is used for the validation set, and the remaining observations ${(x_2, y_2),...,(x_n, y_n)}$ make up the training set. We then fit the model on the training set and calculate the error on validation set. Repeating this approach iteratively with different set of predictors $n$ times and corresponding response yields $n$ squared errors, $MSE_1,..,MSE_n$. The LOOCV estimate for the test MSE is the average of these$ n$test error estimates:
 
-```math
-CV_{(n)} = \frac{1}{n}\sum_{i=1}^{n}MSE_i
-```
+
+$$CV_{(n)} = \frac{1}{n}\sum_{i=1}^{n}MSE_i$$
+
 
     <table align='center'>
     <tr>
@@ -1222,9 +1198,9 @@ CV_{(n)} = \frac{1}{n}\sum_{i=1}^{n}MSE_i
 
     This approach involves randomly dividing the set of observations into $k$ groups, or folds, of approximately equal size. The first fold is treated as a validation set, and the method is fit on the remaining $k − 1$ folds. The mean squared error, $MSE_1$, is then computed on the observations in the held-out fold. This procedure is repeated k times; each time, a different group of observations is treated as a validation set. This process results in$ k $estimates of the test error,$ MSE_1, MSE_2, . . . , MSE_k$. The k-fold CV estimate is computed by averaging these values.
 
-```math
-CV_{(k)} = \frac{1}{k}\sum_{i=1}^{k}MSE_i
-```
+
+$$CV_{(k)} = \frac{1}{k}\sum_{i=1}^{k}MSE_i$$
+
 
     <table align='center'>
     <tr>
@@ -1318,25 +1294,21 @@ On variance side, LOOCV has higher variance than does k-fold CV for $k<n $. When
 
 Yes, All kernel methods are based on distance. For example the RBF kernel function is
 
-```math
-K(u, v) = \exp(-\gamma||u - v||^2)
-```
+
+$$K(u, v) = \exp(-\gamma||u - v||^2)$$
+
 
 Given $3$  feature vectors:
 
-```math
-x_1 = [1000, 1, 2], \hspace{1em} x_2 = [900, 1, 2], \hspace{1em} x_3 = [1050, -10, 20]
-```
+
+$$x_1 = [1000, 1, 2], \hspace{1em} x_2 = [900, 1, 2], \hspace{1em} x_3 = [1050, -10, 20]$$
+
 
 then for $\gamma = 1 $,$\hspace{0.5em}$$K(x_1, x_2) = \exp(-10000) \ll K(x_1, x_3) = \exp(-2095)$, that is$x_1 $ is supposedly more similar to$x_3 $ than to$x_2 $.
 
 The relative distance between $x_1$  and:
 
-$$
-
-x_2 \rightarrow [0.1, 0, 0], \hspace{0.5em} x_3 \rightarrow [0.05, -10, 10]
-
-$$So without scaling, we conclude that$ x_1 $s more similar to$ x_3 $than to$ x_2 $, even though the relative differences per feature between$ x_1 $and$ x_3 $are much larger than those of$ x_1 $and$ x_2$.
+$$x_2 \rightarrow [0.1, 0, 0], \hspace{0.5em} x_3 \rightarrow [0.05, -10, 10]$$So without scaling, we conclude that$ x_1 $s more similar to$ x_3 $than to$ x_2 $, even though the relative differences per feature between$ x_1 $and$ x_3 $are much larger than those of$ x_1 $and$ x_2$.
 
 If we don't scale all features to comparable ranges, the features with largest range will completely dominate the computation of kernel matrix.
 
